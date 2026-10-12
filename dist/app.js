@@ -35,6 +35,8 @@
   let scrollHovered = false;
   let scrollKeyboardFocus = false;
   let menuOpen = false;
+  let menuOpenedByHover = false;
+  let menuCloseTimer;
   const main = document.querySelector('#main');
   const header = document.querySelector('#gHeader');
   const contact = document.querySelector('#contact-modal');
@@ -162,9 +164,11 @@
     }
   }
 
-  function toggleMenu(open) {
+  function toggleMenu(open, { focus = true, hover = false } = {}) {
+    clearTimeout(menuCloseTimer);
     if (open && details.isOpen) details.close();
     menuOpen = open;
+    menuOpenedByHover = open && hover;
     document.body.classList.toggle('menu-open', open);
     menu.classList.toggle('active', open);
     menu.setAttribute('aria-expanded', String(open));
@@ -174,12 +178,29 @@
     main.inert = open || details.isOpen;
     header.inert = open || details.isOpen;
     scrollControl.inert = open || details.isOpen;
-    if (open) navigation.querySelector('a').focus({ preventScroll: true });
-    else menu.focus({ preventScroll: true });
+    if (focus) {
+      if (open) navigation.querySelector('a').focus({ preventScroll: true });
+      else menu.focus({ preventScroll: true });
+    }
   }
 
   menu.addEventListener('click', () => toggleMenu(!menuOpen));
   menuBackdrop.addEventListener('click', () => toggleMenu(false));
+  const menuHover = window.matchMedia('(hover: hover) and (pointer: fine)');
+  for (const surface of [menu, navigation]) {
+    surface.addEventListener('pointerenter', event => {
+      if (event.pointerType !== 'mouse' || !menuHover.matches || details.isOpen || modalOpen()) return;
+      clearTimeout(menuCloseTimer);
+      if (!menuOpen) toggleMenu(true, { focus: false, hover: true });
+    });
+    surface.addEventListener('pointerleave', event => {
+      if (event.pointerType !== 'mouse' || !menuOpenedByHover) return;
+      if (menu.contains(event.relatedTarget) || navigation.contains(event.relatedTarget)) return;
+      menuCloseTimer = setTimeout(() => {
+        if (menuOpenedByHover) toggleMenu(false, { focus: false });
+      }, 250);
+    });
+  }
   function bindModal(dialog, selector) {
     let returnFocus = menu;
     for (const trigger of document.querySelectorAll(selector)) {
@@ -383,6 +404,8 @@
     if (menuOpen) {
       if (event.key === 'Escape') { event.preventDefault(); toggleMenu(false); }
       if (event.key === 'Tab') {
+        menuOpenedByHover = false;
+        clearTimeout(menuCloseTimer);
         const focusable = [...navigation.querySelectorAll('a'), menu, ...languageControl.querySelectorAll('button')];
         if (!detailsHandle.hidden) focusable.push(detailsHandle);
         const active = focusable.indexOf(document.activeElement);

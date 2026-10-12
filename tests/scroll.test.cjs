@@ -5,7 +5,7 @@ const vm = require('node:vm');
 const { test } = require('node:test');
 
 // Run the actual page controller with a deterministic clock and minimal DOM.
-function page() {
+function page({ hover = false } = {}) {
   let now = 0, nextId = 0;
   const timers = new Map();
   const timeout = (callback, delay) => {
@@ -34,8 +34,8 @@ function page() {
         contains: name => classes.has(name), add: name => classes.add(name), remove: name => classes.delete(name),
         toggle(name, on) { if (on) classes.add(name); else classes.delete(name); }
       },
-      setAttribute() {}, focus() {}, matches() { return false; }, closest() { return null; },
-      contains(target) { return target === this; }, querySelectorAll() { return []; },
+      setAttribute() {}, focus() { doc.activeElement = this; }, matches() { return false; }, closest() { return null; },
+      contains(target) { return target === this || [...children.values()].some(child => child.contains(target)); }, querySelectorAll() { return []; },
       querySelector(selector) { if (!children.has(selector)) children.set(selector, element()); return children.get(selector); },
       addEventListener(name, callback) {
         if (!listeners.has(name)) listeners.set(name, []);
@@ -46,6 +46,7 @@ function page() {
   }
   const doc = element();
   doc.body = element();
+  doc.activeElement = doc.body;
   doc.hidden = false;
   const sections = Array.from({ length: 13 }, element);
   sections.slice(2, 12).forEach(section => section.classList.add('mainImg'));
@@ -59,7 +60,7 @@ function page() {
       RWHI18n: { project: value => value, t: key => key, message() {} },
       RWH_PROJECTS: Array.from({ length: 10 }, (_, i) => ({ name: `Project ${i + 1}`, year: '2025', summary: '' })),
       RWHDetails: { create: () => details },
-      matchMedia: () => ({ matches: false, addEventListener() {} }), addEventListener() {}
+      matchMedia: query => ({ matches: hover && query.includes('(hover: hover)'), addEventListener() {} }), addEventListener() {}
     },
     setTimeout: timeout, clearTimeout: id => timers.delete(id),
     setInterval: () => ++nextId, clearInterval() {}
@@ -127,4 +128,52 @@ test('open Details retains its project while the background autoplay continues',
   assert.equal(p.index(), 3);
   p.advance(4950);
   assert.equal(p.index(), 4);
+});
+
+test('mouse hover opens the menu without moving focus or stopping autoplay', () => {
+  const p = page({ hover: true });
+  const menu = p.doc.querySelector('.menu'), nav = p.doc.querySelector('.menuBox');
+  p.jump(2); p.advance(1200);
+  menu.emit('pointerenter', { pointerType: 'mouse' });
+  assert.equal(nav.inert, false);
+  assert.equal(p.doc.activeElement, p.doc.body);
+  p.advance(6000);
+  assert.equal(p.index(), 3);
+  menu.emit('pointerleave', { pointerType: 'mouse', relatedTarget: nav });
+  p.advance(300);
+  assert.equal(nav.inert, false);
+  nav.emit('pointerleave', { pointerType: 'mouse', relatedTarget: p.doc.body });
+  p.advance(250);
+  assert.equal(nav.inert, true);
+  assert.equal(p.doc.activeElement, p.doc.body);
+});
+
+test('returning to the icons cancels hover closing; Tab keeps keyboard access open', () => {
+  const p = page({ hover: true });
+  const menu = p.doc.querySelector('.menu'), nav = p.doc.querySelector('.menuBox');
+  menu.emit('pointerenter', { pointerType: 'mouse' });
+  menu.emit('pointerleave', { pointerType: 'mouse', relatedTarget: p.doc.body });
+  p.advance(150);
+  nav.emit('pointerenter', { pointerType: 'mouse' });
+  p.advance(200);
+  assert.equal(nav.inert, false);
+  nav.emit('pointerleave', { pointerType: 'mouse', relatedTarget: p.doc.body });
+  p.doc.emit('keydown', { key: 'Tab', preventDefault() {}, target: menu });
+  p.advance(300);
+  assert.equal(nav.inert, false);
+  p.doc.emit('keydown', { key: 'Escape', preventDefault() {}, target: menu });
+  assert.equal(nav.inert, true);
+});
+
+test('touch still opens by tapping and mouse hover cannot open behind a modal', () => {
+  const p = page({ hover: true });
+  const menu = p.doc.querySelector('.menu'), nav = p.doc.querySelector('.menuBox');
+  menu.emit('pointerenter', { pointerType: 'touch' });
+  assert.ok(nav.inert !== false);
+  menu.emit('click');
+  assert.equal(nav.inert, false);
+  menu.emit('click');
+  p.doc.querySelector('#contact-modal').open = true;
+  menu.emit('pointerenter', { pointerType: 'mouse' });
+  assert.equal(nav.inert, true);
 });
