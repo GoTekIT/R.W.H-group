@@ -13,6 +13,20 @@ Trang chính dùng HTML/CSS/JavaScript trong `dist/`. Form Contact gọi Vercel 
 5. Thêm hai biến môi trường phía server theo phần dưới, chọn Production và môi trường Preview cần dùng. Bấm **Deploy**, đợi **Ready** và mở URL Vercel trả về.
 6. Kiểm tra nhánh production là `main` trong cài đặt môi trường Production để các lần push tiếp theo được triển khai tự động.
 
+## Tự deploy và tài khoản tạo commit
+
+Dự án Vercel hiện có là `gotek/rwh`, kết nối với `GoTekIT/R.W.H-group`; URL chính là https://rwh-ruby.vercel.app/. Mỗi lần push lên nhánh production `main`, Vercel tự tạo deployment và cập nhật URL chính khi bản deploy sẵn sàng.
+
+Với repo riêng tư trên gói Hobby, tác giả commit phải khớp tài khoản GitHub liên kết với chủ dự án Vercel. Dự án này dùng `GoTekIT`. Quyền push vào repo và tên chủ repo không tự thay đổi tác giả commit; GitHub xác định tác giả từ email trong commit.
+
+Nếu thấy **Deployment Blocked** vì tác giả thiếu quyền:
+
+1. Mở **Vercel → avatar → Settings → Authentication**, kiểm tra GitHub đang liên kết với chủ dự án.
+2. Khi tạo commit trong trình duyệt, kiểm tra GitHub đang đăng nhập `GoTekIT`. Khi dùng Git local, kiểm tra `git config user.name` và `git config user.email`; dùng danh tính và email đã xác minh của chính tài khoản được phép tạo commit.
+3. Tạo commit mới trên `main` bằng đúng tài khoản, rồi kiểm tra **Vercel → rwh → Deployments** và đợi **Ready**.
+
+Đối chiếu [hướng dẫn quyền cộng tác của Vercel](https://vercel.com/docs/deployments/troubleshoot-project-collaboration) nếu tài khoản hoặc gói dịch vụ thay đổi.
+
 ## Kết nối Resend
 
 Người nhận đã cố định trong `lib/contact.js`: **linh.rwh@gmail.com**. Email này không hiển thị trong modal hay footer. Khách chỉ điền Name, Email và Questions. Footer hiển thị số **0982132489**, bấm vào sẽ gọi `+84982132489`.
