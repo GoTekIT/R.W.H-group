@@ -1,0 +1,11 @@
+.DS_Store
+*.zip
+*.tar.gz
+__pycache__/
+*.pyc
+.env
+.env.*
+!.env.example
+node_modules/
+.sites-runtime/
+.openai/
