@@ -38,8 +38,6 @@
   const main = document.querySelector('#main');
   const header = document.querySelector('#gHeader');
   const contact = document.querySelector('#contact-modal');
-  const contactForm = document.querySelector('#contact-form');
-  const contactNote = document.querySelector('#contact-note');
   const profile = document.querySelector('#profile-modal');
   const modals = [contact, profile];
   const modalOpen = () => modals.some(dialog => dialog.open);
@@ -189,7 +187,6 @@
         event.preventDefault();
         returnFocus = trigger.closest('#navigation') ? menu : trigger;
         if (menuOpen) toggleMenu(false);
-        if (dialog === contact) i18n.message(contactNote, 'previewNote');
         dialog.showModal();
       });
     }
@@ -216,10 +213,6 @@
   }
   bindModal(contact, '[data-contact-open]');
   bindModal(profile, '[data-profile-open]');
-  contactForm.addEventListener('submit', event => {
-    event.preventDefault();
-    i18n.message(contactNote, 'submittedNote');
-  });
   for (const logo of document.querySelectorAll('.hLogo')) {
     logo.addEventListener('click', event => { event.preventDefault(); if (menuOpen) toggleMenu(false); goTo(0, true); });
   }
