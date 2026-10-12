@@ -6,6 +6,12 @@ Review: https://rwh-group-review.nhitran-35221021047.chatgpt.site
 
 [Landing page brief](BRIEF.md)
 
+## Deploy to Vercel
+
+Import **GoTekIT/R.W.H-group** at https://vercel.com/new with the repository root (`./`) as Root Directory. The root `vercel.json` sets **Other**, skips dependency installation/building and publishes `dist/`. Use `main` as the production branch. No environment variables are required for the current static site.
+
+See [hướng dẫn deploy Vercel](DEPLOY_VERCEL.md) for import settings, deployment checks and domain setup. The Contact form remains a preview until email delivery is implemented and verified.
+
 ## Run locally
 
 ```sh
