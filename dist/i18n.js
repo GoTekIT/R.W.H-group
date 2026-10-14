@@ -33,7 +33,7 @@
       detail: 'DETAIL', close: 'CLOSE', viewDetails: 'View {name} details', openDetails: 'Open details for {name}', closeDetails: 'Close project details',
       playFilm: 'Play {name} project film', filmPreview: '{name} film preview', filmTitle: '{name} — project film', architecturePhoto: '{name} — project image', photography: 'Photography: {name}', filmCredit: 'Film: {name}',
       profileFooter: 'COMPANY PROFILE', designOrderTitle: 'DESIGN ORDER', copyright: 'Copyright © 2026, R.W.H Group. All rights reserved.',
-      instagramPending: 'Instagram — coming soon',
+      instagramPending: 'Instagram (coming soon)',
       fastScroll: 'Drag to explore the page or reach the footer', skipFooter: 'Go to footer', footerPosition: 'END', scrollProject: '{number} of {total}: {name}', scrollFooter: 'Footer',
       footerServices: 'Planning · Architecture · Interiors · Landscape', footerNavigation: 'R.W.H Group links', socialNavigation: 'Social media and phone', phone: 'Phone', socialPending: 'Social media links will be added.'
     },
@@ -69,7 +69,7 @@
       detail: 'CHI TIẾT', close: 'ĐÓNG', viewDetails: 'Xem chi tiết {name}', openDetails: 'Mở chi tiết {name}', closeDetails: 'Đóng chi tiết dự án',
       playFilm: 'Phát video dự án {name}', filmPreview: 'Ảnh xem trước video {name}', filmTitle: '{name} — video dự án', architecturePhoto: '{name} — ảnh dự án', photography: 'Ảnh: {name}', filmCredit: 'Video: {name}',
       profileFooter: 'HỒ SƠ NĂNG LỰC', designOrderTitle: 'YÊU CẦU THIẾT KẾ', copyright: 'Bản quyền © 2026, R.W.H Group. Bảo lưu mọi quyền.',
-      instagramPending: 'Instagram — chờ cập nhật',
+      instagramPending: 'Instagram (chờ cập nhật)',
       fastScroll: 'Kéo để khám phá trang hoặc đến cuối trang', skipFooter: 'Đến cuối trang', footerPosition: 'CUỐI', scrollProject: '{number} trên {total}: {name}', scrollFooter: 'Cuối trang',
       footerServices: 'Quy hoạch · Kiến trúc · Nội thất · Cảnh quan', footerNavigation: 'Liên kết R.W.H Group', socialNavigation: 'Mạng xã hội và điện thoại', phone: 'Điện thoại', socialPending: 'Liên kết mạng xã hội sẽ được bổ sung.'
     }
