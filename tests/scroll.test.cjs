@@ -48,11 +48,11 @@ function page({ hover = false } = {}) {
   doc.body = element();
   doc.activeElement = doc.body;
   doc.hidden = false;
-  const sections = Array.from({ length: 13 }, element);
-  sections.slice(2, 12).forEach(section => section.classList.add('mainImg'));
+  const sections = Array.from({ length: 11 }, element);
+  sections.slice(0, 10).forEach(section => section.classList.add('mainImg'));
   const track = doc.querySelector('#fullpage');
   track.querySelectorAll = () => sections;
-  doc.children.set('#gFooter', sections[12]);
+  doc.children.set('#gFooter', sections[10]);
   const details = { isOpen: false, isInteracting: false, update() {}, open() {}, close() {} };
   const context = {
     document: doc,
@@ -176,4 +176,18 @@ test('touch still opens by tapping and mouse hover cannot open behind a modal', 
   p.doc.querySelector('#contact-modal').open = true;
   menu.emit('pointerenter', { pointerType: 'mouse' });
   assert.equal(nav.inert, true);
+});
+
+
+test('the project gallery opens at the first project and autoplay ends at the footer', () => {
+  const p = page();
+  assert.equal(p.index(), 0);
+  p.advance(5999);
+  assert.equal(p.index(), 0);
+  p.advance(1);
+  assert.equal(p.index(), 1);
+  p.advance(54000);
+  assert.equal(p.index(), 10);
+  p.advance(30000);
+  assert.equal(p.index(), 10);
 });

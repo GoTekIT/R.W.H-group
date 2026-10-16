@@ -93,7 +93,7 @@
   function schedule() {
     clearTimeout(timer);
     if (!reduced.matches && !document.hidden && !scrollDragging && current < footerIndex) {
-      const delay = current === 0 ? 12000 : current < projectStart ? 30000 : 6000;
+      const delay = 6000;
       timer = setTimeout(() => goTo(current + 1, false, true), delay);
     }
   }
@@ -104,7 +104,7 @@
     scrollRange.value = current;
     scrollRange.max = footerIndex;
     scrollRange.setAttribute('aria-valuetext', isFooter ? i18n.t('scrollFooter') : i18n.t('scrollProject', { number: current + 1, total: footerIndex, name }));
-    scrollPosition.textContent = isFooter ? i18n.t('footerPosition') : `${String(current + 1).padStart(2, '0')}\n—\n${footerIndex}`;
+    scrollPosition.textContent = isFooter ? i18n.t('footerPosition') : `${String(current + 1).padStart(2, '0')}\n\n${projects.length}`;
     scrollJump.disabled = isFooter;
     scrollJump.title = i18n.t('skipFooter');
   }
@@ -237,44 +237,6 @@
   for (const logo of document.querySelectorAll('.hLogo')) {
     logo.addEventListener('click', event => { event.preventDefault(); if (menuOpen) toggleMenu(false); goTo(0, true); });
   }
-  for (const button of document.querySelectorAll('[data-section-next]')) {
-    button.addEventListener('click', () => {
-      // Move focus out of the section that becomes inert.
-      main.focus({ preventScroll: true });
-      goTo(Number(button.dataset.sectionNext), true);
-    });
-  }
-
-  const strengthHover = window.matchMedia('(hover: hover) and (pointer: fine)');
-  for (const card of document.querySelectorAll('.strength-card')) {
-    const summary = card.querySelector('summary');
-    let hovering = false;
-    card.addEventListener('pointerenter', event => {
-      if (event.pointerType !== 'mouse' || !strengthHover.matches) return;
-      hovering = true;
-      card.open = true;
-    });
-    card.addEventListener('pointerleave', event => {
-      if (event.pointerType !== 'mouse' || !hovering) return;
-      hovering = false;
-      card.open = false;
-    });
-    summary.addEventListener('click', event => {
-      // Mouse previews follow the pointer; touch and keyboard keep native disclosure.
-      if (hovering) event.preventDefault();
-    });
-    summary.addEventListener('focus', () => {
-      if (summary.matches(':focus-visible')) card.open = true;
-    });
-    card.addEventListener('focusout', event => {
-      if (!hovering && !card.contains(event.relatedTarget)) card.open = false;
-    });
-    strengthHover.addEventListener('change', () => {
-      hovering = false;
-      card.open = false;
-    });
-  }
-
   scrollRange.addEventListener('input', () => goTo(Number(scrollRange.value), true));
   scrollRange.addEventListener('pointerdown', () => { scrollDragging = true; clearTimeout(timer); });
   function endScrollDrag() {
@@ -341,9 +303,7 @@
   }
 
   function activeScrollable(target) {
-    const candidate = current === footerIndex ? footer : current < projectStart ? sections[current] : null;
-    const description = target.closest('.strength-card[open] p');
-    if (candidate?.contains(description) && description.scrollHeight > description.clientHeight + 1) return description;
+    const candidate = current === footerIndex ? footer : null;
     return candidate?.contains(target) ? candidate : null;
   }
 
