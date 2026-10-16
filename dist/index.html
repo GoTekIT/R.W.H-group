@@ -3,19 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>R.W.H Group | Kiến trúc</title>
-  <meta name="description" content="Khám phá R.W.H Group: chuyên môn Nhật–Việt trong quy hoạch, kiến trúc, nội thất và cảnh quan.">
+  <title>R.W.H Group | Kiến tạo tương lai chăm sóc sức khỏe</title>
+  <meta name="description" content="Kết nối tinh hoa Nhật Bản cho dự án chăm sóc sức khỏe và nghỉ dưỡng tại Việt Nam: Wellness Resort, Onsen Luxury Villa, Onsen &amp; Spa, viện dưỡng lão cao cấp và bệnh viện quốc tế.">
   <meta name="theme-color" content="#666666">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23666666'/%3E%3Ctext x='16' y='24' text-anchor='middle' fill='white' font-family='Arial,sans-serif' font-size='24' font-weight='600'%3ER%3C/text%3E%3C/svg%3E">
   <link rel="preload" href="./assets/roboto-regular.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="stylesheet" href="./styles.css?v=9c1d368a09">
+  <link rel="stylesheet" href="./styles.css?v=1358b76549">
   <script src="./projects.js?v=425ff4f443" defer></script>
-  <script src="./i18n.js?v=ded7cc8790" defer></script>
+  <script src="./i18n.js?v=f318bfcf36" defer></script>
   <script src="./project-details.js?v=5fb5ac03e2" defer></script>
   <script src="./contact-form.js?v=b5e23cc34d" defer></script>
-  <script src="./app.js?v=ae737adf7a" defer></script>
+  <script src="./app.js?v=5449b06279" defer></script>
 </head>
-<body id="top" class="at-intro">
+<body id="top" class="at-intro apollo-layout">
+<div class="apollo-side-rail" aria-hidden="true"></div>
 <div class="language-control"><div class="language-switch" role="group" aria-label="Ngôn ngữ" data-i18n-aria-label="language"><button type="button" data-language="vi" aria-label="Tiếng Việt" lang="vi" aria-pressed="true">VI</button><button type="button" data-language="en" aria-label="English" lang="en" aria-pressed="false">EN</button></div></div>
 <div id="container">
     <div class="details-backdrop" aria-hidden="true"></div>
@@ -32,7 +33,7 @@
           <div><dt data-i18n="client">CLIENT</dt><dd data-detail="client"></dd></div>
         </dl>
         <section class="details-film-section" aria-label="Project film" data-i18n-aria-label="projectFilm">
-          <div class="details-section-label"><span data-i18n="projectFilmTitle">PROJECT FILM</span><a class="details-film-link" target="_blank" rel="noopener noreferrer" data-i18n="openFilm">OPEN FILM</a></div>
+          <div class="details-section-label"><span data-i18n="projectFilmTitle">VIDEO DỰ ÁN</span><a class="details-film-link" target="_blank" rel="noopener noreferrer" data-i18n="openFilm">OPEN FILM</a></div>
           <div class="details-film"></div>
           <p class="details-film-credit"></p>
         </section>
@@ -51,7 +52,7 @@
 		        </div>
     </header>
     <div class="project-controls" role="group" aria-label="Quick navigation" data-i18n-aria-label="quickNavigation">
-        <button class="menu" type="button" aria-label="Open menu" aria-controls="navigation" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+        <button class="menu" type="button" aria-label="Open menu" aria-controls="navigation" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="menu-line-top" d="M3 8h18"/><path class="menu-line-bottom" d="M3 16h18"/></svg></button>
     </div>
     <div class="scroll-control">
         <span class="scroll-position" aria-hidden="true">01 / 12</span>
@@ -60,20 +61,20 @@
     </div>
     <div class="menu-backdrop" aria-hidden="true"></div>
     <nav class="menuBox" id="navigation" aria-label="Main navigation" data-i18n-aria-label="navigation" inert>
-        <ul class="radial-menu-links">
-            <li><a href="#contact-modal" data-contact-open aria-label="Contact" data-i18n-aria-label="contact" aria-haspopup="dialog" aria-controls="contact-modal"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span class="radial-label" aria-hidden="true" data-i18n="contact">Contact</span></a></li>
-            <li><a href="#profile-modal" data-profile-open aria-label="Profile" data-i18n-aria-label="profile" aria-haspopup="dialog" aria-controls="profile-modal"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 21v-2a7 7 0 0 1 14 0v2"/></svg><span class="radial-label" aria-hidden="true" data-i18n="profile">Profile</span></a></li>
-            <li><a href="#contact-modal" data-contact-open aria-haspopup="dialog" aria-controls="contact-modal" aria-label="Design Order" data-i18n-aria-label="designOrder"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="6" height="18" rx="1"/><path d="M3 7h3M3 11h4M3 15h3M14 20l3-1 5-11-3-2-5 11v3Zm4-12 3 1"/></svg><span class="radial-label" aria-hidden="true" data-i18n="designOrder">Design Order</span></a></li>
+        <div class="apollo-menu-content"><ul class="radial-menu-links">
+            <li><a href="#contact-modal" data-contact-open aria-label="Contact" data-i18n-aria-label="contact" aria-haspopup="dialog" aria-controls="contact-modal"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span class="radial-label" aria-hidden="true" data-i18n="contact">Liên hệ</span></a></li>
+            <li><a href="#profile-modal" data-profile-open aria-label="Profile" data-i18n-aria-label="profile" aria-haspopup="dialog" aria-controls="profile-modal"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 21v-2a7 7 0 0 1 14 0v2"/></svg><span class="radial-label" aria-hidden="true" data-i18n="profile">Hồ sơ năng lực</span></a></li>
+            <li><a href="#contact-modal" data-contact-open aria-haspopup="dialog" aria-controls="contact-modal" aria-label="Design Order" data-i18n-aria-label="designOrder"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="6" height="18" rx="1"/><path d="M3 7h3M3 11h4M3 15h3M14 20l3-1 5-11-3-2-5 11v3Zm4-12 3 1"/></svg><span class="radial-label" aria-hidden="true" data-i18n="designOrder">Yêu cầu thiết kế</span></a></li>
             <li><button type="button" disabled aria-label="Instagram (chờ cập nhật)" data-i18n-aria-label="instagramPending"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none"/></svg><span class="radial-label" aria-hidden="true" data-i18n="instagramPending">Instagram (chờ cập nhật)</span></button></li>
-        </ul>
+        </ul><a class="apollo-profile-preview" href="#profile-modal" data-profile-open aria-haspopup="dialog" aria-controls="profile-modal"><img src="./assets/rwh-profile-cover.jpg" width="1200" height="861" alt="Bìa Hồ sơ năng lực R.W.H Group 2025" data-i18n-alt="profileCover" loading="lazy"><span>R.W.H Group</span><small data-i18n="profileFooter">HỒ SƠ NĂNG LỰC</small></a></div>
     </nav>
     <main id="main" aria-label="Giới thiệu, thế mạnh và dự án R.W.H Group" data-i18n-aria-label="projectsLabel" tabindex="-1"><div class="outBox" id="fullpage">
     <section class="section intro-section brand-intro show" aria-labelledby="brand-intro-title">
         <div class="intro-content brand-intro-content">
             <div class="intro-eyebrow"><span>01</span><span data-i18n="brandEyebrow">VỀ CHÚNG TÔI</span></div>
             <div class="brand-intro-story">
-                <div class="brand-intro-heading"><h1 id="brand-intro-title" class="intro-wordmark"><span>R.W.H</span><span>Group</span></h1><h2 data-i18n="brandHeadline">Kiến trúc hài hòa với thiên nhiên.</h2></div>
-                <p class="brand-intro-description" data-i18n="brandDescription">Kết nối chuyên môn Nhật Bản và sự am hiểu Việt Nam, R.W.H Group mang đến giải pháp quy hoạch, kiến trúc, nội thất và cảnh quan. Chúng tôi đặt sự đơn giản, hiệu quả và mối quan hệ giữa con người với thiên nhiên ở trung tâm mỗi thiết kế.</p>
+                <div class="brand-intro-heading"><h2 id="brand-intro-title" data-i18n="brandHeadline">Kiến tạo tương lai chăm sóc sức khỏe.</h2><p class="brand-intro-lead" data-i18n="brandLead">Kết nối tinh hoa Nhật Bản – Kiến tạo những công trình chăm sóc sức khỏe đẳng cấp quốc tế.</p></div>
+                <p class="brand-intro-description" data-i18n="brandDescription">Với nền tảng chuyên môn kiến trúc Nhật Bản cùng mạng lưới chuyên gia giàu kinh nghiệm trong lĩnh vực thiết kế, tư vấn vận hành và y tế, R.W.H Group hân hạnh đồng hành cùng các chủ đầu tư tiên phong trong lĩnh vực chăm sóc sức khỏe và nghỉ dưỡng tại Việt Nam.</p>
             </div>
             <div class="brand-intro-bottom">
                 <div class="intro-actions"><a href="#profile-modal" data-profile-open aria-haspopup="dialog" aria-controls="profile-modal" data-i18n="viewProfile">Xem hồ sơ</a><a href="#contact-modal" data-contact-open aria-haspopup="dialog" aria-controls="contact-modal" data-i18n="contact">Liên hệ</a></div>
@@ -85,14 +86,14 @@
     <section class="section intro-section strengths-intro" aria-labelledby="strengths-title">
         <div class="intro-content strengths-content">
             <div class="intro-eyebrow"><span>02</span><span data-i18n="strengthsEyebrow">NĂNG LỰC CỦA CHÚNG TÔI</span></div>
-            <div class="strengths-heading"><h2 id="strengths-title" data-i18n="strengthsHeadline">Chuyên sâu về chăm sóc sức khỏe.</h2><p data-i18n="strengthsDescription">Tiên phong tại Việt Nam về các dự án Onsen &amp; Spa, Wellness Resort, viện dưỡng lão và bệnh viện quốc tế, kết hợp công nghệ hiện đại của Nhật Bản.</p></div>
+            <div class="strengths-heading"><h2 id="strengths-title" data-i18n="strengthsHeadline">Các lĩnh vực tư vấn trọng tâm.</h2><p data-i18n="strengthsDescription">Chúng tôi kết nối các chuyên gia kiến trúc sư, tư vấn vận hành và bác sĩ đến từ Nhật Bản, mang đến những giải pháp toàn diện, kết hợp giữa tư duy thiết kế, kinh nghiệm vận hành thực tiễn và kiến thức chuyên môn y tế.</p></div>
             <ol class="strengths-grid">
-                <li><details class="strength-card"><summary aria-labelledby="strength-title-01"><img src="./assets/rwh-strength-01.jpg" width="1200" height="750" alt="" loading="lazy"><span class="strength-number" aria-hidden="true">01</span><div class="strength-card-copy"><h3 id="strength-title-01" data-i18n="strength1Title">Kiến trúc chăm sóc sức khỏe</h3><p tabindex="0" data-i18n="strength1Description">Thiết kế các dự án chăm sóc sức khỏe, kết hợp quy hoạch, kiến trúc, nội thất và cảnh quan để phục vụ nhu cầu sử dụng và vận hành.</p></div><span class="strength-card-mark" aria-hidden="true"></span></summary></details></li>
-                <li><details class="strength-card"><summary aria-labelledby="strength-title-02"><img src="./assets/rwh-strength-03.jpg" width="1200" height="750" alt="" loading="lazy"><span class="strength-number" aria-hidden="true">02</span><div class="strength-card-copy"><h3 id="strength-title-02" data-i18n="strength2Title">Onsen &amp; Spa</h3><p tabindex="0" data-i18n="strength2Description">Tiên phong tại Việt Nam trong thiết kế Onsen và Spa, kết hợp tinh thần tắm khoáng Nhật Bản với không gian thư giãn.</p></div><span class="strength-card-mark" aria-hidden="true"></span></summary></details></li>
-                <li><details class="strength-card"><summary aria-labelledby="strength-title-03"><img src="./assets/rwh-project-mikazuki-photo.jpg" width="1200" height="750" alt="" loading="lazy"><span class="strength-number" aria-hidden="true">03</span><div class="strength-card-copy"><h3 id="strength-title-03" data-i18n="strength3Title">Wellness Resort</h3><p tabindex="0" data-i18n="strength3Description">Thiết kế khu nghỉ dưỡng chăm sóc sức khỏe, kết nối lưu trú, thư giãn và trải nghiệm wellness trong một tổng thể hài hòa.</p></div><span class="strength-card-mark" aria-hidden="true"></span></summary></details></li>
-                <li><details class="strength-card"><summary aria-labelledby="strength-title-04"><img src="./assets/rwh-strength-06.jpg" width="1200" height="750" alt="" loading="lazy"><span class="strength-number" aria-hidden="true">04</span><div class="strength-card-copy"><h3 id="strength-title-04" data-i18n="strength4Title">Viện dưỡng lão</h3><p tabindex="0" data-i18n="strength4Description">Phát triển không gian chăm sóc người cao tuổi, chú trọng sự an toàn, thuận tiện và chất lượng sống hằng ngày.</p></div><span class="strength-card-mark" aria-hidden="true"></span></summary></details></li>
-                <li><details class="strength-card"><summary aria-labelledby="strength-title-05"><img src="./assets/rwh-project-aegis-hospital-photo.jpg" width="1200" height="750" alt="" loading="lazy"><span class="strength-number" aria-hidden="true">05</span><div class="strength-card-copy"><h3 id="strength-title-05" data-i18n="strength5Title">Bệnh viện quốc tế</h3><p tabindex="0" data-i18n="strength5Description">Thiết kế bệnh viện quốc tế, chú trọng tổ chức không gian, nhu cầu chăm sóc và hiệu quả vận hành.</p></div><span class="strength-card-mark" aria-hidden="true"></span></summary></details></li>
-                <li><details class="strength-card"><summary aria-labelledby="strength-title-06"><img src="./assets/rwh-strength-04.jpg" width="1200" height="750" alt="" loading="lazy"><span class="strength-number" aria-hidden="true">06</span><div class="strength-card-copy"><h3 id="strength-title-06" data-i18n="strength6Title">Công nghệ Nhật Bản</h3><p tabindex="0" data-i18n="strength6Description">Cung cấp và tích hợp công nghệ hiện đại của Nhật Bản nhằm tối ưu trải nghiệm chăm sóc sức khỏe và vận hành công trình.</p></div><span class="strength-card-mark" aria-hidden="true"></span></summary></details></li>
+                <li><details class="strength-card"><summary aria-labelledby="strength-title-01"><img src="./assets/rwh-project-mikazuki-photo.jpg" width="1200" height="750" alt="" loading="lazy"><span class="strength-number" aria-hidden="true">01</span><div class="strength-card-copy"><h3 id="strength-title-01" data-i18n="strength1Title">Wellness Resort</h3><p tabindex="0" data-i18n="strength1Description">Khu nghỉ dưỡng chăm sóc sức khỏe toàn diện, tái tạo năng lượng và nâng cao chất lượng sống.</p></div><span class="strength-card-mark" aria-hidden="true"></span></summary></details></li>
+                <li><details class="strength-card"><summary aria-labelledby="strength-title-02"><img src="./assets/rwh-strength-01.jpg" width="1200" height="750" alt="" loading="lazy"><span class="strength-number" aria-hidden="true">02</span><div class="strength-card-copy"><h3 id="strength-title-02" data-i18n="strength2Title">Onsen Luxury Villa</h3><p tabindex="0" data-i18n="strength2Description">Dinh thự nghỉ dưỡng độc bản, đẳng cấp thượng lưu.</p></div><span class="strength-card-mark" aria-hidden="true"></span></summary></details></li>
+                <li><details class="strength-card"><summary aria-labelledby="strength-title-03"><img src="./assets/rwh-strength-03.jpg" width="1200" height="750" alt="" loading="lazy"><span class="strength-number" aria-hidden="true">03</span><div class="strength-card-copy"><h3 id="strength-title-03" data-i18n="strength3Title">Onsen &amp; Spa</h3><p tabindex="0" data-i18n="strength3Description">Tổ hợp suối khoáng nóng, trị liệu và thư giãn theo tinh thần Nhật Bản.</p></div><span class="strength-card-mark" aria-hidden="true"></span></summary></details></li>
+                <li><details class="strength-card"><summary aria-labelledby="strength-title-04"><img src="./assets/rwh-strength-06.jpg" width="1200" height="750" alt="" loading="lazy"><span class="strength-number" aria-hidden="true">04</span><div class="strength-card-copy"><h3 id="strength-title-04" data-i18n="strength4Title">Viện dưỡng lão cao cấp</h3><p tabindex="0" data-i18n="strength4Description">Mô hình chăm sóc người cao tuổi chuyên nghiệp, nhân văn và bền vững.</p></div><span class="strength-card-mark" aria-hidden="true"></span></summary></details></li>
+                <li><details class="strength-card"><summary aria-labelledby="strength-title-05"><img src="./assets/rwh-project-aegis-hospital-photo.jpg" width="1200" height="750" alt="" loading="lazy"><span class="strength-number" aria-hidden="true">05</span><div class="strength-card-copy"><h3 id="strength-title-05" data-i18n="strength5Title">Bệnh viện quốc tế</h3><p tabindex="0" data-i18n="strength5Description">Giải pháp kiến trúc và tư vấn chuyên môn hướng đến tiêu chuẩn chất lượng quốc tế.</p></div><span class="strength-card-mark" aria-hidden="true"></span></summary></details></li>
+                <li><details class="strength-card"><summary aria-labelledby="strength-title-06"><img src="./assets/rwh-strength-04.jpg" width="1200" height="750" alt="" loading="lazy"><span class="strength-number" aria-hidden="true">06</span><div class="strength-card-copy"><h3 id="strength-title-06" data-i18n="strength6Title">Chuyên gia &amp; công nghệ Nhật Bản</h3><p tabindex="0" data-i18n="strength6Description">Kết nối chuyên gia Nhật Bản và công nghệ hiện đại, kết hợp kiến trúc, y tế và vận hành vì sức khỏe và chất lượng sống của con người.</p></div><span class="strength-card-mark" aria-hidden="true"></span></summary></details></li>
             </ol>
             <button class="intro-next" type="button" data-section-next="2"><span data-i18n="exploreProjects">Khám phá dự án</span><span class="intro-next-mark" aria-hidden="true"></span></button>
         </div>
@@ -200,16 +201,23 @@
     <section class="section sec11 fp-auto-height">
         <footer id="gFooter">
             <div class="rwh-footer-inner">
+                <div class="rwh-footer-invitation">
+                    <h2 data-i18n="footerInvitationTitle">Cùng kiến tạo những dự án tiên phong.</h2>
+                    <p data-i18n="footerInvitation">R.W.H Group trân trọng mời Quý Chủ đầu tư kết nối với đội ngũ chuyên gia Nhật Bản của chúng tôi để cùng trao đổi, nghiên cứu và phát triển những dự án tiên phong tại Việt Nam.</p>
+                    <a href="#contact-modal" data-contact-open aria-haspopup="dialog" aria-controls="contact-modal" data-i18n="expertContact">Kết nối chuyên gia Nhật Bản</a>
+                </div>
                 <div class="rwh-footer-main">
                     <div class="rwh-footer-brand">
                         <a href="#container" class="hLogo brand-wordmark footer-wordmark" aria-label="Trang chủ R.W.H Group" data-i18n-aria-label="home"><span class="brand-name">R.W.H</span> <span class="brand-group">Group</span></a>
-                        <p data-i18n="footerServices">Quy hoạch · Kiến trúc · Nội thất · Cảnh quan</p>
+                        <p class="rwh-footer-tagline" data-i18n="footerTagline">Japanese Expertise, Better Living.</p>
+                        <p data-i18n="footerServices">Design &amp; Build</p>
                     </div>
                     <nav class="rwh-footer-links" aria-label="Liên kết R.W.H Group" data-i18n-aria-label="footerNavigation">
                         <a href="#profile-modal" data-profile-open aria-haspopup="dialog" aria-controls="profile-modal"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 21v-2a7 7 0 0 1 14 0v2"/></svg><span data-i18n="profileFooter">HỒ SƠ NĂNG LỰC</span></a>
                         <a href="#contact-modal" data-contact-open aria-haspopup="dialog" aria-controls="contact-modal"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span data-i18n="contactTitle">LIÊN HỆ</span></a>
                         <a href="#contact-modal" data-contact-open aria-haspopup="dialog" aria-controls="contact-modal"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="6" height="18" rx="1"/><path d="M3 7h3M3 11h4M3 15h3M14 20l3-1 5-11-3-2-5 11v3Zm4-12 3 1"/></svg><span data-i18n="designOrderTitle">YÊU CẦU THIẾT KẾ</span></a>
                     </nav>
+                    <a class="apollo-profile-preview footer-profile-preview" href="#profile-modal" data-profile-open aria-haspopup="dialog" aria-controls="profile-modal"><img src="./assets/rwh-profile-cover.jpg" width="1200" height="861" alt="Bìa Hồ sơ năng lực R.W.H Group 2025" data-i18n-alt="profileCover" loading="lazy"><span>R.W.H Group</span><small data-i18n="profileFooter">HỒ SƠ NĂNG LỰC</small></a>
                 </div>
                 <div class="rwh-footer-bottom">
                     <p class="rwh-footer-copyright" data-i18n="copyright">Bản quyền © 2026, R.W.H Group. Bảo lưu mọi quyền.</p>
@@ -218,7 +226,7 @@
                             <button type="button" disabled aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 21v-8h3l.5-4H14V6.5c0-1 .5-1.5 1.7-1.5H18V1.5A20 20 0 0 0 15 1c-3 0-5 1.9-5 5.2V9H7v4h3v8"/></svg></button>
                             <button type="button" disabled aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none"/></svg></button>
                             <button type="button" disabled aria-label="Zalo"><span class="rwh-zalo-icon" aria-hidden="true">Zalo</span></button>
-                            <a class="rwh-footer-phone" href="tel:+84982132489"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2A20 20 0 0 1 3.1 5.2 2 2 0 0 1 5.1 3h3a2 2 0 0 1 2 1.7c.1 1 .3 1.9.7 2.8a2 2 0 0 1-.5 2.1L9 10.9a16 16 0 0 0 4.1 4.1l1.3-1.3a2 2 0 0 1 2.1-.5c.9.4 1.8.6 2.8.7A2 2 0 0 1 22 16.9Z"/></svg><span>0982132489</span></a>
+                            <a class="rwh-footer-phone" href="tel:+84982132489"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2A20 20 0 0 1 3.1 5.2 2 2 0 0 1 5.1 3h3a2 2 0 0 1 2 1.7c.1 1 .3 1.9.7 2.8a2 2 0 0 1-.5 2.1L9 10.9a16 16 0 0 0 4.1 4.1l1.3-1.3a2 2 0 0 1 2.1-.5c.9.4 1.8.6 2.8.7A2 2 0 0 1 22 16.9Z"/></svg><span>Hotline: 0982-132-489</span></a>
                         </div>
                         <p class="rwh-footer-pending" data-i18n="socialPending">Liên kết mạng xã hội sẽ được bổ sung.</p>
                     </div>
@@ -232,7 +240,7 @@
 
 <dialog class="contact-modal" id="contact-modal" aria-labelledby="contact-title" aria-describedby="contact-note">
     <div class="contact-heading">
-        <h2 id="contact-title" data-i18n="contactTitle">CONTACT</h2>
+        <h2 id="contact-title" data-i18n="contactTitle">LIÊN HỆ</h2>
         <button class="contact-close" data-modal-close type="button" aria-label="Close contact form" data-i18n-aria-label="closeContact"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
     </div>
     <form id="contact-form" action="/api/contact" method="post">
@@ -253,20 +261,21 @@
             <input id="contact-website" name="website" type="text" tabindex="-1" autocomplete="off">
         </div>
         <button class="contact-submit" type="submit" data-i18n="sendMessage">Send message</button>
-        <p class="contact-note" id="contact-note" role="status" aria-live="polite" data-i18n="contactReady">Để lại câu hỏi, R.W.H Group sẽ liên hệ với bạn.</p>
+        <p class="contact-note" id="contact-note" role="status" aria-live="polite" data-i18n="contactReady">Liên hệ R.W.H Group để được tư vấn và kết nối với các chuyên gia Nhật Bản.</p>
     </form>
 </dialog>
 <dialog class="contact-modal profile-modal" id="profile-modal" aria-labelledby="profile-title" aria-describedby="profile-description">
     <div class="contact-heading">
-        <h2 id="profile-title" data-i18n="profileTitle">PROFILE</h2>
+        <h2 id="profile-title" data-i18n="profileTitle">HỒ SƠ</h2>
         <button class="contact-close" data-modal-close type="button" aria-label="Close company profile" data-i18n-aria-label="closeProfile"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
     </div>
     <img class="profile-cover" src="./assets/rwh-profile-cover.jpg" width="1200" height="861" loading="lazy" alt="Bìa Hồ sơ năng lực R.W.H Group 2025" data-i18n-alt="profileCover">
     <div class="profile-intro">
         <h3>R.W.H Group</h3>
-        <p id="profile-description" data-i18n="profileDescription">Đội ngũ kiến trúc sư Nhật Bản và Việt Nam cung cấp dịch vụ quy hoạch, kiến trúc, nội thất và cảnh quan. Triết lý thiết kế hướng đến sự đơn giản, hiệu quả và hài hòa với thiên nhiên.</p>
+        <p id="profile-description" data-i18n="profileDescription">Với nền tảng chuyên môn kiến trúc Nhật Bản cùng mạng lưới chuyên gia giàu kinh nghiệm trong lĩnh vực thiết kế, tư vấn vận hành và y tế, R.W.H Group hân hạnh đồng hành cùng các chủ đầu tư tiên phong trong lĩnh vực chăm sóc sức khỏe và nghỉ dưỡng tại Việt Nam. Chúng tôi kết nối các chuyên gia kiến trúc sư, tư vấn vận hành và bác sĩ đến từ Nhật Bản, kết hợp tư duy thiết kế, kinh nghiệm vận hành thực tiễn và kiến thức chuyên môn y tế.</p>
+        <p data-i18n="profileApproach">Không chỉ dừng lại ở thiết kế kiến trúc, chúng tôi hướng đến việc xây dựng những mô hình có giá trị thực tiễn, nơi không gian, công nghệ, y tế và vận hành cùng hội tụ vì sức khỏe và chất lượng sống của con người.</p>
     </div>
-    <p class="profile-file-info" data-i18n="profileFile">Company Profile 2025 · VN / EN · 135 trang · 10.4 MB</p>
+    <p class="profile-file-info" data-i18n="profileFile">Hồ sơ năng lực 2025 · VN / EN · 135 trang · 10,4 MB</p>
     <div class="profile-actions">
         <a class="profile-view" href="./assets/rwh-company-profile-2025.pdf" target="_blank" rel="noopener noreferrer" data-i18n="viewProfile">Xem hồ sơ</a>
         <a class="profile-download" href="./assets/rwh-company-profile-2025.pdf" download="RWH-Company-Profile-2025.pdf" data-i18n="downloadPdf">Tải PDF</a>

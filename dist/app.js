@@ -104,7 +104,7 @@
     scrollRange.value = current;
     scrollRange.max = footerIndex;
     scrollRange.setAttribute('aria-valuetext', isFooter ? i18n.t('scrollFooter') : i18n.t('scrollProject', { number: current + 1, total: footerIndex, name }));
-    scrollPosition.textContent = isFooter ? i18n.t('footerPosition') : `${String(current + 1).padStart(2, '0')} / ${footerIndex}`;
+    scrollPosition.textContent = isFooter ? i18n.t('footerPosition') : `${String(current + 1).padStart(2, '0')}\n—\n${footerIndex}`;
     scrollJump.disabled = isFooter;
     scrollJump.title = i18n.t('skipFooter');
   }
