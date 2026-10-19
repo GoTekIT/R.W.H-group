@@ -23,6 +23,24 @@ def asset(name):
     return f'{name}?v={sha256((DIST / name).read_bytes()).hexdigest()[:10]}'
 
 
+# Detail pages use the reference's shared, works and detail styles together.
+fonts = '''@charset "utf-8";
+@font-face{font-family:Roboto;font-weight:300;font-display:swap;src:url('./assets/roboto-light.ttf') format('truetype')}
+@font-face{font-family:Roboto;font-weight:400;font-display:swap;src:url('./assets/roboto-regular.ttf') format('truetype')}
+@font-face{font-family:Roboto;font-weight:500;font-display:swap;src:url('./assets/roboto-medium.ttf') format('truetype')}
+'''
+reference_styles = []
+for name in ['common.css', 'works.css', 'works_detail.css']:
+    source = (ROOT / 'reference' / name).read_text()
+    source = source.replace('@charset "utf-8";', '')
+    source = source.replace("url('/img/", "url('https://apollo-aa.jp/img/")
+    source = '\n'.join(line.rstrip() for line in source.splitlines()) + '\n'
+    reference_styles.append(source)
+contact_css = (DIST / 'styles.css').read_text().split('.contact-modal {', 1)[1]
+contact_css = '.contact-modal {' + contact_css
+(DIST / 'project-gallery.css').write_text(fonts + '\n'.join(reference_styles) + '\n' + contact_css + '\n' + (DIST / 'project-detail-overrides.css').read_text())
+
+
 sections = []
 for project in projects:
     number = project['number']
@@ -45,19 +63,35 @@ html = html.replace('<html lang="en">', '<html lang="vi">')
 html = re.sub(r'<meta name="description" content="[^"]*">', '<meta name="description" content="Các dự án RWH: nghỉ dưỡng, Onsen, chăm sóc sức khỏe, khách sạn và kiến trúc đô thị tại Việt Nam và Nhật Bản.">', html)
 index.write_text(html)
 
+# Reuse the approved homepage menu, footer and owner contact form.
+def detail_links(markup):
+    markup = markup.replace('href="./', 'href="../../').replace('src="./', 'src="../../')
+    markup = markup.replace('href="https://apollo-aa.jp/works"', 'href="../../index.html"')
+    markup = markup.replace('href="https://apollo-aa.jp/archi_worksprojects/projects"', 'href="../../index.html"')
+    return markup
+
+
+navigation = detail_links(re.search(r'<nav class="menuBox".*?</nav>', html, re.S).group())
+footer = detail_links(re.search(r'<footer id="gFooter">.*?</footer>', html, re.S).group())
+footer = footer.replace('href="#container"', 'href="../../index.html"')
+footer = footer.replace('<div class="fInner">', '<div class="fInner"><div class="pagetop"><a href="#container" aria-label="Về đầu dự án"><img src="../../assets/apollo-reference/132dcb5de486.png" alt="" width="15"></a></div>', 1)
+contact_dialog = re.search(r'<dialog class="contact-modal".*?</dialog>', html, re.S).group()
+
 for i, project in enumerate(projects):
     number = project['number']
     folder = DIST / 'projects' / project['slug']
     folder.mkdir(parents=True, exist_ok=True)
-    facts = ''.join(f'<div><dt>{e(label)}</dt><dd>{e(value)}</dd></div>' for label, value in project['facts'])
+    facts = ''.join(f'<tr><th scope="row">{e(label)}</th><td>{e(value)}</td></tr>' for label, value in project['facts'])
     figures = []
     for j, photo in enumerate(project['images']):
         caption = f'{project["title"]} — {j + 1:02d}'
-        figures.append(f'''<figure><a class="gallery-image" href="../../{e(photo['src'])}" data-caption="{e(caption)}" aria-label="Phóng to ảnh {j + 1} của {e(project['title'])}"><img src="../../{e(photo['src'])}" width="{photo['width']}" height="{photo['height']}" alt="{e(caption)}" loading="lazy" decoding="async"></a></figure>''')
-    previous = projects[i - 1] if i else None
-    following = projects[i + 1] if i + 1 < len(projects) else None
-    previous_link = f'<a href="../{e(previous["slug"])}/index.html"><small>DỰ ÁN TRƯỚC</small>{e(previous["title"])}</a>' if previous else '<a href="../../index.html"><small>TRỞ VỀ</small>TRANG CHỦ</a>'
-    next_link = f'<a href="../{e(following["slug"])}/index.html"><small>DỰ ÁN TIẾP THEO</small>{e(following["title"])}</a>' if following else '<a href="../../index.html"><small>TRỞ VỀ</small>TRANG CHỦ</a>'
+        source = project['hero'] if j == 0 else photo['src']
+        loading = 'loading="eager" fetchpriority="high"' if j == 0 else 'loading="lazy"'
+        figures.append(f'''<div class="photo"><a class="gallery-image" href="../../{e(source)}" data-caption="{e(caption)}" aria-label="Phóng to ảnh {j + 1} của {e(project['title'])}"><img src="../../{e(source)}" width="{photo['width']}" height="{photo['height']}" alt="{e(caption)}" {loading} decoding="async"></a></div>''')
+    related = []
+    for offset in range(1, 4):
+        item = projects[(i + offset) % len(projects)]
+        related.append(f'''<li><a href="../{e(item['slug'])}/index.html"><span class="over"><span class="pho"><img src="../../{e(item['images'][0]['thumbnail'])}" alt="{e(item['title'])}" loading="lazy"></span></span><span class="txt margin"><span class="ttl">{e(item['title'])}</span><span class="txt01">{e(item['category'])}<br>{e(item['subtitle'])}</span></span></a></li>''')
     page = f'''<!doctype html>
 <html lang="vi"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -65,17 +99,29 @@ for i, project in enumerate(projects):
 <meta name="description" content="{e(project['description'])}">
 <meta name="theme-color" content="#292929">
 <link rel="icon" href="../../assets/rwh-reference-wordmark.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&amp;family=Roboto:wght@300;400;500&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../{asset('project-gallery.css')}">
 <script src="../../{asset('project-gallery.js')}" defer></script>
+<script src="../../{asset('contact-form.js')}" defer></script>
 </head><body>
-<header class="project-header"><a class="project-brand" href="../../index.html" aria-label="RWH — Trang chủ"><img src="../../assets/rwh-reference-wordmark.svg" alt="RWH" width="150" height="40"></a><a class="back-link" href="../../index.html?project={number}"><span aria-hidden="true">←</span> TRỞ VỀ</a></header>
-<main>
-<section class="project-hero" aria-label="{e(project['title'])}"><img src="../../{e(project['hero'])}" alt="{e(project['title'])} — ảnh tổng quan" fetchpriority="high" width="2400" height="1350"></section>
-<section class="project-intro"><div><p class="project-number">{number:02d} / {len(projects):02d}</p><h1>{e(project['title'])}</h1><p class="project-category">{e(project['category'])}</p><p class="project-description">{e(project['description'])}</p></div><dl>{facts}</dl></section>
-<section class="project-gallery" aria-labelledby="gallery-title"><div class="gallery-heading"><h2 id="gallery-title">HÌNH ẢNH DỰ ÁN</h2><span>{len(project['images']):02d} ẢNH</span></div><div class="gallery-grid">{''.join(figures)}</div></section>
-<nav class="project-pagination" aria-label="Điều hướng dự án">{previous_link}{next_link}</nav>
+<div id="container">
+<header id="gHeader" class="header01"><div class="inner"><h1><a class="hLogo" href="../../index.html" aria-label="RWH — Trang chủ"><img class="pc" src="../../assets/rwh-reference-wordmark.svg" alt="RWH" width="357"><img class="sp" src="../../assets/rwh-reference-wordmark.svg" alt="RWH" width="255"></a></h1></div></header>
+<div class="meunRBox"><button class="menu" type="button" aria-label="Open menu" aria-controls="navigation" aria-expanded="false"><span class="top"></span><span class="bottom"></span></button></div>
+{navigation}
+<main id="main" tabindex="-1">
+<div class="comTopLinkBox"><h2>{e(project['title'])}</h2><div class="rBox"><p class="txt">{e(project['category'])}{' / ' + e(project['location']) if project['location'] else ''}<br>{e(project['subtitle'])}</p></div></div>
+<div class="comSideTxt"><p class="txt"><span class="txt01"><a href="../../index.html?project={number}">WORKS</a></span><span class="txt02" title="{e(project['title'])}">{e(project['title'])}</span></p></div>
+<section class="sec01" aria-label="{e(project['title'])}"><div class="inner01">
+<div class="project-photos">{''.join(figures)}</div>
+<div class="textArea"><div class="bdBox"><div class="lBox"><p class="project-description">{e(project['description'])}</p></div></div></div>
+<div class="txtBox"><div class="tBox"><h2>DATA</h2></div><div class="rBox"><ul class="txtListUl"><li><table><tbody>{facts}</tbody></table></li></ul></div></div>
+</div></section>
+<section class="sec02"><div class="inner"><h2 class="h2Ttl">OTHER WORKS</h2><ul class="listUl listUl01">{''.join(related)}</ul><div class="comBtn"><a href="../../index.html"><span class="en">MORE</span></a></div></div></section>
 </main>
-<footer><span>RWH Group</span><a href="tel:+84982132489">0982-132-489</a></footer>
+{footer}
+</div>
+{contact_dialog}
 <dialog class="image-viewer" aria-label="Xem ảnh dự án"><button type="button" class="viewer-close" aria-label="Đóng ảnh" autofocus>×</button><button type="button" class="viewer-prev" aria-label="Ảnh trước">←</button><div class="viewer-stage"><img alt=""><p class="viewer-caption" aria-live="polite"></p></div><button type="button" class="viewer-next" aria-label="Ảnh tiếp theo">→</button></dialog>
 </body></html>
 '''

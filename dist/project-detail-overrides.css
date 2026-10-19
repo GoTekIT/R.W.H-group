@@ -1,0 +1,44 @@
+/* Native interactions and client content, layered over the Apollo detail styles. */
+html { scroll-behavior:smooth; scrollbar-gutter:stable; }
+body { min-width:0; }
+#gHeader { min-width:0; }
+#gHeader h1 img { max-width:none; }
+.menu { border:0; padding:0; background:none; color:inherit; font:inherit; }
+.menu:focus-visible, a:focus-visible { outline:1px solid #fff; outline-offset:5px; }
+.menuBox a { color:#fff; }
+body.menu-open { overflow:hidden; }
+body.menu-open .comTopLinkBox, body.menu-open .comSideTxt { opacity:0; visibility:hidden; }
+.comTopLinkBox h2 { overflow-wrap:break-word; }
+.comSideTxt .txt02 { text-overflow:ellipsis; }
+#main .gallery-image, #main .gallery-image:hover { display:block; opacity:1; cursor:zoom-in; }
+#main .project-photos .photo { margin-bottom:0; }
+#main .project-photos img { display:block; width:100%; height:auto; max-height:none; }
+#main .textArea p { font-family:Roboto,Arial,sans-serif; }
+#main .txtBox .txtListUl > li:only-child { width:100%; }
+#main .listUl .pho, #main .listUl .pho img { opacity:1; }
+#main .listUl .pho img { object-fit:cover; }
+#gFooter .fLogo a { opacity:1; }
+.pagetop { opacity:0; visibility:hidden; transition:opacity .3s,visibility .3s; }
+body.page-scrolled .pagetop { opacity:1; visibility:visible; }
+.contact-modal button, .image-viewer button { cursor:pointer; font-family:Roboto,Arial,sans-serif; }
+.contact-submit { font-weight:400; }
+.contact-note { font-weight:400; }
+.image-viewer { position:fixed; inset:0; border:0; padding:0; background:#191919; color:#fff; width:100vw; max-width:100vw; height:100svh; max-height:100svh; overflow:hidden; overscroll-behavior:contain; margin:0; box-sizing:border-box; }
+.image-viewer::backdrop { background:#191919; }
+.image-viewer[open] { display:grid; grid-template-columns:72px 1fr 72px; align-items:center; }
+.image-viewer button { border:0; background:transparent; color:#fff; font-size:28px; width:52px; height:52px; justify-self:center; }
+.viewer-close { position:absolute; right:20px; top:16px; z-index:2; }
+.viewer-stage { min-width:0; text-align:center; }
+.viewer-stage img { display:block; width:100%; height:calc(100svh - 140px); object-fit:contain; }
+.viewer-caption { font:11px/1.6 Roboto,Arial,sans-serif; letter-spacing:.08em; margin:20px 0 0; color:#ccc; }
+.viewer-prev, .viewer-next { position:relative; z-index:1; }
+.viewer-close:hover, .viewer-prev:hover, .viewer-next:hover { background:#ffffff12; }
+body:has(dialog[open]) { overflow:hidden; }
+@media(max-width:767px) {
+  #main .textArea .rwh-description { width:auto; }
+  .image-viewer[open] { grid-template-columns:44px 1fr 44px; }
+  .image-viewer button { width:40px; height:44px; font-size:24px; }
+  .viewer-close { top:12px; right:12px; }
+  .viewer-caption { font-size:10px; }
+}
+@media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *,*::before,*::after { transition:none!important; animation:none!important; } }

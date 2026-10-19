@@ -1,0 +1,341 @@
+@charset "utf-8";
+/*------------------------------------------------------------
+	index
+------------------------------------------------------------*/
+#main .photo img {
+	width: 100% !important;
+}
+#main .centerPho {
+	padding: 145px 18.7% 145px 13.7%;
+}
+#main .centerPho img {
+	width: 100% !important;
+}
+#main .phoList {
+	display: flex;
+	flex-wrap: wrap;
+}
+#main .phoList li {
+	width: 50%;
+}
+#main .phoList li img {
+	width: 100% !important;
+}
+#main .textArea {
+	padding: 171px 160px 0 101px;
+}
+#main .textArea .bdBox {
+	margin-bottom: 85px;
+	padding-bottom: 70px;
+	border-bottom: 1px solid #3c3c3c;
+}
+#main .textArea .lBox {
+	width: 46%;
+}
+#main .textArea .rBox {
+	width: 47.5%;
+}
+#main .textArea p {
+	color: #ccc;
+	font-size: 1.2rem;
+	line-height: 22px;
+}
+#main .textArea p a {
+	color: #ccc;
+}
+#main .textArea .rBox p {
+	font-size: 1.1rem;
+	line-height: 22px;
+	letter-spacing: 0.5px;
+}
+#main .textArea .rBox p:not(:last-child) {
+	margin-bottom: 20px;
+}
+#main .listBox {
+	padding-bottom: 85px;
+	border-bottom: 1px solid #3c3c3c;
+}
+#main .listBox > div {
+    width: 47.5%;
+}
+#main .listBox ul {
+	width: 100%;
+}
+#main .listBox li {
+	color: #ccc;
+}
+#main .listBox li:not(:last-child) {
+	margin-bottom: 18px;
+}
+#main .txtBox {
+	padding: 80px 101px 220px;
+	height: auto;
+}
+#main .txtBox h2 {
+	margin-right: 143px;
+	margin-top: -4px;
+	font-weight: 300;
+	font-size: 3rem;
+	color: #FEFEFE;
+}
+#main .txtBox .rBox {
+	flex: 1;
+}
+#main .txtBox .txtListUl {
+	margin-top: 6px;
+	display: flex;
+	flex-wrap: wrap;
+}
+#main .txtBox .txtListUl li {
+	width: 49.6%;
+}
+#main .txtBox .txtListUl li.encontent {
+	margin-top: -1px;
+}
+#main .txtBox .txtListUl table {
+	width: 100%;
+	border-collapse: collapse;
+}
+#main .txtBox .txtListUl table th,
+#main .txtBox .txtListUl table td {
+	padding-bottom: 14px;
+	font-size: 1.1rem;
+	font-weight: 400;
+	color: #CCCCCC;
+	letter-spacing: 0.06em;
+	vertical-align: top;
+	text-align: left;
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+}
+#main .txtBox .txtListUl table th {
+	width: 27.6%;
+}
+#main .txtBox .txtListUl .table01 th {
+	width: 17%;
+}
+#main .sec01 {
+	margin-bottom: 150px;
+}
+#main .h2Ttl {
+	font-size: 2rem;
+	letter-spacing: 0.06em;
+	text-align: center;
+	color: #fff;
+	font-weight: 300;
+	margin: -200px 9px 51px 0;
+	font-family: 'Roboto', sans-serif;
+}
+
+@media all and (min-width: 768px) and (max-width: 1146px) {
+	#main .txtBox h2 {
+		margin-right: 108px;
+	}
+	#main .txtBox .txtListUl {
+		justify-content: space-between;
+	}
+	#main .txtBox .txtListUl li {
+		width: 46.6%;
+	}
+	#main .txtBox .txtListUl table th {
+		padding-right: 8px;
+	}
+	#main .txtBox .txtListUl table th,
+	#main .txtBox .txtListUl table td {
+		letter-spacing: 0.02em;
+	}
+	#main .txtBox .txtListUl .table01 th {
+		width: 24%;
+	}
+	#main .txtBox .txtListUl .table01 th,
+	#main .txtBox .txtListUl .table01 td {
+		letter-spacing: 0.06em;
+	}
+}
+@media all and (min-width: 768px) {
+	#gHeader.header01 {
+		height: 247px;
+	}
+	#container {
+		padding-top: 247px;
+	}
+	#main .listUl01 li {
+		margin: 0 2px 52px 0;
+		width: calc((100% - 4px) / 3);
+	}
+	#main .listUl01 .txt {
+		padding: 11px 0;
+	}
+	#main .listUl01 .margin {
+		padding: 11px 27px;
+	}
+	#main .listUl01 .ttl {
+		min-height: 27px;
+	}
+	#main .comBtn {
+		margin-top: 7px;
+	}
+	#main .video {
+		margin-right: 70px;
+	}
+	#main .photo {
+		margin-right: 70px;
+	}
+	#main .phoList {
+		margin-right: 70px;
+	}
+}
+@media all and (-ms-high-contrast:none){
+	#main .listUl01 li {
+		margin-right: 1px;
+	}
+}
+@media all and (max-width: 767px) {
+	#main .centerPho {
+		padding: 41px 12.7% 47px 12.2%;
+	}
+	#main .phoList li {
+		width: 100%;
+	}
+	#main .inner01 {
+		margin-right: 45px;
+	}
+	#main .textArea {
+		padding: 135px 29px 0;
+		position: relative;
+	}
+	#main .textArea .comTopLinkBox01 {
+		left: auto;
+		right: 6px;
+		top: 80px;
+		justify-content: flex-end;
+	}
+	#main .textArea .comTopLinkBox01 .spTxtList {
+		margin-right: 0;
+	}
+	#main .textArea .comTopLinkBox01 .spTxtList a {
+		color: #FFF;
+	}
+	#main .textArea .bdBox {
+		margin-bottom: 40px;
+		padding-bottom: 40px;
+		display: block;
+	}
+	#main .textArea .lBox {
+		width: auto;
+	}
+	#main .textArea .rBox {
+		width: auto;
+	}
+	#main .textArea p {
+		font-size: 1.2rem;
+		line-height: 26px;
+	}
+	#main .textArea .rBox p {
+		font-size: 1.1rem;
+		line-height: 17px;
+	}
+	#main .textArea .rBox p:not(:last-child) {
+		margin-bottom: 20px;
+	}
+	#main .listBox {
+		padding-bottom: 40px;
+		display: block;
+	}
+    #main .listBox .jpcontent {
+        display: none;
+    }
+    #main .listBox > div {
+        width: auto;
+    }
+	#main .listBox ul {
+		width: auto;
+	}
+	#main .listBox ul:not(:last-child) {
+		margin-bottom: 18px;
+	}
+	#main .txtBox {
+		padding: 40px 28px 114px;
+	}
+	#main .txtBox h2 {
+		margin-right: 29%;
+		font-weight: 400;
+	}
+	#main .txtBox .tBox {
+		margin-bottom: 42px;
+		display: flex;
+		justify-content: space-between;
+	}
+	#main .txtBox .tabUl {
+		margin-left: 3px;
+		align-self: flex-end;
+		margin-bottom: 8px;
+	}
+	#main .txtBox .tabUl a {
+		color: #CCCCCC;
+		font-size: 1.2rem;
+	}
+	#main .txtBox .tabUl li {
+		display: inline-block;
+	}
+	#main .txtBox .tabUl .on a {
+		text-decoration: underline;
+	}
+	#main .txtBox .txtListUl li {
+		display: none;
+		width: 100%;
+	}
+	#main .txtBox .txtListUl li:first-child {
+		display: block;
+	}
+	#main .txtBox .txtListUl table th, #main .txtBox .txtListUl table td {
+		padding-bottom: 12px;
+		font-size: 0.9rem;
+		letter-spacing: 0;
+	}
+	#main .txtBox .txtListUl table th {
+		width: 34%;
+	}
+	#main .txtBox .txtListUl .table01 th {
+		width: 23%;
+	}
+	#main .sec01 {
+		margin-bottom: -1px;
+	}
+	#main .h2Ttl {
+		margin-bottom: 57px;
+		margin-top: 0;
+		text-align: left;
+		font-size: 1.8rem;
+	}
+
+	#main .sec02 .inner {
+		margin-left: 31px;
+	}
+	#main .listUl01 li {
+		margin-bottom: 27px;
+		width: 100%;
+	}
+	#main .listUl01 .txt01 {
+		display: block;
+	}
+	#main .listUl01 .ttl {
+		margin-bottom: 0;
+		font-size: 1.8rem;
+	}
+	#main .listUl01 li:nth-child(2n+1) .txt {
+		padding: 10px 0;
+	}
+	#main .listUl01 .txt {
+		padding: 10px 0;
+	}
+	#main .comBtn {
+		margin-top: 10px;
+		right: 39px;
+	}
+}
+@media all and (max-width: 375px) {
+	#main .txtBox h2 {
+		margin-right: 9%;
+	}
+}
