@@ -162,6 +162,18 @@ test('an open Contact form does not consume page navigation', () => {
   assert.equal(p.index(), 0);
 });
 
+test('project panel keeps background autoplay but does not consume its scroll or keyboard input', () => {
+  const p = page();
+  p.doc.querySelector('#project-panel').open = true;
+  p.wheel(); p.key('End');
+  assert.equal(p.index(), 0);
+  p.advance(6000);
+  assert.equal(p.index(), 1);
+  p.doc.querySelector('#project-panel').open = false;
+  p.advance(1100); p.wheel();
+  assert.equal(p.index(), 2);
+});
+
 test('the project gallery opens at the first project and autoplay ends at the footer', () => {
   const p = page();
   assert.equal(p.index(), 0);

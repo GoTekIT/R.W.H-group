@@ -15,6 +15,7 @@
   const scrollCue = document.querySelector('#main .sroll');
   const pageTop = document.querySelector('.pagetop');
   const contact = document.querySelector('#contact-modal');
+  const projectPanel = document.querySelector('#project-panel');
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
   const textAnimations = new Map();
   let current = 0, timer, unlock, cleanup, locked = false, ready = false, menuOpen = false;
@@ -90,7 +91,7 @@
   function goTo(index, immediate = false, automatic = false) {
     if (immediate) pendingWheelStep = 0;
     const destination = Math.max(0, Math.min(footerIndex, index));
-    if (!ready || (!automatic && (menuOpen || contact.open)) || (locked && !immediate) || destination === current) return;
+    if (!ready || (!automatic && (menuOpen || contact.open || projectPanel?.open)) || (locked && !immediate) || destination === current) return;
     current = destination;
     clearTimeout(timer); clearTimeout(unlock); clearTimeout(cleanup);
     wheelSum = 0; pendingWheelStep = 0; locked = true;
@@ -148,7 +149,7 @@
   function activeScrollable(target) { return current === footerIndex && footer.contains(target) ? footer : null; }
   function resetWheelGesture() { wheelTimer = undefined; wheelSum = 0; wheelGestureUsed = false; }
   document.addEventListener('wheel', event => {
-    if (event.ctrlKey || Math.abs(event.deltaY) < Math.abs(event.deltaX) || menuOpen || contact.open || !ready) return;
+    if (event.ctrlKey || Math.abs(event.deltaY) < Math.abs(event.deltaX) || menuOpen || contact.open || projectPanel?.open || !ready) return;
     clearTimeout(wheelTimer); wheelTimer = setTimeout(resetWheelGesture, 280);
     const scrollable = !locked && activeScrollable(event.target);
     if (scrollable && ((event.deltaY < 0 && scrollable.scrollTop > 1) ||
@@ -175,7 +176,7 @@
     if (touchY === null) return;
     const distance = touchY - event.changedTouches[0].clientY, horizontal = touchX - event.changedTouches[0].clientX;
     touchY = null;
-    if (Math.abs(horizontal) > Math.abs(distance) || menuOpen || contact.open || Math.abs(distance) <= 45) return;
+    if (Math.abs(horizontal) > Math.abs(distance) || menuOpen || contact.open || projectPanel?.open || Math.abs(distance) <= 45) return;
     const scrollable = activeScrollable(event.target);
     if (scrollable && (Math.abs(scrollable.scrollTop - touchScrollTop) > 1 ||
       (distance < 0 && scrollable.scrollTop > 1) ||
@@ -183,7 +184,7 @@
     goTo(current + Math.sign(distance));
   }, { passive: true });
   document.addEventListener('keydown', event => {
-    if (event.defaultPrevented || contact.open) return;
+    if (event.defaultPrevented || contact.open || projectPanel?.open) return;
     if (menuOpen) {
       if (event.key === 'Escape') { event.preventDefault(); toggleMenu(false); }
       if (event.key === 'Tab') {

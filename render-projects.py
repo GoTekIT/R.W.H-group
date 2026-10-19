@@ -109,7 +109,7 @@ for project in projects:
         <div class="full"></div>
         <div class="bg pc" style="background-image: url(./{e(project['hero'])})"></div>
         <div class="bg sp" style="background-image: url(./{e(project['mobile'])})"></div>
-        <div class="txtBox"><a href="./projects/{e(project['slug'])}/index.html" data-project-title="{e(project['title'])}" aria-label="Xem chi tiết {e(project['title'])}">
+        <div class="txtBox"><a href="./projects/{e(project['slug'])}/index.html" data-project-open aria-haspopup="dialog" aria-controls="project-panel" data-project-title="{e(project['title'])}" aria-label="Xem chi tiết {e(project['title'])}">
             <h2><span>{e(project['title'])}</span></h2>
             <p class="txt"><span class="shuffle" data-i18n="{key}.metadata">{e(copy['vi'][key + '.metadata'])}</span><br><span class="shuffle" data-i18n="{key}.subtitle">{e(project['subtitle'])}</span></p>
             <div class="detail"><p class="txt01">DETAIL</p><p class="line"></p></div>
@@ -130,6 +130,21 @@ html = html.replace('<script src="./app.js', f'<link rel="stylesheet" href="./{a
 html = re.sub(r'<link rel="stylesheet" href="\./site-language\.css[^\"]*">\n?', '', html)
 html = re.sub(r'<script src="\./(?:project-copy|site-language)\.js[^\"]*" defer></script>\n?', '', html)
 html = html.replace('<script src="./app.js', f'<link rel="stylesheet" href="./{asset("site-language.css")}">\n<script src="./{asset("project-copy.js")}" defer></script>\n<script src="./{asset("site-language.js")}" defer></script>\n<script src="./app.js', 1)
+html = re.sub(r'<link rel="stylesheet" href="\./project-panel\.css[^\"]*">\n?', '', html)
+html = re.sub(r'<script src="\./project-panel\.js[^\"]*" defer></script>\n?', '', html)
+html = html.replace('<script src="./app.js', f'<link rel="stylesheet" href="./{asset("project-panel.css")}">\n<script src="./{asset("project-panel.js")}" defer></script>\n<script src="./app.js', 1)
+html = re.sub(r'<dialog class="project-panel".*?</dialog>\n?', '', html, flags=re.S)
+html = html.replace('</body>', '''<dialog class="project-panel" id="project-panel" aria-labelledby="project-panel-title">
+    <h2 class="project-panel-title" id="project-panel-title"></h2>
+    <div class="project-panel-status" role="status">
+        <div class="panel-wordmark">R.W.H<small>group</small></div>
+        <p class="project-panel-loading" data-i18n="loadingProject">Đang tải dự án…</p>
+        <div class="project-panel-error"><p data-i18n="projectLoadError">Chưa tải được dự án. Vui lòng thử mở lại.</p><a data-panel-fallback target="_blank" rel="noopener noreferrer" data-i18n="openProjectPage">Mở trang dự án</a></div>
+    </div>
+    <iframe title="Chi tiết dự án" tabindex="-1" aria-hidden="true"></iframe>
+    <button class="project-panel-close" data-panel-close type="button" aria-label="Đóng chi tiết dự án" data-i18n-aria-label="closeProject" autofocus><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+</dialog>
+</body>''')
 html = re.sub(r'<div class="language-switch".*?</div>\n?', '', html, flags=re.S)
 html = html.replace('<body id="top">', '<body id="top">\n' + switcher)
 html = html.replace('>SCROLL<span>', '><b class="scroll-label" data-i18n="scroll">CUỘN</b><span>')
@@ -181,8 +196,10 @@ for i, project in enumerate(projects):
 <link rel="stylesheet" href="../../{asset('rwh-footer.css')}">
 <link rel="stylesheet" href="../../{asset('rwh-menu.css')}">
 <link rel="stylesheet" href="../../{asset('site-language.css')}">
+<link rel="stylesheet" href="../../{asset('project-panel.css')}">
 <script src="../../{asset('project-copy.js')}" defer></script>
 <script src="../../{asset('site-language.js')}" defer></script>
+<script src="../../{asset('project-panel.js')}" defer></script>
 <script src="../../{asset('project-gallery.js')}" defer></script>
 <script src="../../{asset('contact-form.js')}" defer></script>
 </head><body>
