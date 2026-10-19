@@ -124,7 +124,7 @@
   }
   menu.addEventListener('click', event => { event.stopPropagation(); toggleMenu(!menuOpen); });
   rail.addEventListener('click', event => { if (!menu.contains(event.target)) toggleMenu(!menuOpen); });
-  for (const logo of document.querySelectorAll('.hLogo')) {
+  for (const logo of document.querySelectorAll('.hLogo, [data-menu-home]')) {
     logo.addEventListener('click', event => { event.preventDefault(); if (menuOpen) toggleMenu(false, false); goTo(0, true); });
   }
   document.querySelector('.scroll-jump').addEventListener('click', event => { event.preventDefault(); goTo(current + 1); });
@@ -187,7 +187,9 @@
     if (menuOpen) {
       if (event.key === 'Escape') { event.preventDefault(); toggleMenu(false); }
       if (event.key === 'Tab') {
-        const items = [...navigation.querySelectorAll('a'), ...document.querySelectorAll('[data-language]'), menu];
+        const items = [...navigation.querySelectorAll('a, button, summary'), ...document.querySelectorAll('[data-language]'), menu]
+          .filter(item => !item.closest('details:not([open])') || item.matches('summary'))
+          .filter(item => !item.getClientRects || item.getClientRects().length);
         const active = items.indexOf(document.activeElement);
         event.preventDefault(); items[(active + (event.shiftKey ? -1 : 1) + items.length) % items.length].focus();
       }

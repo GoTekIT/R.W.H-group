@@ -125,6 +125,8 @@ html = re.sub(r'<meta name="description" content="[^"]*">', '<meta name="descrip
 html = re.sub(r'(?:src|href)="\./assets/rwh-reference-wordmark\.svg(?:\?v=[^"]*)?"', lambda match: match.group().split('=')[0] + f'="./{asset("assets/rwh-reference-wordmark.svg")}"', html)
 html = re.sub(r'src="\./app\.js(?:\?v=[^"]*)?"', f'src="./{asset("app.js")}"', html)
 html = re.sub(r'href="\./rwh-footer\.css(?:\?v=[^"]*)?"', f'href="./{asset("rwh-footer.css")}"', html)
+html = re.sub(r'<link rel="stylesheet" href="\./rwh-menu\.css[^\"]*">\n?', '', html)
+html = html.replace('<script src="./app.js', f'<link rel="stylesheet" href="./{asset("rwh-menu.css")}">\n<script src="./app.js', 1)
 html = re.sub(r'<link rel="stylesheet" href="\./site-language\.css[^\"]*">\n?', '', html)
 html = re.sub(r'<script src="\./(?:project-copy|site-language)\.js[^\"]*" defer></script>\n?', '', html)
 html = html.replace('<script src="./app.js', f'<link rel="stylesheet" href="./{asset("site-language.css")}">\n<script src="./{asset("project-copy.js")}" defer></script>\n<script src="./{asset("site-language.js")}" defer></script>\n<script src="./app.js', 1)
@@ -143,7 +145,7 @@ def detail_links(markup):
     return markup
 
 
-navigation = detail_links(re.search(r'<nav class="menuBox".*?</nav>', html, re.S).group())
+navigation = detail_links(re.search(r'<nav class="menuBox[^\"]*".*?</nav>', html, re.S).group())
 footer = detail_links(re.search(r'<footer id="gFooter"[^>]*>.*?</footer>', html, re.S).group())
 footer = footer.replace('href="#container"', 'href="../../index.html"')
 footer = footer.replace('<div class="fInner">', '<div class="fInner"><div class="pagetop"><a href="#container" aria-label="Về đầu dự án"><img src="../../assets/apollo-reference/132dcb5de486.png" alt="" width="15"></a></div>', 1)
@@ -177,6 +179,7 @@ for i, project in enumerate(projects):
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&amp;family=Roboto:wght@300;400;500&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../{asset('project-gallery.css')}">
 <link rel="stylesheet" href="../../{asset('rwh-footer.css')}">
+<link rel="stylesheet" href="../../{asset('rwh-menu.css')}">
 <link rel="stylesheet" href="../../{asset('site-language.css')}">
 <script src="../../{asset('project-copy.js')}" defer></script>
 <script src="../../{asset('site-language.js')}" defer></script>

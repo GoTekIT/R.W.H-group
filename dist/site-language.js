@@ -3,6 +3,9 @@
   const copy = {
     vi: {
       language: 'Ngôn ngữ', openMenu: 'Mở menu', closeMenu: 'Đóng menu', navigation: 'Điều hướng chính',
+      navHome: 'Trang chủ', office: 'Văn phòng', navProjects: 'Dự án', navNews: 'Tin tức', jobs: 'Tuyển dụng', navContact: 'Liên hệ',
+      selectedWorks: 'Dự án chọn lọc', projectsJapan: 'Dự án Nhật Bản', planning: 'Quy hoạch', architecture: 'Kiến trúc',
+      interior: 'Nội thất', landscape: 'Cảnh quan', allProjects: 'Tất cả dự án', companyProfile: 'Hồ sơ năng lực',
       works: 'CÔNG TRÌNH', projects: 'DỰ ÁN', movies: 'PHIM', news: 'TIN TỨC', profile: 'HỒ SƠ',
       message: 'THÔNG ĐIỆP', awards: 'GIẢI THƯỞNG', outline: 'TỔNG QUAN', books: 'ẤN PHẨM', flow: 'QUY TRÌNH',
       newsletter: 'BẢN TIN', recruit: 'TUYỂN DỤNG', designOrder: 'YÊU CẦU THIẾT KẾ', contact: 'LIÊN HỆ',
@@ -27,6 +30,9 @@
     },
     en: {
       language: 'Language', openMenu: 'Open menu', closeMenu: 'Close menu', navigation: 'Main navigation',
+      navHome: 'Home', office: 'Office', navProjects: 'Projects', navNews: 'News', jobs: 'Jobs', navContact: 'Contact',
+      selectedWorks: 'Selected projects', projectsJapan: 'Projects Japan', planning: 'Planning', architecture: 'Architecture',
+      interior: 'Interior', landscape: 'Landscape', allProjects: 'All projects', companyProfile: 'Company profile',
       works: 'WORKS', projects: 'PROJECTS', movies: 'MOVIES', news: 'NEWS', profile: 'PROFILE',
       message: 'MESSAGE', awards: 'AWARDS', outline: 'OUTLINE', books: 'BOOKS', flow: 'FLOW',
       newsletter: 'NEWSLETTER', recruit: 'RECRUIT', designOrder: 'DESIGN ORDER', contact: 'CONTACT',

@@ -37,7 +37,9 @@
     if (!menuOpen || contact.open) return;
     if (event.key === 'Escape') { event.preventDefault(); toggleMenu(false); }
     if (event.key === 'Tab') {
-      const items = [...navigation.querySelectorAll('a'), ...document.querySelectorAll('[data-language]'), menu];
+      const items = [...navigation.querySelectorAll('a, button, summary'), ...document.querySelectorAll('[data-language]'), menu]
+        .filter(item => !item.closest('details:not([open])') || item.matches('summary'))
+        .filter(item => !item.getClientRects || item.getClientRects().length);
       const index = items.indexOf(document.activeElement);
       event.preventDefault();
       items[(index + (event.shiftKey ? -1 : 1) + items.length) % items.length].focus();
