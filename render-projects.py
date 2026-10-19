@@ -219,7 +219,7 @@ for i, project in enumerate(projects):
 {footer}
 </div>
 {contact_dialog}
-<dialog class="image-viewer" aria-label="Xem ảnh dự án"><button type="button" class="viewer-close" aria-label="Đóng ảnh" autofocus>×</button><button type="button" class="viewer-prev" aria-label="Ảnh trước">←</button><div class="viewer-stage"><img alt=""><p class="viewer-caption" aria-live="polite"></p></div><button type="button" class="viewer-next" aria-label="Ảnh tiếp theo">→</button></dialog>
+<dialog class="image-viewer" aria-label="Xem ảnh dự án"><button type="button" class="viewer-close" aria-label="Đóng ảnh" autofocus><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button><button type="button" class="viewer-prev" aria-label="Ảnh trước">←</button><div class="viewer-stage"><img alt=""><p class="viewer-caption" aria-live="polite"></p></div><button type="button" class="viewer-next" aria-label="Ảnh tiếp theo">→</button></dialog>
 </body></html>
 '''
     (folder / 'index.html').write_text(localize_ui(page))

@@ -29,8 +29,9 @@ function page({reduced = false, embedded = false} = {}) {
   panel.showModal = () => {panel.open = true; close.focus();};
   panel.close = () => {panel.open = false; panel.emit('close');};
   const doc = element(); doc.documentElement = element();
-  doc.querySelector = selector => ({'#project-panel':embedded ? null : panel, '.menu':menu})[selector] || null;
-  doc.querySelectorAll = selector => selector === '[data-project-open]' ? [link] : [];
+  const nestedDialog = element(), observers = []; let nestedOpen = false;
+  doc.querySelector = selector => ({'#project-panel':embedded ? null : panel, '.menu':menu, 'dialog[open]':nestedOpen ? nestedDialog : null})[selector] || null;
+  doc.querySelectorAll = selector => selector === '[data-project-open]' ? [link] : selector === 'dialog' ? [nestedDialog] : [];
   const win = element();
   win.location = new URL(embedded ? 'https://rwh.example/projects/the-hera-resort/index.html?panel=1&lang=en' : 'https://rwh.example/');
   const messages = [];
@@ -38,13 +39,15 @@ function page({reduced = false, embedded = false} = {}) {
   win.matchMedia = () => ({matches:reduced});
   win.RWHI18n = {language:'vi', t:(key, values) => values.title, setLanguage(value) {this.language = value;}};
   vm.runInNewContext(source, {window:win, document:doc, URL, URLSearchParams,
+    MutationObserver:class {constructor(callback) {observers.push(callback);} observe() {}},
     requestAnimationFrame:callback => callback(), setTimeout:(callback, delay) => {const id = ++next; timers.set(id,{callback,delay}); return id;}, clearTimeout:id => timers.delete(id)});
   function click(overrides = {}) {
     const event = {button:0, preventDefault() {this.defaultPrevented = true;}, ...overrides};
     link.emit('click', event); return event;
   }
   function finish() {for (const [id, timer] of [...timers]) {timers.delete(id); timer.callback();}}
-  return {panel,frame,close,title,fallback,link,menu,doc,win,click,finish,timers,messages,blockTrigger:() => {blocked = true;}, active:() => active};
+  return {panel,frame,close,title,fallback,link,menu,doc,win,click,finish,timers,messages,blockTrigger:() => {blocked = true;}, active:() => active,
+    setNestedOpen(value) {nestedOpen = value; observers.forEach(callback => callback());}};
 }
 
 test('Details opens a full modal at the same landing URL and loads only the selected project', () => {
@@ -108,9 +111,31 @@ test('embedded Escape closes the panel, while a nested image/contact dialog keep
   assert.equal(p.doc.documentElement.classList.contains('project-embedded'), true);
   assert.equal(p.win.RWHI18n.language, 'en');
   p.doc.emit('keydown', {key:'Escape', preventDefault() {}});
-  assert.equal(p.messages[0].message.type, 'rwh:project-close');
+  assert.equal(p.messages.filter(item => item.message.type === 'rwh:project-close').length, 1);
   const original = p.doc.querySelector;
   p.doc.querySelector = selector => selector === 'dialog[open]' ? {} : original(selector);
   p.doc.emit('keydown', {key:'Escape', preventDefault() {}});
-  assert.equal(p.messages.length, 1);
+  assert.equal(p.messages.filter(item => item.message.type === 'rwh:project-close').length, 1);
+});
+
+test('embedded native dialog opening and closing reports the active close-control layer', () => {
+  const p = page({embedded:true});
+  p.setNestedOpen(true); p.setNestedOpen(false);
+  assert.deepEqual(p.messages.filter(item => item.message.type === 'rwh:project-dialog').map(item => item.message.open), [false,true,false]);
+});
+
+test('only the trusted frame can hide the outer close button, and it is restored on dismissal', () => {
+  const p = page(); p.click();
+  const update = (origin, source, open) => p.win.emit('message', {origin,source,data:{type:'rwh:project-dialog',open}});
+  update('https://another.example', p.frame.contentWindow, true);
+  update(p.win.location.origin, {}, true);
+  update(p.win.location.origin, p.frame.contentWindow, 'true');
+  assert.equal(p.close.hidden, false);
+  update(p.win.location.origin, p.frame.contentWindow, true);
+  assert.equal(p.close.hidden, true); assert.equal(p.close.disabled, true);
+  update(p.win.location.origin, p.frame.contentWindow, false);
+  assert.equal(p.close.hidden, false); assert.equal(p.close.disabled, false);
+  update(p.win.location.origin, p.frame.contentWindow, true);
+  p.panel.close();
+  assert.equal(p.close.hidden, false); assert.equal(p.close.disabled, false);
 });

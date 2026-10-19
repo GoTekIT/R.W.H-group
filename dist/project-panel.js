@@ -40,6 +40,13 @@
     document.addEventListener('rwh:languagechange', () => {
       window.parent.postMessage({type:'rwh:project-language', language:window.RWHI18n.language}, targetOrigin);
     });
+    // Native dialogs live inside this document; show only the active layer's close control.
+    function reportDialogState() {
+      window.parent.postMessage({type:'rwh:project-dialog', open:!!document.querySelector('dialog[open]')}, targetOrigin);
+    }
+    const dialogs = new MutationObserver(reportDialogState);
+    document.querySelectorAll('dialog').forEach(dialog => dialogs.observe(dialog, {attributes:true, attributeFilter:['open']}));
+    reportDialogState();
     return;
   }
   if (typeof panel.showModal !== 'function') return;
@@ -72,6 +79,7 @@
     frame.title = window.RWHI18n.t('viewDetail', {title:link.dataset.projectTitle});
     fallback.href = link.href;
     closing = false;
+    closeButton.hidden = closeButton.disabled = false;
     panel.classList.remove('is-loaded', 'is-error', 'is-visible');
     frame.tabIndex = -1;
     frame.setAttribute('aria-hidden', 'true');
@@ -98,6 +106,7 @@
   panel.addEventListener('close', () => {
     clearTimeout(closeTimer);
     closing = false;
+    closeButton.hidden = closeButton.disabled = false;
     panel.classList.remove('is-visible', 'is-loaded', 'is-error');
     frame.removeAttribute('src');
     const focus = trigger && !trigger.closest('[inert]') ? trigger : document.querySelector('.menu');
@@ -109,6 +118,9 @@
   window.addEventListener('message', event => {
     if (!panel.open || event.origin !== origin || event.source !== frame.contentWindow) return;
     if (event.data?.type === 'rwh:project-close') close();
+    if (event.data?.type === 'rwh:project-dialog' && typeof event.data.open === 'boolean') {
+      closeButton.hidden = closeButton.disabled = event.data.open;
+    }
     if (event.data?.type === 'rwh:project-language' && ['vi','en'].includes(event.data.language) && event.data.language !== window.RWHI18n.language) {
       window.RWHI18n.setLanguage(event.data.language);
     }
