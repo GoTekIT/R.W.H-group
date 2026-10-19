@@ -13,9 +13,10 @@
     contactError: 'Your enquiry could not be sent. Your details are still here; please try again.',
     contactRateLimited: 'Please wait a few minutes before trying again.',
     contactUnavailable: 'The contact form is being set up. Please try again later.',
-    contactLocal: 'Please open the published website to send an enquiry.'
+    contactLocal: 'Please open the published website to send an enquiry.',
+    openMenu: 'Open menu', closeMenu: 'Close menu'
   };
-  window.RWHI18n = { t: key => messages[key] || key, message(element, key) { element.textContent = messages[key] || key; } };
+  window.RWHI18n ||= { t: key => messages[key] || key, message(element, key) { element.textContent = messages[key] || key; } };
   function toggleMenu(open, focus = true) {
     menuOpen = open;
     menu.classList.toggle('active', open);
@@ -25,7 +26,7 @@
     navigation.inert = !open;
     main.inert = footer.inert = open;
     menu.setAttribute('aria-expanded', String(open));
-    menu.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    menu.setAttribute('aria-label', window.RWHI18n.t(open ? 'closeMenu' : 'openMenu'));
     if (focus) (open ? navigation.querySelector('a') : menu).focus({ preventScroll:true });
   }
   menu.addEventListener('click', event => { event.stopPropagation(); toggleMenu(!menuOpen); });
@@ -36,7 +37,7 @@
     if (!menuOpen || contact.open) return;
     if (event.key === 'Escape') { event.preventDefault(); toggleMenu(false); }
     if (event.key === 'Tab') {
-      const items = [...navigation.querySelectorAll('a'), menu];
+      const items = [...navigation.querySelectorAll('a'), ...document.querySelectorAll('[data-language]'), menu];
       const index = items.indexOf(document.activeElement);
       event.preventDefault();
       items[(index + (event.shiftKey ? -1 : 1) + items.length) % items.length].focus();

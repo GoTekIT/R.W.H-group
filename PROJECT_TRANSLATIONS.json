@@ -1,0 +1,216 @@
+{
+  "the-hera-resort": {
+    "categoryVi": "KHU NGHỈ DƯỠNG",
+    "en": {
+      "category": "RESORT",
+      "location": "Quy Nhon, Vietnam",
+      "subtitle": "Santorini-inspired architecture by Tien Bay",
+      "description": "The Hera Resort connects the hills, forest and Tien Bay in Quy Nhon. Inspired by Santorini, the proposal arranges villas, resort apartments and a marina along the terrain, with views towards the sea.",
+      "facts": [
+        [
+          "Location",
+          "Quy Nhon, Vietnam"
+        ],
+        [
+          "Type",
+          "Resort"
+        ],
+        [
+          "Site area",
+          "16.62 ha"
+        ]
+      ]
+    }
+  },
+  "capital-one": {
+    "categoryVi": "THƯƠNG MẠI & VĂN PHÒNG",
+    "en": {
+      "category": "MIXED-USE",
+      "location": "",
+      "subtitle": "A retail and office complex",
+      "description": "The Capital One proposal explores a journey through layers of space, from earth and water to the sky and the universe. The design combines retail, offices and landscape, with a glass façade and lighting that emphasise its vertical form.",
+      "facts": [
+        [
+          "Type",
+          "Retail and office complex"
+        ],
+        [
+          "Documentation",
+          "Concept proposal"
+        ]
+      ]
+    }
+  },
+  "kawara-my-an": {
+    "categoryVi": "KHU NGHỈ DƯỠNG ONSEN",
+    "en": {
+      "category": "ONSEN RESORT",
+      "location": "Hue, Vietnam",
+      "subtitle": "Resort spaces and the Onsen experience",
+      "description": "Kawara My An Onsen Resort in Hue brings together accommodation, gardens and mineral bathing in the Japanese tradition. The photographs show bathing areas, guest rooms and landscapes connected by water.",
+      "facts": [
+        [
+          "Location",
+          "Hue, Vietnam"
+        ],
+        [
+          "Type",
+          "Onsen resort"
+        ]
+      ]
+    }
+  },
+  "aegis-hospital": {
+    "categoryVi": "BỆNH VIỆN",
+    "en": {
+      "category": "HOSPITAL",
+      "location": "",
+      "subtitle": "An architectural proposal for a hospital",
+      "description": "The Aegis International Hospital proposal arranges tower volumes with green spaces between them. The presentation includes overall perspectives, façade studies and the open spaces between buildings.",
+      "facts": [
+        [
+          "Type",
+          "International hospital"
+        ],
+        [
+          "Documentation",
+          "Design proposal"
+        ]
+      ]
+    }
+  },
+  "onsen-thanh-thuy": {
+    "categoryVi": "ONSEN & CHĂM SÓC SỨC KHỎE",
+    "en": {
+      "category": "ONSEN & WELLNESS",
+      "location": "Phu Tho, Vietnam",
+      "subtitle": "Ryokan architecture and resort landscapes",
+      "description": "The Onsen Wellness Thanh Thuy concept draws inspiration from Kinosaki and traditional Japanese Ryokan architecture. A waterside landscape axis connects resort spaces, pedestrian streets, gardens and Onsen experiences, creating a wellness village closely connected to nature.",
+      "facts": [
+        [
+          "Location",
+          "Thanh Thuy, Phu Tho, Vietnam"
+        ],
+        [
+          "Type",
+          "Onsen & Wellness"
+        ],
+        [
+          "Documentation",
+          "Architectural and landscape concept"
+        ]
+      ]
+    }
+  },
+  "ecopark-thanh-hoa": {
+    "categoryVi": "ONSEN",
+    "en": {
+      "category": "ONSEN",
+      "location": "Thanh Hoa, Vietnam",
+      "subtitle": "Onsen architecture and landscape",
+      "description": "The Onsen proposal combines pitched-roof buildings with gardens, water features and bathing pools surrounded by greenery. Corridors and openings draw views from the architecture into the landscape.",
+      "facts": [
+        [
+          "Location",
+          "Thanh Hoa, Vietnam"
+        ],
+        [
+          "Type",
+          "Onsen"
+        ],
+        [
+          "Documentation",
+          "Design visualisations"
+        ]
+      ]
+    }
+  },
+  "nam-o-residence": {
+    "categoryVi": "NHÀ Ở",
+    "en": {
+      "category": "RESIDENTIAL",
+      "location": "Da Nang, Vietnam",
+      "subtitle": "Homes with open spaces and greenery",
+      "description": "The Nam O Residence proposal in Da Nang takes inspiration from Tsumiki block-building. Its residential volumes are arranged with greenery to improve ventilation, natural light and connections within the community.",
+      "facts": [
+        [
+          "Location",
+          "Hoa Hiep Bac, Lien Chieu, Da Nang"
+        ],
+        [
+          "Type",
+          "Apartments / social housing"
+        ],
+        [
+          "Documentation",
+          "Concept proposal"
+        ]
+      ]
+    }
+  },
+  "hakuba-hotel": {
+    "categoryVi": "KHÁCH SẠN",
+    "en": {
+      "category": "HOTEL",
+      "location": "Hakuba, Nagano, Japan",
+      "subtitle": "The spirit of Ryokan in contemporary architecture",
+      "description": "The Hakuba Hotel proposal in Nagano interprets the spirit of a traditional Ryokan through contemporary architecture. Pitched roofs, verandas and timber connect the guest experience with Japan's mountain and forest landscapes.",
+      "facts": [
+        [
+          "Location",
+          "Hakuba, Nagano, Japan"
+        ],
+        [
+          "Type",
+          "Hotel"
+        ],
+        [
+          "Documentation",
+          "Design proposal"
+        ]
+      ]
+    }
+  },
+  "thien-mu-hotel": {
+    "categoryVi": "KHÁCH SẠN",
+    "en": {
+      "category": "HOTEL",
+      "location": "Hue, Vietnam",
+      "subtitle": "Hue architecture and a spirit of mindfulness",
+      "description": "The Thien Mu Hotel proposal puts people at its centre, connecting Hue's architecture with gardens and water. A concept of mindfulness and an open layout create a peaceful stay, balancing tradition with modern comfort.",
+      "facts": [
+        [
+          "Location",
+          "Hue, Vietnam"
+        ],
+        [
+          "Type",
+          "Hotel"
+        ],
+        [
+          "Documentation",
+          "Concept proposal"
+        ]
+      ]
+    }
+  },
+  "ecopark-hung-yen": {
+    "categoryVi": "ONSEN",
+    "en": {
+      "category": "ONSEN",
+      "location": "Hung Yen, Vietnam",
+      "subtitle": "An Onsen experience within a green living environment",
+      "description": "The photographs of Onsen at Ecopark Hung Yen show indoor and outdoor bathing spaces, water, natural stone and Japanese-inspired architecture set within the development's green landscape.",
+      "facts": [
+        [
+          "Location",
+          "Hung Yen, Vietnam"
+        ],
+        [
+          "Type",
+          "Onsen"
+        ]
+      ]
+    }
+  }
+}

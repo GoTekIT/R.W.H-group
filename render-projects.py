@@ -12,6 +12,7 @@ import re
 ROOT = Path(__file__).resolve().parent
 DIST = ROOT / 'dist'
 projects = json.loads((ROOT / 'PROJECT_SOURCES.json').read_text())['projects']
+translations = json.loads((ROOT / 'PROJECT_TRANSLATIONS.json').read_text())
 assert [p['number'] for p in projects] == list(range(1, 11))
 
 
@@ -21,6 +22,65 @@ def e(text):
 
 def asset(name):
     return f'{name}?v={sha256((DIST / name).read_bytes()).hexdigest()[:10]}'
+
+
+copy = {'vi': {}, 'en': {}}
+for project in projects:
+    translated = translations[project['slug']]
+    assert len(project['facts']) == len(translated['en']['facts'])
+    for lang in ['vi', 'en']:
+        values = dict(project) if lang == 'vi' else translated['en']
+        if lang == 'vi':
+            values['category'] = translated['categoryVi']
+        key = f'project.{project["slug"]}'
+        copy[lang][key + '.metadata'] = values['category'] + (' / ' + values['location'] if values['location'] else '')
+        for field in ['category', 'subtitle', 'description']:
+            copy[lang][key + '.' + field] = values[field]
+        for row, (label, value) in enumerate(values['facts']):
+            copy[lang][f'{key}.fact.{row}.label'] = label
+            copy[lang][f'{key}.fact.{row}.value'] = value
+(DIST / 'project-copy.js').write_text('window.RWHProjectCopy = ' + json.dumps(copy, ensure_ascii=False, separators=(',', ':')) + ';\n')
+
+
+switcher = '''<div class="language-switch" role="group" aria-label="Ngôn ngữ" data-i18n-aria-label="language"><button type="button" data-language="vi" lang="vi" aria-label="Tiếng Việt" aria-pressed="true">VI</button><button type="button" data-language="en" lang="en" aria-label="English" aria-pressed="false">EN</button></div>'''
+
+
+def localize_ui(markup):
+    labels = {
+        'WORKS': 'works', 'PROJECTS': 'projects', 'MOVIES': 'movies', 'NEWS': 'news', 'PROFILE': 'profile',
+        'MESSAGE': 'message', 'AWARDS': 'awards', 'OUTLINE': 'outline', 'BOOKS': 'books', 'FLOW': 'flow',
+        'NEWSLETTER': 'newsletter', 'RECRUIT': 'recruit', 'DESIGN ORDER': 'designOrder', 'CONTACT': 'contact',
+        'DETAIL': 'detail', 'DATA': 'data', 'OTHER WORKS': 'otherWorks', 'MORE': 'more', 'Related Site :': 'relatedSites',
+        'Name': 'name', 'Email': 'email', 'Questions': 'questions', 'Send message': 'sendMessage',
+        'Leave your questions and R.W.H group will get in touch.': 'contactNote',
+        'Liên hệ R.W.H group ngay hôm nay để được tư vấn và kết nối với các chuyên gia Nhật Bản.': 'footerInvite',
+        'R.W.H group – Japanese Expertise, Better Living.': 'tagline', 'Design &amp; Build': 'services'
+    }
+    def text_node(match):
+        tag, attrs, value = match.groups()
+        key = labels.get(value.strip())
+        if not key or 'data-i18n=' in attrs:
+            return match.group()
+        return f'<{tag}{attrs} data-i18n="{key}">{value}</{tag}>'
+    markup = re.sub(r'<(a|p|h2|label|button|li|span)([^>]*)>([^<]+)</\1>', text_node, markup)
+    aria = {
+        'Main navigation': 'navigation', 'Selected architecture projects': 'selectedProjects',
+        'Back to first project': 'firstProject', 'Next project': 'nextProject', 'Về đầu dự án': 'projectTop',
+        'R.W.H group — Trang chủ': 'home', 'Liên hệ R.W.H group': 'contactRegion',
+        'Gọi R.W.H group: 0982-132-489': 'call', 'Close contact form': 'closeContact',
+        'Xem ảnh dự án': 'imageViewer', 'Đóng ảnh': 'closeImage', 'Ảnh trước': 'previousImage', 'Ảnh tiếp theo': 'nextImage'
+    }
+    def aria_node(match):
+        attrs, value, rest = match.groups()
+        key = aria.get(value)
+        if not key or 'data-i18n-aria-label=' in attrs + rest:
+            return match.group()
+        return f'<{attrs}aria-label="{value}"{rest} data-i18n-aria-label="{key}">'
+    markup = re.sub(r'<([^<>]*?)aria-label="([^"]*)"([^<>]*?)>', aria_node, markup)
+    markup = markup.replace('Published by FRAME<br>2025 Release', '<span data-i18n="published">Published by FRAME</span><br><span data-i18n="release">2025 Release</span>')
+    # Keep the arrow SVG when changing the contact action's text.
+    markup = markup.replace('>LIÊN HỆ <svg', '><span data-i18n="contact">LIÊN HỆ</span> <svg')
+    return markup
 
 
 # Detail pages use the reference's shared, works and detail styles together.
@@ -44,13 +104,14 @@ contact_css = '.contact-modal {' + contact_css
 sections = []
 for project in projects:
     number = project['number']
+    key = f'project.{project["slug"]}'
     sections.append(f'''    <section class="section sec{number:02d} mainImg" id="project-{number}">
         <div class="full"></div>
         <div class="bg pc" style="background-image: url(./{e(project['hero'])})"></div>
         <div class="bg sp" style="background-image: url(./{e(project['mobile'])})"></div>
-        <div class="txtBox"><a href="./projects/{e(project['slug'])}/index.html" aria-label="Xem chi tiết {e(project['title'])}">
+        <div class="txtBox"><a href="./projects/{e(project['slug'])}/index.html" data-project-title="{e(project['title'])}" aria-label="Xem chi tiết {e(project['title'])}">
             <h2><span>{e(project['title'])}</span></h2>
-            <p class="txt"><span class="shuffle">{e(project['category'])}{' / ' + e(project['location']) if project['location'] else ''}</span><br><span class="shuffle">{e(project['subtitle'])}</span></p>
+            <p class="txt"><span class="shuffle" data-i18n="{key}.metadata">{e(copy['vi'][key + '.metadata'])}</span><br><span class="shuffle" data-i18n="{key}.subtitle">{e(project['subtitle'])}</span></p>
             <div class="detail"><p class="txt01">DETAIL</p><p class="line"></p></div>
         </a></div>
     </section>''')
@@ -64,6 +125,14 @@ html = re.sub(r'<meta name="description" content="[^"]*">', '<meta name="descrip
 html = re.sub(r'(?:src|href)="\./assets/rwh-reference-wordmark\.svg(?:\?v=[^"]*)?"', lambda match: match.group().split('=')[0] + f'="./{asset("assets/rwh-reference-wordmark.svg")}"', html)
 html = re.sub(r'src="\./app\.js(?:\?v=[^"]*)?"', f'src="./{asset("app.js")}"', html)
 html = re.sub(r'href="\./rwh-footer\.css(?:\?v=[^"]*)?"', f'href="./{asset("rwh-footer.css")}"', html)
+html = re.sub(r'<link rel="stylesheet" href="\./site-language\.css[^\"]*">\n?', '', html)
+html = re.sub(r'<script src="\./(?:project-copy|site-language)\.js[^\"]*" defer></script>\n?', '', html)
+html = html.replace('<script src="./app.js', f'<link rel="stylesheet" href="./{asset("site-language.css")}">\n<script src="./{asset("project-copy.js")}" defer></script>\n<script src="./{asset("site-language.js")}" defer></script>\n<script src="./app.js', 1)
+html = re.sub(r'<div class="language-switch".*?</div>\n?', '', html, flags=re.S)
+html = html.replace('<body id="top">', '<body id="top">\n' + switcher)
+html = html.replace('>SCROLL<span>', '><b class="scroll-label" data-i18n="scroll">CUỘN</b><span>')
+html = html.replace('<meta name="description"', '<meta data-i18n-content="siteDescription" name="description"')
+html = localize_ui(html)
 index.write_text(html)
 
 # Reuse the approved homepage menu, footer and owner contact form.
@@ -82,43 +151,49 @@ contact_dialog = re.search(r'<dialog class="contact-modal".*?</dialog>', html, r
 
 for i, project in enumerate(projects):
     number = project['number']
+    key = f'project.{project["slug"]}'
     folder = DIST / 'projects' / project['slug']
     folder.mkdir(parents=True, exist_ok=True)
-    facts = ''.join(f'<tr><th scope="row">{e(label)}</th><td>{e(value)}</td></tr>' for label, value in project['facts'])
+    facts = ''.join(f'<tr><th scope="row" data-i18n="{key}.fact.{row}.label">{e(label)}</th><td data-i18n="{key}.fact.{row}.value">{e(value)}</td></tr>' for row, (label, value) in enumerate(project['facts']))
     figures = []
     for j, photo in enumerate(project['images']):
         caption = f'{project["title"]} — {j + 1:02d}'
         source = project['hero'] if j == 0 else photo['src']
         loading = 'loading="eager" fetchpriority="high"' if j == 0 else 'loading="lazy"'
-        figures.append(f'''<div class="photo"><a class="gallery-image" href="../../{e(source)}" data-caption="{e(caption)}" aria-label="Phóng to ảnh {j + 1} của {e(project['title'])}"><img src="../../{e(source)}" width="{photo['width']}" height="{photo['height']}" alt="{e(caption)}" {loading} decoding="async"></a></div>''')
+        figures.append(f'''<div class="photo"><a class="gallery-image" href="../../{e(source)}" data-caption="{e(caption)}" data-project-title="{e(project['title'])}" data-photo-number="{j + 1}" aria-label="Phóng to ảnh {j + 1} của {e(project['title'])}"><img src="../../{e(source)}" width="{photo['width']}" height="{photo['height']}" alt="{e(caption)}" {loading} decoding="async"></a></div>''')
     related = []
     for offset in range(1, 4):
         item = projects[(i + offset) % len(projects)]
-        related.append(f'''<li><a href="../{e(item['slug'])}/index.html"><span class="over"><span class="pho"><img src="../../{e(item['images'][0]['thumbnail'])}" alt="{e(item['title'])}" loading="lazy"></span></span><span class="txt margin"><span class="ttl">{e(item['title'])}</span><span class="txt01">{e(item['category'])}<br>{e(item['subtitle'])}</span></span></a></li>''')
+        item_key = f'project.{item["slug"]}'
+        related.append(f'''<li><a href="../{e(item['slug'])}/index.html"><span class="over"><span class="pho"><img src="../../{e(item['images'][0]['thumbnail'])}" alt="{e(item['title'])}" loading="lazy"></span></span><span class="txt margin"><span class="ttl">{e(item['title'])}</span><span class="txt01"><span data-i18n="{item_key}.category">{e(copy['vi'][item_key + '.category'])}</span><br><span data-i18n="{item_key}.subtitle">{e(item['subtitle'])}</span></span></span></a></li>''')
     page = f'''<!doctype html>
 <html lang="vi"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>{e(project['title'])} | R.W.H group</title>
-<meta name="description" content="{e(project['description'])}">
+<meta data-i18n-content="{key}.description" name="description" content="{e(project['description'])}">
 <meta name="theme-color" content="#292929">
 <link rel="icon" href="../../{asset('assets/rwh-reference-wordmark.svg')}" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&amp;family=Roboto:wght@300;400;500&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../{asset('project-gallery.css')}">
 <link rel="stylesheet" href="../../{asset('rwh-footer.css')}">
+<link rel="stylesheet" href="../../{asset('site-language.css')}">
+<script src="../../{asset('project-copy.js')}" defer></script>
+<script src="../../{asset('site-language.js')}" defer></script>
 <script src="../../{asset('project-gallery.js')}" defer></script>
 <script src="../../{asset('contact-form.js')}" defer></script>
 </head><body>
+{switcher}
 <div id="container">
 <header id="gHeader" class="header01"><div class="inner"><h1><a class="hLogo" href="../../index.html" aria-label="R.W.H group — Trang chủ"><img class="pc" src="../../{asset('assets/rwh-reference-wordmark.svg')}" alt="R.W.H group" width="357"><img class="sp" src="../../{asset('assets/rwh-reference-wordmark.svg')}" alt="R.W.H group" width="255"></a></h1></div></header>
 <div class="meunRBox"><button class="menu" type="button" aria-label="Open menu" aria-controls="navigation" aria-expanded="false"><span class="top"></span><span class="bottom"></span></button></div>
 {navigation}
 <main id="main" tabindex="-1">
-<div class="comTopLinkBox"><h2>{e(project['title'])}</h2><div class="rBox"><p class="txt">{e(project['category'])}{' / ' + e(project['location']) if project['location'] else ''}<br>{e(project['subtitle'])}</p></div></div>
+<div class="comTopLinkBox"><h2>{e(project['title'])}</h2><div class="rBox"><p class="txt"><span data-i18n="{key}.metadata">{e(copy['vi'][key + '.metadata'])}</span><br><span data-i18n="{key}.subtitle">{e(project['subtitle'])}</span></p></div></div>
 <div class="comSideTxt"><p class="txt"><span class="txt01"><a href="../../index.html?project={number}">WORKS</a></span><span class="txt02" title="{e(project['title'])}">{e(project['title'])}</span></p></div>
 <section class="sec01" aria-label="{e(project['title'])}"><div class="inner01">
 <div class="project-photos">{''.join(figures)}</div>
-<div class="textArea"><div class="bdBox"><div class="lBox"><p class="project-description">{e(project['description'])}</p></div></div></div>
+<div class="textArea"><div class="bdBox"><div class="lBox"><p class="project-description" data-i18n="{key}.description">{e(project['description'])}</p></div></div></div>
 <div class="txtBox"><div class="tBox"><h2>DATA</h2></div><div class="rBox"><ul class="txtListUl"><li><table><tbody>{facts}</tbody></table></li></ul></div></div>
 </div></section>
 <section class="sec02"><div class="inner"><h2 class="h2Ttl">OTHER WORKS</h2><ul class="listUl listUl01">{''.join(related)}</ul><div class="comBtn"><a href="../../index.html"><span class="en">MORE</span></a></div></div></section>
@@ -129,6 +204,6 @@ for i, project in enumerate(projects):
 <dialog class="image-viewer" aria-label="Xem ảnh dự án"><button type="button" class="viewer-close" aria-label="Đóng ảnh" autofocus>×</button><button type="button" class="viewer-prev" aria-label="Ảnh trước">←</button><div class="viewer-stage"><img alt=""><p class="viewer-caption" aria-live="polite"></p></div><button type="button" class="viewer-next" aria-label="Ảnh tiếp theo">→</button></dialog>
 </body></html>
 '''
-    (folder / 'index.html').write_text(page)
+    (folder / 'index.html').write_text(localize_ui(page))
 
 print(f'Rendered {len(projects)} ordered project sections and local detail galleries.')

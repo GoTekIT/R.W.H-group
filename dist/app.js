@@ -29,9 +29,10 @@
     contactError: 'Your enquiry could not be sent. Your details are still here; please try again.',
     contactRateLimited: 'Please wait a few minutes before trying again.',
     contactUnavailable: 'The contact form is being set up. Please try again later.',
-    contactLocal: 'Please open the published website to send an enquiry.'
+    contactLocal: 'Please open the published website to send an enquiry.',
+    openMenu: 'Open menu', closeMenu: 'Close menu', projectCounter: 'Project {number} of {total}'
   };
-  window.RWHI18n = { t: key => messages[key] || key, message(element, key) { element.textContent = messages[key] || key; } };
+  window.RWHI18n ||= { t: key => messages[key] || key, message(element, key) { element.textContent = messages[key] || key; } };
 
   function accessibleSections() {
     sections.forEach((section, index) => {
@@ -52,7 +53,7 @@
   function updatePosition() {
     const index = Math.min(current, projects.length - 1);
     counterTrack.style.transform = `translateY(${-index * 19}px)`;
-    counter.setAttribute('aria-label', `Project ${index + 1} of ${projects.length}`);
+    counter.setAttribute('aria-label', window.RWHI18n.t('projectCounter').replace('{number}', index + 1).replace('{total}', projects.length));
     pageTop.style.display = current === footerIndex ? 'block' : 'none';
     scrollCue.style.display = ready && current !== footerIndex ? 'block' : 'none';
   }
@@ -118,7 +119,7 @@
     navigation.inert = !open;
     main.inert = open;
     menu.setAttribute('aria-expanded', String(open));
-    menu.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    menu.setAttribute('aria-label', window.RWHI18n.t(open ? 'closeMenu' : 'openMenu'));
     if (focus) (open ? navigation.querySelector('a') : menu).focus({ preventScroll: true });
   }
   menu.addEventListener('click', event => { event.stopPropagation(); toggleMenu(!menuOpen); });
@@ -186,7 +187,7 @@
     if (menuOpen) {
       if (event.key === 'Escape') { event.preventDefault(); toggleMenu(false); }
       if (event.key === 'Tab') {
-        const items = [...navigation.querySelectorAll('a'), menu];
+        const items = [...navigation.querySelectorAll('a'), ...document.querySelectorAll('[data-language]'), menu];
         const active = items.indexOf(document.activeElement);
         event.preventDefault(); items[(active + (event.shiftKey ? -1 : 1) + items.length) % items.length].focus();
       }
@@ -203,6 +204,15 @@
     else goTo(current + (['ArrowUp','PageUp'].includes(event.key) ? -1 : 1));
   });
   window.addEventListener('resize', () => { track.style.transform = `translate3d(0,-${offset()}px,0)`; });
+  document.addEventListener('rwh:languagechange', () => {
+    for (const [element, timeout] of textAnimations) {
+      clearTimeout(timeout);
+      element.textContent = element.dataset.text || element.textContent;
+    }
+    textAnimations.clear();
+    updatePosition();
+    if (ready) track.style.transform = `translate3d(0,-${offset()}px,0)`;
+  });
   document.addEventListener('visibilitychange', schedule);
   reduced.addEventListener('change', schedule);
 

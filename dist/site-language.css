@@ -1,0 +1,7 @@
+.language-switch { position:fixed; z-index:110; top:17px; right:96px; display:flex; align-items:center; padding:2px; border:1px solid #ffffff40; border-radius:4px; background:#29292965; backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); color:#fff; }
+.language-switch button { display:grid; place-items:center; width:36px; min-height:32px; padding:0; border:0; border-radius:2px; background:transparent; color:#ffffffb3; font:400 11px/1 Roboto,Arial,sans-serif; letter-spacing:.04em; cursor:pointer; }
+.language-switch button[aria-pressed="true"] { background:#ffffff20; color:#fff; }
+.language-switch button:hover { color:#fff; }
+.language-switch button:focus-visible { outline:1px solid #fff; outline-offset:3px; }
+.scroll-label { font:inherit; }
+@media(max-width:767px) { .language-switch { top:13px; right:62px; } .language-switch button { width:32px; } }
