@@ -229,6 +229,7 @@ for i, project in enumerate(projects):
 <script src="../../{asset('project-copy.js')}" defer></script>
 <script src="../../{asset('site-language.js')}" defer></script>
 <script src="../../{asset('project-panel.js')}" defer></script>
+<script src="../../{asset('project-motion.js')}" defer></script>
 <script src="../../{asset('rwh-videos.js')}" defer></script>
 <script src="../../{asset('project-gallery.js')}" defer></script>
 <script src="../../{asset('contact-form.js')}" defer></script>

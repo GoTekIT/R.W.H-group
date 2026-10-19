@@ -2903,3 +2903,11 @@ body:has(dialog[open]) { overflow:hidden; }
   .viewer-caption { font-size:10px; }
 }
 @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *,*::before,*::after { transition:none!important; animation:none!important; } }
+/* Reveal each lower section once while keeping native wheel/touch scrolling. */
+.rwh-reveal { transition:opacity .7s ease,transform .85s cubic-bezier(.22,1,.36,1); }
+.rwh-reveal.is-pending { opacity:0; transform:translate3d(0,28px,0); }
+.rwh-reveal:focus-within { opacity:1; transform:none; }
+#main .sec02 .listUl > li.rwh-reveal:nth-child(2) { transition-delay:.07s; }
+#main .sec02 .listUl > li.rwh-reveal:nth-child(3) { transition-delay:.14s; }
+@media(prefers-reduced-motion:reduce) { .rwh-reveal.is-pending { opacity:1; transform:none; } }
+@media print { .rwh-reveal.is-pending { opacity:1; transform:none; } }
