@@ -10,8 +10,8 @@ body.menu-open { overflow:hidden; }
 body.menu-open .comTopLinkBox, body.menu-open .comSideTxt { opacity:0; visibility:hidden; }
 .comTopLinkBox h2 { overflow-wrap:break-word; }
 /* Compact project intro; the gallery has no reserved vertical side rail. */
-#container { padding-top:0; }
-#gHeader.header01, #gHeader.header01.show01 { position:relative; height:auto; min-height:108px; padding:26px 40px; background:#292929; }
+#container { padding-top:0; overflow:clip; }
+#gHeader.header01, #gHeader.header01.show01 { position:sticky; top:0; z-index:9; height:auto; min-height:108px; padding:26px 40px; background:#292929; }
 #gHeader.header01 .inner { display:grid; grid-template-columns:160px minmax(0,1fr) 160px; align-items:center; gap:24px; }
 #gHeader.header01 h1 { line-height:1; }
 #gHeader.header01 h1 img { display:block; width:auto; height:23px; }
