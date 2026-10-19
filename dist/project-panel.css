@@ -5,10 +5,10 @@
 .project-panel-title { position:absolute; width:1px; height:1px; padding:0; overflow:hidden; clip-path:inset(50%); white-space:nowrap; }
 .project-panel iframe { display:block; width:100%; height:100%; border:0; background:#333232; opacity:0; transition:opacity .2s; }
 .project-panel.is-loaded iframe { opacity:1; }
-.project-panel-close { position:absolute; z-index:2; top:0; right:0; display:grid; place-items:center; width:70px; height:60px; margin:0; padding:0; border:0; background:#191919; color:#fff; cursor:pointer; }
-.project-panel-close svg { width:22px; height:22px; fill:none; stroke:currentColor; stroke-width:1.2; transition:transform .25s; }
-.project-panel-close:hover svg { transform:rotate(90deg); }
-.project-panel-close:focus-visible { outline:1px solid #fff; outline-offset:-8px; }
+.project-panel-close { position:absolute; z-index:2; top:0; right:0; display:grid; place-items:center; width:70px; height:60px; margin:0; padding:0; border:0; outline:none; box-shadow:none; background:transparent; color:#fff; cursor:pointer; }
+.project-panel-close svg { width:22px; height:22px; fill:none; stroke:currentColor; stroke-width:1.2; filter:drop-shadow(0 1px 3px #0008); transition:transform .25s,stroke-width .25s; }
+.project-panel-close:hover svg, .project-panel-close:focus-visible svg { transform:scale(1.1); stroke-width:1.8; }
+.project-panel-close:focus-visible { outline:none; }
 .project-panel-status { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:20px; padding:30px; font:300 13px/1.6 Roboto,Arial,sans-serif; text-align:center; }
 .project-panel-status .panel-wordmark { font-size:28px; font-weight:500; letter-spacing:.01em; }
 .project-panel-status .panel-wordmark small { margin-left:5px; font-size:13px; font-weight:400; }

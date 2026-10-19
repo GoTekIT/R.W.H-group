@@ -52,9 +52,9 @@ def localize_ui(markup):
         'NEWSLETTER': 'newsletter', 'RECRUIT': 'recruit', 'DESIGN ORDER': 'designOrder', 'CONTACT': 'contact',
         'DETAIL': 'detail', 'DATA': 'data', 'OTHER WORKS': 'otherWorks', 'MORE': 'more', 'Related Site :': 'relatedSites',
         'Name': 'name', 'Email': 'email', 'Questions': 'questions', 'Send message': 'sendMessage',
-        'Leave your questions and R.W.H group will get in touch.': 'contactNote',
-        'Liên hệ R.W.H group ngay hôm nay để được tư vấn và kết nối với các chuyên gia Nhật Bản.': 'footerInvite',
-        'R.W.H group – Japanese Expertise, Better Living.': 'tagline', 'Design &amp; Build': 'services'
+        'Leave your questions and R.W.H Group will get in touch.': 'contactNote',
+        'Liên hệ R.W.H Group ngay hôm nay để được tư vấn và kết nối với các chuyên gia Nhật Bản.': 'footerInvite',
+        'R.W.H Group – Japanese Expertise, Better Living.': 'tagline', 'Design &amp; Build': 'services'
     }
     def text_node(match):
         tag, attrs, value = match.groups()
@@ -66,8 +66,8 @@ def localize_ui(markup):
     aria = {
         'Main navigation': 'navigation', 'Selected architecture projects': 'selectedProjects',
         'Back to first project': 'firstProject', 'Next project': 'nextProject', 'Về đầu dự án': 'projectTop',
-        'R.W.H group — Trang chủ': 'home', 'Liên hệ R.W.H group': 'contactRegion',
-        'Gọi R.W.H group: 0982-132-489': 'call', 'Close contact form': 'closeContact',
+        'R.W.H Group — Trang chủ': 'home', 'Liên hệ R.W.H Group': 'contactRegion',
+        'Gọi R.W.H Group: 0982-132-489': 'call', 'Close contact form': 'closeContact',
         'Xem ảnh dự án': 'imageViewer', 'Đóng ảnh': 'closeImage', 'Ảnh trước': 'previousImage', 'Ảnh tiếp theo': 'nextImage'
     }
     def aria_node(match):
@@ -121,7 +121,7 @@ html = index.read_text()
 html, count = re.subn(r'    <section class="section sec01 mainImg".*?(?=    <section class="section [^"]*fp-auto-height)', '\n'.join(sections) + '\n', html, flags=re.S)
 assert count == 1, 'Could not locate the landing-page project sections'
 html = html.replace('<html lang="en">', '<html lang="vi">')
-html = re.sub(r'<meta name="description" content="[^"]*">', '<meta name="description" content="Các dự án R.W.H group: nghỉ dưỡng, Onsen, chăm sóc sức khỏe, khách sạn và kiến trúc đô thị tại Việt Nam và Nhật Bản.">', html)
+html = re.sub(r'<meta name="description" content="[^"]*">', '<meta name="description" content="Các dự án R.W.H Group: nghỉ dưỡng, Onsen, chăm sóc sức khỏe, khách sạn và kiến trúc đô thị tại Việt Nam và Nhật Bản.">', html)
 html = re.sub(r'(?:src|href)="\./assets/rwh-reference-wordmark\.svg(?:\?v=[^"]*)?"', lambda match: match.group().split('=')[0] + f'="./{asset("assets/rwh-reference-wordmark.svg")}"', html)
 html = re.sub(r'src="\./app\.js(?:\?v=[^"]*)?"', f'src="./{asset("app.js")}"', html)
 html = re.sub(r'href="\./rwh-footer\.css(?:\?v=[^"]*)?"', f'href="./{asset("rwh-footer.css")}"', html)
@@ -137,7 +137,7 @@ html = re.sub(r'<dialog class="project-panel".*?</dialog>\n?', '', html, flags=r
 html = html.replace('</body>', '''<dialog class="project-panel" id="project-panel" aria-labelledby="project-panel-title">
     <h2 class="project-panel-title" id="project-panel-title"></h2>
     <div class="project-panel-status" role="status">
-        <div class="panel-wordmark">R.W.H<small>group</small></div>
+        <div class="panel-wordmark">R.W.H<small>Group</small></div>
         <p class="project-panel-loading" data-i18n="loadingProject">Đang tải dự án…</p>
         <div class="project-panel-error"><p data-i18n="projectLoadError">Chưa tải được dự án. Vui lòng thử mở lại.</p><a data-panel-fallback target="_blank" rel="noopener noreferrer" data-i18n="openProjectPage">Mở trang dự án</a></div>
     </div>
@@ -186,7 +186,7 @@ for i, project in enumerate(projects):
     page = f'''<!doctype html>
 <html lang="vi"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>{e(project['title'])} | R.W.H group</title>
+<title>{e(project['title'])} | R.W.H Group</title>
 <meta data-i18n-content="{key}.description" name="description" content="{e(project['description'])}">
 <meta name="theme-color" content="#292929">
 <link rel="icon" href="../../{asset('assets/rwh-reference-wordmark.svg')}" type="image/svg+xml">
@@ -205,7 +205,7 @@ for i, project in enumerate(projects):
 </head><body>
 {switcher}
 <div id="container">
-<header id="gHeader" class="header01"><div class="inner"><h1><a class="hLogo" href="../../index.html" aria-label="R.W.H group — Trang chủ"><img class="pc" src="../../{asset('assets/rwh-reference-wordmark.svg')}" alt="R.W.H group" width="357"><img class="sp" src="../../{asset('assets/rwh-reference-wordmark.svg')}" alt="R.W.H group" width="255"></a></h1><div class="comTopLinkBox"><h2>{e(project['title'])}</h2><div class="rBox"><p class="txt"><span data-i18n="{key}.metadata">{e(copy['vi'][key + '.metadata'])}</span><br><span data-i18n="{key}.subtitle">{e(project['subtitle'])}</span></p></div></div></div></header>
+<header id="gHeader" class="header01"><div class="inner"><h1><a class="hLogo" href="../../index.html" aria-label="R.W.H Group — Trang chủ"><img class="pc" src="../../{asset('assets/rwh-reference-wordmark.svg')}" alt="R.W.H Group" width="357"><img class="sp" src="../../{asset('assets/rwh-reference-wordmark.svg')}" alt="R.W.H Group" width="255"></a></h1><div class="comTopLinkBox"><h2>{e(project['title'])}</h2><div class="rBox"><p class="txt"><span data-i18n="{key}.metadata">{e(copy['vi'][key + '.metadata'])}</span><br><span data-i18n="{key}.subtitle">{e(project['subtitle'])}</span></p></div></div></div></header>
 <div class="meunRBox"><button class="menu" type="button" aria-label="Open menu" aria-controls="navigation" aria-expanded="false"><span class="top"></span><span class="bottom"></span></button></div>
 {navigation}
 <main id="main" tabindex="-1">

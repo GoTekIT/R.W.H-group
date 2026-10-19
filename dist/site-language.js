@@ -13,13 +13,13 @@
       detail: 'CHI TIẾT', data: 'THÔNG TIN', otherWorks: 'CÔNG TRÌNH KHÁC', more: 'XEM THÊM', scroll: 'CUỘN',
       closeProject: 'Đóng chi tiết dự án', loadingProject: 'Đang tải dự án…', projectLoadError: 'Chưa tải được dự án. Vui lòng thử mở lại.', openProjectPage: 'Mở trang dự án',
       selectedProjects: 'Các dự án kiến trúc chọn lọc', nextProject: 'Dự án tiếp theo', firstProject: 'Về dự án đầu tiên',
-      projectTop: 'Về đầu dự án', home: 'R.W.H group — Trang chủ', projectCounter: 'Dự án {number} trên {total}',
-      contactRegion: 'Liên hệ R.W.H group', call: 'Gọi R.W.H group: 0982-132-489',
-      footerInvite: 'Liên hệ R.W.H group ngay hôm nay để được tư vấn và kết nối với các chuyên gia Nhật Bản.',
-      tagline: 'R.W.H group – Chuyên môn Nhật Bản, cuộc sống tốt đẹp hơn.', services: 'Thiết kế & Thi công',
+      projectTop: 'Về đầu dự án', home: 'R.W.H Group — Trang chủ', projectCounter: 'Dự án {number} trên {total}',
+      contactRegion: 'Liên hệ R.W.H Group', call: 'Gọi R.W.H Group: 0982-132-489',
+      footerInvite: 'Liên hệ R.W.H Group ngay hôm nay để được tư vấn và kết nối với các chuyên gia Nhật Bản.',
+      tagline: 'R.W.H Group – Chuyên môn Nhật Bản, cuộc sống tốt đẹp hơn.', services: 'Thiết kế & Thi công',
       name: 'Họ tên', email: 'Email', questions: 'Câu hỏi', closeContact: 'Đóng form liên hệ',
-      contactNote: 'Để lại câu hỏi, R.W.H group sẽ liên hệ với bạn.', sendMessage: 'Gửi liên hệ', sendingMessage: 'Đang gửi…',
-      contactSent: 'Cảm ơn bạn! Nội dung liên hệ đã được gửi đến R.W.H group.',
+      contactNote: 'Để lại câu hỏi, R.W.H Group sẽ liên hệ với bạn.', sendMessage: 'Gửi liên hệ', sendingMessage: 'Đang gửi…',
+      contactSent: 'Cảm ơn bạn! Nội dung liên hệ đã được gửi đến R.W.H Group.',
       contactInvalid: 'Vui lòng kiểm tra họ tên, email và câu hỏi.',
       contactError: 'Chưa gửi được liên hệ. Thông tin của bạn vẫn được giữ; vui lòng thử lại.',
       contactRateLimited: 'Vui lòng đợi vài phút trước khi thử lại.',
@@ -27,7 +27,7 @@
       contactLocal: 'Vui lòng mở website đã xuất bản để gửi liên hệ.',
       imageViewer: 'Xem ảnh dự án', closeImage: 'Đóng ảnh', previousImage: 'Ảnh trước', nextImage: 'Ảnh tiếp theo',
       zoomPhoto: 'Phóng to ảnh {number} của {title}', viewDetail: 'Xem chi tiết {title}',
-      siteDescription: 'Các dự án R.W.H group: nghỉ dưỡng, Onsen, chăm sóc sức khỏe, khách sạn và kiến trúc đô thị tại Việt Nam và Nhật Bản.'
+      siteDescription: 'Các dự án R.W.H Group: nghỉ dưỡng, Onsen, chăm sóc sức khỏe, khách sạn và kiến trúc đô thị tại Việt Nam và Nhật Bản.'
     },
     en: {
       language: 'Language', openMenu: 'Open menu', closeMenu: 'Close menu', navigation: 'Main navigation',
@@ -41,13 +41,13 @@
       detail: 'DETAIL', data: 'DATA', otherWorks: 'OTHER WORKS', more: 'MORE', scroll: 'SCROLL',
       closeProject: 'Close project details', loadingProject: 'Loading project…', projectLoadError: 'The project could not be loaded. Please try opening it again.', openProjectPage: 'Open project page',
       selectedProjects: 'Selected architecture projects', nextProject: 'Next project', firstProject: 'Back to first project',
-      projectTop: 'Back to project top', home: 'R.W.H group — Home', projectCounter: 'Project {number} of {total}',
-      contactRegion: 'Contact R.W.H group', call: 'Call R.W.H group: 0982-132-489',
-      footerInvite: 'Contact R.W.H group today for advice and connections with our Japanese experts.',
-      tagline: 'R.W.H group – Japanese Expertise, Better Living.', services: 'Design & Build',
+      projectTop: 'Back to project top', home: 'R.W.H Group — Home', projectCounter: 'Project {number} of {total}',
+      contactRegion: 'Contact R.W.H Group', call: 'Call R.W.H Group: 0982-132-489',
+      footerInvite: 'Contact R.W.H Group today for advice and connections with our Japanese experts.',
+      tagline: 'R.W.H Group – Japanese Expertise, Better Living.', services: 'Design & Build',
       name: 'Name', email: 'Email', questions: 'Questions', closeContact: 'Close contact form',
-      contactNote: 'Leave your questions and R.W.H group will get in touch.', sendMessage: 'Send message', sendingMessage: 'Sending…',
-      contactSent: 'Thank you! Your enquiry has been sent to R.W.H group.',
+      contactNote: 'Leave your questions and R.W.H Group will get in touch.', sendMessage: 'Send message', sendingMessage: 'Sending…',
+      contactSent: 'Thank you! Your enquiry has been sent to R.W.H Group.',
       contactInvalid: 'Please check your name, email and questions.',
       contactError: 'Your enquiry could not be sent. Your details are still here; please try again.',
       contactRateLimited: 'Please wait a few minutes before trying again.',
@@ -55,7 +55,7 @@
       contactLocal: 'Please open the published website to send an enquiry.',
       imageViewer: 'Project image viewer', closeImage: 'Close image', previousImage: 'Previous image', nextImage: 'Next image',
       zoomPhoto: 'Enlarge photo {number} of {title}', viewDetail: 'View details of {title}',
-      siteDescription: 'R.W.H group projects: resorts, Onsen, healthcare, hotels and urban architecture in Vietnam and Japan.'
+      siteDescription: 'R.W.H Group projects: resorts, Onsen, healthcare, hotels and urban architecture in Vietnam and Japan.'
     }
   };
   const projectCopy = window.RWHProjectCopy || { vi: {}, en: {} };
