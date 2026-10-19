@@ -21,7 +21,7 @@
   let wheelSum = 0, wheelTimer, wheelGestureUsed = false, pendingWheelStep = 0;
   let touchY = null, touchX = null, touchScrollTop = 0, returnFocus = menu;
 
-  // The original English landing-page copy stays unchanged. Only the owner form uses these status messages.
+  // The contact form uses these status messages independently of project copy.
   const messages = {
     sendMessage: 'Send message', sendingMessage: 'Sending…',
     contactSent: 'Thank you! Your enquiry has been sent to RWH.',
@@ -215,7 +215,13 @@
       header.classList.add('show'); header.querySelector('h1').classList.add('show');
       cover.style.opacity = 0; cover.style.pointerEvents = 'none';
       menu.querySelectorAll('span').forEach((span, i) => setTimeout(() => span.classList.add('show'), reduced.matches ? 0 : i * 100));
-      projects[0].classList.add('show'); accessibleSections(); shuffle(projects[0]); updatePosition(); schedule();
+      const requested = Number((window.location?.search || '').match(/[?&]project=(\d+)/)?.[1] || 1) - 1;
+      current = Math.max(0, Math.min(projects.length - 1, requested));
+      // A detail page returns directly to its project without replaying earlier slides.
+      track.style.transition = 'none';
+      track.style.transform = `translate3d(0,-${offset()}px,0)`;
+      requestAnimationFrame(() => requestAnimationFrame(() => { track.style.transition = ''; }));
+      projects[current].classList.add('show'); accessibleSections(); shuffle(projects[current]); updatePosition(); schedule();
       setTimeout(() => { header.classList.add('noTrans'); header.style.zIndex = 11; cover.hidden = true; }, reduced.matches ? 0 : 800);
       setTimeout(() => counter.classList.add('show'), reduced.matches ? 0 : 500);
       setTimeout(() => { if (current < footerIndex) scrollCue.style.display = 'block'; }, reduced.matches ? 0 : 1000);

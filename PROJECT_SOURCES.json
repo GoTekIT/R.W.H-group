@@ -1,344 +1,2591 @@
 {
-  "retrieved": "2026-10-08",
-  "note": "Official R.W.H project images, including architectural renderings. Project years are not completion dates. Selection is for review; no official videos have been provided.",
+  "sourceFolder": "https://drive.google.com/drive/folders/1SQ6a0Fm6EQm3J9om5T1sm88so47pGKsB",
+  "updated": "2026-10-19",
+  "ordering": "Client folder numbering 01 through 10",
+  "notes": [
+    "Only project photos and proposal renders are included. Inspiration boards, document chrome, logos and duplicate originals are excluded.",
+    "Project 06 uses only the Onsen set, as confirmed by the client.",
+    "Dates in filenames are document versions, not completion dates. No completion dates inferred."
+  ],
   "projects": [
     {
-      "project": "LE CHIEN HAKONE",
-      "projectPage": "https://www.rwh-group.com/projects/project-japans/le-chien",
-      "projectYearSource": "https://www.rwh-group.com/projects/project-japans",
-      "assets": [
+      "slug": "the-hera-resort",
+      "title": "THE HERA RESORT",
+      "category": "RESORT",
+      "location": "Quy Nhơn, Việt Nam",
+      "subtitle": "Kiến trúc Santorini bên Vịnh Tiên",
+      "description": "The Hera Resort kết nối triền núi, rừng xanh và Vịnh Tiên tại Quy Nhơn. Phương án kiến trúc mang cảm hứng Santorini, tổ chức các không gian biệt thự, căn hộ nghỉ dưỡng và bến du thuyền theo địa hình hướng biển.",
+      "facts": [
+        [
+          "Địa điểm",
+          "Quy Nhơn, Việt Nam"
+        ],
+        [
+          "Loại hình",
+          "Khu nghỉ dưỡng"
+        ],
+        [
+          "Quy mô",
+          "16,62 ha"
+        ]
+      ],
+      "textSource": {
+        "fileId": "1iS5v5EcFGhi1eS4w5485VP5iD5CkaGz7",
+        "pages": [
+          4,
+          7,
+          15
+        ]
+      },
+      "hero": "assets/rwh-projects/the-hera-resort/hero.webp",
+      "number": 1,
+      "folderUrl": "https://drive.google.com/drive/folders/1CWES7pqQFPMOKahGTuqJbJ7V5CWeLkI_",
+      "mobile": "assets/rwh-projects/the-hera-resort/hero-mobile.webp",
+      "images": [
         {
-          "role": "cover",
-          "file": "rwh-project-le-chien-cover.jpg",
-          "sourceUrl": "https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72txFS-DVPlHA-XUXf37kD4h-U1vRw8NAmYx56Oad7ftNnMCKf60d3vhtfqrU4Q_VxU92iOyeaCTV8BDrMSDPX8g_Be_sBpLdF68EbCalgFzGb0IDYMyB3n9F0loeFCoPhoyn0jbP6p_gAEJpogWEX3mdXZ7gbESjus0_zxWFBzcaGu5vDyYAc47sqB-BcE=w16383",
-          "dimensions": [
-            2048,
-            1377
-          ]
+          "name": "1QL.png",
+          "src": "assets/rwh-projects/the-hera-resort/01-fd4d82dcc2.webp",
+          "thumbnail": "assets/rwh-projects/the-hera-resort/01-fd4d82dcc2-thumb.webp",
+          "width": 1920,
+          "height": 1080,
+          "source": {
+            "fileId": "11hinq3-HBDC8j0gqTk0cjkmF4z2cgpTO",
+            "fileName": "1QL.png"
+          },
+          "sourceSha256": "fd4d82dcc2a3540002840ab23dc5a1cbcd1193300e5ad5a481d7dad99025f95d"
         },
         {
-          "role": "mobile",
-          "file": "rwh-project-le-chien-mobile.jpg",
-          "sourceUrl": "https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72uekkwNQCB6W_UD0LThJ11tF0dAdNpZBXeL4j4jQ4sZVkB26hk7ew3maRDdygaJH5QLe0ibC5NXxiS2mhlwJwo5qL9WUh_SU6adh57yOfTVUXFqfcbVmXYlmcF3C_HQ2z1WcWZ5dpVJ_qzVyi0FgLbHAPZOR44S0GXiHE43N62epiU1pHutktGWNbZ8Eq5G6l4-KcfDmwEXSPAwlBQUnqAlD_I8VTHdeSi5EclCez8=w1280",
-          "dimensions": [
-            1000,
-            626
-          ]
+          "name": "3 ĐÊM.png",
+          "src": "assets/rwh-projects/the-hera-resort/02-b056cfa1b1.webp",
+          "thumbnail": "assets/rwh-projects/the-hera-resort/02-b056cfa1b1-thumb.webp",
+          "width": 1920,
+          "height": 1277,
+          "source": {
+            "fileId": "1NUN0yx5b3hSM1FSBskGlYgp08xRHR-Cl",
+            "fileName": "3 ĐÊM.png"
+          },
+          "sourceSha256": "b056cfa1b1304878964884340fb102488ce854b4c3876961033ccc1e65a38ad2"
         },
         {
-          "role": "photo",
-          "file": "rwh-project-le-chien-photo.jpg",
-          "sourceUrl": "https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72tyCRfGMPySmkzBpbF40RO1I176tUdqIIDkbetqx9rUdCLi3c2C7VsdQTXTbWj2KEELqYThFK6edSTXOsOQZI1fzsWJxExPj6IPJOdZHb-NTfHF6Hm0oC1ruZll8JMuLJj-h6E9EA78rXHUO_CiA--rKVr7iFNjGvkihHDM0Q34yfEyxh-4WNqa0dCKABuixhWp7kisA46ZM1Huk1P52eOXOFTQ3u1LbxfurXLnI2k=w1280",
-          "dimensions": [
-            1280,
-            791
-          ]
+          "name": "1 ĐÊM QL.png",
+          "src": "assets/rwh-projects/the-hera-resort/03-53e8d19191.webp",
+          "thumbnail": "assets/rwh-projects/the-hera-resort/03-53e8d19191-thumb.webp",
+          "width": 1920,
+          "height": 1081,
+          "source": {
+            "fileId": "1b8RJhD0eiy8jatFhzdQRt5Eaq-jzna5F",
+            "fileName": "1 ĐÊM QL.png"
+          },
+          "sourceSha256": "53e8d19191b5a7ca20613415c034565b9bd5788da59573ad8b4e560d6780a10a"
+        },
+        {
+          "name": "7.png",
+          "src": "assets/rwh-projects/the-hera-resort/04-0b08b4c32a.webp",
+          "thumbnail": "assets/rwh-projects/the-hera-resort/04-0b08b4c32a-thumb.webp",
+          "width": 1920,
+          "height": 1080,
+          "source": {
+            "fileId": "1GKaxY9xBjmAisqUkWxGrVem7eX5dsTyG",
+            "fileName": "7.png"
+          },
+          "sourceSha256": "0b08b4c32a1cb23d31a72ba4a3696c453eca97dc1c80c379dd52f9f0835a12d3"
+        },
+        {
+          "name": "15.png",
+          "src": "assets/rwh-projects/the-hera-resort/05-f762874661.webp",
+          "thumbnail": "assets/rwh-projects/the-hera-resort/05-f762874661-thumb.webp",
+          "width": 1920,
+          "height": 1080,
+          "source": {
+            "fileId": "1RDXfOpQRhN9J0WJpj2DCIbPDCm97ilBh",
+            "fileName": "15.png"
+          },
+          "sourceSha256": "f762874661b1516dfded06adebb750db81746eb2597640b731fb8c25362e7d7c"
+        },
+        {
+          "name": "16.png",
+          "src": "assets/rwh-projects/the-hera-resort/06-26e0fe1126.webp",
+          "thumbnail": "assets/rwh-projects/the-hera-resort/06-26e0fe1126-thumb.webp",
+          "width": 1920,
+          "height": 1080,
+          "source": {
+            "fileId": "1qar_MpS8IQORCZ3tTlVucJX0T0vnPMBO",
+            "fileName": "16.png"
+          },
+          "sourceSha256": "26e0fe1126d8fdebbe3350c863cebd4f758299623fb094b462af022fde4a5a3c"
+        },
+        {
+          "name": "4.png",
+          "src": "assets/rwh-projects/the-hera-resort/07-58bb0bf1b1.webp",
+          "thumbnail": "assets/rwh-projects/the-hera-resort/07-58bb0bf1b1-thumb.webp",
+          "width": 1920,
+          "height": 1080,
+          "source": {
+            "fileId": "1F2HO6_r8JcVvwQgvusnYLuuktgCH3F0-",
+            "fileName": "4.png"
+          },
+          "sourceSha256": "58bb0bf1b1e4674df33c08f72714c8dbeabc59994c003af23e24d72c85ff12f4"
+        },
+        {
+          "name": "2.png",
+          "src": "assets/rwh-projects/the-hera-resort/08-91a934c424.webp",
+          "thumbnail": "assets/rwh-projects/the-hera-resort/08-91a934c424-thumb.webp",
+          "width": 1920,
+          "height": 1081,
+          "source": {
+            "fileId": "1T65-dYrEqf8zkJzKh3QLS9p6VQxVo0Li",
+            "fileName": "2.png"
+          },
+          "sourceSha256": "91a934c42462219e75154707693fb576bcf7e7e2a38aeb0e6d8fd4eaa5bfbf39"
+        },
+        {
+          "name": "screenshot_1791941315.png",
+          "src": "assets/rwh-projects/the-hera-resort/09-7a50b9be5b.webp",
+          "thumbnail": "assets/rwh-projects/the-hera-resort/09-7a50b9be5b-thumb.webp",
+          "width": 1918,
+          "height": 999,
+          "source": {
+            "fileId": "1YqVNkavmeJEgKXwy_Ki4A_I3IpoJ74lU",
+            "fileName": "screenshot_1791941315.png"
+          },
+          "sourceSha256": "7a50b9be5b01bc0eb9a5476dbced225fe130c48683fe799d8d113f5459cbcd43"
+        },
+        {
+          "name": "screenshot_1784885397.png",
+          "src": "assets/rwh-projects/the-hera-resort/10-6ddb568175.webp",
+          "thumbnail": "assets/rwh-projects/the-hera-resort/10-6ddb568175-thumb.webp",
+          "width": 1419,
+          "height": 896,
+          "source": {
+            "fileId": "1lpU7-gQfHgaxliCvxIyzhHQDDk0AtzWb",
+            "fileName": "screenshot_1784885397.png"
+          },
+          "sourceSha256": "6ddb568175ed79a1e447a1382823320216464c4cb2c6dc9d04d083837a2da082"
         }
       ]
     },
     {
-      "project": "AEGIS HOSPITAL",
-      "projectPage": "https://www.rwh-group.com/projects/architecture/aegis-hospital",
-      "projectYearSource": "https://www.rwh-group.com/projects/architecture",
-      "assets": [
+      "slug": "capital-one",
+      "title": "CAPITAL ONE",
+      "category": "MIXED-USE",
+      "location": "",
+      "subtitle": "Tổ hợp thương mại và văn phòng",
+      "description": "Phương án Capital One khai thác ý tưởng hành trình qua các tầng không gian, từ mặt đất, nước đến bầu trời và vũ trụ. Thiết kế kết hợp khối thương mại, văn phòng và cảnh quan, với mặt đứng kính cùng ánh sáng tạo điểm nhấn theo phương đứng.",
+      "facts": [
+        [
+          "Loại hình",
+          "Tổ hợp thương mại và văn phòng"
+        ],
+        [
+          "Tư liệu",
+          "Phương án concept"
+        ]
+      ],
+      "textSource": {
+        "fileId": "1ee7K3R2vPAIvhzktdD-1icrPiGSwXZOz",
+        "pages": [
+          10,
+          11,
+          19,
+          20
+        ]
+      },
+      "hero": "assets/rwh-projects/capital-one/hero.webp",
+      "mobile": "assets/rwh-projects/capital-one/hero-mobile.webp",
+      "number": 2,
+      "folderUrl": "https://drive.google.com/drive/folders/1F7sTyYqJ32y6rdzYY_1ca_hgm38ESXYA",
+      "images": [
         {
-          "role": "cover",
-          "file": "rwh-project-aegis-hospital-cover.jpg",
-          "sourceUrl": "https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72tVJlR0zEGl64-_Qey7M_nihM0XHFGtNLUMPz-VSYwOm5r5v1XvD71gtl2U9C47KqaDROt4LTp3kqgAagBGDPn2ll4pA0Ag8lK0wmV1_rPRvLjfQWLQ4eVnTaOliNTbZimryfT0D2JIFwYKWDY517tJoipfwXO2JQ-VjdBKfBqIUdgbeaZZ6MIL-AA=w1280",
-          "dimensions": [
-            1280,
-            853
-          ]
+          "name": "page13-0.jpg",
+          "src": "assets/rwh-projects/capital-one/01-fa8d96ac25.webp",
+          "thumbnail": "assets/rwh-projects/capital-one/01-fa8d96ac25-thumb.webp",
+          "width": 1536,
+          "height": 949,
+          "source": {
+            "fileId": "1ee7K3R2vPAIvhzktdD-1icrPiGSwXZOz",
+            "embeddedImage": "page13-0.jpg"
+          },
+          "sourceSha256": "fa8d96ac255c39e216e5b819fb3989694776d8719801c370f45589ef11ed1511"
         },
         {
-          "role": "mobile",
-          "file": "rwh-project-aegis-hospital-mobile.jpg",
-          "sourceUrl": "https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72tVJlR0zEGl64-_Qey7M_nihM0XHFGtNLUMPz-VSYwOm5r5v1XvD71gtl2U9C47KqaDROt4LTp3kqgAagBGDPn2ll4pA0Ag8lK0wmV1_rPRvLjfQWLQ4eVnTaOliNTbZimryfT0D2JIFwYKWDY517tJoipfwXO2JQ-VjdBKfBqIUdgbeaZZ6MIL-AA=w1280",
-          "dimensions": [
-            1000,
-            666
-          ]
+          "name": "page11-0.jpg",
+          "src": "assets/rwh-projects/capital-one/02-c2b85ba700.webp",
+          "thumbnail": "assets/rwh-projects/capital-one/02-c2b85ba700-thumb.webp",
+          "width": 1920,
+          "height": 1291,
+          "source": {
+            "fileId": "1ee7K3R2vPAIvhzktdD-1icrPiGSwXZOz",
+            "embeddedImage": "page11-0.jpg"
+          },
+          "sourceSha256": "c2b85ba700565a393c842578e40017969cd7d61d5254a0967a4ec70169eae853"
         },
         {
-          "role": "photo",
-          "file": "rwh-project-aegis-hospital-photo.jpg",
-          "sourceUrl": "https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72vjmaC43drbRzG-GFi3-_BCCN8tjsXvEcRHtFwplZE_XXPYAQgLU9_9G_FY82hnHMjzJqRZgDO-SM7NrGRjYtPHrLOw5y-VQ552IBdDZ5EJuFB4k7wRxpPVASQLOBk0xqDgK1Iyc3c-p7_OuAnhOSJlFx7jvMEq5VwhkwM3Z_ens-sEU8OXLe2NXh9TnoUHaAwwxu95YjUfgJNJ0lnQ4ncBsrcB_vggzR61OaVp=w1280",
-          "dimensions": [
-            1280,
-            1007
-          ]
+          "name": "page12-0.jpg",
+          "src": "assets/rwh-projects/capital-one/03-393368109f.webp",
+          "thumbnail": "assets/rwh-projects/capital-one/03-393368109f-thumb.webp",
+          "width": 1536,
+          "height": 950,
+          "source": {
+            "fileId": "1ee7K3R2vPAIvhzktdD-1icrPiGSwXZOz",
+            "embeddedImage": "page12-0.jpg"
+          },
+          "sourceSha256": "393368109f39920ab4fc7816ed715b500406b1f38c9435ad277647e3bf789e5f"
+        },
+        {
+          "name": "page14-0.jpg",
+          "src": "assets/rwh-projects/capital-one/04-a149d4f3c9.webp",
+          "thumbnail": "assets/rwh-projects/capital-one/04-a149d4f3c9-thumb.webp",
+          "width": 1119,
+          "height": 1536,
+          "source": {
+            "fileId": "1ee7K3R2vPAIvhzktdD-1icrPiGSwXZOz",
+            "embeddedImage": "page14-0.jpg"
+          },
+          "sourceSha256": "a149d4f3c9ca7734f7590cd5f8d77374d031feb80a736da9dc3705766abfef4c"
+        },
+        {
+          "name": "page14-2.jpg",
+          "src": "assets/rwh-projects/capital-one/05-6acc295709.webp",
+          "thumbnail": "assets/rwh-projects/capital-one/05-6acc295709-thumb.webp",
+          "width": 1131,
+          "height": 1536,
+          "source": {
+            "fileId": "1ee7K3R2vPAIvhzktdD-1icrPiGSwXZOz",
+            "embeddedImage": "page14-2.jpg"
+          },
+          "sourceSha256": "6acc2957099b1788ed7aac60083b650393e47446ae0c2a9be9b61737a2e7fc3b"
+        },
+        {
+          "name": "page15-0.jpg",
+          "src": "assets/rwh-projects/capital-one/06-841a1f86c5.webp",
+          "thumbnail": "assets/rwh-projects/capital-one/06-841a1f86c5-thumb.webp",
+          "width": 1536,
+          "height": 951,
+          "source": {
+            "fileId": "1ee7K3R2vPAIvhzktdD-1icrPiGSwXZOz",
+            "embeddedImage": "page15-0.jpg"
+          },
+          "sourceSha256": "841a1f86c558a8af7cef4ae4b42ea79aa361c1f9d1d11a6de3630ee94fd80282"
+        },
+        {
+          "name": "page16-0.jpg",
+          "src": "assets/rwh-projects/capital-one/07-2d47ea1e1d.webp",
+          "thumbnail": "assets/rwh-projects/capital-one/07-2d47ea1e1d-thumb.webp",
+          "width": 1920,
+          "height": 1279,
+          "source": {
+            "fileId": "1ee7K3R2vPAIvhzktdD-1icrPiGSwXZOz",
+            "embeddedImage": "page16-0.jpg"
+          },
+          "sourceSha256": "2d47ea1e1daa19df18985c1112ba91f2bd9f7db0a3861ab47cb9b76f9fa5621d"
+        },
+        {
+          "name": "page16-1.jpg",
+          "src": "assets/rwh-projects/capital-one/08-f3a1a7dc0c.webp",
+          "thumbnail": "assets/rwh-projects/capital-one/08-f3a1a7dc0c-thumb.webp",
+          "width": 1108,
+          "height": 738,
+          "source": {
+            "fileId": "1ee7K3R2vPAIvhzktdD-1icrPiGSwXZOz",
+            "embeddedImage": "page16-1.jpg"
+          },
+          "sourceSha256": "f3a1a7dc0caa8558c1cc5e4ace374d176a7aa4885ba7afac7d437d10d08b9d0a"
+        },
+        {
+          "name": "page17-0.jpg",
+          "src": "assets/rwh-projects/capital-one/09-d1dd86573b.webp",
+          "thumbnail": "assets/rwh-projects/capital-one/09-d1dd86573b-thumb.webp",
+          "width": 1920,
+          "height": 1291,
+          "source": {
+            "fileId": "1ee7K3R2vPAIvhzktdD-1icrPiGSwXZOz",
+            "embeddedImage": "page17-0.jpg"
+          },
+          "sourceSha256": "d1dd86573bf74d6df89097b9e8fa9cf28b0dbee4743713a1a85f8e91f7cb5eff"
         }
       ]
     },
     {
-      "project": "BINH MINH RESORT",
-      "projectPage": "https://www.rwh-group.com/projects/planning/binh-minh",
-      "projectYearSource": "https://www.rwh-group.com/projects/planning",
-      "assets": [
+      "slug": "kawara-my-an",
+      "title": "KAWARA MỸ AN ONSEN RESORT",
+      "category": "ONSEN RESORT",
+      "location": "Huế, Việt Nam",
+      "subtitle": "Không gian nghỉ dưỡng và trải nghiệm Onsen",
+      "description": "Kawara Mỹ An Onsen Resort tại Huế kết hợp không gian lưu trú, sân vườn và trải nghiệm tắm khoáng theo tinh thần Nhật Bản. Bộ ảnh thể hiện các khu tắm, phòng nghỉ và cảnh quan kết nối với mặt nước.",
+      "facts": [
+        [
+          "Địa điểm",
+          "Huế, Việt Nam"
+        ],
+        [
+          "Loại hình",
+          "Khu nghỉ dưỡng Onsen"
+        ]
+      ],
+      "textSource": {
+        "folderId": "1XaaP_O33YSNBaWdAVrKwMaV6ZycI4P0g",
+        "files": [
+          "Picture2.jpg",
+          "Picture3.jpg",
+          "Kawara My An Onsen resort_Presentation 2022.pdf"
+        ]
+      },
+      "hero": "assets/rwh-projects/kawara-my-an/hero.webp",
+      "number": 3,
+      "folderUrl": "https://drive.google.com/drive/folders/1XaaP_O33YSNBaWdAVrKwMaV6ZycI4P0g",
+      "mobile": "assets/rwh-projects/kawara-my-an/hero-mobile.webp",
+      "images": [
         {
-          "role": "cover",
-          "file": "rwh-project-binh-minh-cover.jpg",
-          "sourceUrl": "https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72vp4PEByuSCq73F4e8jVgQ0fHismKrBEQnb1Pgkc4rm4YT5ZJ14OLt6Ksn8BEQwlEqp7x2nmRcRe5EXR5WWfxKwR0-oUhEk6adNSZJrv_LnLULE9tGgcNT0Yervr-2eL8EFXe2AqtqRDTjFWzgDm9RM5oTZrTKcRUuxt6yaEERHQkuIZoEOLXFahGRYm1i3dh2wz-zp23hIeK92KoPAoK9wdnKgzd6n1Pue1Nu9ovc=w1280",
-          "dimensions": [
-            1280,
-            766
-          ]
+          "name": "Picture2.jpg",
+          "src": "assets/rwh-projects/kawara-my-an/01-db6491e818.webp",
+          "thumbnail": "assets/rwh-projects/kawara-my-an/01-db6491e818-thumb.webp",
+          "width": 1920,
+          "height": 1189,
+          "source": {
+            "fileId": "1n3qHMC-nZ5whwVBVQ5l3tEFiCOzo502w",
+            "fileName": "Picture2.jpg"
+          },
+          "sourceSha256": "db6491e818279ee6c179446e88b0eeff054df452deb9d799c78ac2b8e064539b"
         },
         {
-          "role": "mobile",
-          "file": "rwh-project-binh-minh-mobile.jpg",
-          "sourceUrl": "https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72sG8740f7xa8uk0GUDo3Fqm1vbvhT5H0SQhnFt0oINggYcldajmlZUxpr_eBymtK944wAPrGi2czS2qrIaOh2wypScQafdP1gx8CE7NBaIkG9S0cFbFBuoZ9W9zjKkPOytJNA7Au7fNWcNIAo08qC76f6sUiNjIHmFSiMBOUg3PGenxcsWQBcdbeHXhiF10JuasIQuhl4HA4TLx8cy2WZFOaEP33rCx67f_x5jF=w1280",
-          "dimensions": [
-            1000,
-            598
-          ]
+          "name": "Picture3.jpg",
+          "src": "assets/rwh-projects/kawara-my-an/02-a30e0a4ffe.webp",
+          "thumbnail": "assets/rwh-projects/kawara-my-an/02-a30e0a4ffe-thumb.webp",
+          "width": 1920,
+          "height": 1189,
+          "source": {
+            "fileId": "1b_WrHD1t0scaHz-l62dr7jyuYaVYtgM4",
+            "fileName": "Picture3.jpg"
+          },
+          "sourceSha256": "a30e0a4ffe664ab4c82d536ea7a33a9bc02bf391c7d639d16d8d30a4088c531c"
         },
         {
-          "role": "photo",
-          "file": "rwh-project-binh-minh-photo.jpg",
-          "sourceUrl": "https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72uLqkrArqBNKTkR3JPumEyXx4EPHtyxU6xrYUZUHA1oKHDAemn7O-FUSD1ITFwMbruLsYF38rOG1l2_BuGWxfufHl7C2ozPKuFPCPuP2w7FVsYZ_OKif96H5lrqnKx_SdJHGm7T4xRVCS6bpFe_ML3hOBSJdiD6X1uYP8LLbJm6lV1W7BU2ZfvS8QOpy4AHnZdA6HI5erx_TBu4mBmEUGDEl1tnitqh1elhOzsk=w1280",
-          "dimensions": [
-            1280,
-            863
-          ]
+          "name": "899719216 (1).jpg",
+          "src": "assets/rwh-projects/kawara-my-an/03-0e3f008acb.webp",
+          "thumbnail": "assets/rwh-projects/kawara-my-an/03-0e3f008acb-thumb.webp",
+          "width": 1024,
+          "height": 594,
+          "source": {
+            "fileId": "1oJ-qvTvoPN1uJT3xlXqTtbYdsns9td14",
+            "fileName": "899719216 (1).jpg"
+          },
+          "sourceSha256": "0e3f008acb59e94e58a82ecde5ae6288b989affcef97646a62fbaf5be03cec8e"
+        },
+        {
+          "name": "899719213 (1).jpg",
+          "src": "assets/rwh-projects/kawara-my-an/04-21b6d216df.webp",
+          "thumbnail": "assets/rwh-projects/kawara-my-an/04-21b6d216df-thumb.webp",
+          "width": 1024,
+          "height": 767,
+          "source": {
+            "fileId": "1WCR2kofGagWauLypziLyMwthK7I7PBZE",
+            "fileName": "899719213 (1).jpg"
+          },
+          "sourceSha256": "21b6d216dfdb0e45ad7882d4c4456c9d610696d776b49411a9a07fbe471a960f"
+        },
+        {
+          "name": "898870616.jpg",
+          "src": "assets/rwh-projects/kawara-my-an/05-f4179af193.webp",
+          "thumbnail": "assets/rwh-projects/kawara-my-an/05-f4179af193-thumb.webp",
+          "width": 1024,
+          "height": 767,
+          "source": {
+            "fileId": "12Ibm_yJS-Dff06G9vDCoeNlVw0SKLoP_",
+            "fileName": "898870616.jpg"
+          },
+          "sourceSha256": "f4179af1935d8a8f6f3c74a7108f1ddf5965849aac492c95f6310389322115b8"
+        },
+        {
+          "name": "899719331.jpg",
+          "src": "assets/rwh-projects/kawara-my-an/06-487587374f.webp",
+          "thumbnail": "assets/rwh-projects/kawara-my-an/06-487587374f-thumb.webp",
+          "width": 1024,
+          "height": 683,
+          "source": {
+            "fileId": "1hQTo82k59Jvx2XfifkIGZnByax1Z6MLh",
+            "fileName": "899719331.jpg"
+          },
+          "sourceSha256": "487587374f23ebf58d81bdd4102cafad22b26e94fe9c49a1595ae4e09d13a774"
+        },
+        {
+          "name": "899719312.jpg",
+          "src": "assets/rwh-projects/kawara-my-an/07-0f12c40c0e.webp",
+          "thumbnail": "assets/rwh-projects/kawara-my-an/07-0f12c40c0e-thumb.webp",
+          "width": 1024,
+          "height": 683,
+          "source": {
+            "fileId": "1N9sCZXLdM9Z20IzNoDQvucSfyKXfoAig",
+            "fileName": "899719312.jpg"
+          },
+          "sourceSha256": "0f12c40c0e95b5d422f6545766793d511a57e19e8dc18e8fd8a347837102b668"
+        },
+        {
+          "name": "899719308.jpg",
+          "src": "assets/rwh-projects/kawara-my-an/08-a6edb82443.webp",
+          "thumbnail": "assets/rwh-projects/kawara-my-an/08-a6edb82443-thumb.webp",
+          "width": 1024,
+          "height": 767,
+          "source": {
+            "fileId": "1YmK96isE3eQWpQyq7Lju9p75FVWEPBXF",
+            "fileName": "899719308.jpg"
+          },
+          "sourceSha256": "a6edb824439e366ece6b3986be83c8e93b4f28749057204d197b861e701c9b08"
+        },
+        {
+          "name": "899719307.jpg",
+          "src": "assets/rwh-projects/kawara-my-an/09-a2049e11d7.webp",
+          "thumbnail": "assets/rwh-projects/kawara-my-an/09-a2049e11d7-thumb.webp",
+          "width": 1024,
+          "height": 683,
+          "source": {
+            "fileId": "1IU1gTEKkmSps3ehYpxDgVuEug0BEwI2o",
+            "fileName": "899719307.jpg"
+          },
+          "sourceSha256": "a2049e11d757b0cbe2087cf6e8c60ca9d6dda608d28ac3e59c6d0c9a0873de60"
+        },
+        {
+          "name": "899719305.jpg",
+          "src": "assets/rwh-projects/kawara-my-an/10-8efe7fb13c.webp",
+          "thumbnail": "assets/rwh-projects/kawara-my-an/10-8efe7fb13c-thumb.webp",
+          "width": 1024,
+          "height": 767,
+          "source": {
+            "fileId": "1yqJsQx6zeb6lnLdYmFSJ9fLX-CZcuPVK",
+            "fileName": "899719305.jpg"
+          },
+          "sourceSha256": "8efe7fb13c4f3fdcb045d595aa7aa9a640fc4233a1c7b144c32db93a7302de30"
+        },
+        {
+          "name": "899719306.jpg",
+          "src": "assets/rwh-projects/kawara-my-an/11-9dedc4674b.webp",
+          "thumbnail": "assets/rwh-projects/kawara-my-an/11-9dedc4674b-thumb.webp",
+          "width": 1024,
+          "height": 683,
+          "source": {
+            "fileId": "1tGja6rMxBxVSbemeNNw9LOyTJCWOQcXa",
+            "fileName": "899719306.jpg"
+          },
+          "sourceSha256": "9dedc4674b597446cafd554665993fcb14fb3a2788d95801aad60eb537eef433"
+        },
+        {
+          "name": "899719293.jpg",
+          "src": "assets/rwh-projects/kawara-my-an/12-db1c337135.webp",
+          "thumbnail": "assets/rwh-projects/kawara-my-an/12-db1c337135-thumb.webp",
+          "width": 1024,
+          "height": 683,
+          "source": {
+            "fileId": "1AVQYSbIn-cGEsrRupsmdHhN3fAUZQ-an",
+            "fileName": "899719293.jpg"
+          },
+          "sourceSha256": "db1c337135b3ac5c021789e5e5e245b298340eefd94bd7081a573950d736d643"
+        },
+        {
+          "name": "899719301.jpg",
+          "src": "assets/rwh-projects/kawara-my-an/13-72333ded77.webp",
+          "thumbnail": "assets/rwh-projects/kawara-my-an/13-72333ded77-thumb.webp",
+          "width": 1024,
+          "height": 683,
+          "source": {
+            "fileId": "1ENefOgjtZtOTI6LkFZ9PQdAvuukMmpmV",
+            "fileName": "899719301.jpg"
+          },
+          "sourceSha256": "72333ded77cc153aa790fdc1dc1420a09669923797913c05cb6b74aa8cd0a36c"
+        },
+        {
+          "name": "899719263.jpg",
+          "src": "assets/rwh-projects/kawara-my-an/14-ba5362f133.webp",
+          "thumbnail": "assets/rwh-projects/kawara-my-an/14-ba5362f133-thumb.webp",
+          "width": 1024,
+          "height": 683,
+          "source": {
+            "fileId": "1DNi2m6DusXQgNF5P7EQdWtS6fY1NhzVr",
+            "fileName": "899719263.jpg"
+          },
+          "sourceSha256": "ba5362f13307a8234e4355c53d5f234af13bff59596665094c6a419f77b01db2"
+        },
+        {
+          "name": "899719245.jpg",
+          "src": "assets/rwh-projects/kawara-my-an/15-22f81f3b74.webp",
+          "thumbnail": "assets/rwh-projects/kawara-my-an/15-22f81f3b74-thumb.webp",
+          "width": 1021,
+          "height": 768,
+          "source": {
+            "fileId": "1DF1da29rH3pK9dVzxMhTwnQp4eNLaRRU",
+            "fileName": "899719245.jpg"
+          },
+          "sourceSha256": "22f81f3b7483fcf71aa97a06746eb5ee6104377b2482c6e38fe65498a65cd8ed"
+        },
+        {
+          "name": "899719238.jpg",
+          "src": "assets/rwh-projects/kawara-my-an/16-8d38b1c7f1.webp",
+          "thumbnail": "assets/rwh-projects/kawara-my-an/16-8d38b1c7f1-thumb.webp",
+          "width": 1024,
+          "height": 767,
+          "source": {
+            "fileId": "1waeHBq3LXTNrJplgXo0e7ct2-lcRJHZS",
+            "fileName": "899719238.jpg"
+          },
+          "sourceSha256": "8d38b1c7f1e92df2b0efc9bbc123951f0df0b45ec0c410ff3951d07d92a0a4ce"
+        },
+        {
+          "name": "899719221.jpg",
+          "src": "assets/rwh-projects/kawara-my-an/17-e6975870c0.webp",
+          "thumbnail": "assets/rwh-projects/kawara-my-an/17-e6975870c0-thumb.webp",
+          "width": 1024,
+          "height": 683,
+          "source": {
+            "fileId": "1CqjzQTjKIwFYAXcBiipcfgo9Ri3_40Jf",
+            "fileName": "899719221.jpg"
+          },
+          "sourceSha256": "e6975870c03d0bbb788507d1cf13ab4be18d6c57d6edc43541c07ea2c7ba4bd3"
+        },
+        {
+          "name": "899719226.jpg",
+          "src": "assets/rwh-projects/kawara-my-an/18-8122315abb.webp",
+          "thumbnail": "assets/rwh-projects/kawara-my-an/18-8122315abb-thumb.webp",
+          "width": 1024,
+          "height": 767,
+          "source": {
+            "fileId": "1dqYnSesI1xxRZVeeRNXM_sPXLjVobugU",
+            "fileName": "899719226.jpg"
+          },
+          "sourceSha256": "8122315abbdc160fb0a0ac6b211bd1bfe85a977998e3e011ed2acebd5979c9b4"
+        },
+        {
+          "name": "899719219.jpg",
+          "src": "assets/rwh-projects/kawara-my-an/19-9b879fce05.webp",
+          "thumbnail": "assets/rwh-projects/kawara-my-an/19-9b879fce05-thumb.webp",
+          "width": 1024,
+          "height": 767,
+          "source": {
+            "fileId": "1j4augkykX5G-CA3EINyc5oBUSUpUHOJ9",
+            "fileName": "899719219.jpg"
+          },
+          "sourceSha256": "9b879fce0572da24bbeb1d7e488b3855e9d09f6826edb49c3c52f9a9f63e2955"
+        },
+        {
+          "name": "899719220.jpg",
+          "src": "assets/rwh-projects/kawara-my-an/20-62f573d031.webp",
+          "thumbnail": "assets/rwh-projects/kawara-my-an/20-62f573d031-thumb.webp",
+          "width": 1024,
+          "height": 683,
+          "source": {
+            "fileId": "1c8rxBD3lSVECQyU4PUcoDBl44hRJufOR",
+            "fileName": "899719220.jpg"
+          },
+          "sourceSha256": "62f573d031e5bd6dbf11ba27502b25e50128d2efb8d925aa6af84f6beec02e8c"
+        },
+        {
+          "name": "899719217.jpg",
+          "src": "assets/rwh-projects/kawara-my-an/21-6306ae6fe1.webp",
+          "thumbnail": "assets/rwh-projects/kawara-my-an/21-6306ae6fe1-thumb.webp",
+          "width": 1024,
+          "height": 683,
+          "source": {
+            "fileId": "1tPha64B5xLcGxGaoTUETWD2FFAnxqWju",
+            "fileName": "899719217.jpg"
+          },
+          "sourceSha256": "6306ae6fe1b7f593a8de2d2520cd5051edd17d3c571dcf13aee4c6e15c51636f"
+        },
+        {
+          "name": "15.jpg",
+          "src": "assets/rwh-projects/kawara-my-an/22-160df731a0.webp",
+          "thumbnail": "assets/rwh-projects/kawara-my-an/22-160df731a0-thumb.webp",
+          "width": 1275,
+          "height": 908,
+          "source": {
+            "fileId": "1VcynRAJyJtEamVAGDJh3BMhqL2GsYkFh",
+            "fileName": "15.jpg"
+          },
+          "sourceSha256": "160df731a0cb8ab519f4f8729faeefa6e2ba21acd8c1c1ecb9669581150dd541"
+        },
+        {
+          "name": "z2558729520495_fdb083aff0c99e0cda75b930ac8560c2-1.jpg",
+          "src": "assets/rwh-projects/kawara-my-an/23-244627e3b9.webp",
+          "thumbnail": "assets/rwh-projects/kawara-my-an/23-244627e3b9-thumb.webp",
+          "width": 1279,
+          "height": 906,
+          "source": {
+            "fileId": "194-xqT8Nlyt9S_3dJ3Q_6pvgictwudKN",
+            "fileName": "z2558729520495_fdb083aff0c99e0cda75b930ac8560c2-1.jpg"
+          },
+          "sourceSha256": "244627e3b9e14f4fe4b0c4339aaadc6ef06b7e39a904b9f3c199bc927179ebb7"
+        },
+        {
+          "name": "z2558729478063_9c858c6a5e0bf1c1715241c792d4dfca.jpg",
+          "src": "assets/rwh-projects/kawara-my-an/24-00de8c03bd.webp",
+          "thumbnail": "assets/rwh-projects/kawara-my-an/24-00de8c03bd-thumb.webp",
+          "width": 1280,
+          "height": 718,
+          "source": {
+            "fileId": "1eP_JVpgnB9ew4HlyqCCbPuOtOJlGr502",
+            "fileName": "z2558729478063_9c858c6a5e0bf1c1715241c792d4dfca.jpg"
+          },
+          "sourceSha256": "00de8c03bdb847db827a3e44d6833f1547309d01d4362cc56eb3cd420a5e6d98"
+        },
+        {
+          "name": "Picture1.png",
+          "src": "assets/rwh-projects/kawara-my-an/25-81a16d97ae.webp",
+          "thumbnail": "assets/rwh-projects/kawara-my-an/25-81a16d97ae-thumb.webp",
+          "width": 1742,
+          "height": 1920,
+          "source": {
+            "fileId": "15gNeO1DmEI74_EWLtL2RQ8IkA3yOsiDz",
+            "fileName": "Picture1.png"
+          },
+          "sourceSha256": "81a16d97aeb41913f2f5296038fc3ee03b1d10b17913c0ecbc0acdab43495cbd"
+        },
+        {
+          "name": "Picture3.png",
+          "src": "assets/rwh-projects/kawara-my-an/26-896e9fdbbc.webp",
+          "thumbnail": "assets/rwh-projects/kawara-my-an/26-896e9fdbbc-thumb.webp",
+          "width": 1736,
+          "height": 1920,
+          "source": {
+            "fileId": "1QWRG6PmFeFs_YIevPaXSaEeaWWJNShWn",
+            "fileName": "Picture3.png"
+          },
+          "sourceSha256": "896e9fdbbc8292f832e5484899e6dfc1dd9361f6524157ba5e0156bb0eb60bf0"
         }
       ]
     },
     {
-      "project": "VIET NAM TRADE UNION HOTEL",
-      "projectPage": "https://www.rwh-group.com/projects/architecture/kim-boi-3",
-      "projectYearSource": "https://www.rwh-group.com/projects/architecture",
-      "assets": [
+      "slug": "aegis-hospital",
+      "title": "AEGIS INTERNATIONAL HOSPITAL",
+      "category": "HOSPITAL",
+      "location": "",
+      "subtitle": "Phương án kiến trúc bệnh viện",
+      "description": "Phương án Aegis International Hospital tổ chức các khối tháp và khoảng xanh xen kẽ. Hồ sơ trình bày phối cảnh tổng thể, hình khối mặt đứng và các khoảng mở giữa công trình.",
+      "facts": [
+        [
+          "Loại hình",
+          "Bệnh viện quốc tế"
+        ],
+        [
+          "Tư liệu",
+          "Phương án thiết kế"
+        ]
+      ],
+      "textSource": {
+        "fileId": "1a3FvS-SzSjBGfvYdwmUT6exE_5O-X2_r",
+        "slides": [
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      },
+      "hero": "assets/rwh-projects/aegis-hospital/hero.webp",
+      "number": 4,
+      "folderUrl": "https://drive.google.com/drive/folders/1tsySKXVCQLWxlPu-9x4ZKiMVdadEaLe0",
+      "mobile": "assets/rwh-projects/aegis-hospital/hero-mobile.webp",
+      "images": [
         {
-          "role": "cover",
-          "file": "rwh-project-kim-boi-3-cover.jpg",
-          "sourceUrl": "https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72t9WcjEoZO7e8GjoxOBcVmiXBslpfAv4pOSgfMz1HwKZqcVV5ZmbmxM_qfFoI1jlOeOl1gUmTeYjbhj2GGHVq4x6ghj5cEqQAN9zOO-3M0zexMGnSy85bi4QBVJT0ILVIVfnN2jQMddON4Ff7qHvfq2rrOVMZFPZ3s4AMv4yUKOEqJWMpJDaiiDR8eu=w16383",
-          "dimensions": [
-            1920,
-            1080
-          ]
+          "name": "image26.jpg",
+          "src": "assets/rwh-projects/aegis-hospital/01-9f22054745.webp",
+          "thumbnail": "assets/rwh-projects/aegis-hospital/01-9f22054745-thumb.webp",
+          "width": 1920,
+          "height": 1046,
+          "source": {
+            "fileId": "1a3FvS-SzSjBGfvYdwmUT6exE_5O-X2_r",
+            "embeddedImage": "image26.jpg"
+          },
+          "sourceSha256": "9f220547452ee78cdd446b350b1b991a9ba6160f38332944be668062c93613a0"
         },
         {
-          "role": "mobile",
-          "file": "rwh-project-kim-boi-3-mobile.jpg",
-          "sourceUrl": "https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72szoULCMsvJV8wa3VH2TcWLQ_a9rZ7FZEgeQoV-s0ofwS_hNAFehQkICrl4FU5o4MLrmGJUnMCY1lXO5DILfY2hYu3Q-gKrTESEBMic1IgfvgPVpc8yAodwBv_JxqFHYfm-uXFU_TdTtiq05Q1r8GTh8O6dBgcCw8XtUhJ6cOa3OAih7dgwFJLJVSJDKQ2KoJg8SPaIgdjedI8y9oMoEHgdI15BwWT2PqLmnbXwsLs=w1280",
-          "dimensions": [
-            1000,
-            562
-          ]
+          "name": "image27.jpg",
+          "src": "assets/rwh-projects/aegis-hospital/02-83cf409583.webp",
+          "thumbnail": "assets/rwh-projects/aegis-hospital/02-83cf409583-thumb.webp",
+          "width": 1920,
+          "height": 1049,
+          "source": {
+            "fileId": "1a3FvS-SzSjBGfvYdwmUT6exE_5O-X2_r",
+            "embeddedImage": "image27.jpg"
+          },
+          "sourceSha256": "83cf409583a56910ab70f85b048d6db5d6e48197d59e59fb7b9ec18eb4eb7d47"
         },
         {
-          "role": "photo",
-          "file": "rwh-project-kim-boi-3-photo.jpg",
-          "sourceUrl": "https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72uaFGjMQCvpbbTmWOxUkc8XSZZaQu5QqoM-jER6jKVbmoC8dP8z-XHpfIrPpkrf9UzXbTmee8nVeUHZijocXRTKImGO_h-BSSj4WgCuigAI84TtQdKPNM1BEGnXnKoo5nJbL2o8W5bfpVnvWqP40uT1JsWfLxQlebaJ2bXi8l34tCYmFvwfJzlPPxh-AWOGea36KRzHh1EG1Do4-EUIqXTGKVDwlSn6kMKAJA-kBYI=w1280",
-          "dimensions": [
-            1280,
-            741
-          ]
+          "name": "image28.jpg",
+          "src": "assets/rwh-projects/aegis-hospital/03-0a5955c872.webp",
+          "thumbnail": "assets/rwh-projects/aegis-hospital/03-0a5955c872-thumb.webp",
+          "width": 1920,
+          "height": 1048,
+          "source": {
+            "fileId": "1a3FvS-SzSjBGfvYdwmUT6exE_5O-X2_r",
+            "embeddedImage": "image28.jpg"
+          },
+          "sourceSha256": "0a5955c872887c790fb4c85535bf34adb1803bac7ebf04d9599bc93a8772de47"
+        },
+        {
+          "name": "image29.jpg",
+          "src": "assets/rwh-projects/aegis-hospital/04-29660beb08.webp",
+          "thumbnail": "assets/rwh-projects/aegis-hospital/04-29660beb08-thumb.webp",
+          "width": 1920,
+          "height": 1047,
+          "source": {
+            "fileId": "1a3FvS-SzSjBGfvYdwmUT6exE_5O-X2_r",
+            "embeddedImage": "image29.jpg"
+          },
+          "sourceSha256": "29660beb08040927533c1c9216aaa1438edd1af07e8e233bf56f2c8efae48138"
+        },
+        {
+          "name": "image30.jpg",
+          "src": "assets/rwh-projects/aegis-hospital/05-296513d35f.webp",
+          "thumbnail": "assets/rwh-projects/aegis-hospital/05-296513d35f-thumb.webp",
+          "width": 1920,
+          "height": 1047,
+          "source": {
+            "fileId": "1a3FvS-SzSjBGfvYdwmUT6exE_5O-X2_r",
+            "embeddedImage": "image30.jpg"
+          },
+          "sourceSha256": "296513d35fd2ef2097c3088b5eb194082b7025294a88b4cf9f5bb64dee9107b4"
         }
       ]
     },
     {
-      "project": "ROYAL GOLF CLUB",
-      "projectPage": "https://www.rwh-group.com/projects/interior/zone-6-yen-thang",
-      "projectYearSource": "https://www.rwh-group.com/projects/architecture",
-      "assets": [
+      "slug": "onsen-thanh-thuy",
+      "title": "ONSEN WELLNESS THANH THUỶ",
+      "category": "ONSEN & WELLNESS",
+      "location": "Phú Thọ, Việt Nam",
+      "subtitle": "Kiến trúc Ryokan và cảnh quan nghỉ dưỡng",
+      "description": "Concept Onsen Wellness Thanh Thuỷ lấy cảm hứng từ làng Kinosaki và kiến trúc Ryokan Nhật Bản. Trục cảnh quan mặt nước kết nối các không gian nghỉ dưỡng, phố đi bộ, sân vườn và khu trải nghiệm Onsen, hướng đến một ngôi làng chăm sóc sức khỏe gắn với thiên nhiên.",
+      "facts": [
+        [
+          "Địa điểm",
+          "Thanh Thuỷ, Phú Thọ, Việt Nam"
+        ],
+        [
+          "Loại hình",
+          "Onsen & Wellness"
+        ],
+        [
+          "Tư liệu",
+          "Concept kiến trúc và cảnh quan"
+        ]
+      ],
+      "textSource": {
+        "fileIds": [
+          "1Z2izAT4ujeZkTpASGR_DDYApm7NVpIDp",
+          "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF"
+        ],
+        "slides": [
+          1,
+          7,
+          9,
+          11,
+          12
+        ]
+      },
+      "hero": "assets/rwh-projects/onsen-thanh-thuy/hero.webp",
+      "number": 5,
+      "folderUrl": "https://drive.google.com/drive/folders/1UcAVe57LSd0vaCzTeHbs3sKREUcSbOa9",
+      "mobile": "assets/rwh-projects/onsen-thanh-thuy/hero-mobile.webp",
+      "images": [
         {
-          "role": "cover",
-          "file": "rwh-project-zone-6-yen-thang-cover.jpg",
-          "sourceUrl": "https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72vWeb9fwbdr5-KFB475rBgH_LbZ_QKM6NNWYoRIYNVrBwrSvtO2SSlm0JpPG4HdJLzqU6C0yB24JFKT7c_aVvsfbeXbwyNk8F-i4IMaVVsephAGcpUy_cFf3L52b8nhCTW0nM_jlt60fDlE_ugUGHvqdCGdGzeDxHi6YnIemTdZi1izPvXpv8X8hnrt=w16383",
-          "dimensions": [
-            2048,
-            1365
-          ]
+          "name": "architecture/image111.png",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/01-da672ba520.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/01-da672ba520-thumb.webp",
+          "width": 1920,
+          "height": 1072,
+          "source": {
+            "fileId": "1Z2izAT4ujeZkTpASGR_DDYApm7NVpIDp",
+            "embeddedImage": "image111.png"
+          },
+          "sourceSha256": "da672ba520b98f85fc70617b55060633352de3a07aee38b3cbda02026bba8943"
         },
         {
-          "role": "mobile",
-          "file": "rwh-project-zone-6-yen-thang-mobile.jpg",
-          "sourceUrl": "https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72vWeb9fwbdr5-KFB475rBgH_LbZ_QKM6NNWYoRIYNVrBwrSvtO2SSlm0JpPG4HdJLzqU6C0yB24JFKT7c_aVvsfbeXbwyNk8F-i4IMaVVsephAGcpUy_cFf3L52b8nhCTW0nM_jlt60fDlE_ugUGHvqdCGdGzeDxHi6YnIemTdZi1izPvXpv8X8hnrt=w16383",
-          "dimensions": [
-            1000,
-            667
-          ]
+          "name": "architecture/image2.png",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/02-6eaec9994b.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/02-6eaec9994b-thumb.webp",
+          "width": 1920,
+          "height": 1083,
+          "source": {
+            "fileId": "1Z2izAT4ujeZkTpASGR_DDYApm7NVpIDp",
+            "embeddedImage": "image2.png"
+          },
+          "sourceSha256": "6eaec9994b66809a2b663c7865371b47c6a1b6cb11617df72838a3381298ca7c"
         },
         {
-          "role": "photo",
-          "file": "rwh-project-zone-6-yen-thang-photo.jpg",
-          "sourceUrl": "https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72sRtrq00fkUFtCYiZ0CEPAdhLQLuAHKDNGbvfXjioi1XD_6Q2e75BziIvgwfwj9dQkbjvZOlec3yU1hSeQpkNjjpoXiimc_0jLXpGSSMcJ2EnuH2BzDEFnGM1FMajVJdIk_itwf4L3pP41QPKYaiTnpAq75V9-r-o3viPHHBpxNTYYHf5xY4jiQukIC5XaMH__IvVZdUFZT43g1ZjkoxFVklpgPwDK1ugGPUYXB=w1280",
-          "dimensions": [
-            1280,
-            684
-          ]
+          "name": "architecture/image43.png",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/03-8bde233027.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/03-8bde233027-thumb.webp",
+          "width": 1920,
+          "height": 1083,
+          "source": {
+            "fileId": "1Z2izAT4ujeZkTpASGR_DDYApm7NVpIDp",
+            "embeddedImage": "image43.png"
+          },
+          "sourceSha256": "8bde233027773804aa9ddcb6591da2fb5144de0dc0c1e419210696648fc35acd"
+        },
+        {
+          "name": "architecture/image67.png",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/04-0a6c06f138.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/04-0a6c06f138-thumb.webp",
+          "width": 1920,
+          "height": 1077,
+          "source": {
+            "fileId": "1Z2izAT4ujeZkTpASGR_DDYApm7NVpIDp",
+            "embeddedImage": "image67.png"
+          },
+          "sourceSha256": "0a6c06f138979b5c9596b63fbec19e41d119eba0e40f33ba7668081dc5ad2e76"
+        },
+        {
+          "name": "architecture/image75.jpeg",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/05-aa8a0a7833.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/05-aa8a0a7833-thumb.webp",
+          "width": 1920,
+          "height": 1072,
+          "source": {
+            "fileId": "1Z2izAT4ujeZkTpASGR_DDYApm7NVpIDp",
+            "embeddedImage": "image75.jpeg"
+          },
+          "sourceSha256": "aa8a0a7833affabdb3707a18a6cb8abccfadbf8929ea23b7fcbd052e0e8b4f4f"
+        },
+        {
+          "name": "architecture/image76.jpeg",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/06-10096d05d9.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/06-10096d05d9-thumb.webp",
+          "width": 1920,
+          "height": 1072,
+          "source": {
+            "fileId": "1Z2izAT4ujeZkTpASGR_DDYApm7NVpIDp",
+            "embeddedImage": "image76.jpeg"
+          },
+          "sourceSha256": "10096d05d9fd7d76fc82bb34f37f4e8f0386ed18c79e15a4a79625ef51d1b828"
+        },
+        {
+          "name": "architecture/image52.jpeg",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/07-c429d2da26.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/07-c429d2da26-thumb.webp",
+          "width": 1920,
+          "height": 1072,
+          "source": {
+            "fileId": "1Z2izAT4ujeZkTpASGR_DDYApm7NVpIDp",
+            "embeddedImage": "image52.jpeg"
+          },
+          "sourceSha256": "c429d2da2643bd198e8295808e913d00c667fc75bb55cd853458e31a6fd05d2d"
+        },
+        {
+          "name": "architecture/image88.png",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/08-f2743500a8.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/08-f2743500a8-thumb.webp",
+          "width": 1920,
+          "height": 1105,
+          "source": {
+            "fileId": "1Z2izAT4ujeZkTpASGR_DDYApm7NVpIDp",
+            "embeddedImage": "image88.png"
+          },
+          "sourceSha256": "f2743500a8964c21be867b5d034c590068a3006d3b4dd1ce23730b8e31f65f23"
+        },
+        {
+          "name": "architecture/image89.png",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/09-f87a8f8672.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/09-f87a8f8672-thumb.webp",
+          "width": 1920,
+          "height": 1064,
+          "source": {
+            "fileId": "1Z2izAT4ujeZkTpASGR_DDYApm7NVpIDp",
+            "embeddedImage": "image89.png"
+          },
+          "sourceSha256": "f87a8f8672b332396e7a15bedab32b2b9d40ec476f6146910f4cd09361d8b01d"
+        },
+        {
+          "name": "architecture/image90.png",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/10-5b3d74c61a.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/10-5b3d74c61a-thumb.webp",
+          "width": 1920,
+          "height": 1064,
+          "source": {
+            "fileId": "1Z2izAT4ujeZkTpASGR_DDYApm7NVpIDp",
+            "embeddedImage": "image90.png"
+          },
+          "sourceSha256": "5b3d74c61ac38ca516b2b9cdbd32d5967a79e28ea74a0b72ebdc0a62459ccb9e"
+        },
+        {
+          "name": "architecture/image91.png",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/11-3e2ee55b10.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/11-3e2ee55b10-thumb.webp",
+          "width": 1920,
+          "height": 1077,
+          "source": {
+            "fileId": "1Z2izAT4ujeZkTpASGR_DDYApm7NVpIDp",
+            "embeddedImage": "image91.png"
+          },
+          "sourceSha256": "3e2ee55b1011f3be00a3c71b00ec9d284fe5795c8efef7088a88daddb081502f"
+        },
+        {
+          "name": "architecture/image92.png",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/12-232f213c01.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/12-232f213c01-thumb.webp",
+          "width": 1920,
+          "height": 1077,
+          "source": {
+            "fileId": "1Z2izAT4ujeZkTpASGR_DDYApm7NVpIDp",
+            "embeddedImage": "image92.png"
+          },
+          "sourceSha256": "232f213c01630c5b744414c9648d9e9bcc07c0a91ab083bf80ddfeaf7d0cab7c"
+        },
+        {
+          "name": "architecture/image97.png",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/13-c22e77993a.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/13-c22e77993a-thumb.webp",
+          "width": 1920,
+          "height": 1072,
+          "source": {
+            "fileId": "1Z2izAT4ujeZkTpASGR_DDYApm7NVpIDp",
+            "embeddedImage": "image97.png"
+          },
+          "sourceSha256": "c22e77993a49f001304cb799294304f4a637ffc08e503d7e25d3155fc1321c50"
+        },
+        {
+          "name": "architecture/image98.png",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/14-a34c0feaad.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/14-a34c0feaad-thumb.webp",
+          "width": 1920,
+          "height": 1072,
+          "source": {
+            "fileId": "1Z2izAT4ujeZkTpASGR_DDYApm7NVpIDp",
+            "embeddedImage": "image98.png"
+          },
+          "sourceSha256": "a34c0feaadd389835f16379eb740beddc6fbcaac441b17b6e724126ae67f7a6d"
+        },
+        {
+          "name": "architecture/image107.png",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/15-68d420b701.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/15-68d420b701-thumb.webp",
+          "width": 1920,
+          "height": 1072,
+          "source": {
+            "fileId": "1Z2izAT4ujeZkTpASGR_DDYApm7NVpIDp",
+            "embeddedImage": "image107.png"
+          },
+          "sourceSha256": "68d420b701645610b674ee06326ad29df6175f4cba249d00700514dfdfdc73c6"
+        },
+        {
+          "name": "architecture/image108.png",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/16-793c816467.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/16-793c816467-thumb.webp",
+          "width": 1920,
+          "height": 1072,
+          "source": {
+            "fileId": "1Z2izAT4ujeZkTpASGR_DDYApm7NVpIDp",
+            "embeddedImage": "image108.png"
+          },
+          "sourceSha256": "793c8164673d1e55ce203575013d46dff589b4a5336648fbc5de7e7953ec6bbf"
+        },
+        {
+          "name": "architecture/image109.png",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/17-5e59f38072.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/17-5e59f38072-thumb.webp",
+          "width": 1920,
+          "height": 1072,
+          "source": {
+            "fileId": "1Z2izAT4ujeZkTpASGR_DDYApm7NVpIDp",
+            "embeddedImage": "image109.png"
+          },
+          "sourceSha256": "5e59f38072eecacc10070047cb930d45bda9bb92a0e57ef7095336e205b57bd7"
+        },
+        {
+          "name": "architecture/image110.png",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/18-1d871a29af.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/18-1d871a29af-thumb.webp",
+          "width": 1920,
+          "height": 1072,
+          "source": {
+            "fileId": "1Z2izAT4ujeZkTpASGR_DDYApm7NVpIDp",
+            "embeddedImage": "image110.png"
+          },
+          "sourceSha256": "1d871a29af2705e96b57850622e732b71980c5788dc969f81e78d438f92bb95d"
+        },
+        {
+          "name": "architecture/image53.jpeg",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/19-622d0ac4f9.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/19-622d0ac4f9-thumb.webp",
+          "width": 1920,
+          "height": 1072,
+          "source": {
+            "fileId": "1Z2izAT4ujeZkTpASGR_DDYApm7NVpIDp",
+            "embeddedImage": "image53.jpeg"
+          },
+          "sourceSha256": "622d0ac4f9c1dd36f8aea41efcacdece0b2ea0bf386bcf027a850e6fac42ec70"
+        },
+        {
+          "name": "architecture/image55.jpeg",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/20-4424527794.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/20-4424527794-thumb.webp",
+          "width": 1920,
+          "height": 1072,
+          "source": {
+            "fileId": "1Z2izAT4ujeZkTpASGR_DDYApm7NVpIDp",
+            "embeddedImage": "image55.jpeg"
+          },
+          "sourceSha256": "4424527794208363eafc872053d36884272d33268698cf2d3291ab3a6da93a9c"
+        },
+        {
+          "name": "architecture/image56.jpeg",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/21-3fb9544977.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/21-3fb9544977-thumb.webp",
+          "width": 1920,
+          "height": 1072,
+          "source": {
+            "fileId": "1Z2izAT4ujeZkTpASGR_DDYApm7NVpIDp",
+            "embeddedImage": "image56.jpeg"
+          },
+          "sourceSha256": "3fb9544977808c483021f502218ff8ae8de77129d163d9787f9b3a5baba23394"
+        },
+        {
+          "name": "architecture/image57.jpeg",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/22-06b9fa152d.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/22-06b9fa152d-thumb.webp",
+          "width": 1920,
+          "height": 1072,
+          "source": {
+            "fileId": "1Z2izAT4ujeZkTpASGR_DDYApm7NVpIDp",
+            "embeddedImage": "image57.jpeg"
+          },
+          "sourceSha256": "06b9fa152d79f027a7739d853a0cf4b333d4931a336d02de29f4714dd3736a3e"
+        },
+        {
+          "name": "architecture/image66.png",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/23-a1236e574c.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/23-a1236e574c-thumb.webp",
+          "width": 1920,
+          "height": 1077,
+          "source": {
+            "fileId": "1Z2izAT4ujeZkTpASGR_DDYApm7NVpIDp",
+            "embeddedImage": "image66.png"
+          },
+          "sourceSha256": "a1236e574c38d5e536e35f81748a0f74b7c375e733edf9b34b8015cc93680981"
+        },
+        {
+          "name": "landscape/image2.png",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/24-5e9e1494b3.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/24-5e9e1494b3-thumb.webp",
+          "width": 1920,
+          "height": 1080,
+          "source": {
+            "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
+            "embeddedImage": "image2.png"
+          },
+          "sourceSha256": "5e9e1494b33b8e101ab5fa75a8202564ec4464030290843d309cbb9d497bc5a5"
+        },
+        {
+          "name": "landscape/image43.png",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/25-fadc7202c5.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/25-fadc7202c5-thumb.webp",
+          "width": 1385,
+          "height": 779,
+          "source": {
+            "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
+            "embeddedImage": "image43.png"
+          },
+          "sourceSha256": "fadc7202c5d265f861050364072e0cc2fc84b69c417eee2f500bf5e9247beefe"
+        },
+        {
+          "name": "landscape/image44.png",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/26-80db97e26a.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/26-80db97e26a-thumb.webp",
+          "width": 1920,
+          "height": 1080,
+          "source": {
+            "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
+            "embeddedImage": "image44.png"
+          },
+          "sourceSha256": "80db97e26ac109b69e92772f667adce6a7d95987b13147fc329b73a5d578dfcc"
+        },
+        {
+          "name": "landscape/image45.png",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/27-9d266b0a65.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/27-9d266b0a65-thumb.webp",
+          "width": 1920,
+          "height": 1080,
+          "source": {
+            "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
+            "embeddedImage": "image45.png"
+          },
+          "sourceSha256": "9d266b0a650ea82c11acf9d2700e6647061970e9887dcc60c8bf7a4ce9bce980"
+        },
+        {
+          "name": "landscape/image68.png",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/28-ee9d45bb12.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/28-ee9d45bb12-thumb.webp",
+          "width": 1920,
+          "height": 1072,
+          "source": {
+            "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
+            "embeddedImage": "image68.png"
+          },
+          "sourceSha256": "ee9d45bb1296375855985ac0936a4a6a24aec96e81491ae824a219995301b2fc"
+        },
+        {
+          "name": "landscape/image69.png",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/29-6595f238f8.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/29-6595f238f8-thumb.webp",
+          "width": 1920,
+          "height": 1064,
+          "source": {
+            "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
+            "embeddedImage": "image69.png"
+          },
+          "sourceSha256": "6595f238f86ab5b6176713dc378833a7e17810ed2a58fbbd16ff9e22e6860944"
+        },
+        {
+          "name": "landscape/image70.png",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/30-06fba6b6f0.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/30-06fba6b6f0-thumb.webp",
+          "width": 1920,
+          "height": 1072,
+          "source": {
+            "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
+            "embeddedImage": "image70.png"
+          },
+          "sourceSha256": "06fba6b6f031a53f2925096aec650f1b42c8d2e1dbd74dcaf6965d4806235ee6"
+        },
+        {
+          "name": "landscape/image71.png",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/31-3f449223ae.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/31-3f449223ae-thumb.webp",
+          "width": 1920,
+          "height": 1072,
+          "source": {
+            "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
+            "embeddedImage": "image71.png"
+          },
+          "sourceSha256": "3f449223aee19b346a5863830eb728ec1c7dc6bd9229ce925b91b3a35d391d82"
+        },
+        {
+          "name": "landscape/image72.png",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/32-f96f5f2058.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/32-f96f5f2058-thumb.webp",
+          "width": 1920,
+          "height": 1072,
+          "source": {
+            "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
+            "embeddedImage": "image72.png"
+          },
+          "sourceSha256": "f96f5f20587a44b65ca63130496d3878299c2baa0d82b65fb0f93d72677f9c41"
+        },
+        {
+          "name": "landscape/image73.png",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/33-25a66d0a20.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/33-25a66d0a20-thumb.webp",
+          "width": 1920,
+          "height": 1072,
+          "source": {
+            "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
+            "embeddedImage": "image73.png"
+          },
+          "sourceSha256": "25a66d0a2030f249012457c8d8ab235f4cc24135aaafc7283d20991d96fdc0e1"
+        },
+        {
+          "name": "landscape/image76.png",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/34-f77ddda693.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/34-f77ddda693-thumb.webp",
+          "width": 1920,
+          "height": 1064,
+          "source": {
+            "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
+            "embeddedImage": "image76.png"
+          },
+          "sourceSha256": "f77ddda6933f96e00d0a987f34903129b105099d9dbc931c019b518e8fbcad68"
+        },
+        {
+          "name": "landscape/image79.png",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/35-b9ce16d3cc.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/35-b9ce16d3cc-thumb.webp",
+          "width": 1920,
+          "height": 1077,
+          "source": {
+            "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
+            "embeddedImage": "image79.png"
+          },
+          "sourceSha256": "b9ce16d3cc7b6fcde4c73fee5f797d02a3493d3c0d5ac6b2df99b4ecf87c9a40"
+        },
+        {
+          "name": "landscape/image82.png",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/36-f96d198c03.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/36-f96d198c03-thumb.webp",
+          "width": 1920,
+          "height": 1077,
+          "source": {
+            "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
+            "embeddedImage": "image82.png"
+          },
+          "sourceSha256": "f96d198c03c5baec2704b9ebfce21c5c981414169caf3d1743e975c599339b14"
+        },
+        {
+          "name": "landscape/image84.png",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/37-5f7f0bc607.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/37-5f7f0bc607-thumb.webp",
+          "width": 1920,
+          "height": 1064,
+          "source": {
+            "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
+            "embeddedImage": "image84.png"
+          },
+          "sourceSha256": "5f7f0bc6073f4acac8d5d6ca7abf1c09a564126fd12954fb25a4ee9a5e66079d"
+        },
+        {
+          "name": "landscape/image87.png",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/38-70f27387b0.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/38-70f27387b0-thumb.webp",
+          "width": 1920,
+          "height": 1077,
+          "source": {
+            "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
+            "embeddedImage": "image87.png"
+          },
+          "sourceSha256": "70f27387b0d556eb9b6aa5f9b05b9b84cf1a48e463651cebaec21bbe74a12168"
+        },
+        {
+          "name": "landscape/image89.png",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/39-e2070bf9a7.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/39-e2070bf9a7-thumb.webp",
+          "width": 1920,
+          "height": 1064,
+          "source": {
+            "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
+            "embeddedImage": "image89.png"
+          },
+          "sourceSha256": "e2070bf9a72c0648bc00dc9e194e325f9737ebdb56867885f92238d94d175946"
+        },
+        {
+          "name": "landscape/image92.png",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/40-4cfbb2b6f4.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/40-4cfbb2b6f4-thumb.webp",
+          "width": 1920,
+          "height": 1077,
+          "source": {
+            "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
+            "embeddedImage": "image92.png"
+          },
+          "sourceSha256": "4cfbb2b6f42ac2758d21c0659fa5a4d85d525fe422897b78d0cc0b4c92b24f5a"
+        },
+        {
+          "name": "landscape/image94.png",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/41-8bcbddf858.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/41-8bcbddf858-thumb.webp",
+          "width": 1920,
+          "height": 1077,
+          "source": {
+            "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
+            "embeddedImage": "image94.png"
+          },
+          "sourceSha256": "8bcbddf858e1581c42c173aeaf7b5d195ffc8c8a58e8cd51091993ddba9eb772"
+        },
+        {
+          "name": "landscape/image95.png",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/42-0158280667.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/42-0158280667-thumb.webp",
+          "width": 1920,
+          "height": 1077,
+          "source": {
+            "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
+            "embeddedImage": "image95.png"
+          },
+          "sourceSha256": "01582806676e516f50599f0ed592d40ad9a91e9cfdb6e1ba92b183c54cb093de"
+        },
+        {
+          "name": "landscape/image96.png",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/43-d446ae5684.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/43-d446ae5684-thumb.webp",
+          "width": 1920,
+          "height": 1072,
+          "source": {
+            "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
+            "embeddedImage": "image96.png"
+          },
+          "sourceSha256": "d446ae5684da37b366f3121a34fc861600fe5f2fa5a9835c74dd2ddceb9bf14d"
+        },
+        {
+          "name": "landscape/image98.png",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/44-61a117b43c.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/44-61a117b43c-thumb.webp",
+          "width": 1920,
+          "height": 1077,
+          "source": {
+            "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
+            "embeddedImage": "image98.png"
+          },
+          "sourceSha256": "61a117b43ce15729d2927e6407fd205e6e688a6ae418563543c39559615f98bc"
+        },
+        {
+          "name": "landscape/image99.png",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/45-f283be0bb1.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/45-f283be0bb1-thumb.webp",
+          "width": 1920,
+          "height": 1064,
+          "source": {
+            "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
+            "embeddedImage": "image99.png"
+          },
+          "sourceSha256": "f283be0bb1db90502a40d166e4d4bb67d5a863fc2cd3430747163f0ebc3d9dac"
+        },
+        {
+          "name": "landscape/image100.png",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/46-b2e0f2ad45.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/46-b2e0f2ad45-thumb.webp",
+          "width": 1920,
+          "height": 1064,
+          "source": {
+            "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
+            "embeddedImage": "image100.png"
+          },
+          "sourceSha256": "b2e0f2ad453a649873b391d0307ae3b5b2433b3d813e7546caa07939dcb99dd4"
+        },
+        {
+          "name": "landscape/image101.png",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/47-df4bfcb259.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/47-df4bfcb259-thumb.webp",
+          "width": 1920,
+          "height": 1072,
+          "source": {
+            "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
+            "embeddedImage": "image101.png"
+          },
+          "sourceSha256": "df4bfcb259bf9e66c5850e6d28161338259f02d6cc2eb7d15db909c8328c8094"
+        },
+        {
+          "name": "landscape/image103.png",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/48-33bc763065.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/48-33bc763065-thumb.webp",
+          "width": 1920,
+          "height": 1072,
+          "source": {
+            "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
+            "embeddedImage": "image103.png"
+          },
+          "sourceSha256": "33bc7630653e809c220fa56b5228a735a80e656d65fbe0a646b90505b35300a0"
+        },
+        {
+          "name": "landscape/image104.png",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/49-f3e906e912.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/49-f3e906e912-thumb.webp",
+          "width": 1920,
+          "height": 1077,
+          "source": {
+            "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
+            "embeddedImage": "image104.png"
+          },
+          "sourceSha256": "f3e906e912e03de2cda3f0d2451c1224a0d010ecff211eb7db6a506a3af2cba6"
+        },
+        {
+          "name": "landscape/image105.png",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/50-3f613bb89f.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/50-3f613bb89f-thumb.webp",
+          "width": 1920,
+          "height": 1064,
+          "source": {
+            "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
+            "embeddedImage": "image105.png"
+          },
+          "sourceSha256": "3f613bb89f11c54da202363d8620053652013ea35cb7b6a6a99a1f5c3a287b08"
+        },
+        {
+          "name": "landscape/image107.png",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/51-a9b4f00dd8.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/51-a9b4f00dd8-thumb.webp",
+          "width": 1920,
+          "height": 1077,
+          "source": {
+            "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
+            "embeddedImage": "image107.png"
+          },
+          "sourceSha256": "a9b4f00dd82aaeab0c5d98cc42b0bedaba37a837a5e2138f23c9286c25e3d247"
+        },
+        {
+          "name": "landscape/image108.png",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/52-45124a893d.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/52-45124a893d-thumb.webp",
+          "width": 1920,
+          "height": 1077,
+          "source": {
+            "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
+            "embeddedImage": "image108.png"
+          },
+          "sourceSha256": "45124a893d56fa2e33f872889f3540e53cd7279b581dbb09864af72aa792782b"
+        },
+        {
+          "name": "landscape/image109.png",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/53-6885400698.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/53-6885400698-thumb.webp",
+          "width": 1920,
+          "height": 1077,
+          "source": {
+            "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
+            "embeddedImage": "image109.png"
+          },
+          "sourceSha256": "688540069850eb17e076067f67a765ec4cbe475c9a5acd61fb92aa262ae50c92"
+        },
+        {
+          "name": "landscape/image110.png",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/54-54c221a359.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/54-54c221a359-thumb.webp",
+          "width": 1920,
+          "height": 1077,
+          "source": {
+            "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
+            "embeddedImage": "image110.png"
+          },
+          "sourceSha256": "54c221a35996d40f5745e33146c736b8e865a8d9bad251c2e0d0171b62535afb"
+        },
+        {
+          "name": "landscape/image111.png",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/55-cc5f92171a.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/55-cc5f92171a-thumb.webp",
+          "width": 1920,
+          "height": 1077,
+          "source": {
+            "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
+            "embeddedImage": "image111.png"
+          },
+          "sourceSha256": "cc5f92171a798a17601b11cb968dacf047fe478553a296496b37c6d156e216e3"
+        },
+        {
+          "name": "landscape/image115.png",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/56-73df4662e8.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/56-73df4662e8-thumb.webp",
+          "width": 1920,
+          "height": 1080,
+          "source": {
+            "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
+            "embeddedImage": "image115.png"
+          },
+          "sourceSha256": "73df4662e8de95a815ae3800d5e1b233572330e96898400d615ab06da25f35fe"
+        },
+        {
+          "name": "landscape/image116.png",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/57-71b8bdca64.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/57-71b8bdca64-thumb.webp",
+          "width": 1920,
+          "height": 1080,
+          "source": {
+            "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
+            "embeddedImage": "image116.png"
+          },
+          "sourceSha256": "71b8bdca640d9dc269b1a854d1942ee10c627929fc289fb37f975c01bdb584d9"
+        },
+        {
+          "name": "landscape/image117.png",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/58-1525189644.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/58-1525189644-thumb.webp",
+          "width": 1920,
+          "height": 1080,
+          "source": {
+            "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
+            "embeddedImage": "image117.png"
+          },
+          "sourceSha256": "15251896442f87479ba315a5c73773635ddc79759a716890b19614f9758a432a"
+        },
+        {
+          "name": "landscape/image118.png",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/59-234f4c9fb0.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/59-234f4c9fb0-thumb.webp",
+          "width": 1920,
+          "height": 1080,
+          "source": {
+            "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
+            "embeddedImage": "image118.png"
+          },
+          "sourceSha256": "234f4c9fb0fcc78ecb3ee506396ea840ceec3c0e22c908b10340309af95f4fb0"
+        },
+        {
+          "name": "landscape/image119.png",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/60-095613a775.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/60-095613a775-thumb.webp",
+          "width": 1920,
+          "height": 1080,
+          "source": {
+            "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
+            "embeddedImage": "image119.png"
+          },
+          "sourceSha256": "095613a775078c7b4a72bb20362b373a166c9b4c09dd182c2f2fdf501034b463"
+        },
+        {
+          "name": "landscape/image120.png",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/61-fb73734bf2.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/61-fb73734bf2-thumb.webp",
+          "width": 1920,
+          "height": 1080,
+          "source": {
+            "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
+            "embeddedImage": "image120.png"
+          },
+          "sourceSha256": "fb73734bf2fc1eeec1812848f219739b385a3cb982c331cbed238603f056c9a6"
+        },
+        {
+          "name": "landscape/image121.png",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/62-29f2b60991.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/62-29f2b60991-thumb.webp",
+          "width": 1920,
+          "height": 1080,
+          "source": {
+            "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
+            "embeddedImage": "image121.png"
+          },
+          "sourceSha256": "29f2b60991b0477ed435fd93dabd596e80a95d90d9035867bc4665902d067dab"
+        },
+        {
+          "name": "landscape/image122.png",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/63-821b6f34ff.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/63-821b6f34ff-thumb.webp",
+          "width": 1920,
+          "height": 1080,
+          "source": {
+            "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
+            "embeddedImage": "image122.png"
+          },
+          "sourceSha256": "821b6f34ff8b2b9a340338162e9255d01ca0cff25848b8eb3c9c96af69792830"
+        },
+        {
+          "name": "landscape/image123.png",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/64-4bef666349.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/64-4bef666349-thumb.webp",
+          "width": 1920,
+          "height": 1080,
+          "source": {
+            "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
+            "embeddedImage": "image123.png"
+          },
+          "sourceSha256": "4bef666349b5796826e4f4f3066d10031a0a53bb6f0a8dcaecac04e35383fb8f"
+        },
+        {
+          "name": "landscape/image124.png",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/65-7970467bdb.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/65-7970467bdb-thumb.webp",
+          "width": 1920,
+          "height": 1080,
+          "source": {
+            "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
+            "embeddedImage": "image124.png"
+          },
+          "sourceSha256": "7970467bdba69150937d6368723b2d1c46f674756c486a6d4e4cbabe619a38ad"
+        },
+        {
+          "name": "landscape/image125.png",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/66-3f83686d1b.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/66-3f83686d1b-thumb.webp",
+          "width": 1920,
+          "height": 1080,
+          "source": {
+            "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
+            "embeddedImage": "image125.png"
+          },
+          "sourceSha256": "3f83686d1b1ebb074164f60965e76bed622bf49e70f64c8c671fabf0bf7a5f69"
+        },
+        {
+          "name": "landscape/image127.png",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/67-f330447b01.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/67-f330447b01-thumb.webp",
+          "width": 1920,
+          "height": 1077,
+          "source": {
+            "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
+            "embeddedImage": "image127.png"
+          },
+          "sourceSha256": "f330447b01210c65a2a93fa2fe224ad192b123481ed2e9eb1880f3fa83c6002e"
+        },
+        {
+          "name": "landscape/image128.png",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/68-ca0a184611.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/68-ca0a184611-thumb.webp",
+          "width": 1920,
+          "height": 1077,
+          "source": {
+            "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
+            "embeddedImage": "image128.png"
+          },
+          "sourceSha256": "ca0a1846116220ecafda27428a51dc6f14b281362067d53487928a220313a4a0"
+        },
+        {
+          "name": "landscape/image129.png",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/69-aa53bb3a80.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/69-aa53bb3a80-thumb.webp",
+          "width": 1920,
+          "height": 1072,
+          "source": {
+            "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
+            "embeddedImage": "image129.png"
+          },
+          "sourceSha256": "aa53bb3a80d77db3be7283bcd1efaaded81dfd681cdb74dd155ed9b6973a1627"
+        },
+        {
+          "name": "landscape/image130.png",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/70-5ec23edfc8.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/70-5ec23edfc8-thumb.webp",
+          "width": 1920,
+          "height": 1072,
+          "source": {
+            "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
+            "embeddedImage": "image130.png"
+          },
+          "sourceSha256": "5ec23edfc88ce3e5e4b2684545d9cdb2a3c4d3928d8f62d95daa860596a8d4ab"
+        },
+        {
+          "name": "landscape/image131.png",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/71-e7be6a0cc7.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/71-e7be6a0cc7-thumb.webp",
+          "width": 1920,
+          "height": 1072,
+          "source": {
+            "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
+            "embeddedImage": "image131.png"
+          },
+          "sourceSha256": "e7be6a0cc7f62613b9498e619080e4b28f28fef3462b15185e3e2dcdffab0b5e"
+        },
+        {
+          "name": "landscape/image133.png",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/72-9a74800580.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/72-9a74800580-thumb.webp",
+          "width": 1280,
+          "height": 668,
+          "source": {
+            "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
+            "embeddedImage": "image133.png"
+          },
+          "sourceSha256": "9a7480058032bf8a46f110a21271bf38f40e65230a57a15cf199e3d4a17b0013"
+        },
+        {
+          "name": "landscape/image134.png",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/73-1334b1ed56.webp",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/73-1334b1ed56-thumb.webp",
+          "width": 1279,
+          "height": 668,
+          "source": {
+            "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
+            "embeddedImage": "image134.png"
+          },
+          "sourceSha256": "1334b1ed56cce560b4c374a06303de8b6a3e7fe1061e46177f69467cadf3c6bc"
         }
       ]
     },
     {
-      "project": "CAPITAL ONE",
-      "projectPage": "https://www.rwh-group.com/projects/architecture/capital-one-kvkl",
-      "projectYearSource": "https://www.rwh-group.com/projects/architecture",
-      "assets": [
+      "slug": "ecopark-thanh-hoa",
+      "title": "ECOPARK THANH HOÁ",
+      "category": "ONSEN",
+      "location": "Thanh Hoá, Việt Nam",
+      "subtitle": "Kiến trúc và cảnh quan Onsen",
+      "description": "Phương án Onsen kết hợp những khối nhà mái dốc với sân vườn, mặt nước và các bể tắm giữa cây xanh. Hành lang và khoảng mở dẫn tầm nhìn từ không gian kiến trúc ra cảnh quan.",
+      "facts": [
+        [
+          "Địa điểm",
+          "Thanh Hoá, Việt Nam"
+        ],
+        [
+          "Loại hình",
+          "Onsen"
+        ],
+        [
+          "Tư liệu",
+          "Phối cảnh thiết kế"
+        ]
+      ],
+      "textSource": {
+        "folderId": "1h65t5y1tNejIbbDDlSbRfDCpIUKgFHQi",
+        "note": "Only the Onsen set, confirmed by the user; Binh Minh, bungalow and other mixed project images excluded."
+      },
+      "hero": "assets/rwh-projects/ecopark-thanh-hoa/hero.webp",
+      "number": 6,
+      "folderUrl": "https://drive.google.com/drive/folders/1h65t5y1tNejIbbDDlSbRfDCpIUKgFHQi",
+      "mobile": "assets/rwh-projects/ecopark-thanh-hoa/hero-mobile.webp",
+      "images": [
         {
-          "role": "cover",
-          "file": "rwh-project-capital-one-kvkl-cover.jpg",
-          "sourceUrl": "https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72t26rotBPo3CzY6aHxC5C4r87NPabzDxhBOWXMA0E_B-Rdht_RYvXVpHxLASODxej3Imj-dPpdW8Qp0tRF_m1OCD2WMQlMvejiEjPJC5xG3C3S1b5_TksU2JNWhp3QXxzIXxOdXFc_uA3v2jB69Vm_7RvfICbl-yJplZbvUWxWJKTpFsjopQUa89vxxWFY=w16383",
-          "dimensions": [
-            2048,
-            1377
-          ]
+          "name": "23.png",
+          "src": "assets/rwh-projects/ecopark-thanh-hoa/01-592a4681e1.webp",
+          "thumbnail": "assets/rwh-projects/ecopark-thanh-hoa/01-592a4681e1-thumb.webp",
+          "width": 1920,
+          "height": 1279,
+          "source": {
+            "fileId": "1C9J2LjLrboCsO7fiKMA3ycbYyPe6YZKV",
+            "fileName": "23.png"
+          },
+          "sourceSha256": "592a4681e1d86b38290073bccf0bab3db7baba39eb97254d0f8245b4b848a7aa"
         },
         {
-          "role": "mobile",
-          "file": "rwh-project-capital-one-kvkl-mobile.jpg",
-          "sourceUrl": "https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72uXfoicNGGCxevvZ9a0elwanouDhtvftuYT2-xi2_3NniQGY8HWXf8LWI3IoSOYZmOCjSulTOPO6S7g5UKLV4KtqEY9ZU9yNIvhZoljkd1LvQIRssso46aeChOJm6MxPKl6AzRJIr7FOqCJsH0g54wqilbsB-TIGzYAqHPEv3RZ-xayYyYtjLI7J1c7wJbD4QASHy2Xd-_jwQGKEupu2wtAqFb-THn7vVXll6Rb=w1280",
-          "dimensions": [
-            856,
-            1377
-          ]
+          "name": "16_2.jpg",
+          "src": "assets/rwh-projects/ecopark-thanh-hoa/02-c34cd29a43.webp",
+          "thumbnail": "assets/rwh-projects/ecopark-thanh-hoa/02-c34cd29a43-thumb.webp",
+          "width": 1920,
+          "height": 1290,
+          "source": {
+            "fileId": "1Cf0e_rqbIyrPSUDalKh6Ser6TJxDOlQ-",
+            "fileName": "16_2.jpg"
+          },
+          "sourceSha256": "c34cd29a43cc2517617059c4a6865008df2cc3f99cbe2b755bcca45509188b07"
         },
         {
-          "role": "photo",
-          "file": "rwh-project-capital-one-kvkl-photo.jpg",
-          "sourceUrl": "https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72ttK8H9PQ-sPaHMWxTP9VUbEni58S_7y8aM0hc4m28ly5uIN_xQuVNAsJkDg-OfH2ve6VdYkOHMTpSPjWvwFWHoh3Iysp4kvB1VwT8LHIP8YFNIewOAuCnsK2zzdtLTS7vz5Tp3CsATjCrbh7jIVnwxXT_DumUB5uM_KZ6UoX_IxbagF2jEinmBe73cSC9DT4x47TzCe3YVqVsO5P7O-wfMefRBE6gcl12ho9PG=w1280",
-          "dimensions": [
-            1280,
-            841
-          ]
+          "name": "9_1.jpg",
+          "src": "assets/rwh-projects/ecopark-thanh-hoa/03-f9d9e53e15.webp",
+          "thumbnail": "assets/rwh-projects/ecopark-thanh-hoa/03-f9d9e53e15-thumb.webp",
+          "width": 1920,
+          "height": 1304,
+          "source": {
+            "fileId": "1qIiGwvoNc2iDz9Cw7jf2ta2avYWQpGu3",
+            "fileName": "9_1.jpg"
+          },
+          "sourceSha256": "f9d9e53e1559ac3e62d6c921b81da9cc2f8fefd80e89929a0066fcd1482d8a90"
+        },
+        {
+          "name": "Onsen 6.png",
+          "src": "assets/rwh-projects/ecopark-thanh-hoa/04-4a09f8de76.webp",
+          "thumbnail": "assets/rwh-projects/ecopark-thanh-hoa/04-4a09f8de76-thumb.webp",
+          "width": 1920,
+          "height": 1280,
+          "source": {
+            "fileId": "1fhjfEvZNqAP86xb-551P19_nuqegqweN",
+            "fileName": "Onsen 6.png"
+          },
+          "sourceSha256": "4a09f8de765382caec83ada43a1b6978b025d79067e8ed660dc979f30be3336d"
+        },
+        {
+          "name": "7_1.jpg",
+          "src": "assets/rwh-projects/ecopark-thanh-hoa/05-c2b312c14a.webp",
+          "thumbnail": "assets/rwh-projects/ecopark-thanh-hoa/05-c2b312c14a-thumb.webp",
+          "width": 1920,
+          "height": 1304,
+          "source": {
+            "fileId": "15snrt6KAn9N2yhd8rBJIYHGo7-f8ZNkK",
+            "fileName": "7_1.jpg"
+          },
+          "sourceSha256": "c2b312c14a0da8aa40486ba808515369a291e55cbd43283835896b5872885a9d"
+        },
+        {
+          "name": "PC.jpg",
+          "src": "assets/rwh-projects/ecopark-thanh-hoa/06-1cfbc545a9.webp",
+          "thumbnail": "assets/rwh-projects/ecopark-thanh-hoa/06-1cfbc545a9-thumb.webp",
+          "width": 1920,
+          "height": 1304,
+          "source": {
+            "fileId": "1EzYvb5BXuKfl-lhmfELQ0s0gUH-UOqng",
+            "fileName": "PC.jpg"
+          },
+          "sourceSha256": "1cfbc545a901df844a91460cb326ec02e9a5e6f8b13918f5ee79213c34df690c"
+        },
+        {
+          "name": "4.jpg",
+          "src": "assets/rwh-projects/ecopark-thanh-hoa/07-6f1398644c.webp",
+          "thumbnail": "assets/rwh-projects/ecopark-thanh-hoa/07-6f1398644c-thumb.webp",
+          "width": 1920,
+          "height": 1304,
+          "source": {
+            "fileId": "1dI9_hpEEsIZaWDxEF9lpB7JWAnIidXQc",
+            "fileName": "4.jpg"
+          },
+          "sourceSha256": "6f1398644c7fa36a9379cf5c696ed6658d7e47be0fa4385ab9a8283693dfcd6d"
+        },
+        {
+          "name": "7.jpg",
+          "src": "assets/rwh-projects/ecopark-thanh-hoa/08-9525ea53b2.webp",
+          "thumbnail": "assets/rwh-projects/ecopark-thanh-hoa/08-9525ea53b2-thumb.webp",
+          "width": 1920,
+          "height": 1304,
+          "source": {
+            "fileId": "1QUh_TdHbhTPyJoqGCcg-zpo2UfItkGbE",
+            "fileName": "7.jpg"
+          },
+          "sourceSha256": "9525ea53b2284f95aecdfe079699c4232b3c584077de6673dcc885b8c7cf74e8"
+        },
+        {
+          "name": "11.jpg",
+          "src": "assets/rwh-projects/ecopark-thanh-hoa/09-0dd29ce0a9.webp",
+          "thumbnail": "assets/rwh-projects/ecopark-thanh-hoa/09-0dd29ce0a9-thumb.webp",
+          "width": 1920,
+          "height": 1304,
+          "source": {
+            "fileId": "1KgiyR2C20KAQPdH6Zmu7XJ6d4VxGE25b",
+            "fileName": "11.jpg"
+          },
+          "sourceSha256": "0dd29ce0a9072dc201ac57033c80f4670964fb5c7b7af52ea637591272653fe1"
+        },
+        {
+          "name": "18.jpg",
+          "src": "assets/rwh-projects/ecopark-thanh-hoa/10-09f5ea60c1.webp",
+          "thumbnail": "assets/rwh-projects/ecopark-thanh-hoa/10-09f5ea60c1-thumb.webp",
+          "width": 1920,
+          "height": 1290,
+          "source": {
+            "fileId": "1OSmTPto1JwQ7PNwErBYgiS3PG8OIv2Xe",
+            "fileName": "18.jpg"
+          },
+          "sourceSha256": "09f5ea60c1acd8ee263dbaefa87aeb429450db9fec30f11b2fc9a939eb9b2791"
+        },
+        {
+          "name": "19.jpg",
+          "src": "assets/rwh-projects/ecopark-thanh-hoa/11-5703ed2bb6.webp",
+          "thumbnail": "assets/rwh-projects/ecopark-thanh-hoa/11-5703ed2bb6-thumb.webp",
+          "width": 1920,
+          "height": 1290,
+          "source": {
+            "fileId": "1H4_azg7g70h729-C8P4mqU41-EEHDBOq",
+            "fileName": "19.jpg"
+          },
+          "sourceSha256": "5703ed2bb6b4184a3975f5f42cc421ef9fb5a6f161f150a9ce073a4f50ae3510"
+        },
+        {
+          "name": "Onsen 1.jpg",
+          "src": "assets/rwh-projects/ecopark-thanh-hoa/12-9214ba67b4.webp",
+          "thumbnail": "assets/rwh-projects/ecopark-thanh-hoa/12-9214ba67b4-thumb.webp",
+          "width": 1920,
+          "height": 1290,
+          "source": {
+            "fileId": "1cjeC_KKyoqlN56ClCvAi4Y7yDgLsojSg",
+            "fileName": "Onsen 1.jpg"
+          },
+          "sourceSha256": "9214ba67b43328f421fbe0004241821ca6affa7dbe87f0b0c5fb5327aa0b7c1d"
+        },
+        {
+          "name": "Onsen 2.jpg",
+          "src": "assets/rwh-projects/ecopark-thanh-hoa/13-978b42b8e5.webp",
+          "thumbnail": "assets/rwh-projects/ecopark-thanh-hoa/13-978b42b8e5-thumb.webp",
+          "width": 1920,
+          "height": 1290,
+          "source": {
+            "fileId": "1nRB5gx5f4ZXEJrKwpdxHdYz2heacdYS9",
+            "fileName": "Onsen 2.jpg"
+          },
+          "sourceSha256": "978b42b8e58648b9f24f4111bff25ccaa7538be70382b37921dd5417151c3b7e"
+        },
+        {
+          "name": "Onsen 3.jpg",
+          "src": "assets/rwh-projects/ecopark-thanh-hoa/14-9a85611e9f.webp",
+          "thumbnail": "assets/rwh-projects/ecopark-thanh-hoa/14-9a85611e9f-thumb.webp",
+          "width": 1920,
+          "height": 1279,
+          "source": {
+            "fileId": "1UkE77HflXknkasPDsHLCdmMUQivc5i1a",
+            "fileName": "Onsen 3.jpg"
+          },
+          "sourceSha256": "9a85611e9f4dee54c3ee40cb72f16419d258cb11504e61cd59a1ae6664e9c12f"
+        },
+        {
+          "name": "Onsen 4.jpg",
+          "src": "assets/rwh-projects/ecopark-thanh-hoa/15-243b6bd472.webp",
+          "thumbnail": "assets/rwh-projects/ecopark-thanh-hoa/15-243b6bd472-thumb.webp",
+          "width": 1920,
+          "height": 1279,
+          "source": {
+            "fileId": "1DO-TxK4HhPB2gPAY9eDirEriNYSSDQYA",
+            "fileName": "Onsen 4.jpg"
+          },
+          "sourceSha256": "243b6bd4729aad2d98fb401df67c5a078c5c65abb3c99b5f6d0596848fee4a92"
+        },
+        {
+          "name": "Onsen 5.jpg",
+          "src": "assets/rwh-projects/ecopark-thanh-hoa/16-584ea5887d.webp",
+          "thumbnail": "assets/rwh-projects/ecopark-thanh-hoa/16-584ea5887d-thumb.webp",
+          "width": 1920,
+          "height": 1279,
+          "source": {
+            "fileId": "1jwuW8gFXAA45UcD-3QPV3f-UFRsgkKDh",
+            "fileName": "Onsen 5.jpg"
+          },
+          "sourceSha256": "584ea5887d532c07653ca71de38d140041922d388f5518e3a21494cb098a661d"
+        },
+        {
+          "name": "1F_GD3.png",
+          "src": "assets/rwh-projects/ecopark-thanh-hoa/17-243c3ae9fb.webp",
+          "thumbnail": "assets/rwh-projects/ecopark-thanh-hoa/17-243c3ae9fb-thumb.webp",
+          "width": 1920,
+          "height": 1357,
+          "source": {
+            "fileId": "1_oljmLLjvrDVDCRSxMjBucxOYHgTzDcb",
+            "fileName": "1F_GD3.png"
+          },
+          "sourceSha256": "243c3ae9fb54b4f6a319a0c3025fe585d5b8f0d0cfa3e94c4063189238de2a05"
+        },
+        {
+          "name": "Mezzanine.png",
+          "src": "assets/rwh-projects/ecopark-thanh-hoa/18-3eaed64310.webp",
+          "thumbnail": "assets/rwh-projects/ecopark-thanh-hoa/18-3eaed64310-thumb.webp",
+          "width": 1920,
+          "height": 1357,
+          "source": {
+            "fileId": "1ujieskJrmKDYemshxMjKwE82EzVL-ljj",
+            "fileName": "Mezzanine.png"
+          },
+          "sourceSha256": "3eaed643102884ffb25dd4af8da3f6267e7921ac2fdbd4395a169366be952ef4"
+        },
+        {
+          "name": "17.jpg",
+          "src": "assets/rwh-projects/ecopark-thanh-hoa/19-1d29b81f08.webp",
+          "thumbnail": "assets/rwh-projects/ecopark-thanh-hoa/19-1d29b81f08-thumb.webp",
+          "width": 1920,
+          "height": 1290,
+          "source": {
+            "fileId": "1AytTBmgkpxkFoQdQ65aJPt1icQqqBdZW",
+            "fileName": "17.jpg"
+          },
+          "sourceSha256": "1d29b81f0872fface9f10c5ccd7a049afe9fa4a15976e0d870bcfefef3d685d1"
         }
       ]
     },
     {
-      "project": "IKIGAI ONSEN VILLAGE",
-      "projectPage": "https://www.rwh-group.com/projects/interior/ikigai-onsen-village",
-      "projectYearSource": "https://www.rwh-group.com/projects/architecture",
-      "assets": [
+      "slug": "nam-o-residence",
+      "title": "NAM Ô RESIDENCE",
+      "category": "RESIDENTIAL",
+      "location": "Đà Nẵng, Việt Nam",
+      "subtitle": "Nhà ở với khoảng mở và không gian xanh",
+      "description": "Phương án Nam Ô Residence tại Đà Nẵng lấy cảm hứng từ nghệ thuật xếp khối Tsumiki. Các khối nhà được tổ chức để kết hợp không gian ở với cây xanh, tối ưu thông gió, chiếu sáng tự nhiên và kết nối cộng đồng.",
+      "facts": [
+        [
+          "Địa điểm",
+          "Hoà Hiệp Bắc, Liên Chiểu, Đà Nẵng"
+        ],
+        [
+          "Loại hình",
+          "Chung cư / nhà ở xã hội"
+        ],
+        [
+          "Tư liệu",
+          "Phương án concept"
+        ]
+      ],
+      "textSource": {
+        "fileId": "17RWcLQPIsERwZOA1bBqSLuOeZLvI6XPX",
+        "pages": [
+          10,
+          19,
+          20,
+          23,
+          24
+        ]
+      },
+      "hero": "assets/rwh-projects/nam-o-residence/hero.webp",
+      "number": 7,
+      "folderUrl": "https://drive.google.com/drive/folders/1m_DpGbhkskdt8VtN5YVdxGf7pX-v1NOY",
+      "mobile": "assets/rwh-projects/nam-o-residence/hero-mobile.webp",
+      "images": [
         {
-          "role": "cover",
-          "file": "rwh-project-ikigai-onsen-village-cover.jpg",
-          "sourceUrl": "https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72vqBNPyL_hFxMU8yB17gI3fRMvvwClN4NzUay8bKsGK4VtBzQJb8_YK5MQvcNAXL57_LZeZ0HSf7oYOBU3d3xIdEOyRn7zZlsEfQoosHMvRTa8n3nn3MWLznEOqnrA3XTBd3x85zcCUtdg-MBLy99Lkup90D1x-BqfedYnWhqIajMiVNA9Y_7cqTv77Q_8=w16383",
-          "dimensions": [
-            2048,
-            1152
-          ]
+          "name": "page37-2.jpg",
+          "src": "assets/rwh-projects/nam-o-residence/01-c619d157c7.webp",
+          "thumbnail": "assets/rwh-projects/nam-o-residence/01-c619d157c7-thumb.webp",
+          "width": 1920,
+          "height": 1080,
+          "source": {
+            "fileId": "17RWcLQPIsERwZOA1bBqSLuOeZLvI6XPX",
+            "embeddedImage": "page37-2.jpg"
+          },
+          "sourceSha256": "c619d157c7b9f9a2e95b210d46c96357eb7035d34e71f7efd3f4c62bc87e409a"
         },
         {
-          "role": "mobile",
-          "file": "rwh-project-ikigai-onsen-village-mobile.jpg",
-          "sourceUrl": "https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72tcIBpqHtdOzcOH-Jyi73RCPGTMTm1lo33eQ4JA8cDlD0bsKfMvntPJ5zQ5OH1oP6fvpUMPX-SqHC19aTvt2JjRUl4KQr7YVZ4XeEzQOD5iWcbqMIhh0u4beSsHZHtWihe-Bix49q7mSjLuYpsbcwGczmTf55i6sW4dVW0VyaHHdqFwCHE_qYb8H-6JnOY072vu8AolqFViFqa6A-dYnOlflXgbNvldhY6DKsXVtTk=w1280",
-          "dimensions": [
-            1000,
-            643
-          ]
+          "name": "page36-2.jpg",
+          "src": "assets/rwh-projects/nam-o-residence/02-ba3cf8e0af.webp",
+          "thumbnail": "assets/rwh-projects/nam-o-residence/02-ba3cf8e0af-thumb.webp",
+          "width": 1920,
+          "height": 1080,
+          "source": {
+            "fileId": "17RWcLQPIsERwZOA1bBqSLuOeZLvI6XPX",
+            "embeddedImage": "page36-2.jpg"
+          },
+          "sourceSha256": "ba3cf8e0afc609347f3d09e13cce5035917af5e3daa611402dfe1e0a53bae55e"
         },
         {
-          "role": "photo",
-          "file": "rwh-project-ikigai-onsen-village-photo.jpg",
-          "sourceUrl": "https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72ugXkRPiCjdg36KkssCaXRGlGGOOXSNvn1DBVSmmVfOat6dewzpsi-tl_EjB3gYxLIJFiAQ1YyZxKZPerimKtKBiBZh53E2HYbDGY3vUppv09UePvj5ZksWmru5OchZvKdOHylwjB3k50yLnHlXHdFRQNlkg6RnhoPc6Lxoyke6Nrc9KEjdzo_P-03QEO603pQQM2eGmSnreGBu5phEW5tWmArD56hLcuTIelV1=w1280",
-          "dimensions": [
-            1280,
-            638
-          ]
+          "name": "page38-2.jpg",
+          "src": "assets/rwh-projects/nam-o-residence/03-3e4c896c28.webp",
+          "thumbnail": "assets/rwh-projects/nam-o-residence/03-3e4c896c28-thumb.webp",
+          "width": 1920,
+          "height": 1080,
+          "source": {
+            "fileId": "17RWcLQPIsERwZOA1bBqSLuOeZLvI6XPX",
+            "embeddedImage": "page38-2.jpg"
+          },
+          "sourceSha256": "3e4c896c282eecd919bae401d29c745db4fccf2cfffe63ca678dea434ca7dcdc"
+        },
+        {
+          "name": "page39-2.jpg",
+          "src": "assets/rwh-projects/nam-o-residence/04-47779e1dc2.webp",
+          "thumbnail": "assets/rwh-projects/nam-o-residence/04-47779e1dc2-thumb.webp",
+          "width": 1920,
+          "height": 1080,
+          "source": {
+            "fileId": "17RWcLQPIsERwZOA1bBqSLuOeZLvI6XPX",
+            "embeddedImage": "page39-2.jpg"
+          },
+          "sourceSha256": "47779e1dc22712d30bcd1f3c9dbba5dcee4cc29fbe6fe7f7ba202d5291a4f874"
+        },
+        {
+          "name": "page40-2.jpg",
+          "src": "assets/rwh-projects/nam-o-residence/05-e60e6eafc0.webp",
+          "thumbnail": "assets/rwh-projects/nam-o-residence/05-e60e6eafc0-thumb.webp",
+          "width": 1652,
+          "height": 929,
+          "source": {
+            "fileId": "17RWcLQPIsERwZOA1bBqSLuOeZLvI6XPX",
+            "embeddedImage": "page40-2.jpg"
+          },
+          "sourceSha256": "e60e6eafc038841df442d052e8b19377050b0746d8d6d51b5d7dbc673a3170a7"
+        },
+        {
+          "name": "page40-3.jpg",
+          "src": "assets/rwh-projects/nam-o-residence/06-e6e279c573.webp",
+          "thumbnail": "assets/rwh-projects/nam-o-residence/06-e6e279c573-thumb.webp",
+          "width": 1652,
+          "height": 929,
+          "source": {
+            "fileId": "17RWcLQPIsERwZOA1bBqSLuOeZLvI6XPX",
+            "embeddedImage": "page40-3.jpg"
+          },
+          "sourceSha256": "e6e279c573536fb5e37c46bc81a9bc88e716b7982b0ca3dc7331c223276471f9"
         }
       ]
     },
     {
-      "project": "LAC THUY STATION",
-      "projectPage": "https://www.rwh-group.com/projects/interior/lac-thuy-station",
-      "projectYearSource": "https://www.rwh-group.com/projects/architecture",
-      "assets": [
+      "slug": "hakuba-hotel",
+      "title": "HAKUBA HOTEL",
+      "category": "HOTEL",
+      "location": "Hakuba, Nagano, Nhật Bản",
+      "subtitle": "Tinh thần Ryokan trong kiến trúc đương đại",
+      "description": "Phương án Hakuba Hotel tại Nagano diễn giải tinh thần của Ryokan truyền thống bằng ngôn ngữ kiến trúc hiện đại. Mái dốc, những khoảng hiên và vật liệu gỗ kết nối trải nghiệm lưu trú với cảnh quan núi rừng Nhật Bản.",
+      "facts": [
+        [
+          "Địa điểm",
+          "Hakuba, Nagano, Nhật Bản"
+        ],
+        [
+          "Loại hình",
+          "Khách sạn"
+        ],
+        [
+          "Tư liệu",
+          "Phương án thiết kế"
+        ]
+      ],
+      "textSource": {
+        "fileId": "1UvzjaJqFHYE7K8-40tWTwW3kJkXtasJw",
+        "slides": [
+          3,
+          4,
+          5
+        ]
+      },
+      "hero": "assets/rwh-projects/hakuba-hotel/hero.webp",
+      "number": 8,
+      "folderUrl": "https://drive.google.com/drive/folders/1YYO3stLDLQPfecgWWGnIyg-samj4Rltc",
+      "mobile": "assets/rwh-projects/hakuba-hotel/hero-mobile.webp",
+      "images": [
         {
-          "role": "cover",
-          "file": "rwh-project-lac-thuy-station-cover.jpg",
-          "sourceUrl": "https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72u7-rf-bNaY_NoiX-fajwNTU9gUXivCAgMd9ZwFZrwerNYeOvVgcymHy3Mn1iUZUW57ohymWgjzTyMQYEh6VIs2Cv1oMXcfGE6Zx1Doi59yY44nwyGQhZpYFdo8Ud9ieHBKFGn7UdK9h8RbnEpE-hcvQTxT2xEsR__98rAYFouAp5_QgifthTYwTMTOd10=w16383",
-          "dimensions": [
-            2048,
-            1152
-          ]
+          "name": "image39.jpg",
+          "src": "assets/rwh-projects/hakuba-hotel/01-324b39656c.webp",
+          "thumbnail": "assets/rwh-projects/hakuba-hotel/01-324b39656c-thumb.webp",
+          "width": 1920,
+          "height": 1080,
+          "source": {
+            "fileId": "1UvzjaJqFHYE7K8-40tWTwW3kJkXtasJw",
+            "embeddedImage": "image39.jpg"
+          },
+          "sourceSha256": "324b39656ca6a82f2592c10d072be151fcfd869d1015eabcca3dc868a872b2da"
         },
         {
-          "role": "mobile",
-          "file": "rwh-project-lac-thuy-station-mobile.jpg",
-          "sourceUrl": "https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72up_d68mlqZGl_O_cSSWUTl8wqz9ksXaB0Onb_6_gzqG5KdWRc2AmbRdECF1cGpSvg6T5kIp-TvwAAA2FURElPI-wPd1JNUDFbcxNUoIpF1bjclfkfqmkS155ppRXOIkKBhWjaZoAiLUS14uhlPVuC49G-kbyiV65UCTJc2wEyBZiXd_UmdrNisBfnjGinpX7yb1alg0IOpSZ6e44-9a9KO5-iTev2A-7YKOqv4YtI=w1280",
-          "dimensions": [
-            1000,
-            554
-          ]
+          "name": "image29.jpg",
+          "src": "assets/rwh-projects/hakuba-hotel/02-7b827e3558.webp",
+          "thumbnail": "assets/rwh-projects/hakuba-hotel/02-7b827e3558-thumb.webp",
+          "width": 1920,
+          "height": 1081,
+          "source": {
+            "fileId": "1UvzjaJqFHYE7K8-40tWTwW3kJkXtasJw",
+            "embeddedImage": "image29.jpg"
+          },
+          "sourceSha256": "7b827e3558b4b55f174c24e423a1ba9b24281126c1f7f1183ad0a64b9b14c0a9"
         },
         {
-          "role": "photo",
-          "file": "rwh-project-lac-thuy-station-photo.jpg",
-          "sourceUrl": "https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72v2jqFndKFPtltDabcbNTSnp10t6TYFBAX9TfvXBEyt092CXzVcwjZBnL-2y_Hi4YzNkIGBOuhE6Puu-OKeRRZYF8LRdzO8O9hH3qIR3rQjwyVe7jMkUfKxZGcI97O-L7c8IfAQDeWLi1KGvyDvLbAni8IKt0c_tGZC_9Yp1wKMv2FTIMMmz5wy0bddoh0rNV4C28kzYPSVAV4zkvYJGgu4ZZ4x8BtvmP3U6JxbJYE=w1280",
-          "dimensions": [
-            1280,
-            1053
-          ]
+          "name": "image30.png",
+          "src": "assets/rwh-projects/hakuba-hotel/03-8d8e3fc4d1.webp",
+          "thumbnail": "assets/rwh-projects/hakuba-hotel/03-8d8e3fc4d1-thumb.webp",
+          "width": 1920,
+          "height": 1083,
+          "source": {
+            "fileId": "1UvzjaJqFHYE7K8-40tWTwW3kJkXtasJw",
+            "embeddedImage": "image30.png"
+          },
+          "sourceSha256": "8d8e3fc4d1644702bedfce1ea1342e7851c6f5fcd3c2b4aae85793d7a11072dc"
+        },
+        {
+          "name": "image31.jpg",
+          "src": "assets/rwh-projects/hakuba-hotel/04-d868f68aa9.webp",
+          "thumbnail": "assets/rwh-projects/hakuba-hotel/04-d868f68aa9-thumb.webp",
+          "width": 1920,
+          "height": 1080,
+          "source": {
+            "fileId": "1UvzjaJqFHYE7K8-40tWTwW3kJkXtasJw",
+            "embeddedImage": "image31.jpg"
+          },
+          "sourceSha256": "d868f68aa951abe148a847f4ff8d67a4665a20c6fb12df60ef1a83ecedcf6b69"
+        },
+        {
+          "name": "image32.jpg",
+          "src": "assets/rwh-projects/hakuba-hotel/05-390ded8c06.webp",
+          "thumbnail": "assets/rwh-projects/hakuba-hotel/05-390ded8c06-thumb.webp",
+          "width": 1920,
+          "height": 1080,
+          "source": {
+            "fileId": "1UvzjaJqFHYE7K8-40tWTwW3kJkXtasJw",
+            "embeddedImage": "image32.jpg"
+          },
+          "sourceSha256": "390ded8c0694fc62691b6fca4a4c46c545e68dc808d023fafab1907a42d6fdef"
+        },
+        {
+          "name": "image33.jpg",
+          "src": "assets/rwh-projects/hakuba-hotel/06-93534accc0.webp",
+          "thumbnail": "assets/rwh-projects/hakuba-hotel/06-93534accc0-thumb.webp",
+          "width": 1920,
+          "height": 1080,
+          "source": {
+            "fileId": "1UvzjaJqFHYE7K8-40tWTwW3kJkXtasJw",
+            "embeddedImage": "image33.jpg"
+          },
+          "sourceSha256": "93534accc082cf9f17294c2de2fdad0d6e4b33f22a7d94d75079eaa00f90b452"
+        },
+        {
+          "name": "image34.jpg",
+          "src": "assets/rwh-projects/hakuba-hotel/07-ef8d5e55bf.webp",
+          "thumbnail": "assets/rwh-projects/hakuba-hotel/07-ef8d5e55bf-thumb.webp",
+          "width": 1920,
+          "height": 1080,
+          "source": {
+            "fileId": "1UvzjaJqFHYE7K8-40tWTwW3kJkXtasJw",
+            "embeddedImage": "image34.jpg"
+          },
+          "sourceSha256": "ef8d5e55bf1e8a7f0912e3f5f44a272f17a84347c3ea4ad8f4630089901bf090"
+        },
+        {
+          "name": "image35.jpg",
+          "src": "assets/rwh-projects/hakuba-hotel/08-839fd47f5f.webp",
+          "thumbnail": "assets/rwh-projects/hakuba-hotel/08-839fd47f5f-thumb.webp",
+          "width": 1920,
+          "height": 1080,
+          "source": {
+            "fileId": "1UvzjaJqFHYE7K8-40tWTwW3kJkXtasJw",
+            "embeddedImage": "image35.jpg"
+          },
+          "sourceSha256": "839fd47f5f6aac51989895743490d2ff63816a1c64ad3b9614d878a860770382"
+        },
+        {
+          "name": "image36.jpg",
+          "src": "assets/rwh-projects/hakuba-hotel/09-dc078c0f4f.webp",
+          "thumbnail": "assets/rwh-projects/hakuba-hotel/09-dc078c0f4f-thumb.webp",
+          "width": 1920,
+          "height": 1080,
+          "source": {
+            "fileId": "1UvzjaJqFHYE7K8-40tWTwW3kJkXtasJw",
+            "embeddedImage": "image36.jpg"
+          },
+          "sourceSha256": "dc078c0f4f92e53ba26067b4c3288bb4e614a705dc66063ca3ceb1ea2faa8446"
+        },
+        {
+          "name": "image37.jpg",
+          "src": "assets/rwh-projects/hakuba-hotel/10-107d272b8c.webp",
+          "thumbnail": "assets/rwh-projects/hakuba-hotel/10-107d272b8c-thumb.webp",
+          "width": 1920,
+          "height": 1079,
+          "source": {
+            "fileId": "1UvzjaJqFHYE7K8-40tWTwW3kJkXtasJw",
+            "embeddedImage": "image37.jpg"
+          },
+          "sourceSha256": "107d272b8c6cab9903686f4693cc639504ac4f71430a591351e062125ced3b0c"
+        },
+        {
+          "name": "image38.jpg",
+          "src": "assets/rwh-projects/hakuba-hotel/11-0c8fdc77cc.webp",
+          "thumbnail": "assets/rwh-projects/hakuba-hotel/11-0c8fdc77cc-thumb.webp",
+          "width": 1920,
+          "height": 1080,
+          "source": {
+            "fileId": "1UvzjaJqFHYE7K8-40tWTwW3kJkXtasJw",
+            "embeddedImage": "image38.jpg"
+          },
+          "sourceSha256": "0c8fdc77cc4b2afa25fd361b7075ff3e3df9703f72708f9e6c73344fa9e5d624"
+        },
+        {
+          "name": "image40.jpg",
+          "src": "assets/rwh-projects/hakuba-hotel/12-cdb30ca287.webp",
+          "thumbnail": "assets/rwh-projects/hakuba-hotel/12-cdb30ca287-thumb.webp",
+          "width": 1920,
+          "height": 1080,
+          "source": {
+            "fileId": "1UvzjaJqFHYE7K8-40tWTwW3kJkXtasJw",
+            "embeddedImage": "image40.jpg"
+          },
+          "sourceSha256": "cdb30ca2874eeaaa9896d1ff93c3ded58896e53332f2641e1a343365de2914a8"
+        },
+        {
+          "name": "image41.jpg",
+          "src": "assets/rwh-projects/hakuba-hotel/13-db5195c9ac.webp",
+          "thumbnail": "assets/rwh-projects/hakuba-hotel/13-db5195c9ac-thumb.webp",
+          "width": 1892,
+          "height": 1066,
+          "source": {
+            "fileId": "1UvzjaJqFHYE7K8-40tWTwW3kJkXtasJw",
+            "embeddedImage": "image41.jpg"
+          },
+          "sourceSha256": "db5195c9ac686944c127c4f786e23e6a1ff311c25aa43a81d503d5f5e13632e7"
         }
       ]
     },
     {
-      "project": "NEO ONSEN",
-      "projectPage": "https://www.rwh-group.com/projects/architecture/neo-onsen",
-      "projectYearSource": "https://www.rwh-group.com/projects/architecture",
-      "assets": [
+      "slug": "thien-mu-hotel",
+      "title": "THIÊN MỤ HOTEL",
+      "category": "HOTEL",
+      "location": "Huế, Việt Nam",
+      "subtitle": "Kiến trúc Huế và tinh thần thiền",
+      "description": "Phương án khách sạn Thiên Mụ lấy con người làm trung tâm, kết nối kiến trúc Huế với sân vườn và mặt nước. Ý tưởng Chánh Niệm cùng bố cục mở hướng tới trải nghiệm nghỉ ngơi tĩnh tại, hài hòa giữa truyền thống và tiện nghi hiện đại.",
+      "facts": [
+        [
+          "Địa điểm",
+          "Huế, Việt Nam"
+        ],
+        [
+          "Loại hình",
+          "Khách sạn"
+        ],
+        [
+          "Tư liệu",
+          "Phương án concept"
+        ]
+      ],
+      "textSource": {
+        "fileId": "1PaGctZfXRcZKM0TH-NetEHw--xtQ3xVw",
+        "slides": [
+          1,
+          2,
+          4,
+          5,
+          17,
+          18
+        ]
+      },
+      "hero": "assets/rwh-projects/thien-mu-hotel/hero.webp",
+      "number": 9,
+      "folderUrl": "https://drive.google.com/drive/folders/1snsszaqr3vvAfNayK213XCKW6E_-QR7A",
+      "mobile": "assets/rwh-projects/thien-mu-hotel/hero-mobile.webp",
+      "images": [
         {
-          "role": "cover",
-          "file": "rwh-project-neo-onsen-cover.jpg",
-          "sourceUrl": "https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72vtFruPlf6J3aP-oozTsc4k68QrgbevT7-YaTlv4X8mtFXDelr3wrFKFbOxldJz5hgLLhwFn41qvH578kuyHHClDRxwyR3CMgo6HNgrXDhvMvVm3nmUY2qfaf7UD8bXXfPda7nCn9JWSbovBehQ80v-FeqIeZzeYQwL3ypKnDAQgWHsov41XD9SiKN0coc=w16383",
-          "dimensions": [
-            2048,
-            1365
-          ]
+          "name": "image50.jpg",
+          "src": "assets/rwh-projects/thien-mu-hotel/01-168553af43.webp",
+          "thumbnail": "assets/rwh-projects/thien-mu-hotel/01-168553af43-thumb.webp",
+          "width": 1344,
+          "height": 757,
+          "source": {
+            "fileId": "1PaGctZfXRcZKM0TH-NetEHw--xtQ3xVw",
+            "embeddedImage": "image50.jpg"
+          },
+          "sourceSha256": "168553af43f98e07bbd1fa8b2eafcf3a67573f5dffaabd8e9258beaa87481f16"
         },
         {
-          "role": "mobile",
-          "file": "rwh-project-neo-onsen-mobile.jpg",
-          "sourceUrl": "https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72vtFruPlf6J3aP-oozTsc4k68QrgbevT7-YaTlv4X8mtFXDelr3wrFKFbOxldJz5hgLLhwFn41qvH578kuyHHClDRxwyR3CMgo6HNgrXDhvMvVm3nmUY2qfaf7UD8bXXfPda7nCn9JWSbovBehQ80v-FeqIeZzeYQwL3ypKnDAQgWHsov41XD9SiKN0coc=w16383",
-          "dimensions": [
-            1000,
-            667
-          ]
+          "name": "image43.jpg",
+          "src": "assets/rwh-projects/thien-mu-hotel/02-019ad2f34e.webp",
+          "thumbnail": "assets/rwh-projects/thien-mu-hotel/02-019ad2f34e-thumb.webp",
+          "width": 1253,
+          "height": 705,
+          "source": {
+            "fileId": "1PaGctZfXRcZKM0TH-NetEHw--xtQ3xVw",
+            "embeddedImage": "image43.jpg"
+          },
+          "sourceSha256": "019ad2f34eac5cb2c045400ebd1993535a5da6ca09ca7214e73ec803569a8895"
         },
         {
-          "role": "photo",
-          "file": "rwh-project-neo-onsen-photo.jpg",
-          "sourceUrl": "https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72u_R6FIGDwqzI1PP8o2yWQObZzMSs63IpK8Q8LgHuOnmkimBQQot2kisWXn7kvSXIDw8Z19ICpO6kWwa-vjI68FCL2j5OdvNXgRDdvXLGRp89xVoAlotCWZFT6zOnocC9lkPfkOdwcist-AUogC3wpiK4TTUq1YR8GuU7DDeExeH5WNhQRU35F9pdYB372L13oIqJ9K6Io3BtBUz9CNlwHBjJbnw_B6yrWsz8MO1N0=w1280",
-          "dimensions": [
-            1280,
-            551
-          ]
+          "name": "image44.jpg",
+          "src": "assets/rwh-projects/thien-mu-hotel/03-1fa9bdcfca.webp",
+          "thumbnail": "assets/rwh-projects/thien-mu-hotel/03-1fa9bdcfca-thumb.webp",
+          "width": 1344,
+          "height": 757,
+          "source": {
+            "fileId": "1PaGctZfXRcZKM0TH-NetEHw--xtQ3xVw",
+            "embeddedImage": "image44.jpg"
+          },
+          "sourceSha256": "1fa9bdcfca1d5ea712f62d482d7e60839dbd4c058e70570f20be4889751a3963"
+        },
+        {
+          "name": "image46.jpg",
+          "src": "assets/rwh-projects/thien-mu-hotel/04-e7eae5045c.webp",
+          "thumbnail": "assets/rwh-projects/thien-mu-hotel/04-e7eae5045c-thumb.webp",
+          "width": 1344,
+          "height": 705,
+          "source": {
+            "fileId": "1PaGctZfXRcZKM0TH-NetEHw--xtQ3xVw",
+            "embeddedImage": "image46.jpg"
+          },
+          "sourceSha256": "e7eae5045c9ebdeb81403a87b631668e85199014ac03ac5c79cb67e377dbee7f"
+        },
+        {
+          "name": "image47.jpg",
+          "src": "assets/rwh-projects/thien-mu-hotel/05-97fd15f395.webp",
+          "thumbnail": "assets/rwh-projects/thien-mu-hotel/05-97fd15f395-thumb.webp",
+          "width": 670,
+          "height": 768,
+          "source": {
+            "fileId": "1PaGctZfXRcZKM0TH-NetEHw--xtQ3xVw",
+            "embeddedImage": "image47.jpg"
+          },
+          "sourceSha256": "97fd15f39562cf091c8614fbd9b595bb507705696359a3e0972898b29ae8c236"
+        },
+        {
+          "name": "image48.jpg",
+          "src": "assets/rwh-projects/thien-mu-hotel/06-efb8413a09.webp",
+          "thumbnail": "assets/rwh-projects/thien-mu-hotel/06-efb8413a09-thumb.webp",
+          "width": 671,
+          "height": 386,
+          "source": {
+            "fileId": "1PaGctZfXRcZKM0TH-NetEHw--xtQ3xVw",
+            "embeddedImage": "image48.jpg"
+          },
+          "sourceSha256": "efb8413a091861af53ee40adf796ad2a04007f8c6aa26b2f96cf53d2193b9e10"
+        },
+        {
+          "name": "image49.jpg",
+          "src": "assets/rwh-projects/thien-mu-hotel/07-c6dfb70068.webp",
+          "thumbnail": "assets/rwh-projects/thien-mu-hotel/07-c6dfb70068-thumb.webp",
+          "width": 1344,
+          "height": 705,
+          "source": {
+            "fileId": "1PaGctZfXRcZKM0TH-NetEHw--xtQ3xVw",
+            "embeddedImage": "image49.jpg"
+          },
+          "sourceSha256": "c6dfb7006808cc886f8850d897490998716a4a8e7fee2eab8695f67bce7851c0"
+        },
+        {
+          "name": "image51.jpg",
+          "src": "assets/rwh-projects/thien-mu-hotel/08-ffc9f274d4.webp",
+          "thumbnail": "assets/rwh-projects/thien-mu-hotel/08-ffc9f274d4-thumb.webp",
+          "width": 1184,
+          "height": 837,
+          "source": {
+            "fileId": "1PaGctZfXRcZKM0TH-NetEHw--xtQ3xVw",
+            "embeddedImage": "image51.jpg"
+          },
+          "sourceSha256": "ffc9f274d4e4cd49bbe4a824c5b3569d22acd61b057ebbd1593ed4c2dde14f2c"
+        },
+        {
+          "name": "image52.jpg",
+          "src": "assets/rwh-projects/thien-mu-hotel/09-7c37ddb8ba.webp",
+          "thumbnail": "assets/rwh-projects/thien-mu-hotel/09-7c37ddb8ba-thumb.webp",
+          "width": 1184,
+          "height": 667,
+          "source": {
+            "fileId": "1PaGctZfXRcZKM0TH-NetEHw--xtQ3xVw",
+            "embeddedImage": "image52.jpg"
+          },
+          "sourceSha256": "7c37ddb8baef9f04dab057e59c4542f749728f6878e916a4da4bd81d2fe86caf"
         }
       ]
     },
     {
-      "project": "MIKAZUKI RESORT",
-      "projectPage": "https://www.rwh-group.com/projects/interior/mikazuki",
-      "projectYearSource": "https://www.rwh-group.com/projects/architecture",
-      "assets": [
+      "slug": "ecopark-hung-yen",
+      "title": "ECOPARK HƯNG YÊN",
+      "category": "ONSEN",
+      "location": "Hưng Yên, Việt Nam",
+      "subtitle": "Trải nghiệm Onsen giữa không gian sống xanh",
+      "description": "Bộ ảnh Onsen tại Ecopark Hưng Yên giới thiệu không gian tắm trong nhà và ngoài trời, mặt nước, đá tự nhiên và kiến trúc mang cảm hứng Nhật Bản giữa cảnh quan xanh của khu đô thị.",
+      "facts": [
+        [
+          "Địa điểm",
+          "Hưng Yên, Việt Nam"
+        ],
+        [
+          "Loại hình",
+          "Onsen"
+        ]
+      ],
+      "textSource": {
+        "folderId": "1sVQqNWQcdaKu3UmjoAozSo1pGhx7b9j9",
+        "note": "Description limited to the supplied imagery and folder name; no completion date or unsupported scale added."
+      },
+      "hero": "assets/rwh-projects/ecopark-hung-yen/hero.webp",
+      "number": 10,
+      "folderUrl": "https://drive.google.com/drive/folders/1sVQqNWQcdaKu3UmjoAozSo1pGhx7b9j9",
+      "mobile": "assets/rwh-projects/ecopark-hung-yen/hero-mobile.webp",
+      "images": [
         {
-          "role": "cover",
-          "file": "rwh-project-mikazuki-cover.jpg",
-          "sourceUrl": "https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72v3N_KXKOR9CkBw6lMVv895BWH2-I-d3K5VUtvYf9u9l5kWhNAtnOmMztF5UJTlhfWw2fgrWOElIxpnZjHPsMfVGYpFiUjrUw2pSJu4d_gt8h5XIIlZyO2sdTfpM-freF7zUtB3D5Mi2rDvQkqeyX_nOMuXwXJP53qWHDuxZaYBJ6bA1FNxZZ6oFnxS=w16383",
-          "dimensions": [
-            2048,
-            1534
-          ]
+          "name": "450372932_446440204867098_283516441354431523_n.jpg",
+          "src": "assets/rwh-projects/ecopark-hung-yen/01-20aa2a41fd.webp",
+          "thumbnail": "assets/rwh-projects/ecopark-hung-yen/01-20aa2a41fd-thumb.webp",
+          "width": 1920,
+          "height": 1280,
+          "source": {
+            "fileId": "1-l-Ee_kH7befvE4sQ6bFkNcONdncCQhJ",
+            "fileName": "450372932_446440204867098_283516441354431523_n.jpg"
+          },
+          "sourceSha256": "20aa2a41fdc65f17e54b1d75b452d6e3609534d23d69a8306e738eae0422a2f8"
         },
         {
-          "role": "mobile",
-          "file": "rwh-project-mikazuki-mobile.jpg",
-          "sourceUrl": "https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72v3N_KXKOR9CkBw6lMVv895BWH2-I-d3K5VUtvYf9u9l5kWhNAtnOmMztF5UJTlhfWw2fgrWOElIxpnZjHPsMfVGYpFiUjrUw2pSJu4d_gt8h5XIIlZyO2sdTfpM-freF7zUtB3D5Mi2rDvQkqeyX_nOMuXwXJP53qWHDuxZaYBJ6bA1FNxZZ6oFnxS=w16383",
-          "dimensions": [
-            1000,
-            749
-          ]
+          "name": "screenshot_1792221340.png",
+          "src": "assets/rwh-projects/ecopark-hung-yen/02-b379f17a33.webp",
+          "thumbnail": "assets/rwh-projects/ecopark-hung-yen/02-b379f17a33-thumb.webp",
+          "width": 1589,
+          "height": 883,
+          "source": {
+            "fileId": "1j6dQu-_YzVyz4sakNIuCRUCPvdWMt6oh",
+            "fileName": "screenshot_1792221340.png"
+          },
+          "sourceSha256": "b379f17a33a619f82b30725092aa0afa51a1e7ced96608d24d76bf13c8004d89"
         },
         {
-          "role": "photo",
-          "file": "rwh-project-mikazuki-photo.jpg",
-          "sourceUrl": "https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72v_g9nBSD2dpwkOFPSkdyudo1fwKgJ3pQmPgnGbgVo1C88_rwPMdFV8FOyaZR1PVF35M2AwpvIK8pJNbQQcJq_DOz8SiqZEK2zbhqjw2gw4OFTsgMD90HsxSC71rgDuhL4kDRuQRrwW6FkDNhNK9cpt3rzXQvt2wo2JNoM6aAeJG8h-OmyT3oiIs5wRwkW2jHge8zeiCO2VHVyH1YpWRDgdOCQiOxULDDpX1m8n-L0=w1280",
-          "dimensions": [
-            1000,
-            642
-          ]
+          "name": "tiem-nang-cho-thue-swan-park-onsen-2.jpg",
+          "src": "assets/rwh-projects/ecopark-hung-yen/03-0d7ad096da.webp",
+          "thumbnail": "assets/rwh-projects/ecopark-hung-yen/03-0d7ad096da-thumb.webp",
+          "width": 600,
+          "height": 399,
+          "source": {
+            "fileId": "1EHE0V3tV0NQm-lAq46YNBodTF6x8lrSt",
+            "fileName": "tiem-nang-cho-thue-swan-park-onsen-2.jpg"
+          },
+          "sourceSha256": "0d7ad096daa76539a62aee427be0711d97e17a0f24dff98731e0eafdf4b151c2"
+        },
+        {
+          "name": "tong-quan-swan-lake-onsen-ecopark.jpg",
+          "src": "assets/rwh-projects/ecopark-hung-yen/04-309d448796.webp",
+          "thumbnail": "assets/rwh-projects/ecopark-hung-yen/04-309d448796-thumb.webp",
+          "width": 1600,
+          "height": 800,
+          "source": {
+            "fileId": "109Nc-gx0TADz6McA3qZnFzhSFAZxpbk2",
+            "fileName": "tong-quan-swan-lake-onsen-ecopark.jpg"
+          },
+          "sourceSha256": "309d4487969776e60afa32c64dba1ace75a7b9f5550f1e174965cc536e2cbecd"
+        },
+        {
+          "name": "441503075_419408614236924_7378111739229479711_n.jpg",
+          "src": "assets/rwh-projects/ecopark-hung-yen/05-092900a790.webp",
+          "thumbnail": "assets/rwh-projects/ecopark-hung-yen/05-092900a790-thumb.webp",
+          "width": 1920,
+          "height": 1280,
+          "source": {
+            "fileId": "1OxIZJn1TYkDxSPfEqSsRtqzvbdPsInF7",
+            "fileName": "441503075_419408614236924_7378111739229479711_n.jpg"
+          },
+          "sourceSha256": "092900a79090ed17e4dcbd8f4f63f7ac61f626544d46d82abb8f9f259f987125"
+        },
+        {
+          "name": "441494403_420770770767375_969691633619902174_n.jpg",
+          "src": "assets/rwh-projects/ecopark-hung-yen/06-62b3f2e732.webp",
+          "thumbnail": "assets/rwh-projects/ecopark-hung-yen/06-62b3f2e732-thumb.webp",
+          "width": 1920,
+          "height": 1080,
+          "source": {
+            "fileId": "1hcST5bfXqPPPOsFYojqUgTV2VVX0skvQ",
+            "fileName": "441494403_420770770767375_969691633619902174_n.jpg"
+          },
+          "sourceSha256": "62b3f2e732825315baa3f09786839a51fc1aa22acfc66f988d0eb47758295b71"
+        },
+        {
+          "name": "444973313_427329493444836_3778118228303276379_n.jpg",
+          "src": "assets/rwh-projects/ecopark-hung-yen/07-71701b151e.webp",
+          "thumbnail": "assets/rwh-projects/ecopark-hung-yen/07-71701b151e-thumb.webp",
+          "width": 1920,
+          "height": 1281,
+          "source": {
+            "fileId": "1vHFWshgS6GvhKpKGGm-RqnWyyUPGvOVk",
+            "fileName": "444973313_427329493444836_3778118228303276379_n.jpg"
+          },
+          "sourceSha256": "71701b151e37a088f98abf1ff72d420eeded90499b60e9cf4c261d852e1fbd2e"
+        },
+        {
+          "name": "448294232_430206853157100_89248057609432514_n.jpg",
+          "src": "assets/rwh-projects/ecopark-hung-yen/08-eeff2ddd16.webp",
+          "thumbnail": "assets/rwh-projects/ecopark-hung-yen/08-eeff2ddd16-thumb.webp",
+          "width": 1920,
+          "height": 1280,
+          "source": {
+            "fileId": "14zKWuq5SZ6dfwJjiJUTB-B3xaPmczcn2",
+            "fileName": "448294232_430206853157100_89248057609432514_n.jpg"
+          },
+          "sourceSha256": "eeff2ddd1693f7c9fbf29ef2b8079d41928a506fcaee6a3081ba2355c830e6b5"
+        },
+        {
+          "name": "449379516_440930385418080_2806275206007049051_n.jpg",
+          "src": "assets/rwh-projects/ecopark-hung-yen/09-bf03dc0845.webp",
+          "thumbnail": "assets/rwh-projects/ecopark-hung-yen/09-bf03dc0845-thumb.webp",
+          "width": 1428,
+          "height": 1920,
+          "source": {
+            "fileId": "1tqfHenA--FPE9bildaXQFWR7Y8ZbqwCS",
+            "fileName": "449379516_440930385418080_2806275206007049051_n.jpg"
+          },
+          "sourceSha256": "bf03dc0845b8a390b16830e65576cc321fba1eef58e85259967a130de996f9f1"
+        },
+        {
+          "name": "448658641_435015182676267_9145394281807353889_n.jpg",
+          "src": "assets/rwh-projects/ecopark-hung-yen/10-360753b5ac.webp",
+          "thumbnail": "assets/rwh-projects/ecopark-hung-yen/10-360753b5ac-thumb.webp",
+          "width": 1920,
+          "height": 1281,
+          "source": {
+            "fileId": "1qAd7nfk6xt-lV4QuFscPuO9bE-6EYyNf",
+            "fileName": "448658641_435015182676267_9145394281807353889_n.jpg"
+          },
+          "sourceSha256": "360753b5ac4950ebdd89aa4ea3557093035147f1ca4fe6ae375e46e88404f0ee"
+        },
+        {
+          "name": "448919063_436308802546905_8978954838232441895_n.jpg",
+          "src": "assets/rwh-projects/ecopark-hung-yen/11-26a1fc0ee2.webp",
+          "thumbnail": "assets/rwh-projects/ecopark-hung-yen/11-26a1fc0ee2-thumb.webp",
+          "width": 1920,
+          "height": 1280,
+          "source": {
+            "fileId": "1kPlaCvGFKh-M9XoGNsQQOmnoXWpkh2Qc",
+            "fileName": "448919063_436308802546905_8978954838232441895_n.jpg"
+          },
+          "sourceSha256": "26a1fc0ee2b5d7c48163a305a3e90925a9ef2486810f44cfa37b35a99b43de3a"
+        },
+        {
+          "name": "449702148_444525991725186_4093926764588508332_n.jpg",
+          "src": "assets/rwh-projects/ecopark-hung-yen/12-381d35ab15.webp",
+          "thumbnail": "assets/rwh-projects/ecopark-hung-yen/12-381d35ab15-thumb.webp",
+          "width": 1920,
+          "height": 1123,
+          "source": {
+            "fileId": "1Qt7cr1LXfk6xRwcmG0cIOg3M27o2S37w",
+            "fileName": "449702148_444525991725186_4093926764588508332_n.jpg"
+          },
+          "sourceSha256": "381d35ab154442d7939e841564e3b7c887f9f09fcad99850d6f3f6cc0544159f"
+        },
+        {
+          "name": "449845776_444525878391864_5731069985636004533_n.jpg",
+          "src": "assets/rwh-projects/ecopark-hung-yen/13-cd7887f9d2.webp",
+          "thumbnail": "assets/rwh-projects/ecopark-hung-yen/13-cd7887f9d2-thumb.webp",
+          "width": 1920,
+          "height": 1280,
+          "source": {
+            "fileId": "1v_56yp1zERB6HKwgZ7932HItr2O7-uWk",
+            "fileName": "449845776_444525878391864_5731069985636004533_n.jpg"
+          },
+          "sourceSha256": "cd7887f9d22be9417f4012fc3add06e322aa18a8d3fe3dd307f014ecd0860fae"
+        },
+        {
+          "name": "449703441_444525911725194_4163286065987531830_n.jpg",
+          "src": "assets/rwh-projects/ecopark-hung-yen/14-7fc83033f0.webp",
+          "thumbnail": "assets/rwh-projects/ecopark-hung-yen/14-7fc83033f0-thumb.webp",
+          "width": 1920,
+          "height": 1280,
+          "source": {
+            "fileId": "1T6INVvmG2dIm0s5JTYgY2GQj17VUJhBp",
+            "fileName": "449703441_444525911725194_4163286065987531830_n.jpg"
+          },
+          "sourceSha256": "7fc83033f0c4924365e8bc667dd9981cc208758c6f6345f0e867c1310ca95e68"
+        },
+        {
+          "name": "2.jpg",
+          "src": "assets/rwh-projects/ecopark-hung-yen/15-3eb92b6d20.webp",
+          "thumbnail": "assets/rwh-projects/ecopark-hung-yen/15-3eb92b6d20-thumb.webp",
+          "width": 1920,
+          "height": 997,
+          "source": {
+            "fileId": "1AmQXYG7ZNVAVhdgnbW4OVcNeK1iQnz7A",
+            "fileName": "2.jpg"
+          },
+          "sourceSha256": "3eb92b6d208bdb28e6e130e692f67e166d894db0652bee719d2af395bbe25575"
+        },
+        {
+          "name": "1.jpg",
+          "src": "assets/rwh-projects/ecopark-hung-yen/16-7e139fcc3c.webp",
+          "thumbnail": "assets/rwh-projects/ecopark-hung-yen/16-7e139fcc3c-thumb.webp",
+          "width": 1920,
+          "height": 1107,
+          "source": {
+            "fileId": "1nlUDA945JOTJQ2kzP0IxpeylgxO9_tKE",
+            "fileName": "1.jpg"
+          },
+          "sourceSha256": "7e139fcc3c81d4e31066e34048b5092bca84a0dbfbe10fc8991a01e8986a5f38"
         }
       ]
     }

@@ -2507,6 +2507,10 @@ body { margin:0; }
 #main .section.mainImg { height:100svh; }
 #main .section.mainImg .full { height:100%; }
 #main .bg { background-position:center; background-size:cover; background-repeat:no-repeat; }
+/* Client project names can wrap while keeping the reference's text position. */
+#main .mainImg .txtBox { max-width:calc(100% - 210px); }
+#main .mainImg .txtBox h2 { white-space:normal; line-height:1.25; }
+@media(max-width:767px){#main .mainImg .txtBox{max-width:calc(100% - 100px);}#main .mainImg .txtBox h2{font-size:24px;}#main .mainImg .txtBox .txt{line-height:1.7;}}
 #main .fp-auto-height { height:auto; }
 #gFooter { max-height:100svh; overflow:auto; overscroll-behavior:contain; scrollbar-width:none; }
 #gFooter::-webkit-scrollbar { display:none; }

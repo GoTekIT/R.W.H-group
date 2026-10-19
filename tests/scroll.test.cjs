@@ -5,7 +5,7 @@ const vm = require('node:vm');
 const { test } = require('node:test');
 
 // Run the actual page controller with a deterministic clock and minimal DOM.
-function page() {
+function page(initialProject = 1) {
   let now = 0, nextId = 0;
   const timers = new Map();
   const timeout = (callback, delay) => {
@@ -57,9 +57,10 @@ function page() {
   const context = {
     document: doc,
     window: {
+      location: { search: `?project=${initialProject}` },
       matchMedia: () => ({ matches: false, addEventListener() {} }), addEventListener() {}
     },
-    setTimeout: timeout, clearTimeout: id => timers.delete(id),
+    setTimeout: timeout, clearTimeout: id => timers.delete(id), requestAnimationFrame: callback => timeout(callback, 16),
     setInterval: () => ++nextId, clearInterval() {}
   };
   vm.runInNewContext(fs.readFileSync(path.join(__dirname, '../dist/app.js'), 'utf8'), context);
@@ -76,6 +77,13 @@ function page() {
   return { advance, wheel, jump, key, index, doc };
 
 }
+
+test('returning from DETAIL starts at that project and keeps autoplay', () => {
+  const p = page(6);
+  assert.equal(p.index(), 5);
+  p.advance(6000);
+  assert.equal(p.index(), 6);
+});
 
 test('wheel momentum advances one page until the gesture settles', () => {
   const p = page();
