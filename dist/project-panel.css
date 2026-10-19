@@ -1,11 +1,11 @@
-.project-panel { position:fixed; inset:0; margin:0; padding:0; border:0; box-sizing:border-box; width:100vw; max-width:none; height:100vh; height:100svh; max-height:none; overflow:hidden; color:#fff; background:#333232; transform:translateX(-100%); transition:transform .75s cubic-bezier(.22,1,.36,1); overscroll-behavior:contain; }
+.project-panel { position:fixed; inset:0; margin:0; padding:0; border:0; box-sizing:border-box; width:100vw; max-width:none; height:100vh; height:100svh; max-height:none; overflow:hidden; color:#fff; background:#292929; transform:translateX(-100%); transition:transform .75s cubic-bezier(.22,1,.36,1); overscroll-behavior:contain; }
 .project-panel[open] { display:block; }
 .project-panel.is-visible { transform:translateX(0); }
 .project-panel::backdrop { background:rgba(0,0,0,.2); }
 .project-panel-title { position:absolute; width:1px; height:1px; padding:0; overflow:hidden; clip-path:inset(50%); white-space:nowrap; }
-.project-panel iframe { display:block; width:100%; height:100%; border:0; background:#333232; opacity:0; transition:opacity .2s; }
+.project-panel iframe { display:block; width:100%; height:100%; border:0; background:#292929; opacity:0; transition:opacity .2s; }
 .project-panel.is-loaded iframe { opacity:1; }
-.project-panel-close { position:absolute; z-index:2; top:0; right:0; display:grid; place-items:center; width:70px; height:60px; margin:0; padding:0; border:0; outline:none; box-shadow:none; background:transparent; color:#fff; cursor:pointer; }
+.project-panel-close { position:absolute; z-index:2; top:32px; right:24px; display:grid; place-items:center; width:44px; height:44px; margin:0; padding:0; border:0; outline:none; box-shadow:none; background:transparent; color:#fff; cursor:pointer; }
 .project-panel-close svg { width:22px; height:22px; fill:none; stroke:currentColor; stroke-width:1.2; filter:drop-shadow(0 1px 3px #0008); transition:transform .25s,stroke-width .25s; }
 .project-panel-close:hover svg, .project-panel-close:focus-visible svg { transform:scale(1.1); stroke-width:1.8; }
 .project-panel-close:focus-visible { outline:none; }
@@ -21,7 +21,7 @@
 .project-embedded .menu { display:none; }
 .project-embedded .meunRBox { display:none; }
 @media(max-width:767px) {
-  .project-panel-close { width:45px; height:50px; }
+  .project-panel-close { top:14px; right:12px; }
   .project-panel-close svg { width:20px; height:20px; }
 }
 @media(prefers-reduced-motion:reduce) { .project-panel, .project-panel iframe, .project-panel-close svg { transition:none; } }

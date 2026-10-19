@@ -11,13 +11,17 @@ body.menu-open .comTopLinkBox, body.menu-open .comSideTxt { opacity:0; visibilit
 .comTopLinkBox h2 { overflow-wrap:break-word; }
 /* Compact project intro; the gallery has no reserved vertical side rail. */
 #container { padding-top:0; }
-#gHeader.header01, #gHeader.header01.show01 { position:relative; height:auto; min-height:132px; padding:32px 180px 32px 6.5%; }
-#gHeader.header01 .inner { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); align-items:start; gap:24px; }
-#gHeader.header01 h1 img { width:auto; height:22px; }
+#gHeader.header01, #gHeader.header01.show01 { position:relative; height:auto; min-height:108px; padding:26px 40px; background:#292929; }
+#gHeader.header01 .inner { display:grid; grid-template-columns:160px minmax(0,1fr) 160px; align-items:center; gap:24px; }
+#gHeader.header01 h1 { line-height:1; }
+#gHeader.header01 h1 img { display:block; width:auto; height:23px; }
 .comTopLinkBox { position:static; width:auto; min-height:0; padding:0; display:block; }
-.comTopLinkBox h2 { margin:0 0 10px; font-size:22px; line-height:1.3; letter-spacing:.06em; font-weight:300; }
-.comTopLinkBox .txt { font-size:10px; line-height:1.6; letter-spacing:.03em; }
-.meunRBox { height:60px; }
+.comTopLinkBox { text-align:center; }
+.comTopLinkBox h2 { margin:0 0 7px; font-size:clamp(20px,1.7vw,26px); line-height:1.25; letter-spacing:.045em; font-weight:300; }
+.comTopLinkBox .txt { font-size:11px; line-height:1.6; letter-spacing:.035em; color:#ffffff99; }
+body > .language-switch { top:36px; right:92px; text-shadow:0 1px 4px #0006; }
+.meunRBox { height:108px; width:80px; right:8px; background:transparent; }
+.meunRBox .menu { top:50px; right:24px; }
 #main .inner { padding-right:0; }
 #main .inner01, #main .photo, #main .phoList, #main .listUl01 { margin-right:0; }
 #main .comBtn { right:auto; }
@@ -25,6 +29,9 @@ body.menu-open .comTopLinkBox, body.menu-open .comSideTxt { opacity:0; visibilit
 #main .project-photos .photo { margin-bottom:0; }
 #main .project-photos img { display:block; width:100%; height:auto; max-height:none; }
 #main .textArea p { font-family:Roboto,Arial,sans-serif; }
+#main .textArea .lBox { width:min(760px,100%); }
+#main .textArea .project-subtitle { margin:0 0 20px; font-size:22px; font-weight:300; line-height:1.45; letter-spacing:.01em; color:#fff; }
+#main .textArea .project-description { font-size:14px; line-height:1.9; color:#bbb; }
 #main .txtBox .txtListUl > li:only-child { width:100%; }
 #main .listUl .pho, #main .listUl .pho img { opacity:1; }
 #main .listUl .pho img { object-fit:cover; }
@@ -46,13 +53,16 @@ body.page-scrolled .pagetop { opacity:1; visibility:visible; }
 .viewer-close:hover, .viewer-prev:hover, .viewer-next:hover { background:#ffffff12; }
 body:has(dialog[open]) { overflow:hidden; }
 @media(max-width:767px) {
-  #gHeader.header01, #gHeader.header01.show01 { min-height:0; padding:20px 24px 22px; }
-  #gHeader.header01 .inner { grid-template-columns:minmax(0,1fr); gap:14px; }
-  #gHeader.header01 h1 img { height:17px; }
-  .comTopLinkBox { min-height:0; }
-  .comTopLinkBox h2 { margin-bottom:6px; font-size:17px; line-height:1.25; }
-  .comTopLinkBox .txt { font-size:9px; line-height:1.6; }
-  .meunRBox { height:50px; }
+  #gHeader.header01, #gHeader.header01.show01 { min-height:0; padding:24px 24px 22px; }
+  #gHeader.header01 .inner { grid-template-columns:minmax(0,1fr); gap:18px; }
+  #gHeader.header01 h1 img { height:20px; }
+  .comTopLinkBox { min-height:0; text-align:left; }
+  .comTopLinkBox h2 { margin-bottom:6px; font-size:20px; line-height:1.3; }
+  .comTopLinkBox .txt { font-size:10.5px; line-height:1.7; }
+  body > .language-switch { top:18px; right:64px; }
+  .meunRBox { height:72px; right:0; width:56px; }
+  .meunRBox .menu { top:32px; right:18px; }
+  #main .textArea .project-subtitle { font-size:20px; }
   #main .sec02 .inner { margin-left:0; }
   #main .textArea .rwh-description { width:auto; }
   .image-viewer[open] { grid-template-columns:44px 1fr 44px; }

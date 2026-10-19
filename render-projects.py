@@ -205,13 +205,13 @@ for i, project in enumerate(projects):
 </head><body>
 {switcher}
 <div id="container">
-<header id="gHeader" class="header01"><div class="inner"><h1><a class="hLogo" href="../../index.html" aria-label="R.W.H Group — Trang chủ"><img class="pc" src="../../{asset('assets/rwh-reference-wordmark.svg')}" alt="R.W.H Group" width="357"><img class="sp" src="../../{asset('assets/rwh-reference-wordmark.svg')}" alt="R.W.H Group" width="255"></a></h1><div class="comTopLinkBox"><h2>{e(project['title'])}</h2><div class="rBox"><p class="txt"><span data-i18n="{key}.metadata">{e(copy['vi'][key + '.metadata'])}</span><br><span data-i18n="{key}.subtitle">{e(project['subtitle'])}</span></p></div></div></div></header>
+<header id="gHeader" class="header01"><div class="inner"><h1><a class="hLogo" href="../../index.html" aria-label="R.W.H Group — Trang chủ"><img class="pc" src="../../{asset('assets/rwh-reference-wordmark.svg')}" alt="R.W.H Group" width="357"><img class="sp" src="../../{asset('assets/rwh-reference-wordmark.svg')}" alt="R.W.H Group" width="255"></a></h1><div class="comTopLinkBox"><h2>{e(project['title'])}</h2><div class="rBox"><p class="txt" data-i18n="{key}.metadata">{e(copy['vi'][key + '.metadata'])}</p></div></div></div></header>
 <div class="meunRBox"><button class="menu" type="button" aria-label="Open menu" aria-controls="navigation" aria-expanded="false"><span class="top"></span><span class="bottom"></span></button></div>
 {navigation}
 <main id="main" tabindex="-1">
 <section class="sec01" aria-label="{e(project['title'])}"><div class="inner01">
 <div class="project-photos">{''.join(figures)}</div>
-<div class="textArea"><div class="bdBox"><div class="lBox"><p class="project-description" data-i18n="{key}.description">{e(project['description'])}</p></div></div></div>
+<div class="textArea"><div class="bdBox"><div class="lBox"><p class="project-subtitle" data-i18n="{key}.subtitle">{e(project['subtitle'])}</p><p class="project-description" data-i18n="{key}.description">{e(project['description'])}</p></div></div></div>
 <div class="txtBox"><div class="tBox"><h2>DATA</h2></div><div class="rBox"><ul class="txtListUl"><li><table><tbody>{facts}</tbody></table></li></ul></div></div>
 </div></section>
 <section class="sec02"><div class="inner"><h2 class="h2Ttl">OTHER WORKS</h2><ul class="listUl listUl01">{''.join(related)}</ul><div class="comBtn"><a href="../../index.html"><span class="en">MORE</span></a></div></div></section>
