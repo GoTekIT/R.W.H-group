@@ -240,8 +240,8 @@ for i, project in enumerate(projects):
 {navigation}
 <main id="main" tabindex="-1">
 <section class="sec01" aria-label="{e(project['title'])}"><div class="inner01">
-<div class="project-photos">{''.join(figures)}</div>
 <section class="project-film" id="project-film" aria-labelledby="project-film-title"><h2 id="project-film-title" data-i18n="videos">VIDEO</h2>{video_card(videos[video_sources['projectAssignments'][project['slug']]], '../../')}</section>
+<div class="project-photos">{''.join(figures)}</div>
 <div class="project-overview" id="project-overview">
 <div class="textArea"><div class="bdBox"><div class="lBox"><p class="project-subtitle" data-i18n="{key}.subtitle">{e(project['subtitle'])}</p><p class="project-description" data-i18n="{key}.description">{e(project['description'])}</p></div></div></div>
 <div class="txtBox"><div class="tBox"><h2>DATA</h2></div><div class="rBox"><ul class="txtListUl"><li><table><tbody>{facts}</tbody></table></li></ul></div></div>

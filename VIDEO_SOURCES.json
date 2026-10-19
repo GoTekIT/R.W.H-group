@@ -1,6 +1,6 @@
 {
   "updated": "2026-10-19",
-  "placement": "Native inline players in the shared Video library and one full-width film per project; no source-link buttons or separate playback dialog.",
+  "placement": "Native inline players in the shared Video library; one full-width film at the top of each project Details, immediately below the header and before photos. No source-link buttons or separate playback dialog.",
   "videos": [
     {
       "id": "onsen-living",
