@@ -3,7 +3,7 @@
   const copy = {
     vi: {
       language: 'Ngôn ngữ', openMenu: 'Mở menu', closeMenu: 'Đóng menu', navigation: 'Điều hướng chính',
-      works: 'CÔNG TRÌNH', projects: 'DỰ ÁN', movies: 'PHIM', news: 'TIN TỨC', profile: 'GIỚI THIỆU',
+      works: 'CÔNG TRÌNH', projects: 'DỰ ÁN', movies: 'PHIM', news: 'TIN TỨC', profile: 'HỒ SƠ',
       message: 'THÔNG ĐIỆP', awards: 'GIẢI THƯỞNG', outline: 'TỔNG QUAN', books: 'ẤN PHẨM', flow: 'QUY TRÌNH',
       newsletter: 'BẢN TIN', recruit: 'TUYỂN DỤNG', designOrder: 'YÊU CẦU THIẾT KẾ', contact: 'LIÊN HỆ',
       published: 'Xuất bản bởi FRAME', release: 'Phát hành năm 2025', relatedSites: 'Website liên quan:',
