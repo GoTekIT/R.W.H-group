@@ -1,0 +1,175 @@
+{
+  "reference": "https://apollo-aa.jp/",
+  "retrieved": "2026-10-19",
+  "scope": "User explicitly requested Apollo images, content and layout with only the brand name changed to RWH.",
+  "resources": [
+    {
+      "url": "https://apollo-aa.jp/wp-content/uploads/2026/04/01_001_tr-1-scaled.jpg",
+      "file": "./assets/apollo-reference/4b7c7ccadcb1.jpg",
+      "bytes": 1057068,
+      "sha256": "d0510e6b07fd6536858f18c02988b3a98ba2c25abbf9ca6a6f1bed3939f8e833"
+    },
+    {
+      "url": "https://apollo-aa.jp/wp-content/uploads/2026/04/007_sp-1-scaled.jpg",
+      "file": "./assets/apollo-reference/5ae46827e320.jpg",
+      "bytes": 1191387,
+      "sha256": "8bdeccf765852bb84b20e08e3e75a1255b0ed5f90d204178c42f63a316c21820"
+    },
+    {
+      "url": "https://apollo-aa.jp/wp-content/uploads/2025/06/009-1-scaled.jpg",
+      "file": "./assets/apollo-reference/133b56397700.jpg",
+      "bytes": 860638,
+      "sha256": "863a3b5bc1267381970b6aef4b9ec00c82933206ddaeb4eadf89645d3e3efff2"
+    },
+    {
+      "url": "https://apollo-aa.jp/wp-content/uploads/2025/06/006_sp-scaled.jpg",
+      "file": "./assets/apollo-reference/3cdfea9577fa.jpg",
+      "bytes": 638077,
+      "sha256": "71abeb47f0b8f7de9d14dc71247bd0392cf9542ed49eeaaf20af046e335779fc"
+    },
+    {
+      "url": "https://apollo-aa.jp/wp-content/uploads/2022/01/001_Main-scaled.jpg",
+      "file": "./assets/apollo-reference/80b7a462ac89.jpg",
+      "bytes": 634339,
+      "sha256": "74105e0b53442d005d7ee115648ce18491c6a4325c6c690c7567829d9af85113"
+    },
+    {
+      "url": "https://apollo-aa.jp/wp-content/uploads/2022/01/001_SP-scaled.jpg",
+      "file": "./assets/apollo-reference/d99fd7018e4a.jpg",
+      "bytes": 459382,
+      "sha256": "c14dd59a205eb16769c3062635c448d10ae3fa4702013ebccc33aa3705688dd9"
+    },
+    {
+      "url": "https://apollo-aa.jp/wp-content/uploads/2021/07/main.jpg",
+      "file": "./assets/apollo-reference/1c218d6ac14b.jpg",
+      "bytes": 610160,
+      "sha256": "7379945fa17d6a354bedbb3113cebcd8dfbee960d5e014963d34f87e5b67633f"
+    },
+    {
+      "url": "https://apollo-aa.jp/wp-content/uploads/2021/07/sp.jpg",
+      "file": "./assets/apollo-reference/55ee04415a7e.jpg",
+      "bytes": 82262,
+      "sha256": "a6deb024894a7a1ba5afa59aa01fa9faf503a9a4870ffcd401f0de957612ac26"
+    },
+    {
+      "url": "https://apollo-aa.jp/wp-content/uploads/2018/01/main01-3.jpg",
+      "file": "./assets/apollo-reference/c2ade893acc0.jpg",
+      "bytes": 856394,
+      "sha256": "d7d9afbae3d2ac00a311305f333544a877c2350df25087f593f942d4bdc202d7"
+    },
+    {
+      "url": "https://apollo-aa.jp/wp-content/uploads/2018/01/main_sp-1.jpg",
+      "file": "./assets/apollo-reference/901e52e65cd1.jpg",
+      "bytes": 93992,
+      "sha256": "3c196e89f54f54c103b7e6d2ed151740a89df7aea8cb1cf359e9447e46f98fdb"
+    },
+    {
+      "url": "https://apollo-aa.jp/wp-content/uploads/2025/10/01_018-top-scaled.jpg",
+      "file": "./assets/apollo-reference/08963510bb3c.jpg",
+      "bytes": 459571,
+      "sha256": "18880672bd852bcfdf285b277cb5576e46db1d4d674e009828c95a360e6876fd"
+    },
+    {
+      "url": "https://apollo-aa.jp/wp-content/uploads/2025/10/07_020-sp.jpg",
+      "file": "./assets/apollo-reference/001251a9a442.jpg",
+      "bytes": 592725,
+      "sha256": "9054eb4f1c77e1f6e294260f00c566abf10d0884ca2d90d10cb211a8502d3f6c"
+    },
+    {
+      "url": "https://apollo-aa.jp/wp-content/uploads/2026/02/01_008-scaled.jpg",
+      "file": "./assets/apollo-reference/82ff5b6ed690.jpg",
+      "bytes": 527731,
+      "sha256": "567f3678e05cdaac2cd72616f67c705d2d045b7edd7bb5140fe50aa6f463d309"
+    },
+    {
+      "url": "https://apollo-aa.jp/wp-content/uploads/2026/02/sp_007.jpg",
+      "file": "./assets/apollo-reference/633313420ff6.jpg",
+      "bytes": 391615,
+      "sha256": "49567c295ede4f0dea96761ae86117716db3a9390e68b7fafd788662d8de1923"
+    },
+    {
+      "url": "https://apollo-aa.jp/wp-content/uploads/2018/01/main01-4.jpg",
+      "file": "./assets/apollo-reference/f4ba3fe1e72c.jpg",
+      "bytes": 584128,
+      "sha256": "c40b3ca192b1cd891bf43396ae8fb69d8d242cc7d929d550e11ed233fa583c29"
+    },
+    {
+      "url": "https://apollo-aa.jp/wp-content/uploads/2018/01/main_sp.jpg",
+      "file": "./assets/apollo-reference/2530cef13fc3.jpg",
+      "bytes": 111967,
+      "sha256": "83c0e5297dfa15abac637291406463f33e87651f66c867cfd870fa0c3b0c050f"
+    },
+    {
+      "url": "https://apollo-aa.jp/wp-content/uploads/2022/09/020-scaled.jpg",
+      "file": "./assets/apollo-reference/cbf241de4aeb.jpg",
+      "bytes": 914447,
+      "sha256": "82ab63e28db58a6aa2b902a3313c8dccc3c9241cc2880ff1744b65265a20e1d2"
+    },
+    {
+      "url": "https://apollo-aa.jp/wp-content/uploads/2022/11/03.jpg",
+      "file": "./assets/apollo-reference/731c46c20311.jpg",
+      "bytes": 753494,
+      "sha256": "23f9a15439ba705b13fde702ccede0f86221294a749983d485a810fece0403e1"
+    },
+    {
+      "url": "https://apollo-aa.jp/wp-content/uploads/2025/02/01_001_tr-2-scaled.jpg",
+      "file": "./assets/apollo-reference/46fc172ba695.jpg",
+      "bytes": 573587,
+      "sha256": "7d89b282d5699c973b363199e0d1733199502dd0add6456de84433c1087a655a"
+    },
+    {
+      "url": "https://apollo-aa.jp/wp-content/uploads/2025/02/01_top用_tr.jpg",
+      "file": "./assets/apollo-reference/c692fd17282b.jpg",
+      "bytes": 542518,
+      "sha256": "cb07260490d2ea4a52b2e13f6bcd5c894481897c8965911cca6d2b24457a96a8"
+    },
+    {
+      "url": "https://apollo-aa.jp/wp-content/themes/apollo_new/img/index/loading.gif",
+      "file": "./assets/apollo-reference/5ee765c58403.gif",
+      "bytes": 34390,
+      "sha256": "9c3d964f886aaf5f04a059d74269e6182e9c930bde90e5cf9627474ae5120e19"
+    },
+    {
+      "url": "https://apollo-aa.jp/img/common/sns_instagram.png",
+      "file": "./assets/apollo-reference/27838321476f.png",
+      "bytes": 2646,
+      "sha256": "cd15d3c554c93f3ff7bd8844656a385ab0aedafa41050c8718408484a85fb413"
+    },
+    {
+      "url": "https://apollo-aa.jp/img/common/menu_img01.jpg",
+      "file": "./assets/apollo-reference/266695bd3242.jpg",
+      "bytes": 14823,
+      "sha256": "8e25298daff07f0e08667675b5ebf5036d4dd54e481a95a07acc464cc470619d"
+    },
+    {
+      "url": "https://apollo-aa.jp/wp-content/themes/apollo_new/img/common/sns_instagram.png",
+      "file": "./assets/apollo-reference/afd0fc07912f.png",
+      "bytes": 2646,
+      "sha256": "cd15d3c554c93f3ff7bd8844656a385ab0aedafa41050c8718408484a85fb413"
+    },
+    {
+      "url": "https://apollo-aa.jp/img/common/pagetop.png",
+      "file": "./assets/apollo-reference/132dcb5de486.png",
+      "bytes": 206,
+      "sha256": "75c2f6c2755b277b323ecd3bcc97ebd6552772d7b87b0fc50b9cc32a3e48e87b"
+    },
+    {
+      "url": "https://apollo-aa.jp/img/index/shadow_pc.png",
+      "file": "./assets/apollo-reference/755f1c8ff803.png",
+      "bytes": 266144,
+      "sha256": "34d5f4c026878c93c9c8570ef74d87844eb8fea6e3ecce59f94a9b491d53d8ae"
+    },
+    {
+      "url": "https://apollo-aa.jp/img/index/shadow_sp.png",
+      "file": "./assets/apollo-reference/c8977926f102.png",
+      "bytes": 81850,
+      "sha256": "b9356c0a70dcce5538699caf44bb7acf0598cce294161f649ff5843aa1d3b090"
+    },
+    {
+      "url": "https://apollo-aa.jp/js/jquery.fullPage.css",
+      "file": "./assets/apollo-reference/92af5a16d338.css",
+      "bytes": 4990,
+      "sha256": "3751f9362464ec6ae0a1d7896827462c6b823b3b9b150b5d93aab4e2b0e6e29d"
+    }
+  ]
+}

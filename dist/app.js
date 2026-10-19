@@ -3,399 +3,230 @@
   const track = document.querySelector('#fullpage');
   const sections = [...track.querySelectorAll(':scope > .section')];
   const projects = sections.filter(section => section.classList.contains('mainImg'));
-  const projectStart = sections.indexOf(projects[0]);
   const footerIndex = sections.length - 1;
   const footer = document.querySelector('#gFooter');
-  const menu = document.querySelector('.menu');
-  const navigation = document.querySelector('.menuBox');
-  const menuBackdrop = document.querySelector('.menu-backdrop');
-  const detailsHandle = document.querySelector('.details-handle');
-  const controls = document.querySelector('.project-controls');
-  const languageControl = document.querySelector('.language-control');
-  const scrollControl = document.querySelector('.scroll-control');
-  const scrollRange = document.querySelector('.scroll-range');
-  const scrollPosition = document.querySelector('.scroll-position');
-  const scrollJump = document.querySelector('.scroll-jump');
-  const i18n = window.RWHI18n;
-  const textAnimations = new Map();
-  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
-  let current = 0;
-  let timer;
-  let unlock;
-  let locked = false;
-  let touchY = null;
-  let touchX = null;
-  let touchScrollTop = 0;
-  let wheelSum = 0;
-  let wheelTimer;
-  let wheelGestureUsed = false;
-  let pendingWheelStep = 0;
-  let scrollDragging = false;
-  let scrollIdleTimer;
-  let scrollHovered = false;
-  let scrollKeyboardFocus = false;
-  let menuOpen = false;
-  let menuOpenedByHover = false;
-  let menuCloseTimer;
   const main = document.querySelector('#main');
   const header = document.querySelector('#gHeader');
+  const menu = document.querySelector('.menu');
+  const navigation = document.querySelector('.menuBox');
+  const rail = document.querySelector('.meunRBox');
+  const counter = document.querySelector('.arrBox');
+  const counterTrack = document.querySelector('.moveBlock');
+  const scrollCue = document.querySelector('#main .sroll');
+  const pageTop = document.querySelector('.pagetop');
   const contact = document.querySelector('#contact-modal');
-  const profile = document.querySelector('#profile-modal');
-  const modals = [contact, profile];
-  const modalOpen = () => modals.some(dialog => dialog.open);
-  const details = window.RWHDetails.create({
-    onOpenChange(open) {
-      if (open && menuOpen) toggleMenu(false);
-      main.inert = open || menuOpen;
-      header.inert = open || menuOpen;
-      controls.inert = open;
-      scrollControl.inert = open || menuOpen;
-      languageControl.hidden = open;
-    },
-    onInteractionChange(active) { controls.inert = active || details.isOpen; }
-  });
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const textAnimations = new Map();
+  let current = 0, timer, unlock, cleanup, locked = false, ready = false, menuOpen = false;
+  let wheelSum = 0, wheelTimer, wheelGestureUsed = false, pendingWheelStep = 0;
+  let touchY = null, touchX = null, touchScrollTop = 0, returnFocus = menu;
 
-  for (const [index, section] of projects.entries()) {
-    const trigger = section.querySelector('.txtBox a');
-    trigger.href = `#project-${index + 1}`;
-    trigger.setAttribute('aria-haspopup', 'dialog');
-    trigger.addEventListener('click', event => { event.preventDefault(); details.open(); });
-  }
+  // The original English landing-page copy stays unchanged. Only the owner form uses these status messages.
+  const messages = {
+    sendMessage: 'Send message', sendingMessage: 'Sending…',
+    contactSent: 'Thank you! Your enquiry has been sent to RWH.',
+    contactInvalid: 'Please check your name, email and questions.',
+    contactError: 'Your enquiry could not be sent. Your details are still here; please try again.',
+    contactRateLimited: 'Please wait a few minutes before trying again.',
+    contactUnavailable: 'The contact form is being set up. Please try again later.',
+    contactLocal: 'Please open the published website to send an enquiry.'
+  };
+  window.RWHI18n = { t: key => messages[key] || key, message(element, key) { element.textContent = messages[key] || key; } };
 
-  function translateProjects() {
-    for (const animation of textAnimations.values()) clearInterval(animation);
-    textAnimations.clear();
-    for (const [index, section] of projects.entries()) {
-      const project = i18n.project(window.RWH_PROJECTS[index]);
-      section.querySelector('.txtBox a').setAttribute('aria-label', i18n.t('viewDetails', { name: project.name }));
-      section.querySelector('h2 span').textContent = project.name;
-      const lines = [[project.year, project.type].filter(Boolean).join(' '), project.summary];
-      section.querySelectorAll('.shuffle').forEach((element, line) => {
-        element.dataset.text = lines[line];
-        element.textContent = lines[line];
-      });
-    }
-    menu.setAttribute('aria-label', i18n.t(menuOpen ? 'closeMenu' : 'openMenu'));
-    updateScrollControl();
-    if (current === footerIndex) track.style.transform = `translate3d(0, -${offset()}px, 0)`;
-  }
-  document.addEventListener('rwh:languagechange', translateProjects);
-  translateProjects();
-
-  // Only the active section is reachable by keyboard or assistive technology.
   function accessibleSections() {
     sections.forEach((section, index) => {
       section.inert = index !== current;
       section.setAttribute('aria-hidden', String(index !== current));
     });
   }
-
   function schedule() {
     clearTimeout(timer);
-    if (!reduced.matches && !document.hidden && !scrollDragging && current < footerIndex) {
-      const delay = 6000;
-      timer = setTimeout(() => goTo(current + 1, false, true), delay);
+    if (ready && !reduced.matches && !document.hidden && current < footerIndex) {
+      timer = setTimeout(() => goTo(current + 1, false, true), 6000);
     }
   }
-
-  function updateScrollControl() {
-    const isFooter = current === footerIndex;
-    const name = current < projectStart ? i18n.t(current === 0 ? 'brandSection' : 'strengthsSection') : window.RWH_PROJECTS[current - projectStart]?.name;
-    scrollRange.value = current;
-    scrollRange.max = footerIndex;
-    scrollRange.setAttribute('aria-valuetext', isFooter ? i18n.t('scrollFooter') : i18n.t('scrollProject', { number: current + 1, total: footerIndex, name }));
-    scrollPosition.textContent = isFooter ? i18n.t('footerPosition') : `${String(current + 1).padStart(2, '0')}\n\n${projects.length}`;
-    scrollJump.disabled = isFooter;
-    scrollJump.title = i18n.t('skipFooter');
-  }
-
   function offset() {
-    const height = document.querySelector('#main').clientHeight;
-    return current < footerIndex
-      ? current * height
-      : footerIndex * height - Math.max(0, height - footer.offsetHeight);
+    return current < footerIndex ? current * main.clientHeight
+      : footerIndex * main.clientHeight - Math.max(0, main.clientHeight - footer.offsetHeight);
   }
-
-  function goTo(index, immediate = false, automatic = false) {
-    // An explicit rail/Home/End jump replaces any wheel request still waiting.
-    if (immediate) pendingWheelStep = 0;
-    const destination = Math.max(0, Math.min(sections.length - 1, index));
-    if ((!automatic && (menuOpen || details.isOpen || details.isInteracting || modalOpen())) || (locked && !immediate) || destination === current) return;
-    current = destination;
-    clearTimeout(timer);
-    clearTimeout(unlock);
-    wheelSum = 0;
-    pendingWheelStep = 0;
-    locked = true;
-    track.classList.toggle('manual-scroll', !automatic);
-    track.style.transform = `translate3d(0, -${offset()}px, 0)`;
-    sections.forEach((section, i) => section.classList.toggle('show', i === current));
-    const isFooter = current === footerIndex;
-    document.body.classList.toggle('at-footer', isFooter);
-    document.body.classList.toggle('at-intro', current < projectStart);
-    accessibleSections();
-    details.update(current - projectStart);
-    updateScrollControl();
-    shuffleText(projects[current - projectStart]);
-    unlock = setTimeout(() => {
-      locked = false;
-      const step = pendingWheelStep;
-      pendingWheelStep = 0;
-      if (step && !document.hidden) goTo(current + step);
-    }, reduced.matches ? 0 : automatic ? 1050 : 1200);
-    schedule();
+  function updatePosition() {
+    const index = Math.min(current, projects.length - 1);
+    counterTrack.style.transform = `translateY(${-index * 19}px)`;
+    counter.setAttribute('aria-label', `Project ${index + 1} of ${projects.length}`);
+    pageTop.style.display = current === footerIndex ? 'block' : 'none';
+    scrollCue.style.display = ready && current !== footerIndex ? 'block' : 'none';
   }
-
-  function shuffleText(section) {
+  // Progressive reveal adapted from Shuffle Letters 1.0 by Martin Angelov (MIT).
+  // Keep its original two-character window and 20fps timing, including partial line wrapping.
+  function shuffle(section) {
     if (!section || reduced.matches) return;
     for (const element of section.querySelectorAll('.shuffle')) {
-      clearInterval(textAnimations.get(element));
+      clearTimeout(textAnimations.get(element));
       const text = element.dataset.text || element.textContent;
       element.dataset.text = text;
-      let frame = 0;
-      const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-      const animation = setInterval(() => {
-        frame++;
-        const revealed = Math.ceil((frame / 18) * text.length);
-        element.textContent = [...text].map((character, i) => i < revealed || character === ' ' ? character : alphabet[Math.floor(Math.random() * alphabet.length)]).join('');
-        if (frame >= 18 || document.hidden) { element.textContent = text; clearInterval(animation); textAnimations.delete(element); }
-      }, 26);
-      textAnimations.set(element, animation);
-    }
-  }
-
-  function toggleMenu(open, { focus = true, hover = false } = {}) {
-    clearTimeout(menuCloseTimer);
-    if (open && details.isOpen) details.close();
-    menuOpen = open;
-    menuOpenedByHover = open && hover;
-    document.body.classList.toggle('menu-open', open);
-    menu.classList.toggle('active', open);
-    menu.setAttribute('aria-expanded', String(open));
-    menu.setAttribute('aria-label', i18n.t(open ? 'closeMenu' : 'openMenu'));
-    navigation.classList.toggle('moveout', open);
-    navigation.inert = !open;
-    main.inert = open || details.isOpen;
-    header.inert = open || details.isOpen;
-    scrollControl.inert = open || details.isOpen;
-    if (focus) {
-      if (open) navigation.querySelector('a').focus({ preventScroll: true });
-      else menu.focus({ preventScroll: true });
-    }
-  }
-
-  menu.addEventListener('click', () => toggleMenu(!menuOpen));
-  menuBackdrop.addEventListener('click', () => toggleMenu(false));
-  const menuHover = window.matchMedia('(hover: hover) and (pointer: fine)');
-  for (const surface of [menu, navigation]) {
-    surface.addEventListener('pointerenter', event => {
-      if (event.pointerType !== 'mouse' || !menuHover.matches || details.isOpen || modalOpen()) return;
-      clearTimeout(menuCloseTimer);
-      if (!menuOpen) toggleMenu(true, { focus: false, hover: true });
-    });
-    surface.addEventListener('pointerleave', event => {
-      if (event.pointerType !== 'mouse' || !menuOpenedByHover) return;
-      if (menu.contains(event.relatedTarget) || navigation.contains(event.relatedTarget)) return;
-      menuCloseTimer = setTimeout(() => {
-        if (menuOpenedByHover) toggleMenu(false, { focus: false });
-      }, 250);
-    });
-  }
-  function bindModal(dialog, selector) {
-    let returnFocus = menu;
-    for (const trigger of document.querySelectorAll(selector)) {
-      trigger.addEventListener('click', event => {
-        event.preventDefault();
-        returnFocus = trigger.closest('#navigation') ? menu : trigger;
-        if (menuOpen) toggleMenu(false);
-        dialog.showModal();
-      });
-    }
-    dialog.querySelector('[data-modal-close]').addEventListener('click', () => dialog.close());
-    dialog.addEventListener('keydown', event => {
-      if (event.key !== 'Tab') return;
-      const focusable = [...dialog.querySelectorAll('button,input,textarea,a[href]')].filter(element => !element.disabled && element.offsetParent !== null);
-      const first = focusable[0], last = focusable.at(-1);
-      if (event.shiftKey && document.activeElement === first) {
-        event.preventDefault(); last.focus();
-      } else if (!event.shiftKey && document.activeElement === last) {
-        event.preventDefault(); first.focus();
+      const characters = [...text];
+      const letters = characters.map((character, index) => character === ' ' ? -1 : index).filter(index => index !== -1);
+      let start = -2;
+      function frame() {
+        if (document.hidden || start > letters.length) {
+          element.textContent = text; textAnimations.delete(element); return;
+        }
+        const next = characters.slice();
+        for (let i = Math.max(start, 0); i < letters.length; i++) {
+          const index = letters[i], character = characters[index];
+          if (i >= start + 2) { next[index] = ''; continue; }
+          const pool = /[a-z]/.test(character) ? 'abcdefghijklmnopqrstuvwxyz0123456789'
+            : /[A-Z]/.test(character) ? 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
+            : ',.?/\\(^)![]{}*&^%$#';
+          next[index] = pool[Math.floor(Math.random() * pool.length)];
+        }
+        element.textContent = next.join(''); start++;
+        textAnimations.set(element, setTimeout(frame, 50));
       }
-    });
-    dialog.addEventListener('click', event => {
-      if (event.target !== dialog) return;
-      const bounds = dialog.getBoundingClientRect();
-      if (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom) dialog.close();
-    });
-    dialog.addEventListener('close', () => {
-      const target = returnFocus.closest('[inert]') ? menu : returnFocus;
-      target.focus({ preventScroll: true });
-    });
+      frame();
+    }
   }
-  bindModal(contact, '[data-contact-open]');
-  bindModal(profile, '[data-profile-open]');
-  for (const logo of document.querySelectorAll('.hLogo')) {
-    logo.addEventListener('click', event => { event.preventDefault(); if (menuOpen) toggleMenu(false); goTo(0, true); });
-  }
-  scrollRange.addEventListener('input', () => goTo(Number(scrollRange.value), true));
-  scrollRange.addEventListener('pointerdown', () => { scrollDragging = true; clearTimeout(timer); });
-  function endScrollDrag() {
-    if (!scrollDragging) return;
-    scrollDragging = false;
-    revealScrollControl();
+  function goTo(index, immediate = false, automatic = false) {
+    if (immediate) pendingWheelStep = 0;
+    const destination = Math.max(0, Math.min(footerIndex, index));
+    if (!ready || (!automatic && (menuOpen || contact.open)) || (locked && !immediate) || destination === current) return;
+    current = destination;
+    clearTimeout(timer); clearTimeout(unlock); clearTimeout(cleanup);
+    wheelSum = 0; pendingWheelStep = 0; locked = true;
+    // Apollo keeps the outgoing photograph moving until the full one-second transition finishes.
+    sections[current].classList.add('show');
+    track.style.transform = `translate3d(0,-${offset()}px,0)`;
+    document.body.classList.toggle('at-footer', current === footerIndex);
+    accessibleSections(); updatePosition();
+    setTimeout(() => shuffle(projects[current]), reduced.matches ? 0 : 300);
+    cleanup = setTimeout(() => {
+      if (current !== footerIndex) sections.forEach((section, i) => section.classList.toggle('show', i === current));
+    }, reduced.matches ? 0 : 1000);
+    unlock = setTimeout(() => {
+      locked = false;
+      const step = pendingWheelStep; pendingWheelStep = 0;
+      if (step && !document.hidden) goTo(current + step);
+    }, reduced.matches ? 0 : 1050);
     schedule();
   }
-  document.addEventListener('pointerup', endScrollDrag);
-  document.addEventListener('pointercancel', endScrollDrag);
-  scrollRange.addEventListener('keydown', event => {
-    const moves = { ArrowUp: -1, ArrowLeft: -1, ArrowDown: 1, ArrowRight: 1, PageUp: -1, PageDown: 1 };
-    if (Object.hasOwn(moves, event.key) || event.key === 'Home' || event.key === 'End') {
-      event.preventDefault();
-      event.stopPropagation();
-      if (event.repeat) return;
-      const jump = event.key === 'Home' || event.key === 'End';
-      goTo(event.key === 'Home' ? 0 : event.key === 'End' ? footerIndex : current + moves[event.key], jump);
-    }
-  });
-  scrollJump.addEventListener('click', () => goTo(footerIndex, true));
-
-  // Only viewer activity reveals the rail; automatic slides leave it hidden.
-  function revealScrollControl() {
-    scrollControl.classList.remove('is-idle');
-    clearTimeout(scrollIdleTimer);
-    scrollIdleTimer = setTimeout(() => {
-      if (scrollDragging || scrollHovered || (scrollKeyboardFocus && scrollControl.contains(document.activeElement))) return;
-      scrollControl.classList.add('is-idle');
-    }, 2200);
+  function toggleMenu(open, focus = true) {
+    menuOpen = open;
+    document.body.classList.toggle('menu-open', open);
+    menu.classList.toggle('active', open);
+    header.classList.toggle('show01', open);
+    navigation.classList.toggle('moveout', open);
+    navigation.inert = !open;
+    main.inert = open;
+    menu.setAttribute('aria-expanded', String(open));
+    menu.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    if (focus) (open ? navigation.querySelector('a') : menu).focus({ preventScroll: true });
   }
-  document.addEventListener('pointermove', revealScrollControl, { passive: true });
-  document.addEventListener('pointerdown', () => {
-    scrollKeyboardFocus = false;
-    revealScrollControl();
-  }, { passive: true, capture: true });
-  document.addEventListener('wheel', revealScrollControl, { passive: true });
-  document.addEventListener('touchstart', revealScrollControl, { passive: true });
-  document.addEventListener('touchmove', revealScrollControl, { passive: true });
-  document.addEventListener('keydown', () => {
-    scrollKeyboardFocus = true;
-    revealScrollControl();
-  }, { capture: true });
-  document.addEventListener('focusin', revealScrollControl);
-  scrollControl.addEventListener('focusout', revealScrollControl);
-  scrollControl.addEventListener('pointerenter', event => {
-    if (event.pointerType !== 'mouse') return;
-    scrollHovered = true;
-    revealScrollControl();
-  });
-  scrollControl.addEventListener('pointerleave', event => {
-    if (event.pointerType !== 'mouse') return;
-    scrollHovered = false;
-    revealScrollControl();
-  });
-  revealScrollControl();
-
-  // A gesture consumes one page. Momentum must settle before another gesture.
-  // Remember one fresh request during a transition instead of discarding it.
-  function resetWheelGesture() {
-    wheelTimer = undefined;
-    wheelSum = 0;
-    wheelGestureUsed = false;
+  menu.addEventListener('click', event => { event.stopPropagation(); toggleMenu(!menuOpen); });
+  rail.addEventListener('click', event => { if (!menu.contains(event.target)) toggleMenu(!menuOpen); });
+  for (const logo of document.querySelectorAll('.hLogo')) {
+    logo.addEventListener('click', event => { event.preventDefault(); if (menuOpen) toggleMenu(false, false); goTo(0, true); });
   }
+  document.querySelector('.scroll-jump').addEventListener('click', event => { event.preventDefault(); goTo(current + 1); });
+  document.querySelector('.pagetop a').addEventListener('click', event => { event.preventDefault(); goTo(0, true); });
 
-  function activeScrollable(target) {
-    const candidate = current === footerIndex ? footer : null;
-    return candidate?.contains(target) ? candidate : null;
+  for (const trigger of document.querySelectorAll('[data-contact-open]')) {
+    trigger.addEventListener('click', event => {
+      event.preventDefault(); returnFocus = trigger.closest('.menuBox') ? menu : trigger;
+      if (menuOpen) toggleMenu(false, false);
+      contact.showModal();
+    });
   }
+  contact.querySelector('[data-modal-close]').addEventListener('click', () => contact.close());
+  contact.addEventListener('click', event => {
+    if (event.target !== contact) return;
+    const r = contact.getBoundingClientRect();
+    if (event.clientX < r.left || event.clientX > r.right || event.clientY < r.top || event.clientY > r.bottom) contact.close();
+  });
+  contact.addEventListener('close', () => (returnFocus.closest('[inert]') ? menu : returnFocus).focus({ preventScroll: true }));
 
+  function activeScrollable(target) { return current === footerIndex && footer.contains(target) ? footer : null; }
+  function resetWheelGesture() { wheelTimer = undefined; wheelSum = 0; wheelGestureUsed = false; }
   document.addEventListener('wheel', event => {
-    if (event.ctrlKey || Math.abs(event.deltaY) < Math.abs(event.deltaX) || menuOpen || details.isOpen || details.isInteracting || modalOpen()) return;
-    clearTimeout(wheelTimer);
-    wheelTimer = setTimeout(resetWheelGesture, 280);
+    if (event.ctrlKey || Math.abs(event.deltaY) < Math.abs(event.deltaX) || menuOpen || contact.open || !ready) return;
+    clearTimeout(wheelTimer); wheelTimer = setTimeout(resetWheelGesture, 280);
     const scrollable = !locked && activeScrollable(event.target);
-    if (scrollable) {
-      const atTop = scrollable.scrollTop <= 1;
-      const atBottom = scrollable.scrollTop + scrollable.clientHeight >= scrollable.scrollHeight - 1;
-      if ((event.deltaY < 0 && !atTop) || (event.deltaY > 0 && !atBottom)) {
-        // Reaching the end of long text with momentum doesn't skip its page.
-        wheelGestureUsed = true;
-        wheelSum = 0;
-        schedule();
-        return;
-      }
+    if (scrollable && ((event.deltaY < 0 && scrollable.scrollTop > 1) ||
+      (event.deltaY > 0 && scrollable.scrollTop + scrollable.clientHeight < scrollable.scrollHeight - 1))) {
+      wheelGestureUsed = true; wheelSum = 0; return;
     }
     event.preventDefault();
     if (wheelGestureUsed) return;
     const delta = event.deltaY * (event.deltaMode === 1 ? 16 : event.deltaMode === 2 ? main.clientHeight : 1);
-    if (wheelSum && Math.sign(delta) !== Math.sign(wheelSum)) {
-      wheelSum = 0;
-    }
+    if (wheelSum && Math.sign(delta) !== Math.sign(wheelSum)) wheelSum = 0;
     wheelSum += delta;
     if (Math.abs(wheelSum) >= 70) {
       wheelGestureUsed = true;
-      const step = Math.sign(wheelSum);
-      if (locked) pendingWheelStep = step;
-      else goTo(current + step);
+      if (locked) pendingWheelStep = Math.sign(wheelSum);
+      else goTo(current + Math.sign(wheelSum));
     }
   }, { passive: false });
-
   document.addEventListener('touchstart', event => {
-    touchY = event.touches.length === 1 && !event.target.closest('.scroll-control') ? event.touches[0].clientY : null;
+    touchY = event.touches.length === 1 ? event.touches[0].clientY : null;
     touchX = touchY === null ? null : event.touches[0].clientX;
     touchScrollTop = activeScrollable(event.target)?.scrollTop || 0;
   }, { passive: true });
   document.addEventListener('touchend', event => {
     if (touchY === null) return;
-    const distance = touchY - event.changedTouches[0].clientY;
-    const horizontal = touchX - event.changedTouches[0].clientX;
+    const distance = touchY - event.changedTouches[0].clientY, horizontal = touchX - event.changedTouches[0].clientX;
     touchY = null;
-    if (Math.abs(horizontal) > Math.abs(distance) || menuOpen || details.isOpen || details.isInteracting || modalOpen() || event.target.closest('.details-shell')) return;
-    if (Math.abs(distance) > 45) {
-      const scrollable = activeScrollable(event.target);
-      if (scrollable && (Math.abs(scrollable.scrollTop - touchScrollTop) > 1 || (distance < 0 && scrollable.scrollTop > 1) || (distance > 0 && scrollable.scrollTop + scrollable.clientHeight < scrollable.scrollHeight - 1))) {
-        schedule();
-        return;
-      }
-      goTo(current + Math.sign(distance));
-    }
+    if (Math.abs(horizontal) > Math.abs(distance) || menuOpen || contact.open || Math.abs(distance) <= 45) return;
+    const scrollable = activeScrollable(event.target);
+    if (scrollable && (Math.abs(scrollable.scrollTop - touchScrollTop) > 1 ||
+      (distance < 0 && scrollable.scrollTop > 1) ||
+      (distance > 0 && scrollable.scrollTop + scrollable.clientHeight < scrollable.scrollHeight - 1))) return;
+    goTo(current + Math.sign(distance));
   }, { passive: true });
-
   document.addEventListener('keydown', event => {
-    if (event.defaultPrevented || details.isOpen || details.isInteracting || modalOpen()) return;
+    if (event.defaultPrevented || contact.open) return;
     if (menuOpen) {
       if (event.key === 'Escape') { event.preventDefault(); toggleMenu(false); }
       if (event.key === 'Tab') {
-        menuOpenedByHover = false;
-        clearTimeout(menuCloseTimer);
-        const focusable = [...navigation.querySelectorAll('a'), menu, ...languageControl.querySelectorAll('button')];
-        if (!detailsHandle.hidden) focusable.push(detailsHandle);
-        const active = focusable.indexOf(document.activeElement);
-        const next = (active + (event.shiftKey ? -1 : 1) + focusable.length) % focusable.length;
-        event.preventDefault();
-        focusable[next].focus();
+        const items = [...navigation.querySelectorAll('a'), menu];
+        const active = items.indexOf(document.activeElement);
+        event.preventDefault(); items[(active + (event.shiftKey ? -1 : 1) + items.length) % items.length].focus();
       }
       return;
     }
-    if (event.target.matches('input,textarea,select') || (event.target.matches('button,a,summary') && event.key === ' ')) return;
-    if (['ArrowDown', 'PageDown', ' ', 'ArrowUp', 'PageUp', 'Home', 'End'].includes(event.key)) {
-      const scrollable = activeScrollable(event.target);
-      const down = ['ArrowDown', 'PageDown', ' '].includes(event.key);
-      const up = ['ArrowUp', 'PageUp'].includes(event.key);
-      if (scrollable && ((down && scrollable.scrollTop + scrollable.clientHeight < scrollable.scrollHeight - 1) || (up && scrollable.scrollTop > 1))) {
-        schedule();
-        return;
-      }
-      if (event.repeat) { event.preventDefault(); return; }
-      event.preventDefault();
-      if (event.key === 'Home') goTo(0, true);
-      else if (event.key === 'End') goTo(footerIndex, true);
-      else goTo(current + (['ArrowUp', 'PageUp'].includes(event.key) ? -1 : 1));
-    }
+    if (event.target.matches('input,textarea,select') || (event.target.matches('button,a') && event.key === ' ')) return;
+    if (!['ArrowDown','PageDown',' ','ArrowUp','PageUp','Home','End'].includes(event.key)) return;
+    const scrollable = activeScrollable(event.target);
+    const down = ['ArrowDown','PageDown',' '].includes(event.key);
+    if (scrollable && ((down && scrollable.scrollTop + scrollable.clientHeight < scrollable.scrollHeight - 1) || (!down && scrollable.scrollTop > 1 && event.key !== 'Home' && event.key !== 'End'))) return;
+    event.preventDefault(); if (event.repeat) return;
+    if (event.key === 'Home') goTo(0, true);
+    else if (event.key === 'End') goTo(footerIndex, true);
+    else goTo(current + (['ArrowUp','PageUp'].includes(event.key) ? -1 : 1));
   });
-
-  window.addEventListener('resize', () => { track.style.transform = `translate3d(0, -${offset()}px, 0)`; });
+  window.addEventListener('resize', () => { track.style.transform = `translate3d(0,-${offset()}px,0)`; });
   document.addEventListener('visibilitychange', schedule);
   reduced.addEventListener('change', schedule);
-  details.update(current - projectStart);
-  accessibleSections();
-  schedule();
+
+  function start() {
+    const cover = document.querySelector('.cover');
+    cover.querySelector('img').style.opacity = 0;
+    document.body.classList.add('hideCover');
+    const reveal = () => {
+      ready = true;
+      header.classList.add('show'); header.querySelector('h1').classList.add('show');
+      cover.style.opacity = 0; cover.style.pointerEvents = 'none';
+      menu.querySelectorAll('span').forEach((span, i) => setTimeout(() => span.classList.add('show'), reduced.matches ? 0 : i * 100));
+      projects[0].classList.add('show'); accessibleSections(); shuffle(projects[0]); updatePosition(); schedule();
+      setTimeout(() => { header.classList.add('noTrans'); header.style.zIndex = 11; cover.hidden = true; }, reduced.matches ? 0 : 800);
+      setTimeout(() => counter.classList.add('show'), reduced.matches ? 0 : 500);
+      setTimeout(() => { if (current < footerIndex) scrollCue.style.display = 'block'; }, reduced.matches ? 0 : 1000);
+    };
+    if (reduced.matches) reveal();
+    else {
+      setTimeout(() => header.classList.add('show'), 800);
+      setTimeout(reveal, 1800);
+    }
+  }
+  updatePosition(); accessibleSections();
+  if (document.readyState === 'complete') start();
+  else window.addEventListener('load', start, { once: true });
 })();
