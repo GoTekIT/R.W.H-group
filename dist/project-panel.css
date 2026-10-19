@@ -9,7 +9,7 @@
 .project-panel-close svg { width:22px; height:22px; fill:none; stroke:currentColor; stroke-width:1.2; transition:transform .25s; }
 .project-panel-close:hover svg { transform:rotate(90deg); }
 .project-panel-close:focus-visible { outline:1px solid #fff; outline-offset:-8px; }
-.project-panel-status { position:absolute; inset:0 70px 0 0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:20px; padding:30px; font:300 13px/1.6 Roboto,Arial,sans-serif; text-align:center; }
+.project-panel-status { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:20px; padding:30px; font:300 13px/1.6 Roboto,Arial,sans-serif; text-align:center; }
 .project-panel-status .panel-wordmark { font-size:28px; font-weight:500; letter-spacing:.01em; }
 .project-panel-status .panel-wordmark small { margin-left:5px; font-size:13px; font-weight:400; }
 .project-panel.is-loaded .project-panel-status { display:none; }
@@ -19,10 +19,9 @@
 .project-embedded { scrollbar-gutter:auto; scrollbar-width:none; }
 .project-embedded::-webkit-scrollbar { display:none; }
 .project-embedded .menu { display:none; }
-.project-embedded .meunRBox { pointer-events:none; }
+.project-embedded .meunRBox { display:none; }
 @media(max-width:767px) {
   .project-panel-close { width:45px; height:50px; }
   .project-panel-close svg { width:20px; height:20px; }
-  .project-panel-status { right:45px; }
 }
 @media(prefers-reduced-motion:reduce) { .project-panel, .project-panel iframe, .project-panel-close svg { transition:none; } }

@@ -2821,7 +2821,18 @@ body { min-width:0; }
 body.menu-open { overflow:hidden; }
 body.menu-open .comTopLinkBox, body.menu-open .comSideTxt { opacity:0; visibility:hidden; }
 .comTopLinkBox h2 { overflow-wrap:break-word; }
-.comSideTxt .txt02 { text-overflow:ellipsis; }
+/* Compact project intro; the gallery has no reserved vertical side rail. */
+#container { padding-top:0; }
+#gHeader.header01, #gHeader.header01.show01 { position:relative; height:auto; min-height:132px; padding:32px 180px 32px 6.5%; }
+#gHeader.header01 .inner { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); align-items:start; gap:24px; }
+#gHeader.header01 h1 img { width:auto; height:22px; }
+.comTopLinkBox { position:static; width:auto; min-height:0; padding:0; display:block; }
+.comTopLinkBox h2 { margin:0 0 10px; font-size:22px; line-height:1.3; letter-spacing:.06em; font-weight:300; }
+.comTopLinkBox .txt { font-size:10px; line-height:1.6; letter-spacing:.03em; }
+.meunRBox { height:60px; }
+#main .inner { padding-right:0; }
+#main .inner01, #main .photo, #main .phoList, #main .listUl01 { margin-right:0; }
+#main .comBtn { right:auto; }
 #main .gallery-image, #main .gallery-image:hover { display:block; opacity:1; cursor:zoom-in; }
 #main .project-photos .photo { margin-bottom:0; }
 #main .project-photos img { display:block; width:100%; height:auto; max-height:none; }
@@ -2847,6 +2858,14 @@ body.page-scrolled .pagetop { opacity:1; visibility:visible; }
 .viewer-close:hover, .viewer-prev:hover, .viewer-next:hover { background:#ffffff12; }
 body:has(dialog[open]) { overflow:hidden; }
 @media(max-width:767px) {
+  #gHeader.header01, #gHeader.header01.show01 { min-height:0; padding:20px 24px 22px; }
+  #gHeader.header01 .inner { grid-template-columns:minmax(0,1fr); gap:14px; }
+  #gHeader.header01 h1 img { height:17px; }
+  .comTopLinkBox { min-height:0; }
+  .comTopLinkBox h2 { margin-bottom:6px; font-size:17px; line-height:1.25; }
+  .comTopLinkBox .txt { font-size:9px; line-height:1.6; }
+  .meunRBox { height:50px; }
+  #main .sec02 .inner { margin-left:0; }
   #main .textArea .rwh-description { width:auto; }
   .image-viewer[open] { grid-template-columns:44px 1fr 44px; }
   .image-viewer button { width:40px; height:44px; font-size:24px; }

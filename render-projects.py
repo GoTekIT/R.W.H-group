@@ -205,12 +205,10 @@ for i, project in enumerate(projects):
 </head><body>
 {switcher}
 <div id="container">
-<header id="gHeader" class="header01"><div class="inner"><h1><a class="hLogo" href="../../index.html" aria-label="R.W.H group — Trang chủ"><img class="pc" src="../../{asset('assets/rwh-reference-wordmark.svg')}" alt="R.W.H group" width="357"><img class="sp" src="../../{asset('assets/rwh-reference-wordmark.svg')}" alt="R.W.H group" width="255"></a></h1></div></header>
+<header id="gHeader" class="header01"><div class="inner"><h1><a class="hLogo" href="../../index.html" aria-label="R.W.H group — Trang chủ"><img class="pc" src="../../{asset('assets/rwh-reference-wordmark.svg')}" alt="R.W.H group" width="357"><img class="sp" src="../../{asset('assets/rwh-reference-wordmark.svg')}" alt="R.W.H group" width="255"></a></h1><div class="comTopLinkBox"><h2>{e(project['title'])}</h2><div class="rBox"><p class="txt"><span data-i18n="{key}.metadata">{e(copy['vi'][key + '.metadata'])}</span><br><span data-i18n="{key}.subtitle">{e(project['subtitle'])}</span></p></div></div></div></header>
 <div class="meunRBox"><button class="menu" type="button" aria-label="Open menu" aria-controls="navigation" aria-expanded="false"><span class="top"></span><span class="bottom"></span></button></div>
 {navigation}
 <main id="main" tabindex="-1">
-<div class="comTopLinkBox"><h2>{e(project['title'])}</h2><div class="rBox"><p class="txt"><span data-i18n="{key}.metadata">{e(copy['vi'][key + '.metadata'])}</span><br><span data-i18n="{key}.subtitle">{e(project['subtitle'])}</span></p></div></div>
-<div class="comSideTxt"><p class="txt"><span class="txt01"><a href="../../index.html?project={number}">WORKS</a></span><span class="txt02" title="{e(project['title'])}">{e(project['title'])}</span></p></div>
 <section class="sec01" aria-label="{e(project['title'])}"><div class="inner01">
 <div class="project-photos">{''.join(figures)}</div>
 <div class="textArea"><div class="bdBox"><div class="lBox"><p class="project-description" data-i18n="{key}.description">{e(project['description'])}</p></div></div></div>
