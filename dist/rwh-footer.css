@@ -10,7 +10,12 @@
 #gFooter.rwh-footer .rwh-footer-hotline { display:flex; align-items:baseline; flex-wrap:wrap; gap:0 6px; margin-top:28px; font-size:14px; font-weight:400; line-height:1.6; letter-spacing:0; }
 #gFooter.rwh-footer .rwh-footer-hotline span { color:rgba(255,255,255,.7); font:inherit; letter-spacing:inherit; }
 #gFooter.rwh-footer .rwh-footer-hotline a { font:inherit; letter-spacing:inherit; white-space:nowrap; }
-#gFooter.rwh-footer .rwh-footer-bottom { margin-top:48px; padding-top:18px; border-top:1px solid rgba(255,255,255,.16); color:rgba(255,255,255,.5); font-size:11px; line-height:1.6; }
+#gFooter.rwh-footer .rwh-footer-bottom { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px 24px; margin-top:48px; padding-top:18px; border-top:1px solid rgba(255,255,255,.16); color:rgba(255,255,255,.5); font-size:11px; line-height:1.6; }
+#gFooter.rwh-footer .rwh-footer-socials { display:flex; align-items:center; flex-wrap:wrap; gap:8px 24px; }
+#gFooter.rwh-footer .rwh-footer-socials a { display:inline-flex; align-items:center; gap:8px; min-height:44px; color:#fff; font-size:12px; line-height:1.5; opacity:.8; transition:opacity .2s; }
+#gFooter.rwh-footer .rwh-footer-socials a:hover, #gFooter.rwh-footer .rwh-footer-socials a:focus-visible { opacity:1; }
+#gFooter.rwh-footer .rwh-footer-socials svg { width:19px; height:19px; fill:none; stroke:currentColor; stroke-width:1.4; }
+#gFooter.rwh-footer .rwh-footer-socials .facebook-mark { fill:currentColor; stroke:none; }
 @media(max-width:767px) {
   #gFooter.rwh-footer .fInner { padding:48px 70px 28px 29px; }
   #gFooter.rwh-footer .fLogo { margin-bottom:32px; }
@@ -20,5 +25,5 @@
   #gFooter.rwh-footer .rwh-footer-tagline { font-size:16px; }
   #gFooter.rwh-footer .rwh-footer-services { margin-top:8px; font-size:13px; }
   #gFooter.rwh-footer .rwh-footer-hotline { margin-top:20px; }
-  #gFooter.rwh-footer .rwh-footer-bottom { margin-top:32px; }
+  #gFooter.rwh-footer .rwh-footer-bottom { flex-direction:column; align-items:flex-start; margin-top:32px; }
 }

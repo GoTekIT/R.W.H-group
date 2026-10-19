@@ -31,7 +31,7 @@
       "title": "Banyan Tree Higashiyama Kyoto | A Sense of History",
       "kind": "youtube",
       "source": "https://www.youtube.com/watch?v=rfq8OT-J2Us",
-      "embed": "https://www.youtube.com/embed/rfq8OT-J2Us?autoplay=0&playsinline=1&rel=0",
+      "embed": "https://www.youtube.com/embed/rfq8OT-J2Us?autoplay=1&playsinline=1&rel=0&mute=1",
       "poster": "assets/rwh-videos/kyoto-poster.jpg",
       "noteKey": "referenceFilm",
       "scope": "withBanyan video, 2:35. Reference film only, not represented as a RWH project."
@@ -48,5 +48,6 @@
     "hakuba-hotel": "onsen-living",
     "thien-mu-hotel": "onsen-living",
     "ecopark-hung-yen": "onsen-living"
-  }
+  },
+  "playback": "Muted inline autoplay when sufficiently visible; native sound controls remain available. Offscreen media stops. Reduced-motion preferences disable autoplay."
 }
