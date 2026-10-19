@@ -60,7 +60,9 @@ html = index.read_text()
 html, count = re.subn(r'    <section class="section sec01 mainImg".*?(?=    <section class="section [^"]*fp-auto-height)', '\n'.join(sections) + '\n', html, flags=re.S)
 assert count == 1, 'Could not locate the landing-page project sections'
 html = html.replace('<html lang="en">', '<html lang="vi">')
-html = re.sub(r'<meta name="description" content="[^"]*">', '<meta name="description" content="Các dự án RWH: nghỉ dưỡng, Onsen, chăm sóc sức khỏe, khách sạn và kiến trúc đô thị tại Việt Nam và Nhật Bản.">', html)
+html = re.sub(r'<meta name="description" content="[^"]*">', '<meta name="description" content="Các dự án R.W.H group: nghỉ dưỡng, Onsen, chăm sóc sức khỏe, khách sạn và kiến trúc đô thị tại Việt Nam và Nhật Bản.">', html)
+html = re.sub(r'(?:src|href)="\./assets/rwh-reference-wordmark\.svg(?:\?v=[^"]*)?"', lambda match: match.group().split('=')[0] + f'="./{asset("assets/rwh-reference-wordmark.svg")}"', html)
+html = re.sub(r'src="\./app\.js(?:\?v=[^"]*)?"', f'src="./{asset("app.js")}"', html)
 html = re.sub(r'href="\./rwh-footer\.css(?:\?v=[^"]*)?"', f'href="./{asset("rwh-footer.css")}"', html)
 index.write_text(html)
 
@@ -96,10 +98,10 @@ for i, project in enumerate(projects):
     page = f'''<!doctype html>
 <html lang="vi"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>{e(project['title'])} | RWH</title>
+<title>{e(project['title'])} | R.W.H group</title>
 <meta name="description" content="{e(project['description'])}">
 <meta name="theme-color" content="#292929">
-<link rel="icon" href="../../assets/rwh-reference-wordmark.svg" type="image/svg+xml">
+<link rel="icon" href="../../{asset('assets/rwh-reference-wordmark.svg')}" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&amp;family=Roboto:wght@300;400;500&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../{asset('project-gallery.css')}">
@@ -108,7 +110,7 @@ for i, project in enumerate(projects):
 <script src="../../{asset('contact-form.js')}" defer></script>
 </head><body>
 <div id="container">
-<header id="gHeader" class="header01"><div class="inner"><h1><a class="hLogo" href="../../index.html" aria-label="RWH — Trang chủ"><img class="pc" src="../../assets/rwh-reference-wordmark.svg" alt="RWH" width="357"><img class="sp" src="../../assets/rwh-reference-wordmark.svg" alt="RWH" width="255"></a></h1></div></header>
+<header id="gHeader" class="header01"><div class="inner"><h1><a class="hLogo" href="../../index.html" aria-label="R.W.H group — Trang chủ"><img class="pc" src="../../{asset('assets/rwh-reference-wordmark.svg')}" alt="R.W.H group" width="357"><img class="sp" src="../../{asset('assets/rwh-reference-wordmark.svg')}" alt="R.W.H group" width="255"></a></h1></div></header>
 <div class="meunRBox"><button class="menu" type="button" aria-label="Open menu" aria-controls="navigation" aria-expanded="false"><span class="top"></span><span class="bottom"></span></button></div>
 {navigation}
 <main id="main" tabindex="-1">

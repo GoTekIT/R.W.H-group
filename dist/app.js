@@ -24,7 +24,7 @@
   // The contact form uses these status messages independently of project copy.
   const messages = {
     sendMessage: 'Send message', sendingMessage: 'Sending…',
-    contactSent: 'Thank you! Your enquiry has been sent to RWH.',
+    contactSent: 'Thank you! Your enquiry has been sent to R.W.H group.',
     contactInvalid: 'Please check your name, email and questions.',
     contactError: 'Your enquiry could not be sent. Your details are still here; please try again.',
     contactRateLimited: 'Please wait a few minutes before trying again.',
