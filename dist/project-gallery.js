@@ -30,6 +30,7 @@
     if (focus) (open ? navigation.querySelector('a') : menu).focus({ preventScroll:true });
   }
   menu.addEventListener('click', event => { event.stopPropagation(); toggleMenu(!menuOpen); });
+  document.addEventListener('rwh:close-menu', () => { if (menuOpen) toggleMenu(false, false); });
   document.querySelector('.meunRBox').addEventListener('click', event => {
     if (!menu.contains(event.target)) toggleMenu(!menuOpen);
   });

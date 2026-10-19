@@ -33,6 +33,21 @@ body > .language-switch { top:36px; right:92px; text-shadow:0 1px 4px #0006; }
 #main .textArea .project-subtitle { margin:0 0 20px; font-size:22px; font-weight:300; line-height:1.45; letter-spacing:.01em; color:#fff; }
 #main .textArea .project-description { font-size:14px; line-height:1.9; color:#bbb; }
 #main .txtBox .txtListUl > li:only-child { width:100%; }
+#main .project-overview { display:grid; grid-template-columns:minmax(0,1.45fr) minmax(0,.85fr); align-items:start; gap:clamp(40px,5vw,80px); width:calc(100% - 80px); max-width:1120px; margin:0 auto; padding:56px 0; border-bottom:1px solid #ffffff1a; box-sizing:border-box; scroll-margin-top:132px; }
+#main .project-overview .textArea { padding:0; }
+#main .project-overview .bdBox { margin:0; padding:0; border:0; }
+#main .project-overview .txtBox { display:block; min-height:0; height:auto; padding:0; }
+#main .project-overview .txtBox .tBox { display:block; margin:0 0 20px; }
+#main .project-overview .txtBox h2 { margin:0; font-size:12px; font-weight:400; line-height:1.5; letter-spacing:.12em; }
+#main .project-overview .txtListUl { display:block; margin:0; }
+#main .project-overview .txtListUl table { table-layout:fixed; }
+#main .project-overview .txtListUl table th, #main .project-overview .txtListUl table td { padding:0 0 12px; font-size:12px; line-height:1.6; letter-spacing:.015em; overflow-wrap:break-word; }
+#main .project-overview .txtListUl table th { width:38%; padding-right:20px; color:#888; }
+#main .project-overview .txtListUl table td { color:#ddd; }
+#main .project-overview .txtListUl tr:last-child th, #main .project-overview .txtListUl tr:last-child td { padding-bottom:0; }
+#main .sec01 { margin-bottom:0; }
+#main .sec02 { padding-top:32px; }
+#main .h2Ttl { margin:0 0 28px; }
 #main .listUl .pho, #main .listUl .pho img { opacity:1; }
 #main .listUl .pho img { object-fit:cover; }
 #gFooter .fLogo a { opacity:1; }
@@ -63,6 +78,11 @@ body:has(dialog[open]) { overflow:hidden; }
   .meunRBox { height:72px; right:0; width:56px; }
   .meunRBox .menu { top:32px; right:18px; }
   #main .textArea .project-subtitle { font-size:20px; }
+  #main .project-overview { grid-template-columns:minmax(0,1fr); gap:30px; width:calc(100% - 48px); padding:36px 0; scroll-margin-top:178px; }
+  #main .project-overview .project-subtitle { margin-bottom:16px; }
+  #main .project-overview .txtBox { padding-top:24px; border-top:1px solid #ffffff1a; }
+  #main .project-overview .txtBox .tBox { margin-bottom:18px; }
+  #main .h2Ttl { padding:0 24px; }
   #main .sec02 .inner { margin-left:0; }
   #main .textArea .rwh-description { width:auto; }
   .image-viewer[open] { grid-template-columns:44px 1fr 44px; }

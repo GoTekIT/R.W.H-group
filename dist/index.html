@@ -14,15 +14,16 @@
 <link rel="stylesheet" href="./rwh-menu.css?v=6595253721">
 <link rel="stylesheet" href="./site-language.css?v=dfd808db50">
 <script src="./project-copy.js?v=26625e11eb" defer></script>
-<script src="./site-language.js?v=9960eda405" defer></script>
+<script src="./site-language.js?v=51ae730719" defer></script>
 <link rel="stylesheet" href="./project-panel.css?v=8afa02da9d">
 <script src="./project-panel.js?v=2b223f4b1c" defer></script>
-<script src="./app.js?v=fc03a2ae74" defer></script>
+<link rel="stylesheet" href="./rwh-videos.css?v=258687f860">
+<script src="./rwh-videos.js?v=cc20513c18" defer></script>
+<script src="./app.js?v=435db6f5bc" defer></script>
 <script src="./contact-form.js?v=b5e23cc34d" defer></script>
 </head>
 <body id="top">
 <div class="language-switch" role="group" aria-label="Ngôn ngữ" data-i18n-aria-label="language"><button type="button" data-language="vi" lang="vi" aria-label="Tiếng Việt" aria-pressed="true">VI</button><button type="button" data-language="en" lang="en" aria-label="English" aria-pressed="false">EN</button></div>
-
 <div id="container">
     <div class="cover"><img src="./assets/apollo-reference/5ee765c58403.gif" alt="loading" width="22"></div>
     <div id="cover"></div>
@@ -51,6 +52,7 @@
                             <li><a href="https://www.rwh-group.com/projects" target="_blank" rel="noopener noreferrer" data-i18n="allProjects">All projects</a></li>
                         </ul>
                     </details></li>
+                    <li><a href="#video-library" data-videos-open aria-haspopup="dialog" aria-controls="video-library" data-i18n="videos">VIDEO</a></li>
                     <li><a href="https://www.rwh-group.com/news" target="_blank" rel="noopener noreferrer" data-i18n="navNews">News</a></li>
                     <li><a href="https://www.rwh-group.com/jobs" target="_blank" rel="noopener noreferrer" data-i18n="jobs">Jobs</a></li>
                     <li><a href="#contact-modal" data-contact-open aria-haspopup="dialog" aria-controls="contact-modal" data-i18n="navContact">Contact</a></li>
@@ -179,6 +181,7 @@
                     </div>
                     <div class="rwh-footer-details">
                         <p class="rwh-footer-tagline" data-i18n="tagline">R.W.H Group – Japanese Expertise, Better Living.</p>
+                        <a class="rwh-footer-videos" href="#video-library" data-videos-open aria-haspopup="dialog" aria-controls="video-library" data-i18n="watchVideos">Xem video ↗</a>
                         <p class="rwh-footer-services" data-i18n="services">Design &amp; Build</p>
                         <p class="rwh-footer-hotline"><span>Hotline:</span><a href="tel:+84982132489" aria-label="Gọi R.W.H Group: 0982-132-489" data-i18n-aria-label="call">0982-132-489</a></p>
                     </div>
@@ -211,7 +214,6 @@
 <p class="sroll"><a class="scroll-jump" href="#sroll" aria-label="Next project" data-i18n-aria-label="nextProject"><b class="scroll-label" data-i18n="scroll">CUỘN</b><span></span></a></p>
     </div>
     </div>
-
 <dialog class="contact-modal" id="contact-modal" aria-labelledby="contact-title" aria-describedby="contact-note">
     <div class="contact-heading">
         <h2 id="contact-title" data-i18n="contact">CONTACT</h2>
@@ -248,5 +250,7 @@
     <iframe title="Chi tiết dự án" tabindex="-1" aria-hidden="true"></iframe>
     <button class="project-panel-close" data-panel-close type="button" aria-label="Đóng chi tiết dự án" data-i18n-aria-label="closeProject" autofocus><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
 </dialog>
+<dialog class="video-library" id="video-library" aria-labelledby="video-library-title"><div class="video-library-head"><h2 id="video-library-title" data-i18n="videos">VIDEO</h2><button class="video-library-close" type="button" data-videos-close aria-label="Đóng video" data-i18n-aria-label="closeVideos" autofocus><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div><div class="video-library-body"><p class="video-library-intro" data-i18n="videosIntro">Những thước phim về kiến trúc, Onsen và không gian chăm sóc sức khỏe.</p><div class="video-library-grid"><article class="video-card"><div class="video-stage" data-video-stage data-video-kind="mp4" data-video-src="./assets/rwh-videos/onsen-living-web.mp4" data-video-title="R.W.H Group — The Art of Onsen Living" data-video-poster="./assets/rwh-videos/onsen-living-poster.jpg"><button type="button" aria-label="Phát video" data-i18n-aria-label="playVideo"><img src="./assets/rwh-videos/onsen-living-poster.jpg" alt="" width="1600" height="900" loading="lazy"><span class="video-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 3 15 9-15 9z"/></svg></span></button></div><h3>R.W.H Group — The Art of Onsen Living</h3><p data-i18n="brandFilm">Phim giới thiệu chung của R.W.H Group.</p><a class="video-source" href="https://drive.google.com/file/d/1G4dXH9G4kFijcQazUvHmWHSYDvSaX8xc/view" target="_blank" rel="noopener noreferrer" data-i18n="openVideoSource">Mở video gốc ↗</a></article><article class="video-card"><div class="video-stage" data-video-stage data-video-kind="mp4" data-video-src="./assets/rwh-videos/aegis-pr-movie.mp4" data-video-title="AEGIS International Hospital — PR Movie" data-video-poster="./assets/rwh-videos/aegis-pr-poster.jpg"><button type="button" aria-label="Phát video" data-i18n-aria-label="playVideo"><img src="./assets/rwh-videos/aegis-pr-poster.jpg" alt="" width="1600" height="900" loading="lazy"><span class="video-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 3 15 9-15 9z"/></svg></span></button></div><h3>AEGIS International Hospital — PR Movie</h3><p data-i18n="projectFilm">Phim giới thiệu dự án.</p><a class="video-source" href="./assets/rwh-videos/aegis-pr-movie.mp4" target="_blank" rel="noopener noreferrer" data-i18n="openVideoSource">Mở video gốc ↗</a></article><article class="video-card"><div class="video-stage" data-video-stage data-video-kind="youtube" data-video-src="https://www.youtube.com/embed/rfq8OT-J2Us?autoplay=1&amp;playsinline=1&amp;rel=0" data-video-title="Banyan Tree Higashiyama Kyoto | A Sense of History" data-video-poster="./assets/rwh-videos/kyoto-poster.jpg"><button type="button" aria-label="Phát video" data-i18n-aria-label="playVideo"><img src="./assets/rwh-videos/kyoto-poster.jpg" alt="" width="1600" height="900" loading="lazy"><span class="video-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 3 15 9-15 9z"/></svg></span></button></div><h3>Banyan Tree Higashiyama Kyoto | A Sense of History</h3><p data-i18n="referenceFilm">Video tham khảo · withBanyan. Không thuộc danh mục dự án R.W.H Group.</p><a class="video-source" href="https://www.youtube.com/watch?v=rfq8OT-J2Us" target="_blank" rel="noopener noreferrer" data-i18n="openVideoSource">Mở video gốc ↗</a></article></div></div></dialog>
+<dialog class="video-player" id="video-player" aria-label="Video"><div data-video-mount></div><button class="video-player-close" type="button" data-video-close aria-label="Đóng video" data-i18n-aria-label="closeVideos" autofocus><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button></dialog>
 </body>
 </html>

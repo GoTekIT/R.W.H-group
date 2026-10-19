@@ -13,6 +13,8 @@ ROOT = Path(__file__).resolve().parent
 DIST = ROOT / 'dist'
 projects = json.loads((ROOT / 'PROJECT_SOURCES.json').read_text())['projects']
 translations = json.loads((ROOT / 'PROJECT_TRANSLATIONS.json').read_text())
+video_sources = json.loads((ROOT / 'VIDEO_SOURCES.json').read_text())
+videos = {video['id']: video for video in video_sources['videos']}
 assert [p['number'] for p in projects] == list(range(1, 11))
 
 
@@ -22,6 +24,21 @@ def e(text):
 
 def asset(name):
     return f'{name}?v={sha256((DIST / name).read_bytes()).hexdigest()[:10]}'
+
+
+def video_card(video, prefix='./'):
+    source = video.get('embed', prefix + video['source'])
+    original = video.get('original') or (video['source'] if video['kind'] != 'mp4' else prefix + video['source'])
+    poster = prefix + video['poster']
+    notes = {'brandFilm': 'Phim giới thiệu chung của R.W.H Group.', 'projectFilm': 'Phim giới thiệu dự án.', 'referenceFilm': 'Video tham khảo · withBanyan. Không thuộc danh mục dự án R.W.H Group.'}
+    return f'''<article class="video-card"><div class="video-stage" data-video-stage data-video-kind="{e(video['kind'])}" data-video-src="{e(source)}" data-video-title="{e(video['title'])}" data-video-poster="{e(poster)}"><button type="button" aria-label="Phát video" data-i18n-aria-label="playVideo"><img src="{e(poster)}" alt="" width="1600" height="900" loading="lazy"><span class="video-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 3 15 9-15 9z"/></svg></span></button></div><h3>{e(video['title'])}</h3><p data-i18n="{video['noteKey']}">{notes[video['noteKey']]}</p><a class="video-source" href="{e(original)}" target="_blank" rel="noopener noreferrer" data-i18n="openVideoSource">Mở video gốc ↗</a></article>'''
+
+
+def video_library(prefix='./'):
+    return f'''<dialog class="video-library" id="video-library" aria-labelledby="video-library-title"><div class="video-library-head"><h2 id="video-library-title" data-i18n="videos">VIDEO</h2><button class="video-library-close" type="button" data-videos-close aria-label="Đóng video" data-i18n-aria-label="closeVideos" autofocus><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div><div class="video-library-body"><p class="video-library-intro" data-i18n="videosIntro">Những thước phim về kiến trúc, Onsen và không gian chăm sóc sức khỏe.</p><div class="video-library-grid">{''.join(video_card(video, prefix) for video in videos.values())}</div></div></dialog>'''
+
+
+video_player = '''<dialog class="video-player" id="video-player" aria-label="Video"><div data-video-mount></div><button class="video-player-close" type="button" data-video-close aria-label="Đóng video" data-i18n-aria-label="closeVideos" autofocus><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button></dialog>'''
 
 
 copy = {'vi': {}, 'en': {}}
@@ -150,6 +167,17 @@ html = html.replace('<body id="top">', '<body id="top">\n' + switcher)
 html = html.replace('>SCROLL<span>', '><b class="scroll-label" data-i18n="scroll">CUỘN</b><span>')
 html = html.replace('<meta name="description"', '<meta data-i18n-content="siteDescription" name="description"')
 html = localize_ui(html)
+html = re.sub(r'<link rel="stylesheet" href="\./rwh-videos\.css[^\"]*">\n?', '', html)
+html = re.sub(r'<script src="\./rwh-videos\.js[^\"]*" defer></script>\n?', '', html)
+html = html.replace('<script src="./app.js', f'<link rel="stylesheet" href="./{asset("rwh-videos.css")}">\n<script src="./{asset("rwh-videos.js")}" defer></script>\n<script src="./app.js', 1)
+html = re.sub(r'<dialog class="video-library".*?</dialog>\n?', '', html, flags=re.S)
+html = re.sub(r'<dialog class="video-player".*?</dialog>\n?', '', html, flags=re.S)
+html = html.replace('</body>', video_library() + '\n' + video_player + '\n</body>')
+html = re.sub(r'^[ \t]*<li><a [^>]*data-videos-open[^>]*>.*?</a></li>\n?', '', html, flags=re.M)
+html = html.replace('<li><a href="https://www.rwh-group.com/news"', '<li><a href="#video-library" data-videos-open aria-haspopup="dialog" aria-controls="video-library" data-i18n="videos">VIDEO</a></li>\n                    <li><a href="https://www.rwh-group.com/news"', 1)
+html = re.sub(r'^[ \t]*<a class="rwh-footer-videos".*?</a>\n?', '', html, flags=re.M)
+html = html.replace('<p class="rwh-footer-services"', '<a class="rwh-footer-videos" href="#video-library" data-videos-open aria-haspopup="dialog" aria-controls="video-library" data-i18n="watchVideos">Xem video ↗</a>\n                        <p class="rwh-footer-services"', 1)
+html = '\n'.join(line.rstrip() for line in html.splitlines() if line.strip()) + '\n'
 index.write_text(html)
 
 # Reuse the approved homepage menu, footer and owner contact form.
@@ -197,9 +225,11 @@ for i, project in enumerate(projects):
 <link rel="stylesheet" href="../../{asset('rwh-menu.css')}">
 <link rel="stylesheet" href="../../{asset('site-language.css')}">
 <link rel="stylesheet" href="../../{asset('project-panel.css')}">
+<link rel="stylesheet" href="../../{asset('rwh-videos.css')}">
 <script src="../../{asset('project-copy.js')}" defer></script>
 <script src="../../{asset('site-language.js')}" defer></script>
 <script src="../../{asset('project-panel.js')}" defer></script>
+<script src="../../{asset('rwh-videos.js')}" defer></script>
 <script src="../../{asset('project-gallery.js')}" defer></script>
 <script src="../../{asset('contact-form.js')}" defer></script>
 </head><body>
@@ -211,14 +241,19 @@ for i, project in enumerate(projects):
 <main id="main" tabindex="-1">
 <section class="sec01" aria-label="{e(project['title'])}"><div class="inner01">
 <div class="project-photos">{''.join(figures)}</div>
+<section class="project-film" id="project-film" aria-labelledby="project-film-title"><h2 id="project-film-title" data-i18n="videos">VIDEO</h2>{video_card(videos[video_sources['projectAssignments'][project['slug']]], '../../')}</section>
+<div class="project-overview" id="project-overview">
 <div class="textArea"><div class="bdBox"><div class="lBox"><p class="project-subtitle" data-i18n="{key}.subtitle">{e(project['subtitle'])}</p><p class="project-description" data-i18n="{key}.description">{e(project['description'])}</p></div></div></div>
 <div class="txtBox"><div class="tBox"><h2>DATA</h2></div><div class="rBox"><ul class="txtListUl"><li><table><tbody>{facts}</tbody></table></li></ul></div></div>
+</div>
 </div></section>
 <section class="sec02"><div class="inner"><h2 class="h2Ttl">OTHER WORKS</h2><ul class="listUl listUl01">{''.join(related)}</ul><div class="comBtn"><a href="../../index.html"><span class="en">MORE</span></a></div></div></section>
 </main>
 {footer}
 </div>
 {contact_dialog}
+{video_library('../../')}
+{video_player}
 <dialog class="image-viewer" aria-label="Xem ảnh dự án"><button type="button" class="viewer-close" aria-label="Đóng ảnh" autofocus><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button><button type="button" class="viewer-prev" aria-label="Ảnh trước">←</button><div class="viewer-stage"><img alt=""><p class="viewer-caption" aria-live="polite"></p></div><button type="button" class="viewer-next" aria-label="Ảnh tiếp theo">→</button></dialog>
 </body></html>
 '''

@@ -1,0 +1,52 @@
+{
+  "updated": "2026-10-19",
+  "placement": "General Video library and one film per project; reuse authorized by the client.",
+  "videos": [
+    {
+      "id": "onsen-living",
+      "title": "R.W.H Group — The Art of Onsen Living",
+      "kind": "mp4",
+      "source": "assets/rwh-videos/onsen-living-web.mp4",
+      "poster": "assets/rwh-videos/onsen-living-poster.jpg",
+      "noteKey": "brandFilm",
+      "scope": "General RWH brand film, not identified as footage of each listed project. Public Drive original retained; web derivative 1280x720 H.264/AAC, 288.23 sec, faststart, video maxrate 1800 kbps.",
+      "original": "https://drive.google.com/file/d/1G4dXH9G4kFijcQazUvHmWHSYDvSaX8xc/view",
+      "bytes": 55591378,
+      "sha256": "69a9cb1b168be632ab139af0d3c68d937bd5830ac3db8e2b93aca99e4a497540",
+      "originalBytes": 742314441
+    },
+    {
+      "id": "aegis-pr",
+      "title": "AEGIS International Hospital — PR Movie",
+      "kind": "mp4",
+      "source": "assets/rwh-videos/aegis-pr-movie.mp4",
+      "poster": "assets/rwh-videos/aegis-pr-poster.jpg",
+      "noteKey": "projectFilm",
+      "scope": "Supplied local pr movie.mp4. AEGIS branding verified in extracted frame; H.264, 640x480, 190.67 seconds. Original resolution retained.",
+      "bytes": 19313899,
+      "sha256": "32926a9571d1ba06b99f78239c92f5a0223a7ef5a64faf52d172ca063cfd2346"
+    },
+    {
+      "id": "kyoto",
+      "title": "Banyan Tree Higashiyama Kyoto | A Sense of History",
+      "kind": "youtube",
+      "source": "https://www.youtube.com/watch?v=rfq8OT-J2Us",
+      "embed": "https://www.youtube.com/embed/rfq8OT-J2Us?autoplay=1&playsinline=1&rel=0",
+      "poster": "assets/rwh-videos/kyoto-poster.jpg",
+      "noteKey": "referenceFilm",
+      "scope": "withBanyan video, 2:35. Reference film only, not represented as a RWH project."
+    }
+  ],
+  "projectAssignments": {
+    "the-hera-resort": "onsen-living",
+    "capital-one": "onsen-living",
+    "kawara-my-an": "onsen-living",
+    "aegis-hospital": "aegis-pr",
+    "onsen-thanh-thuy": "onsen-living",
+    "ecopark-thanh-hoa": "onsen-living",
+    "nam-o-residence": "onsen-living",
+    "hakuba-hotel": "onsen-living",
+    "thien-mu-hotel": "onsen-living",
+    "ecopark-hung-yen": "onsen-living"
+  }
+}

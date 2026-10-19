@@ -2,6 +2,10 @@
   'use strict';
   const copy = {
     vi: {
+      videos: 'VIDEO', watchVideos: 'Xem video ↗', playVideo: 'Phát video', closeVideos: 'Đóng video',
+      videosIntro: 'Những thước phim về kiến trúc, Onsen và không gian chăm sóc sức khỏe.',
+      brandFilm: 'Phim giới thiệu chung của R.W.H Group.', projectFilm: 'Phim giới thiệu dự án.',
+      referenceFilm: 'Video tham khảo · withBanyan. Không thuộc danh mục dự án R.W.H Group.', openVideoSource: 'Mở video gốc ↗',
       language: 'Ngôn ngữ', openMenu: 'Mở menu', closeMenu: 'Đóng menu', navigation: 'Điều hướng chính',
       navHome: 'Trang chủ', office: 'Văn phòng', navProjects: 'Dự án', navNews: 'Tin tức', jobs: 'Tuyển dụng', navContact: 'Liên hệ',
       selectedWorks: 'Dự án chọn lọc', projectsJapan: 'Dự án Nhật Bản', planning: 'Quy hoạch', architecture: 'Kiến trúc',
@@ -30,6 +34,10 @@
       siteDescription: 'Các dự án R.W.H Group: nghỉ dưỡng, Onsen, chăm sóc sức khỏe, khách sạn và kiến trúc đô thị tại Việt Nam và Nhật Bản.'
     },
     en: {
+      videos: 'VIDEO', watchVideos: 'Watch videos ↗', playVideo: 'Play video', closeVideos: 'Close videos',
+      videosIntro: 'Films exploring architecture, Onsen and spaces for wellbeing.',
+      brandFilm: 'A general introduction to R.W.H Group.', projectFilm: 'Project introduction film.',
+      referenceFilm: 'Reference film · withBanyan. Not part of the R.W.H Group project portfolio.', openVideoSource: 'Open original video ↗',
       language: 'Language', openMenu: 'Open menu', closeMenu: 'Close menu', navigation: 'Main navigation',
       navHome: 'Home', office: 'Office', navProjects: 'Projects', navNews: 'News', jobs: 'Jobs', navContact: 'Contact',
       selectedWorks: 'Selected projects', projectsJapan: 'Projects Japan', planning: 'Planning', architecture: 'Architecture',

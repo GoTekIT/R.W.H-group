@@ -186,3 +186,14 @@ test('the project gallery opens at the first project and autoplay ends at the fo
   p.advance(30000);
   assert.equal(p.index(), 10);
 });
+
+test('video library and full-screen player keep background autoplay but own wheel and keyboard input', () => {
+  for (const selector of ['#video-library', '#video-player']) {
+    const p = page();
+    const modal = p.doc.querySelector(selector); modal.open = true;
+    p.wheel(); p.key('ArrowDown'); assert.equal(p.index(), 0);
+    p.advance(6000); assert.equal(p.index(), 1);
+    p.wheel(); p.key('End'); assert.equal(p.index(), 1);
+    modal.open = false; p.advance(1200); p.key('ArrowDown'); assert.equal(p.index(), 2);
+  }
+});
