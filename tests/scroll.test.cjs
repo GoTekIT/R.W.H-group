@@ -187,8 +187,8 @@ test('the project gallery opens at the first project and autoplay ends at the fo
   assert.equal(p.index(), 10);
 });
 
-test('video library and full-screen player keep background autoplay but own wheel and keyboard input', () => {
-  for (const selector of ['#video-library', '#video-player']) {
+test('video library keeps background autoplay but owns wheel and keyboard input', () => {
+  for (const selector of ['#video-library']) {
     const p = page();
     const modal = p.doc.querySelector(selector); modal.open = true;
     p.wheel(); p.key('ArrowDown'); assert.equal(p.index(), 0);

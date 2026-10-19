@@ -1,54 +1,45 @@
 (() => {
   'use strict';
-  function bindVideos(doc) {
+  function bindVideos(doc, observe = callback => new IntersectionObserver(callback)) {
     const library = doc.querySelector('#video-library');
-    const player = doc.querySelector('#video-player');
-    if (!player || typeof player.showModal !== 'function') return;
-    const mount = player.querySelector('[data-video-mount]');
-    let playerTrigger, libraryTrigger;
-    function release() {
-      const media = mount.querySelector('video, iframe');
-      if (!media) return;
-      if (media.tagName === 'VIDEO') { media.pause(); media.removeAttribute('src'); media.load(); }
-      media.remove();
-    }
-    doc.querySelectorAll('[data-video-stage]').forEach(stage => stage.querySelector('button').addEventListener('click', event => {
-      release();
-      playerTrigger = event.currentTarget;
-      const isFile = stage.dataset.videoKind === 'mp4';
-      const media = doc.createElement(isFile ? 'video' : 'iframe');
-      if (isFile) {
-        media.controls = true; media.playsInline = true; media.preload = 'none';
-        media.poster = stage.dataset.videoPoster;
-      } else {
-        media.title = stage.dataset.videoTitle;
-        media.allow = 'autoplay; fullscreen; picture-in-picture';
-        media.allowFullscreen = true;
-        media.referrerPolicy = 'strict-origin-when-cross-origin';
-      }
-      media.src = stage.dataset.videoSrc;
-      player.setAttribute('aria-label', stage.dataset.videoTitle);
-      mount.append(media);
-      player.showModal();
-      if (isFile) media.play().catch(() => { /* Native controls remain available if autoplay is blocked. */ });
+    const videos = [...doc.querySelectorAll('[data-inline-video]')];
+    const embeds = [...doc.querySelectorAll('[data-video-embed]')];
+    let returnFocus;
+    // The actual player is already in the page; native controls start playback in place.
+    videos.forEach(video => video.addEventListener('play', () => {
+      videos.forEach(other => { if (other !== video) other.pause(); });
     }));
-    player.querySelector('[data-video-close]').addEventListener('click', () => player.close());
-    player.addEventListener('close', () => { release(); playerTrigger?.focus({preventScroll:true}); });
-    if (library) {
+    const visibility = observe(entries => entries.forEach(({target, isIntersecting}) => {
+      if (target.tagName === 'VIDEO') {
+        if (!isIntersecting) target.pause();
+      } else if (isIntersecting) {
+        if (!target.getAttribute('src')) target.src = target.dataset.videoEmbed;
+      } else {
+        // Removing an offscreen embed also stops its audio, without a provider SDK.
+        target.removeAttribute('src');
+      }
+    }));
+    [...videos, ...embeds].forEach(media => visibility.observe(media));
+    if (library && typeof library.showModal === 'function') {
       doc.querySelectorAll('[data-videos-open]').forEach(link => link.addEventListener('click', event => {
-        if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || typeof library.showModal !== 'function') return;
+        if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
         event.preventDefault();
-        libraryTrigger = link.closest('.menuBox') ? doc.querySelector('.menu') : link;
+        returnFocus = link.closest('.menuBox') ? doc.querySelector('.menu') : link;
+        videos.forEach(video => video.pause());
         doc.dispatchEvent(new CustomEvent('rwh:close-menu'));
         library.showModal();
+        library.querySelectorAll('[data-video-embed]').forEach(frame => {
+          visibility.unobserve(frame);
+          visibility.observe(frame);
+        });
       }));
       library.querySelector('[data-videos-close]').addEventListener('click', () => library.close());
       library.addEventListener('close', () => {
-        if (player.open) player.close();
-        (libraryTrigger?.closest('[inert]') ? doc.querySelector('.menu') : libraryTrigger)?.focus({preventScroll:true});
+        library.querySelectorAll('video').forEach(video => video.pause());
+        library.querySelectorAll('[data-video-embed]').forEach(frame => frame.removeAttribute('src'));
+        (returnFocus?.closest('[inert]') ? doc.querySelector('.menu') : returnFocus)?.focus({preventScroll:true});
       });
     }
-    return {release};
   }
   if (typeof module === 'object' && module.exports) module.exports = {bindVideos};
   else bindVideos(document);

@@ -1,6 +1,6 @@
 {
   "updated": "2026-10-19",
-  "placement": "General Video library and one film per project; reuse authorized by the client.",
+  "placement": "Native inline players in the shared Video library and one full-width film per project; no source-link buttons or separate playback dialog.",
   "videos": [
     {
       "id": "onsen-living",
@@ -31,7 +31,7 @@
       "title": "Banyan Tree Higashiyama Kyoto | A Sense of History",
       "kind": "youtube",
       "source": "https://www.youtube.com/watch?v=rfq8OT-J2Us",
-      "embed": "https://www.youtube.com/embed/rfq8OT-J2Us?autoplay=1&playsinline=1&rel=0",
+      "embed": "https://www.youtube.com/embed/rfq8OT-J2Us?autoplay=0&playsinline=1&rel=0",
       "poster": "assets/rwh-videos/kyoto-poster.jpg",
       "noteKey": "referenceFilm",
       "scope": "withBanyan video, 2:35. Reference film only, not represented as a RWH project."

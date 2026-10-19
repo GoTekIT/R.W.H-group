@@ -28,17 +28,17 @@ def asset(name):
 
 def video_card(video, prefix='./'):
     source = video.get('embed', prefix + video['source'])
-    original = video.get('original') or (video['source'] if video['kind'] != 'mp4' else prefix + video['source'])
     poster = prefix + video['poster']
     notes = {'brandFilm': 'Phim giới thiệu chung của R.W.H Group.', 'projectFilm': 'Phim giới thiệu dự án.', 'referenceFilm': 'Video tham khảo · withBanyan. Không thuộc danh mục dự án R.W.H Group.'}
-    return f'''<article class="video-card"><div class="video-stage" data-video-stage data-video-kind="{e(video['kind'])}" data-video-src="{e(source)}" data-video-title="{e(video['title'])}" data-video-poster="{e(poster)}"><button type="button" aria-label="Phát video" data-i18n-aria-label="playVideo"><img src="{e(poster)}" alt="" width="1600" height="900" loading="lazy"><span class="video-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 3 15 9-15 9z"/></svg></span></button></div><h3>{e(video['title'])}</h3><p data-i18n="{video['noteKey']}">{notes[video['noteKey']]}</p><a class="video-source" href="{e(original)}" target="_blank" rel="noopener noreferrer" data-i18n="openVideoSource">Mở video gốc ↗</a></article>'''
+    if video['kind'] == 'mp4':
+        media = f'<video data-inline-video controls playsinline preload="none" poster="{e(poster)}" src="{e(source)}" aria-label="{e(video["title"])}"></video>'
+    else:
+        media = f'<iframe data-video-embed="{e(source)}" title="{e(video["title"])}" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>'
+    return f'''<article class="video-card"><div class="video-stage" data-video-stage data-video-kind="{e(video['kind'])}">{media}</div><h3>{e(video['title'])}</h3><p data-i18n="{video['noteKey']}">{notes[video['noteKey']]}</p></article>'''
 
 
 def video_library(prefix='./'):
     return f'''<dialog class="video-library" id="video-library" aria-labelledby="video-library-title"><div class="video-library-head"><h2 id="video-library-title" data-i18n="videos">VIDEO</h2><button class="video-library-close" type="button" data-videos-close aria-label="Đóng video" data-i18n-aria-label="closeVideos" autofocus><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div><div class="video-library-body"><p class="video-library-intro" data-i18n="videosIntro">Những thước phim về kiến trúc, Onsen và không gian chăm sóc sức khỏe.</p><div class="video-library-grid">{''.join(video_card(video, prefix) for video in videos.values())}</div></div></dialog>'''
-
-
-video_player = '''<dialog class="video-player" id="video-player" aria-label="Video"><div data-video-mount></div><button class="video-player-close" type="button" data-video-close aria-label="Đóng video" data-i18n-aria-label="closeVideos" autofocus><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button></dialog>'''
 
 
 copy = {'vi': {}, 'en': {}}
@@ -172,7 +172,7 @@ html = re.sub(r'<script src="\./rwh-videos\.js[^\"]*" defer></script>\n?', '', h
 html = html.replace('<script src="./app.js', f'<link rel="stylesheet" href="./{asset("rwh-videos.css")}">\n<script src="./{asset("rwh-videos.js")}" defer></script>\n<script src="./app.js', 1)
 html = re.sub(r'<dialog class="video-library".*?</dialog>\n?', '', html, flags=re.S)
 html = re.sub(r'<dialog class="video-player".*?</dialog>\n?', '', html, flags=re.S)
-html = html.replace('</body>', video_library() + '\n' + video_player + '\n</body>')
+html = html.replace('</body>', video_library() + '\n</body>')
 html = re.sub(r'^[ \t]*<li><a [^>]*data-videos-open[^>]*>.*?</a></li>\n?', '', html, flags=re.M)
 html = html.replace('<li><a href="https://www.rwh-group.com/news"', '<li><a href="#video-library" data-videos-open aria-haspopup="dialog" aria-controls="video-library" data-i18n="videos">VIDEO</a></li>\n                    <li><a href="https://www.rwh-group.com/news"', 1)
 html = re.sub(r'^[ \t]*<a class="rwh-footer-videos".*?</a>\n?', '', html, flags=re.M)
@@ -253,7 +253,6 @@ for i, project in enumerate(projects):
 </div>
 {contact_dialog}
 {video_library('../../')}
-{video_player}
 <dialog class="image-viewer" aria-label="Xem ảnh dự án"><button type="button" class="viewer-close" aria-label="Đóng ảnh" autofocus><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button><button type="button" class="viewer-prev" aria-label="Ảnh trước">←</button><div class="viewer-stage"><img alt=""><p class="viewer-caption" aria-live="polite"></p></div><button type="button" class="viewer-next" aria-label="Ảnh tiếp theo">→</button></dialog>
 </body></html>
 '''
