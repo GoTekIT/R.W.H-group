@@ -1,4 +1,5 @@
 .menuBox.rwh-menu .inner { align-items:flex-start; }
+.menuBox.rwh-menu a, .menuBox.rwh-menu summary { text-transform:uppercase; }
 .menuBox.rwh-menu .inner .subBox { box-sizing:border-box; max-width:none; padding:120px 100px 54px 54px; }
 .rwh-menu-layout { display:grid; grid-template-columns:minmax(0,1fr) 150px; gap:40px; align-items:start; }
 .rwh-menu-list { margin:0; padding:0; list-style:none; }
