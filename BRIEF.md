@@ -14,4 +14,4 @@ Bộ 186 ảnh RWH hiển thị lần lượt, ảnh đầu chỉ xuất hiện 
 
 Nguồn ảnh, file ID, vị trí ảnh trong PDF/PowerPoint và SHA256 lưu tại PROJECT_SOURCES.json. Nội dung giới thiệu dự án được rút gọn từ hồ sơ và bộ ảnh khách hàng, không tự thêm quy mô hoặc thời gian hoàn thành khi chưa có căn cứ.
 
-Các phần menu/footer giữ bố cục và liên kết theo bản Apollo đã được khách hàng chọn trước đó. Riêng DETAIL của 10 dự án đã chuyển hoàn toàn sang trang nội bộ RWH. Contact và Design Order giữ form Name, Email, Questions và API gửi về linh.rwh@gmail.com khi có cấu hình Resend hợp lệ.
+Menu giữ bố cục và liên kết theo bản Apollo đã được khách hàng chọn trước đó. Footer của trang chính và 10 trang DETAIL dùng thông tin liên hệ RWH Group: lời mời kết nối chuyên gia Nhật Bản, “RWH Group – Japanese Expertise, Better Living.”, “Design & Build” và hotline 0982-132-489 có thể bấm gọi. Nút Liên hệ mở form ngay trên trang; footer không còn sách, social hoặc website liên quan của Apollo. Riêng DETAIL của 10 dự án đã chuyển hoàn toàn sang trang nội bộ RWH. Contact và Design Order giữ form Name, Email, Questions và API gửi về linh.rwh@gmail.com khi có cấu hình Resend hợp lệ.

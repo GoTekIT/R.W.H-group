@@ -61,6 +61,7 @@ html, count = re.subn(r'    <section class="section sec01 mainImg".*?(?=    <sec
 assert count == 1, 'Could not locate the landing-page project sections'
 html = html.replace('<html lang="en">', '<html lang="vi">')
 html = re.sub(r'<meta name="description" content="[^"]*">', '<meta name="description" content="Các dự án RWH: nghỉ dưỡng, Onsen, chăm sóc sức khỏe, khách sạn và kiến trúc đô thị tại Việt Nam và Nhật Bản.">', html)
+html = re.sub(r'href="\./rwh-footer\.css(?:\?v=[^"]*)?"', f'href="./{asset("rwh-footer.css")}"', html)
 index.write_text(html)
 
 # Reuse the approved homepage menu, footer and owner contact form.
@@ -72,7 +73,7 @@ def detail_links(markup):
 
 
 navigation = detail_links(re.search(r'<nav class="menuBox".*?</nav>', html, re.S).group())
-footer = detail_links(re.search(r'<footer id="gFooter">.*?</footer>', html, re.S).group())
+footer = detail_links(re.search(r'<footer id="gFooter"[^>]*>.*?</footer>', html, re.S).group())
 footer = footer.replace('href="#container"', 'href="../../index.html"')
 footer = footer.replace('<div class="fInner">', '<div class="fInner"><div class="pagetop"><a href="#container" aria-label="Về đầu dự án"><img src="../../assets/apollo-reference/132dcb5de486.png" alt="" width="15"></a></div>', 1)
 contact_dialog = re.search(r'<dialog class="contact-modal".*?</dialog>', html, re.S).group()
@@ -102,6 +103,7 @@ for i, project in enumerate(projects):
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&amp;family=Roboto:wght@300;400;500&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../{asset('project-gallery.css')}">
+<link rel="stylesheet" href="../../{asset('rwh-footer.css')}">
 <script src="../../{asset('project-gallery.js')}" defer></script>
 <script src="../../{asset('contact-form.js')}" defer></script>
 </head><body>

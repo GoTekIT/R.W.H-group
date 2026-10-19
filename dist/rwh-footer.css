@@ -1,0 +1,25 @@
+/* Shared owner contact information on the landing and project pages. */
+#gFooter.rwh-footer .fInner { padding-top:72px; padding-bottom:36px; }
+#gFooter.rwh-footer .fLogo { margin-bottom:40px; }
+#gFooter.rwh-footer .rwh-footer-content { display:grid; grid-template-columns:1.15fr 1fr; gap:clamp(40px,6vw,100px); align-items:start; }
+#gFooter.rwh-footer .rwh-footer-invite { max-width:580px; font-size:24px; font-weight:300; line-height:1.65; letter-spacing:0; }
+#gFooter.rwh-footer .rwh-footer-contact { display:inline-flex; align-items:center; gap:14px; min-height:44px; margin-top:24px; border-bottom:1px solid rgba(255,255,255,.55); font-size:14px; }
+#gFooter.rwh-footer .rwh-footer-contact svg { width:20px; height:20px; fill:none; stroke:currentColor; stroke-width:1.3; }
+#gFooter.rwh-footer .rwh-footer-tagline { font-size:18px; font-weight:400; line-height:1.6; letter-spacing:0; }
+#gFooter.rwh-footer .rwh-footer-services { margin-top:12px; color:rgba(255,255,255,.7); font-size:14px; line-height:1.6; }
+#gFooter.rwh-footer .rwh-footer-hotline { margin-top:28px; }
+#gFooter.rwh-footer .rwh-footer-hotline span { display:block; margin-bottom:5px; color:rgba(255,255,255,.7); font-size:12px; letter-spacing:.08em; }
+#gFooter.rwh-footer .rwh-footer-hotline a { display:inline-block; font-size:28px; line-height:1.6; letter-spacing:.025em; }
+#gFooter.rwh-footer .rwh-footer-bottom { margin-top:48px; padding-top:18px; border-top:1px solid rgba(255,255,255,.16); color:rgba(255,255,255,.5); font-size:11px; line-height:1.6; }
+@media(max-width:767px) {
+  #gFooter.rwh-footer .fInner { padding:48px 70px 28px 29px; }
+  #gFooter.rwh-footer .fLogo { margin-bottom:32px; }
+  #gFooter.rwh-footer .rwh-footer-content { grid-template-columns:minmax(0,1fr); gap:30px; }
+  #gFooter.rwh-footer .rwh-footer-invite { font-size:18px; line-height:1.6; }
+  #gFooter.rwh-footer .rwh-footer-contact { margin-top:16px; font-size:13px; }
+  #gFooter.rwh-footer .rwh-footer-tagline { font-size:16px; }
+  #gFooter.rwh-footer .rwh-footer-services { margin-top:8px; font-size:13px; }
+  #gFooter.rwh-footer .rwh-footer-hotline { margin-top:20px; }
+  #gFooter.rwh-footer .rwh-footer-hotline a { font-size:26px; }
+  #gFooter.rwh-footer .rwh-footer-bottom { margin-top:32px; }
+}
