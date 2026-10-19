@@ -53,7 +53,7 @@ for i, project in enumerate(projects):
     figures = []
     for j, photo in enumerate(project['images']):
         caption = f'{project["title"]} — {j + 1:02d}'
-        figures.append(f'''<figure><a class="gallery-image" href="../../{e(photo['src'])}" data-caption="{e(caption)}" aria-label="Phóng to ảnh {j + 1} của {e(project['title'])}"><img src="../../{e(photo['thumbnail'])}" width="{photo['width']}" height="{photo['height']}" alt="{e(caption)}" loading="lazy" decoding="async"></a></figure>''')
+        figures.append(f'''<figure><a class="gallery-image" href="../../{e(photo['src'])}" data-caption="{e(caption)}" aria-label="Phóng to ảnh {j + 1} của {e(project['title'])}"><img src="../../{e(photo['src'])}" width="{photo['width']}" height="{photo['height']}" alt="{e(caption)}" loading="lazy" decoding="async"></a></figure>''')
     previous = projects[i - 1] if i else None
     following = projects[i + 1] if i + 1 < len(projects) else None
     previous_link = f'<a href="../{e(previous["slug"])}/index.html"><small>DỰ ÁN TRƯỚC</small>{e(previous["title"])}</a>' if previous else '<a href="../../index.html"><small>TRỞ VỀ</small>TRANG CHỦ</a>'

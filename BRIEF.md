@@ -6,7 +6,7 @@ Thứ tự từ trên xuống đúng số thư mục khách hàng: 01 The Hera R
 
 Mỗi dự án có một ảnh nổi bật phủ màn hình, tên, loại hình và mô tả ngắn. Giữ màu sắc gốc, chuyển ảnh tự động mỗi sáu giây, lăn chuột từng section, vuốt trên điện thoại, điều hướng bàn phím và bộ đếm 01–10. Bố cục chữ được giới hạn chiều rộng để tên dự án dài hiển thị trên điện thoại.
 
-DETAIL mở trang riêng ngay trên website, có giới thiệu, thông tin được xác nhận trong hồ sơ và thư viện ảnh. Thư viện hỗ trợ phóng to, ảnh trước/sau, phím mũi tên, Escape và trở về đúng dự án trên landing page. Có 186 ảnh được chọn từ ảnh rời, PDF và PowerPoint, chuyển sang WebP với thumbnail tải dần. Không đưa các PDF/PowerPoint dung lượng lớn vào lượt tải trang.
+DETAIL mở trang riêng ngay trên website, có giới thiệu, thông tin được xác nhận trong hồ sơ và thư viện ảnh. Thư viện hỗ trợ phóng to, ảnh trước/sau, phím mũi tên, Escape và trở về đúng dự án trên landing page. Có 186 ảnh được chọn từ ảnh rời, PDF và PowerPoint, chuyển sang WebP. Ảnh trong DETAIL xếp dọc một cột, mỗi ảnh phủ kín một màn hình; ảnh độ phân giải lớn được tải dần khi cuộn. Ảnh tổng quan tràn chiều ngang và lấp phần màn hình còn lại bên dưới header. Không đưa các PDF/PowerPoint dung lượng lớn vào lượt tải trang.
 
 Ảnh trùng, ảnh nguồn cảm hứng, logo và ảnh thuộc công trình khác không được gắn thành ảnh dự án. Theo xác nhận của khách hàng, dự án 06 chỉ dùng bộ Onsen, loại bộ Bình Minh – Bungalow và các phối cảnh tổng thể khác nằm cùng thư mục. Các mốc ngày trong tên file chỉ là phiên bản tài liệu, không được suy diễn thành thời gian hoàn thành công trình.
 
