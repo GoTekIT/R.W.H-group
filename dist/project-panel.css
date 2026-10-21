@@ -1,6 +1,9 @@
 .project-panel { position:fixed; inset:0; margin:0; padding:0; border:0; box-sizing:border-box; width:100vw; max-width:none; height:100vh; height:100svh; max-height:none; overflow:hidden; color:#fff; background:#292929; transform:translate3d(-100%,0,0); transition:transform .75s cubic-bezier(.22,1,.36,1); overscroll-behavior:contain; }
 .project-panel[open] { display:block; }
 .project-panel.is-visible { transform:translate3d(0,0,0); }
+body:has(#project-panel[open]) #main .section.show .bg,
+body:has(#project-panel[open]) #main .section.show .detail::before,
+body:has(#project-panel[open]) #main .section.show .detail .line::before { animation-play-state:paused; }
 .project-panel::backdrop { background:transparent; transition:background-color .75s ease; }
 .project-panel.is-visible::backdrop { background:rgba(0,0,0,.35); }
 .project-panel-title { position:absolute; width:1px; height:1px; padding:0; overflow:hidden; clip-path:inset(50%); white-space:nowrap; }

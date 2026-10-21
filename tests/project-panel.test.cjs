@@ -15,6 +15,7 @@ function page({reduced = false, embedded = false} = {}) {
       contains(value) { return classes.has(value); }
     }, addEventListener(type, callback) { (events[type] ||= []).push(callback); },
     emit(type, event = {}) { (events[type] || []).forEach(callback => callback(event)); },
+    dispatchEvent(event) { this.emit(event.type, event); },
     setAttribute(name, value) { this.attributes[name] = value; },
     removeAttribute(name) { delete this.attributes[name]; if (name === 'src') delete this.src; },
     focus() { active = this; }, closest() { return blocked ? {} : null; }
@@ -38,7 +39,7 @@ function page({reduced = false, embedded = false} = {}) {
   win.parent = embedded ? {postMessage:(message, target) => messages.push({message,target})} : win;
   win.matchMedia = () => ({matches:reduced});
   win.RWHI18n = {language:'vi', t:(key, values) => values.title, setLanguage(value) {this.language = value;}};
-  vm.runInNewContext(source, {window:win, document:doc, URL, URLSearchParams,
+  vm.runInNewContext(source, {window:win, document:doc, URL, URLSearchParams, Event,
     MutationObserver:class {constructor(callback) {observers.push(callback);} observe() {}},
     requestAnimationFrame:callback => callback(), setTimeout:(callback, delay) => {const id = ++next; timers.set(id,{callback,delay}); return id;}, clearTimeout:id => timers.delete(id)});
   function click(overrides = {}) {
@@ -52,9 +53,12 @@ function page({reduced = false, embedded = false} = {}) {
 
 test('Details opens a full modal at the same landing URL and loads only the selected project', () => {
   const p = page();
+  let opened = 0;
+  p.doc.addEventListener('rwh:project-open', () => { assert.equal(p.panel.open, true); opened++; });
   assert.equal(p.frame.src, undefined);
   assert.equal(p.click().defaultPrevented, true);
   assert.equal(p.panel.open, true);
+  assert.equal(opened, 1);
   assert.equal(p.panel.classList.contains('is-visible'), true);
   assert.equal(p.win.location.href, 'https://rwh.example/');
   assert.equal(p.frame.src, 'https://rwh.example/projects/the-hera-resort/index.html?panel=1&lang=vi');
@@ -80,7 +84,7 @@ test('modified clicks retain the real project link; close animates and releases 
   assert.equal(p.panel.classList.contains('is-loaded'), false);
 });
 
-test('Escape respects reduced motion and restores focus when autoplay made the trigger inert', () => {
+test('Escape respects reduced motion and restores focus when the trigger is no longer focusable', () => {
   const p = page({reduced:true});
   p.click(); p.blockTrigger();
   let prevented = false;

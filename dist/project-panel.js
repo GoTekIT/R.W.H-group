@@ -84,6 +84,7 @@
     frame.tabIndex = -1;
     frame.setAttribute('aria-hidden', 'true');
     panel.showModal();
+    document.dispatchEvent(new Event('rwh:project-open'));
     frame.src = destination.href;
     requestAnimationFrame(() => requestAnimationFrame(() => {
       if (panel.open && !closing) panel.classList.add('is-visible');

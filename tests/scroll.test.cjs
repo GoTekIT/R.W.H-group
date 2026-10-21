@@ -162,16 +162,35 @@ test('an open Contact form does not consume page navigation', () => {
   assert.equal(p.index(), 0);
 });
 
-test('project panel keeps background autoplay but does not consume its scroll or keyboard input', () => {
-  const p = page();
-  p.doc.querySelector('#project-panel').open = true;
+test('Details pauses the current project and resumes a full interval after closing', () => {
+  const p = page(4), panel = p.doc.querySelector('#project-panel');
+  p.advance(5900);
+  panel.open = true; p.doc.emit('rwh:project-open');
   p.wheel(); p.key('End');
-  assert.equal(p.index(), 0);
-  p.advance(6000);
-  assert.equal(p.index(), 1);
-  p.doc.querySelector('#project-panel').open = false;
-  p.advance(1100); p.wheel();
-  assert.equal(p.index(), 2);
+  p.advance(30000);
+  assert.equal(p.index(), 3);
+  panel.open = false; panel.emit('close');
+  p.advance(5999); assert.equal(p.index(), 3);
+  p.advance(1); assert.equal(p.index(), 4);
+});
+
+test('Details cancels a wheel step queued before the panel opened', () => {
+  const p = page(), panel = p.doc.querySelector('#project-panel');
+  p.advance(6000); p.advance(200); p.wheel();
+  panel.open = true; p.doc.emit('rwh:project-open');
+  p.advance(30000); assert.equal(p.index(), 1);
+  panel.open = false; panel.emit('close');
+  p.advance(5999); assert.equal(p.index(), 1);
+  p.advance(1); assert.equal(p.index(), 2);
+});
+
+test('an open Details panel blocks stale autoplay and visibility-change scheduling', () => {
+  const p = page(), panel = p.doc.querySelector('#project-panel');
+  panel.open = true;
+  p.advance(6000); assert.equal(p.index(), 0);
+  p.doc.emit('visibilitychange'); p.advance(12000); assert.equal(p.index(), 0);
+  panel.open = false; panel.emit('close');
+  p.advance(6000); assert.equal(p.index(), 1);
 });
 
 test('the project gallery opens at the first project and autoplay ends at the footer', () => {

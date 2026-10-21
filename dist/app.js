@@ -44,7 +44,7 @@
   }
   function schedule() {
     clearTimeout(timer);
-    if (ready && !reduced.matches && !document.hidden && current < footerIndex) {
+    if (ready && !reduced.matches && !document.hidden && !projectPanel?.open && current < footerIndex) {
       timer = setTimeout(() => goTo(current + 1, false, true), 6000);
     }
   }
@@ -92,7 +92,7 @@
   function goTo(index, immediate = false, automatic = false) {
     if (immediate) pendingWheelStep = 0;
     const destination = Math.max(0, Math.min(footerIndex, index));
-    if (!ready || (!automatic && (menuOpen || contact.open || projectPanel?.open || videoLibrary?.open)) || (locked && !immediate) || destination === current) return;
+    if (!ready || projectPanel?.open || (!automatic && (menuOpen || contact.open || videoLibrary?.open)) || (locked && !immediate) || destination === current) return;
     current = destination;
     clearTimeout(timer); clearTimeout(unlock); clearTimeout(cleanup);
     wheelSum = 0; pendingWheelStep = 0; locked = true;
@@ -220,6 +220,15 @@
   });
   document.addEventListener('visibilitychange', schedule);
   reduced.addEventListener('change', schedule);
+  document.addEventListener('rwh:project-open', () => {
+    clearTimeout(timer);
+    clearTimeout(wheelTimer);
+    resetWheelGesture();
+    pendingWheelStep = 0;
+    touchY = touchX = null;
+  });
+  // Resume with a complete viewing interval only after the closing slide finishes.
+  projectPanel?.addEventListener('close', schedule);
 
   function start() {
     const cover = document.querySelector('.cover');
