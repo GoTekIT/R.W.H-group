@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-19",
+  "updated": "2026-10-21",
   "placement": "Native inline players in the shared Video library; one full-width film at the top of each project Details, immediately below the header and before photos. No source-link buttons or separate playback dialog.",
   "videos": [
     {
@@ -35,19 +35,67 @@
       "poster": "assets/rwh-videos/kyoto-poster.jpg",
       "noteKey": "referenceFilm",
       "scope": "withBanyan video, 2:35. Reference film only, not represented as a RWH project."
+    },
+    {
+      "id": "nam-o-residence",
+      "title": "NAM Ô RESIDENCE — The Art of Onsen Living 2",
+      "kind": "mp4",
+      "source": "assets/rwh-videos/nam-o-residence-web.mp4",
+      "poster": "assets/rwh-videos/nam-o-residence-poster.jpg",
+      "noteKey": "projectFilm",
+      "scope": "Client assigned this supplied Drive film to Nam O Residence on 2026-10-21. Nam O building signage verified in extracted frame. Original 3840x2160 H.264/AAC, 60 fps, 188.99 seconds; web derivative 1920x1080 H.264/AAC, 30 fps, faststart, video maxrate 3500 kbps, AAC 128 kbps.",
+      "original": "https://drive.google.com/file/d/16IZtLq8OA0buNo7e2MnUiQ0cNAVg6tBh/view",
+      "sourceFolder": "https://drive.google.com/drive/folders/1EUvQgWKoavkvYkxQeSoWrmMUvcKFbl8B",
+      "originalBytes": 908712625,
+      "bytes": 66196541,
+      "sha256": "37abdf207e7bc44a557071c620cb540319fbadab4d2f23a0440e020b248f89b3",
+      "originalSha256": "d79cbb816a02359398474ca8549712959de5c5453a40c1e68dfbc642358fc839"
+    },
+    {
+      "id": "hera-resort",
+      "title": "THE HERA RESORT — Ghềnh Ráng",
+      "kind": "youtube",
+      "source": "https://www.youtube.com/watch?v=yMCRCLtflys",
+      "embed": "https://www.youtube.com/embed/yMCRCLtflys?autoplay=1&playsinline=1&rel=0&mute=1",
+      "poster": "assets/rwh-projects/the-hera-resort/hero.webp",
+      "noteKey": "projectFilm",
+      "originalTitle": "[CHÍNH THỨC RA MẮT TVC] THE HERA RESORT – TUYỆT TÁC SANTORINI MIỀN NHIỆT ĐỚI",
+      "scope": "Client assigned to project 01 The Hera Resort, Ghenh Rang on 2026-10-21. YouTube title verified, channel The Hera Resort Quy Nhon, duration 2:53. Embedded directly; not downloaded."
+    },
+    {
+      "id": "ecopark-hung-yen",
+      "title": "ECOPARK HƯNG YÊN — Onsen",
+      "kind": "youtube",
+      "source": "https://www.youtube.com/watch?v=sFp0O0xrHkk",
+      "embed": "https://www.youtube.com/embed/sFp0O0xrHkk?autoplay=1&playsinline=1&rel=0&mute=1",
+      "poster": "assets/rwh-projects/ecopark-hung-yen/hero.webp",
+      "noteKey": "projectFilm",
+      "originalTitle": "TỔ HỢP KHOÁNG NÓNG ONSEN NHẬT BẢN GIỮA LÒNG ECOPARK",
+      "scope": "Client assigned to Ecopark Hung Yen on 2026-10-21. YouTube title verified. Embedded directly; not downloaded."
+    },
+    {
+      "id": "kawara-my-an",
+      "title": "KAWARA MỸ AN ONSEN RESORT",
+      "kind": "youtube",
+      "source": "https://www.youtube.com/watch?v=dTsiTH8Rst0",
+      "embed": "https://www.youtube.com/embed/dTsiTH8Rst0?autoplay=1&playsinline=1&rel=0&mute=1",
+      "poster": "assets/rwh-projects/kawara-my-an/hero.webp",
+      "noteKey": "projectFilm",
+      "originalTitle": "Kawara Mỹ An Onsen Resort - Nghỉ dưỡng & Trải nghiệm tắm Onsen Nhật Bản",
+      "scope": "Client assigned to Kawara My An Onsen Resort on 2026-10-21. YouTube title verified, duration 3:06. Embedded directly; not downloaded."
     }
   ],
   "projectAssignments": {
-    "the-hera-resort": "onsen-living",
+    "the-hera-resort": "hera-resort",
     "capital-one": "onsen-living",
-    "kawara-my-an": "onsen-living",
+    "kawara-my-an": "kawara-my-an",
     "aegis-hospital": "aegis-pr",
     "onsen-thanh-thuy": "onsen-living",
     "ecopark-thanh-hoa": "onsen-living",
-    "nam-o-residence": "onsen-living",
+    "nam-o-residence": "nam-o-residence",
     "hakuba-hotel": "onsen-living",
     "thien-mu-hotel": "onsen-living",
-    "ecopark-hung-yen": "onsen-living"
+    "ecopark-hung-yen": "ecopark-hung-yen"
   },
   "playback": "Muted inline autoplay when sufficiently visible; native sound controls remain available. Offscreen media stops. Reduced-motion preferences disable autoplay."
 }

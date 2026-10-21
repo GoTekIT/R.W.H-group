@@ -69,13 +69,20 @@ test('modified library clicks retain their link and normal opening closes naviga
   assert.equal(prevented,false);assert.equal(p.library.open,false);
   p.open();assert.deepEqual(p.events,['rwh:close-menu']);assert.equal(p.library.open,true);
 });
-test('all project films retain inline muted controls without outbound links or a playback modal',()=>{
+test('each project has its assigned inline film without outbound links or a playback modal',()=>{
   const dist=path.join(__dirname,'../dist');
+  const youtubeAssignments={'the-hera-resort':'yMCRCLtflys','ecopark-hung-yen':'sFp0O0xrHkk','kawara-my-an':'dTsiTH8Rst0'};
   for(const project of fs.readdirSync(path.join(dist,'projects'))){
     const html=fs.readFileSync(path.join(dist,'projects',project,'index.html'),'utf8');
     const film=html.match(/<section class="project-film".*?<\/section>/s)?.[0];
-    assert.ok(film,project);assert.equal((film.match(/<video /g)||[]).length,1,project);
-    assert.match(film,/<video[^>]+controls muted playsinline preload="none"[^>]+src="\.\.\/\.\.\/assets\/rwh-videos\/[^\"]+\.mp4"/);
+    assert.ok(film,project);assert.equal((film.match(/<(?:video|iframe) /g)||[]).length,1,project);
+    if(youtubeAssignments[project]){
+      assert.ok(film.includes(`data-video-embed="https://www.youtube.com/embed/${youtubeAssignments[project]}?autoplay=1&amp;playsinline=1&amp;rel=0&amp;mute=1"`),project);
+      assert.match(film,/allow="autoplay; fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"/);
+    }else{
+      assert.match(film,/<video[^>]+controls muted playsinline preload="none"[^>]+src="\.\.\/\.\.\/assets\/rwh-videos\/[^\"]+\.mp4"/);
+      if(project==='nam-o-residence') assert.match(film,/src="\.\.\/\.\.\/assets\/rwh-videos\/nam-o-residence-web\.mp4"/);
+    }
     assert.doesNotMatch(film,/<a |<button /);assert.doesNotMatch(html,/id="video-player"|class="video-source"/);
   }
 });
