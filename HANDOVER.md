@@ -10,7 +10,7 @@ Ngày lập: 22/10/2026. Đây là hướng dẫn tiếp nhận source và tri�
 | Nhánh dùng để triển khai | `main` |
 | Website hiện tại | https://rwh-ruby.vercel.app/ |
 | Dự án Vercel hiện tại | `gotek/rwh` |
-| Commit chức năng đối chiếu trước tài liệu này | `a147a09935b15894aa75867cd3acfc061771e072` — dừng nền khi xem Details |
+| Cập nhật dữ liệu gần nhất | 22/10/2026 — thêm Bình Minh ở vị trí 11; giữ nguyên 10 dự án trước |
 | Tên thương hiệu | R.W.H Group |
 | Hotline | 0982-132-489 |
 | Email nhận form | linh.rwh@gmail.com |
@@ -69,13 +69,14 @@ Form gồm Name, Email, Questions và trường chống bot ẩn. Trình duyệt
 
 ## 5. Dự án, tài nguyên và video
 
-Bộ dự án có 186 ảnh, xếp đúng thứ tự 01–10: The Hera Resort; Capital One; Kawara Mỹ An Onsen Resort; Aegis International Hospital; Onsen Wellness Thanh Thuỷ; Ecopark Thanh Hoá – Onsen; Nam Ô Residence; Hakuba Hotel; Thiên Mụ Hotel; Ecopark Hưng Yên – Onsen. Dự án 06 chỉ dùng bộ Onsen, không ghép bộ Bình Minh – Bungalow.
+Bộ dự án có 201 ảnh, xếp thứ tự 01–11: The Hera Resort; Capital One; Kawara Mỹ An Onsen Resort; Aegis International Hospital; Onsen Wellness Thanh Thuỷ; Ecopark Thanh Hoá – Onsen; Nam Ô Residence; Hakuba Hotel; Thiên Mụ Hotel; Ecopark Hưng Yên – Onsen; Bình Minh Healthcare & Resort. Mười dự án đầu giữ nguyên thứ tự thư mục Drive; Bình Minh được thêm riêng theo yêu cầu ngày 22/10/2026, dùng 15 ảnh từ website chính thức. Dự án 06 vẫn chỉ dùng bộ Onsen, không ghép bộ Bình Minh – Bungalow.
 
 The Hera Resort ghi “Ghềnh Ráng, Quy Nhơn, Việt Nam”; tiếng Anh “Ghenh Rang, Quy Nhon, Vietnam”. Tên vịnh là “Vịnh Tiên” / “The Haven Bay”. Sửa nội dung VI/EN ở `PROJECT_SOURCES.json` và `PROJECT_TRANSLATIONS.json` rồi chạy renderer.
 
 Tài nguyên gốc:
 
 - Dự án: https://drive.google.com/drive/folders/1SQ6a0Fm6EQm3J9om5T1sm88so47pGKsB
+- Dự án 11 Bình Minh: https://www.rwh-group.com/projects/planning/binh-minh — quy hoạch 222,58 ha tại Xuyên Mộc; nguồn ảnh và thông tin riêng, có bản dịch VI/EN.
 - Phim Onsen Living chung: https://drive.google.com/drive/folders/1jEIwYNia4D_A1WjC6MVKAx8e0Wbde6j6
 - Phim Nam Ô: https://drive.google.com/drive/folders/1EUvQgWKoavkvYkxQeSoWrmMUvcKFbl8B
 - Nguồn ảnh, file ID, thứ tự, nguồn video và hash: `PROJECT_SOURCES.json`, `VIDEO_SOURCES.json`.
@@ -87,12 +88,12 @@ Tài nguyên gốc:
 | Ecopark Hưng Yên | YouTube `sFp0O0xrHkk` |
 | Nam Ô Residence | MP4 local `dist/assets/rwh-videos/nam-o-residence-web.mp4` |
 | AEGIS | MP4 local `dist/assets/rwh-videos/aegis-pr-movie.mp4` |
-| Năm dự án còn lại | MP4 Onsen Living chung, ghi rõ là phim giới thiệu thương hiệu |
+| Sáu dự án còn lại, gồm Bình Minh | MP4 Onsen Living chung, ghi rõ là phim giới thiệu thương hiệu |
 | Kyoto trong thư viện | YouTube `rfq8OT-J2Us`, ghi rõ video tham khảo, không gắn thành dự án RWH |
 
 Mỗi dự án có đúng một video ở đầu Details, trước ảnh. Ba clip YouTube dự án đang chờ khách gửi MP4 nếu muốn thay trình phát YouTube. Người nhận sửa `VIDEO_SOURCES.json`, thêm asset MP4/poster và chạy renderer; không chỉ thay một file HTML. Clip MP4 mới phải được ghi nhận đúng công trình trước khi đưa vào.
 
-Đo ở bản hiện tại: toàn bộ `dist/` khoảng 281 MB; ba MP4 local tổng khoảng 141 MB. Nam Ô đã tối ưu từ nguồn 4K khoảng 909 MB thành Full HD 1920×1080, 30 fps, khoảng 66 MB. Bản 4K gốc nằm trên Drive, không nằm trong repo. Những clip còn nhúng YouTube chưa dùng dung lượng lưu video trên hosting này; chuyển tất cả sang MP4 sẽ cần tính lại dung lượng và lưu lượng phát.
+Đo ở bản hiện tại: toàn bộ `dist/` khoảng 291 MB; ba MP4 local tổng khoảng 141 MB. Nam Ô đã tối ưu từ nguồn 4K khoảng 909 MB thành Full HD 1920×1080, 30 fps, khoảng 66 MB. Bản 4K gốc nằm trên Drive, không nằm trong repo. Những clip còn nhúng YouTube chưa dùng dung lượng lưu video trên hosting này; chuyển tất cả sang MP4 sẽ cần tính lại dung lượng và lưu lượng phát.
 
 PDF RWH ở `dist/assets/rwh-company-profile-2025.pdf` hiện khoảng 10,85 MiB, liên kết Profile mở trong tab mới. Yêu cầu nén dưới 3 MB vẫn chưa đạt; người tiếp nhận cần xác nhận ưu tiên dung lượng/chất lượng với khách nếu xử lý tiếp.
 
@@ -110,7 +111,7 @@ Các lệnh kiểm tra không gửi email thật. Server Python chỉ xem giao d
 ## 7. Kiểm tra trước khi nghiệm thu
 
 - Domain chính thức và HTTPS hoạt động, địa chỉ có/không `www` đi đúng nơi.
-- 10 dự án đúng thứ tự, ảnh và loại hình không ghép nhầm công trình; mobile không tràn ngang.
+- 11 dự án đúng thứ tự, Bình Minh ở cuối trước footer; ảnh và loại hình không ghép nhầm công trình; mobile không tràn ngang.
 - Landing tự chuyển; mở Details dừng đúng dự án, đóng xong mới chạy tiếp sau khoảng xem mới; wheel/swipe/bàn phím hoạt động.
 - Details trượt tại chỗ, header giữ trên khi cuộn; mở/đóng ảnh, video, form không bị trùng nút ×; đóng Details dừng media của iframe.
 - Video đúng các ánh xạ bên trên, phát trong trang, có âm lượng/toàn màn hình và hiển thị phù hợp điện thoại.

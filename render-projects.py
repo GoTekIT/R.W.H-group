@@ -1,4 +1,4 @@
-"""Render the client-numbered Drive project set into the static website.
+"""Render the client-ordered project set into the static website.
 
 The optimized images are committed in dist/assets/rwh-projects. No Drive login
 or document download is needed at build time or when someone views the site.
@@ -15,7 +15,8 @@ projects = json.loads((ROOT / 'PROJECT_SOURCES.json').read_text())['projects']
 translations = json.loads((ROOT / 'PROJECT_TRANSLATIONS.json').read_text())
 video_sources = json.loads((ROOT / 'VIDEO_SOURCES.json').read_text())
 videos = {video['id']: video for video in video_sources['videos']}
-assert [p['number'] for p in projects] == list(range(1, 11))
+assert projects and [p['number'] for p in projects] == list(range(1, len(projects) + 1))
+assert len({p['slug'] for p in projects}) == len(projects)
 
 
 def e(text):
@@ -137,6 +138,22 @@ index = DIST / 'index.html'
 html = index.read_text()
 html, count = re.subn(r'    <section class="section sec01 mainImg".*?(?=    <section class="section [^"]*fp-auto-height)', '\n'.join(sections) + '\n', html, flags=re.S)
 assert count == 1, 'Could not locate the landing-page project sections'
+html, count = re.subn(r'<section class="section sec\d+ fp-auto-height"',
+                     f'<section class="section sec{len(projects) + 1:02d} fp-auto-height"', html)
+assert count == 1, 'Could not locate the landing-page footer section'
+counter_numbers = '\n'.join(f'            <span>{p["number"]:02d}</span>' for p in projects)
+counter = f'''<div class="arrBox" aria-hidden="true">
+    <p class="srollTxt">
+        <span class="moveBlock">
+{counter_numbers}
+        </span>
+    </p>
+    <p class="allTxt">
+        <span><span>{len(projects):02d}</span></span>
+    </p>
+</div>'''
+html, count = re.subn(r'<div class="arrBox".*?</div>', counter, html, flags=re.S)
+assert count == 1, 'Could not locate the landing-page project counter'
 html = html.replace('<html lang="en">', '<html lang="vi">')
 html = re.sub(r'<meta name="description" content="[^"]*">', '<meta name="description" content="Các dự án R.W.H Group: nghỉ dưỡng, Onsen, chăm sóc sức khỏe, khách sạn và kiến trúc đô thị tại Việt Nam và Nhật Bản.">', html)
 html = re.sub(r'(?:src|href)="\./assets/rwh-reference-wordmark\.svg(?:\?v=[^"]*)?"', lambda match: match.group().split('=')[0] + f'="./{asset("assets/rwh-reference-wordmark.svg")}"', html)

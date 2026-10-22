@@ -3,6 +3,8 @@ const fs = require('node:fs');
 const path = require('node:path');
 const vm = require('node:vm');
 const { test } = require('node:test');
+const projects = require('../PROJECT_SOURCES.json').projects;
+const projectCount = projects.length;
 
 // Run the actual page controller with a deterministic clock and minimal DOM.
 function page(initialProject = 1) {
@@ -49,11 +51,11 @@ function page(initialProject = 1) {
   doc.activeElement = doc.body;
   doc.hidden = false;
   doc.readyState = 'complete';
-  const sections = Array.from({ length: 11 }, element);
-  sections.slice(0, 10).forEach(section => section.classList.add('mainImg'));
+  const sections = Array.from({ length: projectCount + 1 }, element);
+  sections.slice(0, projectCount).forEach(section => section.classList.add('mainImg'));
   const track = doc.querySelector('#fullpage');
   track.querySelectorAll = () => sections;
-  doc.children.set('#gFooter', sections[10]);
+  doc.children.set('#gFooter', sections[projectCount]);
   const context = {
     document: doc,
     window: {
@@ -150,9 +152,9 @@ test('SCROLL advances one project and End reaches the footer', () => {
   p.doc.querySelector('.scroll-jump').emit('click', { preventDefault() {} });
   assert.equal(p.index(), 1);
   p.key('End');
-  assert.equal(p.index(), 10);
+  assert.equal(p.index(), projectCount);
   p.advance(30000);
-  assert.equal(p.index(), 10);
+  assert.equal(p.index(), projectCount);
 });
 
 test('an open Contact form does not consume page navigation', () => {
@@ -200,10 +202,24 @@ test('the project gallery opens at the first project and autoplay ends at the fo
   assert.equal(p.index(), 0);
   p.advance(1);
   assert.equal(p.index(), 1);
-  p.advance(54000);
-  assert.equal(p.index(), 10);
+  p.advance((projectCount - 1) * 6000);
+  assert.equal(p.index(), projectCount);
   p.advance(30000);
-  assert.equal(p.index(), 10);
+  assert.equal(p.index(), projectCount);
+});
+
+test('the final project remains reachable before the footer and the counter includes it', () => {
+  const p = page(projectCount);
+  assert.equal(p.index(), projectCount - 1);
+  p.wheel(); assert.equal(p.index(), projectCount);
+  p.advance(1200); p.wheel(-100); assert.equal(p.index(), projectCount - 1);
+  const html = fs.readFileSync(path.join(__dirname, '../dist/index.html'), 'utf8');
+  const sections = [...html.matchAll(/class="section sec\d+ mainImg" id="project-(\d+)"/g)];
+  assert.deepEqual(sections.map(match => Number(match[1])), projects.map(project => project.number));
+  const counter = html.match(/<div class="arrBox"[\s\S]*?<\/div>/)[0];
+  assert.deepEqual([...counter.matchAll(/<span>(\d+)<\/span>/g)].map(match => Number(match[1])),
+    [...projects.map(project => project.number), projectCount]);
+  assert.ok(html.indexOf(`id="project-${projectCount}"`) < html.indexOf('fp-auto-height'));
 });
 
 test('video library keeps background autoplay but owns wheel and keyboard input', () => {

@@ -1,11 +1,12 @@
 {
   "sourceFolder": "https://drive.google.com/drive/folders/1SQ6a0Fm6EQm3J9om5T1sm88so47pGKsB",
-  "updated": "2026-10-21",
-  "ordering": "Client folder numbering 01 through 10",
+  "updated": "2026-10-22",
+  "ordering": "Client folder numbering 01 through 10, followed by client-requested Binh Minh as project 11",
   "notes": [
     "Only project photos and proposal renders are included. Inspiration boards, document chrome, logos and duplicate originals are excluded.",
     "Project 06 uses only the Onsen set, as confirmed by the client.",
-    "Dates in filenames are document versions, not completion dates. No completion dates inferred."
+    "Dates in filenames are document versions, not completion dates. No completion dates inferred.",
+    "Project 11 Binh Minh was added separately at the client request on 2026-10-22. Its 15 images and project information come from the official RWH project page. Project 06 remains Onsen only."
   ],
   "projects": [
     {
@@ -2586,6 +2587,240 @@
             "fileName": "1.jpg"
           },
           "sourceSha256": "7e139fcc3c81d4e31066e34048b5092bca84a0dbfbe10fc8991a01e8986a5f38"
+        }
+      ]
+    },
+    {
+      "slug": "binh-minh",
+      "title": "BÌNH MINH HEALTHCARE & RESORT",
+      "category": "PLANNING",
+      "location": "Xuyên Mộc, Bà Rịa – Vũng Tàu, Việt Nam",
+      "subtitle": "Nghỉ dưỡng phục hồi thể chất và tinh thần dưới tán rừng",
+      "description": "Bình Minh Physical-Mental Healthcare & Resort là dự án nghỉ dưỡng nằm dưới tán rừng, liền kề khu vực ven biển có nhiều dịch vụ du lịch. Dự án hướng đến một không gian nghỉ dưỡng và phục hồi cao cấp cho người cao tuổi, kết hợp cảnh quan tự nhiên với các tiện ích chăm sóc sức khỏe thể chất và tinh thần. Quy hoạch bao gồm condotel, biệt thự, trung tâm chăm sóc sức khỏe, Onsen – tắm bùn và công viên nước.",
+      "facts": [
+        [
+          "Địa điểm",
+          "Xuyên Mộc, Bà Rịa – Vũng Tàu, Việt Nam"
+        ],
+        [
+          "Loại hình",
+          "Quy hoạch khu nghỉ dưỡng và chăm sóc sức khỏe"
+        ],
+        [
+          "Diện tích",
+          "222,58 ha"
+        ],
+        [
+          "Khách hàng",
+          "Bình Minh Group"
+        ],
+        [
+          "Chức năng",
+          "Condotel, biệt thự, trung tâm chăm sóc sức khỏe, Onsen – tắm bùn, công viên nước"
+        ]
+      ],
+      "textSource": {
+        "url": "https://www.rwh-group.com/projects/planning/binh-minh"
+      },
+      "hero": "assets/rwh-projects/binh-minh/hero.webp",
+      "number": 11,
+      "sourceUrl": "https://www.rwh-group.com/projects/planning/binh-minh",
+      "mobile": "assets/rwh-projects/binh-minh/hero-mobile.webp",
+      "images": [
+        {
+          "name": "Binh Minh — source image 10",
+          "src": "assets/rwh-projects/binh-minh/01-b3847aec08.webp",
+          "thumbnail": "assets/rwh-projects/binh-minh/01-b3847aec08-thumb.webp",
+          "width": 1619,
+          "height": 1080,
+          "source": {
+            "url": "https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72vXruwSltp9tZ3T1yRDzHHvggL1x8e0H66gYnQYHPIE0bzJ49ylX6S4mcycrea5bL0iYBKeg8gdti_Se1TQZGmfhA7zsrhPyxPRCWSjX7GOToHppzve4l0PZA4ddeFAw0yQK0km0MDO4-0gWB0F-lXMo_priLvdo5NOj6tgw9fHWDLVFexQyjlCWd1rq-ZriJ-PDEAHqrKEXKtQnLvJ6mgcnzu1UMt4x5-S-6JeNf8=w16383",
+            "pageUrl": "https://www.rwh-group.com/projects/planning/binh-minh",
+            "imageOrder": 10
+          },
+          "sourceSha256": "b3847aec08b905ef0a8a8c7000a71a7b73fb02f1d3c1e1e6a3c051939da3a02a"
+        },
+        {
+          "name": "Binh Minh — source image 03",
+          "src": "assets/rwh-projects/binh-minh/02-f0f9177960.webp",
+          "thumbnail": "assets/rwh-projects/binh-minh/02-f0f9177960-thumb.webp",
+          "width": 1805,
+          "height": 1080,
+          "source": {
+            "url": "https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72sr16UbaQTV-6zcOsOWwFdznmfgLIhsKZjMy0-QVM2MYnMpAsBDtcMu2pjswVyLQnToH57UZopHVhRQmZv9hdsxUvyAVWSmbMkV_T2RruwE2C9rI6SoisQnNOtSW6U2B4vwriFftFp6ARh_oZKYg8VYgVUapyCotx4rdvlFrTf6rJ0wM8Clb8nYtlFAKa45JX7kwPGw1RipzjlfdSrZk3ZXjhPLuI9Td5x9GHHz=w16383",
+            "pageUrl": "https://www.rwh-group.com/projects/planning/binh-minh",
+            "imageOrder": 3
+          },
+          "sourceSha256": "f0f917796003f9856e23be8be3d5859a702cf27d9f2f6f83b5be9b621a8c6fbe"
+        },
+        {
+          "name": "Binh Minh — source image 02",
+          "src": "assets/rwh-projects/binh-minh/03-4f3d6bd2fb.webp",
+          "thumbnail": "assets/rwh-projects/binh-minh/03-4f3d6bd2fb-thumb.webp",
+          "width": 1805,
+          "height": 1080,
+          "source": {
+            "url": "https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72stsTSxqZop9G-ntuwSNYnxI0K1uUW9hFpqx4KleKzd5sw7WHrSAOViRFcdbcVja32Fa7FfKK-yDoHdAyZWU2CLWNKKcwoYENZC2GXjlJL5rXTB7ZFxPyhsk0_46RhJkqhuJ3puPlpdqcu-E0RLidLg_4YltGrAueHTpKgBT8amdgu3yR3IelZDMDdhTIRTbNUihMidWemKw6wjIQ5gzIUkkuipfipfDHxMeHn6EcI=w16383",
+            "pageUrl": "https://www.rwh-group.com/projects/planning/binh-minh",
+            "imageOrder": 2
+          },
+          "sourceSha256": "4f3d6bd2fb7b13d48cbd1b4e5db7c535bdbbcc5932f3173231371f1774f2af37"
+        },
+        {
+          "name": "Binh Minh — source image 01",
+          "src": "assets/rwh-projects/binh-minh/04-0f04b14f81.webp",
+          "thumbnail": "assets/rwh-projects/binh-minh/04-0f04b14f81-thumb.webp",
+          "width": 1601,
+          "height": 1080,
+          "source": {
+            "url": "https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72v0518osKCz2UZv6PuSsU1z-k97hioP3unm7TbQMXuiQdylD4qaiuqbYBG-Y6Yib1KS1n-OVV_FeSDSwZVnL-Lw_Nvp6W3O_98ZQ_2GwyuRP-VynmLyA6rKsM3z0jElOwutGfLeMYDJ285RnbroWV958UO6TkHdH4o9In8PhpBmrDOdNIStSheovxrIcRfZj7I37H5pZKSlWjxr1Hg-udU3kIG_0qkF8GJa626G=w16383",
+            "pageUrl": "https://www.rwh-group.com/projects/planning/binh-minh",
+            "imageOrder": 1
+          },
+          "sourceSha256": "0f04b14f81a4a478f00639a6b57f586ca4a77c86681f9b16510538ace33e4c74"
+        },
+        {
+          "name": "Binh Minh — source image 09",
+          "src": "assets/rwh-projects/binh-minh/05-01295ebf8f.webp",
+          "thumbnail": "assets/rwh-projects/binh-minh/05-01295ebf8f-thumb.webp",
+          "width": 1770,
+          "height": 1080,
+          "source": {
+            "url": "https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72trX3OdxzyHyMNpGxOZchaLBh5VQTDvpkcXZNXRPxAC2cLLZQLs-297RKrJCYyzcvXGpucLC47xOctH9LNCMdQFJVT_T67fCZ9yBn5qc6KJZcn4g--q0bvq5HfdzaW8V9q3jyO1B_VlxMhEPc7m0wKjUUeJ1V5P1qQQx3n7tc45pCmrbiNmTOZG010TDLMdINHNyn3RngCcUQ7u2n159lRFsFKmV8OYBMCJ71BMoA0=w16383",
+            "pageUrl": "https://www.rwh-group.com/projects/planning/binh-minh",
+            "imageOrder": 9
+          },
+          "sourceSha256": "01295ebf8f5ee5c2a42d86d70fcdb93124ddef4f3b29de32919d381d0eef52e6"
+        },
+        {
+          "name": "Binh Minh — source image 11",
+          "src": "assets/rwh-projects/binh-minh/06-4065af68de.webp",
+          "thumbnail": "assets/rwh-projects/binh-minh/06-4065af68de-thumb.webp",
+          "width": 1809,
+          "height": 1080,
+          "source": {
+            "url": "https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72toSD-WGsMaztjs9DBOl0t0XWNV9Lynkw_xXBjpxwivPl3wMSTGqRZ9FRdCXg3A6ckKzvaGWWCY09ZTzqvU2iZR7cwubp1lwsuzbwUc-3LWIwjl5hhGmLP023bQvNNcShN-5TqNEwf9h3hMUuXscAwAMzYrHIt0Sb6uszID3_SxMSLdul1y-mq3jsiatyKBZn1DioeMuwHK77KAvs65zcG5Y-Jo56mkqAooSf8Qoyc=w16383",
+            "pageUrl": "https://www.rwh-group.com/projects/planning/binh-minh",
+            "imageOrder": 11
+          },
+          "sourceSha256": "4065af68deb14e553d77798564af7f64225860492e86f2eae68a40432f19c486"
+        },
+        {
+          "name": "Binh Minh — source image 12",
+          "src": "assets/rwh-projects/binh-minh/07-50308c032a.webp",
+          "thumbnail": "assets/rwh-projects/binh-minh/07-50308c032a-thumb.webp",
+          "width": 1080,
+          "height": 1080,
+          "source": {
+            "url": "https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72sVt3WkEw0t9A3jJpGvc5Xbn4VYxxsqe9338qEEFTPuJ_IuHQbjlR7wLqNjmDdIB2dNmUFtorHnC-7xSDnCnCggSFUDCQQgbrKq5OJTcMbTR7D9Vc5JDFwsGqqACAkEXRV_QbDqc1k7BpPZejg4UtKEcfs1ENHCeuhS9v_7ub9TYWrIvw63FZn1Ui2qQC7KuRIxgBFwG_41A7Jx0fef5hWuNIWSje4yRtKG4WPDRho=w16383",
+            "pageUrl": "https://www.rwh-group.com/projects/planning/binh-minh",
+            "imageOrder": 12
+          },
+          "sourceSha256": "50308c032afe2ee1d8911bf755ffc69eb9baf1aa0c00f725576a7914ef84397d"
+        },
+        {
+          "name": "Binh Minh — source image 13",
+          "src": "assets/rwh-projects/binh-minh/08-d6e21cd245.webp",
+          "thumbnail": "assets/rwh-projects/binh-minh/08-d6e21cd245-thumb.webp",
+          "width": 1080,
+          "height": 1080,
+          "source": {
+            "url": "https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72s1RagajI-orBkDre85bN7bMxOvEMYyS-LfDnjYgn-ixIZZWvI8_b_siG_cDfN8H8kiykPoyX83GTysGfKd0BJedDgtUHFVnalgSVcT2mPb5Ty2StE33F--wOqlMvlNViM1lxKmiLl-7TQageYC-R0ONnPhwWGw10PgsoUYYrnMaKN_g9310NJO5D59TKw6EZyk9IxzVVmk8-pWITsqxn5BGhtE-Y4LeX0psW_j5c8=w16383",
+            "pageUrl": "https://www.rwh-group.com/projects/planning/binh-minh",
+            "imageOrder": 13
+          },
+          "sourceSha256": "d6e21cd245b84399d03d5bcd89566be923431a0ac3c9ee1eb646449c58fd59b4"
+        },
+        {
+          "name": "Binh Minh — source image 14",
+          "src": "assets/rwh-projects/binh-minh/09-bdbe853bcb.webp",
+          "thumbnail": "assets/rwh-projects/binh-minh/09-bdbe853bcb-thumb.webp",
+          "width": 1080,
+          "height": 1080,
+          "source": {
+            "url": "https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72vLTUEQNK6v7RcVAd18GJBZnARBGPQP1Dj8umyPmmVgq6bp1JrZ92EfxfmcWsjqsN9WFuOLIg-NMpBHTCmHpqKJi7K-PzZHxIaOXNqZ6LQ69YJVlZV5oxdPW1eIKAuGKGQwMAhpv_mQkV4eee4EijvIW-zu4aSPd_5D1ZtyYVhxl0hRVsgokcq_qz-syMdn38qhmqd3cfo3-6rtQHxaL_AJycSjFz2daxkKBHTc1jU=w16383",
+            "pageUrl": "https://www.rwh-group.com/projects/planning/binh-minh",
+            "imageOrder": 14
+          },
+          "sourceSha256": "bdbe853bcbf06727e01e516a1ca4f2725f488630969305809bdd2919e02d5243"
+        },
+        {
+          "name": "Binh Minh — source image 15",
+          "src": "assets/rwh-projects/binh-minh/10-be83c06662.webp",
+          "thumbnail": "assets/rwh-projects/binh-minh/10-be83c06662-thumb.webp",
+          "width": 1080,
+          "height": 1080,
+          "source": {
+            "url": "https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72sLRPeQ1soY5Y_rOcPEEoUHFRHTiC9jtbYhevIfZXwGxVog7Pkwm7KWTYn0iKnq1Xish5PEHY4bRHHtG9DpoR4vM9Q9lI7HiIsD9T8BmD-gTm96mnwBoyww3967MOHoUKdMGYnqNfI7JPoqLxXpZGStjzC0uA7rCTuvNiPMEyiatltgh-io-KzpmZXN1UUcCoCFX6fiTv9Xk8-LUdOOu38fU2MOpPj0ZMDPPcsVWto=w16383",
+            "pageUrl": "https://www.rwh-group.com/projects/planning/binh-minh",
+            "imageOrder": 15
+          },
+          "sourceSha256": "be83c0666216780403c1ac18c16fa3b0276106e02a09b2d3265be10cae0dc34b"
+        },
+        {
+          "name": "Binh Minh — source image 04",
+          "src": "assets/rwh-projects/binh-minh/11-868eceac0f.webp",
+          "thumbnail": "assets/rwh-projects/binh-minh/11-868eceac0f-thumb.webp",
+          "width": 2028,
+          "height": 774,
+          "source": {
+            "url": "https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72vPJpSuWtV1O0EqFKHLsJQP4MTG07jWMh8VphNXdGXCL2fC41GUJ3uaTkLJMM39l9aTQCVsktHn81LGaiPoGdSJlRvxPPgtvodCazYyZqWWwAbXI6KLsGU7Pfpy38299yKLzfTFKjaIohew_EalODey6GLOvCQdeiJNgdOHg0HCZkFJOiskNbt1R5nnqQjoHeWy9Qe1L5tRJdKhZ47q2CR8OOWIvHe0N7Phlw7s=w16383",
+            "pageUrl": "https://www.rwh-group.com/projects/planning/binh-minh",
+            "imageOrder": 4
+          },
+          "sourceSha256": "868eceac0f85d7fcdc390d153e7e9e168cb88581a59bbf2625d1e27b5fb3dc27"
+        },
+        {
+          "name": "Binh Minh — source image 05",
+          "src": "assets/rwh-projects/binh-minh/12-ec97c5a449.webp",
+          "thumbnail": "assets/rwh-projects/binh-minh/12-ec97c5a449-thumb.webp",
+          "width": 2048,
+          "height": 846,
+          "source": {
+            "url": "https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72vgh7siTIuSOcfDefgEkH3gNrNuxIwyw4tuzWHx04JuuSxj4usT0LRHsm4iRVkMXksdYH2pwhtXuurccOZLj29VnrHfQYo0H6dW0M84bkSnaIRIVX4Vbor_iD2QUVxlNvf5aFAX-sa7zOX7Z27DuBtZD8dX0rReZVMaJWvUNpm8Z-mXgRCQrQKuo2q76n-rfkbTNzuELCd3cRn9xYFFbw8yl6h4voGexFZdpV3zW1s=w16383",
+            "pageUrl": "https://www.rwh-group.com/projects/planning/binh-minh",
+            "imageOrder": 5
+          },
+          "sourceSha256": "ec97c5a4494f9c78d00a936f937d2345aab01881ac5ddf66f2a5559cd6c0a99b"
+        },
+        {
+          "name": "Binh Minh — source image 06",
+          "src": "assets/rwh-projects/binh-minh/13-3d301e6fa1.webp",
+          "thumbnail": "assets/rwh-projects/binh-minh/13-3d301e6fa1-thumb.webp",
+          "width": 2048,
+          "height": 846,
+          "source": {
+            "url": "https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72s2o7nM8NYWdtPTRumEI2eq_ESqL3nukkWgTlNK8lwFFNLpjh2L9bO65Ths_j1qV5SmD7D8ez0jgn7ux_NuGTwNIctQOxLgkZsU9VtOcrZn31EmXsug593oGIG_4Bv9-laIjABN4VN5zlDbTpjWEprc2YNTkjrFGVSOdyKLPv4zFLx0TPbbn10TNXnPD0Ls0npEhfnt6ck49rmzj0dlVxSrkONsQrKS2chEdmsPrKM=w16383",
+            "pageUrl": "https://www.rwh-group.com/projects/planning/binh-minh",
+            "imageOrder": 6
+          },
+          "sourceSha256": "3d301e6fa1505fc6d8e08ae19e9ceb00ef6d9d858c93e29594697b7c71443df2"
+        },
+        {
+          "name": "Binh Minh — source image 07",
+          "src": "assets/rwh-projects/binh-minh/14-8f101761f1.webp",
+          "thumbnail": "assets/rwh-projects/binh-minh/14-8f101761f1-thumb.webp",
+          "width": 1370,
+          "height": 965,
+          "source": {
+            "url": "https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72v7VnywH_WCbp8kx2QLejh2y5QFeB-jPtowGC-EmmCDNc7Voe4XRljUmdLdz3xU5gK5yyTVl6XPgvFG7UARGa1wm1dwqV3ucaI4Y4a0r0I3UnrETDKYqbCoLm1uzqPIl7A_0PWMI8mrDH09Z6H5RMYXqSDNWQ1rASsb0zOgaEV6_I5zybIiQFwhn5s08D3TYN9XNshT18mzILAqTKDAJOSaJDUMLaDgIv8ZT9hqFWs=w16383",
+            "pageUrl": "https://www.rwh-group.com/projects/planning/binh-minh",
+            "imageOrder": 7
+          },
+          "sourceSha256": "8f101761f10bb8fe505519d043f743b9dd00e1a4e56d5fff7e356c77a368ed99"
+        },
+        {
+          "name": "Binh Minh — source image 08",
+          "src": "assets/rwh-projects/binh-minh/15-5f747f5e8d.webp",
+          "thumbnail": "assets/rwh-projects/binh-minh/15-5f747f5e8d-thumb.webp",
+          "width": 1370,
+          "height": 965,
+          "source": {
+            "url": "https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72v1aaaapvLR2RrAdaAESU3b00uvVtrCuKYTp_M1I4zCo5k9-QRcKt-G4AcJpO6Q94Jw7vHVfDdHSkDBo7ktNow8A62rgtiWiF5Rh4Jjox1omN7Lsf4LvR2b39Tbcv4Z3-WtyWMz-6ci5_u85nUwqkn73gRxAH51opqU0m7Sih-vSwvljUgmla9cDfPx7qVYPictGIWqvheN2sY--BgasZacpFC7pPIBsKk_60JjNMc=w16383",
+            "pageUrl": "https://www.rwh-group.com/projects/planning/binh-minh",
+            "imageOrder": 8
+          },
+          "sourceSha256": "5f747f5e8dd75b45882adc783b37224eda726c0e6f5609291ff41ec3b66df9d0"
         }
       ]
     }

@@ -1,6 +1,6 @@
 # R.W.H Group — Landing page
 
-Website giới thiệu 10 dự án RWH, giao diện tham chiếu Apollo, nội dung tiếng Việt/Anh, gallery ảnh, video và form liên hệ. Bộ dự án đang chạy là dữ liệu RWH khách hàng cung cấp, không phải bộ dự án mẫu Apollo.
+Website giới thiệu 11 dự án RWH, giao diện tham chiếu Apollo, nội dung tiếng Việt/Anh, gallery ảnh, video và form liên hệ. Bộ dự án đang chạy là dữ liệu RWH khách hàng cung cấp, không phải bộ dự án mẫu Apollo.
 
 - Repository: https://github.com/GoTekIT/R.W.H-group
 - Nhánh triển khai: `main`
@@ -17,12 +17,12 @@ Form gửi JSON tới `POST /api/contact`. `api/contact.js` là entrypoint Verce
 
 ## Chức năng hiện tại
 
-- 10 dự án theo thứ tự thư mục 01–10, với 186 ảnh; dự án 06 chỉ dùng bộ Onsen.
+- 11 dự án với 201 ảnh: giữ thứ tự thư mục 01–10, thêm Bình Minh Healthcare & Resort ở số 11 theo yêu cầu ngày 22/10/2026; dự án 06 chỉ dùng bộ Onsen.
 - Landing tự chuyển mỗi 6 giây, hỗ trợ wheel, swipe, bàn phím và dừng ở footer.
 - Details trượt phủ toàn màn hình tại chỗ. Khi mở, landing dừng tự chuyển và chuyển động nền; đóng xong thì chạy tiếp với khoảng xem mới đủ 6 giây.
 - Header Details giữ ở trên khi cuộn; video ở đầu, sau đó là ảnh tràn ngang, mô tả, thông tin và dự án liên quan.
 - VI/EN được lưu trên trình duyệt; menu in hoa, hồ sơ năng lực mở PDF RWH.
-- Mỗi dự án có một phim. Nam Ô và AEGIS dùng MP4 riêng; Hera, Kawara Mỹ An, Ecopark Hưng Yên dùng YouTube; năm dự án còn lại dùng phim giới thiệu chung đã ghi chú. Thư viện Video có bảy phim.
+- Mỗi dự án có một phim. Nam Ô và AEGIS dùng MP4 riêng; Hera, Kawara Mỹ An, Ecopark Hưng Yên dùng YouTube; sáu dự án còn lại dùng phim giới thiệu chung đã ghi chú. Thư viện Video có bảy phim.
 - Video tự phát tắt tiếng khi đủ hiển thị, có điều khiển âm thanh/toàn màn hình; giảm chuyển động dùng Play thủ công.
 - Contact chỉ gồm Name, Email, Questions. Hotline: `0982-132-489`.
 
@@ -31,13 +31,13 @@ Form gửi JSON tới `POST /api/contact`. `api/contact.js` là entrypoint Verce
 | File/thư mục | Vai trò |
 | --- | --- |
 | `dist/` | Toàn bộ giao diện và tài nguyên web đã sẵn sàng triển khai |
-| `dist/projects/*/index.html` | Mười trang Details, cũng được nạp trong panel landing |
+| `dist/projects/*/index.html` | Mười một trang Details, cũng được nạp trong panel landing |
 | `dist/assets/rwh-projects/` | Ảnh dự án WebP đã tối ưu |
 | `dist/assets/rwh-videos/` | Ba MP4 local và ảnh bìa |
 | `dist/assets/rwh-company-profile-2025.pdf` | Hồ sơ năng lực hiện tại |
 | `PROJECT_SOURCES.json` / `PROJECT_TRANSLATIONS.json` | Dữ liệu dự án VI/EN, thứ tự ảnh và nguồn |
 | `VIDEO_SOURCES.json` / `NAVIGATION_SOURCES.json` | Ánh xạ video, nguồn clip và các liên kết RWH |
-| `render-projects.py` | Tạo lại mười trang, bản dịch dự án, thành phần chung và hash tài nguyên |
+| `render-projects.py` | Tạo lại trang và bộ đếm theo số dự án trong JSON, bản dịch, thành phần chung và hash tài nguyên |
 | `dist/app.js` / `dist/project-panel.js` | Điều hướng landing và vòng đời panel Details |
 | `dist/site-language.js` / `dist/rwh-videos.js` | Ngôn ngữ giao diện và phát video |
 | `api/`, `lib/`, `.env.example` | Backend form và tên biến môi trường cần cấu hình |

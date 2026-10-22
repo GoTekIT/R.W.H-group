@@ -212,5 +212,36 @@
         ]
       ]
     }
+  },
+  "binh-minh": {
+    "categoryVi": "QUY HOẠCH",
+    "en": {
+      "category": "PLANNING",
+      "location": "Xuyen Moc, Ba Ria – Vung Tau, Vietnam",
+      "subtitle": "Physical and mental well-being beneath the forest canopy",
+      "description": "Binh Minh Physical-Mental Healthcare & Resort is set beneath a dense forest canopy beside a coastal area with tourism services. The project envisions a high-end retreat for older guests, combining the natural landscape with facilities for physical and mental well-being. The master plan includes condotels, villas, a healthcare centre, Onsen and mud baths, and a water park.",
+      "facts": [
+        [
+          "Location",
+          "Xuyen Moc, Ba Ria – Vung Tau, Vietnam"
+        ],
+        [
+          "Type",
+          "Healthcare and resort master plan"
+        ],
+        [
+          "Site area",
+          "222.58 ha"
+        ],
+        [
+          "Client",
+          "Binh Minh Group"
+        ],
+        [
+          "Functions",
+          "Condotels, villas, healthcare centre, Onsen and mud baths, water park"
+        ]
+      ]
+    }
   }
 }
