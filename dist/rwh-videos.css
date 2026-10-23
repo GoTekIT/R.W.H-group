@@ -24,3 +24,17 @@ html:has(.video-library[open]){overflow:hidden;scrollbar-gutter:auto}
 .project-film .video-stage{height:calc(100svh - 108px);aspect-ratio:auto}
 .project-film .video-card h3,.project-film .video-card p{margin-left:40px;margin-right:40px}
 @media(max-width:767px){.project-film{padding-bottom:24px}.project-film>h2{top:22px;left:24px}.project-film .video-stage{height:calc(100svh - 154px)}.project-film .video-card h3,.project-film .video-card p{margin-left:24px;margin-right:24px}}
+
+/* Full-viewport playback: preserve source pixels/aspect ratio, crop overflow only. */
+.video-stage video{object-fit:cover}
+.project-film .video-stage,.video-library .video-stage{height:100vh;height:100svh;aspect-ratio:auto}
+.video-library-body{max-width:none;margin:0;padding:0 0 32px}
+.video-library-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:32px}
+.video-library-grid .video-card:first-child{grid-column:auto;max-width:none;width:100%}
+.video-library .video-card h3,.video-library .video-card p{margin-left:clamp(20px,4vw,48px);margin-right:clamp(20px,4vw,48px)}
+.video-library-head{height:0;min-height:0;padding:0;border:0;overflow:visible;background:transparent}
+.video-library-head h2{position:absolute;top:26px;left:clamp(20px,4vw,48px);text-shadow:0 1px 8px #000}
+.video-library-close{position:absolute;top:16px;right:20px;background:#0006;border-radius:50%}
+.video-library-intro{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%)}
+.project-film>h2{top:124px}
+@media(max-width:767px){.project-film>h2{top:174px}.video-library-head h2{top:24px}.video-library-close{right:12px}}

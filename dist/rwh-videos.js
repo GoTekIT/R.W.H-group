@@ -3,6 +3,9 @@
   function bindVideos(doc, observe = callback => new IntersectionObserver(callback, {threshold:[0,.35,.6,1]})) {
     const library = doc.querySelector('#video-library');
     const videos = [...doc.querySelectorAll('[data-inline-video]')];
+    // Start with sound. If autoplay is blocked, keep native Play available;
+    // never silently retry muted or reset the viewer's later volume choice.
+    videos.forEach(video => { video.defaultMuted = false; video.muted = false; video.volume = 1; });
     const embeds = [...doc.querySelectorAll('[data-video-embed]')];
     const media = [...videos, ...embeds];
     const ratios = new Map();

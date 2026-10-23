@@ -2911,3 +2911,7 @@ body:has(dialog[open]) { overflow:hidden; }
 #main .sec02 .listUl > li.rwh-reveal:nth-child(3) { transition-delay:.14s; }
 @media(prefers-reduced-motion:reduce) { .rwh-reveal.is-pending { opacity:1; transform:none; } }
 @media print { .rwh-reveal.is-pending { opacity:1; transform:none; } }
+
+/* Let the first film reach the top edge behind the project heading. */
+body:has(.project-film) #gHeader.header01,
+body:has(.project-film) #gHeader.header01.show01{position:absolute;inset:0 0 auto;width:100%;box-sizing:border-box;background:linear-gradient(#000b,transparent);text-shadow:0 1px 6px #0008}

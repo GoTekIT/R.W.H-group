@@ -71,18 +71,27 @@ test('modified library clicks retain their link and normal opening closes naviga
 });
 test('each project has its assigned inline film without outbound links or a playback modal',()=>{
   const dist=path.join(__dirname,'../dist');
-  const youtubeAssignments={'the-hera-resort':'yMCRCLtflys','ecopark-hung-yen':'sFp0O0xrHkk','kawara-my-an':'dTsiTH8Rst0'};
   for(const project of fs.readdirSync(path.join(dist,'projects'))){
     const html=fs.readFileSync(path.join(dist,'projects',project,'index.html'),'utf8');
     const film=html.match(/<section class="project-film".*?<\/section>/s)?.[0];
     assert.ok(film,project);assert.equal((film.match(/<(?:video|iframe) /g)||[]).length,1,project);
-    if(youtubeAssignments[project]){
-      assert.ok(film.includes(`data-video-embed="https://www.youtube.com/embed/${youtubeAssignments[project]}?autoplay=1&amp;playsinline=1&amp;rel=0&amp;mute=1"`),project);
-      assert.match(film,/allow="autoplay; fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"/);
-    }else{
-      assert.match(film,/<video[^>]+controls muted playsinline preload="none"[^>]+src="\.\.\/\.\.\/assets\/rwh-videos\/[^\"]+\.mp4"/);
-      if(project==='nam-o-residence') assert.match(film,/src="\.\.\/\.\.\/assets\/rwh-videos\/nam-o-residence-web\.mp4"/);
-    }
+    assert.match(film, /<video[^>]+controls playsinline preload="none"[^>]+src="[^\"]+\.mp4"/);
+    assert.doesNotMatch(film, /<iframe|\bmuted\b/);
+    const assignment=JSON.parse(fs.readFileSync(path.join(__dirname,'../VIDEO_SOURCES.json'),'utf8'));
+    const id=assignment.projectAssignments[project];
+    const assigned=assignment.videos.find(video=>video.id===id);
+    const source=assigned.source;
+    assert.ok(film.includes(`src="${assigned.deliveryUrl || `../../${source}`}"`),project);
+    if (assigned.deliveryUrl) assert.match(assigned.deliveryUrl, /^https:\/\/media\.nguyenxuanphu\.net\/rwh\/[a-f0-9]{12}\/[^/]+\.mp4$/);
+    else assert.ok(fs.existsSync(path.join(dist,source)),project);
     assert.doesNotMatch(film,/<a |<button /);assert.doesNotMatch(html,/id="video-player"|class="video-source"/);
   }
+});
+
+test('local videos start unmuted and preserve subsequent viewer volume choices',()=>{
+  const p=page(),video=p.videos[0];
+  assert.equal(video.muted,false);assert.equal(video.defaultMuted,false);assert.equal(video.volume,1);
+  p.visible(video,.8);video.muted=true;video.volume=.4;
+  p.visible(video,0);p.visible(video,.8);
+  assert.equal(video.muted,true);assert.equal(video.volume,.4);
 });
