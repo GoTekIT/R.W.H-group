@@ -186,6 +186,19 @@
         }
       },
       "deliveryUrl": "https://media.nguyenxuanphu.net/rwh/a7a9be04e187/kawara-my-an-4k.mp4"
+    },
+    {
+      "id": "binh-minh",
+      "title": "Bình Minh Healthcare & Resort — The Art of Onsen Living 3",
+      "kind": "mp4",
+      "source": "assets/rwh-videos/binh-minh-faststart.mp4",
+      "poster": "assets/rwh-projects/binh-minh/hero.webp",
+      "noteKey": "projectFilm",
+      "scope": "User-supplied project 11 film. Faststart remux without re-encoding. H.264/AAC, 2560x1440, 270.606 seconds; encoded audio/video stream SHA-256 verified identical to original.",
+      "original": "https://drive.google.com/file/d/1LWbzeH4XNkZzUA7I6W5xUiAsRHgTvK8T/view",
+      "bytes": 697112205,
+      "sha256": "12a2cf78a0a186b222af0fc8930fe68f493d4c78afade3440cd5d4c70bed865d",
+      "deliveryUrl": "https://media.nguyenxuanphu.net/rwh/12a2cf78a0a1/binh-minh-faststart.mp4"
     }
   ],
   "projectAssignments": {
@@ -199,7 +212,7 @@
     "hakuba-hotel": "onsen-living",
     "thien-mu-hotel": "onsen-living",
     "ecopark-hung-yen": "ecopark-hung-yen",
-    "binh-minh": "onsen-living"
+    "binh-minh": "binh-minh"
   },
   "playback": "Local inline playback defaults to sound on. Autoplay is attempted when sufficiently visible; native Play remains available when browser autoplay policy blocks sound. Offscreen media stops. Reduced-motion disables autoplay. Viewer mute/volume changes are preserved."
 }

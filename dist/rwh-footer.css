@@ -1,29 +1,29 @@
 /* Shared owner contact information on the landing and project pages. */
-#gFooter.rwh-footer .fInner { padding-top:72px; padding-bottom:36px; }
-#gFooter.rwh-footer .fLogo { margin-bottom:40px; }
-#gFooter.rwh-footer .rwh-footer-content { display:grid; grid-template-columns:1.15fr 1fr; gap:clamp(40px,6vw,100px); align-items:start; }
-#gFooter.rwh-footer .rwh-footer-invite { max-width:580px; font-size:24px; font-weight:300; line-height:1.65; letter-spacing:0; }
-#gFooter.rwh-footer .rwh-footer-contact { display:inline-flex; align-items:center; gap:14px; min-height:44px; margin-top:24px; border-bottom:1px solid rgba(255,255,255,.55); font-size:14px; }
-#gFooter.rwh-footer .rwh-footer-contact svg { width:20px; height:20px; fill:none; stroke:currentColor; stroke-width:1.3; }
-#gFooter.rwh-footer .rwh-footer-tagline { font-size:18px; font-weight:400; line-height:1.6; letter-spacing:0; }
-#gFooter.rwh-footer .rwh-footer-services { margin-top:12px; color:rgba(255,255,255,.7); font-size:14px; line-height:1.6; }
-#gFooter.rwh-footer .rwh-footer-hotline { display:flex; align-items:baseline; flex-wrap:wrap; gap:0 6px; margin-top:28px; font-size:14px; font-weight:400; line-height:1.6; letter-spacing:0; }
-#gFooter.rwh-footer .rwh-footer-hotline span { color:rgba(255,255,255,.7); font:inherit; letter-spacing:inherit; }
-#gFooter.rwh-footer .rwh-footer-hotline a { font:inherit; letter-spacing:inherit; white-space:nowrap; }
-#gFooter.rwh-footer .rwh-footer-bottom { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px 24px; margin-top:48px; padding-top:18px; border-top:1px solid rgba(255,255,255,.16); color:rgba(255,255,255,.5); font-size:11px; line-height:1.6; }
-#gFooter.rwh-footer .rwh-footer-socials { display:flex; align-items:center; flex-wrap:wrap; gap:8px 24px; }
-#gFooter.rwh-footer .rwh-footer-socials a { display:inline-flex; align-items:center; gap:8px; min-height:44px; color:#fff; font-size:12px; line-height:1.5; opacity:.8; transition:opacity .2s; }
-#gFooter.rwh-footer .rwh-footer-socials a:hover, #gFooter.rwh-footer .rwh-footer-socials a:focus-visible { opacity:1; }
-#gFooter.rwh-footer .rwh-footer-socials svg { width:19px; height:19px; fill:none; stroke:currentColor; stroke-width:1.4; }
-#gFooter.rwh-footer .rwh-footer-socials .facebook-mark { fill:currentColor; stroke:none; }
+:is(#gFooter,#contact-footer).rwh-footer .fInner { padding-top:72px; padding-bottom:36px; }
+:is(#gFooter,#contact-footer).rwh-footer .fLogo { margin-bottom:40px; }
+:is(#gFooter,#contact-footer).rwh-footer .rwh-footer-content { display:grid; grid-template-columns:1.15fr 1fr; gap:clamp(40px,6vw,100px); align-items:start; }
+:is(#gFooter,#contact-footer).rwh-footer .rwh-footer-invite { max-width:580px; font-size:24px; font-weight:300; line-height:1.65; letter-spacing:0; }
+:is(#gFooter,#contact-footer).rwh-footer .rwh-footer-contact { display:inline-flex; align-items:center; gap:14px; min-height:44px; margin-top:24px; border-bottom:1px solid rgba(255,255,255,.55); font-size:14px; }
+:is(#gFooter,#contact-footer).rwh-footer .rwh-footer-contact svg { width:20px; height:20px; fill:none; stroke:currentColor; stroke-width:1.3; }
+:is(#gFooter,#contact-footer).rwh-footer .rwh-footer-tagline { font-size:18px; font-weight:400; line-height:1.6; letter-spacing:0; }
+:is(#gFooter,#contact-footer).rwh-footer .rwh-footer-services { margin-top:12px; color:rgba(255,255,255,.7); font-size:14px; line-height:1.6; }
+:is(#gFooter,#contact-footer).rwh-footer .rwh-footer-hotline { display:flex; align-items:baseline; flex-wrap:wrap; gap:0 6px; margin-top:28px; font-size:14px; font-weight:400; line-height:1.6; letter-spacing:0; }
+:is(#gFooter,#contact-footer).rwh-footer .rwh-footer-hotline span { color:rgba(255,255,255,.7); font:inherit; letter-spacing:inherit; }
+:is(#gFooter,#contact-footer).rwh-footer .rwh-footer-hotline a { font:inherit; letter-spacing:inherit; white-space:nowrap; }
+:is(#gFooter,#contact-footer).rwh-footer .rwh-footer-bottom { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px 24px; margin-top:48px; padding-top:18px; border-top:1px solid rgba(255,255,255,.16); color:rgba(255,255,255,.5); font-size:11px; line-height:1.6; }
+:is(#gFooter,#contact-footer).rwh-footer .rwh-footer-socials { display:flex; align-items:center; flex-wrap:wrap; gap:8px 24px; }
+:is(#gFooter,#contact-footer).rwh-footer .rwh-footer-socials a { display:inline-flex; align-items:center; gap:8px; min-height:44px; color:#fff; font-size:12px; line-height:1.5; opacity:.8; transition:opacity .2s; }
+:is(#gFooter,#contact-footer).rwh-footer .rwh-footer-socials a:hover, :is(#gFooter,#contact-footer).rwh-footer .rwh-footer-socials a:focus-visible { opacity:1; }
+:is(#gFooter,#contact-footer).rwh-footer .rwh-footer-socials svg { width:19px; height:19px; fill:none; stroke:currentColor; stroke-width:1.4; }
+:is(#gFooter,#contact-footer).rwh-footer .rwh-footer-socials .facebook-mark { fill:currentColor; stroke:none; }
 @media(max-width:767px) {
-  #gFooter.rwh-footer .fInner { padding:48px 70px 28px 29px; }
-  #gFooter.rwh-footer .fLogo { margin-bottom:32px; }
-  #gFooter.rwh-footer .rwh-footer-content { grid-template-columns:minmax(0,1fr); gap:30px; }
-  #gFooter.rwh-footer .rwh-footer-invite { font-size:18px; line-height:1.6; }
-  #gFooter.rwh-footer .rwh-footer-contact { margin-top:16px; font-size:13px; }
-  #gFooter.rwh-footer .rwh-footer-tagline { font-size:16px; }
-  #gFooter.rwh-footer .rwh-footer-services { margin-top:8px; font-size:13px; }
-  #gFooter.rwh-footer .rwh-footer-hotline { margin-top:20px; }
-  #gFooter.rwh-footer .rwh-footer-bottom { flex-direction:column; align-items:flex-start; margin-top:32px; }
+  :is(#gFooter,#contact-footer).rwh-footer .fInner { padding:48px 70px 28px 29px; }
+  :is(#gFooter,#contact-footer).rwh-footer .fLogo { margin-bottom:32px; }
+  :is(#gFooter,#contact-footer).rwh-footer .rwh-footer-content { grid-template-columns:minmax(0,1fr); gap:30px; }
+  :is(#gFooter,#contact-footer).rwh-footer .rwh-footer-invite { font-size:18px; line-height:1.6; }
+  :is(#gFooter,#contact-footer).rwh-footer .rwh-footer-contact { margin-top:16px; font-size:13px; }
+  :is(#gFooter,#contact-footer).rwh-footer .rwh-footer-tagline { font-size:16px; }
+  :is(#gFooter,#contact-footer).rwh-footer .rwh-footer-services { margin-top:8px; font-size:13px; }
+  :is(#gFooter,#contact-footer).rwh-footer .rwh-footer-hotline { margin-top:20px; }
+  :is(#gFooter,#contact-footer).rwh-footer .rwh-footer-bottom { flex-direction:column; align-items:flex-start; margin-top:32px; }
 }
