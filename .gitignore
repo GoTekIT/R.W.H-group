@@ -10,3 +10,6 @@ node_modules/
 .sites-runtime/
 .openai/
 .vercel/
+
+# Local video backups; website delivery uses Cloudflare R2 URLs.
+dist/assets/rwh-videos/*.mp4
