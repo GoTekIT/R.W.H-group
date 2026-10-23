@@ -6,11 +6,19 @@
     const submit = form.querySelector('[type="submit"]');
     const fields = ['name', 'email', 'questions'].map(name => form.elements.namedItem(name));
     const website = form.elements.namedItem('website');
+    const repeatEmail = form.elements.namedItem('emailRepeat');
+    function checkEmailMatch() {
+      if (!repeatEmail) return;
+      repeatEmail.setCustomValidity(repeatEmail.value.trim() && repeatEmail.value.trim() !== fields[1].value.trim() ? i18n.t('emailMismatch') : '');
+    }
+    repeatEmail?.addEventListener('input', checkEmailMatch);
+    fields[1].addEventListener?.('input', checkEmailMatch);
     let sending = false;
     let attempt;
 
     async function send(event) {
       event.preventDefault();
+      checkEmailMatch();
       if (sending || !form.reportValidity()) return;
       if (protocol === 'file:') {
         i18n.message(note, 'contactLocal');
@@ -58,7 +66,8 @@
         submit.disabled = false;
         fields.forEach(field => { field.readOnly = false; });
         form.removeAttribute('aria-busy');
-        i18n.message(submit, 'sendMessage');
+        submit.removeAttribute?.('data-i18n');
+        submit.textContent = 'Gửi liên hệ | Send enquiry';
       }
     }
     form.addEventListener('submit', send);
@@ -68,6 +77,77 @@
   if (typeof module === 'object' && module.exports) {
     module.exports = { bindContactForm };
   } else {
+    const panel = document.querySelector('#contact-modal');
+    panel.querySelectorAll('[data-contact-design], [data-contact-section]').forEach(link => link.addEventListener('click', event => {
+      event.preventDefault(); panel.querySelector('#contact-name').focus();
+    }));
+    const navigation = document.querySelector('.menuBox');
+    const navigationHome = document.createComment('contact navigation return');
+    navigation.before(navigationHome);
+    const rail = panel.querySelector('.contact-rail');
+    const menuButton = rail.querySelector('[data-contact-menu]');
+    let menuClosing = false;
+    let closeTimer;
+    function restoreNavigation() {
+      clearTimeout(closeTimer);
+      navigationHome.after(navigation);
+      panel.classList.remove('contact-menu-open');
+      menuClosing = false;
+    }
+    function closeContactMenu() {
+      if (navigation.parentElement !== panel) return;
+      document.dispatchEvent(new CustomEvent('rwh:close-menu'));
+      menuButton.setAttribute('aria-expanded', 'false');
+      menuButton.setAttribute('aria-label', 'Mở menu');
+      menuClosing = true;
+      if (!panel.open || matchMedia('(prefers-reduced-motion: reduce)').matches) restoreNavigation();
+      else closeTimer = setTimeout(restoreNavigation, 550);
+    }
+    navigation.addEventListener('transitionend', event => {
+      if (event.target === navigation && event.propertyName === 'transform' && menuClosing) restoreNavigation();
+    });
+    rail.addEventListener('click', event => {
+      if (event.target.closest('[data-contact-top]')) return;
+      if (panel.classList.contains('contact-menu-open') && !menuClosing) { closeContactMenu(); return; }
+      clearTimeout(closeTimer);
+      menuClosing = false;
+      panel.append(navigation);
+      panel.classList.add('contact-menu-open');
+      // Establish the offscreen position after reparenting before starting the shared slide transition.
+      navigation.getBoundingClientRect();
+      document.querySelector('.menu')?.click();
+      menuButton.setAttribute('aria-expanded', 'true');
+      menuButton.setAttribute('aria-label', 'Đóng menu');
+    });
+    navigation.addEventListener('click', event => {
+      const link = event.target.closest('a');
+      if (!link || !panel.classList.contains('contact-menu-open')) return;
+      closeContactMenu();
+      if (link.hasAttribute('data-contact-open')) {
+        panel.scrollTo({top:0, behavior:'smooth'});
+      } else { panel.close(); }
+    });
+    panel.addEventListener('cancel', event => {
+      if (panel.classList.contains('contact-menu-open')) { event.preventDefault(); closeContactMenu(); }
+    });
+    panel.addEventListener('close', closeContactMenu);
+    const topButton = document.createElement('button');
+    topButton.type = 'button'; topButton.dataset.contactTop = '';
+    topButton.className = 'contact-back-top';
+    topButton.setAttribute('aria-label', 'Lên đầu / Back to top');
+    topButton.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21V3M5 10l7-7 7 7"/></svg>';
+    rail.append(topButton);
+    topButton.addEventListener('click', event => {
+      event.stopPropagation(); panel.scrollTo({top:0, behavior:'smooth'});
+    });
+    panel.querySelector('#contact-footer .hLogo')?.addEventListener('click', event => { event.preventDefault(); panel.close(); });
+    panel.querySelector('[data-contact-home]')?.addEventListener('click', event => {
+      event.preventDefault(); panel.close();
+    });
+    panel.querySelector('[data-contact-open]')?.addEventListener('click', event => {
+      event.preventDefault(); panel.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    panel.querySelector('[data-videos-open]')?.addEventListener('click', () => panel.close());
     bindContactForm({
       form: document.querySelector('#contact-form'),
       note: document.querySelector('#contact-note'), i18n: window.RWHI18n

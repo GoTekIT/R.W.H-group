@@ -57,3 +57,11 @@
 }
 @media(max-width:767px) and (max-height:700px) { .menuBox.rwh-menu .inner .subBox { padding-top:100px; } }
 @media(prefers-reduced-motion:reduce) { .rwh-menu-projects > summary::after { transition:none; } }
+
+@media(max-width:767px){
+  .menuBox.rwh-menu .rwh-menu-list > li > a,
+  .menuBox.rwh-menu .rwh-menu-projects > summary,
+  .menuBox.rwh-menu .rwh-menu-secondary a,
+  .menuBox.rwh-menu .rwh-menu-contact a,
+  .menuBox.rwh-menu .rwh-menu-bottom a{min-height:44px;box-sizing:border-box;display:inline-flex;align-items:center}
+}

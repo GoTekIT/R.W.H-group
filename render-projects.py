@@ -125,8 +125,8 @@ for project in projects:
     key = f'project.{project["slug"]}'
     sections.append(f'''    <section class="section sec{number:02d} mainImg" id="project-{number}">
         <div class="full"></div>
-        <div class="bg pc" style="background-image: url(./{e(project['hero'])})"></div>
-        <div class="bg sp" style="background-image: url(./{e(project['mobile'])})"></div>
+        <div class="bg pc" style="background-image: url(./{e(project.get('landingHero', project['hero']))})"></div>
+        <div class="bg sp" style="background-image: url(./{e(project.get('landingHero', project['mobile']))})"></div>
         <div class="txtBox"><a href="./projects/{e(project['slug'])}/index.html" data-project-open aria-haspopup="dialog" aria-controls="project-panel" data-project-title="{e(project['title'])}" aria-label="Xem chi tiết {e(project['title'])}">
             <h2><span>{e(project['title'])}</span></h2>
             <p class="txt"><span class="shuffle" data-i18n="{key}.metadata">{e(copy['vi'][key + '.metadata'])}</span><br><span class="shuffle" data-i18n="{key}.subtitle">{e(project['subtitle'])}</span></p>
@@ -193,8 +193,10 @@ html = html.replace('</body>', video_library() + '\n</body>')
 html = re.sub(r'^[ \t]*<li><a [^>]*data-videos-open[^>]*>.*?</a></li>\n?', '', html, flags=re.M)
 html = html.replace('<li><a href="https://www.rwh-group.com/news"', '<li><a href="#video-library" data-videos-open aria-haspopup="dialog" aria-controls="video-library" data-i18n="videos">VIDEO</a></li>\n                    <li><a href="https://www.rwh-group.com/news"', 1)
 html = re.sub(r'^[ \t]*<a class="rwh-footer-videos".*?</a>\n?', '', html, flags=re.M)
-html = html.replace('<p class="rwh-footer-services"', '<a class="rwh-footer-videos" href="#video-library" data-videos-open aria-haspopup="dialog" aria-controls="video-library" data-i18n="watchVideos">Xem video ↗</a>\n                        <p class="rwh-footer-services"', 1)
+html = html.replace('<p class="rwh-footer-services"', '<a class="rwh-footer-videos" href="#video-library" data-videos-open aria-haspopup="dialog" aria-controls="video-library" data-i18n="watchVideos">Xem video ↗</a>\n                        <p class="rwh-footer-services"')
 html = '\n'.join(line.rstrip() for line in html.splitlines() if line.strip()) + '\n'
+for filename in ['contact-page.css', 'contact-form.js', 'site-language.js', 'app.js', 'rwh-footer.css']:
+    html = re.sub(re.escape(filename) + r'(?:\?v=[a-z0-9]+)?', asset(filename), html)
 index.write_text(html)
 
 # Reuse the approved homepage menu, footer and owner contact form.
@@ -209,7 +211,7 @@ navigation = detail_links(re.search(r'<nav class="menuBox[^\"]*".*?</nav>', html
 footer = detail_links(re.search(r'<footer id="gFooter"[^>]*>.*?</footer>', html, re.S).group())
 footer = footer.replace('href="#container"', 'href="../../index.html"')
 footer = footer.replace('<div class="fInner">', '<div class="fInner"><div class="pagetop"><a href="#container" aria-label="Về đầu dự án"><img src="../../assets/apollo-reference/132dcb5de486.png" alt="" width="15"></a></div>', 1)
-contact_dialog = re.search(r'<dialog class="contact-modal".*?</dialog>', html, re.S).group()
+contact_dialog = re.search(r'<dialog class="contact-modal".*?</dialog>', html, re.S).group().replace('./assets/', '../../assets/')
 
 for i, project in enumerate(projects):
     number = project['number']
@@ -249,6 +251,7 @@ for i, project in enumerate(projects):
 <script src="../../{asset('project-motion.js')}" defer></script>
 <script src="../../{asset('rwh-videos.js')}" defer></script>
 <script src="../../{asset('project-gallery.js')}" defer></script>
+<link rel="stylesheet" href="../../{asset('contact-page.css')}">
 <script src="../../{asset('contact-form.js')}" defer></script>
 </head><body>
 {switcher}

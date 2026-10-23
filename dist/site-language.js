@@ -2,6 +2,8 @@
   'use strict';
   const copy = {
     vi: {
+      repeatEmail: 'Nhập lại Email', emailMismatch: 'Email nhập lại chưa trùng khớp.',
+      privacyAgree: 'Tôi đồng ý với việc xử lý thông tin liên hệ như mô tả ở trên.', contactRequired: '* Các trường bắt buộc',
       videos: 'VIDEO', watchVideos: 'Xem video ↗', playVideo: 'Phát video', closeVideos: 'Đóng video',
       videosIntro: 'Những thước phim về kiến trúc, Onsen và không gian chăm sóc sức khỏe.',
       brandFilm: 'Phim giới thiệu chung của R.W.H Group.', projectFilm: 'Phim giới thiệu dự án.',
@@ -34,6 +36,8 @@
       siteDescription: 'Các dự án R.W.H Group: nghỉ dưỡng, Onsen, chăm sóc sức khỏe, khách sạn và kiến trúc đô thị tại Việt Nam và Nhật Bản.'
     },
     en: {
+      repeatEmail: 'Repeat E-Mail', emailMismatch: 'The email addresses do not match.',
+      privacyAgree: 'I agree to the processing of my enquiry as described above.', contactRequired: '* asterisk indicates required fields',
       videos: 'VIDEO', watchVideos: 'Watch videos ↗', playVideo: 'Play video', closeVideos: 'Close videos',
       videosIntro: 'Films exploring architecture, Onsen and spaces for wellbeing.',
       brandFilm: 'A general introduction to R.W.H Group.', projectFilm: 'Project introduction film.',

@@ -54,7 +54,7 @@
       contact.showModal();
     });
   }
-  contact.querySelector('[data-modal-close]').addEventListener('click', () => contact.close());
+  contact.querySelector('[data-modal-close]')?.addEventListener('click', () => contact.close());
   contact.addEventListener('click', event => {
     if (event.target !== contact) return;
     const r = contact.getBoundingClientRect();

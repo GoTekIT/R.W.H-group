@@ -1,0 +1,43 @@
+/* Contact panel: Apollo reference geometry, R.W.H content and existing navigation. */
+#contact-modal{position:fixed;inset:0;margin:0;width:100%;max-width:none;height:100dvh;max-height:none;box-sizing:border-box;padding:0 70px 0 0;border:0;border-radius:0;background:#fff;color:#222;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none;overflow:auto;overscroll-behavior:contain;scrollbar-width:none;font:400 12px/1.5 'Noto Sans JP',sans-serif}
+#contact-modal::-webkit-scrollbar{display:none}#contact-modal[open]{animation:contact-enter .4s ease-out}@keyframes contact-enter{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+.contact-page-head{height:230px;position:relative;box-sizing:border-box;margin:0 7.2%}
+.contact-brand{position:absolute;top:72px;left:4px;font:600 32px/42px Roboto,sans-serif;color:#111!important;white-space:nowrap}.contact-brand small{font-size:12px;font-weight:400}
+#contact-title{position:absolute;left:calc(50% + 1px);top:72px;margin:0;font:300 28px/42px Roboto,sans-serif;letter-spacing:0;color:#000;white-space:nowrap}#contact-title span{font:inherit}
+.contact-language{position:absolute;right:0;top:150px;display:flex;gap:16px}.contact-language button{padding:0;border:0;background:none;color:#777;font:400 11px/18px Roboto,sans-serif;cursor:pointer}.contact-language button[aria-pressed=true]{color:#111}
+.contact-shortcuts{position:absolute;right:0;top:72px;display:grid;gap:10px;font:400 14px/21px Roboto,sans-serif;letter-spacing:.08em}.contact-shortcuts a{color:#111;display:block}.contact-shortcuts a::before{content:'–';color:#aaa;margin-right:8px}.contact-shortcuts a:last-child{color:#aaa}.contact-shortcuts small{font-size:11px;letter-spacing:.03em}
+.contact-rail{position:fixed;right:0;top:0;bottom:0;width:70px;background:#292929;color:#fff;z-index:2}.contact-rail>button{position:absolute;top:24px;left:26px;display:block;width:20px;height:12px;padding:0;background:none;border:0;color:#ccc;cursor:pointer}.contact-rail svg{display:block;width:20px;height:12px;fill:none;stroke:currentColor;stroke-width:1.4}.contact-rail>span{position:absolute;left:29px;top:50%;transform:translateY(-50%);writing-mode:vertical-rl;font:300 14px/1 Roboto,sans-serif;letter-spacing:.08em}
+.contact-page-body{margin:0 7.2%;padding:0 0 100px;display:grid;grid-template-columns:28.2% minmax(0,1fr);gap:0}.contact-required{font:400 12px/18px Roboto,sans-serif;letter-spacing:.05em}.contact-required p{margin:0 0 10px}.contact-required p[lang=en]{font-size:11px}.contact-required b,.contact-field b{color:#c00;font-weight:400;margin-left:2px}
+#contact-form{min-width:0;margin-top:-1px}.contact-field{margin:0 0 18px}#contact-modal .contact-field label{display:flex;align-items:baseline;gap:10px;min-height:21px;margin:0 0 5px;font:400 13px/19.5px 'Noto Sans JP',sans-serif;letter-spacing:.04em;color:#222}#contact-modal .contact-field label span[lang=en]{font-size:11px}
+#contact-modal .contact-field input,#contact-modal .contact-field textarea{display:block;box-sizing:border-box;width:100%;height:30px;min-height:30px;padding:4px 8px 5px;border:0;border-radius:0;box-shadow:none;background:#f0f0f0;color:#222;font:400 13px/normal 'Noto Sans JP',sans-serif}#contact-modal .contact-field:first-child input{width:293px;max-width:100%}#contact-modal .contact-field input[type=email]{width:592px;max-width:100%}#contact-modal .contact-field textarea{height:260px;min-height:260px;max-height:600px;resize:vertical}#contact-modal .contact-field input:focus,#contact-modal .contact-field textarea:focus{outline:1px solid #777;outline-offset:3px}#contact-modal input:-webkit-autofill{-webkit-text-fill-color:#222;-webkit-box-shadow:0 0 0 1000px #f0f0f0 inset}
+.contact-privacy{margin:128px 0 0 calc(-39.275766% + 4px);width:calc(139.275766% - 4px);font:400 12px/1.9 'Noto Sans JP',sans-serif}.privacy-intro{display:grid;grid-template-columns:47% 46.2%;justify-content:space-between;gap:0;margin:0 0 83px;letter-spacing:.026em}.privacy-intro p{margin:0}
+.privacy-box{display:grid;grid-template-columns:48% 46.8%;justify-content:space-between;box-sizing:border-box;height:252px;max-height:252px;padding:28px 14px 28px 42px;overflow:auto;border:1px solid #c1c1c1;background:#fcfcfc;font:400 12px/1.82 'Noto Sans JP',sans-serif;letter-spacing:.04em;scrollbar-width:thin;scrollbar-color:#c6c6c6 transparent}.privacy-box h3,.privacy-box h4{font:inherit;margin:0}.privacy-box h3{margin-bottom:23px}.privacy-box p{margin:0 0 23px}.privacy-box h4+p{margin-left:14px}.contact-consent{display:flex;align-items:center;justify-content:center;gap:15px;margin:54px 0 79px;font:400 12px/21px 'Noto Sans JP',sans-serif;letter-spacing:.08em;cursor:pointer}.contact-consent input{appearance:auto;flex:none;box-sizing:border-box;width:20px;height:20px;margin:0;accent-color:#292929}
+#contact-modal .contact-submit{display:block;box-sizing:border-box;width:361px;max-width:100%;min-height:57.5px;padding:19px 10px 21px;margin:0 auto;border:0;border-radius:0;background:#000;color:#fff;font:500 12px/17.5px 'Noto Sans JP',sans-serif;letter-spacing:0;cursor:pointer}#contact-modal .contact-submit:hover{background:#333}#contact-modal .contact-submit:disabled{opacity:.6;cursor:progress}#contact-modal .contact-note{margin:15px 0 0;color:#666;text-align:center;font:400 12px/1.8 'Noto Sans JP',sans-serif}
+.contact-actions{margin-left:calc(-39.275766% + 4px);width:calc(139.275766% - 4px)}
+#contact-footer{position:relative;background:#292929;color:#fff;font-family:Roboto,sans-serif;overflow:hidden}#contact-footer .fInner{padding-left:7.2%;padding-right:100px;box-sizing:border-box}#contact-footer a{color:#fff;font-weight:400;letter-spacing:.08em}#contact-footer .fLogo img{width:auto;height:24px;max-width:100%}#contact-modal :focus-visible{outline:1px solid #777;outline-offset:4px}
+@media(max-width:1000px) and (min-width:768px){#contact-title{left:42%;font-size:24px}.contact-shortcuts{font-size:12px}.contact-shortcuts small{display:block;margin-left:17px}}
+@media(max-width:767px){#contact-modal{padding-right:48px}.contact-page-head{height:190px;margin:0 24px}.contact-brand{top:30px;left:0;font-size:25px;line-height:32px}#contact-title{position:absolute;top:95px;left:0;font-size:22px;line-height:33px}.contact-shortcuts{display:none}.contact-language{top:35px}.contact-rail{width:48px}.contact-rail>button{top:24px;left:14px}.contact-rail>span{left:18px;font-size:12px}.contact-page-body{display:block;margin:0 24px;padding-bottom:60px}.contact-required{margin-bottom:48px}#contact-form{margin-top:0}#contact-modal .contact-field input{height:38px;font-size:16px}#contact-modal .contact-field label{gap:10px;flex-wrap:wrap}.contact-privacy,.contact-actions{width:auto;margin-left:0}.contact-privacy{margin-top:75px}.privacy-intro{grid-template-columns:1fr;gap:24px;margin-bottom:45px}.privacy-box{grid-template-columns:1fr;gap:24px;padding:24px;height:252px}.contact-consent{align-items:flex-start;justify-content:flex-start;margin:40px 0 50px;letter-spacing:.03em}#contact-footer .fInner{padding-left:29px;padding-right:29px}}
+@media(prefers-reduced-motion:reduce){#contact-modal[open]{animation:none}}
+
+#contact-modal .contact-language{display:none}
+.contact-rail{cursor:pointer}
+.contact-rail>.contact-back-top{top:auto;bottom:28px;left:23px;width:24px;height:28px}
+.contact-back-top svg{width:24px;height:24px;stroke-width:1}
+#contact-modal.contact-menu-open>.menuBox{z-index:3}
+#contact-modal.contact-menu-open .contact-rail{z-index:4}
+@media(max-width:767px){.contact-rail>.contact-back-top{left:12px}}
+
+/* Touch layouts: preserve desktop geometry while avoiding small input/tap targets. */
+@media(max-width:1000px){
+  #contact-modal .contact-field input{min-height:44px;font-size:16px}
+  #contact-modal .contact-field textarea{font-size:16px}
+  .contact-rail>button{width:44px;height:44px;left:13px;top:8px;display:grid;place-items:center}
+  .contact-rail>.contact-back-top{width:44px;height:44px;left:13px;top:auto;bottom:16px}
+  .contact-consent{min-height:44px}
+}
+@media(min-width:768px) and (max-width:1000px){
+  .contact-shortcuts{top:130px}
+}
+@media(max-width:767px){
+  .contact-rail>button,.contact-rail>.contact-back-top{left:2px}
+}

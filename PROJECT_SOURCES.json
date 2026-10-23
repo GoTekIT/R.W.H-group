@@ -304,7 +304,13 @@
           },
           "sourceSha256": "d1dd86573bf74d6df89097b9e8fa9cf28b0dbee4743713a1a85f8e91f7cb5eff"
         }
-      ]
+      ],
+      "landingHero": "assets/rwh-projects/capital-one/client-hero-e7978c1b0120.jpeg",
+      "landingHeroSource": {
+        "selectedOn": "2026-10-23",
+        "sha256": "e7978c1b01206f5e5035e15471b90486a32ea3a434f74234e87c121ef42746c5",
+        "quality": "Original image bytes retained; no resizing or re-encoding."
+      }
     },
     {
       "slug": "kawara-my-an",
@@ -1659,7 +1665,13 @@
           },
           "sourceSha256": "1334b1ed56cce560b4c374a06303de8b6a3e7fe1061e46177f69467cadf3c6bc"
         }
-      ]
+      ],
+      "landingHero": "assets/rwh-projects/onsen-thanh-thuy/client-hero-b2e0f2ad453a.png",
+      "landingHeroSource": {
+        "selectedOn": "2026-10-23",
+        "sha256": "b2e0f2ad453a649873b391d0307ae3b5b2433b3d813e7546caa07939dcb99dd4",
+        "quality": "Original image bytes retained; no resizing or re-encoding."
+      }
     },
     {
       "slug": "ecopark-thanh-hoa",
@@ -1919,7 +1931,13 @@
           },
           "sourceSha256": "1d29b81f0872fface9f10c5ccd7a049afe9fa4a15976e0d870bcfefef3d685d1"
         }
-      ]
+      ],
+      "landingHero": "assets/rwh-projects/ecopark-thanh-hoa/client-hero-1d29b81f0872.jpg",
+      "landingHeroSource": {
+        "selectedOn": "2026-10-23",
+        "sha256": "1d29b81f0872fface9f10c5ccd7a049afe9fa4a15976e0d870bcfefef3d685d1",
+        "quality": "Original image bytes retained; no resizing or re-encoding."
+      }
     },
     {
       "slug": "nam-o-residence",
@@ -2368,7 +2386,13 @@
           },
           "sourceSha256": "7c37ddb8baef9f04dab057e59c4542f749728f6878e916a4da4bd81d2fe86caf"
         }
-      ]
+      ],
+      "landingHero": "assets/rwh-projects/thien-mu-hotel/client-hero-ffc9f274d4e4.jpg",
+      "landingHeroSource": {
+        "selectedOn": "2026-10-23",
+        "sha256": "ffc9f274d4e4cd49bbe4a824c5b3569d22acd61b057ebbd1593ed4c2dde14f2c",
+        "quality": "Original image bytes retained; no resizing or re-encoding."
+      }
     },
     {
       "slug": "ecopark-hung-yen",
