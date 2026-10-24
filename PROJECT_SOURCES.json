@@ -1664,6 +1664,36 @@
             "embeddedImage": "image134.png"
           },
           "sourceSha256": "1334b1ed56cce560b4c374a06303de8b6a3e7fe1061e46177f69467cadf3c6bc"
+        },
+        {
+          "name": "1792801609097_8245179748609292660_g8821821137201393781_3f7dbb0614ecfdc414cba757801784d0.jpg",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/74-88bb51299a.jpg",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/74-88bb51299a.jpg",
+          "width": 1280,
+          "height": 712,
+          "source": {
+            "provider": "Zalo",
+            "conversation": "CTY Kiến trúc R.W.H x Go Media Vietnam",
+            "sender": "Linh Phạm",
+            "sentAt": "2026-10-24 07:26 +07:00",
+            "message": "e bổ sung hai ảnh này vào dự án thanh thuỷ"
+          },
+          "sourceSha256": "88bb51299a1abe6e81f13f1602da2ec6e77aa979080b90f49ab6334fbadde389"
+        },
+        {
+          "name": "1792801609138_8245179748609292660_g8821821137201393781_4303411e49ac151c4837a58d96d57452.jpg",
+          "src": "assets/rwh-projects/onsen-thanh-thuy/75-3168b223f0.jpg",
+          "thumbnail": "assets/rwh-projects/onsen-thanh-thuy/75-3168b223f0.jpg",
+          "width": 1280,
+          "height": 854,
+          "source": {
+            "provider": "Zalo",
+            "conversation": "CTY Kiến trúc R.W.H x Go Media Vietnam",
+            "sender": "Linh Phạm",
+            "sentAt": "2026-10-24 07:26 +07:00",
+            "message": "e bổ sung hai ảnh này vào dự án thanh thuỷ"
+          },
+          "sourceSha256": "3168b223f0462f338398dfabfda36f11272fd71544357e1468a446ff15e8eb8d"
         }
       ],
       "landingHero": "assets/rwh-projects/onsen-thanh-thuy/client-hero-b2e0f2ad453a.png",
