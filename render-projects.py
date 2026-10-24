@@ -30,7 +30,7 @@ def asset(name):
 def video_card(video, prefix='./'):
     source = video.get('deliveryUrl') or video.get('embed') or (prefix + video['source'])
     poster = prefix + video['poster']
-    notes = {'brandFilm': 'Phim giới thiệu chung của R.W.H Group.', 'projectFilm': 'Phim giới thiệu dự án.', 'referenceFilm': 'Video tham khảo · withBanyan. Không thuộc danh mục dự án R.W.H Group.'}
+    notes = {'clientFilm': 'Video do khách hàng lựa chọn.', 'brandFilm': 'Phim giới thiệu chung của R.W.H Group.', 'projectFilm': 'Phim giới thiệu dự án.', 'referenceFilm': 'Video tham khảo · withBanyan. Không thuộc danh mục dự án R.W.H Group.'}
     if video['kind'] == 'mp4':
         media = f'<video data-inline-video controls playsinline preload="none" poster="{e(poster)}" src="{e(source)}" aria-label="{e(video["title"])}"></video>'
     else:

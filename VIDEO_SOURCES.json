@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-23",
+  "updated": "2026-10-24",
   "placement": "Native inline players in the shared Video library; one full-width film at the top of each project Details, immediately below the header and before photos. No source-link buttons or separate playback dialog.",
   "videos": [
     {
@@ -199,6 +199,111 @@
       "bytes": 697112205,
       "sha256": "12a2cf78a0a186b222af0fc8930fe68f493d4c78afade3440cd5d4c70bed865d",
       "deliveryUrl": "https://media.nguyenxuanphu.net/rwh/12a2cf78a0a1/binh-minh-faststart.mp4"
+    },
+    {
+      "id": "hakuba-nagano-4k",
+      "original": "https://www.youtube.com/watch?v=m6NlTsNX-aY",
+      "bytes": 825338446,
+      "sha256": "b2143c7eabbc2ea33c5c0b63e199b5fc28aa97f2cce813598811ff401108190c",
+      "mediaInfo": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "vp9",
+            "codec_type": "video",
+            "width": 3840,
+            "height": 2160
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio"
+          }
+        ],
+        "format": {
+          "duration": "500.784762",
+          "size": "825338446"
+        }
+      },
+      "deliveryUrl": "https://media.nguyenxuanphu.net/rwh/b2143c7eabbc/hakuba-nagano-4k.mp4",
+      "title": "Hakuba — Spring in Nagano, Japan",
+      "kind": "mp4",
+      "source": "assets/rwh-videos/hakuba-nagano-4k.mp4",
+      "poster": "assets/rwh-projects/hakuba-hotel/hero.webp",
+      "noteKey": "clientFilm",
+      "scope": "Client-selected Nagano landscape film for Hakuba Hotel; not represented as footage of the hotel. Highest available source resolution retained. VP9/AAC or H.264/AAC stream-copy mux, faststart; no re-encoding.",
+      "downloadedOn": "2026-10-24",
+      "downloadedVia": "yt-dlp"
+    },
+    {
+      "id": "thien-mu-4k",
+      "original": "https://www.youtube.com/watch?v=Nhh7hS9RYTo",
+      "bytes": 287136720,
+      "sha256": "e7c0e508485e8283e61afc41afd7af253be9692e60fd1316c3a9f0ac4c09cd9b",
+      "mediaInfo": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "vp9",
+            "codec_type": "video",
+            "width": 3840,
+            "height": 2026
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio"
+          }
+        ],
+        "format": {
+          "duration": "166.997914",
+          "size": "287136720"
+        }
+      },
+      "deliveryUrl": "https://media.nguyenxuanphu.net/rwh/e7c0e508485e/thien-mu-4k.mp4",
+      "title": "Thiên Mụ — Thien Mu Pagoda",
+      "kind": "mp4",
+      "source": "assets/rwh-videos/thien-mu-4k.mp4",
+      "poster": "assets/rwh-projects/thien-mu-hotel/hero.webp",
+      "noteKey": "clientFilm",
+      "scope": "Client-selected Thien Mu Pagoda film for Thien Mu Hotel; not represented as footage of the hotel. Highest available source resolution retained. VP9/AAC or H.264/AAC stream-copy mux, faststart; no re-encoding.",
+      "downloadedOn": "2026-10-24",
+      "downloadedVia": "yt-dlp"
+    },
+    {
+      "id": "ecopark-thanh-hoa-1080p",
+      "original": "https://www.youtube.com/watch?v=mbBayr4wqB4",
+      "bytes": 18113867,
+      "sha256": "cb934ed443daed1920d95e8b0a7fc72f489d5284dc6ccde5c67351a050927ed4",
+      "mediaInfo": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1920,
+            "height": 1080
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio"
+          }
+        ],
+        "format": {
+          "duration": "44.373333",
+          "size": "18113867"
+        }
+      },
+      "deliveryUrl": "https://media.nguyenxuanphu.net/rwh/cb934ed443da/ecopark-thanh-hoa-1080p.mp4",
+      "title": "Ecopark Thanh Hoá",
+      "kind": "mp4",
+      "source": "assets/rwh-videos/ecopark-thanh-hoa-1080p.mp4",
+      "poster": "assets/rwh-projects/ecopark-thanh-hoa/hero.webp",
+      "noteKey": "clientFilm",
+      "scope": "Client-selected film for Ecopark Thanh Hoa. Highest available source resolution retained. VP9/AAC or H.264/AAC stream-copy mux, faststart; no re-encoding.",
+      "downloadedOn": "2026-10-24",
+      "downloadedVia": "yt-dlp"
     }
   ],
   "projectAssignments": {
@@ -207,10 +312,10 @@
     "kawara-my-an": "kawara-my-an",
     "aegis-hospital": "aegis-pr",
     "onsen-thanh-thuy": "onsen-living",
-    "ecopark-thanh-hoa": "onsen-living",
+    "ecopark-thanh-hoa": "ecopark-thanh-hoa-1080p",
     "nam-o-residence": "nam-o-residence",
-    "hakuba-hotel": "onsen-living",
-    "thien-mu-hotel": "onsen-living",
+    "hakuba-hotel": "hakuba-nagano-4k",
+    "thien-mu-hotel": "thien-mu-4k",
     "ecopark-hung-yen": "ecopark-hung-yen",
     "binh-minh": "binh-minh"
   },
