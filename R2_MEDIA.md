@@ -4,7 +4,7 @@ Bucket: `rwh-media` (Standard, APAC). Domain: `https://media.nguyenxuanphu.net`.
 
 `VIDEO_SOURCES.json` giữ `source` cho bản sao local và `deliveryUrl` cho URL công khai. `render-projects.py` ưu tiên `deliveryUrl`. Chạy lại renderer sau khi thay URL.
 
-Media là MP4 H.264/AAC phát trực tiếp bằng HTML video, hỗ trợ Range để tua; không phải dịch vụ tự chuyển chất lượng adaptive streaming. Hera/Kawara/Kyoto 4K; Ecopark Hưng Yên 1080p theo nguồn.
+Media là MP4 H.264/AAC hoặc VP9/AAC phát trực tiếp bằng HTML video, hỗ trợ Range để tua; không phải dịch vụ tự chuyển chất lượng adaptive streaming. Hera/Kawara/Kyoto 4K; Ecopark Hưng Yên 1080p theo nguồn.
 
 Đường dẫn chứa 12 ký tự đầu SHA-256; khi thay nội dung, tạo URL mới. Cache-Control: public, max-age=31536000, immutable. Không ghi đè file cùng URL.
 
@@ -29,3 +29,15 @@ Active URL: https://media.nguyenxuanphu.net/rwh/12a2cf78a0a1/binh-minh-faststart
 697112205 bytes; SHA256 12a2cf78a0a186b222af0fc8930fe68f493d4c78afade3440cd5d4c70bed865d. Stream-copy remux; encoded audio/video hashes identical to original; 2560x1440 preserved.
 Cloudflare rule `RWH Binh Minh video range` bypasses cache only for this URL (wildcard suffix). Verified HTTP206 for byte500000000 and600000000, matching1024-byte local sample. Chrome playback with audio volume100 and seeking to2:18 followed by continuous playback at2:35 verified.
 Temporary token revoked; Cloudflare UI empty and S3 HTTP401 verified. Local credentials removed. No Git push/deployment performed.
+
+## Ba video khách chọn — 24/10/2026
+
+- Hakuba Hotel: YouTube m6NlTsNX-aY, VP9/AAC 3840×2160, 500.785 giây, 825338446 bytes.
+- Thiên Mụ Hotel: YouTube Nhh7hS9RYTo, VP9/AAC 3840×2026, 166.998 giây, 287136720 bytes.
+- Ecopark Thanh Hoá: YouTube mbBayr4wqB4, H.264/AAC 1920×1080, 44.373 giây, 18113867 bytes; nguồn không có 4K.
+
+Giữ độ phân giải cao nhất nguồn cung cấp, ghép luồng không mã hóa lại; cả ba MP4 có moov trước mdat. URL và SHA256 trong VIDEO_SOURCES.json. Hakuba là phong cảnh Nagano, Thiên Mụ là phim chùa Thiên Mụ, được khách chỉ định cho các dự án tương ứng; không khẳng định đây là footage khách sạn. Thanh Thuỷ và Capital One giữ nguyên assignment. Chưa bổ sung hai ảnh Thanh Thuỷ.
+
+R2 HEAD khớp dung lượng. Kiểm tra CDN trả 206 ở đầu và giữa cả ba file, mẫu 1024 bytes khớp local. Quy tắc `RWH Hakuba video range` (551ef742ba954a39a1dd48873c740979) bypass cache riêng URL Hakuba, để clip lớn hỗ trợ Range.
+
+Chrome headless: cả ba phát thành công, tua tới giữa tiếp tục phát, muted=false, volume=1, videoWidth/videoHeight đúng nguồn, không media error. 48/48 Node tests đạt. Chưa kiểm tra trên iPhone thật. Token rwh-project-videos-20261024 đã thu hồi, S3 trả401, khóa tạm đã xóa. Chưa push GitHub/deploy trong lượt này.

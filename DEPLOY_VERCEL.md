@@ -67,3 +67,9 @@ Mở **Project Settings → Domains**, thêm domain đã mua và làm theo bản
 - [Resend: gửi email](https://resend.com/docs/api-reference/emails/send-email)
 - [Resend: xác minh domain](https://resend.com/docs/dashboard/domains/introduction)
 - [Resend: idempotency keys](https://resend.com/docs/dashboard/emails/idempotency-keys)
+
+## GitHub Pages audit — 24/10/2026
+
+Repository is private and has_pages=false. The last Pages workflow failed at configure-pages with Not Found. Attempting to enable Pages returned HTTP422: `Your current plan does not support GitHub Pages for this repository.` No repository visibility or billing changes were made. Workflow artifact path is corrected to `dist`; Pages still requires an eligible plan or a separately approved publishing arrangement.
+
+The contact form calls same-origin `/api/contact`. GitHub Pages only serves static files and cannot run the Node function in `api/contact.js`. Pointing the form at Vercel alone is insufficient because the backend enforces same-origin and does not enable cross-origin requests. Keep the production site on Vercel for the current email architecture. GET https://rwh-ruby.vercel.app/api/contact returned405 with Allow:POST, confirming the deployed route exists; no email was sent and Resend configuration/delivery remains unverified in this audit.
