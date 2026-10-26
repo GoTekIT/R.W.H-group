@@ -24,6 +24,17 @@
     const reduced = doc.defaultView?.matchMedia?.('(prefers-reduced-motion: reduce)');
     const inScope = item => library?.open ? library.contains(item) : !library?.contains(item);
     let returnFocus, active;
+    function playFromUserGesture(scope = null) {
+      if (reduced?.matches || doc.hidden) return;
+      const candidates = videos.filter(video => (!scope || scope.contains(video)) && inScope(video));
+      const target = candidates.find(video => !video.ended) || candidates[0];
+      if (target) {
+        ratios.set(target, Math.max(ratios.get(target) || 0, .6));
+        active = target;
+        videos.forEach(video => { if (video !== target) video.pause(); });
+        start(target);
+      }
+    }
     function chooseVideo() {
       if (doc.hidden) { videos.forEach(video => video.pause()); active = undefined; return; }
       if (videos.some(video => fullscreenVideos.has(video) || video.webkitDisplayingFullscreen || doc.fullscreenElement === video)) return;
@@ -73,6 +84,7 @@
         videos.forEach(video => video.pause()); active = undefined;
         doc.dispatchEvent(new CustomEvent('rwh:close-menu'));
         library.showModal();
+        playFromUserGesture(library);
         media.filter(item => library.contains(item)).forEach(item => {
           ratios.set(item, 0); visibility.unobserve(item); visibility.observe(item);
         });
@@ -88,6 +100,8 @@
         (returnFocus?.closest('[inert]') ? doc.querySelector('.menu') : returnFocus)?.focus({preventScroll:true});
       });
     }
+    // A project/menu click is a user gesture on mobile; use it to start audible playback.
+    doc.addEventListener('rwh:project-open', () => playFromUserGesture());
   }
   if (typeof module === 'object' && module.exports) module.exports = {bindVideos};
   else bindVideos(document);
