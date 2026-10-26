@@ -2,10 +2,29 @@
   'use strict';
   function bindVideos(doc, observe = callback => new IntersectionObserver(callback, {threshold:[0,.35,.6,1]})) {
     const library = doc.querySelector('#video-library');
+    const fullscreenVideos = new Set();
     const videos = [...doc.querySelectorAll('[data-inline-video]')];
     // Start with sound. If autoplay is blocked, keep native Play available;
     // never silently retry muted or reset the viewer's later volume choice.
     videos.forEach(video => { video.defaultMuted = false; video.muted = false; video.volume = 1; });
+    videos.forEach(video => {
+      video.addEventListener('webkitbeginfullscreen', () => fullscreenVideos.add(video));
+      video.addEventListener('webkitendfullscreen', () => fullscreenVideos.delete(video));
+      const stage = video.closest?.('.video-stage');
+      if (!stage || !doc.createElement) return;
+      const button = doc.createElement('button');
+      button.type = 'button'; button.className = 'video-fullscreen';
+      button.textContent = '⛶'; button.setAttribute('aria-label', 'Toàn màn hình / Full screen');
+      button.addEventListener('click', async () => {
+        video.play().catch(() => {});
+        try {
+          if (video.webkitEnterFullscreen) video.webkitEnterFullscreen();
+          else if (video.requestFullscreen) await video.requestFullscreen();
+          else return;
+        } catch { /* Native controls remain available if fullscreen is denied. */ }
+      });
+      stage.append(button);
+    });
     const embeds = [...doc.querySelectorAll('[data-video-embed]')];
     const media = [...videos, ...embeds];
     const ratios = new Map();
@@ -14,6 +33,7 @@
     let returnFocus, active;
     function chooseVideo() {
       if (doc.hidden) { videos.forEach(video => video.pause()); active = undefined; return; }
+      if (videos.some(video => fullscreenVideos.has(video) || video.webkitDisplayingFullscreen || doc.fullscreenElement === video)) return;
       if (reduced?.matches) return;
       const candidates = videos.filter(video => inScope(video) && (ratios.get(video) || 0) >= .35);
       const best = candidates.reduce((first, next) => !first || ratios.get(next) > ratios.get(first) ? next : first, undefined);
@@ -40,7 +60,7 @@
       entries.forEach(({target, isIntersecting, intersectionRatio}) => {
         ratios.set(target, isIntersecting ? intersectionRatio ?? 1 : 0);
         if (target.tagName === 'VIDEO') {
-          if (!isIntersecting) { target.pause(); if (active === target) active = undefined; }
+          if (!isIntersecting && !fullscreenVideos.has(target) && !target.webkitDisplayingFullscreen && doc.fullscreenElement !== target) { target.pause(); if (active === target) active = undefined; }
         } else updateEmbed(target);
       });
       chooseVideo();

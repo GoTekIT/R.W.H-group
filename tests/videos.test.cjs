@@ -95,3 +95,14 @@ test('local videos start unmuted and preserve subsequent viewer volume choices',
   p.visible(video,0);p.visible(video,.8);
   assert.equal(video.muted,true);assert.equal(video.volume,.4);
 });
+
+ test('native fullscreen playback is not paused when intersection changes',()=>{
+  const p=page(),video=p.videos[0];
+  p.visible(video,1);
+  video.webkitDisplayingFullscreen=true;
+  p.visible(video,0);
+  assert.equal(video.paused,false);
+  video.webkitDisplayingFullscreen=false;
+  p.visible(video,0);
+  assert.equal(video.paused,true);
+});
