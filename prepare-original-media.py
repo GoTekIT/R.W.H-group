@@ -19,7 +19,7 @@ for p in manifest['projects']:
    else:
     if fid not in docs:docs[fid]=pymupdf.open(f)
     page,num=map(int,re.match(r'page(\d+)-(\d+)',src['embeddedImage']).groups());doc=docs[fid];data=doc.extract_image(doc[page-1].get_images()[num][0])['image'];kind='pdf-embedded-original'
-  else:data=(d/im['src']).read_bytes()
+  else:data=(d/(p['hero'] if idx == 0 else im['src'])).read_bytes()
   image=Image.open(io.BytesIO(data));image.load();sha=hashlib.sha256(data).hexdigest()
   if kind in ['drive-original','embedded-original']:assert sha==im['sourceSha256'],(p['slug'],im['name'])
   if kind=='pdf-embedded-original':
