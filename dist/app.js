@@ -255,7 +255,7 @@
       track.style.transform = `translate3d(0,-${offset()}px,0)`;
       requestAnimationFrame(() => requestAnimationFrame(() => { track.style.transition = ''; }));
       loadProjectImage(current);
-      projects[current].classList.add('show'); accessibleSections(); shuffle(projects[current]); updatePosition(); schedule();
+      projects[current].classList.add('show'); accessibleSections(); updatePosition(); schedule();
       setTimeout(() => { header.classList.add('noTrans'); header.style.zIndex = 11; cover.hidden = true; }, reduced.matches ? 0 : 800);
       setTimeout(() => counter.classList.add('show'), reduced.matches ? 0 : 500);
       setTimeout(() => { if (current < footerIndex) scrollCue.style.display = 'block'; }, reduced.matches ? 0 : 1000);
