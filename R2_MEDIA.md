@@ -41,3 +41,13 @@ Giữ độ phân giải cao nhất nguồn cung cấp, ghép luồng không mã
 R2 HEAD khớp dung lượng. Kiểm tra CDN trả 206 ở đầu và giữa cả ba file, mẫu 1024 bytes khớp local. Quy tắc `RWH Hakuba video range` (551ef742ba954a39a1dd48873c740979) bypass cache riêng URL Hakuba, để clip lớn hỗ trợ Range.
 
 Chrome headless: cả ba phát thành công, tua tới giữa tiếp tục phát, muted=false, volume=1, videoWidth/videoHeight đúng nguồn, không media error. 48/48 Node tests đạt. Chưa kiểm tra trên iPhone thật. Token rwh-project-videos-20261024 đã thu hồi, S3 trả401, khóa tạm đã xóa. Chưa push GitHub/deploy trong lượt này.
+
+## Feedback verified — 2026-10-26
+
+Capital One now uses client-selected YouTube 1v_3T7FHs-M at the highest available 2560×1440. Hakuba (3840×2160) and Thiên Mụ (3840×2026) use H.264/yuv420p compatibility encodes with faststart. Video was re-encoded; original resolution is preserved, not a lossless video conversion. Audio streams are copied unchanged and stream hashes match originals. URLs, sizes and hashes are in VIDEO_SOURCES.json.
+
+All three uploaded objects passed R2 HEAD and CDN HTTP 206 checks at beginning and middle; sampled bytes match local files. Cache rule RWH October 26 large video range (e250900a793d498f98fde5a5e12d54df) bypasses only the new Capital One and Hakuba URLs.
+
+In-app browser playback and native fullscreen verified for all three, with audio enabled. Midpoint seeking verified for Capital One and Hakuba. Real iPhone/Android device verification remains outstanding. Fullscreen preserves the complete video frame. Capital One homepage image uses contain over a blurred full-screen backdrop; image bytes unchanged.
+
+49/49 Node tests pass. Contact destination and volume normalization were explicitly excluded and remain unchanged. Temporary token rwh-feedback-20261026 revoked: Cloudflare token list empty, S3 HTTP 401, local credential file deleted. No GitHub push or deployment in this task.
