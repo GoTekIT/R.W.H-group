@@ -121,7 +121,7 @@ test('blocked audible autoplay preserves sound and a subsequent user play remain
   assert.equal(video.paused,false);
 });
 
-test('mobile selects lightweight source while desktop preserves original',()=>{
- assert.equal(page({mobile:true}).videos[0].src,'https://example.com/mobile.mp4');
+test('mobile and desktop both preserve the full-quality source',()=>{
+ assert.equal(page({mobile:true}).videos[0].src,'https://example.com/original.mp4');
  assert.equal(page().videos[0].src,'https://example.com/original.mp4');
 });

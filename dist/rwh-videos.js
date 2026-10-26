@@ -5,11 +5,7 @@
     const fullscreenVideos = new Set();
     function start(video) { return video.play().catch(() => {}); }
     const videos = [...doc.querySelectorAll('[data-inline-video]')];
-    // Choose the lightweight rendition before playback; do not swap while playing.
-    const mobile = doc.defaultView?.matchMedia?.('(max-width: 767px), (pointer: coarse)')?.matches;
-    if (mobile) videos.forEach(video => {
-      if (video.dataset.mobileSrc) video.src = video.dataset.mobileSrc;
-    });
+    // Preserve the full-quality CDN source on every device.
     // Start with sound. If autoplay is blocked, keep native Play available;
     // never silently retry muted or reset the viewer's later volume choice.
     videos.forEach(video => { video.defaultMuted = false; video.muted = false; video.volume = 1; });
