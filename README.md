@@ -69,3 +69,12 @@ Server xem trước này chỉ phục vụ file tĩnh, không chạy `/api/conta
 Vercel hiện triển khai từ GitHub `main`, dùng gốc repository, output `dist`, không cần install/build command. Các biến `RESEND_API_KEY` và `RESEND_FROM_EMAIL` được nhập phía server; `.env.example` chỉ chứa tên biến, không có khóa thật.
 
 Chưa có xác nhận thư thật đã tới hộp thư người nhận; cần cấu hình Resend và kiểm tra khi bàn giao. Nhà cung cấp hosting/domain mới chưa được chốt. Ba clip YouTube dự án chưa được thay bằng MP4 vì đang chờ file khách cung cấp. PDF hiện khoảng 10,85 MiB, chưa đạt mục tiêu dưới 3 MB. Xem chi tiết trạng thái, tài nguyên và quy trình nghiệm thu trong [HANDOVER.md](HANDOVER.md).
+
+## Media quality policy (2026-10-26)
+
+- Desktop landing and gallery photos use original Drive file bytes or the original embedded image stream extracted from the supplied PDF/PowerPoint. Do not resize or re-encode these to chase a performance score.
+- `ORIGINAL_MEDIA_AUDIT.json` records each image hash, size and provenance. `retained-existing` identifies the 15 Binh Minh photos outside the supplied Drive and the two Thanh Thuy Zalo additions; these are not claimed as verified Drive originals.
+- Mobile uses a separate high-quality WebP rendition, at most 1600 px wide, without upscaling. The full-resolution original remains the gallery zoom target.
+- Desktop video keeps its full-quality CDN URL. Only viewports at or below 767 px select an available mobile rendition; coarse pointer alone must not downgrade desktop/tablet video.
+- `prepare-original-media.py CACHE_DIR` reproduces assets from the downloaded Drive files (Pillow and PyMuPDF required). `render-projects.py` builds pages. Keep the original files and client-approved hero choices intact.
+- Validate with `node --test tests/*.test.cjs`, then measure the deployed site. PageSpeed results from previous compressed assets do not establish the score of this version.
