@@ -83,6 +83,7 @@
         returnFocus = link.closest('.menuBox') ? doc.querySelector('.menu') : link;
         videos.forEach(video => video.pause()); active = undefined;
         doc.dispatchEvent(new CustomEvent('rwh:close-menu'));
+        library.querySelectorAll('[data-poster]').forEach(video => { video.poster = video.dataset.poster; });
         library.showModal();
         playFromUserGesture(library);
         media.filter(item => library.contains(item)).forEach(item => {

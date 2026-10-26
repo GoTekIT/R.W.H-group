@@ -1,7 +1,7 @@
 @charset "utf-8";
-@font-face {font-family:Roboto;font-style:normal;font-weight:300;font-display:swap;src:url('./assets/roboto-light.ttf') format('truetype');}
-@font-face {font-family:Roboto;font-style:normal;font-weight:400;font-display:swap;src:url('./assets/roboto-regular.ttf') format('truetype');}
-@font-face {font-family:Roboto;font-style:normal;font-weight:500;font-display:swap;src:url('./assets/roboto-medium.ttf') format('truetype');}
+@font-face {font-family:Roboto;font-style:normal;font-weight:300;font-display:swap;src:url('./assets/roboto-light.woff2') format('woff2');}
+@font-face {font-family:Roboto;font-style:normal;font-weight:400;font-display:swap;src:url('./assets/roboto-regular.woff2') format('woff2');}
+@font-face {font-family:Roboto;font-style:normal;font-weight:500;font-display:swap;src:url('./assets/roboto-medium.woff2') format('woff2');}
 
 /*------------------------------------------------------------
 	デフォルトスタイル
@@ -18,7 +18,7 @@ html {
 	font-size: 62.5%;
 }
 body, table, input, textarea, select, option {
-	font-family: 'Noto Sans JP', sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
 	display: block;
@@ -2116,7 +2116,7 @@ h1 {
     top: 0;
     width: 106%;
     height: 100%;
-    background: url("https://apollo-aa.jp/img/index/main_img01.jpg") no-repeat center / cover;
+    background: none no-repeat center / cover;
 }
 #main .bg::before {
     position: absolute;
@@ -2142,31 +2142,31 @@ h1 {
     100% { transform: translateX(6vw); -webkit-transform: translateX(6vw);}
 }
 #main .mainImg01 .bg {
-	background-image: url("https://apollo-aa.jp/img/index/main_img02.jpg");
+	background-image: none;
 }
 #main .mainImg03 .bg {
-	background-image: url("https://apollo-aa.jp/img/index/main_img03.jpg");
+	background-image: none;
 }
 #main .mainImg04 .bg {
-	background-image: url("https://apollo-aa.jp/img/index/main_img04.jpg");
+	background-image: none;
 }
 #main .mainImg05 .bg {
-	background-image: url("https://apollo-aa.jp/img/index/main_img05.jpg");
+	background-image: none;
 }
 #main .mainImg06 .bg {
-	background-image: url("https://apollo-aa.jp/img/index/main_img06.jpg");
+	background-image: none;
 }
 #main .mainImg07 .bg {
-	background-image: url("https://apollo-aa.jp/img/index/main_img07.jpg");
+	background-image: none;
 }
 #main .mainImg08 .bg {
-	background-image: url("https://apollo-aa.jp/img/index/main_img08.jpg");
+	background-image: none;
 }
 #main .mainImg09 .bg {
-	background-image: url("https://apollo-aa.jp/img/index/main_img09.jpg");
+	background-image: none;
 }
 #main .mainImg10 .bg {
-	background-image: url("https://apollo-aa.jp/img/index/main_img10.jpg");
+	background-image: none;
 }
 #main .mainImg .txtBox {
 	position: absolute;
@@ -2424,7 +2424,7 @@ h1 {
 		height: 23px;
 	}
 	#main .mainImg01 {
-		background-image: url("https://apollo-aa.jp/img/index/sp_main_img02.jpg");
+		background-image: none;
 	}
 	#main .mainImg .arrBox {
 		padding-right: 15px;
@@ -2446,37 +2446,37 @@ h1 {
 		max-width: 270px;
 	}
 	#main .bg {
-		background-image: url("https://apollo-aa.jp/img/index/sp_main_img01.jpg");
+		background-image: none;
 	}
 	#main .bg::before {
 		background-image: url(./assets/apollo-reference/c8977926f102.png);
 	}
 	#main .mainImg01 .bg {
-		background-image: url("https://apollo-aa.jp/img/index/sp_main_img02.jpg");
+		background-image: none;
 	}
 	#main .mainImg03 .bg {
-		background-image: url("https://apollo-aa.jp/img/index/sp_main_img03.jpg");
+		background-image: none;
 	}
 	#main .mainImg04 .bg {
-		background-image: url("https://apollo-aa.jp/img/index/sp_main_img04.jpg");
+		background-image: none;
 	}
 	#main .mainImg05 .bg {
-		background-image: url("https://apollo-aa.jp/img/index/sp_main_img05.jpg");
+		background-image: none;
 	}
 	#main .mainImg06 .bg {
-		background-image: url("https://apollo-aa.jp/img/index/sp_main_img06.jpg");
+		background-image: none;
 	}
 	#main .mainImg07 .bg {
-		background-image: url("https://apollo-aa.jp/img/index/sp_main_img07.jpg");
+		background-image: none;
 	}
 	#main .mainImg08 .bg {
-		background-image: url("https://apollo-aa.jp/img/index/sp_main_img08.jpg");
+		background-image: none;
 	}
 	#main .mainImg09 .bg {
-		background-image: url("https://apollo-aa.jp/img/index/sp_main_img09.jpg");
+		background-image: none;
 	}
 	#main .mainImg10 .bg {
-		background-image: url("https://apollo-aa.jp/img/index/sp_main_img10.jpg");
+		background-image: none;
 	}
 	.arrBox {
 		padding-right: 15px;
@@ -2524,7 +2524,7 @@ body.menu-open .arrBox,body.menu-open #main .sroll { opacity:0; visibility:hidde
 /* Capital One: edge-to-edge photography without a blurred duplicate. */
 #main #project-2 .bg{width:100%;animation:none!important;transform:none!important;background-size:cover;background-position:center 65%;background-repeat:no-repeat}
 #main #project-2 .bg::before,#main #project-2 .bg::after{content:none;display:none}
-@media(min-width:768px){#main #project-2 .bg.pc{background-image:url('./assets/rwh-projects/capital-one/02-c2b85ba700.webp')!important}}
+
 
 .contact-modal { position:fixed; inset:0; margin:auto; box-sizing:border-box; width:min(560px,calc(100% - 40px)); max-height:calc(100svh - 40px); padding:38px 40px 32px; border:1px solid rgba(255,255,255,.35); border-radius:20px; background:linear-gradient(135deg,rgba(255,255,255,.08),transparent 50%),rgba(82,82,82,.9); color:#fff; font-family:'Roboto',sans-serif; box-shadow:inset 0 1px 0 rgba(255,255,255,.2),0 24px 80px rgba(0,0,0,.3); -webkit-backdrop-filter:blur(24px); backdrop-filter:blur(24px); overflow:auto; overscroll-behavior:contain; }
 .contact-modal::backdrop { background:rgba(0,0,0,.26); }

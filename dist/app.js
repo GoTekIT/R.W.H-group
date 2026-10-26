@@ -36,6 +36,13 @@
   };
   window.RWHI18n ||= { t: key => messages[key] || key, message(element, key) { element.textContent = messages[key] || key; } };
 
+  function loadProjectImage(index) {
+    const section = projects[index];
+    if (!section) return;
+    const mode = window.matchMedia('(max-width: 767px)').matches ? 'sp' : 'pc';
+    const image = section.querySelector('.bg.' + mode);
+    if (image?.dataset.bg) image.style.backgroundImage = `url("${image.dataset.bg}")`;
+  }
   function accessibleSections() {
     sections.forEach((section, index) => {
       section.inert = index !== current;
@@ -45,6 +52,7 @@
   function schedule() {
     clearTimeout(timer);
     if (ready && !reduced.matches && !document.hidden && !projectPanel?.open && current < footerIndex) {
+      setTimeout(() => loadProjectImage(current + 1), 2500);
       timer = setTimeout(() => goTo(current + 1, false, true), 6000);
     }
   }
@@ -93,6 +101,7 @@
     if (immediate) pendingWheelStep = 0;
     const destination = Math.max(0, Math.min(footerIndex, index));
     if (!ready || projectPanel?.open || (!automatic && (menuOpen || contact.open || videoLibrary?.open)) || (locked && !immediate) || destination === current) return;
+    loadProjectImage(destination);
     current = destination;
     clearTimeout(timer); clearTimeout(unlock); clearTimeout(cleanup);
     wheelSum = 0; pendingWheelStep = 0; locked = true;
@@ -245,6 +254,7 @@
       track.style.transition = 'none';
       track.style.transform = `translate3d(0,-${offset()}px,0)`;
       requestAnimationFrame(() => requestAnimationFrame(() => { track.style.transition = ''; }));
+      loadProjectImage(current);
       projects[current].classList.add('show'); accessibleSections(); shuffle(projects[current]); updatePosition(); schedule();
       setTimeout(() => { header.classList.add('noTrans'); header.style.zIndex = 11; cover.hidden = true; }, reduced.matches ? 0 : 800);
       setTimeout(() => counter.classList.add('show'), reduced.matches ? 0 : 500);
@@ -252,11 +262,11 @@
     };
     if (reduced.matches) reveal();
     else {
-      setTimeout(() => header.classList.add('show'), 800);
-      setTimeout(reveal, 1800);
+      header.classList.add('show');
+      setTimeout(reveal, 150);
     }
   }
   updatePosition(); accessibleSections();
-  if (document.readyState === 'complete') start();
-  else window.addEventListener('load', start, { once: true });
+  window.addEventListener('resize', () => loadProjectImage(current));
+  start();
 })();

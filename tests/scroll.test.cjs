@@ -66,7 +66,7 @@ function page(initialProject = 1) {
     setInterval: () => ++nextId, clearInterval() {}
   };
   vm.runInNewContext(fs.readFileSync(path.join(__dirname, '../dist/app.js'), 'utf8'), context);
-  advance(1800); // The reference's opening reveal completes before its six-second interval starts.
+  advance(150); // The short opening reveal completes before its six-second interval starts.
   const index = () => sections.findIndex(section => section.attributes['aria-hidden'] === 'false');
   function wheel(deltaY = 100) {
     doc.emit('wheel', { target: sections[index()], deltaY, deltaX: 0, deltaMode: 0, preventDefault() {} });

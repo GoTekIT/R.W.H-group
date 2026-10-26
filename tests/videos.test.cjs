@@ -22,7 +22,7 @@ function page({reduced=false,mobile=false}={}) {
   videos[0].dataset.mobileSrc='https://example.com/mobile.mp4';
   videos[0].src='https://example.com/original.mp4';
   frame.dataset.videoEmbed='https://www.youtube.com/embed/example?autoplay=1&mute=1';
-  library.querySelector=()=>close;library.contains=item=>item===videos[1] || item===frame;
+  library.querySelectorAll=()=>[];library.querySelector=()=>close;library.contains=item=>item===videos[1] || item===frame;
   const preference={matches:reduced,addEventListener(name,fn){preferenceChange=fn;}};
   const doc={hidden:false,defaultView:{matchMedia:query=>query.includes('prefers-reduced-motion')?preference:{matches:mobile}},
     querySelector:selector=>({'#video-library':library,'.menu':menu})[selector],
