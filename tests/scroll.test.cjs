@@ -219,7 +219,7 @@ test('the final project remains reachable before the footer and the counter incl
   const counter = html.match(/<div class="arrBox"[\s\S]*?<\/div>/)[0];
   assert.deepEqual([...counter.matchAll(/<span>(\d+)<\/span>/g)].map(match => Number(match[1])),
     [...projects.map(project => project.number), projectCount]);
-  assert.ok(html.indexOf(`id="project-${projectCount}"`) < html.indexOf('fp-auto-height'));
+  assert.ok(html.indexOf(`id="project-${projectCount}"`) < html.indexOf('fp-auto-height', html.indexOf('<body')));
 });
 
 test('video library keeps background autoplay but owns wheel and keyboard input', () => {

@@ -138,6 +138,7 @@ for project in projects:
 
 index = DIST / 'index.html'
 html = index.read_text()
+html = re.sub(r'<style data-inline-css="([^"]+)">.*?</style>', lambda m: f'<link rel="stylesheet" href="./{m[1]}">', html, flags=re.S)
 html = re.sub(r'href="\./styles\.css(?:\?v=[^"]*)?"', f'href="./{asset("styles.css")}"', html)
 html, count = re.subn(r'    <section class="section sec01 mainImg".*?(?=    <section class="section [^"]*fp-auto-height)', '\n'.join(sections) + '\n', html, flags=re.S)
 assert count == 1, 'Could not locate the landing-page project sections'
@@ -205,6 +206,14 @@ html = re.sub(r'<link data-hero-preload[^>]*>\n?', '', html)
 first_images = landing_images[projects[0]['slug']]
 preloads = '\n'.join(f'<link data-hero-preload rel="preload" as="image" fetchpriority="high" href="./{first_images[mode]}" media="{media}">' for mode, media in [('sp', '(max-width: 767px)'), ('pc', '(min-width: 768px)')])
 html = html.replace('</head>', preloads + '\n</head>')
+# Inline the small shared style sheets to avoid serial render-blocking requests on 4G.
+def inline_css(match):
+    filename = match[1].split('?')[0]
+    css = (DIST / filename).read_text()
+    css = re.sub(r'/\*.*?\*/', '', css, flags=re.S)
+    css = '\n'.join(line.rstrip() for line in css.splitlines() if line.strip())
+    return f'<style data-inline-css="{filename}">' + css + '</style>'
+html = re.sub(r'<link rel="stylesheet" href="\./([^"]+)">', inline_css, html)
 index.write_text(html)
 
 # Reuse the approved homepage menu, footer and owner contact form.
