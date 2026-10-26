@@ -2521,10 +2521,10 @@ body { margin:0; }
 .arrBox,.pagetop,#main .sroll { transition:opacity .5s,visibility .5s; }
 body.menu-open .arrBox,body.menu-open #main .sroll { opacity:0; visibility:hidden!important; }
 .sr-only { position:absolute; width:1px; height:1px; overflow:hidden; clip-path:inset(50%); white-space:nowrap; }
-/* Capital One: full original portrait over a soft edge-to-edge backdrop. */
-#main #project-2 .bg{width:100%;animation:none!important;transform:none!important;background-color:#23292b;isolation:isolate}
-#main #project-2 .bg::before{background-image:inherit;filter:blur(28px) brightness(.45);background-size:cover;z-index:0}
-#main #project-2 .bg::after{content:"";position:absolute;inset:0;animation:none!important;transform:none!important;background-image:inherit;background-position:center;background-size:contain;background-repeat:no-repeat;z-index:1}
+/* Capital One: edge-to-edge photography without a blurred duplicate. */
+#main #project-2 .bg{width:100%;animation:none!important;transform:none!important;background-size:cover;background-position:center 65%;background-repeat:no-repeat}
+#main #project-2 .bg::before,#main #project-2 .bg::after{content:none;display:none}
+@media(min-width:768px){#main #project-2 .bg.pc{background-image:url('./assets/rwh-projects/capital-one/02-c2b85ba700.webp')!important}}
 
 .contact-modal { position:fixed; inset:0; margin:auto; box-sizing:border-box; width:min(560px,calc(100% - 40px)); max-height:calc(100svh - 40px); padding:38px 40px 32px; border:1px solid rgba(255,255,255,.35); border-radius:20px; background:linear-gradient(135deg,rgba(255,255,255,.08),transparent 50%),rgba(82,82,82,.9); color:#fff; font-family:'Roboto',sans-serif; box-shadow:inset 0 1px 0 rgba(255,255,255,.2),0 24px 80px rgba(0,0,0,.3); -webkit-backdrop-filter:blur(24px); backdrop-filter:blur(24px); overflow:auto; overscroll-behavior:contain; }
 .contact-modal::backdrop { background:rgba(0,0,0,.26); }

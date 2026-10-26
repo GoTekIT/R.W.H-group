@@ -3,7 +3,7 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 const {bindVideos} = require('../dist/rwh-videos.js');
-function page({reduced=false}={}) {
+function page({reduced=false,mobile=false}={}) {
   let focused, observerCallback, preferenceChange, events=[];
   const observed=new Set(), documentEvents={};
   function element(tagName='BUTTON') {
@@ -19,10 +19,12 @@ function page({reduced=false}={}) {
   }
   const library=element('DIALOG'),close=element(),trigger=element('A'),menu=element();
   const videos=[element('VIDEO'),element('VIDEO')],frame=element('IFRAME');
+  videos[0].dataset.mobileSrc='https://example.com/mobile.mp4';
+  videos[0].src='https://example.com/original.mp4';
   frame.dataset.videoEmbed='https://www.youtube.com/embed/example?autoplay=1&mute=1';
   library.querySelector=()=>close;library.contains=item=>item===videos[1] || item===frame;
   const preference={matches:reduced,addEventListener(name,fn){preferenceChange=fn;}};
-  const doc={hidden:false,defaultView:{matchMedia:()=>preference},
+  const doc={hidden:false,defaultView:{matchMedia:query=>query.includes('prefers-reduced-motion')?preference:{matches:mobile}},
     querySelector:selector=>({'#video-library':library,'.menu':menu})[selector],
     querySelectorAll:selector=>({'[data-inline-video]':videos,'[data-video-embed]':[frame],'[data-videos-open]':[trigger]})[selector] || [],
     dispatchEvent:event=>events.push(event.type),addEventListener(name,fn){documentEvents[name]=fn;}};
@@ -117,4 +119,9 @@ test('blocked audible autoplay preserves sound and a subsequent user play remain
   video.play=()=>{video.paused=false;return Promise.resolve();};
   await video.play();
   assert.equal(video.paused,false);
+});
+
+test('mobile selects lightweight source while desktop preserves original',()=>{
+ assert.equal(page({mobile:true}).videos[0].src,'https://example.com/mobile.mp4');
+ assert.equal(page().videos[0].src,'https://example.com/original.mp4');
 });
