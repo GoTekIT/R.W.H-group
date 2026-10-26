@@ -177,7 +177,7 @@ html = html.replace('</body>', '''<dialog class="project-panel" id="project-pane
     <div class="project-panel-status" role="status">
         <div class="panel-wordmark">R.W.H<small>Group</small></div>
         <p class="project-panel-loading" data-i18n="loadingProject">Đang tải dự án…</p>
-        <div class="project-panel-error"><p data-i18n="projectLoadError">Chưa tải được dự án. Vui lòng thử mở lại.</p><a data-panel-fallback target="_blank" rel="noopener noreferrer" data-i18n="openProjectPage">Mở trang dự án</a></div>
+        <div class="project-panel-error"><p data-i18n="projectLoadError">Chưa tải được dự án. Vui lòng thử mở lại.</p><a href="./projects/the-hera-resort/index.html" data-panel-fallback target="_blank" rel="noopener noreferrer" data-i18n="openProjectPage">Mở trang dự án</a></div>
     </div>
     <iframe allow="autoplay; fullscreen" title="Chi tiết dự án" tabindex="-1" aria-hidden="true"></iframe>
     <button class="project-panel-close" data-panel-close type="button" aria-label="Đóng chi tiết dự án" data-i18n-aria-label="closeProject" autofocus><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
@@ -295,3 +295,6 @@ for i, project in enumerate(projects):
     (folder / 'index.html').write_text(localize_ui(page))
 
 print(f'Rendered {len(projects)} ordered project sections and local detail galleries.')
+
+from seo import render_seo
+render_seo(ROOT)
