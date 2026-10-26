@@ -1,46 +1,46 @@
 {
   "the-hera-resort": {
-    "pc": "assets/rwh-projects/the-hera-resort/hero.webp",
-    "sp": "assets/rwh-projects/the-hera-resort/hero-mobile.webp"
+    "pc": "assets/rwh-projects/the-hera-resort/original-01-fd4d82dcc2.png",
+    "sp": "assets/rwh-projects/the-hera-resort/landing-mobile-hq.webp"
   },
   "capital-one": {
-    "pc": "assets/rwh-projects/capital-one/02-c2b85ba700.webp",
-    "sp": "assets/rwh-projects/capital-one/client-hero-e7978c1b0120.jpeg"
+    "pc": "assets/rwh-projects/capital-one/original-02-4301d15171.jpg",
+    "sp": "assets/rwh-projects/capital-one/landing-mobile-hq.webp"
   },
   "kawara-my-an": {
-    "pc": "assets/rwh-projects/kawara-my-an/hero.webp",
-    "sp": "assets/rwh-projects/kawara-my-an/hero-mobile.webp"
+    "pc": "assets/rwh-projects/kawara-my-an/original-01-db6491e818.jpg",
+    "sp": "assets/rwh-projects/kawara-my-an/landing-mobile-hq.webp"
   },
   "aegis-hospital": {
-    "pc": "assets/rwh-projects/aegis-hospital/hero.webp",
-    "sp": "assets/rwh-projects/aegis-hospital/hero-mobile.webp"
+    "pc": "assets/rwh-projects/aegis-hospital/original-01-9f22054745.jpg",
+    "sp": "assets/rwh-projects/aegis-hospital/landing-mobile-hq.webp"
   },
   "onsen-thanh-thuy": {
     "pc": "assets/rwh-projects/onsen-thanh-thuy/client-hero-b2e0f2ad453a.png",
-    "sp": "assets/rwh-projects/onsen-thanh-thuy/client-hero-b2e0f2ad453a.png"
+    "sp": "assets/rwh-projects/onsen-thanh-thuy/landing-mobile-hq.webp"
   },
   "ecopark-thanh-hoa": {
     "pc": "assets/rwh-projects/ecopark-thanh-hoa/client-hero-1d29b81f0872.jpg",
-    "sp": "assets/rwh-projects/ecopark-thanh-hoa/client-hero-1d29b81f0872.jpg"
+    "sp": "assets/rwh-projects/ecopark-thanh-hoa/landing-mobile-hq.webp"
   },
   "nam-o-residence": {
-    "pc": "assets/rwh-projects/nam-o-residence/hero.webp",
-    "sp": "assets/rwh-projects/nam-o-residence/hero-mobile.webp"
+    "pc": "assets/rwh-projects/nam-o-residence/original-01-0e915c6da6.jpg",
+    "sp": "assets/rwh-projects/nam-o-residence/landing-mobile-hq.webp"
   },
   "hakuba-hotel": {
-    "pc": "assets/rwh-projects/hakuba-hotel/hero.webp",
-    "sp": "assets/rwh-projects/hakuba-hotel/hero-mobile.webp"
+    "pc": "assets/rwh-projects/hakuba-hotel/original-01-324b39656c.jpg",
+    "sp": "assets/rwh-projects/hakuba-hotel/landing-mobile-hq.webp"
   },
   "thien-mu-hotel": {
     "pc": "assets/rwh-projects/thien-mu-hotel/client-hero-ffc9f274d4e4.jpg",
-    "sp": "assets/rwh-projects/thien-mu-hotel/client-hero-ffc9f274d4e4.jpg"
+    "sp": "assets/rwh-projects/thien-mu-hotel/landing-mobile-hq.webp"
   },
   "ecopark-hung-yen": {
-    "pc": "assets/rwh-projects/ecopark-hung-yen/hero.webp",
-    "sp": "assets/rwh-projects/ecopark-hung-yen/hero-mobile.webp"
+    "pc": "assets/rwh-projects/ecopark-hung-yen/original-01-20aa2a41fd.jpg",
+    "sp": "assets/rwh-projects/ecopark-hung-yen/landing-mobile-hq.webp"
   },
   "binh-minh": {
     "pc": "assets/rwh-projects/binh-minh/hero.webp",
-    "sp": "assets/rwh-projects/binh-minh/hero-mobile.webp"
+    "sp": "assets/rwh-projects/binh-minh/landing-mobile-hq.webp"
   }
 }

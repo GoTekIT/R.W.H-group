@@ -53,7 +53,11 @@
             "fileId": "11hinq3-HBDC8j0gqTk0cjkmF4z2cgpTO",
             "fileName": "1QL.png"
           },
-          "sourceSha256": "fd4d82dcc2a3540002840ab23dc5a1cbcd1193300e5ad5a481d7dad99025f95d"
+          "sourceSha256": "fd4d82dcc2a3540002840ab23dc5a1cbcd1193300e5ad5a481d7dad99025f95d",
+          "originalSrc": "assets/rwh-projects/the-hera-resort/original-01-fd4d82dcc2.png",
+          "originalWidth": 2528,
+          "originalHeight": 1422,
+          "mobileSrc": "assets/rwh-projects/the-hera-resort/mobile-hq-01-fd4d82dcc2.webp"
         },
         {
           "name": "3 ĐÊM.png",
@@ -65,7 +69,11 @@
             "fileId": "1NUN0yx5b3hSM1FSBskGlYgp08xRHR-Cl",
             "fileName": "3 ĐÊM.png"
           },
-          "sourceSha256": "b056cfa1b1304878964884340fb102488ce854b4c3876961033ccc1e65a38ad2"
+          "sourceSha256": "b056cfa1b1304878964884340fb102488ce854b4c3876961033ccc1e65a38ad2",
+          "originalSrc": "assets/rwh-projects/the-hera-resort/original-02-b056cfa1b1.png",
+          "originalWidth": 3530,
+          "originalHeight": 2348,
+          "mobileSrc": "assets/rwh-projects/the-hera-resort/mobile-hq-02-b056cfa1b1.webp"
         },
         {
           "name": "1 ĐÊM QL.png",
@@ -77,7 +85,11 @@
             "fileId": "1b8RJhD0eiy8jatFhzdQRt5Eaq-jzna5F",
             "fileName": "1 ĐÊM QL.png"
           },
-          "sourceSha256": "53e8d19191b5a7ca20613415c034565b9bd5788da59573ad8b4e560d6780a10a"
+          "sourceSha256": "53e8d19191b5a7ca20613415c034565b9bd5788da59573ad8b4e560d6780a10a",
+          "originalSrc": "assets/rwh-projects/the-hera-resort/original-03-53e8d19191.png",
+          "originalWidth": 3838,
+          "originalHeight": 2160,
+          "mobileSrc": "assets/rwh-projects/the-hera-resort/mobile-hq-03-53e8d19191.webp"
         },
         {
           "name": "7.png",
@@ -89,7 +101,11 @@
             "fileId": "1GKaxY9xBjmAisqUkWxGrVem7eX5dsTyG",
             "fileName": "7.png"
           },
-          "sourceSha256": "0b08b4c32a1cb23d31a72ba4a3696c453eca97dc1c80c379dd52f9f0835a12d3"
+          "sourceSha256": "0b08b4c32a1cb23d31a72ba4a3696c453eca97dc1c80c379dd52f9f0835a12d3",
+          "originalSrc": "assets/rwh-projects/the-hera-resort/original-04-0b08b4c32a.png",
+          "originalWidth": 2560,
+          "originalHeight": 1440,
+          "mobileSrc": "assets/rwh-projects/the-hera-resort/mobile-hq-04-0b08b4c32a.webp"
         },
         {
           "name": "15.png",
@@ -101,7 +117,11 @@
             "fileId": "1RDXfOpQRhN9J0WJpj2DCIbPDCm97ilBh",
             "fileName": "15.png"
           },
-          "sourceSha256": "f762874661b1516dfded06adebb750db81746eb2597640b731fb8c25362e7d7c"
+          "sourceSha256": "f762874661b1516dfded06adebb750db81746eb2597640b731fb8c25362e7d7c",
+          "originalSrc": "assets/rwh-projects/the-hera-resort/original-05-f762874661.png",
+          "originalWidth": 3840,
+          "originalHeight": 2160,
+          "mobileSrc": "assets/rwh-projects/the-hera-resort/mobile-hq-05-f762874661.webp"
         },
         {
           "name": "16.png",
@@ -113,7 +133,11 @@
             "fileId": "1qar_MpS8IQORCZ3tTlVucJX0T0vnPMBO",
             "fileName": "16.png"
           },
-          "sourceSha256": "26e0fe1126d8fdebbe3350c863cebd4f758299623fb094b462af022fde4a5a3c"
+          "sourceSha256": "26e0fe1126d8fdebbe3350c863cebd4f758299623fb094b462af022fde4a5a3c",
+          "originalSrc": "assets/rwh-projects/the-hera-resort/original-06-26e0fe1126.png",
+          "originalWidth": 3070,
+          "originalHeight": 1727,
+          "mobileSrc": "assets/rwh-projects/the-hera-resort/mobile-hq-06-26e0fe1126.webp"
         },
         {
           "name": "4.png",
@@ -125,7 +149,11 @@
             "fileId": "1F2HO6_r8JcVvwQgvusnYLuuktgCH3F0-",
             "fileName": "4.png"
           },
-          "sourceSha256": "58bb0bf1b1e4674df33c08f72714c8dbeabc59994c003af23e24d72c85ff12f4"
+          "sourceSha256": "58bb0bf1b1e4674df33c08f72714c8dbeabc59994c003af23e24d72c85ff12f4",
+          "originalSrc": "assets/rwh-projects/the-hera-resort/original-07-58bb0bf1b1.png",
+          "originalWidth": 3840,
+          "originalHeight": 2160,
+          "mobileSrc": "assets/rwh-projects/the-hera-resort/mobile-hq-07-58bb0bf1b1.webp"
         },
         {
           "name": "2.png",
@@ -137,7 +165,11 @@
             "fileId": "1T65-dYrEqf8zkJzKh3QLS9p6VQxVo0Li",
             "fileName": "2.png"
           },
-          "sourceSha256": "91a934c42462219e75154707693fb576bcf7e7e2a38aeb0e6d8fd4eaa5bfbf39"
+          "sourceSha256": "91a934c42462219e75154707693fb576bcf7e7e2a38aeb0e6d8fd4eaa5bfbf39",
+          "originalSrc": "assets/rwh-projects/the-hera-resort/original-08-91a934c424.png",
+          "originalWidth": 3838,
+          "originalHeight": 2160,
+          "mobileSrc": "assets/rwh-projects/the-hera-resort/mobile-hq-08-91a934c424.webp"
         },
         {
           "name": "screenshot_1791941315.png",
@@ -149,7 +181,11 @@
             "fileId": "1YqVNkavmeJEgKXwy_Ki4A_I3IpoJ74lU",
             "fileName": "screenshot_1791941315.png"
           },
-          "sourceSha256": "7a50b9be5b01bc0eb9a5476dbced225fe130c48683fe799d8d113f5459cbcd43"
+          "sourceSha256": "7a50b9be5b01bc0eb9a5476dbced225fe130c48683fe799d8d113f5459cbcd43",
+          "originalSrc": "assets/rwh-projects/the-hera-resort/original-09-7a50b9be5b.png",
+          "originalWidth": 1918,
+          "originalHeight": 999,
+          "mobileSrc": "assets/rwh-projects/the-hera-resort/mobile-hq-09-7a50b9be5b.webp"
         },
         {
           "name": "screenshot_1784885397.png",
@@ -161,7 +197,11 @@
             "fileId": "1lpU7-gQfHgaxliCvxIyzhHQDDk0AtzWb",
             "fileName": "screenshot_1784885397.png"
           },
-          "sourceSha256": "6ddb568175ed79a1e447a1382823320216464c4cb2c6dc9d04d083837a2da082"
+          "sourceSha256": "6ddb568175ed79a1e447a1382823320216464c4cb2c6dc9d04d083837a2da082",
+          "originalSrc": "assets/rwh-projects/the-hera-resort/original-10-6ddb568175.png",
+          "originalWidth": 1419,
+          "originalHeight": 896,
+          "mobileSrc": "assets/rwh-projects/the-hera-resort/mobile-hq-10-6ddb568175.webp"
         }
       ]
     },
@@ -206,7 +246,11 @@
             "fileId": "1ee7K3R2vPAIvhzktdD-1icrPiGSwXZOz",
             "embeddedImage": "page13-0.jpg"
           },
-          "sourceSha256": "fa8d96ac255c39e216e5b819fb3989694776d8719801c370f45589ef11ed1511"
+          "sourceSha256": "fa8d96ac255c39e216e5b819fb3989694776d8719801c370f45589ef11ed1511",
+          "originalSrc": "assets/rwh-projects/capital-one/original-01-a5c5781415.jpg",
+          "originalWidth": 1536,
+          "originalHeight": 949,
+          "mobileSrc": "assets/rwh-projects/capital-one/mobile-hq-01-a5c5781415.webp"
         },
         {
           "name": "page11-0.jpg",
@@ -218,7 +262,11 @@
             "fileId": "1ee7K3R2vPAIvhzktdD-1icrPiGSwXZOz",
             "embeddedImage": "page11-0.jpg"
           },
-          "sourceSha256": "c2b85ba700565a393c842578e40017969cd7d61d5254a0967a4ec70169eae853"
+          "sourceSha256": "c2b85ba700565a393c842578e40017969cd7d61d5254a0967a4ec70169eae853",
+          "originalSrc": "assets/rwh-projects/capital-one/original-02-4301d15171.jpg",
+          "originalWidth": 3840,
+          "originalHeight": 2581,
+          "mobileSrc": "assets/rwh-projects/capital-one/mobile-hq-02-4301d15171.webp"
         },
         {
           "name": "page12-0.jpg",
@@ -230,7 +278,11 @@
             "fileId": "1ee7K3R2vPAIvhzktdD-1icrPiGSwXZOz",
             "embeddedImage": "page12-0.jpg"
           },
-          "sourceSha256": "393368109f39920ab4fc7816ed715b500406b1f38c9435ad277647e3bf789e5f"
+          "sourceSha256": "393368109f39920ab4fc7816ed715b500406b1f38c9435ad277647e3bf789e5f",
+          "originalSrc": "assets/rwh-projects/capital-one/original-03-e39b28da2f.jpg",
+          "originalWidth": 1536,
+          "originalHeight": 950,
+          "mobileSrc": "assets/rwh-projects/capital-one/mobile-hq-03-e39b28da2f.webp"
         },
         {
           "name": "page14-0.jpg",
@@ -242,7 +294,11 @@
             "fileId": "1ee7K3R2vPAIvhzktdD-1icrPiGSwXZOz",
             "embeddedImage": "page14-0.jpg"
           },
-          "sourceSha256": "a149d4f3c9ca7734f7590cd5f8d77374d031feb80a736da9dc3705766abfef4c"
+          "sourceSha256": "a149d4f3c9ca7734f7590cd5f8d77374d031feb80a736da9dc3705766abfef4c",
+          "originalSrc": "assets/rwh-projects/capital-one/original-04-41f13047ff.jpg",
+          "originalWidth": 1119,
+          "originalHeight": 1536,
+          "mobileSrc": "assets/rwh-projects/capital-one/mobile-hq-04-41f13047ff.webp"
         },
         {
           "name": "page14-2.jpg",
@@ -254,7 +310,11 @@
             "fileId": "1ee7K3R2vPAIvhzktdD-1icrPiGSwXZOz",
             "embeddedImage": "page14-2.jpg"
           },
-          "sourceSha256": "6acc2957099b1788ed7aac60083b650393e47446ae0c2a9be9b61737a2e7fc3b"
+          "sourceSha256": "6acc2957099b1788ed7aac60083b650393e47446ae0c2a9be9b61737a2e7fc3b",
+          "originalSrc": "assets/rwh-projects/capital-one/original-05-e7978c1b01.jpg",
+          "originalWidth": 1131,
+          "originalHeight": 1536,
+          "mobileSrc": "assets/rwh-projects/capital-one/mobile-hq-05-e7978c1b01.webp"
         },
         {
           "name": "page15-0.jpg",
@@ -266,7 +326,11 @@
             "fileId": "1ee7K3R2vPAIvhzktdD-1icrPiGSwXZOz",
             "embeddedImage": "page15-0.jpg"
           },
-          "sourceSha256": "841a1f86c558a8af7cef4ae4b42ea79aa361c1f9d1d11a6de3630ee94fd80282"
+          "sourceSha256": "841a1f86c558a8af7cef4ae4b42ea79aa361c1f9d1d11a6de3630ee94fd80282",
+          "originalSrc": "assets/rwh-projects/capital-one/original-06-a616b4e703.jpg",
+          "originalWidth": 1536,
+          "originalHeight": 951,
+          "mobileSrc": "assets/rwh-projects/capital-one/mobile-hq-06-a616b4e703.webp"
         },
         {
           "name": "page16-0.jpg",
@@ -278,7 +342,11 @@
             "fileId": "1ee7K3R2vPAIvhzktdD-1icrPiGSwXZOz",
             "embeddedImage": "page16-0.jpg"
           },
-          "sourceSha256": "2d47ea1e1daa19df18985c1112ba91f2bd9f7db0a3861ab47cb9b76f9fa5621d"
+          "sourceSha256": "2d47ea1e1daa19df18985c1112ba91f2bd9f7db0a3861ab47cb9b76f9fa5621d",
+          "originalSrc": "assets/rwh-projects/capital-one/original-07-58942ca30d.jpg",
+          "originalWidth": 1949,
+          "originalHeight": 1298,
+          "mobileSrc": "assets/rwh-projects/capital-one/mobile-hq-07-58942ca30d.webp"
         },
         {
           "name": "page16-1.jpg",
@@ -290,7 +358,11 @@
             "fileId": "1ee7K3R2vPAIvhzktdD-1icrPiGSwXZOz",
             "embeddedImage": "page16-1.jpg"
           },
-          "sourceSha256": "f3a1a7dc0caa8558c1cc5e4ace374d176a7aa4885ba7afac7d437d10d08b9d0a"
+          "sourceSha256": "f3a1a7dc0caa8558c1cc5e4ace374d176a7aa4885ba7afac7d437d10d08b9d0a",
+          "originalSrc": "assets/rwh-projects/capital-one/original-08-7c2e0ffd06.jpg",
+          "originalWidth": 1108,
+          "originalHeight": 738,
+          "mobileSrc": "assets/rwh-projects/capital-one/mobile-hq-08-7c2e0ffd06.webp"
         },
         {
           "name": "page17-0.jpg",
@@ -302,7 +374,11 @@
             "fileId": "1ee7K3R2vPAIvhzktdD-1icrPiGSwXZOz",
             "embeddedImage": "page17-0.jpg"
           },
-          "sourceSha256": "d1dd86573bf74d6df89097b9e8fa9cf28b0dbee4743713a1a85f8e91f7cb5eff"
+          "sourceSha256": "d1dd86573bf74d6df89097b9e8fa9cf28b0dbee4743713a1a85f8e91f7cb5eff",
+          "originalSrc": "assets/rwh-projects/capital-one/original-09-627ac0b7ae.jpg",
+          "originalWidth": 3840,
+          "originalHeight": 2582,
+          "mobileSrc": "assets/rwh-projects/capital-one/mobile-hq-09-627ac0b7ae.webp"
         }
       ],
       "landingHero": "assets/rwh-projects/capital-one/client-hero-e7978c1b0120.jpeg",
@@ -352,7 +428,11 @@
             "fileId": "1n3qHMC-nZ5whwVBVQ5l3tEFiCOzo502w",
             "fileName": "Picture2.jpg"
           },
-          "sourceSha256": "db6491e818279ee6c179446e88b0eeff054df452deb9d799c78ac2b8e064539b"
+          "sourceSha256": "db6491e818279ee6c179446e88b0eeff054df452deb9d799c78ac2b8e064539b",
+          "originalSrc": "assets/rwh-projects/kawara-my-an/original-01-db6491e818.jpg",
+          "originalWidth": 2111,
+          "originalHeight": 1307,
+          "mobileSrc": "assets/rwh-projects/kawara-my-an/mobile-hq-01-db6491e818.webp"
         },
         {
           "name": "Picture3.jpg",
@@ -364,7 +444,11 @@
             "fileId": "1b_WrHD1t0scaHz-l62dr7jyuYaVYtgM4",
             "fileName": "Picture3.jpg"
           },
-          "sourceSha256": "a30e0a4ffe664ab4c82d536ea7a33a9bc02bf391c7d639d16d8d30a4088c531c"
+          "sourceSha256": "a30e0a4ffe664ab4c82d536ea7a33a9bc02bf391c7d639d16d8d30a4088c531c",
+          "originalSrc": "assets/rwh-projects/kawara-my-an/original-02-a30e0a4ffe.jpg",
+          "originalWidth": 2111,
+          "originalHeight": 1307,
+          "mobileSrc": "assets/rwh-projects/kawara-my-an/mobile-hq-02-a30e0a4ffe.webp"
         },
         {
           "name": "899719216 (1).jpg",
@@ -376,7 +460,11 @@
             "fileId": "1oJ-qvTvoPN1uJT3xlXqTtbYdsns9td14",
             "fileName": "899719216 (1).jpg"
           },
-          "sourceSha256": "0e3f008acb59e94e58a82ecde5ae6288b989affcef97646a62fbaf5be03cec8e"
+          "sourceSha256": "0e3f008acb59e94e58a82ecde5ae6288b989affcef97646a62fbaf5be03cec8e",
+          "originalSrc": "assets/rwh-projects/kawara-my-an/original-03-0e3f008acb.jpg",
+          "originalWidth": 1024,
+          "originalHeight": 594,
+          "mobileSrc": "assets/rwh-projects/kawara-my-an/mobile-hq-03-0e3f008acb.webp"
         },
         {
           "name": "899719213 (1).jpg",
@@ -388,7 +476,11 @@
             "fileId": "1WCR2kofGagWauLypziLyMwthK7I7PBZE",
             "fileName": "899719213 (1).jpg"
           },
-          "sourceSha256": "21b6d216dfdb0e45ad7882d4c4456c9d610696d776b49411a9a07fbe471a960f"
+          "sourceSha256": "21b6d216dfdb0e45ad7882d4c4456c9d610696d776b49411a9a07fbe471a960f",
+          "originalSrc": "assets/rwh-projects/kawara-my-an/original-04-21b6d216df.jpg",
+          "originalWidth": 1024,
+          "originalHeight": 767,
+          "mobileSrc": "assets/rwh-projects/kawara-my-an/mobile-hq-04-21b6d216df.webp"
         },
         {
           "name": "898870616.jpg",
@@ -400,7 +492,11 @@
             "fileId": "12Ibm_yJS-Dff06G9vDCoeNlVw0SKLoP_",
             "fileName": "898870616.jpg"
           },
-          "sourceSha256": "f4179af1935d8a8f6f3c74a7108f1ddf5965849aac492c95f6310389322115b8"
+          "sourceSha256": "f4179af1935d8a8f6f3c74a7108f1ddf5965849aac492c95f6310389322115b8",
+          "originalSrc": "assets/rwh-projects/kawara-my-an/original-05-f4179af193.jpg",
+          "originalWidth": 1024,
+          "originalHeight": 767,
+          "mobileSrc": "assets/rwh-projects/kawara-my-an/mobile-hq-05-f4179af193.webp"
         },
         {
           "name": "899719331.jpg",
@@ -412,7 +508,11 @@
             "fileId": "1hQTo82k59Jvx2XfifkIGZnByax1Z6MLh",
             "fileName": "899719331.jpg"
           },
-          "sourceSha256": "487587374f23ebf58d81bdd4102cafad22b26e94fe9c49a1595ae4e09d13a774"
+          "sourceSha256": "487587374f23ebf58d81bdd4102cafad22b26e94fe9c49a1595ae4e09d13a774",
+          "originalSrc": "assets/rwh-projects/kawara-my-an/original-06-487587374f.jpg",
+          "originalWidth": 1024,
+          "originalHeight": 683,
+          "mobileSrc": "assets/rwh-projects/kawara-my-an/mobile-hq-06-487587374f.webp"
         },
         {
           "name": "899719312.jpg",
@@ -424,7 +524,11 @@
             "fileId": "1N9sCZXLdM9Z20IzNoDQvucSfyKXfoAig",
             "fileName": "899719312.jpg"
           },
-          "sourceSha256": "0f12c40c0e95b5d422f6545766793d511a57e19e8dc18e8fd8a347837102b668"
+          "sourceSha256": "0f12c40c0e95b5d422f6545766793d511a57e19e8dc18e8fd8a347837102b668",
+          "originalSrc": "assets/rwh-projects/kawara-my-an/original-07-0f12c40c0e.jpg",
+          "originalWidth": 1024,
+          "originalHeight": 683,
+          "mobileSrc": "assets/rwh-projects/kawara-my-an/mobile-hq-07-0f12c40c0e.webp"
         },
         {
           "name": "899719308.jpg",
@@ -436,7 +540,11 @@
             "fileId": "1YmK96isE3eQWpQyq7Lju9p75FVWEPBXF",
             "fileName": "899719308.jpg"
           },
-          "sourceSha256": "a6edb824439e366ece6b3986be83c8e93b4f28749057204d197b861e701c9b08"
+          "sourceSha256": "a6edb824439e366ece6b3986be83c8e93b4f28749057204d197b861e701c9b08",
+          "originalSrc": "assets/rwh-projects/kawara-my-an/original-08-a6edb82443.jpg",
+          "originalWidth": 1024,
+          "originalHeight": 767,
+          "mobileSrc": "assets/rwh-projects/kawara-my-an/mobile-hq-08-a6edb82443.webp"
         },
         {
           "name": "899719307.jpg",
@@ -448,7 +556,11 @@
             "fileId": "1IU1gTEKkmSps3ehYpxDgVuEug0BEwI2o",
             "fileName": "899719307.jpg"
           },
-          "sourceSha256": "a2049e11d757b0cbe2087cf6e8c60ca9d6dda608d28ac3e59c6d0c9a0873de60"
+          "sourceSha256": "a2049e11d757b0cbe2087cf6e8c60ca9d6dda608d28ac3e59c6d0c9a0873de60",
+          "originalSrc": "assets/rwh-projects/kawara-my-an/original-09-a2049e11d7.jpg",
+          "originalWidth": 1024,
+          "originalHeight": 683,
+          "mobileSrc": "assets/rwh-projects/kawara-my-an/mobile-hq-09-a2049e11d7.webp"
         },
         {
           "name": "899719305.jpg",
@@ -460,7 +572,11 @@
             "fileId": "1yqJsQx6zeb6lnLdYmFSJ9fLX-CZcuPVK",
             "fileName": "899719305.jpg"
           },
-          "sourceSha256": "8efe7fb13c4f3fdcb045d595aa7aa9a640fc4233a1c7b144c32db93a7302de30"
+          "sourceSha256": "8efe7fb13c4f3fdcb045d595aa7aa9a640fc4233a1c7b144c32db93a7302de30",
+          "originalSrc": "assets/rwh-projects/kawara-my-an/original-10-8efe7fb13c.jpg",
+          "originalWidth": 1024,
+          "originalHeight": 767,
+          "mobileSrc": "assets/rwh-projects/kawara-my-an/mobile-hq-10-8efe7fb13c.webp"
         },
         {
           "name": "899719306.jpg",
@@ -472,7 +588,11 @@
             "fileId": "1tGja6rMxBxVSbemeNNw9LOyTJCWOQcXa",
             "fileName": "899719306.jpg"
           },
-          "sourceSha256": "9dedc4674b597446cafd554665993fcb14fb3a2788d95801aad60eb537eef433"
+          "sourceSha256": "9dedc4674b597446cafd554665993fcb14fb3a2788d95801aad60eb537eef433",
+          "originalSrc": "assets/rwh-projects/kawara-my-an/original-11-9dedc4674b.jpg",
+          "originalWidth": 1024,
+          "originalHeight": 683,
+          "mobileSrc": "assets/rwh-projects/kawara-my-an/mobile-hq-11-9dedc4674b.webp"
         },
         {
           "name": "899719293.jpg",
@@ -484,7 +604,11 @@
             "fileId": "1AVQYSbIn-cGEsrRupsmdHhN3fAUZQ-an",
             "fileName": "899719293.jpg"
           },
-          "sourceSha256": "db1c337135b3ac5c021789e5e5e245b298340eefd94bd7081a573950d736d643"
+          "sourceSha256": "db1c337135b3ac5c021789e5e5e245b298340eefd94bd7081a573950d736d643",
+          "originalSrc": "assets/rwh-projects/kawara-my-an/original-12-db1c337135.jpg",
+          "originalWidth": 1024,
+          "originalHeight": 683,
+          "mobileSrc": "assets/rwh-projects/kawara-my-an/mobile-hq-12-db1c337135.webp"
         },
         {
           "name": "899719301.jpg",
@@ -496,7 +620,11 @@
             "fileId": "1ENefOgjtZtOTI6LkFZ9PQdAvuukMmpmV",
             "fileName": "899719301.jpg"
           },
-          "sourceSha256": "72333ded77cc153aa790fdc1dc1420a09669923797913c05cb6b74aa8cd0a36c"
+          "sourceSha256": "72333ded77cc153aa790fdc1dc1420a09669923797913c05cb6b74aa8cd0a36c",
+          "originalSrc": "assets/rwh-projects/kawara-my-an/original-13-72333ded77.jpg",
+          "originalWidth": 1024,
+          "originalHeight": 683,
+          "mobileSrc": "assets/rwh-projects/kawara-my-an/mobile-hq-13-72333ded77.webp"
         },
         {
           "name": "899719263.jpg",
@@ -508,7 +636,11 @@
             "fileId": "1DNi2m6DusXQgNF5P7EQdWtS6fY1NhzVr",
             "fileName": "899719263.jpg"
           },
-          "sourceSha256": "ba5362f13307a8234e4355c53d5f234af13bff59596665094c6a419f77b01db2"
+          "sourceSha256": "ba5362f13307a8234e4355c53d5f234af13bff59596665094c6a419f77b01db2",
+          "originalSrc": "assets/rwh-projects/kawara-my-an/original-14-ba5362f133.jpg",
+          "originalWidth": 1024,
+          "originalHeight": 683,
+          "mobileSrc": "assets/rwh-projects/kawara-my-an/mobile-hq-14-ba5362f133.webp"
         },
         {
           "name": "899719245.jpg",
@@ -520,7 +652,11 @@
             "fileId": "1DF1da29rH3pK9dVzxMhTwnQp4eNLaRRU",
             "fileName": "899719245.jpg"
           },
-          "sourceSha256": "22f81f3b7483fcf71aa97a06746eb5ee6104377b2482c6e38fe65498a65cd8ed"
+          "sourceSha256": "22f81f3b7483fcf71aa97a06746eb5ee6104377b2482c6e38fe65498a65cd8ed",
+          "originalSrc": "assets/rwh-projects/kawara-my-an/original-15-22f81f3b74.jpg",
+          "originalWidth": 1021,
+          "originalHeight": 768,
+          "mobileSrc": "assets/rwh-projects/kawara-my-an/mobile-hq-15-22f81f3b74.webp"
         },
         {
           "name": "899719238.jpg",
@@ -532,7 +668,11 @@
             "fileId": "1waeHBq3LXTNrJplgXo0e7ct2-lcRJHZS",
             "fileName": "899719238.jpg"
           },
-          "sourceSha256": "8d38b1c7f1e92df2b0efc9bbc123951f0df0b45ec0c410ff3951d07d92a0a4ce"
+          "sourceSha256": "8d38b1c7f1e92df2b0efc9bbc123951f0df0b45ec0c410ff3951d07d92a0a4ce",
+          "originalSrc": "assets/rwh-projects/kawara-my-an/original-16-8d38b1c7f1.jpg",
+          "originalWidth": 1024,
+          "originalHeight": 767,
+          "mobileSrc": "assets/rwh-projects/kawara-my-an/mobile-hq-16-8d38b1c7f1.webp"
         },
         {
           "name": "899719221.jpg",
@@ -544,7 +684,11 @@
             "fileId": "1CqjzQTjKIwFYAXcBiipcfgo9Ri3_40Jf",
             "fileName": "899719221.jpg"
           },
-          "sourceSha256": "e6975870c03d0bbb788507d1cf13ab4be18d6c57d6edc43541c07ea2c7ba4bd3"
+          "sourceSha256": "e6975870c03d0bbb788507d1cf13ab4be18d6c57d6edc43541c07ea2c7ba4bd3",
+          "originalSrc": "assets/rwh-projects/kawara-my-an/original-17-e6975870c0.jpg",
+          "originalWidth": 1024,
+          "originalHeight": 683,
+          "mobileSrc": "assets/rwh-projects/kawara-my-an/mobile-hq-17-e6975870c0.webp"
         },
         {
           "name": "899719226.jpg",
@@ -556,7 +700,11 @@
             "fileId": "1dqYnSesI1xxRZVeeRNXM_sPXLjVobugU",
             "fileName": "899719226.jpg"
           },
-          "sourceSha256": "8122315abbdc160fb0a0ac6b211bd1bfe85a977998e3e011ed2acebd5979c9b4"
+          "sourceSha256": "8122315abbdc160fb0a0ac6b211bd1bfe85a977998e3e011ed2acebd5979c9b4",
+          "originalSrc": "assets/rwh-projects/kawara-my-an/original-18-8122315abb.jpg",
+          "originalWidth": 1024,
+          "originalHeight": 767,
+          "mobileSrc": "assets/rwh-projects/kawara-my-an/mobile-hq-18-8122315abb.webp"
         },
         {
           "name": "899719219.jpg",
@@ -568,7 +716,11 @@
             "fileId": "1j4augkykX5G-CA3EINyc5oBUSUpUHOJ9",
             "fileName": "899719219.jpg"
           },
-          "sourceSha256": "9b879fce0572da24bbeb1d7e488b3855e9d09f6826edb49c3c52f9a9f63e2955"
+          "sourceSha256": "9b879fce0572da24bbeb1d7e488b3855e9d09f6826edb49c3c52f9a9f63e2955",
+          "originalSrc": "assets/rwh-projects/kawara-my-an/original-19-9b879fce05.jpg",
+          "originalWidth": 1024,
+          "originalHeight": 767,
+          "mobileSrc": "assets/rwh-projects/kawara-my-an/mobile-hq-19-9b879fce05.webp"
         },
         {
           "name": "899719220.jpg",
@@ -580,7 +732,11 @@
             "fileId": "1c8rxBD3lSVECQyU4PUcoDBl44hRJufOR",
             "fileName": "899719220.jpg"
           },
-          "sourceSha256": "62f573d031e5bd6dbf11ba27502b25e50128d2efb8d925aa6af84f6beec02e8c"
+          "sourceSha256": "62f573d031e5bd6dbf11ba27502b25e50128d2efb8d925aa6af84f6beec02e8c",
+          "originalSrc": "assets/rwh-projects/kawara-my-an/original-20-62f573d031.jpg",
+          "originalWidth": 1024,
+          "originalHeight": 683,
+          "mobileSrc": "assets/rwh-projects/kawara-my-an/mobile-hq-20-62f573d031.webp"
         },
         {
           "name": "899719217.jpg",
@@ -592,7 +748,11 @@
             "fileId": "1tPha64B5xLcGxGaoTUETWD2FFAnxqWju",
             "fileName": "899719217.jpg"
           },
-          "sourceSha256": "6306ae6fe1b7f593a8de2d2520cd5051edd17d3c571dcf13aee4c6e15c51636f"
+          "sourceSha256": "6306ae6fe1b7f593a8de2d2520cd5051edd17d3c571dcf13aee4c6e15c51636f",
+          "originalSrc": "assets/rwh-projects/kawara-my-an/original-21-6306ae6fe1.jpg",
+          "originalWidth": 1024,
+          "originalHeight": 683,
+          "mobileSrc": "assets/rwh-projects/kawara-my-an/mobile-hq-21-6306ae6fe1.webp"
         },
         {
           "name": "15.jpg",
@@ -604,7 +764,11 @@
             "fileId": "1VcynRAJyJtEamVAGDJh3BMhqL2GsYkFh",
             "fileName": "15.jpg"
           },
-          "sourceSha256": "160df731a0cb8ab519f4f8729faeefa6e2ba21acd8c1c1ecb9669581150dd541"
+          "sourceSha256": "160df731a0cb8ab519f4f8729faeefa6e2ba21acd8c1c1ecb9669581150dd541",
+          "originalSrc": "assets/rwh-projects/kawara-my-an/original-22-160df731a0.jpg",
+          "originalWidth": 1275,
+          "originalHeight": 908,
+          "mobileSrc": "assets/rwh-projects/kawara-my-an/mobile-hq-22-160df731a0.webp"
         },
         {
           "name": "z2558729520495_fdb083aff0c99e0cda75b930ac8560c2-1.jpg",
@@ -616,7 +780,11 @@
             "fileId": "194-xqT8Nlyt9S_3dJ3Q_6pvgictwudKN",
             "fileName": "z2558729520495_fdb083aff0c99e0cda75b930ac8560c2-1.jpg"
           },
-          "sourceSha256": "244627e3b9e14f4fe4b0c4339aaadc6ef06b7e39a904b9f3c199bc927179ebb7"
+          "sourceSha256": "244627e3b9e14f4fe4b0c4339aaadc6ef06b7e39a904b9f3c199bc927179ebb7",
+          "originalSrc": "assets/rwh-projects/kawara-my-an/original-23-244627e3b9.jpg",
+          "originalWidth": 1279,
+          "originalHeight": 906,
+          "mobileSrc": "assets/rwh-projects/kawara-my-an/mobile-hq-23-244627e3b9.webp"
         },
         {
           "name": "z2558729478063_9c858c6a5e0bf1c1715241c792d4dfca.jpg",
@@ -628,7 +796,11 @@
             "fileId": "1eP_JVpgnB9ew4HlyqCCbPuOtOJlGr502",
             "fileName": "z2558729478063_9c858c6a5e0bf1c1715241c792d4dfca.jpg"
           },
-          "sourceSha256": "00de8c03bdb847db827a3e44d6833f1547309d01d4362cc56eb3cd420a5e6d98"
+          "sourceSha256": "00de8c03bdb847db827a3e44d6833f1547309d01d4362cc56eb3cd420a5e6d98",
+          "originalSrc": "assets/rwh-projects/kawara-my-an/original-24-00de8c03bd.jpg",
+          "originalWidth": 1280,
+          "originalHeight": 718,
+          "mobileSrc": "assets/rwh-projects/kawara-my-an/mobile-hq-24-00de8c03bd.webp"
         },
         {
           "name": "Picture1.png",
@@ -640,7 +812,11 @@
             "fileId": "15gNeO1DmEI74_EWLtL2RQ8IkA3yOsiDz",
             "fileName": "Picture1.png"
           },
-          "sourceSha256": "81a16d97aeb41913f2f5296038fc3ee03b1d10b17913c0ecbc0acdab43495cbd"
+          "sourceSha256": "81a16d97aeb41913f2f5296038fc3ee03b1d10b17913c0ecbc0acdab43495cbd",
+          "originalSrc": "assets/rwh-projects/kawara-my-an/original-25-81a16d97ae.png",
+          "originalWidth": 2496,
+          "originalHeight": 2751,
+          "mobileSrc": "assets/rwh-projects/kawara-my-an/mobile-hq-25-81a16d97ae.webp"
         },
         {
           "name": "Picture3.png",
@@ -652,7 +828,11 @@
             "fileId": "1QWRG6PmFeFs_YIevPaXSaEeaWWJNShWn",
             "fileName": "Picture3.png"
           },
-          "sourceSha256": "896e9fdbbc8292f832e5484899e6dfc1dd9361f6524157ba5e0156bb0eb60bf0"
+          "sourceSha256": "896e9fdbbc8292f832e5484899e6dfc1dd9361f6524157ba5e0156bb0eb60bf0",
+          "originalSrc": "assets/rwh-projects/kawara-my-an/original-26-896e9fdbbc.png",
+          "originalWidth": 2488,
+          "originalHeight": 2752,
+          "mobileSrc": "assets/rwh-projects/kawara-my-an/mobile-hq-26-896e9fdbbc.webp"
         }
       ]
     },
@@ -698,7 +878,11 @@
             "fileId": "1a3FvS-SzSjBGfvYdwmUT6exE_5O-X2_r",
             "embeddedImage": "image26.jpg"
           },
-          "sourceSha256": "9f220547452ee78cdd446b350b1b991a9ba6160f38332944be668062c93613a0"
+          "sourceSha256": "9f220547452ee78cdd446b350b1b991a9ba6160f38332944be668062c93613a0",
+          "originalSrc": "assets/rwh-projects/aegis-hospital/original-01-9f22054745.jpg",
+          "originalWidth": 3840,
+          "originalHeight": 2091,
+          "mobileSrc": "assets/rwh-projects/aegis-hospital/mobile-hq-01-9f22054745.webp"
         },
         {
           "name": "image27.jpg",
@@ -710,7 +894,11 @@
             "fileId": "1a3FvS-SzSjBGfvYdwmUT6exE_5O-X2_r",
             "embeddedImage": "image27.jpg"
           },
-          "sourceSha256": "83cf409583a56910ab70f85b048d6db5d6e48197d59e59fb7b9ec18eb4eb7d47"
+          "sourceSha256": "83cf409583a56910ab70f85b048d6db5d6e48197d59e59fb7b9ec18eb4eb7d47",
+          "originalSrc": "assets/rwh-projects/aegis-hospital/original-02-83cf409583.jpg",
+          "originalWidth": 3807,
+          "originalHeight": 2079,
+          "mobileSrc": "assets/rwh-projects/aegis-hospital/mobile-hq-02-83cf409583.webp"
         },
         {
           "name": "image28.jpg",
@@ -722,7 +910,11 @@
             "fileId": "1a3FvS-SzSjBGfvYdwmUT6exE_5O-X2_r",
             "embeddedImage": "image28.jpg"
           },
-          "sourceSha256": "0a5955c872887c790fb4c85535bf34adb1803bac7ebf04d9599bc93a8772de47"
+          "sourceSha256": "0a5955c872887c790fb4c85535bf34adb1803bac7ebf04d9599bc93a8772de47",
+          "originalSrc": "assets/rwh-projects/aegis-hospital/original-03-0a5955c872.jpg",
+          "originalWidth": 3840,
+          "originalHeight": 2096,
+          "mobileSrc": "assets/rwh-projects/aegis-hospital/mobile-hq-03-0a5955c872.webp"
         },
         {
           "name": "image29.jpg",
@@ -734,7 +926,11 @@
             "fileId": "1a3FvS-SzSjBGfvYdwmUT6exE_5O-X2_r",
             "embeddedImage": "image29.jpg"
           },
-          "sourceSha256": "29660beb08040927533c1c9216aaa1438edd1af07e8e233bf56f2c8efae48138"
+          "sourceSha256": "29660beb08040927533c1c9216aaa1438edd1af07e8e233bf56f2c8efae48138",
+          "originalSrc": "assets/rwh-projects/aegis-hospital/original-04-29660beb08.jpg",
+          "originalWidth": 3840,
+          "originalHeight": 2093,
+          "mobileSrc": "assets/rwh-projects/aegis-hospital/mobile-hq-04-29660beb08.webp"
         },
         {
           "name": "image30.jpg",
@@ -746,7 +942,11 @@
             "fileId": "1a3FvS-SzSjBGfvYdwmUT6exE_5O-X2_r",
             "embeddedImage": "image30.jpg"
           },
-          "sourceSha256": "296513d35fd2ef2097c3088b5eb194082b7025294a88b4cf9f5bb64dee9107b4"
+          "sourceSha256": "296513d35fd2ef2097c3088b5eb194082b7025294a88b4cf9f5bb64dee9107b4",
+          "originalSrc": "assets/rwh-projects/aegis-hospital/original-05-296513d35f.jpg",
+          "originalWidth": 3808,
+          "originalHeight": 2076,
+          "mobileSrc": "assets/rwh-projects/aegis-hospital/mobile-hq-05-296513d35f.webp"
         }
       ]
     },
@@ -799,7 +999,11 @@
             "fileId": "1Z2izAT4ujeZkTpASGR_DDYApm7NVpIDp",
             "embeddedImage": "image111.png"
           },
-          "sourceSha256": "da672ba520b98f85fc70617b55060633352de3a07aee38b3cbda02026bba8943"
+          "sourceSha256": "da672ba520b98f85fc70617b55060633352de3a07aee38b3cbda02026bba8943",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-01-da672ba520.png",
+          "originalWidth": 2752,
+          "originalHeight": 1536,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-01-da672ba520.webp"
         },
         {
           "name": "architecture/image2.png",
@@ -811,7 +1015,11 @@
             "fileId": "1Z2izAT4ujeZkTpASGR_DDYApm7NVpIDp",
             "embeddedImage": "image2.png"
           },
-          "sourceSha256": "6eaec9994b66809a2b663c7865371b47c6a1b6cb11617df72838a3381298ca7c"
+          "sourceSha256": "6eaec9994b66809a2b663c7865371b47c6a1b6cb11617df72838a3381298ca7c",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-02-6eaec9994b.png",
+          "originalWidth": 4000,
+          "originalHeight": 2256,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-02-6eaec9994b.webp"
         },
         {
           "name": "architecture/image43.png",
@@ -823,7 +1031,11 @@
             "fileId": "1Z2izAT4ujeZkTpASGR_DDYApm7NVpIDp",
             "embeddedImage": "image43.png"
           },
-          "sourceSha256": "8bde233027773804aa9ddcb6591da2fb5144de0dc0c1e419210696648fc35acd"
+          "sourceSha256": "8bde233027773804aa9ddcb6591da2fb5144de0dc0c1e419210696648fc35acd",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-03-8bde233027.png",
+          "originalWidth": 4000,
+          "originalHeight": 2256,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-03-8bde233027.webp"
         },
         {
           "name": "architecture/image67.png",
@@ -835,7 +1047,11 @@
             "fileId": "1Z2izAT4ujeZkTpASGR_DDYApm7NVpIDp",
             "embeddedImage": "image67.png"
           },
-          "sourceSha256": "0a6c06f138979b5c9596b63fbec19e41d119eba0e40f33ba7668081dc5ad2e76"
+          "sourceSha256": "0a6c06f138979b5c9596b63fbec19e41d119eba0e40f33ba7668081dc5ad2e76",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-04-0a6c06f138.png",
+          "originalWidth": 2368,
+          "originalHeight": 1328,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-04-0a6c06f138.webp"
         },
         {
           "name": "architecture/image75.jpeg",
@@ -847,7 +1063,11 @@
             "fileId": "1Z2izAT4ujeZkTpASGR_DDYApm7NVpIDp",
             "embeddedImage": "image75.jpeg"
           },
-          "sourceSha256": "aa8a0a7833affabdb3707a18a6cb8abccfadbf8929ea23b7fcbd052e0e8b4f4f"
+          "sourceSha256": "aa8a0a7833affabdb3707a18a6cb8abccfadbf8929ea23b7fcbd052e0e8b4f4f",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-05-aa8a0a7833.jpg",
+          "originalWidth": 2752,
+          "originalHeight": 1536,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-05-aa8a0a7833.webp"
         },
         {
           "name": "architecture/image76.jpeg",
@@ -859,7 +1079,11 @@
             "fileId": "1Z2izAT4ujeZkTpASGR_DDYApm7NVpIDp",
             "embeddedImage": "image76.jpeg"
           },
-          "sourceSha256": "10096d05d9fd7d76fc82bb34f37f4e8f0386ed18c79e15a4a79625ef51d1b828"
+          "sourceSha256": "10096d05d9fd7d76fc82bb34f37f4e8f0386ed18c79e15a4a79625ef51d1b828",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-06-10096d05d9.jpg",
+          "originalWidth": 2752,
+          "originalHeight": 1536,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-06-10096d05d9.webp"
         },
         {
           "name": "architecture/image52.jpeg",
@@ -871,7 +1095,11 @@
             "fileId": "1Z2izAT4ujeZkTpASGR_DDYApm7NVpIDp",
             "embeddedImage": "image52.jpeg"
           },
-          "sourceSha256": "c429d2da2643bd198e8295808e913d00c667fc75bb55cd853458e31a6fd05d2d"
+          "sourceSha256": "c429d2da2643bd198e8295808e913d00c667fc75bb55cd853458e31a6fd05d2d",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-07-c429d2da26.jpg",
+          "originalWidth": 2752,
+          "originalHeight": 1536,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-07-c429d2da26.webp"
         },
         {
           "name": "architecture/image88.png",
@@ -883,7 +1111,11 @@
             "fileId": "1Z2izAT4ujeZkTpASGR_DDYApm7NVpIDp",
             "embeddedImage": "image88.png"
           },
-          "sourceSha256": "f2743500a8964c21be867b5d034c590068a3006d3b4dd1ce23730b8e31f65f23"
+          "sourceSha256": "f2743500a8964c21be867b5d034c590068a3006d3b4dd1ce23730b8e31f65f23",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-08-f2743500a8.png",
+          "originalWidth": 2336,
+          "originalHeight": 1344,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-08-f2743500a8.webp"
         },
         {
           "name": "architecture/image89.png",
@@ -895,7 +1127,11 @@
             "fileId": "1Z2izAT4ujeZkTpASGR_DDYApm7NVpIDp",
             "embeddedImage": "image89.png"
           },
-          "sourceSha256": "f87a8f8672b332396e7a15bedab32b2b9d40ec476f6146910f4cd09361d8b01d"
+          "sourceSha256": "f87a8f8672b332396e7a15bedab32b2b9d40ec476f6146910f4cd09361d8b01d",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-09-f87a8f8672.png",
+          "originalWidth": 2368,
+          "originalHeight": 1312,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-09-f87a8f8672.webp"
         },
         {
           "name": "architecture/image90.png",
@@ -907,7 +1143,11 @@
             "fileId": "1Z2izAT4ujeZkTpASGR_DDYApm7NVpIDp",
             "embeddedImage": "image90.png"
           },
-          "sourceSha256": "5b3d74c61ac38ca516b2b9cdbd32d5967a79e28ea74a0b72ebdc0a62459ccb9e"
+          "sourceSha256": "5b3d74c61ac38ca516b2b9cdbd32d5967a79e28ea74a0b72ebdc0a62459ccb9e",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-10-5b3d74c61a.png",
+          "originalWidth": 2368,
+          "originalHeight": 1312,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-10-5b3d74c61a.webp"
         },
         {
           "name": "architecture/image91.png",
@@ -919,7 +1159,11 @@
             "fileId": "1Z2izAT4ujeZkTpASGR_DDYApm7NVpIDp",
             "embeddedImage": "image91.png"
           },
-          "sourceSha256": "3e2ee55b1011f3be00a3c71b00ec9d284fe5795c8efef7088a88daddb081502f"
+          "sourceSha256": "3e2ee55b1011f3be00a3c71b00ec9d284fe5795c8efef7088a88daddb081502f",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-11-3e2ee55b10.png",
+          "originalWidth": 2368,
+          "originalHeight": 1328,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-11-3e2ee55b10.webp"
         },
         {
           "name": "architecture/image92.png",
@@ -931,7 +1175,11 @@
             "fileId": "1Z2izAT4ujeZkTpASGR_DDYApm7NVpIDp",
             "embeddedImage": "image92.png"
           },
-          "sourceSha256": "232f213c01630c5b744414c9648d9e9bcc07c0a91ab083bf80ddfeaf7d0cab7c"
+          "sourceSha256": "232f213c01630c5b744414c9648d9e9bcc07c0a91ab083bf80ddfeaf7d0cab7c",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-12-232f213c01.png",
+          "originalWidth": 2368,
+          "originalHeight": 1328,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-12-232f213c01.webp"
         },
         {
           "name": "architecture/image97.png",
@@ -943,7 +1191,11 @@
             "fileId": "1Z2izAT4ujeZkTpASGR_DDYApm7NVpIDp",
             "embeddedImage": "image97.png"
           },
-          "sourceSha256": "c22e77993a49f001304cb799294304f4a637ffc08e503d7e25d3155fc1321c50"
+          "sourceSha256": "c22e77993a49f001304cb799294304f4a637ffc08e503d7e25d3155fc1321c50",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-13-c22e77993a.png",
+          "originalWidth": 2752,
+          "originalHeight": 1536,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-13-c22e77993a.webp"
         },
         {
           "name": "architecture/image98.png",
@@ -955,7 +1207,11 @@
             "fileId": "1Z2izAT4ujeZkTpASGR_DDYApm7NVpIDp",
             "embeddedImage": "image98.png"
           },
-          "sourceSha256": "a34c0feaadd389835f16379eb740beddc6fbcaac441b17b6e724126ae67f7a6d"
+          "sourceSha256": "a34c0feaadd389835f16379eb740beddc6fbcaac441b17b6e724126ae67f7a6d",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-14-a34c0feaad.png",
+          "originalWidth": 2752,
+          "originalHeight": 1536,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-14-a34c0feaad.webp"
         },
         {
           "name": "architecture/image107.png",
@@ -967,7 +1223,11 @@
             "fileId": "1Z2izAT4ujeZkTpASGR_DDYApm7NVpIDp",
             "embeddedImage": "image107.png"
           },
-          "sourceSha256": "68d420b701645610b674ee06326ad29df6175f4cba249d00700514dfdfdc73c6"
+          "sourceSha256": "68d420b701645610b674ee06326ad29df6175f4cba249d00700514dfdfdc73c6",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-15-68d420b701.png",
+          "originalWidth": 2752,
+          "originalHeight": 1536,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-15-68d420b701.webp"
         },
         {
           "name": "architecture/image108.png",
@@ -979,7 +1239,11 @@
             "fileId": "1Z2izAT4ujeZkTpASGR_DDYApm7NVpIDp",
             "embeddedImage": "image108.png"
           },
-          "sourceSha256": "793c8164673d1e55ce203575013d46dff589b4a5336648fbc5de7e7953ec6bbf"
+          "sourceSha256": "793c8164673d1e55ce203575013d46dff589b4a5336648fbc5de7e7953ec6bbf",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-16-793c816467.png",
+          "originalWidth": 2752,
+          "originalHeight": 1536,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-16-793c816467.webp"
         },
         {
           "name": "architecture/image109.png",
@@ -991,7 +1255,11 @@
             "fileId": "1Z2izAT4ujeZkTpASGR_DDYApm7NVpIDp",
             "embeddedImage": "image109.png"
           },
-          "sourceSha256": "5e59f38072eecacc10070047cb930d45bda9bb92a0e57ef7095336e205b57bd7"
+          "sourceSha256": "5e59f38072eecacc10070047cb930d45bda9bb92a0e57ef7095336e205b57bd7",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-17-5e59f38072.png",
+          "originalWidth": 2752,
+          "originalHeight": 1536,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-17-5e59f38072.webp"
         },
         {
           "name": "architecture/image110.png",
@@ -1003,7 +1271,11 @@
             "fileId": "1Z2izAT4ujeZkTpASGR_DDYApm7NVpIDp",
             "embeddedImage": "image110.png"
           },
-          "sourceSha256": "1d871a29af2705e96b57850622e732b71980c5788dc969f81e78d438f92bb95d"
+          "sourceSha256": "1d871a29af2705e96b57850622e732b71980c5788dc969f81e78d438f92bb95d",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-18-1d871a29af.png",
+          "originalWidth": 2752,
+          "originalHeight": 1536,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-18-1d871a29af.webp"
         },
         {
           "name": "architecture/image53.jpeg",
@@ -1015,7 +1287,11 @@
             "fileId": "1Z2izAT4ujeZkTpASGR_DDYApm7NVpIDp",
             "embeddedImage": "image53.jpeg"
           },
-          "sourceSha256": "622d0ac4f9c1dd36f8aea41efcacdece0b2ea0bf386bcf027a850e6fac42ec70"
+          "sourceSha256": "622d0ac4f9c1dd36f8aea41efcacdece0b2ea0bf386bcf027a850e6fac42ec70",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-19-622d0ac4f9.jpg",
+          "originalWidth": 2752,
+          "originalHeight": 1536,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-19-622d0ac4f9.webp"
         },
         {
           "name": "architecture/image55.jpeg",
@@ -1027,7 +1303,11 @@
             "fileId": "1Z2izAT4ujeZkTpASGR_DDYApm7NVpIDp",
             "embeddedImage": "image55.jpeg"
           },
-          "sourceSha256": "4424527794208363eafc872053d36884272d33268698cf2d3291ab3a6da93a9c"
+          "sourceSha256": "4424527794208363eafc872053d36884272d33268698cf2d3291ab3a6da93a9c",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-20-4424527794.jpg",
+          "originalWidth": 2752,
+          "originalHeight": 1536,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-20-4424527794.webp"
         },
         {
           "name": "architecture/image56.jpeg",
@@ -1039,7 +1319,11 @@
             "fileId": "1Z2izAT4ujeZkTpASGR_DDYApm7NVpIDp",
             "embeddedImage": "image56.jpeg"
           },
-          "sourceSha256": "3fb9544977808c483021f502218ff8ae8de77129d163d9787f9b3a5baba23394"
+          "sourceSha256": "3fb9544977808c483021f502218ff8ae8de77129d163d9787f9b3a5baba23394",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-21-3fb9544977.jpg",
+          "originalWidth": 2752,
+          "originalHeight": 1536,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-21-3fb9544977.webp"
         },
         {
           "name": "architecture/image57.jpeg",
@@ -1051,7 +1335,11 @@
             "fileId": "1Z2izAT4ujeZkTpASGR_DDYApm7NVpIDp",
             "embeddedImage": "image57.jpeg"
           },
-          "sourceSha256": "06b9fa152d79f027a7739d853a0cf4b333d4931a336d02de29f4714dd3736a3e"
+          "sourceSha256": "06b9fa152d79f027a7739d853a0cf4b333d4931a336d02de29f4714dd3736a3e",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-22-06b9fa152d.jpg",
+          "originalWidth": 2752,
+          "originalHeight": 1536,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-22-06b9fa152d.webp"
         },
         {
           "name": "architecture/image66.png",
@@ -1063,7 +1351,11 @@
             "fileId": "1Z2izAT4ujeZkTpASGR_DDYApm7NVpIDp",
             "embeddedImage": "image66.png"
           },
-          "sourceSha256": "a1236e574c38d5e536e35f81748a0f74b7c375e733edf9b34b8015cc93680981"
+          "sourceSha256": "a1236e574c38d5e536e35f81748a0f74b7c375e733edf9b34b8015cc93680981",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-23-a1236e574c.png",
+          "originalWidth": 2368,
+          "originalHeight": 1328,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-23-a1236e574c.webp"
         },
         {
           "name": "landscape/image2.png",
@@ -1075,7 +1367,11 @@
             "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
             "embeddedImage": "image2.png"
           },
-          "sourceSha256": "5e9e1494b33b8e101ab5fa75a8202564ec4464030290843d309cbb9d497bc5a5"
+          "sourceSha256": "5e9e1494b33b8e101ab5fa75a8202564ec4464030290843d309cbb9d497bc5a5",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-24-5e9e1494b3.png",
+          "originalWidth": 2560,
+          "originalHeight": 1440,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-24-5e9e1494b3.webp"
         },
         {
           "name": "landscape/image43.png",
@@ -1087,7 +1383,11 @@
             "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
             "embeddedImage": "image43.png"
           },
-          "sourceSha256": "fadc7202c5d265f861050364072e0cc2fc84b69c417eee2f500bf5e9247beefe"
+          "sourceSha256": "fadc7202c5d265f861050364072e0cc2fc84b69c417eee2f500bf5e9247beefe",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-25-fadc7202c5.png",
+          "originalWidth": 1385,
+          "originalHeight": 779,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-25-fadc7202c5.webp"
         },
         {
           "name": "landscape/image44.png",
@@ -1099,7 +1399,11 @@
             "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
             "embeddedImage": "image44.png"
           },
-          "sourceSha256": "80db97e26ac109b69e92772f667adce6a7d95987b13147fc329b73a5d578dfcc"
+          "sourceSha256": "80db97e26ac109b69e92772f667adce6a7d95987b13147fc329b73a5d578dfcc",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-26-80db97e26a.png",
+          "originalWidth": 2560,
+          "originalHeight": 1440,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-26-80db97e26a.webp"
         },
         {
           "name": "landscape/image45.png",
@@ -1111,7 +1415,11 @@
             "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
             "embeddedImage": "image45.png"
           },
-          "sourceSha256": "9d266b0a650ea82c11acf9d2700e6647061970e9887dcc60c8bf7a4ce9bce980"
+          "sourceSha256": "9d266b0a650ea82c11acf9d2700e6647061970e9887dcc60c8bf7a4ce9bce980",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-27-9d266b0a65.png",
+          "originalWidth": 2560,
+          "originalHeight": 1440,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-27-9d266b0a65.webp"
         },
         {
           "name": "landscape/image68.png",
@@ -1123,7 +1431,11 @@
             "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
             "embeddedImage": "image68.png"
           },
-          "sourceSha256": "ee9d45bb1296375855985ac0936a4a6a24aec96e81491ae824a219995301b2fc"
+          "sourceSha256": "ee9d45bb1296375855985ac0936a4a6a24aec96e81491ae824a219995301b2fc",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-28-ee9d45bb12.png",
+          "originalWidth": 2752,
+          "originalHeight": 1536,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-28-ee9d45bb12.webp"
         },
         {
           "name": "landscape/image69.png",
@@ -1135,7 +1447,11 @@
             "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
             "embeddedImage": "image69.png"
           },
-          "sourceSha256": "6595f238f86ab5b6176713dc378833a7e17810ed2a58fbbd16ff9e22e6860944"
+          "sourceSha256": "6595f238f86ab5b6176713dc378833a7e17810ed2a58fbbd16ff9e22e6860944",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-29-6595f238f8.png",
+          "originalWidth": 2368,
+          "originalHeight": 1312,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-29-6595f238f8.webp"
         },
         {
           "name": "landscape/image70.png",
@@ -1147,7 +1463,11 @@
             "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
             "embeddedImage": "image70.png"
           },
-          "sourceSha256": "06fba6b6f031a53f2925096aec650f1b42c8d2e1dbd74dcaf6965d4806235ee6"
+          "sourceSha256": "06fba6b6f031a53f2925096aec650f1b42c8d2e1dbd74dcaf6965d4806235ee6",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-30-06fba6b6f0.png",
+          "originalWidth": 2752,
+          "originalHeight": 1536,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-30-06fba6b6f0.webp"
         },
         {
           "name": "landscape/image71.png",
@@ -1159,7 +1479,11 @@
             "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
             "embeddedImage": "image71.png"
           },
-          "sourceSha256": "3f449223aee19b346a5863830eb728ec1c7dc6bd9229ce925b91b3a35d391d82"
+          "sourceSha256": "3f449223aee19b346a5863830eb728ec1c7dc6bd9229ce925b91b3a35d391d82",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-31-3f449223ae.png",
+          "originalWidth": 2752,
+          "originalHeight": 1536,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-31-3f449223ae.webp"
         },
         {
           "name": "landscape/image72.png",
@@ -1171,7 +1495,11 @@
             "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
             "embeddedImage": "image72.png"
           },
-          "sourceSha256": "f96f5f20587a44b65ca63130496d3878299c2baa0d82b65fb0f93d72677f9c41"
+          "sourceSha256": "f96f5f20587a44b65ca63130496d3878299c2baa0d82b65fb0f93d72677f9c41",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-32-f96f5f2058.png",
+          "originalWidth": 2752,
+          "originalHeight": 1536,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-32-f96f5f2058.webp"
         },
         {
           "name": "landscape/image73.png",
@@ -1183,7 +1511,11 @@
             "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
             "embeddedImage": "image73.png"
           },
-          "sourceSha256": "25a66d0a2030f249012457c8d8ab235f4cc24135aaafc7283d20991d96fdc0e1"
+          "sourceSha256": "25a66d0a2030f249012457c8d8ab235f4cc24135aaafc7283d20991d96fdc0e1",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-33-25a66d0a20.png",
+          "originalWidth": 2752,
+          "originalHeight": 1536,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-33-25a66d0a20.webp"
         },
         {
           "name": "landscape/image76.png",
@@ -1195,7 +1527,11 @@
             "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
             "embeddedImage": "image76.png"
           },
-          "sourceSha256": "f77ddda6933f96e00d0a987f34903129b105099d9dbc931c019b518e8fbcad68"
+          "sourceSha256": "f77ddda6933f96e00d0a987f34903129b105099d9dbc931c019b518e8fbcad68",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-34-f77ddda693.png",
+          "originalWidth": 2368,
+          "originalHeight": 1312,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-34-f77ddda693.webp"
         },
         {
           "name": "landscape/image79.png",
@@ -1207,7 +1543,11 @@
             "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
             "embeddedImage": "image79.png"
           },
-          "sourceSha256": "b9ce16d3cc7b6fcde4c73fee5f797d02a3493d3c0d5ac6b2df99b4ecf87c9a40"
+          "sourceSha256": "b9ce16d3cc7b6fcde4c73fee5f797d02a3493d3c0d5ac6b2df99b4ecf87c9a40",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-35-b9ce16d3cc.png",
+          "originalWidth": 2368,
+          "originalHeight": 1328,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-35-b9ce16d3cc.webp"
         },
         {
           "name": "landscape/image82.png",
@@ -1219,7 +1559,11 @@
             "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
             "embeddedImage": "image82.png"
           },
-          "sourceSha256": "f96d198c03c5baec2704b9ebfce21c5c981414169caf3d1743e975c599339b14"
+          "sourceSha256": "f96d198c03c5baec2704b9ebfce21c5c981414169caf3d1743e975c599339b14",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-36-f96d198c03.png",
+          "originalWidth": 2368,
+          "originalHeight": 1328,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-36-f96d198c03.webp"
         },
         {
           "name": "landscape/image84.png",
@@ -1231,7 +1575,11 @@
             "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
             "embeddedImage": "image84.png"
           },
-          "sourceSha256": "5f7f0bc6073f4acac8d5d6ca7abf1c09a564126fd12954fb25a4ee9a5e66079d"
+          "sourceSha256": "5f7f0bc6073f4acac8d5d6ca7abf1c09a564126fd12954fb25a4ee9a5e66079d",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-37-5f7f0bc607.png",
+          "originalWidth": 2368,
+          "originalHeight": 1312,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-37-5f7f0bc607.webp"
         },
         {
           "name": "landscape/image87.png",
@@ -1243,7 +1591,11 @@
             "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
             "embeddedImage": "image87.png"
           },
-          "sourceSha256": "70f27387b0d556eb9b6aa5f9b05b9b84cf1a48e463651cebaec21bbe74a12168"
+          "sourceSha256": "70f27387b0d556eb9b6aa5f9b05b9b84cf1a48e463651cebaec21bbe74a12168",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-38-70f27387b0.png",
+          "originalWidth": 2368,
+          "originalHeight": 1328,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-38-70f27387b0.webp"
         },
         {
           "name": "landscape/image89.png",
@@ -1255,7 +1607,11 @@
             "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
             "embeddedImage": "image89.png"
           },
-          "sourceSha256": "e2070bf9a72c0648bc00dc9e194e325f9737ebdb56867885f92238d94d175946"
+          "sourceSha256": "e2070bf9a72c0648bc00dc9e194e325f9737ebdb56867885f92238d94d175946",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-39-e2070bf9a7.png",
+          "originalWidth": 2368,
+          "originalHeight": 1312,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-39-e2070bf9a7.webp"
         },
         {
           "name": "landscape/image92.png",
@@ -1267,7 +1623,11 @@
             "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
             "embeddedImage": "image92.png"
           },
-          "sourceSha256": "4cfbb2b6f42ac2758d21c0659fa5a4d85d525fe422897b78d0cc0b4c92b24f5a"
+          "sourceSha256": "4cfbb2b6f42ac2758d21c0659fa5a4d85d525fe422897b78d0cc0b4c92b24f5a",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-40-4cfbb2b6f4.png",
+          "originalWidth": 2368,
+          "originalHeight": 1328,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-40-4cfbb2b6f4.webp"
         },
         {
           "name": "landscape/image94.png",
@@ -1279,7 +1639,11 @@
             "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
             "embeddedImage": "image94.png"
           },
-          "sourceSha256": "8bcbddf858e1581c42c173aeaf7b5d195ffc8c8a58e8cd51091993ddba9eb772"
+          "sourceSha256": "8bcbddf858e1581c42c173aeaf7b5d195ffc8c8a58e8cd51091993ddba9eb772",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-41-8bcbddf858.png",
+          "originalWidth": 2368,
+          "originalHeight": 1328,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-41-8bcbddf858.webp"
         },
         {
           "name": "landscape/image95.png",
@@ -1291,7 +1655,11 @@
             "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
             "embeddedImage": "image95.png"
           },
-          "sourceSha256": "01582806676e516f50599f0ed592d40ad9a91e9cfdb6e1ba92b183c54cb093de"
+          "sourceSha256": "01582806676e516f50599f0ed592d40ad9a91e9cfdb6e1ba92b183c54cb093de",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-42-0158280667.png",
+          "originalWidth": 2368,
+          "originalHeight": 1328,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-42-0158280667.webp"
         },
         {
           "name": "landscape/image96.png",
@@ -1303,7 +1671,11 @@
             "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
             "embeddedImage": "image96.png"
           },
-          "sourceSha256": "d446ae5684da37b366f3121a34fc861600fe5f2fa5a9835c74dd2ddceb9bf14d"
+          "sourceSha256": "d446ae5684da37b366f3121a34fc861600fe5f2fa5a9835c74dd2ddceb9bf14d",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-43-d446ae5684.png",
+          "originalWidth": 2752,
+          "originalHeight": 1536,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-43-d446ae5684.webp"
         },
         {
           "name": "landscape/image98.png",
@@ -1315,7 +1687,11 @@
             "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
             "embeddedImage": "image98.png"
           },
-          "sourceSha256": "61a117b43ce15729d2927e6407fd205e6e688a6ae418563543c39559615f98bc"
+          "sourceSha256": "61a117b43ce15729d2927e6407fd205e6e688a6ae418563543c39559615f98bc",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-44-61a117b43c.png",
+          "originalWidth": 2368,
+          "originalHeight": 1328,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-44-61a117b43c.webp"
         },
         {
           "name": "landscape/image99.png",
@@ -1327,7 +1703,11 @@
             "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
             "embeddedImage": "image99.png"
           },
-          "sourceSha256": "f283be0bb1db90502a40d166e4d4bb67d5a863fc2cd3430747163f0ebc3d9dac"
+          "sourceSha256": "f283be0bb1db90502a40d166e4d4bb67d5a863fc2cd3430747163f0ebc3d9dac",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-45-f283be0bb1.png",
+          "originalWidth": 2368,
+          "originalHeight": 1312,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-45-f283be0bb1.webp"
         },
         {
           "name": "landscape/image100.png",
@@ -1339,7 +1719,11 @@
             "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
             "embeddedImage": "image100.png"
           },
-          "sourceSha256": "b2e0f2ad453a649873b391d0307ae3b5b2433b3d813e7546caa07939dcb99dd4"
+          "sourceSha256": "b2e0f2ad453a649873b391d0307ae3b5b2433b3d813e7546caa07939dcb99dd4",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-46-b2e0f2ad45.png",
+          "originalWidth": 2368,
+          "originalHeight": 1312,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-46-b2e0f2ad45.webp"
         },
         {
           "name": "landscape/image101.png",
@@ -1351,7 +1735,11 @@
             "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
             "embeddedImage": "image101.png"
           },
-          "sourceSha256": "df4bfcb259bf9e66c5850e6d28161338259f02d6cc2eb7d15db909c8328c8094"
+          "sourceSha256": "df4bfcb259bf9e66c5850e6d28161338259f02d6cc2eb7d15db909c8328c8094",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-47-df4bfcb259.png",
+          "originalWidth": 2752,
+          "originalHeight": 1536,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-47-df4bfcb259.webp"
         },
         {
           "name": "landscape/image103.png",
@@ -1363,7 +1751,11 @@
             "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
             "embeddedImage": "image103.png"
           },
-          "sourceSha256": "33bc7630653e809c220fa56b5228a735a80e656d65fbe0a646b90505b35300a0"
+          "sourceSha256": "33bc7630653e809c220fa56b5228a735a80e656d65fbe0a646b90505b35300a0",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-48-33bc763065.png",
+          "originalWidth": 2752,
+          "originalHeight": 1536,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-48-33bc763065.webp"
         },
         {
           "name": "landscape/image104.png",
@@ -1375,7 +1767,11 @@
             "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
             "embeddedImage": "image104.png"
           },
-          "sourceSha256": "f3e906e912e03de2cda3f0d2451c1224a0d010ecff211eb7db6a506a3af2cba6"
+          "sourceSha256": "f3e906e912e03de2cda3f0d2451c1224a0d010ecff211eb7db6a506a3af2cba6",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-49-f3e906e912.png",
+          "originalWidth": 2368,
+          "originalHeight": 1328,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-49-f3e906e912.webp"
         },
         {
           "name": "landscape/image105.png",
@@ -1387,7 +1783,11 @@
             "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
             "embeddedImage": "image105.png"
           },
-          "sourceSha256": "3f613bb89f11c54da202363d8620053652013ea35cb7b6a6a99a1f5c3a287b08"
+          "sourceSha256": "3f613bb89f11c54da202363d8620053652013ea35cb7b6a6a99a1f5c3a287b08",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-50-3f613bb89f.png",
+          "originalWidth": 2368,
+          "originalHeight": 1312,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-50-3f613bb89f.webp"
         },
         {
           "name": "landscape/image107.png",
@@ -1399,7 +1799,11 @@
             "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
             "embeddedImage": "image107.png"
           },
-          "sourceSha256": "a9b4f00dd82aaeab0c5d98cc42b0bedaba37a837a5e2138f23c9286c25e3d247"
+          "sourceSha256": "a9b4f00dd82aaeab0c5d98cc42b0bedaba37a837a5e2138f23c9286c25e3d247",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-51-a9b4f00dd8.png",
+          "originalWidth": 2368,
+          "originalHeight": 1328,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-51-a9b4f00dd8.webp"
         },
         {
           "name": "landscape/image108.png",
@@ -1411,7 +1815,11 @@
             "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
             "embeddedImage": "image108.png"
           },
-          "sourceSha256": "45124a893d56fa2e33f872889f3540e53cd7279b581dbb09864af72aa792782b"
+          "sourceSha256": "45124a893d56fa2e33f872889f3540e53cd7279b581dbb09864af72aa792782b",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-52-45124a893d.png",
+          "originalWidth": 2368,
+          "originalHeight": 1328,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-52-45124a893d.webp"
         },
         {
           "name": "landscape/image109.png",
@@ -1423,7 +1831,11 @@
             "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
             "embeddedImage": "image109.png"
           },
-          "sourceSha256": "688540069850eb17e076067f67a765ec4cbe475c9a5acd61fb92aa262ae50c92"
+          "sourceSha256": "688540069850eb17e076067f67a765ec4cbe475c9a5acd61fb92aa262ae50c92",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-53-6885400698.png",
+          "originalWidth": 2368,
+          "originalHeight": 1328,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-53-6885400698.webp"
         },
         {
           "name": "landscape/image110.png",
@@ -1435,7 +1847,11 @@
             "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
             "embeddedImage": "image110.png"
           },
-          "sourceSha256": "54c221a35996d40f5745e33146c736b8e865a8d9bad251c2e0d0171b62535afb"
+          "sourceSha256": "54c221a35996d40f5745e33146c736b8e865a8d9bad251c2e0d0171b62535afb",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-54-54c221a359.png",
+          "originalWidth": 2368,
+          "originalHeight": 1328,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-54-54c221a359.webp"
         },
         {
           "name": "landscape/image111.png",
@@ -1447,7 +1863,11 @@
             "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
             "embeddedImage": "image111.png"
           },
-          "sourceSha256": "cc5f92171a798a17601b11cb968dacf047fe478553a296496b37c6d156e216e3"
+          "sourceSha256": "cc5f92171a798a17601b11cb968dacf047fe478553a296496b37c6d156e216e3",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-55-cc5f92171a.png",
+          "originalWidth": 2368,
+          "originalHeight": 1328,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-55-cc5f92171a.webp"
         },
         {
           "name": "landscape/image115.png",
@@ -1459,7 +1879,11 @@
             "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
             "embeddedImage": "image115.png"
           },
-          "sourceSha256": "73df4662e8de95a815ae3800d5e1b233572330e96898400d615ab06da25f35fe"
+          "sourceSha256": "73df4662e8de95a815ae3800d5e1b233572330e96898400d615ab06da25f35fe",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-56-73df4662e8.png",
+          "originalWidth": 2560,
+          "originalHeight": 1440,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-56-73df4662e8.webp"
         },
         {
           "name": "landscape/image116.png",
@@ -1471,7 +1895,11 @@
             "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
             "embeddedImage": "image116.png"
           },
-          "sourceSha256": "71b8bdca640d9dc269b1a854d1942ee10c627929fc289fb37f975c01bdb584d9"
+          "sourceSha256": "71b8bdca640d9dc269b1a854d1942ee10c627929fc289fb37f975c01bdb584d9",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-57-71b8bdca64.png",
+          "originalWidth": 2560,
+          "originalHeight": 1440,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-57-71b8bdca64.webp"
         },
         {
           "name": "landscape/image117.png",
@@ -1483,7 +1911,11 @@
             "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
             "embeddedImage": "image117.png"
           },
-          "sourceSha256": "15251896442f87479ba315a5c73773635ddc79759a716890b19614f9758a432a"
+          "sourceSha256": "15251896442f87479ba315a5c73773635ddc79759a716890b19614f9758a432a",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-58-1525189644.png",
+          "originalWidth": 2560,
+          "originalHeight": 1440,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-58-1525189644.webp"
         },
         {
           "name": "landscape/image118.png",
@@ -1495,7 +1927,11 @@
             "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
             "embeddedImage": "image118.png"
           },
-          "sourceSha256": "234f4c9fb0fcc78ecb3ee506396ea840ceec3c0e22c908b10340309af95f4fb0"
+          "sourceSha256": "234f4c9fb0fcc78ecb3ee506396ea840ceec3c0e22c908b10340309af95f4fb0",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-59-234f4c9fb0.png",
+          "originalWidth": 2560,
+          "originalHeight": 1440,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-59-234f4c9fb0.webp"
         },
         {
           "name": "landscape/image119.png",
@@ -1507,7 +1943,11 @@
             "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
             "embeddedImage": "image119.png"
           },
-          "sourceSha256": "095613a775078c7b4a72bb20362b373a166c9b4c09dd182c2f2fdf501034b463"
+          "sourceSha256": "095613a775078c7b4a72bb20362b373a166c9b4c09dd182c2f2fdf501034b463",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-60-095613a775.png",
+          "originalWidth": 2560,
+          "originalHeight": 1440,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-60-095613a775.webp"
         },
         {
           "name": "landscape/image120.png",
@@ -1519,7 +1959,11 @@
             "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
             "embeddedImage": "image120.png"
           },
-          "sourceSha256": "fb73734bf2fc1eeec1812848f219739b385a3cb982c331cbed238603f056c9a6"
+          "sourceSha256": "fb73734bf2fc1eeec1812848f219739b385a3cb982c331cbed238603f056c9a6",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-61-fb73734bf2.png",
+          "originalWidth": 2560,
+          "originalHeight": 1440,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-61-fb73734bf2.webp"
         },
         {
           "name": "landscape/image121.png",
@@ -1531,7 +1975,11 @@
             "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
             "embeddedImage": "image121.png"
           },
-          "sourceSha256": "29f2b60991b0477ed435fd93dabd596e80a95d90d9035867bc4665902d067dab"
+          "sourceSha256": "29f2b60991b0477ed435fd93dabd596e80a95d90d9035867bc4665902d067dab",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-62-29f2b60991.png",
+          "originalWidth": 2560,
+          "originalHeight": 1440,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-62-29f2b60991.webp"
         },
         {
           "name": "landscape/image122.png",
@@ -1543,7 +1991,11 @@
             "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
             "embeddedImage": "image122.png"
           },
-          "sourceSha256": "821b6f34ff8b2b9a340338162e9255d01ca0cff25848b8eb3c9c96af69792830"
+          "sourceSha256": "821b6f34ff8b2b9a340338162e9255d01ca0cff25848b8eb3c9c96af69792830",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-63-821b6f34ff.png",
+          "originalWidth": 2560,
+          "originalHeight": 1440,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-63-821b6f34ff.webp"
         },
         {
           "name": "landscape/image123.png",
@@ -1555,7 +2007,11 @@
             "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
             "embeddedImage": "image123.png"
           },
-          "sourceSha256": "4bef666349b5796826e4f4f3066d10031a0a53bb6f0a8dcaecac04e35383fb8f"
+          "sourceSha256": "4bef666349b5796826e4f4f3066d10031a0a53bb6f0a8dcaecac04e35383fb8f",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-64-4bef666349.png",
+          "originalWidth": 2560,
+          "originalHeight": 1440,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-64-4bef666349.webp"
         },
         {
           "name": "landscape/image124.png",
@@ -1567,7 +2023,11 @@
             "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
             "embeddedImage": "image124.png"
           },
-          "sourceSha256": "7970467bdba69150937d6368723b2d1c46f674756c486a6d4e4cbabe619a38ad"
+          "sourceSha256": "7970467bdba69150937d6368723b2d1c46f674756c486a6d4e4cbabe619a38ad",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-65-7970467bdb.png",
+          "originalWidth": 2560,
+          "originalHeight": 1440,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-65-7970467bdb.webp"
         },
         {
           "name": "landscape/image125.png",
@@ -1579,7 +2039,11 @@
             "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
             "embeddedImage": "image125.png"
           },
-          "sourceSha256": "3f83686d1b1ebb074164f60965e76bed622bf49e70f64c8c671fabf0bf7a5f69"
+          "sourceSha256": "3f83686d1b1ebb074164f60965e76bed622bf49e70f64c8c671fabf0bf7a5f69",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-66-3f83686d1b.png",
+          "originalWidth": 2560,
+          "originalHeight": 1440,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-66-3f83686d1b.webp"
         },
         {
           "name": "landscape/image127.png",
@@ -1591,7 +2055,11 @@
             "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
             "embeddedImage": "image127.png"
           },
-          "sourceSha256": "f330447b01210c65a2a93fa2fe224ad192b123481ed2e9eb1880f3fa83c6002e"
+          "sourceSha256": "f330447b01210c65a2a93fa2fe224ad192b123481ed2e9eb1880f3fa83c6002e",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-67-f330447b01.png",
+          "originalWidth": 2368,
+          "originalHeight": 1328,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-67-f330447b01.webp"
         },
         {
           "name": "landscape/image128.png",
@@ -1603,7 +2071,11 @@
             "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
             "embeddedImage": "image128.png"
           },
-          "sourceSha256": "ca0a1846116220ecafda27428a51dc6f14b281362067d53487928a220313a4a0"
+          "sourceSha256": "ca0a1846116220ecafda27428a51dc6f14b281362067d53487928a220313a4a0",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-68-ca0a184611.png",
+          "originalWidth": 2368,
+          "originalHeight": 1328,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-68-ca0a184611.webp"
         },
         {
           "name": "landscape/image129.png",
@@ -1615,7 +2087,11 @@
             "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
             "embeddedImage": "image129.png"
           },
-          "sourceSha256": "aa53bb3a80d77db3be7283bcd1efaaded81dfd681cdb74dd155ed9b6973a1627"
+          "sourceSha256": "aa53bb3a80d77db3be7283bcd1efaaded81dfd681cdb74dd155ed9b6973a1627",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-69-aa53bb3a80.png",
+          "originalWidth": 2752,
+          "originalHeight": 1536,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-69-aa53bb3a80.webp"
         },
         {
           "name": "landscape/image130.png",
@@ -1627,7 +2103,11 @@
             "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
             "embeddedImage": "image130.png"
           },
-          "sourceSha256": "5ec23edfc88ce3e5e4b2684545d9cdb2a3c4d3928d8f62d95daa860596a8d4ab"
+          "sourceSha256": "5ec23edfc88ce3e5e4b2684545d9cdb2a3c4d3928d8f62d95daa860596a8d4ab",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-70-5ec23edfc8.png",
+          "originalWidth": 2752,
+          "originalHeight": 1536,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-70-5ec23edfc8.webp"
         },
         {
           "name": "landscape/image131.png",
@@ -1639,7 +2119,11 @@
             "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
             "embeddedImage": "image131.png"
           },
-          "sourceSha256": "e7be6a0cc7f62613b9498e619080e4b28f28fef3462b15185e3e2dcdffab0b5e"
+          "sourceSha256": "e7be6a0cc7f62613b9498e619080e4b28f28fef3462b15185e3e2dcdffab0b5e",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-71-e7be6a0cc7.png",
+          "originalWidth": 2752,
+          "originalHeight": 1536,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-71-e7be6a0cc7.webp"
         },
         {
           "name": "landscape/image133.png",
@@ -1651,7 +2135,11 @@
             "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
             "embeddedImage": "image133.png"
           },
-          "sourceSha256": "9a7480058032bf8a46f110a21271bf38f40e65230a57a15cf199e3d4a17b0013"
+          "sourceSha256": "9a7480058032bf8a46f110a21271bf38f40e65230a57a15cf199e3d4a17b0013",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-72-9a74800580.png",
+          "originalWidth": 1280,
+          "originalHeight": 668,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-72-9a74800580.webp"
         },
         {
           "name": "landscape/image134.png",
@@ -1663,7 +2151,11 @@
             "fileId": "1sSc7wWIsaWGepvYpxExTXLOVut7BB0sF",
             "embeddedImage": "image134.png"
           },
-          "sourceSha256": "1334b1ed56cce560b4c374a06303de8b6a3e7fe1061e46177f69467cadf3c6bc"
+          "sourceSha256": "1334b1ed56cce560b4c374a06303de8b6a3e7fe1061e46177f69467cadf3c6bc",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-73-1334b1ed56.png",
+          "originalWidth": 1279,
+          "originalHeight": 668,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-73-1334b1ed56.webp"
         },
         {
           "name": "1792801609097_8245179748609292660_g8821821137201393781_3f7dbb0614ecfdc414cba757801784d0.jpg",
@@ -1678,7 +2170,11 @@
             "sentAt": "2026-10-24 07:26 +07:00",
             "message": "e bổ sung hai ảnh này vào dự án thanh thuỷ"
           },
-          "sourceSha256": "88bb51299a1abe6e81f13f1602da2ec6e77aa979080b90f49ab6334fbadde389"
+          "sourceSha256": "88bb51299a1abe6e81f13f1602da2ec6e77aa979080b90f49ab6334fbadde389",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-74-88bb51299a.jpg",
+          "originalWidth": 1280,
+          "originalHeight": 712,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-74-88bb51299a.webp"
         },
         {
           "name": "1792801609138_8245179748609292660_g8821821137201393781_4303411e49ac151c4837a58d96d57452.jpg",
@@ -1693,7 +2189,11 @@
             "sentAt": "2026-10-24 07:26 +07:00",
             "message": "e bổ sung hai ảnh này vào dự án thanh thuỷ"
           },
-          "sourceSha256": "3168b223f0462f338398dfabfda36f11272fd71544357e1468a446ff15e8eb8d"
+          "sourceSha256": "3168b223f0462f338398dfabfda36f11272fd71544357e1468a446ff15e8eb8d",
+          "originalSrc": "assets/rwh-projects/onsen-thanh-thuy/original-75-3168b223f0.jpg",
+          "originalWidth": 1280,
+          "originalHeight": 854,
+          "mobileSrc": "assets/rwh-projects/onsen-thanh-thuy/mobile-hq-75-3168b223f0.webp"
         }
       ],
       "landingHero": "assets/rwh-projects/onsen-thanh-thuy/client-hero-b2e0f2ad453a.png",
@@ -1743,7 +2243,11 @@
             "fileId": "1C9J2LjLrboCsO7fiKMA3ycbYyPe6YZKV",
             "fileName": "23.png"
           },
-          "sourceSha256": "592a4681e1d86b38290073bccf0bab3db7baba39eb97254d0f8245b4b848a7aa"
+          "sourceSha256": "592a4681e1d86b38290073bccf0bab3db7baba39eb97254d0f8245b4b848a7aa",
+          "originalSrc": "assets/rwh-projects/ecopark-thanh-hoa/original-01-592a4681e1.png",
+          "originalWidth": 3840,
+          "originalHeight": 2557,
+          "mobileSrc": "assets/rwh-projects/ecopark-thanh-hoa/mobile-hq-01-592a4681e1.webp"
         },
         {
           "name": "16_2.jpg",
@@ -1755,7 +2259,11 @@
             "fileId": "1Cf0e_rqbIyrPSUDalKh6Ser6TJxDOlQ-",
             "fileName": "16_2.jpg"
           },
-          "sourceSha256": "c34cd29a43cc2517617059c4a6865008df2cc3f99cbe2b755bcca45509188b07"
+          "sourceSha256": "c34cd29a43cc2517617059c4a6865008df2cc3f99cbe2b755bcca45509188b07",
+          "originalSrc": "assets/rwh-projects/ecopark-thanh-hoa/original-02-c34cd29a43.jpg",
+          "originalWidth": 2560,
+          "originalHeight": 1720,
+          "mobileSrc": "assets/rwh-projects/ecopark-thanh-hoa/mobile-hq-02-c34cd29a43.webp"
         },
         {
           "name": "9_1.jpg",
@@ -1767,7 +2275,11 @@
             "fileId": "1qIiGwvoNc2iDz9Cw7jf2ta2avYWQpGu3",
             "fileName": "9_1.jpg"
           },
-          "sourceSha256": "f9d9e53e1559ac3e62d6c921b81da9cc2f8fefd80e89929a0066fcd1482d8a90"
+          "sourceSha256": "f9d9e53e1559ac3e62d6c921b81da9cc2f8fefd80e89929a0066fcd1482d8a90",
+          "originalSrc": "assets/rwh-projects/ecopark-thanh-hoa/original-03-f9d9e53e15.jpg",
+          "originalWidth": 2560,
+          "originalHeight": 1738,
+          "mobileSrc": "assets/rwh-projects/ecopark-thanh-hoa/mobile-hq-03-f9d9e53e15.webp"
         },
         {
           "name": "Onsen 6.png",
@@ -1779,7 +2291,11 @@
             "fileId": "1fhjfEvZNqAP86xb-551P19_nuqegqweN",
             "fileName": "Onsen 6.png"
           },
-          "sourceSha256": "4a09f8de765382caec83ada43a1b6978b025d79067e8ed660dc979f30be3336d"
+          "sourceSha256": "4a09f8de765382caec83ada43a1b6978b025d79067e8ed660dc979f30be3336d",
+          "originalSrc": "assets/rwh-projects/ecopark-thanh-hoa/original-04-4a09f8de76.png",
+          "originalWidth": 2560,
+          "originalHeight": 1706,
+          "mobileSrc": "assets/rwh-projects/ecopark-thanh-hoa/mobile-hq-04-4a09f8de76.webp"
         },
         {
           "name": "7_1.jpg",
@@ -1791,7 +2307,11 @@
             "fileId": "15snrt6KAn9N2yhd8rBJIYHGo7-f8ZNkK",
             "fileName": "7_1.jpg"
           },
-          "sourceSha256": "c2b312c14a0da8aa40486ba808515369a291e55cbd43283835896b5872885a9d"
+          "sourceSha256": "c2b312c14a0da8aa40486ba808515369a291e55cbd43283835896b5872885a9d",
+          "originalSrc": "assets/rwh-projects/ecopark-thanh-hoa/original-05-c2b312c14a.jpg",
+          "originalWidth": 2560,
+          "originalHeight": 1738,
+          "mobileSrc": "assets/rwh-projects/ecopark-thanh-hoa/mobile-hq-05-c2b312c14a.webp"
         },
         {
           "name": "PC.jpg",
@@ -1803,7 +2323,11 @@
             "fileId": "1EzYvb5BXuKfl-lhmfELQ0s0gUH-UOqng",
             "fileName": "PC.jpg"
           },
-          "sourceSha256": "1cfbc545a901df844a91460cb326ec02e9a5e6f8b13918f5ee79213c34df690c"
+          "sourceSha256": "1cfbc545a901df844a91460cb326ec02e9a5e6f8b13918f5ee79213c34df690c",
+          "originalSrc": "assets/rwh-projects/ecopark-thanh-hoa/original-06-1cfbc545a9.jpg",
+          "originalWidth": 2560,
+          "originalHeight": 1738,
+          "mobileSrc": "assets/rwh-projects/ecopark-thanh-hoa/mobile-hq-06-1cfbc545a9.webp"
         },
         {
           "name": "4.jpg",
@@ -1815,7 +2339,11 @@
             "fileId": "1dI9_hpEEsIZaWDxEF9lpB7JWAnIidXQc",
             "fileName": "4.jpg"
           },
-          "sourceSha256": "6f1398644c7fa36a9379cf5c696ed6658d7e47be0fa4385ab9a8283693dfcd6d"
+          "sourceSha256": "6f1398644c7fa36a9379cf5c696ed6658d7e47be0fa4385ab9a8283693dfcd6d",
+          "originalSrc": "assets/rwh-projects/ecopark-thanh-hoa/original-07-6f1398644c.jpg",
+          "originalWidth": 2560,
+          "originalHeight": 1739,
+          "mobileSrc": "assets/rwh-projects/ecopark-thanh-hoa/mobile-hq-07-6f1398644c.webp"
         },
         {
           "name": "7.jpg",
@@ -1827,7 +2355,11 @@
             "fileId": "1QUh_TdHbhTPyJoqGCcg-zpo2UfItkGbE",
             "fileName": "7.jpg"
           },
-          "sourceSha256": "9525ea53b2284f95aecdfe079699c4232b3c584077de6673dcc885b8c7cf74e8"
+          "sourceSha256": "9525ea53b2284f95aecdfe079699c4232b3c584077de6673dcc885b8c7cf74e8",
+          "originalSrc": "assets/rwh-projects/ecopark-thanh-hoa/original-08-9525ea53b2.jpg",
+          "originalWidth": 2560,
+          "originalHeight": 1738,
+          "mobileSrc": "assets/rwh-projects/ecopark-thanh-hoa/mobile-hq-08-9525ea53b2.webp"
         },
         {
           "name": "11.jpg",
@@ -1839,7 +2371,11 @@
             "fileId": "1KgiyR2C20KAQPdH6Zmu7XJ6d4VxGE25b",
             "fileName": "11.jpg"
           },
-          "sourceSha256": "0dd29ce0a9072dc201ac57033c80f4670964fb5c7b7af52ea637591272653fe1"
+          "sourceSha256": "0dd29ce0a9072dc201ac57033c80f4670964fb5c7b7af52ea637591272653fe1",
+          "originalSrc": "assets/rwh-projects/ecopark-thanh-hoa/original-09-0dd29ce0a9.jpg",
+          "originalWidth": 2560,
+          "originalHeight": 1738,
+          "mobileSrc": "assets/rwh-projects/ecopark-thanh-hoa/mobile-hq-09-0dd29ce0a9.webp"
         },
         {
           "name": "18.jpg",
@@ -1851,7 +2387,11 @@
             "fileId": "1OSmTPto1JwQ7PNwErBYgiS3PG8OIv2Xe",
             "fileName": "18.jpg"
           },
-          "sourceSha256": "09f5ea60c1acd8ee263dbaefa87aeb429450db9fec30f11b2fc9a939eb9b2791"
+          "sourceSha256": "09f5ea60c1acd8ee263dbaefa87aeb429450db9fec30f11b2fc9a939eb9b2791",
+          "originalSrc": "assets/rwh-projects/ecopark-thanh-hoa/original-10-09f5ea60c1.jpg",
+          "originalWidth": 2560,
+          "originalHeight": 1720,
+          "mobileSrc": "assets/rwh-projects/ecopark-thanh-hoa/mobile-hq-10-09f5ea60c1.webp"
         },
         {
           "name": "19.jpg",
@@ -1863,7 +2403,11 @@
             "fileId": "1H4_azg7g70h729-C8P4mqU41-EEHDBOq",
             "fileName": "19.jpg"
           },
-          "sourceSha256": "5703ed2bb6b4184a3975f5f42cc421ef9fb5a6f161f150a9ce073a4f50ae3510"
+          "sourceSha256": "5703ed2bb6b4184a3975f5f42cc421ef9fb5a6f161f150a9ce073a4f50ae3510",
+          "originalSrc": "assets/rwh-projects/ecopark-thanh-hoa/original-11-5703ed2bb6.jpg",
+          "originalWidth": 2560,
+          "originalHeight": 1720,
+          "mobileSrc": "assets/rwh-projects/ecopark-thanh-hoa/mobile-hq-11-5703ed2bb6.webp"
         },
         {
           "name": "Onsen 1.jpg",
@@ -1875,7 +2419,11 @@
             "fileId": "1cjeC_KKyoqlN56ClCvAi4Y7yDgLsojSg",
             "fileName": "Onsen 1.jpg"
           },
-          "sourceSha256": "9214ba67b43328f421fbe0004241821ca6affa7dbe87f0b0c5fb5327aa0b7c1d"
+          "sourceSha256": "9214ba67b43328f421fbe0004241821ca6affa7dbe87f0b0c5fb5327aa0b7c1d",
+          "originalSrc": "assets/rwh-projects/ecopark-thanh-hoa/original-12-9214ba67b4.jpg",
+          "originalWidth": 2560,
+          "originalHeight": 1720,
+          "mobileSrc": "assets/rwh-projects/ecopark-thanh-hoa/mobile-hq-12-9214ba67b4.webp"
         },
         {
           "name": "Onsen 2.jpg",
@@ -1887,7 +2435,11 @@
             "fileId": "1nRB5gx5f4ZXEJrKwpdxHdYz2heacdYS9",
             "fileName": "Onsen 2.jpg"
           },
-          "sourceSha256": "978b42b8e58648b9f24f4111bff25ccaa7538be70382b37921dd5417151c3b7e"
+          "sourceSha256": "978b42b8e58648b9f24f4111bff25ccaa7538be70382b37921dd5417151c3b7e",
+          "originalSrc": "assets/rwh-projects/ecopark-thanh-hoa/original-13-978b42b8e5.jpg",
+          "originalWidth": 2560,
+          "originalHeight": 1720,
+          "mobileSrc": "assets/rwh-projects/ecopark-thanh-hoa/mobile-hq-13-978b42b8e5.webp"
         },
         {
           "name": "Onsen 3.jpg",
@@ -1899,7 +2451,11 @@
             "fileId": "1UkE77HflXknkasPDsHLCdmMUQivc5i1a",
             "fileName": "Onsen 3.jpg"
           },
-          "sourceSha256": "9a85611e9f4dee54c3ee40cb72f16419d258cb11504e61cd59a1ae6664e9c12f"
+          "sourceSha256": "9a85611e9f4dee54c3ee40cb72f16419d258cb11504e61cd59a1ae6664e9c12f",
+          "originalSrc": "assets/rwh-projects/ecopark-thanh-hoa/original-14-9a85611e9f.jpg",
+          "originalWidth": 3840,
+          "originalHeight": 2557,
+          "mobileSrc": "assets/rwh-projects/ecopark-thanh-hoa/mobile-hq-14-9a85611e9f.webp"
         },
         {
           "name": "Onsen 4.jpg",
@@ -1911,7 +2467,11 @@
             "fileId": "1DO-TxK4HhPB2gPAY9eDirEriNYSSDQYA",
             "fileName": "Onsen 4.jpg"
           },
-          "sourceSha256": "243b6bd4729aad2d98fb401df67c5a078c5c65abb3c99b5f6d0596848fee4a92"
+          "sourceSha256": "243b6bd4729aad2d98fb401df67c5a078c5c65abb3c99b5f6d0596848fee4a92",
+          "originalSrc": "assets/rwh-projects/ecopark-thanh-hoa/original-15-243b6bd472.jpg",
+          "originalWidth": 3840,
+          "originalHeight": 2557,
+          "mobileSrc": "assets/rwh-projects/ecopark-thanh-hoa/mobile-hq-15-243b6bd472.webp"
         },
         {
           "name": "Onsen 5.jpg",
@@ -1923,7 +2483,11 @@
             "fileId": "1jwuW8gFXAA45UcD-3QPV3f-UFRsgkKDh",
             "fileName": "Onsen 5.jpg"
           },
-          "sourceSha256": "584ea5887d532c07653ca71de38d140041922d388f5518e3a21494cb098a661d"
+          "sourceSha256": "584ea5887d532c07653ca71de38d140041922d388f5518e3a21494cb098a661d",
+          "originalSrc": "assets/rwh-projects/ecopark-thanh-hoa/original-16-584ea5887d.jpg",
+          "originalWidth": 3840,
+          "originalHeight": 2557,
+          "mobileSrc": "assets/rwh-projects/ecopark-thanh-hoa/mobile-hq-16-584ea5887d.webp"
         },
         {
           "name": "1F_GD3.png",
@@ -1935,7 +2499,11 @@
             "fileId": "1_oljmLLjvrDVDCRSxMjBucxOYHgTzDcb",
             "fileName": "1F_GD3.png"
           },
-          "sourceSha256": "243c3ae9fb54b4f6a319a0c3025fe585d5b8f0d0cfa3e94c4063189238de2a05"
+          "sourceSha256": "243c3ae9fb54b4f6a319a0c3025fe585d5b8f0d0cfa3e94c4063189238de2a05",
+          "originalSrc": "assets/rwh-projects/ecopark-thanh-hoa/original-17-243c3ae9fb.png",
+          "originalWidth": 4963,
+          "originalHeight": 3508,
+          "mobileSrc": "assets/rwh-projects/ecopark-thanh-hoa/mobile-hq-17-243c3ae9fb.webp"
         },
         {
           "name": "Mezzanine.png",
@@ -1947,7 +2515,11 @@
             "fileId": "1ujieskJrmKDYemshxMjKwE82EzVL-ljj",
             "fileName": "Mezzanine.png"
           },
-          "sourceSha256": "3eaed643102884ffb25dd4af8da3f6267e7921ac2fdbd4395a169366be952ef4"
+          "sourceSha256": "3eaed643102884ffb25dd4af8da3f6267e7921ac2fdbd4395a169366be952ef4",
+          "originalSrc": "assets/rwh-projects/ecopark-thanh-hoa/original-18-3eaed64310.png",
+          "originalWidth": 4963,
+          "originalHeight": 3508,
+          "mobileSrc": "assets/rwh-projects/ecopark-thanh-hoa/mobile-hq-18-3eaed64310.webp"
         },
         {
           "name": "17.jpg",
@@ -1959,7 +2531,11 @@
             "fileId": "1AytTBmgkpxkFoQdQ65aJPt1icQqqBdZW",
             "fileName": "17.jpg"
           },
-          "sourceSha256": "1d29b81f0872fface9f10c5ccd7a049afe9fa4a15976e0d870bcfefef3d685d1"
+          "sourceSha256": "1d29b81f0872fface9f10c5ccd7a049afe9fa4a15976e0d870bcfefef3d685d1",
+          "originalSrc": "assets/rwh-projects/ecopark-thanh-hoa/original-19-1d29b81f08.jpg",
+          "originalWidth": 2560,
+          "originalHeight": 1720,
+          "mobileSrc": "assets/rwh-projects/ecopark-thanh-hoa/mobile-hq-19-1d29b81f08.webp"
         }
       ],
       "landingHero": "assets/rwh-projects/ecopark-thanh-hoa/client-hero-1d29b81f0872.jpg",
@@ -2015,7 +2591,11 @@
             "fileId": "17RWcLQPIsERwZOA1bBqSLuOeZLvI6XPX",
             "embeddedImage": "page37-2.jpg"
           },
-          "sourceSha256": "c619d157c7b9f9a2e95b210d46c96357eb7035d34e71f7efd3f4c62bc87e409a"
+          "sourceSha256": "c619d157c7b9f9a2e95b210d46c96357eb7035d34e71f7efd3f4c62bc87e409a",
+          "originalSrc": "assets/rwh-projects/nam-o-residence/original-01-0e915c6da6.jpg",
+          "originalWidth": 2560,
+          "originalHeight": 1440,
+          "mobileSrc": "assets/rwh-projects/nam-o-residence/mobile-hq-01-0e915c6da6.webp"
         },
         {
           "name": "page36-2.jpg",
@@ -2027,7 +2607,11 @@
             "fileId": "17RWcLQPIsERwZOA1bBqSLuOeZLvI6XPX",
             "embeddedImage": "page36-2.jpg"
           },
-          "sourceSha256": "ba3cf8e0afc609347f3d09e13cce5035917af5e3daa611402dfe1e0a53bae55e"
+          "sourceSha256": "ba3cf8e0afc609347f3d09e13cce5035917af5e3daa611402dfe1e0a53bae55e",
+          "originalSrc": "assets/rwh-projects/nam-o-residence/original-02-6309ba8971.jpg",
+          "originalWidth": 2560,
+          "originalHeight": 1440,
+          "mobileSrc": "assets/rwh-projects/nam-o-residence/mobile-hq-02-6309ba8971.webp"
         },
         {
           "name": "page38-2.jpg",
@@ -2039,7 +2623,11 @@
             "fileId": "17RWcLQPIsERwZOA1bBqSLuOeZLvI6XPX",
             "embeddedImage": "page38-2.jpg"
           },
-          "sourceSha256": "3e4c896c282eecd919bae401d29c745db4fccf2cfffe63ca678dea434ca7dcdc"
+          "sourceSha256": "3e4c896c282eecd919bae401d29c745db4fccf2cfffe63ca678dea434ca7dcdc",
+          "originalSrc": "assets/rwh-projects/nam-o-residence/original-03-e9067d3e9e.jpg",
+          "originalWidth": 2560,
+          "originalHeight": 1440,
+          "mobileSrc": "assets/rwh-projects/nam-o-residence/mobile-hq-03-e9067d3e9e.webp"
         },
         {
           "name": "page39-2.jpg",
@@ -2051,7 +2639,11 @@
             "fileId": "17RWcLQPIsERwZOA1bBqSLuOeZLvI6XPX",
             "embeddedImage": "page39-2.jpg"
           },
-          "sourceSha256": "47779e1dc22712d30bcd1f3c9dbba5dcee4cc29fbe6fe7f7ba202d5291a4f874"
+          "sourceSha256": "47779e1dc22712d30bcd1f3c9dbba5dcee4cc29fbe6fe7f7ba202d5291a4f874",
+          "originalSrc": "assets/rwh-projects/nam-o-residence/original-04-50b7301b2c.jpg",
+          "originalWidth": 2560,
+          "originalHeight": 1440,
+          "mobileSrc": "assets/rwh-projects/nam-o-residence/mobile-hq-04-50b7301b2c.webp"
         },
         {
           "name": "page40-2.jpg",
@@ -2063,7 +2655,11 @@
             "fileId": "17RWcLQPIsERwZOA1bBqSLuOeZLvI6XPX",
             "embeddedImage": "page40-2.jpg"
           },
-          "sourceSha256": "e60e6eafc038841df442d052e8b19377050b0746d8d6d51b5d7dbc673a3170a7"
+          "sourceSha256": "e60e6eafc038841df442d052e8b19377050b0746d8d6d51b5d7dbc673a3170a7",
+          "originalSrc": "assets/rwh-projects/nam-o-residence/original-05-d03a4b51bd.jpg",
+          "originalWidth": 1652,
+          "originalHeight": 929,
+          "mobileSrc": "assets/rwh-projects/nam-o-residence/mobile-hq-05-d03a4b51bd.webp"
         },
         {
           "name": "page40-3.jpg",
@@ -2075,7 +2671,11 @@
             "fileId": "17RWcLQPIsERwZOA1bBqSLuOeZLvI6XPX",
             "embeddedImage": "page40-3.jpg"
           },
-          "sourceSha256": "e6e279c573536fb5e37c46bc81a9bc88e716b7982b0ca3dc7331c223276471f9"
+          "sourceSha256": "e6e279c573536fb5e37c46bc81a9bc88e716b7982b0ca3dc7331c223276471f9",
+          "originalSrc": "assets/rwh-projects/nam-o-residence/original-06-380ce80df4.jpg",
+          "originalWidth": 1652,
+          "originalHeight": 929,
+          "mobileSrc": "assets/rwh-projects/nam-o-residence/mobile-hq-06-380ce80df4.webp"
         }
       ]
     },
@@ -2123,7 +2723,11 @@
             "fileId": "1UvzjaJqFHYE7K8-40tWTwW3kJkXtasJw",
             "embeddedImage": "image39.jpg"
           },
-          "sourceSha256": "324b39656ca6a82f2592c10d072be151fcfd869d1015eabcca3dc868a872b2da"
+          "sourceSha256": "324b39656ca6a82f2592c10d072be151fcfd869d1015eabcca3dc868a872b2da",
+          "originalSrc": "assets/rwh-projects/hakuba-hotel/original-01-324b39656c.jpg",
+          "originalWidth": 2395,
+          "originalHeight": 1347,
+          "mobileSrc": "assets/rwh-projects/hakuba-hotel/mobile-hq-01-324b39656c.webp"
         },
         {
           "name": "image29.jpg",
@@ -2135,7 +2739,11 @@
             "fileId": "1UvzjaJqFHYE7K8-40tWTwW3kJkXtasJw",
             "embeddedImage": "image29.jpg"
           },
-          "sourceSha256": "7b827e3558b4b55f174c24e423a1ba9b24281126c1f7f1183ad0a64b9b14c0a9"
+          "sourceSha256": "7b827e3558b4b55f174c24e423a1ba9b24281126c1f7f1183ad0a64b9b14c0a9",
+          "originalSrc": "assets/rwh-projects/hakuba-hotel/original-02-7b827e3558.jpg",
+          "originalWidth": 2469,
+          "originalHeight": 1390,
+          "mobileSrc": "assets/rwh-projects/hakuba-hotel/mobile-hq-02-7b827e3558.webp"
         },
         {
           "name": "image30.png",
@@ -2147,7 +2755,11 @@
             "fileId": "1UvzjaJqFHYE7K8-40tWTwW3kJkXtasJw",
             "embeddedImage": "image30.png"
           },
-          "sourceSha256": "8d8e3fc4d1644702bedfce1ea1342e7851c6f5fcd3c2b4aae85793d7a11072dc"
+          "sourceSha256": "8d8e3fc4d1644702bedfce1ea1342e7851c6f5fcd3c2b4aae85793d7a11072dc",
+          "originalSrc": "assets/rwh-projects/hakuba-hotel/original-03-8d8e3fc4d1.png",
+          "originalWidth": 2666,
+          "originalHeight": 1504,
+          "mobileSrc": "assets/rwh-projects/hakuba-hotel/mobile-hq-03-8d8e3fc4d1.webp"
         },
         {
           "name": "image31.jpg",
@@ -2159,7 +2771,11 @@
             "fileId": "1UvzjaJqFHYE7K8-40tWTwW3kJkXtasJw",
             "embeddedImage": "image31.jpg"
           },
-          "sourceSha256": "d868f68aa951abe148a847f4ff8d67a4665a20c6fb12df60ef1a83ecedcf6b69"
+          "sourceSha256": "d868f68aa951abe148a847f4ff8d67a4665a20c6fb12df60ef1a83ecedcf6b69",
+          "originalSrc": "assets/rwh-projects/hakuba-hotel/original-04-d868f68aa9.jpg",
+          "originalWidth": 2395,
+          "originalHeight": 1347,
+          "mobileSrc": "assets/rwh-projects/hakuba-hotel/mobile-hq-04-d868f68aa9.webp"
         },
         {
           "name": "image32.jpg",
@@ -2171,7 +2787,11 @@
             "fileId": "1UvzjaJqFHYE7K8-40tWTwW3kJkXtasJw",
             "embeddedImage": "image32.jpg"
           },
-          "sourceSha256": "390ded8c0694fc62691b6fca4a4c46c545e68dc808d023fafab1907a42d6fdef"
+          "sourceSha256": "390ded8c0694fc62691b6fca4a4c46c545e68dc808d023fafab1907a42d6fdef",
+          "originalSrc": "assets/rwh-projects/hakuba-hotel/original-05-390ded8c06.jpg",
+          "originalWidth": 2395,
+          "originalHeight": 1347,
+          "mobileSrc": "assets/rwh-projects/hakuba-hotel/mobile-hq-05-390ded8c06.webp"
         },
         {
           "name": "image33.jpg",
@@ -2183,7 +2803,11 @@
             "fileId": "1UvzjaJqFHYE7K8-40tWTwW3kJkXtasJw",
             "embeddedImage": "image33.jpg"
           },
-          "sourceSha256": "93534accc082cf9f17294c2de2fdad0d6e4b33f22a7d94d75079eaa00f90b452"
+          "sourceSha256": "93534accc082cf9f17294c2de2fdad0d6e4b33f22a7d94d75079eaa00f90b452",
+          "originalSrc": "assets/rwh-projects/hakuba-hotel/original-06-93534accc0.jpg",
+          "originalWidth": 2395,
+          "originalHeight": 1347,
+          "mobileSrc": "assets/rwh-projects/hakuba-hotel/mobile-hq-06-93534accc0.webp"
         },
         {
           "name": "image34.jpg",
@@ -2195,7 +2819,11 @@
             "fileId": "1UvzjaJqFHYE7K8-40tWTwW3kJkXtasJw",
             "embeddedImage": "image34.jpg"
           },
-          "sourceSha256": "ef8d5e55bf1e8a7f0912e3f5f44a272f17a84347c3ea4ad8f4630089901bf090"
+          "sourceSha256": "ef8d5e55bf1e8a7f0912e3f5f44a272f17a84347c3ea4ad8f4630089901bf090",
+          "originalSrc": "assets/rwh-projects/hakuba-hotel/original-07-ef8d5e55bf.jpg",
+          "originalWidth": 2395,
+          "originalHeight": 1347,
+          "mobileSrc": "assets/rwh-projects/hakuba-hotel/mobile-hq-07-ef8d5e55bf.webp"
         },
         {
           "name": "image35.jpg",
@@ -2207,7 +2835,11 @@
             "fileId": "1UvzjaJqFHYE7K8-40tWTwW3kJkXtasJw",
             "embeddedImage": "image35.jpg"
           },
-          "sourceSha256": "839fd47f5f6aac51989895743490d2ff63816a1c64ad3b9614d878a860770382"
+          "sourceSha256": "839fd47f5f6aac51989895743490d2ff63816a1c64ad3b9614d878a860770382",
+          "originalSrc": "assets/rwh-projects/hakuba-hotel/original-08-839fd47f5f.jpg",
+          "originalWidth": 2395,
+          "originalHeight": 1347,
+          "mobileSrc": "assets/rwh-projects/hakuba-hotel/mobile-hq-08-839fd47f5f.webp"
         },
         {
           "name": "image36.jpg",
@@ -2219,7 +2851,11 @@
             "fileId": "1UvzjaJqFHYE7K8-40tWTwW3kJkXtasJw",
             "embeddedImage": "image36.jpg"
           },
-          "sourceSha256": "dc078c0f4f92e53ba26067b4c3288bb4e614a705dc66063ca3ceb1ea2faa8446"
+          "sourceSha256": "dc078c0f4f92e53ba26067b4c3288bb4e614a705dc66063ca3ceb1ea2faa8446",
+          "originalSrc": "assets/rwh-projects/hakuba-hotel/original-09-dc078c0f4f.jpg",
+          "originalWidth": 2395,
+          "originalHeight": 1347,
+          "mobileSrc": "assets/rwh-projects/hakuba-hotel/mobile-hq-09-dc078c0f4f.webp"
         },
         {
           "name": "image37.jpg",
@@ -2231,7 +2867,11 @@
             "fileId": "1UvzjaJqFHYE7K8-40tWTwW3kJkXtasJw",
             "embeddedImage": "image37.jpg"
           },
-          "sourceSha256": "107d272b8c6cab9903686f4693cc639504ac4f71430a591351e062125ced3b0c"
+          "sourceSha256": "107d272b8c6cab9903686f4693cc639504ac4f71430a591351e062125ced3b0c",
+          "originalSrc": "assets/rwh-projects/hakuba-hotel/original-10-107d272b8c.jpg",
+          "originalWidth": 2394,
+          "originalHeight": 1346,
+          "mobileSrc": "assets/rwh-projects/hakuba-hotel/mobile-hq-10-107d272b8c.webp"
         },
         {
           "name": "image38.jpg",
@@ -2243,7 +2883,11 @@
             "fileId": "1UvzjaJqFHYE7K8-40tWTwW3kJkXtasJw",
             "embeddedImage": "image38.jpg"
           },
-          "sourceSha256": "0c8fdc77cc4b2afa25fd361b7075ff3e3df9703f72708f9e6c73344fa9e5d624"
+          "sourceSha256": "0c8fdc77cc4b2afa25fd361b7075ff3e3df9703f72708f9e6c73344fa9e5d624",
+          "originalSrc": "assets/rwh-projects/hakuba-hotel/original-11-0c8fdc77cc.jpg",
+          "originalWidth": 2395,
+          "originalHeight": 1347,
+          "mobileSrc": "assets/rwh-projects/hakuba-hotel/mobile-hq-11-0c8fdc77cc.webp"
         },
         {
           "name": "image40.jpg",
@@ -2255,7 +2899,11 @@
             "fileId": "1UvzjaJqFHYE7K8-40tWTwW3kJkXtasJw",
             "embeddedImage": "image40.jpg"
           },
-          "sourceSha256": "cdb30ca2874eeaaa9896d1ff93c3ded58896e53332f2641e1a343365de2914a8"
+          "sourceSha256": "cdb30ca2874eeaaa9896d1ff93c3ded58896e53332f2641e1a343365de2914a8",
+          "originalSrc": "assets/rwh-projects/hakuba-hotel/original-12-cdb30ca287.jpg",
+          "originalWidth": 2395,
+          "originalHeight": 1347,
+          "mobileSrc": "assets/rwh-projects/hakuba-hotel/mobile-hq-12-cdb30ca287.webp"
         },
         {
           "name": "image41.jpg",
@@ -2267,7 +2915,11 @@
             "fileId": "1UvzjaJqFHYE7K8-40tWTwW3kJkXtasJw",
             "embeddedImage": "image41.jpg"
           },
-          "sourceSha256": "db5195c9ac686944c127c4f786e23e6a1ff311c25aa43a81d503d5f5e13632e7"
+          "sourceSha256": "db5195c9ac686944c127c4f786e23e6a1ff311c25aa43a81d503d5f5e13632e7",
+          "originalSrc": "assets/rwh-projects/hakuba-hotel/original-13-db5195c9ac.jpg",
+          "originalWidth": 1892,
+          "originalHeight": 1066,
+          "mobileSrc": "assets/rwh-projects/hakuba-hotel/mobile-hq-13-db5195c9ac.webp"
         }
       ]
     },
@@ -2318,7 +2970,11 @@
             "fileId": "1PaGctZfXRcZKM0TH-NetEHw--xtQ3xVw",
             "embeddedImage": "image50.jpg"
           },
-          "sourceSha256": "168553af43f98e07bbd1fa8b2eafcf3a67573f5dffaabd8e9258beaa87481f16"
+          "sourceSha256": "168553af43f98e07bbd1fa8b2eafcf3a67573f5dffaabd8e9258beaa87481f16",
+          "originalSrc": "assets/rwh-projects/thien-mu-hotel/original-01-168553af43.jpg",
+          "originalWidth": 1344,
+          "originalHeight": 757,
+          "mobileSrc": "assets/rwh-projects/thien-mu-hotel/mobile-hq-01-168553af43.webp"
         },
         {
           "name": "image43.jpg",
@@ -2330,7 +2986,11 @@
             "fileId": "1PaGctZfXRcZKM0TH-NetEHw--xtQ3xVw",
             "embeddedImage": "image43.jpg"
           },
-          "sourceSha256": "019ad2f34eac5cb2c045400ebd1993535a5da6ca09ca7214e73ec803569a8895"
+          "sourceSha256": "019ad2f34eac5cb2c045400ebd1993535a5da6ca09ca7214e73ec803569a8895",
+          "originalSrc": "assets/rwh-projects/thien-mu-hotel/original-02-019ad2f34e.jpg",
+          "originalWidth": 1253,
+          "originalHeight": 705,
+          "mobileSrc": "assets/rwh-projects/thien-mu-hotel/mobile-hq-02-019ad2f34e.webp"
         },
         {
           "name": "image44.jpg",
@@ -2342,7 +3002,11 @@
             "fileId": "1PaGctZfXRcZKM0TH-NetEHw--xtQ3xVw",
             "embeddedImage": "image44.jpg"
           },
-          "sourceSha256": "1fa9bdcfca1d5ea712f62d482d7e60839dbd4c058e70570f20be4889751a3963"
+          "sourceSha256": "1fa9bdcfca1d5ea712f62d482d7e60839dbd4c058e70570f20be4889751a3963",
+          "originalSrc": "assets/rwh-projects/thien-mu-hotel/original-03-1fa9bdcfca.jpg",
+          "originalWidth": 1344,
+          "originalHeight": 757,
+          "mobileSrc": "assets/rwh-projects/thien-mu-hotel/mobile-hq-03-1fa9bdcfca.webp"
         },
         {
           "name": "image46.jpg",
@@ -2354,7 +3018,11 @@
             "fileId": "1PaGctZfXRcZKM0TH-NetEHw--xtQ3xVw",
             "embeddedImage": "image46.jpg"
           },
-          "sourceSha256": "e7eae5045c9ebdeb81403a87b631668e85199014ac03ac5c79cb67e377dbee7f"
+          "sourceSha256": "e7eae5045c9ebdeb81403a87b631668e85199014ac03ac5c79cb67e377dbee7f",
+          "originalSrc": "assets/rwh-projects/thien-mu-hotel/original-04-e7eae5045c.jpg",
+          "originalWidth": 1344,
+          "originalHeight": 705,
+          "mobileSrc": "assets/rwh-projects/thien-mu-hotel/mobile-hq-04-e7eae5045c.webp"
         },
         {
           "name": "image47.jpg",
@@ -2366,7 +3034,11 @@
             "fileId": "1PaGctZfXRcZKM0TH-NetEHw--xtQ3xVw",
             "embeddedImage": "image47.jpg"
           },
-          "sourceSha256": "97fd15f39562cf091c8614fbd9b595bb507705696359a3e0972898b29ae8c236"
+          "sourceSha256": "97fd15f39562cf091c8614fbd9b595bb507705696359a3e0972898b29ae8c236",
+          "originalSrc": "assets/rwh-projects/thien-mu-hotel/original-05-97fd15f395.jpg",
+          "originalWidth": 670,
+          "originalHeight": 768,
+          "mobileSrc": "assets/rwh-projects/thien-mu-hotel/mobile-hq-05-97fd15f395.webp"
         },
         {
           "name": "image48.jpg",
@@ -2378,7 +3050,11 @@
             "fileId": "1PaGctZfXRcZKM0TH-NetEHw--xtQ3xVw",
             "embeddedImage": "image48.jpg"
           },
-          "sourceSha256": "efb8413a091861af53ee40adf796ad2a04007f8c6aa26b2f96cf53d2193b9e10"
+          "sourceSha256": "efb8413a091861af53ee40adf796ad2a04007f8c6aa26b2f96cf53d2193b9e10",
+          "originalSrc": "assets/rwh-projects/thien-mu-hotel/original-06-efb8413a09.jpg",
+          "originalWidth": 671,
+          "originalHeight": 386,
+          "mobileSrc": "assets/rwh-projects/thien-mu-hotel/mobile-hq-06-efb8413a09.webp"
         },
         {
           "name": "image49.jpg",
@@ -2390,7 +3066,11 @@
             "fileId": "1PaGctZfXRcZKM0TH-NetEHw--xtQ3xVw",
             "embeddedImage": "image49.jpg"
           },
-          "sourceSha256": "c6dfb7006808cc886f8850d897490998716a4a8e7fee2eab8695f67bce7851c0"
+          "sourceSha256": "c6dfb7006808cc886f8850d897490998716a4a8e7fee2eab8695f67bce7851c0",
+          "originalSrc": "assets/rwh-projects/thien-mu-hotel/original-07-c6dfb70068.jpg",
+          "originalWidth": 1344,
+          "originalHeight": 705,
+          "mobileSrc": "assets/rwh-projects/thien-mu-hotel/mobile-hq-07-c6dfb70068.webp"
         },
         {
           "name": "image51.jpg",
@@ -2402,7 +3082,11 @@
             "fileId": "1PaGctZfXRcZKM0TH-NetEHw--xtQ3xVw",
             "embeddedImage": "image51.jpg"
           },
-          "sourceSha256": "ffc9f274d4e4cd49bbe4a824c5b3569d22acd61b057ebbd1593ed4c2dde14f2c"
+          "sourceSha256": "ffc9f274d4e4cd49bbe4a824c5b3569d22acd61b057ebbd1593ed4c2dde14f2c",
+          "originalSrc": "assets/rwh-projects/thien-mu-hotel/original-08-ffc9f274d4.jpg",
+          "originalWidth": 1184,
+          "originalHeight": 837,
+          "mobileSrc": "assets/rwh-projects/thien-mu-hotel/mobile-hq-08-ffc9f274d4.webp"
         },
         {
           "name": "image52.jpg",
@@ -2414,7 +3098,11 @@
             "fileId": "1PaGctZfXRcZKM0TH-NetEHw--xtQ3xVw",
             "embeddedImage": "image52.jpg"
           },
-          "sourceSha256": "7c37ddb8baef9f04dab057e59c4542f749728f6878e916a4da4bd81d2fe86caf"
+          "sourceSha256": "7c37ddb8baef9f04dab057e59c4542f749728f6878e916a4da4bd81d2fe86caf",
+          "originalSrc": "assets/rwh-projects/thien-mu-hotel/original-09-7c37ddb8ba.jpg",
+          "originalWidth": 1184,
+          "originalHeight": 667,
+          "mobileSrc": "assets/rwh-projects/thien-mu-hotel/mobile-hq-09-7c37ddb8ba.webp"
         }
       ],
       "landingHero": "assets/rwh-projects/thien-mu-hotel/client-hero-ffc9f274d4e4.jpg",
@@ -2460,7 +3148,11 @@
             "fileId": "1-l-Ee_kH7befvE4sQ6bFkNcONdncCQhJ",
             "fileName": "450372932_446440204867098_283516441354431523_n.jpg"
           },
-          "sourceSha256": "20aa2a41fdc65f17e54b1d75b452d6e3609534d23d69a8306e738eae0422a2f8"
+          "sourceSha256": "20aa2a41fdc65f17e54b1d75b452d6e3609534d23d69a8306e738eae0422a2f8",
+          "originalSrc": "assets/rwh-projects/ecopark-hung-yen/original-01-20aa2a41fd.jpg",
+          "originalWidth": 2048,
+          "originalHeight": 1365,
+          "mobileSrc": "assets/rwh-projects/ecopark-hung-yen/mobile-hq-01-20aa2a41fd.webp"
         },
         {
           "name": "screenshot_1792221340.png",
@@ -2472,7 +3164,11 @@
             "fileId": "1j6dQu-_YzVyz4sakNIuCRUCPvdWMt6oh",
             "fileName": "screenshot_1792221340.png"
           },
-          "sourceSha256": "b379f17a33a619f82b30725092aa0afa51a1e7ced96608d24d76bf13c8004d89"
+          "sourceSha256": "b379f17a33a619f82b30725092aa0afa51a1e7ced96608d24d76bf13c8004d89",
+          "originalSrc": "assets/rwh-projects/ecopark-hung-yen/original-02-b379f17a33.png",
+          "originalWidth": 1589,
+          "originalHeight": 883,
+          "mobileSrc": "assets/rwh-projects/ecopark-hung-yen/mobile-hq-02-b379f17a33.webp"
         },
         {
           "name": "tiem-nang-cho-thue-swan-park-onsen-2.jpg",
@@ -2484,7 +3180,11 @@
             "fileId": "1EHE0V3tV0NQm-lAq46YNBodTF6x8lrSt",
             "fileName": "tiem-nang-cho-thue-swan-park-onsen-2.jpg"
           },
-          "sourceSha256": "0d7ad096daa76539a62aee427be0711d97e17a0f24dff98731e0eafdf4b151c2"
+          "sourceSha256": "0d7ad096daa76539a62aee427be0711d97e17a0f24dff98731e0eafdf4b151c2",
+          "originalSrc": "assets/rwh-projects/ecopark-hung-yen/original-03-0d7ad096da.jpg",
+          "originalWidth": 600,
+          "originalHeight": 399,
+          "mobileSrc": "assets/rwh-projects/ecopark-hung-yen/mobile-hq-03-0d7ad096da.webp"
         },
         {
           "name": "tong-quan-swan-lake-onsen-ecopark.jpg",
@@ -2496,7 +3196,11 @@
             "fileId": "109Nc-gx0TADz6McA3qZnFzhSFAZxpbk2",
             "fileName": "tong-quan-swan-lake-onsen-ecopark.jpg"
           },
-          "sourceSha256": "309d4487969776e60afa32c64dba1ace75a7b9f5550f1e174965cc536e2cbecd"
+          "sourceSha256": "309d4487969776e60afa32c64dba1ace75a7b9f5550f1e174965cc536e2cbecd",
+          "originalSrc": "assets/rwh-projects/ecopark-hung-yen/original-04-309d448796.jpg",
+          "originalWidth": 1600,
+          "originalHeight": 800,
+          "mobileSrc": "assets/rwh-projects/ecopark-hung-yen/mobile-hq-04-309d448796.webp"
         },
         {
           "name": "441503075_419408614236924_7378111739229479711_n.jpg",
@@ -2508,7 +3212,11 @@
             "fileId": "1OxIZJn1TYkDxSPfEqSsRtqzvbdPsInF7",
             "fileName": "441503075_419408614236924_7378111739229479711_n.jpg"
           },
-          "sourceSha256": "092900a79090ed17e4dcbd8f4f63f7ac61f626544d46d82abb8f9f259f987125"
+          "sourceSha256": "092900a79090ed17e4dcbd8f4f63f7ac61f626544d46d82abb8f9f259f987125",
+          "originalSrc": "assets/rwh-projects/ecopark-hung-yen/original-05-092900a790.jpg",
+          "originalWidth": 2048,
+          "originalHeight": 1365,
+          "mobileSrc": "assets/rwh-projects/ecopark-hung-yen/mobile-hq-05-092900a790.webp"
         },
         {
           "name": "441494403_420770770767375_969691633619902174_n.jpg",
@@ -2520,7 +3228,11 @@
             "fileId": "1hcST5bfXqPPPOsFYojqUgTV2VVX0skvQ",
             "fileName": "441494403_420770770767375_969691633619902174_n.jpg"
           },
-          "sourceSha256": "62b3f2e732825315baa3f09786839a51fc1aa22acfc66f988d0eb47758295b71"
+          "sourceSha256": "62b3f2e732825315baa3f09786839a51fc1aa22acfc66f988d0eb47758295b71",
+          "originalSrc": "assets/rwh-projects/ecopark-hung-yen/original-06-62b3f2e732.jpg",
+          "originalWidth": 1920,
+          "originalHeight": 1080,
+          "mobileSrc": "assets/rwh-projects/ecopark-hung-yen/mobile-hq-06-62b3f2e732.webp"
         },
         {
           "name": "444973313_427329493444836_3778118228303276379_n.jpg",
@@ -2532,7 +3244,11 @@
             "fileId": "1vHFWshgS6GvhKpKGGm-RqnWyyUPGvOVk",
             "fileName": "444973313_427329493444836_3778118228303276379_n.jpg"
           },
-          "sourceSha256": "71701b151e37a088f98abf1ff72d420eeded90499b60e9cf4c261d852e1fbd2e"
+          "sourceSha256": "71701b151e37a088f98abf1ff72d420eeded90499b60e9cf4c261d852e1fbd2e",
+          "originalSrc": "assets/rwh-projects/ecopark-hung-yen/original-07-71701b151e.jpg",
+          "originalWidth": 2048,
+          "originalHeight": 1366,
+          "mobileSrc": "assets/rwh-projects/ecopark-hung-yen/mobile-hq-07-71701b151e.webp"
         },
         {
           "name": "448294232_430206853157100_89248057609432514_n.jpg",
@@ -2544,7 +3260,11 @@
             "fileId": "14zKWuq5SZ6dfwJjiJUTB-B3xaPmczcn2",
             "fileName": "448294232_430206853157100_89248057609432514_n.jpg"
           },
-          "sourceSha256": "eeff2ddd1693f7c9fbf29ef2b8079d41928a506fcaee6a3081ba2355c830e6b5"
+          "sourceSha256": "eeff2ddd1693f7c9fbf29ef2b8079d41928a506fcaee6a3081ba2355c830e6b5",
+          "originalSrc": "assets/rwh-projects/ecopark-hung-yen/original-08-eeff2ddd16.jpg",
+          "originalWidth": 2048,
+          "originalHeight": 1365,
+          "mobileSrc": "assets/rwh-projects/ecopark-hung-yen/mobile-hq-08-eeff2ddd16.webp"
         },
         {
           "name": "449379516_440930385418080_2806275206007049051_n.jpg",
@@ -2556,7 +3276,11 @@
             "fileId": "1tqfHenA--FPE9bildaXQFWR7Y8ZbqwCS",
             "fileName": "449379516_440930385418080_2806275206007049051_n.jpg"
           },
-          "sourceSha256": "bf03dc0845b8a390b16830e65576cc321fba1eef58e85259967a130de996f9f1"
+          "sourceSha256": "bf03dc0845b8a390b16830e65576cc321fba1eef58e85259967a130de996f9f1",
+          "originalSrc": "assets/rwh-projects/ecopark-hung-yen/original-09-bf03dc0845.jpg",
+          "originalWidth": 1523,
+          "originalHeight": 2048,
+          "mobileSrc": "assets/rwh-projects/ecopark-hung-yen/mobile-hq-09-bf03dc0845.webp"
         },
         {
           "name": "448658641_435015182676267_9145394281807353889_n.jpg",
@@ -2568,7 +3292,11 @@
             "fileId": "1qAd7nfk6xt-lV4QuFscPuO9bE-6EYyNf",
             "fileName": "448658641_435015182676267_9145394281807353889_n.jpg"
           },
-          "sourceSha256": "360753b5ac4950ebdd89aa4ea3557093035147f1ca4fe6ae375e46e88404f0ee"
+          "sourceSha256": "360753b5ac4950ebdd89aa4ea3557093035147f1ca4fe6ae375e46e88404f0ee",
+          "originalSrc": "assets/rwh-projects/ecopark-hung-yen/original-10-360753b5ac.jpg",
+          "originalWidth": 2048,
+          "originalHeight": 1366,
+          "mobileSrc": "assets/rwh-projects/ecopark-hung-yen/mobile-hq-10-360753b5ac.webp"
         },
         {
           "name": "448919063_436308802546905_8978954838232441895_n.jpg",
@@ -2580,7 +3308,11 @@
             "fileId": "1kPlaCvGFKh-M9XoGNsQQOmnoXWpkh2Qc",
             "fileName": "448919063_436308802546905_8978954838232441895_n.jpg"
           },
-          "sourceSha256": "26a1fc0ee2b5d7c48163a305a3e90925a9ef2486810f44cfa37b35a99b43de3a"
+          "sourceSha256": "26a1fc0ee2b5d7c48163a305a3e90925a9ef2486810f44cfa37b35a99b43de3a",
+          "originalSrc": "assets/rwh-projects/ecopark-hung-yen/original-11-26a1fc0ee2.jpg",
+          "originalWidth": 2048,
+          "originalHeight": 1365,
+          "mobileSrc": "assets/rwh-projects/ecopark-hung-yen/mobile-hq-11-26a1fc0ee2.webp"
         },
         {
           "name": "449702148_444525991725186_4093926764588508332_n.jpg",
@@ -2592,7 +3324,11 @@
             "fileId": "1Qt7cr1LXfk6xRwcmG0cIOg3M27o2S37w",
             "fileName": "449702148_444525991725186_4093926764588508332_n.jpg"
           },
-          "sourceSha256": "381d35ab154442d7939e841564e3b7c887f9f09fcad99850d6f3f6cc0544159f"
+          "sourceSha256": "381d35ab154442d7939e841564e3b7c887f9f09fcad99850d6f3f6cc0544159f",
+          "originalSrc": "assets/rwh-projects/ecopark-hung-yen/original-12-381d35ab15.jpg",
+          "originalWidth": 2048,
+          "originalHeight": 1198,
+          "mobileSrc": "assets/rwh-projects/ecopark-hung-yen/mobile-hq-12-381d35ab15.webp"
         },
         {
           "name": "449845776_444525878391864_5731069985636004533_n.jpg",
@@ -2604,7 +3340,11 @@
             "fileId": "1v_56yp1zERB6HKwgZ7932HItr2O7-uWk",
             "fileName": "449845776_444525878391864_5731069985636004533_n.jpg"
           },
-          "sourceSha256": "cd7887f9d22be9417f4012fc3add06e322aa18a8d3fe3dd307f014ecd0860fae"
+          "sourceSha256": "cd7887f9d22be9417f4012fc3add06e322aa18a8d3fe3dd307f014ecd0860fae",
+          "originalSrc": "assets/rwh-projects/ecopark-hung-yen/original-13-cd7887f9d2.jpg",
+          "originalWidth": 2048,
+          "originalHeight": 1365,
+          "mobileSrc": "assets/rwh-projects/ecopark-hung-yen/mobile-hq-13-cd7887f9d2.webp"
         },
         {
           "name": "449703441_444525911725194_4163286065987531830_n.jpg",
@@ -2616,7 +3356,11 @@
             "fileId": "1T6INVvmG2dIm0s5JTYgY2GQj17VUJhBp",
             "fileName": "449703441_444525911725194_4163286065987531830_n.jpg"
           },
-          "sourceSha256": "7fc83033f0c4924365e8bc667dd9981cc208758c6f6345f0e867c1310ca95e68"
+          "sourceSha256": "7fc83033f0c4924365e8bc667dd9981cc208758c6f6345f0e867c1310ca95e68",
+          "originalSrc": "assets/rwh-projects/ecopark-hung-yen/original-14-7fc83033f0.jpg",
+          "originalWidth": 2048,
+          "originalHeight": 1365,
+          "mobileSrc": "assets/rwh-projects/ecopark-hung-yen/mobile-hq-14-7fc83033f0.webp"
         },
         {
           "name": "2.jpg",
@@ -2628,7 +3372,11 @@
             "fileId": "1AmQXYG7ZNVAVhdgnbW4OVcNeK1iQnz7A",
             "fileName": "2.jpg"
           },
-          "sourceSha256": "3eb92b6d208bdb28e6e130e692f67e166d894db0652bee719d2af395bbe25575"
+          "sourceSha256": "3eb92b6d208bdb28e6e130e692f67e166d894db0652bee719d2af395bbe25575",
+          "originalSrc": "assets/rwh-projects/ecopark-hung-yen/original-15-3eb92b6d20.jpg",
+          "originalWidth": 2048,
+          "originalHeight": 1063,
+          "mobileSrc": "assets/rwh-projects/ecopark-hung-yen/mobile-hq-15-3eb92b6d20.webp"
         },
         {
           "name": "1.jpg",
@@ -2640,7 +3388,11 @@
             "fileId": "1nlUDA945JOTJQ2kzP0IxpeylgxO9_tKE",
             "fileName": "1.jpg"
           },
-          "sourceSha256": "7e139fcc3c81d4e31066e34048b5092bca84a0dbfbe10fc8991a01e8986a5f38"
+          "sourceSha256": "7e139fcc3c81d4e31066e34048b5092bca84a0dbfbe10fc8991a01e8986a5f38",
+          "originalSrc": "assets/rwh-projects/ecopark-hung-yen/original-16-7e139fcc3c.jpg",
+          "originalWidth": 2048,
+          "originalHeight": 1181,
+          "mobileSrc": "assets/rwh-projects/ecopark-hung-yen/mobile-hq-16-7e139fcc3c.webp"
         }
       ]
     },
@@ -2692,7 +3444,11 @@
             "pageUrl": "https://www.rwh-group.com/projects/planning/binh-minh",
             "imageOrder": 10
           },
-          "sourceSha256": "b3847aec08b905ef0a8a8c7000a71a7b73fb02f1d3c1e1e6a3c051939da3a02a"
+          "sourceSha256": "b3847aec08b905ef0a8a8c7000a71a7b73fb02f1d3c1e1e6a3c051939da3a02a",
+          "originalSrc": "assets/rwh-projects/binh-minh/original-01-fad50658a2.webp",
+          "originalWidth": 1619,
+          "originalHeight": 1080,
+          "mobileSrc": "assets/rwh-projects/binh-minh/mobile-hq-01-3fded2a71e.webp"
         },
         {
           "name": "Binh Minh — source image 03",
@@ -2705,7 +3461,11 @@
             "pageUrl": "https://www.rwh-group.com/projects/planning/binh-minh",
             "imageOrder": 3
           },
-          "sourceSha256": "f0f917796003f9856e23be8be3d5859a702cf27d9f2f6f83b5be9b621a8c6fbe"
+          "sourceSha256": "f0f917796003f9856e23be8be3d5859a702cf27d9f2f6f83b5be9b621a8c6fbe",
+          "originalSrc": "assets/rwh-projects/binh-minh/original-02-b6b250c891.webp",
+          "originalWidth": 1805,
+          "originalHeight": 1080,
+          "mobileSrc": "assets/rwh-projects/binh-minh/mobile-hq-02-b6b250c891.webp"
         },
         {
           "name": "Binh Minh — source image 02",
@@ -2718,7 +3478,11 @@
             "pageUrl": "https://www.rwh-group.com/projects/planning/binh-minh",
             "imageOrder": 2
           },
-          "sourceSha256": "4f3d6bd2fb7b13d48cbd1b4e5db7c535bdbbcc5932f3173231371f1774f2af37"
+          "sourceSha256": "4f3d6bd2fb7b13d48cbd1b4e5db7c535bdbbcc5932f3173231371f1774f2af37",
+          "originalSrc": "assets/rwh-projects/binh-minh/original-03-8ffa6a80fa.webp",
+          "originalWidth": 1805,
+          "originalHeight": 1080,
+          "mobileSrc": "assets/rwh-projects/binh-minh/mobile-hq-03-8ffa6a80fa.webp"
         },
         {
           "name": "Binh Minh — source image 01",
@@ -2731,7 +3495,11 @@
             "pageUrl": "https://www.rwh-group.com/projects/planning/binh-minh",
             "imageOrder": 1
           },
-          "sourceSha256": "0f04b14f81a4a478f00639a6b57f586ca4a77c86681f9b16510538ace33e4c74"
+          "sourceSha256": "0f04b14f81a4a478f00639a6b57f586ca4a77c86681f9b16510538ace33e4c74",
+          "originalSrc": "assets/rwh-projects/binh-minh/original-04-ae10b81a30.webp",
+          "originalWidth": 1601,
+          "originalHeight": 1080,
+          "mobileSrc": "assets/rwh-projects/binh-minh/mobile-hq-04-ae10b81a30.webp"
         },
         {
           "name": "Binh Minh — source image 09",
@@ -2744,7 +3512,11 @@
             "pageUrl": "https://www.rwh-group.com/projects/planning/binh-minh",
             "imageOrder": 9
           },
-          "sourceSha256": "01295ebf8f5ee5c2a42d86d70fcdb93124ddef4f3b29de32919d381d0eef52e6"
+          "sourceSha256": "01295ebf8f5ee5c2a42d86d70fcdb93124ddef4f3b29de32919d381d0eef52e6",
+          "originalSrc": "assets/rwh-projects/binh-minh/original-05-b719973062.webp",
+          "originalWidth": 1770,
+          "originalHeight": 1080,
+          "mobileSrc": "assets/rwh-projects/binh-minh/mobile-hq-05-b719973062.webp"
         },
         {
           "name": "Binh Minh — source image 11",
@@ -2757,7 +3529,11 @@
             "pageUrl": "https://www.rwh-group.com/projects/planning/binh-minh",
             "imageOrder": 11
           },
-          "sourceSha256": "4065af68deb14e553d77798564af7f64225860492e86f2eae68a40432f19c486"
+          "sourceSha256": "4065af68deb14e553d77798564af7f64225860492e86f2eae68a40432f19c486",
+          "originalSrc": "assets/rwh-projects/binh-minh/original-06-058db1aa6b.webp",
+          "originalWidth": 1809,
+          "originalHeight": 1080,
+          "mobileSrc": "assets/rwh-projects/binh-minh/mobile-hq-06-058db1aa6b.webp"
         },
         {
           "name": "Binh Minh — source image 12",
@@ -2770,7 +3546,11 @@
             "pageUrl": "https://www.rwh-group.com/projects/planning/binh-minh",
             "imageOrder": 12
           },
-          "sourceSha256": "50308c032afe2ee1d8911bf755ffc69eb9baf1aa0c00f725576a7914ef84397d"
+          "sourceSha256": "50308c032afe2ee1d8911bf755ffc69eb9baf1aa0c00f725576a7914ef84397d",
+          "originalSrc": "assets/rwh-projects/binh-minh/original-07-4af21d6016.webp",
+          "originalWidth": 1080,
+          "originalHeight": 1080,
+          "mobileSrc": "assets/rwh-projects/binh-minh/mobile-hq-07-4af21d6016.webp"
         },
         {
           "name": "Binh Minh — source image 13",
@@ -2783,7 +3563,11 @@
             "pageUrl": "https://www.rwh-group.com/projects/planning/binh-minh",
             "imageOrder": 13
           },
-          "sourceSha256": "d6e21cd245b84399d03d5bcd89566be923431a0ac3c9ee1eb646449c58fd59b4"
+          "sourceSha256": "d6e21cd245b84399d03d5bcd89566be923431a0ac3c9ee1eb646449c58fd59b4",
+          "originalSrc": "assets/rwh-projects/binh-minh/original-08-4901a1f298.webp",
+          "originalWidth": 1080,
+          "originalHeight": 1080,
+          "mobileSrc": "assets/rwh-projects/binh-minh/mobile-hq-08-4901a1f298.webp"
         },
         {
           "name": "Binh Minh — source image 14",
@@ -2796,7 +3580,11 @@
             "pageUrl": "https://www.rwh-group.com/projects/planning/binh-minh",
             "imageOrder": 14
           },
-          "sourceSha256": "bdbe853bcbf06727e01e516a1ca4f2725f488630969305809bdd2919e02d5243"
+          "sourceSha256": "bdbe853bcbf06727e01e516a1ca4f2725f488630969305809bdd2919e02d5243",
+          "originalSrc": "assets/rwh-projects/binh-minh/original-09-80e3a4bec6.webp",
+          "originalWidth": 1080,
+          "originalHeight": 1080,
+          "mobileSrc": "assets/rwh-projects/binh-minh/mobile-hq-09-80e3a4bec6.webp"
         },
         {
           "name": "Binh Minh — source image 15",
@@ -2809,7 +3597,11 @@
             "pageUrl": "https://www.rwh-group.com/projects/planning/binh-minh",
             "imageOrder": 15
           },
-          "sourceSha256": "be83c0666216780403c1ac18c16fa3b0276106e02a09b2d3265be10cae0dc34b"
+          "sourceSha256": "be83c0666216780403c1ac18c16fa3b0276106e02a09b2d3265be10cae0dc34b",
+          "originalSrc": "assets/rwh-projects/binh-minh/original-10-7ea7303b2f.webp",
+          "originalWidth": 1080,
+          "originalHeight": 1080,
+          "mobileSrc": "assets/rwh-projects/binh-minh/mobile-hq-10-7ea7303b2f.webp"
         },
         {
           "name": "Binh Minh — source image 04",
@@ -2822,7 +3614,11 @@
             "pageUrl": "https://www.rwh-group.com/projects/planning/binh-minh",
             "imageOrder": 4
           },
-          "sourceSha256": "868eceac0f85d7fcdc390d153e7e9e168cb88581a59bbf2625d1e27b5fb3dc27"
+          "sourceSha256": "868eceac0f85d7fcdc390d153e7e9e168cb88581a59bbf2625d1e27b5fb3dc27",
+          "originalSrc": "assets/rwh-projects/binh-minh/original-11-30670f63f1.webp",
+          "originalWidth": 2028,
+          "originalHeight": 774,
+          "mobileSrc": "assets/rwh-projects/binh-minh/mobile-hq-11-30670f63f1.webp"
         },
         {
           "name": "Binh Minh — source image 05",
@@ -2835,7 +3631,11 @@
             "pageUrl": "https://www.rwh-group.com/projects/planning/binh-minh",
             "imageOrder": 5
           },
-          "sourceSha256": "ec97c5a4494f9c78d00a936f937d2345aab01881ac5ddf66f2a5559cd6c0a99b"
+          "sourceSha256": "ec97c5a4494f9c78d00a936f937d2345aab01881ac5ddf66f2a5559cd6c0a99b",
+          "originalSrc": "assets/rwh-projects/binh-minh/original-12-45147f520b.webp",
+          "originalWidth": 2048,
+          "originalHeight": 846,
+          "mobileSrc": "assets/rwh-projects/binh-minh/mobile-hq-12-45147f520b.webp"
         },
         {
           "name": "Binh Minh — source image 06",
@@ -2848,7 +3648,11 @@
             "pageUrl": "https://www.rwh-group.com/projects/planning/binh-minh",
             "imageOrder": 6
           },
-          "sourceSha256": "3d301e6fa1505fc6d8e08ae19e9ceb00ef6d9d858c93e29594697b7c71443df2"
+          "sourceSha256": "3d301e6fa1505fc6d8e08ae19e9ceb00ef6d9d858c93e29594697b7c71443df2",
+          "originalSrc": "assets/rwh-projects/binh-minh/original-13-c6050dc9f1.webp",
+          "originalWidth": 2048,
+          "originalHeight": 846,
+          "mobileSrc": "assets/rwh-projects/binh-minh/mobile-hq-13-c6050dc9f1.webp"
         },
         {
           "name": "Binh Minh — source image 07",
@@ -2861,7 +3665,11 @@
             "pageUrl": "https://www.rwh-group.com/projects/planning/binh-minh",
             "imageOrder": 7
           },
-          "sourceSha256": "8f101761f10bb8fe505519d043f743b9dd00e1a4e56d5fff7e356c77a368ed99"
+          "sourceSha256": "8f101761f10bb8fe505519d043f743b9dd00e1a4e56d5fff7e356c77a368ed99",
+          "originalSrc": "assets/rwh-projects/binh-minh/original-14-b34204ed64.webp",
+          "originalWidth": 1370,
+          "originalHeight": 965,
+          "mobileSrc": "assets/rwh-projects/binh-minh/mobile-hq-14-b34204ed64.webp"
         },
         {
           "name": "Binh Minh — source image 08",
@@ -2874,7 +3682,11 @@
             "pageUrl": "https://www.rwh-group.com/projects/planning/binh-minh",
             "imageOrder": 8
           },
-          "sourceSha256": "5f747f5e8dd75b45882adc783b37224eda726c0e6f5609291ff41ec3b66df9d0"
+          "sourceSha256": "5f747f5e8dd75b45882adc783b37224eda726c0e6f5609291ff41ec3b66df9d0",
+          "originalSrc": "assets/rwh-projects/binh-minh/original-15-b58a7ee93a.webp",
+          "originalWidth": 1370,
+          "originalHeight": 965,
+          "mobileSrc": "assets/rwh-projects/binh-minh/mobile-hq-15-b58a7ee93a.webp"
         }
       ]
     }
