@@ -40,7 +40,7 @@ def video_card(video, prefix='./'):
 
 
 def video_library(prefix='./'):
-    return f'''<dialog class="video-library" id="video-library" aria-labelledby="video-library-title"><div class="video-library-head"><h2 id="video-library-title" data-i18n="videos">VIDEO</h2><button class="video-library-close" type="button" data-videos-close aria-label="Đóng video" data-i18n-aria-label="closeVideos" autofocus><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div><div class="video-library-body"><p class="video-library-intro" data-i18n="videosIntro">Những thước phim về kiến trúc, Onsen và không gian chăm sóc sức khỏe.</p><div class="video-library-grid">{''.join(video_card(video, prefix) for video in videos.values())}</div></div></dialog>'''
+    return f'''<dialog class="video-library" id="video-library" aria-labelledby="video-library-title"><div class="video-library-head"><h2 id="video-library-title" data-i18n="videos">VIDEO</h2><button class="video-library-close" type="button" data-videos-close aria-label="Đóng video" data-i18n-aria-label="closeVideos" autofocus><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div><div class="video-library-body"><p class="video-library-intro" data-i18n="videosIntro">Những thước phim về kiến trúc, Onsen và không gian chăm sóc sức khỏe.</p><div class="video-library-grid">{''.join(video_card(video, prefix).replace(' poster=', ' data-poster=') for video in videos.values())}</div></div></dialog>'''
 
 
 copy = {'vi': {}, 'en': {}}
@@ -104,9 +104,9 @@ def localize_ui(markup):
 
 # Detail pages use the reference's shared, works and detail styles together.
 fonts = '''@charset "utf-8";
-@font-face{font-family:Roboto;font-weight:300;font-display:swap;src:url('./assets/roboto-light.ttf') format('truetype')}
-@font-face{font-family:Roboto;font-weight:400;font-display:swap;src:url('./assets/roboto-regular.ttf') format('truetype')}
-@font-face{font-family:Roboto;font-weight:500;font-display:swap;src:url('./assets/roboto-medium.ttf') format('truetype')}
+@font-face{font-family:Roboto;font-weight:300;font-display:swap;src:url('./assets/roboto-light.woff2') format('woff2')}
+@font-face{font-family:Roboto;font-weight:400;font-display:swap;src:url('./assets/roboto-regular.woff2') format('woff2')}
+@font-face{font-family:Roboto;font-weight:500;font-display:swap;src:url('./assets/roboto-medium.woff2') format('woff2')}
 '''
 reference_styles = []
 for name in ['common.css', 'works.css', 'works_detail.css']:
@@ -120,14 +120,15 @@ contact_css = '.contact-modal {' + contact_css
 (DIST / 'project-gallery.css').write_text(fonts + '\n'.join(reference_styles) + '\n' + contact_css + '\n' + (DIST / 'project-detail-overrides.css').read_text())
 
 
+landing_images = json.loads((ROOT / 'LANDING_IMAGES.json').read_text())
 sections = []
 for project in projects:
     number = project['number']
     key = f'project.{project["slug"]}'
     sections.append(f'''    <section class="section sec{number:02d} mainImg" id="project-{number}">
         <div class="full"></div>
-        <div class="bg pc" style="background-image: url(./{e(project.get('landingHero', project['hero']))})"></div>
-        <div class="bg sp" style="background-image: url(./{e(project.get('landingHero', project['mobile']))})"></div>
+        <div class="bg pc" data-bg="./{e(landing_images[project['slug']]['pc'])}"></div>
+        <div class="bg sp" data-bg="./{e(landing_images[project['slug']]['sp'])}"></div>
         <div class="txtBox"><a href="./projects/{e(project['slug'])}/index.html" data-project-open aria-haspopup="dialog" aria-controls="project-panel" data-project-title="{e(project['title'])}" aria-label="Xem chi tiết {e(project['title'])}">
             <h2><span>{e(project['title'])}</span></h2>
             <p class="txt"><span class="shuffle" data-i18n="{key}.metadata">{e(copy['vi'][key + '.metadata'])}</span><br><span class="shuffle" data-i18n="{key}.subtitle">{e(project['subtitle'])}</span></p>
@@ -137,6 +138,7 @@ for project in projects:
 
 index = DIST / 'index.html'
 html = index.read_text()
+html = re.sub(r'href="\./styles\.css(?:\?v=[^"]*)?"', f'href="./{asset("styles.css")}"', html)
 html, count = re.subn(r'    <section class="section sec01 mainImg".*?(?=    <section class="section [^"]*fp-auto-height)', '\n'.join(sections) + '\n', html, flags=re.S)
 assert count == 1, 'Could not locate the landing-page project sections'
 html, count = re.subn(r'<section class="section sec\d+ fp-auto-height"',
@@ -238,8 +240,6 @@ for i, project in enumerate(projects):
 <meta data-i18n-content="{key}.description" name="description" content="{e(project['description'])}">
 <meta name="theme-color" content="#292929">
 <link rel="icon" href="../../{asset('assets/rwh-reference-wordmark.svg')}" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&amp;family=Roboto:wght@300;400;500&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../{asset('project-gallery.css')}">
 <link rel="stylesheet" href="../../{asset('rwh-footer.css')}">
 <link rel="stylesheet" href="../../{asset('rwh-menu.css')}">
