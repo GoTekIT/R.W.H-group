@@ -113,7 +113,9 @@
           "size": "356433102"
         }
       },
-      "deliveryUrl": "https://media.nguyenxuanphu.net/rwh/a9eff79bf5b9/hera-resort-4k.mp4"
+      "deliveryUrl": "https://media.nguyenxuanphu.net/rwh/a9eff79bf5b9/hera-resort-4k.mp4",
+      "mobileDeliveryUrl": "https://media.nguyenxuanphu.net/rwh/bd95cac2908d/hera-resort-mobile-1080p.mp4",
+      "mobileBytes": 70502734
     },
     {
       "id": "ecopark-hung-yen",
@@ -185,7 +187,9 @@
           "size": "259113479"
         }
       },
-      "deliveryUrl": "https://media.nguyenxuanphu.net/rwh/a7a9be04e187/kawara-my-an-4k.mp4"
+      "deliveryUrl": "https://media.nguyenxuanphu.net/rwh/a7a9be04e187/kawara-my-an-4k.mp4",
+      "mobileDeliveryUrl": "https://media.nguyenxuanphu.net/rwh/008aa3627f35/kawara-my-an-mobile-1080p.mp4",
+      "mobileBytes": 70824566
     },
     {
       "id": "binh-minh",
@@ -198,7 +202,9 @@
       "original": "https://drive.google.com/file/d/1LWbzeH4XNkZzUA7I6W5xUiAsRHgTvK8T/view",
       "bytes": 697112205,
       "sha256": "12a2cf78a0a186b222af0fc8930fe68f493d4c78afade3440cd5d4c70bed865d",
-      "deliveryUrl": "https://media.nguyenxuanphu.net/rwh/12a2cf78a0a1/binh-minh-faststart.mp4"
+      "deliveryUrl": "https://media.nguyenxuanphu.net/rwh/12a2cf78a0a1/binh-minh-faststart.mp4",
+      "mobileDeliveryUrl": "https://media.nguyenxuanphu.net/rwh/6cf7b07031f6/binh-minh-mobile-1080p.mp4",
+      "mobileBytes": 106522365
     },
     {
       "id": "hakuba-nagano-4k",
@@ -355,7 +361,9 @@
       "downloadedOn": "2026-10-24",
       "downloadedVia": "yt-dlp",
       "previousDeliveryUrl": "https://media.nguyenxuanphu.net/rwh/b2143c7eabbc/hakuba-nagano-4k.mp4",
-      "updatedOn": "2026-10-26"
+      "updatedOn": "2026-10-26",
+      "mobileDeliveryUrl": "https://media.nguyenxuanphu.net/rwh/418cadcc9552/hakuba-nagano-4k-mobile-1080p.mp4",
+      "mobileBytes": 203940632
     },
     {
       "id": "thien-mu-4k",
@@ -512,7 +520,9 @@
       "downloadedOn": "2026-10-24",
       "downloadedVia": "yt-dlp",
       "previousDeliveryUrl": "https://media.nguyenxuanphu.net/rwh/e7c0e508485e/thien-mu-4k.mp4",
-      "updatedOn": "2026-10-26"
+      "updatedOn": "2026-10-26",
+      "mobileDeliveryUrl": "https://media.nguyenxuanphu.net/rwh/0c2d6d9b6fa0/thien-mu-4k-mobile-1080p.mp4",
+      "mobileBytes": 62001948
     },
     {
       "id": "ecopark-thanh-hoa-1080p",
@@ -701,7 +711,9 @@
       },
       "source": "assets/rwh-videos/capital-one-1440p.mp4",
       "scope": "Client-selected film. H.264 compatibility encode at original resolution; AAC audio copied unchanged; faststart. Original source retained separately.",
-      "updatedOn": "2026-10-26"
+      "updatedOn": "2026-10-26",
+      "mobileDeliveryUrl": "https://media.nguyenxuanphu.net/rwh/b05be64381c2/capital-one-mobile-1080p.mp4",
+      "mobileBytes": 140076931
     }
   ],
   "projectAssignments": {

@@ -32,7 +32,8 @@ def video_card(video, prefix='./'):
     poster = prefix + video['poster']
     notes = {'clientFilm': 'Video do khách hàng lựa chọn.', 'brandFilm': 'Phim giới thiệu chung của R.W.H Group.', 'projectFilm': 'Phim giới thiệu dự án.', 'referenceFilm': 'Video tham khảo · withBanyan. Không thuộc danh mục dự án R.W.H Group.'}
     if video['kind'] == 'mp4':
-        media = f'<video data-inline-video controls playsinline preload="none" poster="{e(poster)}" src="{e(source)}" aria-label="{e(video["title"])}"></video>'
+        mobile = f' data-mobile-src="{e(video["mobileDeliveryUrl"])}"' if video.get('mobileDeliveryUrl') else ''
+        media = f'<video data-inline-video controls playsinline preload="none" poster="{e(poster)}" src="{e(source)}"{mobile} aria-label="{e(video["title"])}"></video>'
     else:
         media = f'<iframe data-video-embed="{e(source)}" title="{e(video["title"])}" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>'
     return f'''<article class="video-card"><div class="video-stage" data-video-stage data-video-kind="{e(video['kind'])}">{media}</div><h3>{e(video['title'])}</h3><p data-i18n="{video['noteKey']}">{notes[video['noteKey']]}</p></article>'''
