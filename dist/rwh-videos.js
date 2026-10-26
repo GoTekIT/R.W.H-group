@@ -5,7 +5,11 @@
     const fullscreenVideos = new Set();
     function start(video) { return video.play().catch(() => {}); }
     const videos = [...doc.querySelectorAll('[data-inline-video]')];
-    // Preserve the full-quality CDN source on every device.
+    // Desktop retains the original CDN bytes. Only small screens use the mobile rendition.
+    const mobile = doc.defaultView?.matchMedia?.('(max-width: 767px)')?.matches;
+    if (mobile) videos.forEach(video => {
+      if (video.dataset.mobileSrc) video.src = video.dataset.mobileSrc;
+    });
     // Start with sound. If autoplay is blocked, keep native Play available;
     // never silently retry muted or reset the viewer's later volume choice.
     videos.forEach(video => { video.defaultMuted = false; video.muted = false; video.volume = 1; });

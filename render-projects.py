@@ -239,9 +239,12 @@ for i, project in enumerate(projects):
     figures = []
     for j, photo in enumerate(project['images']):
         caption = f'{project["title"]} — {j + 1:02d}'
-        source = project['hero'] if j == 0 else photo['src']
-        loading = 'loading="eager" fetchpriority="high"' if j == 0 else 'loading="lazy"'
-        figures.append(f'''<div class="photo"><a class="gallery-image" href="../../{e(source)}" data-caption="{e(caption)}" data-project-title="{e(project['title'])}" data-photo-number="{j + 1}" aria-label="Phóng to ảnh {j + 1} của {e(project['title'])}"><img src="../../{e(source)}" width="{photo['width']}" height="{photo['height']}" alt="{e(caption)}" {loading} decoding="async"></a></div>''')
+        source = photo.get('originalSrc', project['hero'] if j == 0 else photo['src'])
+        mobile_source = photo.get('mobileSrc', source)
+        image_width = photo.get('originalWidth', photo['width'])
+        image_height = photo.get('originalHeight', photo['height'])
+        loading = 'loading="lazy"'
+        figures.append(f'''<div class="photo"><a class="gallery-image" href="../../{e(source)}" data-caption="{e(caption)}" data-project-title="{e(project['title'])}" data-photo-number="{j + 1}" aria-label="Phóng to ảnh {j + 1} của {e(project['title'])}"><picture><source media="(max-width: 767px)" srcset="../../{e(mobile_source)}"><img src="../../{e(source)}" width="{image_width}" height="{image_height}" alt="{e(caption)}" {loading} decoding="async"></picture></a></div>''')
     related = []
     for offset in range(1, 4):
         item = projects[(i + offset) % len(projects)]
