@@ -106,3 +106,15 @@ test('local videos start unmuted and preserve subsequent viewer volume choices',
   p.visible(video,0);
   assert.equal(video.paused,true);
 });
+
+test('blocked audible autoplay preserves sound and a subsequent user play remains available',async()=>{
+  const p=page(), video=p.videos[0];
+  video.play=()=>{video.plays++;return Promise.reject(Object.assign(new Error('blocked'),{name:'NotAllowedError'}));};
+  p.visible(video,.8);
+  await new Promise(resolve=>setImmediate(resolve));
+  assert.equal(video.muted,false);
+  assert.equal(video.plays,1);
+  video.play=()=>{video.paused=false;return Promise.resolve();};
+  await video.play();
+  assert.equal(video.paused,false);
+});

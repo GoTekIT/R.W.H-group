@@ -3,6 +3,15 @@
   function bindVideos(doc, observe = callback => new IntersectionObserver(callback, {threshold:[0,.35,.6,1]})) {
     const library = doc.querySelector('#video-library');
     const fullscreenVideos = new Set();
+    const playbackStatus = new Map();
+    const report = (video, text) => { const el = playbackStatus.get(video); if (el) { el.textContent = text; el.hidden = !text; } };
+    function start(video) {
+      report(video, 'Đang tải video… / Loading video…');
+      return video.play().catch(error => {
+        if (error.name === 'AbortError') return;
+        report(video, error.name === 'NotAllowedError' ? '' : 'Không thể phát. Chạm để thử lại / Tap to retry');
+      });
+    }
     const videos = [...doc.querySelectorAll('[data-inline-video]')];
     // Start with sound. If autoplay is blocked, keep native Play available;
     // never silently retry muted or reset the viewer's later volume choice.
@@ -12,18 +21,14 @@
       video.addEventListener('webkitendfullscreen', () => fullscreenVideos.delete(video));
       const stage = video.closest?.('.video-stage');
       if (!stage || !doc.createElement) return;
-      const button = doc.createElement('button');
-      button.type = 'button'; button.className = 'video-fullscreen';
-      button.textContent = '⛶'; button.setAttribute('aria-label', 'Toàn màn hình / Full screen');
-      button.addEventListener('click', async () => {
-        video.play().catch(() => {});
-        try {
-          if (video.webkitEnterFullscreen) video.webkitEnterFullscreen();
-          else if (video.requestFullscreen) await video.requestFullscreen();
-          else return;
-        } catch { /* Native controls remain available if fullscreen is denied. */ }
-      });
-      stage.append(button);
+      const status = doc.createElement('button');
+      status.type = 'button'; status.className = 'video-playback-status'; status.hidden = true;
+      status.setAttribute('aria-live', 'polite');
+      status.addEventListener('click', () => { if (video.error) video.load(); start(video); });
+      stage.append(status); playbackStatus.set(video, status);
+      video.addEventListener('waiting', () => report(video, 'Đang tải video… / Loading video…'));
+      video.addEventListener('playing', () => report(video, ''));
+      video.addEventListener('error', () => report(video, 'Không tải được video. Chạm để thử lại / Tap to retry'));
     });
     const embeds = [...doc.querySelectorAll('[data-video-embed]')];
     const media = [...videos, ...embeds];
@@ -41,7 +46,7 @@
       if (best === active) return;
       videos.forEach(video => { if (video !== best) video.pause(); });
       active = best;
-      if (best) best.play().catch(() => { /* Native Play remains available if the browser blocks autoplay. */ });
+      if (best) start(best);
     }
     function updateEmbed(frame) {
       const ratio = ratios.get(frame) || 0;

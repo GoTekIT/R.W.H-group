@@ -65,3 +65,15 @@
   .menuBox.rwh-menu .rwh-menu-contact a,
   .menuBox.rwh-menu .rwh-menu-bottom a{min-height:44px;box-sizing:border-box;display:inline-flex;align-items:center}
 }
+
+/* Keep the original two-column mobile menu with aligned, wrapping labels. */
+@media(max-width:767px){
+  .rwh-menu-layout{grid-template-columns:minmax(0,1fr) clamp(88px,28vw,112px);gap:16px;align-items:start}
+  .rwh-menu-links{min-width:0}
+  .menuBox.rwh-menu .rwh-menu-list>li>a,
+  .menuBox.rwh-menu .rwh-menu-projects>summary{max-width:100%;white-space:normal;overflow-wrap:break-word;line-height:1.45;font-size:clamp(17px,5vw,21px);letter-spacing:.025em}
+  .rwh-menu-profile{width:100%;padding-top:7px}
+  .rwh-menu-profile p{overflow-wrap:break-word}
+  .rwh-menu-bottom{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 16px;align-items:start}
+  .rwh-menu-bottom a:last-child{grid-column:1/-1}
+}
