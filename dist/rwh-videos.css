@@ -39,7 +39,15 @@ html:has(.video-library[open]){overflow:hidden;scrollbar-gutter:auto}
 .project-film>h2{top:28px}
 @media(max-width:767px){.project-film>h2{top:22px}.video-library-head h2{top:24px}.video-library-close{right:12px}}
 
-.video-fullscreen{position:absolute;right:16px;top:16px;z-index:2;width:44px;height:44px;border:1px solid #fff6;border-radius:50%;background:#0008;color:#fff;font-size:28px;cursor:pointer}
 .video-stage video:fullscreen{width:100%;height:100%;object-fit:contain;background:#000}
 .video-stage video:-webkit-full-screen{width:100%;height:100%;object-fit:contain;background:#000}
 @media(orientation:landscape) and (max-height:600px){.project-film .video-stage{height:100dvh}.video-library .video-stage{height:100dvh}}
+.video-playback-status{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:3;max-width:calc(100% - 40px);padding:14px 20px;border:1px solid #ffffff70;border-radius:4px;background:#000c;color:#fff;font:inherit;font-size:14px;line-height:1.5;cursor:pointer}
+.video-playback-status[hidden]{display:none}
+
+/* Inline mobile films use a landscape frame; native fullscreen stays independent. */
+@media(max-width:767px),(pointer:coarse) and (max-width:1024px){
+  .project-film .video-stage,.video-library .video-stage{height:auto;aspect-ratio:16/9}
+  .video-stage video{object-fit:contain}
+  .project-film>h2{top:16px;left:16px}
+}
