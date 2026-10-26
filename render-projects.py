@@ -200,6 +200,11 @@ html = html.replace('<p class="rwh-footer-services"', '<a class="rwh-footer-vide
 html = '\n'.join(line.rstrip() for line in html.splitlines() if line.strip()) + '\n'
 for filename in ['contact-page.css', 'contact-form.js', 'site-language.js', 'app.js', 'rwh-footer.css']:
     html = re.sub(re.escape(filename) + r'(?:\?v=[a-z0-9]+)?', asset(filename), html)
+# Keep the first hero discoverable before deferred JavaScript runs.
+html = re.sub(r'<link data-hero-preload[^>]*>\n?', '', html)
+first_images = landing_images[projects[0]['slug']]
+preloads = '\n'.join(f'<link data-hero-preload rel="preload" as="image" fetchpriority="high" href="./{first_images[mode]}" media="{media}">' for mode, media in [('sp', '(max-width: 767px)'), ('pc', '(min-width: 768px)')])
+html = html.replace('</head>', preloads + '\n</head>')
 index.write_text(html)
 
 # Reuse the approved homepage menu, footer and owner contact form.
