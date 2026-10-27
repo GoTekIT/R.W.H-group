@@ -1,0 +1,102 @@
+[
+  {
+    "editorialLeft": 20,
+    "editorialWidth": 306,
+    "language": "vi",
+    "overflow": false,
+    "proseSize": "16px",
+    "strongCount": 10,
+    "title": "Triết lý thiết kế",
+    "width": 390
+  },
+  {
+    "editorialLeft": 20,
+    "editorialWidth": 306,
+    "language": "en",
+    "overflow": false,
+    "proseSize": "16px",
+    "strongCount": 10,
+    "title": "Design Philosophy",
+    "width": 390
+  },
+  {
+    "editorialLeft": 209,
+    "editorialWidth": 513,
+    "language": "vi",
+    "overflow": false,
+    "proseSize": "14px",
+    "strongCount": 10,
+    "title": "Triết lý thiết kế",
+    "width": 1000
+  },
+  {
+    "editorialLeft": 209,
+    "editorialWidth": 513,
+    "language": "en",
+    "overflow": false,
+    "proseSize": "14px",
+    "strongCount": 10,
+    "title": "Design Philosophy",
+    "width": 1000
+  },
+  {
+    "editorialLeft": 87,
+    "editorialWidth": 1036,
+    "language": "vi",
+    "overflow": false,
+    "proseSize": "14px",
+    "strongCount": 10,
+    "title": "Triết lý thiết kế",
+    "width": 1280
+  },
+  {
+    "editorialLeft": 87,
+    "editorialWidth": 1036,
+    "language": "en",
+    "overflow": false,
+    "proseSize": "14px",
+    "strongCount": 10,
+    "title": "Design Philosophy",
+    "width": 1280
+  },
+  {
+    "editorialLeft": 99,
+    "editorialWidth": 1173,
+    "language": "vi",
+    "overflow": false,
+    "proseSize": "14px",
+    "strongCount": 10,
+    "title": "Triết lý thiết kế",
+    "width": 1440
+  },
+  {
+    "editorialLeft": 99,
+    "editorialWidth": 1173,
+    "language": "en",
+    "overflow": false,
+    "proseSize": "14px",
+    "strongCount": 10,
+    "title": "Design Philosophy",
+    "width": 1440
+  },
+  {
+    "editorialLeft": 133,
+    "editorialWidth": 1584,
+    "language": "vi",
+    "overflow": false,
+    "proseSize": "14px",
+    "strongCount": 10,
+    "title": "Triết lý thiết kế",
+    "width": 1920
+  },
+  {
+    "editorialLeft": 133,
+    "editorialWidth": 1584,
+    "language": "en",
+    "overflow": false,
+    "proseSize": "14px",
+    "strongCount": 10,
+    "title": "Design Philosophy",
+    "width": 1920
+  }
+]

@@ -28,3 +28,6 @@ Keep the incumbent R.W.H UI, fonts and neutral text colors. Office now follows t
 
 ## Office mobile presentation
 - At phone widths, prioritize a compact header and leadership/portrait composition, two-column team links,16px prose, left-aligned services and proportionate moving partner strips. Preserve complete VI/EN content and all shared functionality.
+
+## Office desktop text width
+- At desktop widths≥1001px, biography and philosophy span the full Office content grid instead of a narrow76ch column, following the user-supplied screenshot. Preserve complete Vietnamese/English language states, font/colors, content, emphasis and the existing mobile layout.
