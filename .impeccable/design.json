@@ -22,7 +22,7 @@
       {
         "name": "office-partner-loop",
         "value": "WAAPI translate3d; 64px/s; linear; infinite",
-        "purpose": "Each complete panorama and its duplicate move left by one measured group width, including 64px desktop or 32px mobile trailing space. Pause offscreen, on a hidden page, during mouse hover, keyboard focus or touch, or through the shared translated control. Reduced motion and unavailable animation API keep complete static horizontal rows with duplicates and control hidden."
+        "purpose": "Each complete panorama and its duplicate move left by one measured group width, including 64px desktop or 32px mobile trailing space. Pause offscreen, on hidden pages, during mouse hover, keyboard focus or touch. Reduced motion and unavailable animation API retain complete static horizontal rows. No visible pause/resume control is rendered, as explicitly requested."
       }
     ],
     "breakpoints": [
@@ -242,15 +242,15 @@
       },
       "office-section": {
         "displayName": "Office Section Heading",
-        "purpose": "Regular 400-weight biography, philosophy, Customer Dream and partner headings with balanced wrapping; 23px on mobile."
+        "purpose": "Bold 700-weight section headings in the existing Roboto family, with balanced wrapping; 23px on mobile."
       },
       "office-subsection": {
         "displayName": "Office Subsection",
-        "purpose": "Medium 500-weight leadership roles, biography labels and service-location headings. The separate team link retains 300 weight at the same size."
+        "purpose": "Bold 700-weight biography labels, leadership roles and Japan/Vietnam titles."
       },
       "office-body": {
         "displayName": "Office Body",
-        "purpose": "Selected-language biography, chronology, philosophy and semantic service lists; 14px/1.95 desktop and 16px/1.75 mobile, with selective 500-weight strong phrases and meaningful paragraph breaks."
+        "purpose": "Selected-language prose uses16px/1.65 desktop and16px/1.75 mobile; tablet retains14px. Intro and mission share one paragraph; qualification/date remain separately translatable inline spans."
       },
       "office-caption": {
         "displayName": "Office Caption",
@@ -276,9 +276,9 @@
       "detectorAdvisories": "Distinct gray counts represent context-specific neutral roles. Font-size counts represent documented Office, shell and responsive roles; the shared family remains Roboto.",
       "media": "OFFICE_MEDIA.json retains five original media assets and both source GIFs. Displayed lossless panoramas reconstruct all distinct logo content from overlapping timeline frames with ffmpeg crop+hstack: partners-01-complete.png (3057×112), sampled at 5, 10, 15, 20, 26 seconds; partners-02-complete.png (2453×135), sampled at 5, 10, 15, 20 seconds. Sampling/crop provenance and source/display hashes are recorded in the metadata. Initial single frames omit later brands.",
       "language": "VI/EN switches whole-page prose, strong phrases, service list items, the pause/resume label and accessible image text; embedded source artwork stays unchanged.",
-      "partnerScrolling": "Both complete panorama sequences have identical duplicate groups for seamless leftward Web Animations API loops at 64px/s. Measured group width includes trailing space: 64px desktop, 32px mobile. Images are width:auto/max-width:none, with heights 112px/135px desktop and 72px/86px mobile. Animated rows clip overflow with 18px edge fades and no bottom padding; row gaps are 28px desktop and 16px mobile. Pause offscreen, on hidden pages, during hover/focus/touch, or manually with a translated 44px-minimum-height button. Reduced motion or no animation API retains complete focusable overflow-x:auto rows with native scrollbars and 12px bottom padding; duplicates and control stay hidden.",
-      "typographyLayout": "Incumbent Roboto body is14px/1.95 desktop and16px/1.75 mobile; h2 uses 400 weight, h3 and strong use 500. Editorial width is100% with no maximum on desktop (≥1001px), using the full Office content grid as requested in the supplied reference. Tablet stays90% capped at76ch; mobile stays100% within its existing insets. Career columns are 100px plus the remaining width with a 24px gap, stacking with a 4px gap on mobile. Service articles have auto/1fr/auto rows, with one service per li; the column gap is 48px desktop/tablet and the stacked article gap is 28px mobile.",
-      "browserEvidence": "evidence/office-type-motion-20261027/*.png and BROWSER.md record actual 1280px desktop and 390px mobile DOM-width inspection, VI/EN service/emphasis states, observed partner movement, manual pause/resume and emulated reduced-motion fallback. REVIEW.md records ship with no material fixes; unchanged first viewport and footer were not recaptured in this narrow pass.",
+      "partnerScrolling": "Both complete panorama sequences have identical duplicate groups for seamless leftward Web Animations API loops at 64px/s. Measured group width includes trailing space: 64px desktop, 32px mobile. Images are width:auto/max-width:none, with heights 112px/135px desktop and 72px/86px mobile. Animated rows clip overflow with 18px edge fades and no bottom padding; row gaps are 28px desktop and 16px mobile. Pause offscreen, on hidden pages, during hover/focus/touch, with no visible pause/resume control (explicit user request). Reduced motion or no animation API retains complete focusable overflow-x:auto rows with native scrollbars and 12px bottom padding; duplicates stay hidden.",
+      "typographyLayout": "Desktop≥1001px uses a centered900px editorial block with16px/1.65 prose, bold700 h2/h3,56px section gaps and8px chronology row spacing. The supplied later reference supersedes the previous full-grid stretch. Tablet retains90%/76ch, mobile retains its current layout and16px/1.75 prose. Strong phrases remain500. Existing Roboto300/400/500 plus self-hosted700 Latin/Vietnamese subsets preserve the family and neutral palette.",
+      "browserEvidence": "evidence/office-reference-20261027/ records the latest supplied-reference refinement: centered desktop column, bold headings in VI/EN, no visible pause control and responsive measurements. Earlier evidence folders describe historical versions.",
       "mobileOffice": "Office-only mobile refinement at≤767px:44px rail,20px insets,compact24px-top header; portrait beside leadership, two-column team links, full map;16px/1.75 prose; left-aligned ruled service groups;72px/86px partner rows. Below360px portrait stays next to founder and board spans a new row. See evidence/office-mobile-20261027/ for VI/EN browser captures and responsive checks."
     }
   },
@@ -323,9 +323,9 @@
     {
       "name": "Office editorial content",
       "kind": "custom",
-      "description": "Unboxed selected-language biography spanning the full desktop content grid, with selective medium emphasis and a responsive dated chronology.",
+      "description": "Centered900px desktop biography with700-weight headings,16px prose and a compact dated chronology; responsive mobile layout retained.",
       "html": "<section class=\"ds-editorial\"><h2>Honda Tadakatsu</h2><h3>Tiểu sử</h3><p>Chuyên môn: <strong>Kiến trúc sư hạng nhất</strong> (số <strong>186806</strong>).</p><p class=\"ds-qualification-date\">Được cấp chứng chỉ ngày 7 tháng 2.</p><dl><div><dt><strong>1979–1985</strong></dt><dd><span>Công ty Văn phòng Thiết kế Kiến trúc Ishihara.</span></dd></div></dl></section>",
-      "css": ".ds-editorial{width:76%;max-width:76ch;margin:0 auto;color:#333;font-family:Roboto,Arial,sans-serif}.ds-editorial h2{margin:0 0 28px;color:#111;font:400 26px/1.45 Roboto,Arial,sans-serif;letter-spacing:.015em;text-wrap:balance}.ds-editorial h3{margin:28px 0 14px;color:#111;font:500 18px/1.5 Roboto,Arial,sans-serif;letter-spacing:.015em;text-wrap:balance}.ds-editorial p,.ds-editorial dl{font:400 14px/1.95 Roboto,Arial,sans-serif;letter-spacing:.015em}.ds-editorial p{margin:0 0 16px;text-wrap:pretty}.ds-editorial .ds-qualification-date{margin-top:-10px}.ds-editorial strong{font-weight:500}.ds-editorial dl{margin-top:24px}.ds-editorial dl>div{display:grid;grid-template-columns:100px minmax(0,1fr);gap:24px;margin-bottom:16px}.ds-editorial dt{color:#111;font-variant-numeric:tabular-nums}.ds-editorial dd{margin:0}@media(min-width:1001px){.ds-editorial{width:100%;max-width:none}}@media(max-width:1000px) and (min-width:768px){.ds-editorial{width:90%}}@media(max-width:767px){.ds-editorial{width:100%}.ds-editorial p,.ds-editorial dl{font-size:16px;line-height:1.75}.ds-editorial h2{font-size:23px;margin-bottom:24px}.ds-editorial dl>div{grid-template-columns:minmax(0,1fr);gap:4px;margin-bottom:20px}}"
+      "css": ".ds-editorial{width:76%;max-width:76ch;margin:0 auto;color:#333;font-family:Roboto,Arial,sans-serif}.ds-editorial h2{margin:0 0 28px;color:#111;font:700 26px/1.45 Roboto,Arial,sans-serif;letter-spacing:.015em;text-wrap:balance}.ds-editorial h3{margin:28px 0 14px;color:#111;font:700 18px/1.5 Roboto,Arial,sans-serif;letter-spacing:.015em;text-wrap:balance}.ds-editorial p,.ds-editorial dl{font:400 14px/1.95 Roboto,Arial,sans-serif;letter-spacing:.015em}.ds-editorial p{margin:0 0 16px;text-wrap:pretty}.ds-editorial strong{font-weight:500}.ds-editorial dl{margin-top:24px}.ds-editorial dl>div{display:grid;grid-template-columns:100px minmax(0,1fr);gap:24px;margin-bottom:16px}.ds-editorial dt{color:#111;font-variant-numeric:tabular-nums}.ds-editorial dd{margin:0}@media(min-width:1001px){.ds-editorial{width:100%;max-width:900px}.ds-editorial p,.ds-editorial dl{font-size:16px;line-height:1.65}.ds-editorial dl>div{margin-bottom:8px}.ds-editorial dl>div:last-child{margin-bottom:0}}@media(max-width:1000px) and (min-width:768px){.ds-editorial{width:90%}}@media(max-width:767px){.ds-editorial{width:100%}.ds-editorial p,.ds-editorial dl{font-size:16px;line-height:1.75}.ds-editorial h2{font-size:23px;margin-bottom:24px}.ds-editorial dl>div{grid-template-columns:minmax(0,1fr);gap:4px;margin-bottom:20px}}"
     },
     {
       "name": "Office partner motion control",
@@ -360,7 +360,7 @@
       "Do preserve the incumbent R.W.H wordmark, Roboto hierarchy, neutral palette, photography, menu and footer.",
       "Do retain the full Office content sequence and its original portrait, map, signature and partner artwork.",
       "Do switch the complete page prose between Vietnamese and English with the shared language control.",
-      "Do keep both partner panoramas complete, loop them left seamlessly with a translated pause/resume control, and provide complete static horizontal rows for reduced motion or an unavailable animation API.",
+      "Do keep both partner panoramas complete, loop them left seamlessly without a visible pause/resume line, and provide complete static horizontal rows for reduced motion or an unavailable animation API.",
       "Do retain clear keyboard focus, wrapping labels and the existing mobile touch targets."
     ],
     "donts": [

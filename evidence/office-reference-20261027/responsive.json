@@ -1,0 +1,272 @@
+[
+  {
+    "bodySize": "16px",
+    "clipped": [],
+    "editorialWidth": 236,
+    "hasPause": false,
+    "headings": [
+      {
+        "text": "Honda Tadakatsu",
+        "weight": "700"
+      },
+      {
+        "text": "Triết lý thiết kế",
+        "weight": "700"
+      },
+      {
+        "text": "Ước mơ của khách hàng",
+        "weight": "700"
+      },
+      {
+        "text": "Đối tác",
+        "weight": "700"
+      }
+    ],
+    "language": "vi",
+    "overflow": false,
+    "width": 320
+  },
+  {
+    "bodySize": "16px",
+    "clipped": [],
+    "editorialWidth": 236,
+    "hasPause": false,
+    "headings": [
+      {
+        "text": "Honda Tadakatsu",
+        "weight": "700"
+      },
+      {
+        "text": "Design Philosophy",
+        "weight": "700"
+      },
+      {
+        "text": "Customer’s Dream",
+        "weight": "700"
+      },
+      {
+        "text": "Partners",
+        "weight": "700"
+      }
+    ],
+    "language": "en",
+    "overflow": false,
+    "width": 320
+  },
+  {
+    "bodySize": "16px",
+    "clipped": [],
+    "editorialWidth": 306,
+    "hasPause": false,
+    "headings": [
+      {
+        "text": "Honda Tadakatsu",
+        "weight": "700"
+      },
+      {
+        "text": "Triết lý thiết kế",
+        "weight": "700"
+      },
+      {
+        "text": "Ước mơ của khách hàng",
+        "weight": "700"
+      },
+      {
+        "text": "Đối tác",
+        "weight": "700"
+      }
+    ],
+    "language": "vi",
+    "overflow": false,
+    "width": 390
+  },
+  {
+    "bodySize": "16px",
+    "clipped": [],
+    "editorialWidth": 306,
+    "hasPause": false,
+    "headings": [
+      {
+        "text": "Honda Tadakatsu",
+        "weight": "700"
+      },
+      {
+        "text": "Design Philosophy",
+        "weight": "700"
+      },
+      {
+        "text": "Customer’s Dream",
+        "weight": "700"
+      },
+      {
+        "text": "Partners",
+        "weight": "700"
+      }
+    ],
+    "language": "en",
+    "overflow": false,
+    "width": 390
+  },
+  {
+    "bodySize": "14px",
+    "clipped": [],
+    "editorialWidth": 513,
+    "hasPause": false,
+    "headings": [
+      {
+        "text": "Honda Tadakatsu",
+        "weight": "700"
+      },
+      {
+        "text": "Triết lý thiết kế",
+        "weight": "700"
+      },
+      {
+        "text": "Ước mơ của khách hàng",
+        "weight": "700"
+      },
+      {
+        "text": "Đối tác",
+        "weight": "700"
+      }
+    ],
+    "language": "vi",
+    "overflow": false,
+    "width": 1000
+  },
+  {
+    "bodySize": "14px",
+    "clipped": [],
+    "editorialWidth": 513,
+    "hasPause": false,
+    "headings": [
+      {
+        "text": "Honda Tadakatsu",
+        "weight": "700"
+      },
+      {
+        "text": "Design Philosophy",
+        "weight": "700"
+      },
+      {
+        "text": "Customer’s Dream",
+        "weight": "700"
+      },
+      {
+        "text": "Partners",
+        "weight": "700"
+      }
+    ],
+    "language": "en",
+    "overflow": false,
+    "width": 1000
+  },
+  {
+    "bodySize": "16px",
+    "clipped": [],
+    "editorialWidth": 900,
+    "hasPause": false,
+    "headings": [
+      {
+        "text": "Honda Tadakatsu",
+        "weight": "700"
+      },
+      {
+        "text": "Triết lý thiết kế",
+        "weight": "700"
+      },
+      {
+        "text": "Ước mơ của khách hàng",
+        "weight": "700"
+      },
+      {
+        "text": "Đối tác",
+        "weight": "700"
+      }
+    ],
+    "language": "vi",
+    "overflow": false,
+    "width": 1440
+  },
+  {
+    "bodySize": "16px",
+    "clipped": [],
+    "editorialWidth": 900,
+    "hasPause": false,
+    "headings": [
+      {
+        "text": "Honda Tadakatsu",
+        "weight": "700"
+      },
+      {
+        "text": "Design Philosophy",
+        "weight": "700"
+      },
+      {
+        "text": "Customer’s Dream",
+        "weight": "700"
+      },
+      {
+        "text": "Partners",
+        "weight": "700"
+      }
+    ],
+    "language": "en",
+    "overflow": false,
+    "width": 1440
+  },
+  {
+    "bodySize": "16px",
+    "clipped": [],
+    "editorialWidth": 900,
+    "hasPause": false,
+    "headings": [
+      {
+        "text": "Honda Tadakatsu",
+        "weight": "700"
+      },
+      {
+        "text": "Triết lý thiết kế",
+        "weight": "700"
+      },
+      {
+        "text": "Ước mơ của khách hàng",
+        "weight": "700"
+      },
+      {
+        "text": "Đối tác",
+        "weight": "700"
+      }
+    ],
+    "language": "vi",
+    "overflow": false,
+    "width": 1920
+  },
+  {
+    "bodySize": "16px",
+    "clipped": [],
+    "editorialWidth": 900,
+    "hasPause": false,
+    "headings": [
+      {
+        "text": "Honda Tadakatsu",
+        "weight": "700"
+      },
+      {
+        "text": "Design Philosophy",
+        "weight": "700"
+      },
+      {
+        "text": "Customer’s Dream",
+        "weight": "700"
+      },
+      {
+        "text": "Partners",
+        "weight": "700"
+      }
+    ],
+    "language": "en",
+    "overflow": false,
+    "width": 1920
+  }
+]

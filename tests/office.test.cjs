@@ -42,6 +42,7 @@ test('Office has complete Vietnamese and English copy and no Japanese page prose
   assert.equal((html.match(/class="office-partner-strip" data-partner-row tabindex="0" role="region"/g) || []).length, 2);
   assert.equal((html.match(/office-partner-copy" aria-hidden="true" hidden/g) || []).length, 2);
   assert.ok(html.includes('office-page.js'));
+  assert.doesNotMatch(main, /data-partners-toggle|Tạm dừng chuyển động/);
   assert.equal(media['partners-01'].displayWidth, 3057);
   assert.equal(media['partners-02'].displayWidth, 2453);
 });

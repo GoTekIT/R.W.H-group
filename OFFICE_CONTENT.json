@@ -45,7 +45,7 @@
       "mapAlt": "Bản đồ hệ thống văn phòng R.W.H Group tại Nhật Bản và Việt Nam",
       "mapCaption": "Hệ thống văn phòng tại Nhật Bản và Việt Nam",
       "founderTitle": "Honda Tadakatsu",
-      "founderIntro": "Honda Tadakatsu cùng đội ngũ kiến trúc sư và kỹ sư tài năng đến từ Nhật Bản, Pháp và Việt Nam thành lập Văn phòng Kiến trúc sư hạng nhất Honda Tadakatsu — R.W.H Group, kế thừa triết lý thiết kế của Antonin Raymond.",
+      "founderIntro": "Honda Tadakatsu cùng đội ngũ kiến trúc sư và kỹ sư tài năng đến từ Nhật Bản, Pháp và Việt Nam thành lập Văn phòng Kiến trúc sư hạng nhất Honda Tadakatsu — R.W.H Group, kế thừa triết lý thiết kế của Antonin Raymond. Qua đó, ông thể hiện sự tận tâm và nhận thức sâu sắc về nghệ thuật kiến trúc cùng sứ mệnh của ngành.",
       "biographyTitle": "Tiểu sử",
       "qualification": "Chuyên môn: Kiến trúc sư hạng nhất (số 186806).",
       "career0": "Công ty Văn phòng Thiết kế Kiến trúc Ishihara.",
@@ -70,9 +70,6 @@
       "partnersTitle": "Đối tác",
       "partners1Alt": "Logo các đối tác của R.W.H Group — dải thứ nhất",
       "partners2Alt": "Logo các đối tác của R.W.H Group — dải thứ hai",
-      "founderMission": "Qua đó, ông thể hiện sự tận tâm và nhận thức sâu sắc về nghệ thuật kiến trúc cùng sứ mệnh của ngành.",
-      "partnerPause": "Tạm dừng chuyển động",
-      "partnerPlay": "Tiếp tục chuyển động",
       "qualificationDate": "Được cấp chứng chỉ ngày 7 tháng 2."
     },
     "en": {
@@ -93,7 +90,7 @@
       "mapAlt": "Map of R.W.H Group offices in Japan and Vietnam",
       "mapCaption": "Offices in Japan and Vietnam",
       "founderTitle": "Honda Tadakatsu",
-      "founderIntro": "Honda Tadakatsu collaborated with talented architects and engineers from Japan, France and Vietnam to establish the Honda Tadakatsu First-Class Architectural Office — R.W.H Group, honouring Antonin Raymond’s design philosophy.",
+      "founderIntro": "Honda Tadakatsu collaborated with talented architects and engineers from Japan, France and Vietnam to establish the Honda Tadakatsu First-Class Architectural Office — R.W.H Group, honouring Antonin Raymond’s design philosophy. The practice reflects his commitment to the art of architecture and his understanding of its mission.",
       "biographyTitle": "Biography",
       "qualification": "Qualifications: First-class architect (No. 186806).",
       "career0": "Ishihara Architectural Design Office Co., Ltd.",
@@ -118,9 +115,6 @@
       "partnersTitle": "Partners",
       "partners1Alt": "R.W.H Group partner logos — first strip",
       "partners2Alt": "R.W.H Group partner logos — second strip",
-      "founderMission": "The practice reflects his commitment to the art of architecture and his understanding of its mission.",
-      "partnerPause": "Pause animation",
-      "partnerPlay": "Resume animation",
       "qualificationDate": "Qualified on February 7."
     }
   },

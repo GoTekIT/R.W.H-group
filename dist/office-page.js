@@ -18,8 +18,7 @@
   }
 
   function bindPartnerMotion({ section, doc, media, IntersectionObserverClass,
-    ResizeObserverClass, setPauseLabel }) {
-    const toggle = section.querySelector('[data-partners-toggle]');
+    ResizeObserverClass }) {
     const states = [...section.querySelectorAll('[data-partner-row]')].map(row => ({
       row, track: row.querySelector('.office-partner-track'),
       group: row.querySelector('.office-partner-group'),
@@ -27,7 +26,6 @@
       hovered: false, focused: false, touching: false, animation: null, distance: 0
     }));
     if (!states.length || states.some(state => typeof state.track.animate !== 'function')) return;
-    let manuallyPaused = false;
 
     function layout(state) {
       if (media.matches) return;
@@ -54,12 +52,9 @@
           continue;
         }
         layout(state);
-        const run = state.visible && !doc.hidden && !manuallyPaused && !state.hovered && !state.focused && !state.touching;
+        const run = state.visible && !doc.hidden && !state.hovered && !state.focused && !state.touching;
         if (run) state.animation?.play(); else state.animation?.pause();
       }
-      toggle.hidden = media.matches;
-      toggle.setAttribute('aria-pressed', String(manuallyPaused));
-      setPauseLabel(manuallyPaused);
     }
     for (const state of states) {
       state.row.addEventListener('pointerenter', event => { if (event.pointerType === 'mouse') { state.hovered = true; sync(); } });
@@ -79,7 +74,6 @@
     states.forEach(state => observer?.observe(state.row));
     const resize = ResizeObserverClass && new ResizeObserverClass(() => { states.forEach(layout); sync(); });
     states.forEach(state => resize?.observe(state.group));
-    toggle.addEventListener('click', () => { manuallyPaused = !manuallyPaused; sync(); });
     doc.addEventListener('visibilitychange', sync);
     media.addEventListener('change', sync);
     sync();
@@ -114,9 +108,6 @@
   if (section) bindPartnerMotion({
     section, doc: document, media: window.matchMedia('(prefers-reduced-motion: reduce)'),
     IntersectionObserverClass: window.IntersectionObserver,
-    ResizeObserverClass: window.ResizeObserver,
-    setPauseLabel(paused) {
-      window.RWHI18n.message(section.querySelector('[data-partners-toggle]'), `officeContent.${paused ? 'partnerPlay' : 'partnerPause'}`);
-    }
+    ResizeObserverClass: window.ResizeObserver
   });
 })();
