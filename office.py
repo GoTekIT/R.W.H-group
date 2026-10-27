@@ -80,7 +80,7 @@ def render_office(root, homepage, asset, switcher, video_library):
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title data-i18n="officeContent.documentTitle">Văn phòng | R.W.H Group</title>
+<title data-i18n="officeContent.documentTitle">Giới thiệu | R.W.H Group</title>
 <meta name="description" data-i18n-content="officeContent.description" content="{escape(content['description']['vi'], quote=True)}">
 <meta name="theme-color" content="#292929">
 <link rel="icon" href="{logo}" type="image/svg+xml">
@@ -101,15 +101,15 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 <header id="gHeader" class="office-header">
   <div class="office-header-inner">
     <a class="hLogo" href="../index.html" aria-label="R.W.H Group — Trang chủ" data-i18n-aria-label="home"><img src="{logo}" alt="R.W.H Group" width="357" height="56"></a>
-    <h1 class="office-title" data-i18n="office">VĂN PHÒNG</h1>
+    <h1 class="office-title" data-i18n="office">GIỚI THIỆU</h1>
     <nav class="office-shortcuts" aria-label="Điều hướng trang" data-i18n-aria-label="navigation">
-      <a href="/office" aria-current="page" data-i18n="office">VĂN PHÒNG</a>
+      <a href="/office" aria-current="page" data-i18n="office">GIỚI THIỆU</a>
       <a href="../index.html?project=1" data-i18n="navProjects">DỰ ÁN</a>
       <a href="#contact-modal" data-contact-open aria-haspopup="dialog" aria-controls="contact-modal" data-i18n="navContact">LIÊN HỆ</a>
     </nav>
   </div>
 </header>
-<div class="meunRBox"><button class="menu" type="button" aria-label="Mở menu" data-i18n-aria-label="openMenu" aria-controls="navigation" aria-expanded="false"><span class="top show"></span><span class="bottom show"></span></button><span class="office-rail-label" data-i18n="office">VĂN PHÒNG</span></div>
+<div class="meunRBox"><button class="menu" type="button" aria-label="Mở menu" data-i18n-aria-label="openMenu" aria-controls="navigation" aria-expanded="false"><span class="top show"></span><span class="bottom show"></span></button><span class="office-rail-label" data-i18n="office">GIỚI THIỆU</span></div>
 {navigation}
 <main id="main" class="office-main" tabindex="-1">
   <section class="office-intro" aria-label="R.W.H Group">
