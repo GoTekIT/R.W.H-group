@@ -29,4 +29,4 @@ The Google-account management table is stored privately in the task workspace (v
 
 Rollback: restore the MP4 kind and previous delivery URLs in VIDEO_SOURCES.json, then run python3 render-projects.py. Existing CDN objects are retained.
 
-Validation: node --test tests/*.test.cjs; browser playback and portrait/landscape sizing are recorded separately from source tests and deployment. This branch has not been merged or deployed.
+Validation: node --test tests/*.test.cjs; browser playback and portrait/landscape sizing are recorded separately from source tests. Verify deployment against the merged commit; source tests alone do not establish production status.
