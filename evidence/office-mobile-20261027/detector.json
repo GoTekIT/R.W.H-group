@@ -1,0 +1,89 @@
+[
+  {
+    "antipattern": "overused-font",
+    "name": "Overused font",
+    "description": "Inter, Roboto, Fraunces, Geist, Plus Jakarta Sans, and Space Grotesk are used on so many sites they no longer feel distinctive. Each new wave of AI-generated UIs converges on the same handful of faces. Choose a face that gives your interface personality.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "/Users/ngxuanphu/Documents/ChatGPT/R.W.H/rwh-office-20261027/dist/office.css",
+    "line": 44,
+    "snippet": "font-family:Roboto"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/ngxuanphu/Documents/ChatGPT/R.W.H/rwh-office-20261027/dist/office.css",
+    "line": 35,
+    "snippet": "font-size: 24px is off the DESIGN.md type ramp",
+    "ignoreValue": "24px"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/ngxuanphu/Documents/ChatGPT/R.W.H/rwh-office-20261027/dist/office.css",
+    "line": 132,
+    "snippet": "font-size: 24px is off the DESIGN.md type ramp",
+    "ignoreValue": "24px"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/ngxuanphu/Documents/ChatGPT/R.W.H/rwh-office-20261027/dist/office.css",
+    "line": 143,
+    "snippet": "font-size: 16px is off the DESIGN.md type ramp",
+    "ignoreValue": "16px"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/ngxuanphu/Documents/ChatGPT/R.W.H/rwh-office-20261027/dist/office.css",
+    "line": 144,
+    "snippet": "font-size: 23px is off the DESIGN.md type ramp",
+    "ignoreValue": "23px"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/ngxuanphu/Documents/ChatGPT/R.W.H/rwh-office-20261027/dist/office.css",
+    "line": 153,
+    "snippet": "font-size: 15px is off the DESIGN.md type ramp",
+    "ignoreValue": "15px"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/ngxuanphu/Documents/ChatGPT/R.W.H/rwh-office-20261027/dist/office.css",
+    "line": 184,
+    "snippet": "font-size: 10px is off the DESIGN.md type ramp",
+    "ignoreValue": "10px"
+  },
+  {
+    "antipattern": "em-dash-overuse",
+    "name": "Em-dash overuse",
+    "description": "Em-dash saturation in body copy is an AI cadence tell. Advisory only: humans use em-dashes legitimately, so this fires only on saturation — at least 8 em-dashes (— or --) at a density near one per 500 characters of body text — never on a long article that uses a few. Prefer commas, colons, periods, or parentheses.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "/Users/ngxuanphu/Documents/ChatGPT/R.W.H/rwh-office-20261027/dist/office/index.html",
+    "line": 0,
+    "snippet": "16 em-dashes in body text",
+    "advisory": true
+  }
+]

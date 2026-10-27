@@ -86,10 +86,10 @@ rounded:
 spacing:
   office-paragraph: "16px"
   office-inset: "7.2%"
-  office-mobile-inset: "28px"
+  office-mobile-inset: "20px"
   office-intro-gap: "32px"
   office-editorial-section: "72px"
-  office-mobile-section: "52px"
+  office-mobile-section: "44px"
 components:
   contact-submit:
     backgroundColor: "{colors.black}"
@@ -161,11 +161,11 @@ These are the source's existing context-specific neutral grays, not additional b
 Roboto is locally supplied in light, regular and medium weights (300/400/500). Office explicitly uses the Roboto/Arial/sans-serif stack. The contact form declares Noto Sans JP/sans-serif for labels and fields; that inherited declaration remains local to the form. The parent Office page's condensed fonts and burgundy text are not adopted.
 
 - **Portfolio title:** the frontmatter role applies over imagery; mobile reduces it to (24px).
-- **Office title:** light uppercase text in the header's second grid column. It becomes (24px) at tablet widths and (25px) on mobile.
-- **Office company:** the R.W.H display heading uses the company role, with Group on a separate line using the suffix role. Mobile reduces R.W.H to (34px), while Group remains (25px).
+- **Office title:** light uppercase text in the header's second grid column. It becomes (24px) at tablet widths and (24px) on mobile.
+- **Office company:** the R.W.H display heading uses the company role, with Group on a separate line using the suffix role. Mobile displays R.W.H (28px) and Group (18px) on one baseline.
 - **Office section:** biography, philosophy, Customer Dream and partner headings use the regular section role; mobile reduces them to (23px). Section headings balance their line wrapping.
 - **Office subsection:** leadership roles, biography labels and Japan/Vietnam service titles use the medium subsection role with balanced wrapping. The team link separately retains (18px), weight (300) and line height (1.5).
-- **Office body:** biography, career chronology, philosophy and service copy use the body role on desktop and mobile. Leadership names use weight (500) and line height (1.8). Values, service-company names, career years and inline strong phrases use weight (500); strong phrases identify people, qualifications and philosophy without bolding entire paragraphs. Editorial paragraphs use pretty wrapping; introductory personal names and emphasized service-company names stay together, with the founder link also kept together on mobile where practical.
+- **Office body:** biography, career chronology, philosophy and service copy use the body role on desktop and 16px/1.75 on mobile. Leadership names use weight (500) and line height (1.8). Values, service-company names, career years and inline strong phrases use weight (500); strong phrases identify people, qualifications and philosophy without bolding entire paragraphs. Editorial paragraphs use pretty wrapping; introductory personal names and emphasized service-company names stay together, with the founder link also kept together on mobile where practical.
 - **Office caption:** map attribution uses the caption role. The partner pause/resume label uses (12px), weight (400) and line height (1.6). The rail label uses (13px), weight (300), line height (1) and tracking (.08em), reducing to (11px) on mobile.
 - **Office shortcut:** uppercase utility navigation uses the shortcut role; tablet uses (11px), mobile (10px) and tracking (.05em).
 - **Menu primary:** uppercase and spaced. Secondary menu links use (14px), project sublinks (11px); mobile primary text uses `clamp(17px, 5vw, 21px)` with tracking (.025em).
@@ -180,7 +180,7 @@ The implemented type ramp has multiple purpose-specific and responsive sizes. Fo
 
 The landing portfolio uses full-viewport project imagery with text near the lower left. Project detail pages use large media, a compact dark identity band and a two-column overview that stacks on mobile. These established surfaces retain their own composition.
 
-Office reserves a right rail (desktop width from frontmatter; mobile width 48px). The remaining canvas uses the Office inset tokens. Desktop header begins (72px) from the top: wordmark in the left half, title in the second column, shortcuts at the upper right. Its current inner minimum height is (154px), overriding the earlier header declaration.
+Office reserves a right rail (desktop width from frontmatter; mobile width 44px). The remaining canvas uses the Office inset tokens. Desktop header begins (72px) from the top: wordmark in the left half, title in the second column, shortcuts at the upper right. Its current inner minimum height is (154px), overriding the earlier header declaration.
 
 The introduction uses three columns in the ratio (.9fr / 1fr / 1.35fr), with the intro gap token: leadership and teams, the original founder portrait, then the original office map. The portrait starts (84px) below its column top. A centered editorial region follows at width (76%), maximum (76ch), with top margin (110px). It holds the biography and dated career rows, philosophy and signature, then the centered Customer Dream heading. Introduction, mission, qualification and qualification date are separate meaningful paragraphs. Career rows use (100px / remaining width) columns, a (24px) gap and (16px) bottom spacing. The signature is right aligned at width (180px), maximum (45%). Japan and Vietnam services sit in equal columns with a (48px) gap. Each article uses three grid rows (`auto 1fr auto`) to align its title, company name and service list across the two columns. Company text has a maximum width of (34ch) and (20px) bottom spacing; each service occupies its own list item with a (4px) list gap.
 
@@ -188,7 +188,7 @@ The two partner-logo rows follow below a fine rule, with top margin (88px), top 
 
 At widths (768–1000px), the header starts at (80px), shortcuts move below the title, introduction uses two columns (1fr / 1.1fr), and the map spans a new row at width `min(76%, 540px)`. Editorial width becomes (90%) with top margin (80px); the later service refinement keeps its column gap at (48px).
 
-At widths (≤767px), header and main content stack. The header uses a (66px) top inset, (30px) grid gap and (48px) bottom space. Main horizontal inset is (28px), bottom space (80px), versus (128px) on desktop. Leadership, portrait and map stack with a (36px) gap; portrait width is `min(100%, 320px)`. Editorial width becomes (100%) with top margin (64px), section gap (52px), and career rows stack with a (4px) internal gap and (24px) bottom spacing. Signature width becomes (150px), maximum (60%). Services become one column with a (40px) gap. Partner images scale proportionally to heights (84px) and (100px), group trailing space becomes (40px), and row gap becomes (20px). Partner rows have no fixed minimum width and remain constrained to the content canvas.
+At widths (≤767px), Office uses a 44px rail and 20px horizontal insets. The header begins at 24px, uses an 18px grid gap and 28px bottom space; the wordmark is 128px wide and the title 24px. Language buttons are 40px wide with 44px minimum height. The introduction is a two-column grid (1.15fr/.85fr): company name across the top, founder and board at left, portrait at right, then a two-column team list and a full-width map. Each team entry has a 44px minimum height. The portrait retains its full bounds, capped at 180px; the map is capped at 460px. Below 360px the portrait stays beside the founder in an 88px column and the board spans the next row, keeping the image associated with the founder. Compact leadership roles use 15px (14px below 360px), names 14px (founder link 13px below 360px), while prose and services use 16px/1.75. Editorial top margin is 40px, section gap 44px; career rows stack with 4px internal gap and 20px bottom spacing. Signature width is 140px, capped at 50%. Service groups become left aligned, separated by fine rules, with 28px between articles and 12px below company text. Partners follow after 44px with 28px top padding; logo heights are 72px/86px, trailing group space 32px and row gap 16px. Main bottom space is 72px. All factual copy, image bounds, menu/footer content and marquee controls are retained.
 
 The VI/EN control switches the entire page's prose, headings, metadata and accessible image text. It does not create parallel prose columns. Original wording embedded in map, signature and partner artwork remains intact.
 
