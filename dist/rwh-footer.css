@@ -27,3 +27,7 @@
   :is(#gFooter,#contact-footer).rwh-footer .rwh-footer-hotline { margin-top:20px; }
   :is(#gFooter,#contact-footer).rwh-footer .rwh-footer-bottom { flex-direction:column; align-items:flex-start; margin-top:32px; }
 }
+
+:is(#gFooter,#contact-footer).rwh-footer .rwh-footer-email { display:flex; align-items:baseline; flex-wrap:wrap; gap:0 6px; margin:6px 0 0; font-size:14px; font-weight:400; line-height:1.6; letter-spacing:0; }
+:is(#gFooter,#contact-footer).rwh-footer .rwh-footer-email span { color:rgba(255,255,255,.7); }
+:is(#gFooter,#contact-footer).rwh-footer .rwh-footer-email a { font:inherit; letter-spacing:inherit; overflow-wrap:anywhere; }

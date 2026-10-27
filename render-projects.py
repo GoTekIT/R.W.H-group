@@ -139,6 +139,12 @@ for project in projects:
 
 index = DIST / 'index.html'
 html = index.read_text()
+# Reuse the form's configured recipient in every shared footer.
+recipient = re.search(r"const RECIPIENT = '([^']+)';", (ROOT / 'lib/contact.js').read_text()).group(1)
+html = re.sub(r'<p class="rwh-footer-email">.*?</p>', '', html, flags=re.S)
+html = re.sub(r'(<p class="rwh-footer-hotline">.*?</p>)', lambda m: m[1] + f'<p class="rwh-footer-email"><span>Email:</span><a href="mailto:{e(recipient)}">{e(recipient)}</a></p>', html, flags=re.S)
+html = re.sub(r'(data-i18n="office"[^>]*>)[^<]*', r'\1GIỚI THIỆU', html)
+
 # Render one explicit return action in every shared contact dialog.
 html = re.sub(r'<button[^>]*data-contact-(?:return|menu).*?</button>', '', html, flags=re.S)
 html = html.replace('<aside class="contact-rail">', '<aside class="contact-rail"><button type="button" class="contact-return" data-contact-return data-modal-close aria-label="Đóng form liên hệ" data-i18n-aria-label="closeContact"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button>')
