@@ -168,22 +168,23 @@ body.office-page { margin:0; min-width:0; background:#fff; color:#333; }
   .office-main p,.office-main dl,.office-main li { font-size:16px; line-height:1.75; }
   .office-page .office-main h2 { font-size:23px; line-height:1.4; margin-bottom:20px; }
   .office-page .office-main h3 { font-size:18px; }
-  .office-intro { display:flex; flex-direction:column; gap:32px; }
-  .office-leadership { display:block; width:100%; text-align:center; }
-  .office-page .office-main .office-company { display:flex; justify-content:center; align-items:baseline; gap:8px; font-size:28px; margin:0 0 32px; }
+  .office-intro { display:grid; grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr); grid-template-areas:"company company" "founder portrait" "board portrait" "teams teams" "map map"; gap:24px 16px; align-items:start; }
+  .office-leadership { display:contents; }
+  .office-page .office-main .office-company { grid-area:company; display:flex; align-items:baseline; gap:8px; font-size:28px; margin:0 0 4px; }
   .office-company span { display:inline; font-size:18px; margin:0; }
-  .office-person { margin:0 0 28px; }
-  .office-person p { margin:0; }
-  .office-page .office-main .office-person h3 { font-size:16px; line-height:1.5; margin-bottom:6px!important; }
-  .office-person > a,.office-person > p { display:block; font-size:17px; font-weight:700; line-height:1.6; white-space:normal; }
-  .office-team { margin-top:36px; }
-  .office-team > a { margin-bottom:12px; font-size:18px; font-weight:700; }
-  .office-team ul { display:block; margin:0; }
-  .office-team li { margin:0; font-size:16px; }
-  .office-team li a,.office-team li span { display:flex; justify-content:center; min-height:40px; }
-  .office-portrait { width:78%; max-width:260px; margin:0 auto; }
-  .office-map { width:100%; max-width:none; margin:0; }
-  .office-map figcaption { margin-top:12px; text-align:center; font-size:12px; line-height:1.6; }
+  .office-person { margin:0; min-width:0; }
+  .office-person:nth-child(2) { grid-area:founder; }
+  .office-person:nth-child(3) { grid-area:board; }
+  .office-page .office-main .office-person h3 { font-size:15px; line-height:1.5; margin-bottom:8px!important; }
+  .office-person > a,.office-person > p { display:block; margin:0; font-size:14px; line-height:1.6; font-weight:500; white-space:normal; }
+  .office-portrait { grid-area:portrait; width:100%; max-width:180px; margin:0; justify-self:end; }
+  .office-team { grid-area:teams; margin-top:4px; }
+  .office-team > a { margin-bottom:12px; font-size:18px; }
+  .office-team ul { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px 16px; margin:0; }
+  .office-team li { margin:0; min-width:0; font-size:14px; line-height:1.5; }
+  .office-team li a,.office-team li > span { display:block; min-height:32px; }
+  .office-map { grid-area:map; width:100%; max-width:460px; margin:12px auto 0; }
+  .office-map figcaption { margin-top:8px; font-size:12px; line-height:1.6; }
 
   .office-editorial { width:100%; margin-top:40px; }
   .office-editorial section + section { margin-top:44px; }
@@ -211,3 +212,11 @@ body.office-page { margin:0; min-width:0; background:#fff; color:#333; }
 @media(max-width:359px) {
   .office-shortcuts a { font-size:10px; letter-spacing:.01em; }
 }
+
+/* Static bilingual Office: original Vietnamese followed by its English translation. */
+.office-translation { display:block; margin-top:.55em; font-weight:400; }
+.office-main h2 .office-translation,.office-main h3 .office-translation { font-size:.8em; font-weight:700; }
+.office-person h3 span { display:inline; }
+.office-services .office-service-list { display:block; max-width:none; }
+.office-team .office-translation { font-size:.9em; margin-top:3px; }
+.office-career .office-translation { margin-top:6px; }

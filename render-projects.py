@@ -62,7 +62,7 @@ for project in projects:
 (DIST / 'project-copy.js').write_text('window.RWHProjectCopy = ' + json.dumps(copy, ensure_ascii=False, separators=(',', ':')) + ';\n')
 
 
-switcher = '''<div class="language-switch" role="group" aria-label="Ngôn ngữ" data-i18n-aria-label="language"><button type="button" data-language="vi" lang="vi" aria-label="Tiếng Việt" aria-pressed="true">VI</button><button type="button" data-language="en" lang="en" aria-label="English" aria-pressed="false">EN</button></div>'''
+switcher = ''
 
 
 def localize_ui(markup):

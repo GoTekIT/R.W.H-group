@@ -41,8 +41,10 @@ function page(saved = null, blockedStorage = false) {
   return { ...context, metadata, note, description, image, menu, buttons, store, officeFounder, officePhoto, api: context.window.RWHI18n };
 }
 
-test('restores English project copy, accessible labels and selected language on a new page', () => {
+test('supports English project copy and accessible labels through the language API', () => {
   const p = page('en');
+  assert.equal(p.document.documentElement.lang, 'vi');
+  p.api.setLanguage('en', false);
   assert.equal(p.document.documentElement.lang, 'en');
   assert.match(p.metadata.textContent, /Quy Nhon, Vietnam/);
   assert.equal(p.metadata.dataset.text, p.metadata.textContent);
@@ -84,9 +86,23 @@ test('all rendered translation keys exist in both languages', () => {
 
 test('Office body copy and image descriptions follow VI/EN and restore the selected language', () => {
   const p = page('en');
+  assert.equal(p.document.documentElement.lang, 'vi');
+  p.api.setLanguage('en', false);
   assert.match(p.officeFounder.textContent, /Japan, France,? and Vietnam/);
   assert.equal(p.officePhoto.getAttribute('alt'), 'Portrait of architect Honda Tadakatsu');
   p.buttons[0].click();
   assert.match(p.officeFounder.textContent, /Nhật Bản, Pháp và Việt Nam/);
   assert.equal(p.officePhoto.getAttribute('alt'), 'Chân dung kiến trúc sư Honda Tadakatsu');
+});
+
+ test('Office renders Vietnamese and English together without language buttons', () => {
+  const html = fs.readFileSync(path.join(dist, 'office/index.html'), 'utf8');
+  assert.doesNotMatch(html, /class="language-switch"/);
+  assert.match(html, /class="office-translation" lang="en"/);
+  assert.match(html.replace(/<[^>]*>/g, ''), /Honda Tadakatsu collaborated with a team/);
+  assert.match(html, /Founder · Chairman/);
+  assert.doesNotMatch(html, /data-office-rich=/);
+  for (const file of ['index.html', 'projects/the-hera-resort/index.html']) {
+    assert.doesNotMatch(fs.readFileSync(path.join(dist, file), 'utf8'), /class="language-switch"/);
+  }
 });
