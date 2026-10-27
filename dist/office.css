@@ -168,19 +168,21 @@ body.office-page { margin:0; min-width:0; background:#fff; color:#333; }
   .office-page .office-main h2 { font-size:23px; line-height:1.4; margin-bottom:20px; }
   .office-page .office-main h3 { font-size:18px; }
   .office-intro { display:flex; flex-direction:column; gap:32px; }
-  .office-leadership { display:block; width:100%; }
-  .office-page .office-main .office-company { display:flex; align-items:baseline; gap:8px; font-size:28px; margin:0 0 28px; }
+  .office-leadership { display:block; width:100%; text-align:center; }
+  .office-page .office-main .office-company { display:flex; justify-content:center; align-items:baseline; gap:8px; font-size:28px; margin:0 0 32px; }
   .office-company span { display:inline; font-size:18px; margin:0; }
   .office-person { margin:0 0 28px; }
-  .office-page .office-main .office-person h3 { font-size:18px; line-height:1.5; margin-bottom:8px!important; }
-  .office-person > a,.office-person > p { display:block; font-size:16px; line-height:1.75; white-space:normal; }
-  .office-team > a { margin-bottom:12px; font-size:18px; }
+  .office-person p { margin:0; }
+  .office-page .office-main .office-person h3 { font-size:16px; line-height:1.5; margin-bottom:6px!important; }
+  .office-person > a,.office-person > p { display:block; font-size:17px; font-weight:700; line-height:1.6; white-space:normal; }
+  .office-team { margin-top:36px; }
+  .office-team > a { margin-bottom:12px; font-size:18px; font-weight:700; }
   .office-team ul { display:block; margin:0; }
   .office-team li { margin:0; font-size:16px; }
-  .office-team li a,.office-team li span { display:flex; min-height:32px; }
-  .office-portrait { width:74%; max-width:none; margin:0 auto; }
+  .office-team li a,.office-team li span { display:flex; justify-content:center; min-height:40px; }
+  .office-portrait { width:78%; max-width:260px; margin:0 auto; }
   .office-map { width:100%; max-width:none; margin:0; }
-  .office-map figcaption { margin-top:8px; }
+  .office-map figcaption { margin-top:12px; text-align:center; font-size:12px; line-height:1.6; }
 
   .office-editorial { width:100%; margin-top:40px; }
   .office-editorial section + section { margin-top:44px; }
