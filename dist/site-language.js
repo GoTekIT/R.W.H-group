@@ -75,10 +75,11 @@
     }
   };
   const projectCopy = window.RWHProjectCopy || { vi: {}, en: {} };
+  const pageCopy = window.RWHPageCopy || { vi: {}, en: {} };
   let language = 'vi';
   const valid = value => value === 'vi' || value === 'en';
   function t(key, values = {}) {
-    const value = copy[language][key] ?? projectCopy[language][key] ?? key;
+    const value = copy[language][key] ?? projectCopy[language][key] ?? pageCopy[language][key] ?? key;
     return value.replace(/\{(\w+)\}/g, (match, name) => values[name] ?? match);
   }
   function message(element, key) {
@@ -93,7 +94,7 @@
       element.textContent = t(element.dataset.i18n);
       if (element.classList.contains('shuffle')) element.dataset.text = element.textContent;
     });
-    for (const attribute of ['aria-label', 'content']) {
+    for (const attribute of ['aria-label', 'content', 'alt']) {
       document.querySelectorAll(`[data-i18n-${attribute}]`).forEach(element => {
         element.setAttribute(attribute, t(element.getAttribute(`data-i18n-${attribute}`)));
       });

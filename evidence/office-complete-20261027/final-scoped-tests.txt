@@ -1,0 +1,15 @@
+✔ restores English project copy, accessible labels and selected language on a new page (792.319333ms)
+✔ switches languages and retains the current form status instead of resetting it (89.872958ms)
+✔ language switching remains usable when browser storage is blocked (118.139583ms)
+✔ all rendered translation keys exist in both languages (651.1105ms)
+✔ Office body copy and image descriptions follow VI/EN and restore the selected language (13.936917ms)
+✔ Office preserves the complete parent page content sequence and all five source images (819.504292ms)
+✔ Office has complete Vietnamese and English copy and no Japanese page prose (27.945041ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 32207.781916

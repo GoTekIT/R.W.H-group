@@ -19,13 +19,15 @@ function page(saved = null, blockedStorage = false) {
   }
   const metadata = element({ i18n: 'project.the-hera-resort.metadata', shuffle: true });
   const note = element({ i18n: 'contactNote' });
+  const officeFounder = element({ i18n: 'officeContent.founderIntro' });
+  const officePhoto = element({}, { 'data-i18n-alt': 'officeContent.portraitAlt' });
   const description = element({}, { 'data-i18n-content': 'project.the-hera-resort.description' });
   const image = element({ projectTitle: 'THE HERA RESORT', photoNumber: '2' }, { 'data-photo-number': '2' });
   const menu = element({}, { 'aria-expanded': 'true' });
   const buttons = ['vi', 'en'].map(language => element({language}));
   const doc = { documentElement: {}, dispatchEvent() {}, querySelector: () => menu,
     querySelectorAll(selector) {
-      return ({ '[data-i18n]': [metadata, note], '[data-i18n-content]': [description], '[data-i18n-aria-label]': [],
+      return ({ '[data-i18n]': [metadata, note, officeFounder], '[data-i18n-content]': [description], '[data-i18n-aria-label]': [], '[data-i18n-alt]': [officePhoto],
         '[data-project-title]': [image], '[data-language]': buttons })[selector] || [];
     }
   };
@@ -34,8 +36,9 @@ function page(saved = null, blockedStorage = false) {
     setItem(key, value) { if (blockedStorage) throw new Error('Storage unavailable'); store.set(key, value); }
   } }, CustomEvent: class { constructor(type, init) { this.type = type; this.detail = init.detail; } } };
   vm.runInNewContext(fs.readFileSync(path.join(dist, 'project-copy.js'), 'utf8'), context);
+  vm.runInNewContext(fs.readFileSync(path.join(dist, 'office-copy.js'), 'utf8'), context);
   vm.runInNewContext(fs.readFileSync(path.join(dist, 'site-language.js'), 'utf8'), context);
-  return { ...context, metadata, note, description, image, menu, buttons, store, api: context.window.RWHI18n };
+  return { ...context, metadata, note, description, image, menu, buttons, store, officeFounder, officePhoto, api: context.window.RWHI18n };
 }
 
 test('restores English project copy, accessible labels and selected language on a new page', () => {
@@ -72,9 +75,18 @@ test('language switching remains usable when browser storage is blocked', () => 
 test('all rendered translation keys exist in both languages', () => {
   const p = page();
   const files = [path.join(dist, 'index.html'), path.join(dist, 'office/index.html'), ...fs.readdirSync(path.join(dist, 'projects')).map(name => path.join(dist, 'projects', name, 'index.html'))];
-  const keys = new Set(files.flatMap(file => [...fs.readFileSync(file, 'utf8').matchAll(/data-i18n(?:-aria-label|-content)?="([^"]+)"/g)].map(match => match[1])));
+  const keys = new Set(files.flatMap(file => [...fs.readFileSync(file, 'utf8').matchAll(/data-i18n(?:-aria-label|-content|-alt)?="([^"]+)"/g)].map(match => match[1])));
   for (const language of ['vi', 'en']) {
     p.api.setLanguage(language);
     for (const key of keys) assert.notEqual(p.api.t(key), key, `${language}: ${key}`);
   }
+});
+
+test('Office body copy and image descriptions follow VI/EN and restore the selected language', () => {
+  const p = page('en');
+  assert.match(p.officeFounder.textContent, /Japan, France and Vietnam/);
+  assert.equal(p.officePhoto.getAttribute('alt'), 'Portrait of architect Honda Tadakatsu');
+  p.buttons[0].click();
+  assert.match(p.officeFounder.textContent, /Nhật Bản, Pháp và Việt Nam/);
+  assert.equal(p.officePhoto.getAttribute('alt'), 'Chân dung kiến trúc sư Honda Tadakatsu');
 });

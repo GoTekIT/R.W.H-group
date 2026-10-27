@@ -1,18 +1,278 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-27T03:19:49Z",
+  "generatedAt": "2026-10-27T04:14:17Z",
   "title": "Design System: R.W.H Group",
   "extensions": {
     "motion": [
-      {"name": "menu-slide", "value": "transform .5s ease-in-out", "purpose": "Shared menu entering from the right; reduced-motion rules suppress it."},
-      {"name": "language-underline", "value": "transform .28s ease", "purpose": "Language-button hover/focus underline."},
-      {"name": "footer-social", "value": "opacity .2s", "purpose": "Footer social-link emphasis."}
+      {
+        "name": "menu-slide",
+        "value": "transform .5s ease-in-out",
+        "purpose": "Shared menu entering from the right; reduced-motion rules suppress it."
+      },
+      {
+        "name": "language-underline",
+        "value": "transform .28s ease",
+        "purpose": "Language-button hover/focus underline."
+      },
+      {
+        "name": "footer-social",
+        "value": "opacity .2s",
+        "purpose": "Footer social-link emphasis."
+      }
     ],
     "breakpoints": [
-      {"name": "mobile-max", "value": "767px"},
-      {"name": "office-tablet-max", "value": "1000px"},
-      {"name": "menu-tablet-max", "value": "1099px"}
-    ]
+      {
+        "name": "mobile-max",
+        "value": "767px"
+      },
+      {
+        "name": "office-tablet-max",
+        "value": "1000px"
+      },
+      {
+        "name": "menu-tablet-max",
+        "value": "1099px"
+      }
+    ],
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26% 0 0)",
+          "oklch(37% 0 0)",
+          "oklch(48% 0 0)",
+          "oklch(59% 0 0)",
+          "oklch(70% 0 0)",
+          "oklch(82% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "charcoal": {
+        "role": "neutral",
+        "displayName": "Charcoal",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26% 0 0)",
+          "oklch(37% 0 0)",
+          "oklch(48% 0 0)",
+          "oklch(59% 0 0)",
+          "oklch(70% 0 0)",
+          "oklch(82% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26% 0 0)",
+          "oklch(37% 0 0)",
+          "oklch(48% 0 0)",
+          "oklch(59% 0 0)",
+          "oklch(70% 0 0)",
+          "oklch(82% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "heading-ink": {
+        "role": "primary",
+        "displayName": "Heading Ink",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26% 0 0)",
+          "oklch(37% 0 0)",
+          "oklch(48% 0 0)",
+          "oklch(59% 0 0)",
+          "oklch(70% 0 0)",
+          "oklch(82% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "strong-copy": {
+        "role": "neutral",
+        "displayName": "Strong Copy",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26% 0 0)",
+          "oklch(37% 0 0)",
+          "oklch(48% 0 0)",
+          "oklch(59% 0 0)",
+          "oklch(70% 0 0)",
+          "oklch(82% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "utility-muted": {
+        "role": "neutral",
+        "displayName": "Utility Muted",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26% 0 0)",
+          "oklch(37% 0 0)",
+          "oklch(48% 0 0)",
+          "oklch(59% 0 0)",
+          "oklch(70% 0 0)",
+          "oklch(82% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "caption-muted": {
+        "role": "neutral",
+        "displayName": "Caption Muted",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26% 0 0)",
+          "oklch(37% 0 0)",
+          "oklch(48% 0 0)",
+          "oklch(59% 0 0)",
+          "oklch(70% 0 0)",
+          "oklch(82% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "current-shortcut": {
+        "role": "neutral",
+        "displayName": "Current Shortcut",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26% 0 0)",
+          "oklch(37% 0 0)",
+          "oklch(48% 0 0)",
+          "oklch(59% 0 0)",
+          "oklch(70% 0 0)",
+          "oklch(82% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "marker": {
+        "role": "neutral",
+        "displayName": "Marker",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26% 0 0)",
+          "oklch(37% 0 0)",
+          "oklch(48% 0 0)",
+          "oklch(59% 0 0)",
+          "oklch(70% 0 0)",
+          "oklch(82% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "reversed-muted": {
+        "role": "neutral",
+        "displayName": "Reversed Muted",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26% 0 0)",
+          "oklch(37% 0 0)",
+          "oklch(48% 0 0)",
+          "oklch(59% 0 0)",
+          "oklch(70% 0 0)",
+          "oklch(82% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "divider": {
+        "role": "neutral",
+        "displayName": "Divider",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26% 0 0)",
+          "oklch(37% 0 0)",
+          "oklch(48% 0 0)",
+          "oklch(59% 0 0)",
+          "oklch(70% 0 0)",
+          "oklch(82% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "black": {
+        "role": "primary",
+        "displayName": "Black",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26% 0 0)",
+          "oklch(37% 0 0)",
+          "oklch(48% 0 0)",
+          "oklch(59% 0 0)",
+          "oklch(70% 0 0)",
+          "oklch(82% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "field": {
+        "role": "neutral",
+        "displayName": "Field",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26% 0 0)",
+          "oklch(37% 0 0)",
+          "oklch(48% 0 0)",
+          "oklch(59% 0 0)",
+          "oklch(70% 0 0)",
+          "oklch(82% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "portfolio-title": {
+        "displayName": "Portfolio Title",
+        "purpose": "Existing image-led project title."
+      },
+      "office-title": {
+        "displayName": "Office Page Title",
+        "purpose": "Light uppercase header title; 24px tablet and 25px mobile."
+      },
+      "office-company": {
+        "displayName": "R.W.H Company Heading",
+        "purpose": "Leadership introduction; 34px on mobile."
+      },
+      "office-company-suffix": {
+        "displayName": "Group Suffix",
+        "purpose": "Light second line of the company heading."
+      },
+      "office-section": {
+        "displayName": "Office Section Heading",
+        "purpose": "Biography, philosophy, Customer Dream and partners; 23px on mobile."
+      },
+      "office-subsection": {
+        "displayName": "Office Subsection",
+        "purpose": "Leadership and service-location hierarchy; also the team link size."
+      },
+      "office-body": {
+        "displayName": "Office Body",
+        "purpose": "Selected-language biography, chronology, philosophy and services; stable 14px on desktop and mobile."
+      },
+      "office-caption": {
+        "displayName": "Office Caption",
+        "purpose": "Small neutral map attribution."
+      },
+      "office-shortcut": {
+        "displayName": "Office Shortcut",
+        "purpose": "Uppercase header utility navigation; 11px tablet and 10px mobile."
+      },
+      "menu-primary": {
+        "displayName": "Shared Primary Navigation",
+        "purpose": "Existing uppercase menu hierarchy."
+      },
+      "utility": {
+        "displayName": "Language Utility",
+        "purpose": "Existing VI/EN controls."
+      }
+    },
+    "sourceAuthority": {
+      "scope": "Complete Office page within the incumbent R.W.H identity; no global redesign.",
+      "content": "PRODUCT.md and office.py supersede the earlier short Apollo statement and parallel-language layout.",
+      "style": "dist/office.css; current source declarations and cascade are documented in DESIGN.md.",
+      "detectorAdvisories": "Distinct gray counts represent context-specific neutral roles. Font-size counts represent documented Office, shell and responsive roles; the shared family remains Roboto.",
+      "media": "OFFICE_MEDIA.json retains five original media assets and both source GIFs. Displayed lossless panoramas reconstruct all distinct logo content from overlapping timeline frames with ffmpeg crop+hstack: partners-01-complete.png (3057×112), sampled at 5, 10, 15, 20, 26 seconds; partners-02-complete.png (2453×135), sampled at 5, 10, 15, 20 seconds. Sampling/crop provenance and source/display hashes are recorded in the metadata. Initial single frames omit later brands.",
+      "language": "VI/EN switches whole-page prose and accessible image text; embedded source artwork stays unchanged.",
+      "partnerScrolling": "Each static panorama renders at native height (112px or 135px), width:auto and max-width:none, inside its own focusable overflow-x:auto row on desktop and mobile. Rows have min-width:0, max-width:100%, 12px bottom padding, independent native scrollbars, a 28px gap (20px mobile), and a visible scrolling hint at all widths."
+    }
   },
   "components": [
     {
@@ -48,17 +308,52 @@
     {
       "name": "Office language control",
       "kind": "button",
-      "description": "Transparent language controls with contrast and underline states on paper.",
+      "description": "Transparent VI/EN controls switch all page prose, headings and accessible image text; original image artwork remains intact.",
       "html": "<div class=\"ds-languages\"><button aria-pressed=\"true\">VI</button><button aria-pressed=\"false\">EN</button></div>",
       "css": ".ds-languages{display:flex;align-items:center;gap:2px}.ds-languages button{position:relative;display:grid;place-items:center;width:36px;min-height:36px;padding:0;border:0;background:transparent;color:#555;font:400 11px/1 Roboto,Arial,sans-serif;letter-spacing:.04em;cursor:pointer}.ds-languages button[aria-pressed=true],.ds-languages button:hover{color:#111}.ds-languages button:after{content:'';position:absolute;left:9px;right:9px;bottom:5px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform .28s ease}.ds-languages button:hover:after,.ds-languages button:focus-visible:after{transform:scaleX(1);transform-origin:left}.ds-languages button:focus-visible{outline:1px solid #333;outline-offset:4px}@media(prefers-reduced-motion:reduce){.ds-languages button:after{transition:none}}"
+    },
+    {
+      "name": "Office editorial content",
+      "kind": "custom",
+      "description": "Unboxed selected-language biography and chronology within the centered Office reading region.",
+      "html": "<section class=\"ds-editorial\"><h2>TRIẾT LÝ THIẾT KẾ</h2><p>R.W.H Group</p><dl><div><dt>2013</dt><dd>R.W.H Group</dd></div></dl></section>",
+      "css": ".ds-editorial{width:76%;max-width:900px;margin:0 auto;color:#333;font-family:Roboto,Arial,sans-serif}.ds-editorial h2{margin:0 0 28px;color:#111;font:300 26px/1.45 Roboto,Arial,sans-serif;letter-spacing:.015em}.ds-editorial p,.ds-editorial dl{font:400 14px/1.95 Roboto,Arial,sans-serif;letter-spacing:.015em}.ds-editorial p{margin:0 0 16px}.ds-editorial dl{margin-top:24px}.ds-editorial dl>div{display:grid;grid-template-columns:105px minmax(0,1fr);gap:16px;margin-bottom:12px}.ds-editorial dt{font-variant-numeric:tabular-nums}.ds-editorial dd{margin:0}@media(max-width:1000px) and (min-width:768px){.ds-editorial{width:90%}}@media(max-width:767px){.ds-editorial{width:100%}.ds-editorial h2{font-size:23px;margin-bottom:24px}.ds-editorial dl>div{grid-template-columns:1fr;gap:3px;margin-bottom:22px}.ds-editorial dt{color:#666}}"
     }
   ],
   "narrative": {
     "northStar": "The R.W.H Portfolio",
-    "overview": "This documents the built R.W.H identity: large architectural photography, the existing wordmark, restrained sans-serif text, white reading surfaces and charcoal navigation/footer surfaces. Its hierarchy comes from image scale, whitespace and light typography. Preserve that incumbent world when adding screens.\n\nOffice is a separate `/office` extension using the user-selected Apollo MESSAGE composition. Its open bilingual reading layout is specific to that page; it does not replace the portfolio, shared menu or footer.",
-    "keyCharacteristics": ["Photography leads the portfolio; Office leads with text and whitespace.", "Monochrome surfaces and thin functional strokes.", "Quiet uppercase navigation and a persistent right-edge menu control.", "Shared wordmark, language controls, navigation, footer and dialogs."],
-    "rules": [{"name": "The Image Color Rule", "body": "Keep interface colors neutral; do not introduce a new decorative accent for Office.", "section": "colors"}],
-    "dos": ["Do preserve the incumbent R.W.H wordmark, type, photography, menu and footer.", "Do scope the Apollo MESSAGE reading composition to `/office`.", "Do keep Vietnamese and English side by side on desktop and stacked in that order on mobile.", "Do retain clear keyboard focus, wrapping labels and the existing mobile touch targets."],
-    "donts": ["Don't redesign the portfolio or replace its shared navigation/footer to match the Office grid.", "Don't turn Office prose into cards, add a hero illustration or introduce decorative accent colors.", "Don't treat overridden glass-modal CSS as the current contact design.", "Don't use the language switch to hide either Office prose column."]
+    "overview": "This documents the built R.W.H identity: large architectural photography, the existing wordmark, restrained sans-serif text, white reading surfaces and charcoal navigation/footer surfaces. Its hierarchy comes from image scale, whitespace and light typography. Preserve that incumbent world when adding screens.\n\nOffice is a separate `/office` extension presenting the complete parent R.W.H Office content and image relationships within the current R.W.H shell. Leadership, teams, the founder portrait and map lead into biography, philosophy, signature, Customer Dream, Japan/Vietnam services and two partner-logo strips. Vietnamese and English are whole-page language states. The parent page supplies content and original artwork; the incumbent Roboto typography, neutral palette, shared menu and footer remain the visual authority.",
+    "keyCharacteristics": [
+      "Photography leads the portfolio; Office combines complete source content, original imagery and open editorial spacing.",
+      "Neutral surfaces and thin functional strokes.",
+      "Quiet uppercase navigation and a persistent right-edge menu control.",
+      "Shared wordmark, language controls, navigation, footer and dialogs."
+    ],
+    "rules": [
+      {
+        "name": "The Image Color Rule",
+        "body": "Keep interface colors neutral; do not introduce a new decorative accent for Office.",
+        "section": "colors"
+      },
+      {
+        "name": "The Incumbent Type Rule",
+        "body": "Apply the current R.W.H Roboto hierarchy to Office prose; preserve lettering that is already part of original image artwork.",
+        "section": "typography"
+      }
+    ],
+    "dos": [
+      "Do preserve the incumbent R.W.H wordmark, Roboto hierarchy, neutral palette, photography, menu and footer.",
+      "Do retain the full Office content sequence and its original portrait, map, signature and partner artwork.",
+      "Do switch the complete page prose between Vietnamese and English with the shared language control.",
+      "Do keep partner panoramas complete, static and at native height, with independent horizontal scrolling for each row on desktop and mobile.",
+      "Do retain clear keyboard focus, wrapping labels and the existing mobile touch targets."
+    ],
+    "donts": [
+      "Don't redesign the portfolio or replace its shared navigation/footer to match the Office composition.",
+      "Don't restore the superseded short Apollo-style statement or simultaneous Vietnamese/English prose columns.",
+      "Don't adopt the parent page's burgundy palette or condensed type for the current interface.",
+      "Don't turn Office prose into cards, crop partner logos or recolor original image artwork.",
+      "Don't treat overridden glass-modal CSS as the current contact design."
+    ]
   }
 }
