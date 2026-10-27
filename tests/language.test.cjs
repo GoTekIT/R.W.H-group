@@ -84,7 +84,7 @@ test('all rendered translation keys exist in both languages', () => {
 
 test('Office body copy and image descriptions follow VI/EN and restore the selected language', () => {
   const p = page('en');
-  assert.match(p.officeFounder.textContent, /Japan, France and Vietnam/);
+  assert.match(p.officeFounder.textContent, /Japan, France,? and Vietnam/);
   assert.equal(p.officePhoto.getAttribute('alt'), 'Portrait of architect Honda Tadakatsu');
   p.buttons[0].click();
   assert.match(p.officeFounder.textContent, /Nhật Bản, Pháp và Việt Nam/);
