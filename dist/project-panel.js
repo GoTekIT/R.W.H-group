@@ -128,7 +128,7 @@
     closeTimer = setTimeout(finishClose, reduced.matches ? 0 : 750);
   }
   function updateLabels() {
-    const returnKey = kind === 'office' ? 'back' : 'closeProject';
+    const returnKey = kind === 'office' ? 'closeOffice' : 'closeProject';
     closeButton.dataset.i18nAriaLabel = returnKey;
     closeButton.setAttribute('aria-label', window.RWHI18n.t(returnKey));
     if (kind === 'office') title.textContent = window.RWHI18n.t('office');

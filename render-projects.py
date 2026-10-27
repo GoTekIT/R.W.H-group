@@ -141,7 +141,7 @@ index = DIST / 'index.html'
 html = index.read_text()
 # Render one explicit return action in every shared contact dialog.
 html = re.sub(r'<button[^>]*data-contact-(?:return|menu).*?</button>', '', html, flags=re.S)
-html = html.replace('<aside class="contact-rail">', '<aside class="contact-rail"><button type="button" class="contact-return" data-contact-return data-modal-close aria-label="Quay lại" data-i18n-aria-label="back"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12H4m7-7-7 7 7 7"/></svg></button>')
+html = html.replace('<aside class="contact-rail">', '<aside class="contact-rail"><button type="button" class="contact-return" data-contact-return data-modal-close aria-label="Đóng form liên hệ" data-i18n-aria-label="closeContact"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button>')
 html = html.replace('href="https://www.rwh-group.com/office" target="_blank" rel="noopener noreferrer"', 'href="/office"')
 html = re.sub(r'(<a\b[^>]*href="/office")(?: data-office-open aria-haspopup="dialog" aria-controls="project-panel")?', r'\1 data-office-open aria-haspopup="dialog" aria-controls="project-panel"', html)
 html = re.sub(r'<style data-inline-css="([^"]+)">.*?</style>', lambda m: f'<link rel="stylesheet" href="./{m[1]}">', html, flags=re.S)
@@ -186,7 +186,7 @@ html = html.replace('</body>', '''<dialog class="project-panel" id="project-pane
         <div class="project-panel-error"><p data-panel-error data-i18n="projectLoadError">Chưa tải được dự án. Vui lòng thử mở lại.</p><button type="button" data-panel-retry data-i18n="retry">Thử lại</button></div>
     </div>
     <iframe allow="autoplay; fullscreen; picture-in-picture" title="Chi tiết dự án" tabindex="-1" aria-hidden="true"></iframe>
-    <button class="project-panel-close" data-panel-close type="button" aria-label="Đóng chi tiết dự án" data-i18n-aria-label="closeProject" autofocus><svg class="panel-close-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg><svg class="panel-back-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12H4m7-7-7 7 7 7"/></svg></button>
+    <button class="project-panel-close" data-panel-close type="button" aria-label="Đóng chi tiết dự án" data-i18n-aria-label="closeProject" autofocus><svg class="panel-close-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg><svg class="panel-back-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
 </dialog>
 </body>''')
 html = re.sub(r'<div class="language-switch".*?</div>\n?', '', html, flags=re.S)
