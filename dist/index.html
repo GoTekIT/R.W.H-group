@@ -2551,7 +2551,7 @@ body.menu-open .arrBox,body.menu-open #main .sroll { opacity:0; visibility:hidde
 .rwh-menu-secondary { margin:0 0 22px; padding:0; list-style:none; }
 .menuBox.rwh-menu .rwh-menu-secondary a { font-size:14px; font-weight:300; line-height:1.6; letter-spacing:1.4px; }
 .menuBox.rwh-menu .rwh-menu-contact a { position:relative; padding-left:13px; font-size:14px; font-weight:500; line-height:1.6; letter-spacing:1px; }
-.rwh-menu-contact a::before { content:""; position:absolute; left:0; top:7px; width:6px; height:6px; border-top:1px solid #a8a8a8; border-right:1px solid #a8a8a8; transform:rotate(45deg); }
+.rwh-menu-contact a::before { content:""; position:absolute; left:0; top:50%; margin-top:-3px; width:6px; height:6px; border-top:1px solid #a8a8a8; border-right:1px solid #a8a8a8; transform:rotate(45deg); }
 .rwh-menu-profile { padding-top:7px; }
 .menuBox.rwh-menu .rwh-menu-profile a { display:block; }
 .rwh-menu-profile a::after { display:none; }
@@ -2599,10 +2599,10 @@ body.menu-open .arrBox,body.menu-open #main .sroll { opacity:0; visibility:hidde
   .menuBox.rwh-menu .rwh-menu-bottom a{min-height:44px;box-sizing:border-box;display:inline-flex;align-items:center}
 }
 @media(max-width:767px){
-  .rwh-menu-layout{grid-template-columns:minmax(0,1fr) clamp(88px,28vw,112px);gap:16px;align-items:start}
+  .rwh-menu-layout{grid-template-columns:minmax(max-content,1fr) minmax(0,112px);gap:16px;align-items:start}
   .rwh-menu-links{min-width:0}
   .menuBox.rwh-menu .rwh-menu-list>li>a,
-  .menuBox.rwh-menu .rwh-menu-projects>summary{max-width:100%;white-space:normal;overflow-wrap:break-word;line-height:1.45;font-size:clamp(17px,5vw,21px);letter-spacing:.025em}
+  .menuBox.rwh-menu .rwh-menu-projects>summary{max-width:100%;white-space:nowrap;overflow-wrap:normal;line-height:1.45;font-size:clamp(17px,5vw,21px);letter-spacing:.025em}
   .rwh-menu-profile{width:100%;padding-top:7px}
   .rwh-menu-profile p{overflow-wrap:break-word}
   .rwh-menu-bottom{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 16px;align-items:start}

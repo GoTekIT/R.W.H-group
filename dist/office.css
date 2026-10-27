@@ -27,7 +27,8 @@ body.office-page { margin:0; min-width:0; background:#fff; color:#333; }
 .office-title { margin:0; max-width:calc(100% - 145px); color:#111; font:300 28px/1.45 Roboto,Arial,sans-serif; letter-spacing:.015em; text-transform:uppercase; }
 .office-shortcuts { position:absolute; top:0; right:0; display:grid; gap:6px; text-transform:uppercase; }
 .office-shortcuts a { display:flex; align-items:center; gap:7px; min-height:26px; color:#222; font:400 12px/1.6 Roboto,Arial,sans-serif; letter-spacing:.08em; }
-.office-shortcuts a::before { content:''; width:6px; height:1px; background:#888; }
+.office-shortcuts a { white-space:nowrap; flex-shrink:0; }
+.office-shortcuts a::before { flex-shrink:0; content:''; width:6px; height:1px; background:#888; }
 .office-shortcuts a[aria-current] { color:#757575; }
 .office-page #main.office-main { padding:0 7.2% 128px; background:#fff; }
 .office-page .meunRBox { width:70px; height:100dvh; right:0; padding:0; background:#292929; z-index:11; }
@@ -52,7 +53,7 @@ body.office-page { margin:0; min-width:0; background:#fff; color:#333; }
   .office-page #gHeader.office-header { padding-top:80px; }
   .office-header-inner { min-height:190px; }
   .office-title { font-size:24px; max-width:100%; }
-  .office-shortcuts { top:60px; left:54%; right:auto; display:flex; flex-wrap:wrap; gap:8px 14px; }
+  .office-shortcuts { top:60px; left:54%; right:auto; display:flex; flex-wrap:nowrap; gap:8px 14px; }
   .office-shortcuts a { min-height:44px; font-size:11px; }
 }
 
@@ -154,7 +155,7 @@ body.office-page { margin:0; min-width:0; background:#fff; color:#333; }
   .office-header-inner { grid-template-columns:1fr; gap:18px; min-height:0; padding-bottom:28px; }
   .office-page .office-header .hLogo { width:128px; }
   .office-title { max-width:100%; font-size:24px; }
-  .office-shortcuts { position:static; display:flex; flex-wrap:wrap; width:100%; gap:0 10px; margin-top:-4px; }
+  .office-shortcuts { position:static; display:flex; flex-wrap:nowrap; align-items:center; width:100%; gap:0 10px; margin-top:-4px; }
   .office-shortcuts a { min-height:44px; font-size:11px; letter-spacing:.03em; }
   .office-page #main.office-main { padding:0 20px 72px; }
   .office-page .meunRBox { width:44px; }
