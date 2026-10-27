@@ -147,7 +147,7 @@ body.office-page { margin:0; min-width:0; background:#fff; color:#333; }
   .office-partner-strip { overflow-x:auto; }
 }
 
-/* Mobile Office: compact introduction, readable prose and touch-sized links. */
+/* Mobile follows the source order: leadership, portrait, map, prose, centered services. */
 @media(max-width:767px) {
   .office-page #container { padding-right:44px; }
   .office-page #gHeader.office-header { padding:24px 20px 0; }
@@ -167,34 +167,36 @@ body.office-page { margin:0; min-width:0; background:#fff; color:#333; }
   .office-main p,.office-main dl,.office-main li { font-size:16px; line-height:1.75; }
   .office-page .office-main h2 { font-size:23px; line-height:1.4; margin-bottom:20px; }
   .office-page .office-main h3 { font-size:18px; }
-  .office-intro { grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr); grid-template-areas:"company company" "founder portrait" "board portrait" "teams teams" "map map"; gap:20px 16px; }
-  .office-leadership { display:contents; }
-  .office-page .office-main .office-company { grid-area:company; display:flex; align-items:baseline; gap:8px; font-size:28px; margin:0 0 4px; }
+  .office-intro { display:flex; flex-direction:column; gap:32px; }
+  .office-leadership { display:block; width:100%; }
+  .office-page .office-main .office-company { display:flex; align-items:baseline; gap:8px; font-size:28px; margin:0 0 28px; }
   .office-company span { display:inline; font-size:18px; margin:0; }
-  .office-person { margin:0; min-width:0; }
-  .office-person:nth-child(2) { grid-area:founder; }
-  .office-person:nth-child(3) { grid-area:board; }
-  .office-page .office-main .office-person h3 { font-size:15px; line-height:1.5; text-wrap:pretty; margin-bottom:8px!important; }
-  .office-person > a,.office-person > p { display:block; font-size:14px; line-height:1.6; white-space:normal; text-wrap:pretty; }
-  .office-portrait { grid-area:portrait; width:100%; max-width:180px; margin:0; justify-self:end; }
-  .office-team { grid-area:teams; margin-top:4px; }
-  .office-team > a { margin-bottom:8px; font-size:18px; font-weight:400; }
-  .office-team ul { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:0 16px; margin:0; }
-  .office-team li { margin:0; min-width:0; font-size:14px; line-height:1.5; }
-  .office-team li a,.office-team li span { display:flex; min-height:44px; }
-  .office-map { grid-area:map; width:100%; max-width:460px; margin:12px 0 0; justify-self:center; }
+  .office-person { margin:0 0 28px; }
+  .office-page .office-main .office-person h3 { font-size:18px; line-height:1.5; margin-bottom:8px!important; }
+  .office-person > a,.office-person > p { display:block; font-size:16px; line-height:1.75; white-space:normal; }
+  .office-team > a { margin-bottom:12px; font-size:18px; }
+  .office-team ul { display:block; margin:0; }
+  .office-team li { margin:0; font-size:16px; }
+  .office-team li a,.office-team li span { display:flex; min-height:32px; }
+  .office-portrait { width:74%; max-width:none; margin:0 auto; }
+  .office-map { width:100%; max-width:none; margin:0; }
   .office-map figcaption { margin-top:8px; }
 
   .office-editorial { width:100%; margin-top:40px; }
   .office-editorial section + section { margin-top:44px; }
   .office-founder h3 { margin-top:24px!important; }
   .office-career-row { grid-template-columns:minmax(0,1fr); gap:4px; margin-bottom:20px; }
-  .office-signature { width:140px; max-width:50%; margin-top:24px; }
-  .office-dream { text-align:left; padding-top:0; }
-  .office-services { grid-template-columns:1fr; gap:28px; margin-top:24px; }
-  .office-services article { border-top:1px solid #ddd; padding-top:20px; }
-  .office-services .office-service-company { max-width:none; margin:0 0 12px; text-wrap:pretty; }
-  .office-service-list li { text-wrap:pretty; }
+  .office-signature { width:140px; max-width:50%; margin:32px auto 0; }
+  .office-dream { text-align:center; padding-top:16px; }
+  .office-services { grid-template-columns:1fr; gap:88px; margin-top:56px; }
+  .office-services article { display:block; border:0; padding:0; }
+  .office-page .office-services h3 { font-size:23px; margin-bottom:24px; }
+  .office-services .office-service-company { max-width:none; margin:0 0 24px; font-weight:700; text-wrap:wrap; }
+  .office-services .office-service-list { display:block; }
+  .office-service-list li { display:inline; }
+  .office-service-list li + li::before { content:", "; }
+  .office-services article:last-child .office-service-list li + li::before { content:" "; }
+  .office-service-list li { text-wrap:wrap; }
   .office-partners { margin-top:44px; padding-top:28px; }
   .office-partners-heading { margin-bottom:20px; }
   .office-partner-strips { gap:16px; }
@@ -204,8 +206,5 @@ body.office-page { margin:0; min-width:0; background:#fff; color:#333; }
 }
 
 @media(max-width:359px) {
-  .office-intro { grid-template-columns:minmax(0,1fr) 88px; grid-template-areas:"company company" "founder portrait" "board board" "teams teams" "map map"; }
-  .office-page .office-main .office-person h3 { font-size:14px; }
-  .office-person > a { font-size:13px; }
   .office-shortcuts a { font-size:10px; letter-spacing:.01em; }
 }
