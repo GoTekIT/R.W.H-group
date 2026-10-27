@@ -9,13 +9,12 @@
     "sha256": "1c407171664271f59f35c3e34d800cade41efd7c6f4fb26d24274caa7594301e"
   },
   "office-map": {
-    "src": "assets/rwh-office/office-map.jpg",
-    "sourcePage": "https://www.rwh-group.com/office",
-    "sourceImageIndex": 3,
+    "src": "assets/rwh-office/office-map-updated.png",
     "width": 1280,
     "height": 1541,
-    "bytes": 177849,
-    "sha256": "2aea87683e8e9c61fd86ca7183ae848aae73c7674ed47ebfaadbb9aa29eb2c9e"
+    "bytes": 619955,
+    "sha256": "677f45a45b1e00c2832362e6d2988b69e2504c63718f695a4e7f82832bafe6ef",
+    "sourceFile": "20261027-160630.png"
   },
   "founder-signature": {
     "src": "assets/rwh-office/founder-signature.png",
