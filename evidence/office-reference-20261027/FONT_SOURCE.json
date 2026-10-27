@@ -1,0 +1,19 @@
+{
+  "provider": "Google Fonts",
+  "family": "Roboto",
+  "weight": 700,
+  "cssSource": "https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap",
+  "license": "dist/assets/roboto-OFL.txt",
+  "assets": [
+    {
+      "path": "dist/assets/roboto-bold-latin.woff2",
+      "bytes": 16748,
+      "sha256": "13b636f4fadae85c67d1f64a1e4b8afc8ffec19dd5291da0cfa9b32b5e3ebb57"
+    },
+    {
+      "path": "dist/assets/roboto-bold-vietnamese.woff2",
+      "bytes": 4696,
+      "sha256": "676ce470213edaf672e0f41bb50e5c8a73a309effa9833da6b91de17fe234379"
+    }
+  ]
+}

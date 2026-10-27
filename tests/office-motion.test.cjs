@@ -10,7 +10,6 @@ function target(extra = {}) {
 }
 function fixture(reduced = false) {
   let intersection, resize;
-  const toggle = target({ hidden: true, attributes: {}, setAttribute(k, v) { this.attributes[k] = v; } });
   const rows = [1200, 900].map(width => {
     const group = { width, getBoundingClientRect() { return { width: this.width }; } };
     const copy = { hidden: true };
@@ -23,15 +22,13 @@ function fixture(reduced = false) {
     return target({ group, copy, track, classList: { add() {}, remove() {} }, contains: node => node === group,
       querySelector: selector => ({ '.office-partner-track': track, '.office-partner-group': group, '.office-partner-copy': copy })[selector] });
   });
-  const section = { querySelector: () => toggle, querySelectorAll: () => rows };
+  const section = { querySelectorAll: () => rows };
   const doc = target({ hidden: false });
   const media = target({ matches: reduced });
-  let pauseLabel;
   const binding = bindPartnerMotion({ section, doc, media,
     IntersectionObserverClass: class { constructor(fn) { intersection = fn; } observe() {} },
-    ResizeObserverClass: class { constructor(fn) { resize = fn; } observe() {} },
-    setPauseLabel: value => { pauseLabel = value; } });
-  return { rows, doc, media, toggle, binding, get pauseLabel() { return pauseLabel; },
+    ResizeObserverClass: class { constructor(fn) { resize = fn; } observe() {} } });
+  return { rows, doc, media, binding,
     visible(value) { intersection(rows.map(target => ({ target, isIntersecting: value }))); },
     resize() { resize(); } };
 }
@@ -56,20 +53,16 @@ test('partners move left in seamless linear loops only while visible', () => {
   assert.ok(f.binding.states.every(s => s.animation.playState === 'running'));
 });
 
-test('manual pause survives pointer and keyboard changes; resume keeps those safeguards', () => {
+test('partner rows pause independently for pointer, keyboard and touch interaction', () => {
   const f = fixture(); f.visible(true);
   const first = f.binding.states[0];
   f.rows[0].emit('pointerenter', { pointerType: 'mouse' });
   assert.equal(first.animation.playState, 'paused');
   assert.equal(f.binding.states[1].animation.playState, 'running');
-  f.toggle.emit('click');
-  assert.equal(f.toggle.attributes['aria-pressed'], 'true');
-  assert.equal(f.pauseLabel, true);
   f.rows[0].emit('pointerleave');
-  assert.ok(f.binding.states.every(s => s.animation.playState === 'paused'));
-  f.rows[0].emit('focusin'); f.toggle.emit('click');
+  assert.equal(first.animation.playState, 'running');
+  f.rows[0].emit('focusin');
   assert.equal(first.animation.playState, 'paused');
-  assert.equal(f.pauseLabel, false);
   f.rows[0].emit('focusout', { relatedTarget: null });
   assert.equal(first.animation.playState, 'running');
   f.rows[0].emit('pointerdown', { pointerType: 'touch' });
@@ -84,10 +77,8 @@ test('reduced motion cancels loops and restores complete static rows', () => {
   f.media.matches = true; f.media.emit('change');
   assert.ok(previous.every(animation => animation.playState === 'idle'));
   assert.ok(f.binding.states.every(s => s.animation === null && s.copy.hidden));
-  assert.equal(f.toggle.hidden, true);
   f.media.matches = false; f.media.emit('change');
   assert.ok(f.binding.states.every(s => s.animation.playState === 'running' && !s.copy.hidden));
-  assert.equal(f.toggle.hidden, false);
   const initial = fixture(true);
   assert.ok(initial.binding.states.every(s => s.animation === null && s.copy.hidden));
 });

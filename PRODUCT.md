@@ -24,10 +24,10 @@ Keep the incumbent R.W.H UI, fonts and neutral text colors. Office now follows t
 
 ## Office typography and partner motion refinement
 - Keep all parent Office information and current Roboto/neutral UI. Split prose by meaning, retain full names where practical, emphasize key people/qualifications/philosophy and career years, and present each service on its own line in VI/EN.
-- Both complete partner panoramas automatically move left in seamless duplicate loops. A translated pause/resume button, hover/focus/touch pauses, offscreen/hidden-page pauses and static horizontally scrollable reduced-motion fallback are required.
+- Both complete partner panoramas automatically move left in seamless duplicate loops. Hover/focus/touch pauses, offscreen/hidden-page pauses and a static horizontally scrollable reduced-motion fallback are retained. The user explicitly removed the visible pause/resume control.
 
 ## Office mobile presentation
 - At phone widths, prioritize a compact header and leadership/portrait composition, two-column team links,16px prose, left-aligned services and proportionate moving partner strips. Preserve complete VI/EN content and all shared functionality.
 
 ## Office desktop text width
-- At desktop widths≥1001px, biography and philosophy span the full Office content grid instead of a narrow76ch column, following the user-supplied screenshot. Preserve complete Vietnamese/English language states, font/colors, content, emphasis and the existing mobile layout.
+- At desktop widths ≥1001px, use a centered 900px editorial block with 16px prose, compact biography/year rows, and bold 700-weight section/subsection headings. The latest supplied reference supersedes the earlier full-grid stretch. Keep the current Roboto family/neutral colors and VI/EN content; remove the visible partner pause/resume line. Introductory sentences share one paragraph and qualification/date share one line when space allows.

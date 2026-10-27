@@ -17,13 +17,13 @@ def render_office(root, homepage, asset, switcher, video_library):
     def text(key, tag='p', attrs=''):
         return f'<{tag} data-i18n="officeContent.{key}"{attrs}>{escape(content["copy"]["vi"][key])}</{tag}>'
 
-    def rich(key, attrs=''):
+    def rich(key, attrs='', tag='p'):
         value = content['copy']['vi'][key]
         phrases = content['emphasis']['vi'].get(key, [])
         pattern = '(' + '|'.join(re.escape(phrase) for phrase in sorted(phrases, key=len, reverse=True)) + ')'
         parts = re.split(pattern, value) if phrases else [value]
         markup = ''.join(f'<strong>{escape(part)}</strong>' if part in phrases else escape(part) for part in parts)
-        return f'<p data-office-rich="officeContent.{key}"{attrs}>{markup}</p>'
+        return f'<{tag} data-office-rich="officeContent.{key}"{attrs}>{markup}</{tag}>'
 
     def external(key, label):
         return text(label, 'a', f' href="{escape(content["links"][key], quote=True)}" target="_blank" rel="noopener noreferrer"')
@@ -115,10 +115,8 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     <section class="office-founder" id="founder" aria-labelledby="office-founder-title">
       {text('founderTitle', 'h2', ' id="office-founder-title"')}
       {rich('founderIntro')}
-      {text('founderMission')}
       {text('biographyTitle', 'h3')}
-      {rich('qualification')}
-      {text('qualificationDate', attrs=' class="office-qualification-date"')}
+      <p class="office-qualification">{rich('qualification', tag='span')} {text('qualificationDate', 'span')}</p>
       <dl class="office-career">{career}</dl>
     </section>
     <section class="office-philosophy" id="philosophy" aria-labelledby="office-philosophy-title">
@@ -138,7 +136,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     </section>
   </div>
   <section class="office-partners" aria-labelledby="office-partners-title">
-    <div class="office-partners-heading">{text('partnersTitle', 'h2', ' id="office-partners-title"')}{text('partnerPause', 'button', ' type="button" data-partners-toggle aria-pressed="false" hidden')}</div>
+    <div class="office-partners-heading">{text('partnersTitle', 'h2', ' id="office-partners-title"')}</div>
     <div class="office-partner-strips">{''.join(partners)}</div>
   </section>
 </main>
