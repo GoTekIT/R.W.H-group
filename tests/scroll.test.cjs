@@ -232,3 +232,17 @@ test('video library keeps background autoplay but owns wheel and keyboard input'
     modal.open = false; p.advance(1200); p.key('ArrowDown'); assert.equal(p.index(), 2);
   }
 });
+
+
+test('Contact pauses autoplay and resumes a complete interval after returning', () => {
+  const p = page(); p.jump(3); p.advance(1200);
+  const contact = p.doc.querySelector('#contact-modal');
+  contact.open = true;
+  p.advance(20000);
+  assert.equal(p.index(), 3);
+  p.doc.emit('visibilitychange'); p.advance(10000);
+  assert.equal(p.index(), 3);
+  contact.open = false; contact.emit('close');
+  p.advance(5999); assert.equal(p.index(), 3);
+  p.advance(1); assert.equal(p.index(), 4);
+});

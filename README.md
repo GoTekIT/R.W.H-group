@@ -21,7 +21,7 @@ Form gửi JSON tới `POST /api/contact`. `api/contact.js` là entrypoint Verce
 
 ## Chức năng hiện tại
 
-- Trang `/office` có đầy đủ các phần và năm ảnh của Office trên website mẹ: ban lãnh đạo, đội ngũ, chân dung, bản đồ, tiểu sử, triết lý, chữ ký, dịch vụ Nhật Bản/Việt Nam và đối tác. Nội dung chuyển VI/EN theo nút ngôn ngữ; giữ font, màu chữ, menu và footer của website hiện tại. Sửa `OFFICE_CONTENT.json`, `OFFICE_MEDIA.json`, `office.py`, `dist/office.css` và `dist/office-page.js`, rồi chạy `python3 render-projects.py`. Hai GIF đối tác được lưu nguyên nguồn; trang dùng hai dải ảnh toàn cảnh ghép từ toàn bộ nội dung cuộn của GIF để giữ đủ đối tác và chạy tự động liên tục sang trái. Không có dòng điều khiển tạm dừng theo yêu cầu mới; logo vẫn dừng khi rê chuột, focus, ra ngoài màn hình hoặc ẩn tab. Chế độ giảm chuyển động giữ dải ảnh cuộn ngang. Ngắt đoạn, danh sách dịch vụ và chữ nhấn được giữ khi chuyển VI/EN.
+- Mục Văn phòng mở ngay trong landing qua panel hiện có, giữ nguyên URL; `/office` là tài liệu nguồn/dự phòng. Trang có đầy đủ các phần và năm ảnh của Office trên website mẹ: ban lãnh đạo, đội ngũ, chân dung, bản đồ, tiểu sử, triết lý, chữ ký, dịch vụ Nhật Bản/Việt Nam và đối tác. Nội dung chuyển VI/EN theo nút ngôn ngữ; giữ font, màu chữ, menu và footer của website hiện tại. Sửa `OFFICE_CONTENT.json`, `OFFICE_MEDIA.json`, `office.py`, `dist/office.css` và `dist/office-page.js`, rồi chạy `python3 render-projects.py`. Hai GIF đối tác được lưu nguyên nguồn; trang dùng hai dải ảnh toàn cảnh ghép từ toàn bộ nội dung cuộn của GIF để giữ đủ đối tác và chạy tự động liên tục sang trái. Không có dòng điều khiển tạm dừng theo yêu cầu mới; logo vẫn dừng khi rê chuột, focus, ra ngoài màn hình hoặc ẩn tab. Chế độ giảm chuyển động giữ dải ảnh cuộn ngang. Ngắt đoạn, danh sách dịch vụ và chữ nhấn được giữ khi chuyển VI/EN.
 - 11 dự án với 201 ảnh: giữ thứ tự thư mục 01–10, thêm Bình Minh Healthcare & Resort ở số 11 theo yêu cầu ngày 22/10/2026; dự án 06 chỉ dùng bộ Onsen.
 - Landing tự chuyển mỗi 6 giây, hỗ trợ wheel, swipe, bàn phím và dừng ở footer.
 - Details trượt phủ toàn màn hình tại chỗ. Khi mở, landing dừng tự chuyển và chuyển động nền; đóng xong thì chạy tiếp với khoảng xem mới đủ 6 giây.
@@ -43,7 +43,7 @@ Form gửi JSON tới `POST /api/contact`. `api/contact.js` là entrypoint Verce
 | `PROJECT_SOURCES.json` / `PROJECT_TRANSLATIONS.json` | Dữ liệu dự án VI/EN, thứ tự ảnh và nguồn |
 | `VIDEO_SOURCES.json` / `NAVIGATION_SOURCES.json` | Ánh xạ video, nguồn clip và các liên kết RWH |
 | `render-projects.py` | Tạo lại trang và bộ đếm theo số dự án trong JSON, bản dịch, thành phần chung và hash tài nguyên |
-| `dist/app.js` / `dist/project-panel.js` | Điều hướng landing và vòng đời panel Details |
+| `dist/app.js` / `dist/project-panel.js` | Điều hướng landing và vòng đời panel Văn phòng/Details |
 | `dist/site-language.js` / `dist/rwh-videos.js` | Ngôn ngữ giao diện và phát video |
 | `api/`, `lib/`, `.env.example` | Backend form và tên biến môi trường cần cấu hình |
 | `tests/` | Kiểm thử; dùng provider giả lập, không gửi thư thật |
@@ -81,3 +81,7 @@ Chưa có xác nhận thư thật đã tới hộp thư người nhận; cần c
 - Vimeo embeds use adaptive quality on desktop and mobile. Original upload metadata and previous Cloudflare URLs remain in VIDEO_SOURCES.json; no mobile MP4 override is active for Vimeo.
 - `prepare-original-media.py CACHE_DIR` reproduces assets from the downloaded Drive files (Pillow and PyMuPDF required). `render-projects.py` builds pages. Keep the original files and client-approved hero choices intact.
 - Validate with `node --test tests/*.test.cjs`, then measure the deployed site. PageSpeed results from previous compressed assets do not establish the score of this version.
+
+### Điều hướng một trang
+
+Văn phòng và Details dùng chung panel trên landing; nội dung chỉ tải khi mở. Văn phòng dùng mũi tên quay lại, Details vẫn dùng X. Contact trong landing, Văn phòng và Details có mũi tên thay nút menu, đóng form sẽ trở về đúng nội dung và vị trí bên dưới. Browser Back đóng lớp đang mở trước, không đổi URL landing. Các tài liệu HTML nguồn được giữ cho dự phòng và liên kết trực tiếp. Form/API gửi liên hệ không thay đổi.

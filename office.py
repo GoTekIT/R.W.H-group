@@ -40,13 +40,13 @@ def render_office(root, homepage, asset, switcher, video_library):
         markup = re.search(pattern, homepage, re.S).group()
         return markup.replace('href="./', 'href="../').replace('src="./', 'src="../')
 
-    navigation = shared(r'<nav class="menuBox[^\"]*".*?</nav>')
+    navigation = shared(r'<nav class="menuBox[^\"]*".*?</nav>').replace(' data-office-open aria-haspopup="dialog" aria-controls="project-panel"', '')
     navigation = navigation.replace('href="/office"', 'href="/office" aria-current="page"')
     footer = shared(r'<footer id="gFooter"[^>]*>.*?</footer>').replace('href="#container"', 'href="../index.html"')
     contact = shared(r'<dialog class="contact-modal".*?</dialog>')
     styles = ('project-gallery.css', 'rwh-footer.css', 'rwh-menu.css', 'site-language.css',
-              'rwh-videos.css', 'contact-page.css', 'office.css')
-    scripts = ('office-copy.js', 'site-language.js', 'office-page.js', 'project-gallery.js', 'rwh-videos.js', 'contact-form.js')
+              'rwh-videos.css', 'contact-page.css', 'project-panel.css', 'office.css')
+    scripts = ('office-copy.js', 'site-language.js', 'project-panel.js', 'office-page.js', 'project-gallery.js', 'rwh-videos.js', 'contact-form.js')
     links = '\n'.join(f'<link rel="stylesheet" href="../{asset(name)}">' for name in styles)
     scripts = '\n'.join(f'<script src="../{asset(name)}" defer></script>' for name in scripts)
     logo = '../' + asset('assets/rwh-reference-wordmark.svg')

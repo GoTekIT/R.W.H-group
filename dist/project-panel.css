@@ -20,7 +20,8 @@ body:has(#project-panel[open]) #main .section.show .detail .line::before { anima
 .project-panel.is-loaded .project-panel-status { display:none; }
 .project-panel-error, .project-panel.is-error .project-panel-loading { display:none; }
 .project-panel.is-error .project-panel-error { display:block; }
-.project-panel-error a { display:inline-block; margin-top:14px; padding-bottom:3px; border-bottom:1px solid #ffffff80; color:#fff; }
+.project-panel-error button { display:inline-block; min-height:44px; margin-top:14px; padding:8px 0; border:0; border-bottom:1px solid #ffffff80; color:#fff; background:transparent; cursor:pointer; font:inherit; }
+.project-panel-error button:focus-visible { outline:1px solid #fff; outline-offset:4px; }
 .project-embedded { scrollbar-gutter:auto; scrollbar-width:none; }
 .project-embedded::-webkit-scrollbar { display:none; }
 .project-embedded .menu { display:none; }
@@ -30,3 +31,13 @@ body:has(#project-panel[open]) #main .section.show .detail .line::before { anima
   .project-panel-close svg, .viewer-close svg { width:20px; height:20px; }
 }
 @media(prefers-reduced-motion:reduce) { .project-panel, .project-panel iframe, .project-panel::backdrop, .project-panel-close svg, .viewer-close svg { transition:none; } }
+
+/* Office uses a return arrow; project details retain their original X control. */
+.project-panel-close .panel-back-icon { display:none; }
+.project-panel.is-office .project-panel-close { top:13px; right:13px; background:#292929; }
+.project-panel.is-office .panel-close-icon { display:none; }
+.project-panel.is-office .panel-back-icon { display:block; }
+.project-panel-close:focus-visible { outline:1px solid #fff; outline-offset:-5px; }
+.project-embedded .office-page .meunRBox { display:block; pointer-events:none; }
+
+@media(max-width:767px) { .project-panel.is-office .project-panel-close { top:8px; right:0; } }

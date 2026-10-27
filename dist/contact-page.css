@@ -20,11 +20,10 @@
 @media(prefers-reduced-motion:reduce){#contact-modal[open]{animation:none}}
 
 #contact-modal .contact-language{display:none}
-.contact-rail{cursor:pointer}
+
 .contact-rail>.contact-back-top{top:auto;bottom:28px;left:23px;width:24px;height:28px}
 .contact-back-top svg{width:24px;height:24px;stroke-width:1}
-#contact-modal.contact-menu-open>.menuBox{z-index:3}
-#contact-modal.contact-menu-open .contact-rail{z-index:4}
+
 @media(max-width:767px){.contact-rail>.contact-back-top{left:12px}}
 
 /* Touch layouts: preserve desktop geometry while avoiding small input/tap targets. */
@@ -41,3 +40,8 @@
 @media(max-width:767px){
   .contact-rail>button,.contact-rail>.contact-back-top{left:2px}
 }
+
+/* Return from Contact to the exact Office/project/landing context underneath. */
+.contact-rail>.contact-return { top:13px; left:13px; width:44px; height:44px; display:grid; place-items:center; }
+.contact-rail>.contact-return svg { width:22px; height:22px; }
+@media(max-width:767px) { .contact-rail>.contact-return { top:8px; left:2px; } }

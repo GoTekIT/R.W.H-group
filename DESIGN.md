@@ -118,7 +118,7 @@ components:
 
 This documents the built R.W.H identity: large architectural photography, the existing wordmark, restrained sans-serif text, white reading surfaces and charcoal navigation/footer surfaces. Its hierarchy comes from image scale, whitespace and light typography. Preserve that incumbent world when adding screens.
 
-Office is a separate `/office` extension presenting the complete parent R.W.H Office content and image relationships within the current R.W.H shell. Leadership, teams, the founder portrait and map lead into biography, philosophy, signature, Customer Dream, Japan/Vietnam services and two partner-logo strips. Vietnamese and English are whole-page language states. The parent page supplies content and original artwork; the incumbent Roboto typography, neutral palette, shared menu and footer remain the visual authority.
+Office opens inside the landing content panel (with `/office` retained as the source/fallback document), presenting the complete parent R.W.H Office content and image relationships within the current R.W.H shell. Leadership, teams, the founder portrait and map lead into biography, philosophy, signature, Customer Dream, Japan/Vietnam services and two partner-logo strips. Vietnamese and English are whole-page language states. The parent page supplies content and original artwork; the incumbent Roboto typography, neutral palette, shared menu and footer remain the visual authority.
 
 **Key Characteristics:**
 
@@ -204,7 +204,7 @@ Reading surfaces, menu/profile imagery, form fields and the submit action have s
 
 ## Components
 
-- **Menu control:** two thin light strokes, transforming into a close mark. Office gives it a (44px) square target inside the rail. The rail label is vertical, centered and noninteractive. Opening the menu hides the Office title, shortcuts and rail label.
+- **Menu control:** two thin light strokes, transforming into a close mark. The landing and standalone source documents keep this control; embedded Office replaces it with a (44px) return arrow in the rail. The rail label is vertical, centered and noninteractive. Opening the menu hides the Office title, shortcuts and rail label.
 - **Shared navigation:** uppercase hierarchy, expandable project list, company-profile preview and lower utility/social links. Keep the original link/profile arrangement. Desktop links receive a thin underline on hover; focused links and the project summary receive a visible (1px) outline. Mobile menu links have minimum (44px) targets and wrap within their column.
 - **Language controls:** transparent small text buttons; the selected state uses stronger text contrast, and hover/focus reveals an underline. Office uses dark text on paper and light text while the menu is open. Changing VI/EN replaces the active whole-page text state.
 - **Office editorial content:** unboxed sections with a consistent body role, bold section headings and subheadings and selective strong phrases. Meaningful introduction and qualification/date paragraphs precede the dated definition-list chronology. Years remain medium-weight Heading Ink on mobile as well as desktop. Japan/Vietnam service articles use aligned three-row grids and semantic lists, with one service per list item, within the selected language. The signature remains right aligned.
@@ -232,3 +232,11 @@ Menu sliding uses (0.5s ease-in-out), language underlines (0.28s ease), and foot
 - **Don't** adopt the parent page's burgundy palette or condensed type for the current interface.
 - **Don't** turn Office prose into cards, crop partner logos or recolor original image artwork.
 - **Don't** treat overridden glass-modal CSS as the current contact design.
+
+## Landing panels and return controls
+
+Office and project content share the existing full-screen sliding panel. Office uses a return arrow aligned inside its charcoal rail (desktop top/right13px; mobile top8px/right0). Project details and image viewing retain their original X controls; the return arrow is not shown for those surfaces. Loading/error text follows the content type and selected VI/EN state. Failed content offers an inline44px retry action.
+
+Contact uses one44px return arrow in place of its menu action (desktop top13px/left13px inside the rail; mobile top8px/left2px). It closes to the prior Office/project/landing state, preserving the document's scroll position. Only the active layer's close/return control is visible. Opening Contact or a content panel pauses landing autoplay; closing restores the same project with a complete viewing interval.
+
+The shared panel keeps the landing URL unchanged. Same-URL history entries make Browser Back close Contact or the active nested native dialog before closing Office/project content. Source-document navigation and cleanup replace iframe entries, avoiding extra blank Back steps. Embedded menu and home/project navigation are handled by the landing controller; ordinary modified-link and source fallbacks remain available. Browser evidence and state checks are recorded in `evidence/landing-office-20261027/`.

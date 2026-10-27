@@ -46,3 +46,16 @@ test('Office has complete Vietnamese and English copy and no Japanese page prose
   assert.equal(media['partners-01'].displayWidth, 3057);
   assert.equal(media['partners-02'].displayWidth, 2453);
 });
+
+
+test('Office uses the landing panel integration and every Contact has one return control', () => {
+  assert.ok(html.includes('project-panel.js'));
+  assert.ok(html.includes('project-panel.css'));
+  const files = [path.join(root,'dist/index.html'),path.join(root,'dist/office/index.html'),...fs.readdirSync(path.join(root,'dist/projects')).map(slug=>path.join(root,'dist/projects',slug,'index.html'))];
+  for (const file of files) {
+    const source = fs.readFileSync(file,'utf8');
+    assert.equal((source.match(/data-contact-return/g)||[]).length, 1, file);
+    assert.doesNotMatch(source, /data-contact-menu/, file);
+  }
+  assert.match(fs.readFileSync(path.join(root,'dist/index.html'),'utf8'), /href="\/office" data-office-open aria-haspopup="dialog"/);
+});
