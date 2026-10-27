@@ -49,3 +49,12 @@ html:has(.video-library[open]){overflow:hidden;scrollbar-gutter:auto}
   .video-stage video{object-fit:contain}
   .project-film>h2{top:16px;left:16px}
 }
+
+/* Vimeo keeps an undistorted landscape frame on every screen. */
+.project-film .video-stage:has([data-video-provider="vimeo"]),
+.video-library .video-stage:has([data-video-provider="vimeo"]){height:auto;aspect-ratio:16/9}
+.video-stage>[data-video-provider="vimeo"]{position:absolute;inset:0;width:100%;height:100%}
+@media (orientation:landscape) and (max-height:500px) and (max-width:1024px){
+ .project-film .video-stage:has([data-video-provider="vimeo"]){height:calc(100svh - 76px);aspect-ratio:auto}
+ .project-film .video-stage>[data-video-provider="vimeo"]{width:min(100%,calc((100svh - 76px)*16/9));height:100%;left:50%;transform:translateX(-50%)}
+}

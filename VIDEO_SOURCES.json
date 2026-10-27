@@ -1,37 +1,96 @@
 {
-  "updated": "2026-10-26",
-  "placement": "Native inline players in the shared Video library; one full-width film at the top of each project Details, immediately below the header and before photos. No source-link buttons or separate playback dialog.",
+  "updated": "2026-10-27",
+  "placement": "Vimeo iframe players in the shared Video library and at the top of project Details, immediately below the existing header. Original Cloudflare URLs retained as rollback metadata.",
   "videos": [
     {
       "id": "onsen-living",
       "title": "R.W.H Group — The Art of Onsen Living",
-      "kind": "mp4",
+      "kind": "vimeo",
       "source": "assets/rwh-videos/onsen-living-web.mp4",
       "poster": "assets/rwh-videos/onsen-living-poster.jpg",
       "noteKey": "brandFilm",
-      "scope": "General RWH brand film, not identified as footage of each listed project. Public Drive original retained; web derivative 1280x720 H.264/AAC, 288.23 sec, faststart, video maxrate 1800 kbps.",
+      "scope": "Client-approved RWH brand film for Thanh Thuy. Original Drive file, 2560x1440 H.264/AAC, uploaded unchanged to Vimeo; previous web derivative retained for rollback.",
       "original": "https://drive.google.com/file/d/1G4dXH9G4kFijcQazUvHmWHSYDvSaX8xc/view",
       "bytes": 55591378,
       "sha256": "69a9cb1b168be632ab139af0d3c68d937bd5830ac3db8e2b93aca99e4a497540",
       "originalBytes": 742314441,
-      "deliveryUrl": "https://media.nguyenxuanphu.net/rwh/69a9cb1b168b/onsen-living-web.mp4"
+      "deliveryUrl": "https://media.nguyenxuanphu.net/rwh/69a9cb1b168b/onsen-living-web.mp4",
+      "vimeoId": "1239708807",
+      "embed": "https://player.vimeo.com/video/1239708807?autoplay=1&muted=0&playsinline=1&autopause=1&title=0&byline=0&portrait=0",
+      "uploadedOn": "2026-10-27",
+      "uploadBytes": 742314441,
+      "uploadSha256": "adf959cdf2ab663158d631c6f5afa4acb596928dabfb46b259e17b605f1ef405",
+      "uploadMediaInfo": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 2560,
+            "height": 1440
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio"
+          }
+        ],
+        "format": {
+          "duration": "288.229297",
+          "size": "742314441"
+        }
+      }
     },
     {
       "id": "aegis-pr",
       "title": "AEGIS International Hospital — PR Movie",
-      "kind": "mp4",
+      "kind": "vimeo",
       "source": "assets/rwh-videos/aegis-pr-movie.mp4",
       "poster": "assets/rwh-videos/aegis-pr-poster.jpg",
       "noteKey": "projectFilm",
-      "scope": "Supplied local pr movie.mp4. AEGIS branding verified in extracted frame; H.264, 640x480, 190.67 seconds. Original resolution retained.",
+      "scope": "Client replacement supplied in Zalo 2026-10-26 17:02. Highest available source 2560x1440 VP9/AAC; stream-copy mux with no re-encoding before Vimeo upload. Vimeo playback verified; previous Cloudflare file retained for rollback.",
       "bytes": 19313899,
       "sha256": "32926a9571d1ba06b99f78239c92f5a0223a7ef5a64faf52d172ca063cfd2346",
-      "deliveryUrl": "https://media.nguyenxuanphu.net/rwh/32926a9571d1/aegis-pr-movie.mp4"
+      "deliveryUrl": "https://media.nguyenxuanphu.net/rwh/32926a9571d1/aegis-pr-movie.mp4",
+      "legacyDelivery": {
+        "kind": "mp4",
+        "source": "assets/rwh-videos/aegis-pr-movie.mp4",
+        "deliveryUrl": "https://media.nguyenxuanphu.net/rwh/32926a9571d1/aegis-pr-movie.mp4",
+        "bytes": 19313899,
+        "sha256": "32926a9571d1ba06b99f78239c92f5a0223a7ef5a64faf52d172ca063cfd2346",
+        "scope": "Supplied local pr movie.mp4. AEGIS branding verified in extracted frame; H.264, 640x480, 190.67 seconds. Original resolution retained."
+      },
+      "embed": "https://player.vimeo.com/video/1239701212?autoplay=1&muted=0&playsinline=1&autopause=1&title=0&byline=0&portrait=0",
+      "original": "https://www.youtube.com/watch?v=X6Pxndcwgyc",
+      "vimeoId": "1239701212",
+      "uploadedOn": "2026-10-27",
+      "uploadSha256": "661fc8339acaedd5f7aec329adf7f128073ca2f6e5a319a060506d9fb84e21b5",
+      "uploadBytes": 148419037,
+      "uploadMediaInfo": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "vp9",
+            "codec_type": "video",
+            "width": 2560,
+            "height": 1440
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio"
+          }
+        ],
+        "format": {
+          "duration": "190.426848",
+          "size": "148419037"
+        }
+      }
     },
     {
       "id": "kyoto",
       "title": "Banyan Tree Higashiyama Kyoto | A Sense of History",
-      "kind": "mp4",
+      "kind": "vimeo",
       "source": "assets/rwh-videos/kyoto-4k.mp4",
       "poster": "assets/rwh-videos/kyoto-poster.jpg",
       "noteKey": "referenceFilm",
@@ -61,28 +120,58 @@
           "size": "228183276"
         }
       },
-      "deliveryUrl": "https://media.nguyenxuanphu.net/rwh/3560fe523a64/kyoto-4k.mp4"
+      "deliveryUrl": "https://media.nguyenxuanphu.net/rwh/3560fe523a64/kyoto-4k.mp4",
+      "vimeoId": "1239711740",
+      "embed": "https://player.vimeo.com/video/1239711740?autoplay=1&muted=0&playsinline=1&autopause=1&title=0&byline=0&portrait=0",
+      "uploadedOn": "2026-10-27",
+      "uploadSha256": "3560fe523a6433da58e005c16bbf0662640d04ed5ced011d9dc4e02c1d00c815",
+      "uploadBytes": 228183276
     },
     {
       "id": "nam-o-residence",
       "title": "NAM Ô RESIDENCE — The Art of Onsen Living 2",
-      "kind": "mp4",
+      "kind": "vimeo",
       "source": "assets/rwh-videos/nam-o-residence-web.mp4",
       "poster": "assets/rwh-videos/nam-o-residence-poster.jpg",
       "noteKey": "projectFilm",
-      "scope": "Client assigned this supplied Drive film to Nam O Residence on 2026-10-21. Nam O building signage verified in extracted frame. Original 3840x2160 H.264/AAC, 60 fps, 188.99 seconds; web derivative 1920x1080 H.264/AAC, 30 fps, faststart, video maxrate 3500 kbps, AAC 128 kbps.",
+      "scope": "Client-selected original source uploaded unchanged to Vimeo on 2026-10-27. Source resolution and audio retained before upload; Vimeo creates adaptive playback renditions. Previous Cloudflare web/compatibility delivery retained for rollback.",
       "original": "https://drive.google.com/file/d/16IZtLq8OA0buNo7e2MnUiQ0cNAVg6tBh/view",
       "sourceFolder": "https://drive.google.com/drive/folders/1EUvQgWKoavkvYkxQeSoWrmMUvcKFbl8B",
       "originalBytes": 908712625,
       "bytes": 66196541,
       "sha256": "37abdf207e7bc44a557071c620cb540319fbadab4d2f23a0440e020b248f89b3",
       "originalSha256": "d79cbb816a02359398474ca8549712959de5c5453a40c1e68dfbc642358fc839",
-      "deliveryUrl": "https://media.nguyenxuanphu.net/rwh/37abdf207e7b/nam-o-residence-web.mp4"
+      "deliveryUrl": "https://media.nguyenxuanphu.net/rwh/37abdf207e7b/nam-o-residence-web.mp4",
+      "vimeoId": "1239711738",
+      "embed": "https://player.vimeo.com/video/1239711738?autoplay=1&muted=0&playsinline=1&autopause=1&title=0&byline=0&portrait=0",
+      "uploadedOn": "2026-10-27",
+      "uploadBytes": 908712625,
+      "uploadSha256": "d79cbb816a02359398474ca8549712959de5c5453a40c1e68dfbc642358fc839",
+      "uploadMediaInfo": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 3840,
+            "height": 2160
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio"
+          }
+        ],
+        "format": {
+          "duration": "188.987007",
+          "size": "908712625"
+        }
+      }
     },
     {
       "id": "hera-resort",
       "title": "THE HERA RESORT — Ghềnh Ráng",
-      "kind": "mp4",
+      "kind": "vimeo",
       "source": "assets/rwh-videos/hera-resort-4k.mp4",
       "poster": "assets/rwh-projects/the-hera-resort/hero.webp",
       "noteKey": "projectFilm",
@@ -115,12 +204,17 @@
       },
       "deliveryUrl": "https://media.nguyenxuanphu.net/rwh/a9eff79bf5b9/hera-resort-4k.mp4",
       "mobileDeliveryUrl": "https://media.nguyenxuanphu.net/rwh/bd95cac2908d/hera-resort-mobile-1080p.mp4",
-      "mobileBytes": 70502734
+      "mobileBytes": 70502734,
+      "vimeoId": "1239705668",
+      "embed": "https://player.vimeo.com/video/1239705668?autoplay=1&muted=0&playsinline=1&autopause=1&title=0&byline=0&portrait=0",
+      "uploadedOn": "2026-10-27",
+      "uploadSha256": "a9eff79bf5b9300606bbc9ec4a0b104d00b4c6630ad25c6b0e5d92b2d12ae752",
+      "uploadBytes": 356433102
     },
     {
       "id": "ecopark-hung-yen",
       "title": "ECOPARK HƯNG YÊN — Onsen",
-      "kind": "mp4",
+      "kind": "vimeo",
       "source": "assets/rwh-videos/ecopark-hung-yen-1080p.mp4",
       "poster": "assets/rwh-projects/ecopark-hung-yen/hero.webp",
       "noteKey": "projectFilm",
@@ -151,12 +245,15 @@
           "size": "24148063"
         }
       },
-      "deliveryUrl": "https://media.nguyenxuanphu.net/rwh/d53b13f4eca1/ecopark-hung-yen-1080p.mp4"
+      "deliveryUrl": "https://media.nguyenxuanphu.net/rwh/d53b13f4eca1/ecopark-hung-yen-1080p.mp4",
+      "vimeoId": "1239702391",
+      "embed": "https://player.vimeo.com/video/1239702391?autoplay=1&muted=0&playsinline=1&autopause=1&title=0&byline=0&portrait=0",
+      "uploadedOn": "2026-10-27"
     },
     {
       "id": "kawara-my-an",
       "title": "KAWARA MỸ AN ONSEN RESORT",
-      "kind": "mp4",
+      "kind": "vimeo",
       "source": "assets/rwh-videos/kawara-my-an-4k.mp4",
       "poster": "assets/rwh-projects/kawara-my-an/hero.webp",
       "noteKey": "projectFilm",
@@ -189,12 +286,17 @@
       },
       "deliveryUrl": "https://media.nguyenxuanphu.net/rwh/a7a9be04e187/kawara-my-an-4k.mp4",
       "mobileDeliveryUrl": "https://media.nguyenxuanphu.net/rwh/008aa3627f35/kawara-my-an-mobile-1080p.mp4",
-      "mobileBytes": 70824566
+      "mobileBytes": 70824566,
+      "vimeoId": "1239705666",
+      "embed": "https://player.vimeo.com/video/1239705666?autoplay=1&muted=0&playsinline=1&autopause=1&title=0&byline=0&portrait=0",
+      "uploadedOn": "2026-10-27",
+      "uploadSha256": "a7a9be04e187436e90bb18757ca8b029973bb3f277c579e3ca004fd997b2d42c",
+      "uploadBytes": 259113479
     },
     {
       "id": "binh-minh",
       "title": "Bình Minh Healthcare & Resort — The Art of Onsen Living 3",
-      "kind": "mp4",
+      "kind": "vimeo",
       "source": "assets/rwh-videos/binh-minh-faststart.mp4",
       "poster": "assets/rwh-projects/binh-minh/hero.webp",
       "noteKey": "projectFilm",
@@ -204,7 +306,10 @@
       "sha256": "12a2cf78a0a186b222af0fc8930fe68f493d4c78afade3440cd5d4c70bed865d",
       "deliveryUrl": "https://media.nguyenxuanphu.net/rwh/12a2cf78a0a1/binh-minh-faststart.mp4",
       "mobileDeliveryUrl": "https://media.nguyenxuanphu.net/rwh/6cf7b07031f6/binh-minh-mobile-1080p.mp4",
-      "mobileBytes": 106522365
+      "mobileBytes": 106522365,
+      "vimeoId": "1239702392",
+      "embed": "https://player.vimeo.com/video/1239702392?autoplay=1&muted=0&playsinline=1&autopause=1&title=0&byline=0&portrait=0",
+      "uploadedOn": "2026-10-27"
     },
     {
       "id": "hakuba-nagano-4k",
@@ -353,17 +458,42 @@
       },
       "deliveryUrl": "https://media.nguyenxuanphu.net/rwh/26168a4adead/hakuba-h264-4k.mp4",
       "title": "Hakuba — Spring in Nagano, Japan",
-      "kind": "mp4",
+      "kind": "vimeo",
       "source": "assets/rwh-videos/hakuba-h264-4k.mp4",
       "poster": "assets/rwh-projects/hakuba-hotel/hero.webp",
       "noteKey": "clientFilm",
-      "scope": "Client-selected film. H.264 compatibility encode at original resolution; AAC audio copied unchanged; faststart. Original source retained separately.",
+      "scope": "Client-selected original source uploaded unchanged to Vimeo on 2026-10-27. Source resolution and audio retained before upload; Vimeo creates adaptive playback renditions. Previous Cloudflare web/compatibility delivery retained for rollback.",
       "downloadedOn": "2026-10-24",
       "downloadedVia": "yt-dlp",
       "previousDeliveryUrl": "https://media.nguyenxuanphu.net/rwh/b2143c7eabbc/hakuba-nagano-4k.mp4",
       "updatedOn": "2026-10-26",
       "mobileDeliveryUrl": "https://media.nguyenxuanphu.net/rwh/418cadcc9552/hakuba-nagano-4k-mobile-1080p.mp4",
-      "mobileBytes": 203940632
+      "mobileBytes": 203940632,
+      "vimeoId": "1239711741",
+      "embed": "https://player.vimeo.com/video/1239711741?autoplay=1&muted=0&playsinline=1&autopause=1&title=0&byline=0&portrait=0",
+      "uploadedOn": "2026-10-27",
+      "uploadBytes": 825338446,
+      "uploadSha256": "b2143c7eabbc2ea33c5c0b63e199b5fc28aa97f2cce813598811ff401108190c",
+      "uploadMediaInfo": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "vp9",
+            "codec_type": "video",
+            "width": 3840,
+            "height": 2160
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio"
+          }
+        ],
+        "format": {
+          "duration": "500.784762",
+          "size": "825338446"
+        }
+      }
     },
     {
       "id": "thien-mu-4k",
@@ -512,17 +642,22 @@
       },
       "deliveryUrl": "https://media.nguyenxuanphu.net/rwh/eaced0d10191/thien-mu-h264-4k.mp4",
       "title": "Thiên Mụ — Thien Mu Pagoda",
-      "kind": "mp4",
+      "kind": "vimeo",
       "source": "assets/rwh-videos/thien-mu-h264-4k.mp4",
       "poster": "assets/rwh-projects/thien-mu-hotel/hero.webp",
       "noteKey": "clientFilm",
-      "scope": "Client-selected film. H.264 compatibility encode at original resolution; AAC audio copied unchanged; faststart. Original source retained separately.",
+      "scope": "Client-selected original VP9/AAC source 3840x2026 uploaded unchanged to Vimeo. Shown without stretching inside the 16:9 player; previous H.264 Cloudflare compatibility encode retained for rollback.",
       "downloadedOn": "2026-10-24",
       "downloadedVia": "yt-dlp",
       "previousDeliveryUrl": "https://media.nguyenxuanphu.net/rwh/e7c0e508485e/thien-mu-4k.mp4",
       "updatedOn": "2026-10-26",
       "mobileDeliveryUrl": "https://media.nguyenxuanphu.net/rwh/0c2d6d9b6fa0/thien-mu-4k-mobile-1080p.mp4",
-      "mobileBytes": 62001948
+      "mobileBytes": 62001948,
+      "vimeoId": "1239705667",
+      "embed": "https://player.vimeo.com/video/1239705667?autoplay=1&muted=0&playsinline=1&autopause=1&title=0&byline=0&portrait=0",
+      "uploadedOn": "2026-10-27",
+      "uploadSha256": "e7c0e508485e8283e61afc41afd7af253be9692e60fd1316c3a9f0ac4c09cd9b",
+      "uploadBytes": 287136720
     },
     {
       "id": "ecopark-thanh-hoa-1080p",
@@ -551,18 +686,21 @@
       },
       "deliveryUrl": "https://media.nguyenxuanphu.net/rwh/cb934ed443da/ecopark-thanh-hoa-1080p.mp4",
       "title": "Ecopark Thanh Hoá",
-      "kind": "mp4",
+      "kind": "vimeo",
       "source": "assets/rwh-videos/ecopark-thanh-hoa-1080p.mp4",
       "poster": "assets/rwh-projects/ecopark-thanh-hoa/hero.webp",
       "noteKey": "clientFilm",
       "scope": "Client-selected film for Ecopark Thanh Hoa. Highest available source resolution retained. VP9/AAC or H.264/AAC stream-copy mux, faststart; no re-encoding.",
       "downloadedOn": "2026-10-24",
-      "downloadedVia": "yt-dlp"
+      "downloadedVia": "yt-dlp",
+      "vimeoId": "1239702394",
+      "embed": "https://player.vimeo.com/video/1239702394?autoplay=1&muted=0&playsinline=1&autopause=1&title=0&byline=0&portrait=0",
+      "uploadedOn": "2026-10-27"
     },
     {
       "id": "capital-one",
       "title": "CAPITAL ONE — R.W.H Group",
-      "kind": "mp4",
+      "kind": "vimeo",
       "poster": "assets/rwh-projects/capital-one/hero.webp",
       "noteKey": "projectFilm",
       "original": "https://www.youtube.com/watch?v=1v_3T7FHs-M",
@@ -710,10 +848,35 @@
         }
       },
       "source": "assets/rwh-videos/capital-one-1440p.mp4",
-      "scope": "Client-selected film. H.264 compatibility encode at original resolution; AAC audio copied unchanged; faststart. Original source retained separately.",
+      "scope": "Client-selected film uploaded to Vimeo from original 2560x1440 VP9/AAC stream-copy source, without recompression before upload. Previous Cloudflare delivery retained for rollback.",
       "updatedOn": "2026-10-26",
       "mobileDeliveryUrl": "https://media.nguyenxuanphu.net/rwh/b05be64381c2/capital-one-mobile-1080p.mp4",
-      "mobileBytes": 140076931
+      "mobileBytes": 140076931,
+      "vimeoId": "1239702393",
+      "embed": "https://player.vimeo.com/video/1239702393?autoplay=1&muted=0&playsinline=1&autopause=1&title=0&byline=0&portrait=0",
+      "uploadedOn": "2026-10-27",
+      "uploadBytes": 219811971,
+      "uploadSha256": "715df94f519fba976afa98e82cb32f99ea1e45c54a3eddda45148c8c9b6fda03",
+      "uploadMediaInfo": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "vp9",
+            "codec_type": "video",
+            "width": 2560,
+            "height": 1440
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio"
+          }
+        ],
+        "format": {
+          "duration": "361.465034",
+          "size": "219811971"
+        }
+      }
     }
   ],
   "projectAssignments": {
@@ -729,5 +892,5 @@
     "ecopark-hung-yen": "ecopark-hung-yen",
     "binh-minh": "binh-minh"
   },
-  "playback": "Local inline playback defaults to sound on. Autoplay is attempted when sufficiently visible; native Play remains available when browser autoplay policy blocks sound. Offscreen media stops. Reduced-motion disables autoplay. Viewer mute/volume changes are preserved."
+  "playback": "Vimeo SDK attempts audible inline playback when visible. If browser policy blocks sound, Vimeo Play remains available without an automatic muted retry. Offscreen players pause; viewer volume choices are preserved. Reduced-motion disables autoplay."
 }

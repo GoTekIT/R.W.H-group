@@ -28,14 +28,15 @@ def asset(name):
 
 
 def video_card(video, prefix='./'):
-    source = video.get('deliveryUrl') or video.get('embed') or (prefix + video['source'])
+    source = video['embed'] if video['kind'] == 'vimeo' else (video.get('deliveryUrl') or video.get('embed') or (prefix + video['source']))
     poster = prefix + video['poster']
     notes = {'clientFilm': 'Video do khách hàng lựa chọn.', 'brandFilm': 'Phim giới thiệu chung của R.W.H Group.', 'projectFilm': 'Phim giới thiệu dự án.', 'referenceFilm': 'Video tham khảo · withBanyan. Không thuộc danh mục dự án R.W.H Group.'}
     if video['kind'] == 'mp4':
         mobile = f' data-mobile-src="{e(video["mobileDeliveryUrl"])}"' if video.get('mobileDeliveryUrl') else ''
         media = f'<video data-inline-video controls playsinline preload="none" poster="{e(poster)}" src="{e(source)}"{mobile} aria-label="{e(video["title"])}"></video>'
     else:
-        media = f'<iframe data-video-embed="{e(source)}" title="{e(video["title"])}" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>'
+        provider = ' data-video-provider="vimeo"' if video['kind'] == 'vimeo' else ''
+        media = f'<iframe{provider} data-video-embed="{e(source)}" title="{e(video["title"])}" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>'
     return f'''<article class="video-card"><div class="video-stage" data-video-stage data-video-kind="{e(video['kind'])}">{media}</div><h3>{e(video['title'])}</h3><p data-i18n="{video['noteKey']}">{notes[video['noteKey']]}</p></article>'''
 
 
@@ -180,7 +181,7 @@ html = html.replace('</body>', '''<dialog class="project-panel" id="project-pane
         <p class="project-panel-loading" data-i18n="loadingProject">Đang tải dự án…</p>
         <div class="project-panel-error"><p data-i18n="projectLoadError">Chưa tải được dự án. Vui lòng thử mở lại.</p><a href="./projects/the-hera-resort/index.html" data-panel-fallback target="_blank" rel="noopener noreferrer" data-i18n="openProjectPage">Mở trang dự án</a></div>
     </div>
-    <iframe allow="autoplay; fullscreen" title="Chi tiết dự án" tabindex="-1" aria-hidden="true"></iframe>
+    <iframe allow="autoplay; fullscreen; picture-in-picture" title="Chi tiết dự án" tabindex="-1" aria-hidden="true"></iframe>
     <button class="project-panel-close" data-panel-close type="button" aria-label="Đóng chi tiết dự án" data-i18n-aria-label="closeProject" autofocus><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
 </dialog>
 </body>''')

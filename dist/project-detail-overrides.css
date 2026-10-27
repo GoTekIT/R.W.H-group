@@ -103,3 +103,11 @@ body:has(dialog[open]) { overflow:hidden; }
 /* Keep the project identity in its own grey band above the film. */
 body:has(.project-film) #gHeader.header01,
 body:has(.project-film) #gHeader.header01.show01{position:relative;box-sizing:border-box;background:#292929}
+@media (orientation:landscape) and (max-height:500px) and (max-width:1024px){
+ html,body,#container,#gHeader{min-width:0;width:100%;max-width:100%}
+ #gHeader.header01,#gHeader.header01.show01{position:relative;min-height:76px;padding:14px 150px 14px max(24px,env(safe-area-inset-left))}
+ #gHeader.header01 .inner{grid-template-columns:minmax(0,1fr);gap:8px}
+ #gHeader.header01 h1{display:none}.comTopLinkBox{text-align:left}.comTopLinkBox h2{font-size:19px;margin-bottom:4px}
+ .comTopLinkBox .txt{font-size:10px}body>.language-switch{top:18px;right:70px}
+ .meunRBox{height:64px;width:48px}.meunRBox .menu{top:28px;right:16px}
+}

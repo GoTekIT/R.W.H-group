@@ -1,5 +1,7 @@
 # R.W.H Group — Landing page
 
+> **Video 27/10/2026 (Vimeo):** Cả 11 dự án và 12 phim trong thư viện đã chuyển sang iframe Vimeo. AEGIS dùng clip mới khách gửi ngày 26/10. Upload file nguồn chất lượng cao, không nén lại trước upload; Vimeo tự tạo các mức chất lượng phát. Thử tự phát có tiếng; nếu trình duyệt chặn thì dùng Play, không tự chuyển sang tắt tiếng. Khung 16:9, có bố cục mobile dọc/ngang. URL Cloudflare giữ trong manifest để khôi phục. Xem [VIMEO_MEDIA.md](VIMEO_MEDIA.md). Các ghi chú 23/10 dưới đây là lịch sử.
+
 > **Cập nhật video 23/10/2026 (Cloudflare R2):** Đã thay cả bốn iframe YouTube bằng MP4 local tải qua YTSave: Hera, Kawara và phim tham khảo Kyoto ở 3840×2160; Ecopark Hưng Yên ở 1920×1080 vì nguồn chỉ có tối đa 1080p. Giữ nguyên sáu dự án dùng phim thương hiệu chung và MP4 Aegis/Nam Ô. Video mặc định có tiếng; thử tự phát khi hiển thị, nếu trình duyệt chặn thì người xem dùng nút Play. Không tự chuyển về mute khi bị chặn, giữ lựa chọn âm lượng của người xem. Các mô tả YouTube/muted và dung lượng phía dưới là trạng thái bàn giao cũ trước cập nhật này. Đã cấu hình nguồn phát Cloudflare R2 qua media.nguyenxuanphu.net cho 7 video; xem R2_MEDIA.md. CDN đã hoạt động; source dùng URL media.nguyenxuanphu.net. Trạng thái triển khai xem GitHub/Vercel theo commit. Không commit các file MP4 mới.
 
 Website giới thiệu 11 dự án RWH, giao diện tham chiếu Apollo, nội dung tiếng Việt/Anh, gallery ảnh, video và form liên hệ. Bộ dự án đang chạy là dữ liệu RWH khách hàng cung cấp, không phải bộ dự án mẫu Apollo.
@@ -25,8 +27,8 @@ Form gửi JSON tới `POST /api/contact`. `api/contact.js` là entrypoint Verce
 - Details trượt phủ toàn màn hình tại chỗ. Khi mở, landing dừng tự chuyển và chuyển động nền; đóng xong thì chạy tiếp với khoảng xem mới đủ 6 giây.
 - Header Details giữ ở trên khi cuộn; video ở đầu, sau đó là ảnh tràn ngang, mô tả, thông tin và dự án liên quan.
 - VI/EN được lưu trên trình duyệt; menu in hoa, hồ sơ năng lực mở PDF RWH.
-- Mỗi dự án có một phim. Nam Ô và AEGIS dùng MP4 riêng; Hera, Kawara Mỹ An, Ecopark Hưng Yên dùng YouTube; sáu dự án còn lại dùng phim giới thiệu chung đã ghi chú. Thư viện Video có bảy phim.
-- Video tự phát tắt tiếng khi đủ hiển thị, có điều khiển âm thanh/toàn màn hình; giảm chuyển động dùng Play thủ công.
+- Mỗi dự án có đúng một iframe Vimeo. Thư viện Video có 12 phim, gồm 11 nguồn gắn với 11 dự án và clip Kyoto tham khảo.
+- Video thử tự phát có tiếng khi đủ hiển thị; nếu bị trình duyệt chặn thì giữ nút Play có tiếng. Tôn trọng lựa chọn âm lượng của người xem và tùy chọn giảm chuyển động.
 - Contact chỉ gồm Name, Email, Questions. Hotline: `0982-132-489`.
 
 ## Các file cần biết
@@ -69,13 +71,13 @@ Server xem trước này chỉ phục vụ file tĩnh, không chạy `/api/conta
 
 Vercel hiện triển khai từ GitHub `main`, dùng gốc repository, output `dist`, không cần install/build command. Các biến `RESEND_API_KEY` và `RESEND_FROM_EMAIL` được nhập phía server; `.env.example` chỉ chứa tên biến, không có khóa thật.
 
-Chưa có xác nhận thư thật đã tới hộp thư người nhận; cần cấu hình Resend và kiểm tra khi bàn giao. Nhà cung cấp hosting/domain mới chưa được chốt. Ba clip YouTube dự án chưa được thay bằng MP4 vì đang chờ file khách cung cấp. PDF hiện khoảng 10,85 MiB, chưa đạt mục tiêu dưới 3 MB. Xem chi tiết trạng thái, tài nguyên và quy trình nghiệm thu trong [HANDOVER.md](HANDOVER.md).
+Chưa có xác nhận thư thật đã tới hộp thư người nhận; cần cấu hình Resend và kiểm tra khi bàn giao. Nhà cung cấp hosting/domain mới chưa được chốt. PDF hiện khoảng 10,85 MiB, chưa đạt mục tiêu dưới 3 MB. Xem chi tiết trạng thái, tài nguyên và quy trình nghiệm thu trong [HANDOVER.md](HANDOVER.md).
 
 ## Media quality policy (2026-10-26)
 
 - Desktop landing and gallery photos use original Drive file bytes or the original embedded image stream extracted from the supplied PDF/PowerPoint. Do not resize or re-encode these to chase a performance score.
 - `ORIGINAL_MEDIA_AUDIT.json` records each image hash, size and provenance. `retained-existing` identifies the 15 Binh Minh photos outside the supplied Drive and the two Thanh Thuy Zalo additions; these are not claimed as verified Drive originals.
 - Mobile uses a separate high-quality WebP rendition, at most 1600 px wide, without upscaling. The full-resolution original remains the gallery zoom target.
-- Desktop video keeps its full-quality CDN URL. Only viewports at or below 767 px select an available mobile rendition; coarse pointer alone must not downgrade desktop/tablet video.
+- Vimeo embeds use adaptive quality on desktop and mobile. Original upload metadata and previous Cloudflare URLs remain in VIDEO_SOURCES.json; no mobile MP4 override is active for Vimeo.
 - `prepare-original-media.py CACHE_DIR` reproduces assets from the downloaded Drive files (Pillow and PyMuPDF required). `render-projects.py` builds pages. Keep the original files and client-approved hero choices intact.
 - Validate with `node --test tests/*.test.cjs`, then measure the deployed site. PageSpeed results from previous compressed assets do not establish the score of this version.
