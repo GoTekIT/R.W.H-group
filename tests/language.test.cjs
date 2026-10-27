@@ -75,7 +75,7 @@ test('language switching remains usable when browser storage is blocked', () => 
 test('all rendered translation keys exist in both languages', () => {
   const p = page();
   const files = [path.join(dist, 'index.html'), path.join(dist, 'office/index.html'), ...fs.readdirSync(path.join(dist, 'projects')).map(name => path.join(dist, 'projects', name, 'index.html'))];
-  const keys = new Set(files.flatMap(file => [...fs.readFileSync(file, 'utf8').matchAll(/data-i18n(?:-aria-label|-content|-alt)?="([^"]+)"/g)].map(match => match[1])));
+  const keys = new Set(files.flatMap(file => [...fs.readFileSync(file, 'utf8').matchAll(/data-(?:i18n(?:-aria-label|-content|-alt)?|office-rich|office-service)="([^"]+)"/g)].map(match => match[1])));
   for (const language of ['vi', 'en']) {
     p.api.setLanguage(language);
     for (const key of keys) assert.notEqual(p.api.t(key), key, `${language}: ${key}`);

@@ -67,7 +67,7 @@ body.office-page { margin:0; min-width:0; background:#fff; color:#333; }
 .office-company span { display:block; font-size:25px; font-weight:300; margin-top:8px; }
 .office-person { margin-bottom:30px; }
 .office-person p,.office-person a { font-size:14px; line-height:1.8; }
-.office-person h3 { max-width:14ch; }
+
 .office-team > a { display:inline-block; margin-bottom:14px; font-size:18px; line-height:1.5; font-weight:300; }
 .office-team li { margin-bottom:2px; }
 .office-team li a,.office-team li span { display:inline-flex; align-items:center; min-height:32px; }
@@ -75,7 +75,7 @@ body.office-page { margin:0; min-width:0; background:#fff; color:#333; }
 .office-main figure img { display:block; width:100%; height:auto; }
 .office-map { margin:0; }
 .office-map figcaption { margin-top:12px; font:400 11px/1.7 Roboto,Arial,sans-serif; color:#666; }
-.office-editorial { width:76%; max-width:900px; margin:110px auto 0; }
+.office-editorial { width:76%; max-width:76ch; margin:110px auto 0; }
 .office-editorial section + section { margin-top:72px; }
 .office-editorial p { margin:0 0 16px; }
 .office-founder h3 { margin-top:28px!important; }
@@ -88,14 +88,13 @@ body.office-page { margin:0; min-width:0; background:#fff; color:#333; }
 .office-dream { text-align:center; padding-top:24px; }
 .office-services { display:grid; grid-template-columns:1fr 1fr; gap:48px; margin-top:56px; }
 .office-services h3 { text-transform:uppercase; }
-.office-services .office-service-company { font-weight:500; min-height:55px; }
+.office-services .office-service-company { font-weight:500; }
 .office-services p { max-width:33ch; margin:0 auto 16px; }
 .office-partners { margin-top:88px; border-top:1px solid #ddd; padding-top:48px; }
 .office-partners-heading { display:flex; flex-direction:column; align-items:center; gap:0; margin-bottom:32px; }
 .office-page .office-main .office-partners-heading h2 { margin-bottom:14px; }
 .office-partner-strips { display:grid; gap:28px; }
 .office-partner-strip:focus-visible { outline:1px solid #333; outline-offset:6px; }
-.office-partners-hint { display:block; color:#666; text-align:center; font-size:12px!important; }
 .office-partner-strip { min-width:0; max-width:100%; overflow-x:auto; padding-bottom:12px; background:#fff; scrollbar-color:#888 #f0f0f0; scrollbar-width:thin; }
 .office-partner-strip img { display:block; width:auto; max-width:none; height:112px; }
 .office-partner-strip:nth-child(2) img { height:135px; }
@@ -125,5 +124,43 @@ body.office-page { margin:0; min-width:0; background:#fff; color:#333; }
   .office-partners { margin-top:56px; padding-top:36px; }
   .office-partner-strips { gap:20px; }
 
-  .office-partners-hint { display:block; text-align:center; font-size:12px!important; }
+}
+
+/* Typographic hierarchy: meaningful paragraphs, complete names and clear facts. */
+.office-page .office-main h2 { text-wrap:balance; font-weight:400; }
+.office-page .office-main h3 { font-weight:500; text-wrap:balance; }
+.office-person h3 { max-width:none; margin-bottom:10px!important; }
+.office-person > a,.office-person > p { font-weight:500; text-wrap:balance; }
+.office-main strong { font-weight:500; }
+[data-office-rich="officeContent.founderIntro"] strong { white-space:nowrap; }
+.office-founder .office-qualification-date { margin-top:-10px; }
+.office-services article { display:grid; grid-template-rows:auto 1fr auto; }
+.office-editorial p { text-wrap:pretty; }
+.office-career-row { grid-template-columns:100px minmax(0,1fr); gap:24px; margin-bottom:16px; }
+.office-career dt { color:#111; }
+.office-services { gap:48px; }
+.office-services .office-service-company { min-height:0; max-width:34ch; margin-bottom:20px; text-wrap:balance; }
+.office-service-company strong { white-space:nowrap; }
+.office-services .office-service-list { display:grid; gap:4px; margin:0; padding:0; }
+.office-service-list li { text-wrap:balance; }
+.office-partners-heading [data-partners-toggle] { padding:8px 0; min-height:44px; border:0; border-bottom:1px solid #888; border-radius:0; background:transparent; color:#555; font:400 12px/1.6 Roboto,Arial,sans-serif; cursor:pointer; }
+.office-partners-heading [data-partners-toggle]:hover { color:#111; }
+.office-partners-heading [data-partners-toggle]:focus-visible { outline:1px solid #333; outline-offset:5px; }
+.office-partner-track { display:flex; width:max-content; }
+.office-partner-group { flex:none; padding-right:64px; }
+.office-partner-strip.is-animated { overflow:hidden; padding-bottom:0; mask-image:linear-gradient(90deg,transparent,#000 18px,#000 calc(100% - 18px),transparent); -webkit-mask-image:linear-gradient(90deg,transparent,#000 18px,#000 calc(100% - 18px),transparent); }
+.office-partner-strip.is-animated .office-partner-track { will-change:transform; }
+.office-partner-copy[hidden] { display:none; }
+@media(max-width:767px) {
+  .office-editorial { width:100%; }
+  .office-person > a { white-space:nowrap; }
+  .office-career-row { grid-template-columns:minmax(0,1fr); gap:4px; margin-bottom:24px; }
+  .office-services { gap:40px; }
+  .office-partner-strip img { height:84px; }
+  .office-partner-strip:nth-child(2) img { height:100px; }
+  .office-partner-group { padding-right:40px; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .office-partner-copy { display:none; }
+  .office-partner-strip { overflow-x:auto; }
 }
