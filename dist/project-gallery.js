@@ -49,6 +49,7 @@
   for (const trigger of document.querySelectorAll('[data-contact-open]')) {
     trigger.addEventListener('click', event => {
       event.preventDefault();
+      if (contact.open) { contact.scrollTo({top:0, behavior:'smooth'}); return; }
       returnFocus = trigger.closest('.menuBox') ? menu : trigger;
       if (menuOpen) toggleMenu(false, false);
       contact.showModal();

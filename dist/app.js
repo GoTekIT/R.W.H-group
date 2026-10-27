@@ -51,7 +51,7 @@
   }
   function schedule() {
     clearTimeout(timer);
-    if (ready && !reduced.matches && !document.hidden && !projectPanel?.open && current < footerIndex) {
+    if (ready && !reduced.matches && !document.hidden && !projectPanel?.open && !contact.open && current < footerIndex) {
       setTimeout(() => loadProjectImage(current + 1), 2500);
       timer = setTimeout(() => goTo(current + 1, false, true), 6000);
     }
@@ -100,7 +100,7 @@
   function goTo(index, immediate = false, automatic = false) {
     if (immediate) pendingWheelStep = 0;
     const destination = Math.max(0, Math.min(footerIndex, index));
-    if (!ready || projectPanel?.open || (!automatic && (menuOpen || contact.open || videoLibrary?.open)) || (locked && !immediate) || destination === current) return;
+    if (!ready || projectPanel?.open || contact.open || (!automatic && (menuOpen || videoLibrary?.open)) || (locked && !immediate) || destination === current) return;
     loadProjectImage(destination);
     current = destination;
     clearTimeout(timer); clearTimeout(unlock); clearTimeout(cleanup);
@@ -144,9 +144,12 @@
 
   for (const trigger of document.querySelectorAll('[data-contact-open]')) {
     trigger.addEventListener('click', event => {
-      event.preventDefault(); returnFocus = trigger.closest('.menuBox') ? menu : trigger;
+      event.preventDefault();
+      if (contact.open) { contact.scrollTo({top:0, behavior:'smooth'}); return; }
+      returnFocus = trigger.closest('.menuBox') ? menu : trigger;
       if (menuOpen) toggleMenu(false, false);
       contact.showModal();
+      clearTimeout(timer); pendingWheelStep = 0;
     });
   }
   contact.querySelector('[data-modal-close]')?.addEventListener('click', () => contact.close());
@@ -156,6 +159,8 @@
     if (event.clientX < r.left || event.clientX > r.right || event.clientY < r.top || event.clientY > r.bottom) contact.close();
   });
   contact.addEventListener('close', () => (returnFocus.closest('[inert]') ? menu : returnFocus).focus({ preventScroll: true }));
+
+  contact.addEventListener('close', schedule);
 
   function activeScrollable(target) { return current === footerIndex && footer.contains(target) ? footer : null; }
   function resetWheelGesture() { wheelTimer = undefined; wheelSum = 0; wheelGestureUsed = false; }

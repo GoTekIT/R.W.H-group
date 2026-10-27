@@ -2619,7 +2619,7 @@ body.menu-open .arrBox,body.menu-open #main .sroll { opacity:0; visibility:hidde
 @media(max-width:767px) { .language-switch { top:13px; right:62px; } .language-switch button { width:32px; } }
 @media(prefers-reduced-motion:reduce) { .language-switch button::after { transition:none; } }</style>
 <script src="./project-copy.js?v=a0a61a5aca" defer></script>
-<script src="./site-language.js?v=569d7c47e1" defer></script>
+<script src="./site-language.js?v=f1418dc4f7" defer></script>
 <style data-inline-css="project-panel.css">.project-panel { position:fixed; inset:0; margin:0; padding:0; border:0; box-sizing:border-box; width:100vw; max-width:none; height:100vh; height:100svh; max-height:none; overflow:hidden; color:#fff; background:#292929; transform:translate3d(-100%,0,0); transition:transform .75s cubic-bezier(.22,1,.36,1); overscroll-behavior:contain; }
 .project-panel[open] { display:block; }
 .project-panel.is-visible { transform:translate3d(0,0,0); }
@@ -2642,7 +2642,8 @@ body:has(#project-panel[open]) #main .section.show .detail .line::before { anima
 .project-panel.is-loaded .project-panel-status { display:none; }
 .project-panel-error, .project-panel.is-error .project-panel-loading { display:none; }
 .project-panel.is-error .project-panel-error { display:block; }
-.project-panel-error a { display:inline-block; margin-top:14px; padding-bottom:3px; border-bottom:1px solid #ffffff80; color:#fff; }
+.project-panel-error button { display:inline-block; min-height:44px; margin-top:14px; padding:8px 0; border:0; border-bottom:1px solid #ffffff80; color:#fff; background:transparent; cursor:pointer; font:inherit; }
+.project-panel-error button:focus-visible { outline:1px solid #fff; outline-offset:4px; }
 .project-embedded { scrollbar-gutter:auto; scrollbar-width:none; }
 .project-embedded::-webkit-scrollbar { display:none; }
 .project-embedded .menu { display:none; }
@@ -2651,8 +2652,15 @@ body:has(#project-panel[open]) #main .section.show .detail .line::before { anima
   .project-panel-close, .image-viewer .viewer-close { top:14px; right:12px; }
   .project-panel-close svg, .viewer-close svg { width:20px; height:20px; }
 }
-@media(prefers-reduced-motion:reduce) { .project-panel, .project-panel iframe, .project-panel::backdrop, .project-panel-close svg, .viewer-close svg { transition:none; } }</style>
-<script src="./project-panel.js?v=85a733b6d7" defer></script>
+@media(prefers-reduced-motion:reduce) { .project-panel, .project-panel iframe, .project-panel::backdrop, .project-panel-close svg, .viewer-close svg { transition:none; } }
+.project-panel-close .panel-back-icon { display:none; }
+.project-panel.is-office .project-panel-close { top:13px; right:13px; background:#292929; }
+.project-panel.is-office .panel-close-icon { display:none; }
+.project-panel.is-office .panel-back-icon { display:block; }
+.project-panel-close:focus-visible { outline:1px solid #fff; outline-offset:-5px; }
+.project-embedded .office-page .meunRBox { display:block; pointer-events:none; }
+@media(max-width:767px) { .project-panel.is-office .project-panel-close { top:8px; right:0; } }</style>
+<script src="./project-panel.js?v=6b1a0d9e57" defer></script>
 <style data-inline-css="rwh-videos.css">.video-library{position:fixed;inset:0;width:100%;height:100%;max-width:none;max-height:none;margin:0;padding:0;border:0;background:#202020;color:#eee;box-sizing:border-box;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#666 #202020}
 .video-library::backdrop{background:#000a}
 .video-library-head{position:sticky;top:0;z-index:2;display:flex;align-items:center;justify-content:space-between;padding:26px 48px;background:#292929;border-bottom:1px solid #ffffff12}
@@ -2707,8 +2715,8 @@ html:has(.video-library[open]){overflow:hidden;scrollbar-gutter:auto}
  .project-film .video-stage>[data-video-provider="vimeo"]{width:min(100%,calc((100svh - 76px)*16/9));height:100%;left:50%;transform:translateX(-50%)}
 }</style>
 <script src="./rwh-videos.js?v=49f4ccfbc6" defer></script>
-<script src="./app.js?v=609d66d135" defer></script>
-<script src="./contact-form.js?v=76b9c9c0c1" defer></script>
+<script src="./app.js?v=2d25abceda" defer></script>
+<script src="./contact-form.js?v=5fa403ba88" defer></script>
 <style data-inline-css="contact-page.css">#contact-modal{position:fixed;inset:0;margin:0;width:100%;max-width:none;height:100dvh;max-height:none;box-sizing:border-box;padding:0 70px 0 0;border:0;border-radius:0;background:#fff;color:#222;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none;overflow:auto;overscroll-behavior:contain;scrollbar-width:none;font:400 12px/1.5 'Noto Sans JP',sans-serif}
 #contact-modal::-webkit-scrollbar{display:none}#contact-modal[open]{animation:contact-enter .4s ease-out}@keyframes contact-enter{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
 .contact-page-head{height:230px;position:relative;box-sizing:border-box;margin:0 7.2%}
@@ -2729,11 +2737,8 @@ html:has(.video-library[open]){overflow:hidden;scrollbar-gutter:auto}
 @media(max-width:767px){#contact-modal{padding-right:48px}.contact-page-head{height:190px;margin:0 24px}.contact-brand{top:30px;left:0;font-size:25px;line-height:32px}#contact-title{position:absolute;top:95px;left:0;font-size:22px;line-height:33px}.contact-shortcuts{display:none}.contact-language{top:35px}.contact-rail{width:48px}.contact-rail>button{top:24px;left:14px}.contact-rail>span{left:18px;font-size:12px}.contact-page-body{display:block;margin:0 24px;padding-bottom:60px}.contact-required{margin-bottom:48px}#contact-form{margin-top:0}#contact-modal .contact-field input{height:38px;font-size:16px}#contact-modal .contact-field label{gap:10px;flex-wrap:wrap}.contact-privacy,.contact-actions{width:auto;margin-left:0}.contact-privacy{margin-top:75px}.privacy-intro{grid-template-columns:1fr;gap:24px;margin-bottom:45px}.privacy-box{grid-template-columns:1fr;gap:24px;padding:24px;height:252px}.contact-consent{align-items:flex-start;justify-content:flex-start;margin:40px 0 50px;letter-spacing:.03em}#contact-footer .fInner{padding-left:29px;padding-right:29px}}
 @media(prefers-reduced-motion:reduce){#contact-modal[open]{animation:none}}
 #contact-modal .contact-language{display:none}
-.contact-rail{cursor:pointer}
 .contact-rail>.contact-back-top{top:auto;bottom:28px;left:23px;width:24px;height:28px}
 .contact-back-top svg{width:24px;height:24px;stroke-width:1}
-#contact-modal.contact-menu-open>.menuBox{z-index:3}
-#contact-modal.contact-menu-open .contact-rail{z-index:4}
 @media(max-width:767px){.contact-rail>.contact-back-top{left:12px}}
 @media(max-width:1000px){
   #contact-modal .contact-field input{min-height:44px;font-size:16px}
@@ -2747,7 +2752,10 @@ html:has(.video-library[open]){overflow:hidden;scrollbar-gutter:auto}
 }
 @media(max-width:767px){
   .contact-rail>button,.contact-rail>.contact-back-top{left:2px}
-}</style>
+}
+.contact-rail>.contact-return { top:13px; left:13px; width:44px; height:44px; display:grid; place-items:center; }
+.contact-rail>.contact-return svg { width:22px; height:22px; }
+@media(max-width:767px) { .contact-rail>.contact-return { top:8px; left:2px; } }</style>
 <link data-hero-preload rel="preload" as="image" fetchpriority="high" href="./assets/rwh-projects/the-hera-resort/landing-mobile-hq.webp" media="(max-width: 767px)">
 <link data-hero-preload rel="preload" as="image" fetchpriority="high" href="./assets/rwh-projects/the-hera-resort/original-01-fd4d82dcc2.png" media="(min-width: 768px)">
 <!-- SEO START -->
@@ -2787,7 +2795,7 @@ html:has(.video-library[open]){overflow:hidden;scrollbar-gutter:auto}
                 <div class="rwh-menu-links">
                 <ul class="rwh-menu-list">
                     <li><a href="./index.html" data-menu-home data-i18n="navHome">Home</a></li>
-                    <li><a href="/office" data-i18n="office">Office</a></li>
+                    <li><a href="/office" data-office-open aria-haspopup="dialog" aria-controls="project-panel" data-i18n="office">Office</a></li>
                     <li><details class="rwh-menu-projects"><summary><span data-i18n="navProjects">Projects</span></summary>
                         <ul>
                             <li><a href="./index.html?project=1" data-menu-home data-i18n="selectedWorks">Selected projects</a></li>
@@ -2980,7 +2988,7 @@ html:has(.video-library[open]){overflow:hidden;scrollbar-gutter:auto}
     </div>
 <dialog class="contact-modal" id="contact-modal" aria-labelledby="contact-title">
  <header class="contact-page-head"><a class="contact-brand" href="#" data-contact-home>R.W.H <small>Group</small></a><h2 id="contact-title">LIÊN HỆ <span>/ CONTACT</span></h2><nav class="contact-shortcuts" aria-label="Contact sections"><a href="#contact-name" data-contact-design>YÊU CẦU THIẾT KẾ <small>/ DESIGN ORDER</small></a><a href="#contact-form" data-contact-section>LIÊN HỆ <small>/ CONTACT</small></a></nav><div class="contact-language"><button type="button" data-language="vi">VI</button><button type="button" data-language="en">EN</button></div></header>
- <aside class="contact-rail"><button type="button" data-contact-menu aria-label="Open menu" data-i18n-aria-label="openMenu"><svg viewBox="0 0 28 16" aria-hidden="true"><path d="M0 3h28M0 13h28"/></svg></button><span data-i18n="contact">CONTACT</span></aside>
+ <aside class="contact-rail"><button type="button" class="contact-return" data-contact-return data-modal-close aria-label="Quay lại" data-i18n-aria-label="back"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12H4m7-7-7 7 7 7"/></svg></button><span data-i18n="contact">CONTACT</span></aside>
  <div class="contact-page-body"><div class="contact-required"><p lang="vi"><b>*</b> Các trường bắt buộc</p><p lang="en"><b>*</b> asterisk indicates required fields</p></div><form id="contact-form" action="/api/contact" method="post">
         <div class="contact-field">
             <label for="contact-name"><span lang="vi">Họ tên<b>*</b></span><span lang="en">Name<b>*</b></span></label>
@@ -3025,11 +3033,11 @@ html:has(.video-library[open]){overflow:hidden;scrollbar-gutter:auto}
     <h2 class="project-panel-title" id="project-panel-title"></h2>
     <div class="project-panel-status" role="status">
         <div class="panel-wordmark">R.W.H<small>Group</small></div>
-        <p class="project-panel-loading" data-i18n="loadingProject">Đang tải dự án…</p>
-        <div class="project-panel-error"><p data-i18n="projectLoadError">Chưa tải được dự án. Vui lòng thử mở lại.</p><a href="./projects/the-hera-resort/index.html" data-panel-fallback target="_blank" rel="noopener noreferrer" data-i18n="openProjectPage">Mở trang dự án</a></div>
+        <p class="project-panel-loading" data-panel-loading data-i18n="loadingProject">Đang tải dự án…</p>
+        <div class="project-panel-error"><p data-panel-error data-i18n="projectLoadError">Chưa tải được dự án. Vui lòng thử mở lại.</p><button type="button" data-panel-retry data-i18n="retry">Thử lại</button></div>
     </div>
     <iframe allow="autoplay; fullscreen; picture-in-picture" title="Chi tiết dự án" tabindex="-1" aria-hidden="true"></iframe>
-    <button class="project-panel-close" data-panel-close type="button" aria-label="Đóng chi tiết dự án" data-i18n-aria-label="closeProject" autofocus><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+    <button class="project-panel-close" data-panel-close type="button" aria-label="Đóng chi tiết dự án" data-i18n-aria-label="closeProject" autofocus><svg class="panel-close-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg><svg class="panel-back-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12H4m7-7-7 7 7 7"/></svg></button>
 </dialog>
 <dialog class="video-library" id="video-library" aria-labelledby="video-library-title"><div class="video-library-head"><h2 id="video-library-title" data-i18n="videos">VIDEO</h2><button class="video-library-close" type="button" data-videos-close aria-label="Đóng video" data-i18n-aria-label="closeVideos" autofocus><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div><div class="video-library-body"><p class="video-library-intro" data-i18n="videosIntro">Những thước phim về kiến trúc, Onsen và không gian chăm sóc sức khỏe.</p><div class="video-library-grid"><article class="video-card"><div class="video-stage" data-video-stage data-video-kind="vimeo"><iframe data-video-provider="vimeo" data-video-embed="https://player.vimeo.com/video/1239708807?autoplay=1&amp;muted=0&amp;playsinline=1&amp;autopause=1&amp;title=0&amp;byline=0&amp;portrait=0" title="R.W.H Group — The Art of Onsen Living" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div><h3>R.W.H Group — The Art of Onsen Living</h3><p data-i18n="brandFilm">Phim giới thiệu chung của R.W.H Group.</p></article><article class="video-card"><div class="video-stage" data-video-stage data-video-kind="vimeo"><iframe data-video-provider="vimeo" data-video-embed="https://player.vimeo.com/video/1239701212?autoplay=1&amp;muted=0&amp;playsinline=1&amp;autopause=1&amp;title=0&amp;byline=0&amp;portrait=0" title="AEGIS International Hospital — PR Movie" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div><h3>AEGIS International Hospital — PR Movie</h3><p data-i18n="projectFilm">Phim giới thiệu dự án.</p></article><article class="video-card"><div class="video-stage" data-video-stage data-video-kind="vimeo"><iframe data-video-provider="vimeo" data-video-embed="https://player.vimeo.com/video/1239711740?autoplay=1&amp;muted=0&amp;playsinline=1&amp;autopause=1&amp;title=0&amp;byline=0&amp;portrait=0" title="Banyan Tree Higashiyama Kyoto | A Sense of History" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div><h3>Banyan Tree Higashiyama Kyoto | A Sense of History</h3><p data-i18n="referenceFilm">Video tham khảo · withBanyan. Không thuộc danh mục dự án R.W.H Group.</p></article><article class="video-card"><div class="video-stage" data-video-stage data-video-kind="vimeo"><iframe data-video-provider="vimeo" data-video-embed="https://player.vimeo.com/video/1239711738?autoplay=1&amp;muted=0&amp;playsinline=1&amp;autopause=1&amp;title=0&amp;byline=0&amp;portrait=0" title="NAM Ô RESIDENCE — The Art of Onsen Living 2" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div><h3>NAM Ô RESIDENCE — The Art of Onsen Living 2</h3><p data-i18n="projectFilm">Phim giới thiệu dự án.</p></article><article class="video-card"><div class="video-stage" data-video-stage data-video-kind="vimeo"><iframe data-video-provider="vimeo" data-video-embed="https://player.vimeo.com/video/1239705668?autoplay=1&amp;muted=0&amp;playsinline=1&amp;autopause=1&amp;title=0&amp;byline=0&amp;portrait=0" title="THE HERA RESORT — Ghềnh Ráng" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div><h3>THE HERA RESORT — Ghềnh Ráng</h3><p data-i18n="projectFilm">Phim giới thiệu dự án.</p></article><article class="video-card"><div class="video-stage" data-video-stage data-video-kind="vimeo"><iframe data-video-provider="vimeo" data-video-embed="https://player.vimeo.com/video/1239702391?autoplay=1&amp;muted=0&amp;playsinline=1&amp;autopause=1&amp;title=0&amp;byline=0&amp;portrait=0" title="ECOPARK HƯNG YÊN — Onsen" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div><h3>ECOPARK HƯNG YÊN — Onsen</h3><p data-i18n="projectFilm">Phim giới thiệu dự án.</p></article><article class="video-card"><div class="video-stage" data-video-stage data-video-kind="vimeo"><iframe data-video-provider="vimeo" data-video-embed="https://player.vimeo.com/video/1239705666?autoplay=1&amp;muted=0&amp;playsinline=1&amp;autopause=1&amp;title=0&amp;byline=0&amp;portrait=0" title="KAWARA MỸ AN ONSEN RESORT" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div><h3>KAWARA MỸ AN ONSEN RESORT</h3><p data-i18n="projectFilm">Phim giới thiệu dự án.</p></article><article class="video-card"><div class="video-stage" data-video-stage data-video-kind="vimeo"><iframe data-video-provider="vimeo" data-video-embed="https://player.vimeo.com/video/1239702392?autoplay=1&amp;muted=0&amp;playsinline=1&amp;autopause=1&amp;title=0&amp;byline=0&amp;portrait=0" title="Bình Minh Healthcare &amp; Resort — The Art of Onsen Living 3" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div><h3>Bình Minh Healthcare &amp; Resort — The Art of Onsen Living 3</h3><p data-i18n="projectFilm">Phim giới thiệu dự án.</p></article><article class="video-card"><div class="video-stage" data-video-stage data-video-kind="vimeo"><iframe data-video-provider="vimeo" data-video-embed="https://player.vimeo.com/video/1239711741?autoplay=1&amp;muted=0&amp;playsinline=1&amp;autopause=1&amp;title=0&amp;byline=0&amp;portrait=0" title="Hakuba — Spring in Nagano, Japan" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div><h3>Hakuba — Spring in Nagano, Japan</h3><p data-i18n="clientFilm">Video do khách hàng lựa chọn.</p></article><article class="video-card"><div class="video-stage" data-video-stage data-video-kind="vimeo"><iframe data-video-provider="vimeo" data-video-embed="https://player.vimeo.com/video/1239705667?autoplay=1&amp;muted=0&amp;playsinline=1&amp;autopause=1&amp;title=0&amp;byline=0&amp;portrait=0" title="Thiên Mụ — Thien Mu Pagoda" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div><h3>Thiên Mụ — Thien Mu Pagoda</h3><p data-i18n="clientFilm">Video do khách hàng lựa chọn.</p></article><article class="video-card"><div class="video-stage" data-video-stage data-video-kind="vimeo"><iframe data-video-provider="vimeo" data-video-embed="https://player.vimeo.com/video/1239702394?autoplay=1&amp;muted=0&amp;playsinline=1&amp;autopause=1&amp;title=0&amp;byline=0&amp;portrait=0" title="Ecopark Thanh Hoá" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div><h3>Ecopark Thanh Hoá</h3><p data-i18n="clientFilm">Video do khách hàng lựa chọn.</p></article><article class="video-card"><div class="video-stage" data-video-stage data-video-kind="vimeo"><iframe data-video-provider="vimeo" data-video-embed="https://player.vimeo.com/video/1239702393?autoplay=1&amp;muted=0&amp;playsinline=1&amp;autopause=1&amp;title=0&amp;byline=0&amp;portrait=0" title="CAPITAL ONE — R.W.H Group" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div><h3>CAPITAL ONE — R.W.H Group</h3><p data-i18n="projectFilm">Phim giới thiệu dự án.</p></article></div></div></dialog>
 </body>

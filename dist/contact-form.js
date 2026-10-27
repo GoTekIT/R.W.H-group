@@ -81,56 +81,7 @@
     panel.querySelectorAll('[data-contact-design], [data-contact-section]').forEach(link => link.addEventListener('click', event => {
       event.preventDefault(); panel.querySelector('#contact-name').focus();
     }));
-    const navigation = document.querySelector('.menuBox');
-    const navigationHome = document.createComment('contact navigation return');
-    navigation.before(navigationHome);
     const rail = panel.querySelector('.contact-rail');
-    const menuButton = rail.querySelector('[data-contact-menu]');
-    let menuClosing = false;
-    let closeTimer;
-    function restoreNavigation() {
-      clearTimeout(closeTimer);
-      navigationHome.after(navigation);
-      panel.classList.remove('contact-menu-open');
-      menuClosing = false;
-    }
-    function closeContactMenu() {
-      if (navigation.parentElement !== panel) return;
-      document.dispatchEvent(new CustomEvent('rwh:close-menu'));
-      menuButton.setAttribute('aria-expanded', 'false');
-      menuButton.setAttribute('aria-label', 'Mở menu');
-      menuClosing = true;
-      if (!panel.open || matchMedia('(prefers-reduced-motion: reduce)').matches) restoreNavigation();
-      else closeTimer = setTimeout(restoreNavigation, 550);
-    }
-    navigation.addEventListener('transitionend', event => {
-      if (event.target === navigation && event.propertyName === 'transform' && menuClosing) restoreNavigation();
-    });
-    rail.addEventListener('click', event => {
-      if (event.target.closest('[data-contact-top]')) return;
-      if (panel.classList.contains('contact-menu-open') && !menuClosing) { closeContactMenu(); return; }
-      clearTimeout(closeTimer);
-      menuClosing = false;
-      panel.append(navigation);
-      panel.classList.add('contact-menu-open');
-      // Establish the offscreen position after reparenting before starting the shared slide transition.
-      navigation.getBoundingClientRect();
-      document.querySelector('.menu')?.click();
-      menuButton.setAttribute('aria-expanded', 'true');
-      menuButton.setAttribute('aria-label', 'Đóng menu');
-    });
-    navigation.addEventListener('click', event => {
-      const link = event.target.closest('a');
-      if (!link || !panel.classList.contains('contact-menu-open')) return;
-      closeContactMenu();
-      if (link.hasAttribute('data-contact-open')) {
-        panel.scrollTo({top:0, behavior:'smooth'});
-      } else { panel.close(); }
-    });
-    panel.addEventListener('cancel', event => {
-      if (panel.classList.contains('contact-menu-open')) { event.preventDefault(); closeContactMenu(); }
-    });
-    panel.addEventListener('close', closeContactMenu);
     const topButton = document.createElement('button');
     topButton.type = 'button'; topButton.dataset.contactTop = '';
     topButton.className = 'contact-back-top';
