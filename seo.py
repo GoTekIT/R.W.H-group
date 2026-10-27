@@ -14,6 +14,8 @@ def render_seo(root):
     images = json.loads((root / 'LANDING_IMAGES.json').read_text())
     org = {'@type': 'Organization', '@id': origin + '/#organization', 'name': config['name'], 'url': origin + '/'}
     pages = [(dist / 'index.html', origin + '/', config['title'], config['description'], images[projects[0]['slug']]['pc'], None)]
+    office = json.loads((root / 'OFFICE_CONTENT.json').read_text())
+    pages.append((dist / 'office' / 'index.html', origin + '/office', 'Văn phòng | R.W.H Group', office['description']['vi'], images[projects[0]['slug']]['pc'], None))
     for p in projects:
         pages.append((dist / 'projects' / p['slug'] / 'index.html', origin + '/projects/' + p['slug'] + '/index.html', p['title'] + ' | R.W.H Group', p['description'], images[p['slug']]['pc'], p))
     for path, url, title, description, image, project in pages:

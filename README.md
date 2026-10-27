@@ -19,6 +19,7 @@ Form gửi JSON tới `POST /api/contact`. `api/contact.js` là entrypoint Verce
 
 ## Chức năng hiện tại
 
+- Trang `/office` trình bày triết lý R.W.H bằng hai cột Việt/Anh, theo cách trình bày MESSAGE của Apollo. Mục Văn phòng trong menu dẫn tới trang nội bộ này. Sửa nội dung trong `OFFICE_CONTENT.json`, bố cục trong `office.py` và `dist/office.css`, rồi chạy `python3 render-projects.py`.
 - 11 dự án với 201 ảnh: giữ thứ tự thư mục 01–10, thêm Bình Minh Healthcare & Resort ở số 11 theo yêu cầu ngày 22/10/2026; dự án 06 chỉ dùng bộ Onsen.
 - Landing tự chuyển mỗi 6 giây, hỗ trợ wheel, swipe, bàn phím và dừng ở footer.
 - Details trượt phủ toàn màn hình tại chỗ. Khi mở, landing dừng tự chuyển và chuyển động nền; đóng xong thì chạy tiếp với khoảng xem mới đủ 6 giây.
