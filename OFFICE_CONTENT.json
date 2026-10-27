@@ -1,0 +1,23 @@
+{
+  "layoutReference": "https://apollo-aa.jp/message/",
+  "contentSource": "https://www.rwh-group.com/office",
+  "checked": "2026-10-27",
+  "description": {
+    "vi": "Triết lý thiết kế của R.W.H Group: sự hài hòa giữa thiên nhiên, con người và xã hội.",
+    "en": "R.W.H Group’s design philosophy: harmony between nature, people and society."
+  },
+  "paragraphs": {
+    "vi": [
+      "R.W.H Group hướng tới sự hài hòa giữa thiên nhiên, con người và xã hội.",
+      "Chúng tôi theo đuổi những thiết kế giản dị, hiệu quả và gần gũi với tự nhiên. Kiến trúc không chỉ là hình khối, mà còn là cách con người sống và kết nối với môi trường xung quanh.",
+      "Tinh thần giản dị, trực tiếp, tiết kiệm và trung thực định hướng công việc sáng tạo của chúng tôi.",
+      "Từ ý tưởng đến không gian sống, R.W.H Group đồng hành cùng những ước mơ của khách hàng."
+    ],
+    "en": [
+      "R.W.H Group seeks harmony between nature, people and society.",
+      "Our approach values simplicity, effectiveness and a close relationship with the natural world. Architecture goes beyond form: it shapes how people live and connect with their surroundings.",
+      "Simplicity, directness, economy and honesty guide our creative work.",
+      "From an initial idea to a place for living, R.W.H Group works alongside our clients’ dreams."
+    ]
+  }
+}

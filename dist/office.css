@@ -1,0 +1,60 @@
+/* Office extends the existing R.W.H identity with the requested MESSAGE composition. */
+body.office-page { margin:0; min-width:0; background:#fff; color:#333; }
+.office-page #container { padding:0 70px 0 0; overflow:clip; }
+.office-page #gHeader.office-header { position:relative; z-index:1; min-height:0; width:auto; height:auto; padding:72px 7.2% 0; background:#fff; }
+.office-header-inner { display:grid; grid-template-columns:1fr 1fr; position:relative; min-height:188px; align-items:start; }
+.office-page .office-header .hLogo { width:157px; display:block; }
+.office-page .office-header .hLogo img { width:100%; height:auto; display:block; filter:brightness(0); }
+.office-title { margin:0; max-width:calc(100% - 145px); color:#111; font:300 28px/1.45 Roboto,Arial,sans-serif; letter-spacing:.015em; text-transform:uppercase; }
+.office-shortcuts { position:absolute; top:0; right:0; display:grid; gap:6px; text-transform:uppercase; }
+.office-shortcuts a { display:flex; align-items:center; gap:7px; min-height:26px; color:#222; font:400 12px/1.6 Roboto,Arial,sans-serif; letter-spacing:.08em; }
+.office-shortcuts a::before { content:''; width:6px; height:1px; background:#888; }
+.office-shortcuts a[aria-current] { color:#757575; }
+.office-page #main.office-main { padding:0 7.2% 128px; background:#fff; }
+.office-columns { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); align-items:start; min-height:420px; }
+.office-copy { min-width:0; max-width:min(70ch,calc(100% - 55px)); font:400 13px/2.55 Roboto,Arial,sans-serif; letter-spacing:.035em; overflow-wrap:break-word; }
+.office-copy p { margin:0 0 22px; }
+.office-copy p:last-child { margin-bottom:0; }
+.office-page .meunRBox { width:70px; height:100dvh; right:0; padding:0; background:#292929; z-index:11; }
+.office-page .menuBox.rwh-menu { background:#292929; }
+.office-page .meunRBox .menu { top:13px; right:13px; width:44px; height:44px; }
+.office-page .meunRBox .menu .top { top:15px; }
+.office-page .meunRBox .menu .bottom { top:25px; }
+.office-page .meunRBox .menu span { left:12px; width:20px; }
+.office-rail-label { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); writing-mode:vertical-rl; color:#ccc; font:300 13px/1 Roboto,Arial,sans-serif; letter-spacing:.08em; text-transform:uppercase; pointer-events:none; }
+.office-page.menu-open .office-title,.office-page.menu-open .office-shortcuts,.office-page.menu-open .office-rail-label { visibility:hidden; }
+.office-page > .language-switch { top:15px; right:90px; text-shadow:none; }
+.office-page > .language-switch button { color:#555; }
+.office-page > .language-switch button[aria-pressed=true],.office-page > .language-switch button:hover { color:#111; }
+.office-page.menu-open > .language-switch button { color:#ccc; }
+.office-page.menu-open > .language-switch button[aria-pressed=true] { color:#fff; }
+.office-page a:focus-visible,.office-page > .language-switch button:focus-visible { outline:1px solid #333; outline-offset:4px; }
+.office-page .menuBox a:focus-visible,.office-page #gFooter a:focus-visible,.office-page.menu-open > .language-switch button:focus-visible { outline-color:#fff; }
+.office-page #gFooter .fInner { padding-right:7.2%; }
+.office-page ::selection { background:#333; color:#fff; }
+@media(min-width:768px) and (max-width:1000px) {
+  .office-page #gHeader.office-header { padding-top:80px; }
+  .office-header-inner { min-height:190px; }
+  .office-title { font-size:24px; max-width:100%; }
+  .office-shortcuts { top:60px; left:54%; right:auto; display:flex; flex-wrap:wrap; gap:8px 14px; }
+  .office-shortcuts a { min-height:44px; font-size:11px; }
+  .office-copy { max-width:calc(100% - 30px); }
+}
+@media(max-width:767px) {
+  .office-page #container { padding-right:48px; }
+  .office-page #gHeader.office-header { padding:66px 28px 0; }
+  .office-header-inner { grid-template-columns:1fr; gap:30px; min-height:0; padding-bottom:48px; }
+  .office-page .office-header .hLogo { width:137px; }
+  .office-title { max-width:100%; font-size:25px; }
+  .office-shortcuts { position:static; display:flex; flex-wrap:wrap; gap:0 20px; margin-top:-17px; }
+  .office-shortcuts a { min-height:44px; font-size:10px; letter-spacing:.05em; }
+  .office-page #main.office-main { padding:0 28px 80px; }
+  .office-columns { grid-template-columns:minmax(0,1fr); gap:48px; min-height:0; }
+  .office-copy { max-width:100%; font-size:14px; line-height:2.15; letter-spacing:.015em; }
+  .office-copy p { margin-bottom:22px; }
+  .office-page .meunRBox { width:48px; }
+  .office-page .meunRBox .menu { top:8px; right:2px; }
+  .office-page > .language-switch { top:10px; right:62px; }
+  .office-rail-label { font-size:11px; }
+  .office-page #gFooter .fInner { padding-right:28px; }
+}

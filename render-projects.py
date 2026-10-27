@@ -138,6 +138,7 @@ for project in projects:
 
 index = DIST / 'index.html'
 html = index.read_text()
+html = html.replace('href="https://www.rwh-group.com/office" target="_blank" rel="noopener noreferrer"', 'href="/office"')
 html = re.sub(r'<style data-inline-css="([^"]+)">.*?</style>', lambda m: f'<link rel="stylesheet" href="./{m[1]}">', html, flags=re.S)
 html = re.sub(r'href="\./styles\.css(?:\?v=[^"]*)?"', f'href="./{asset("styles.css")}"', html)
 html, count = re.subn(r'    <section class="section sec01 mainImg".*?(?=    <section class="section [^"]*fp-auto-height)', '\n'.join(sections) + '\n', html, flags=re.S)
@@ -298,6 +299,9 @@ for i, project in enumerate(projects):
     (folder / 'index.html').write_text(localize_ui(page))
 
 print(f'Rendered {len(projects)} ordered project sections and local detail galleries.')
+
+from office import render_office
+render_office(ROOT, html, asset, switcher, video_library)
 
 from seo import render_seo
 render_seo(ROOT)

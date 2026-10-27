@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-27T03:19:49Z",
+  "title": "Design System: R.W.H Group",
+  "extensions": {
+    "motion": [
+      {"name": "menu-slide", "value": "transform .5s ease-in-out", "purpose": "Shared menu entering from the right; reduced-motion rules suppress it."},
+      {"name": "language-underline", "value": "transform .28s ease", "purpose": "Language-button hover/focus underline."},
+      {"name": "footer-social", "value": "opacity .2s", "purpose": "Footer social-link emphasis."}
+    ],
+    "breakpoints": [
+      {"name": "mobile-max", "value": "767px"},
+      {"name": "office-tablet-max", "value": "1000px"},
+      {"name": "menu-tablet-max", "value": "1099px"}
+    ]
+  },
+  "components": [
+    {
+      "name": "Office menu control",
+      "kind": "button",
+      "description": "The existing two-stroke menu control in the Office charcoal rail.",
+      "html": "<button class=\"ds-menu\" aria-label=\"Mở menu\"><span></span><span></span></button>",
+      "css": ".ds-menu{position:relative;width:44px;height:44px;padding:0;border:0;border-radius:0;background:#292929;color:#d3d3d3;cursor:pointer}.ds-menu span{position:absolute;left:12px;top:15px;width:20px;height:2px;background:currentColor;transition:all .35s ease}.ds-menu span+span{top:25px}.ds-menu:hover{color:#fff}.ds-menu:focus-visible{outline:1px solid #fff;outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-menu span{transition:none}}"
+    },
+    {
+      "name": "Primary menu navigation",
+      "kind": "nav",
+      "description": "Uppercase primary menu links and the expandable project hierarchy.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Điều hướng\"><a href=\"/office\">VĂN PHÒNG</a><details><summary>DỰ ÁN</summary><a class=\"ds-sub\" href=\"/#project-1\">THE HERA RESORT</a></details></nav>",
+      "css": ".ds-nav{padding:24px;background:#292929;color:#fff;font-family:Roboto,Arial,sans-serif}.ds-nav>a,.ds-nav summary{display:inline-flex;align-items:center;gap:14px;max-width:100%;color:#fff;font:400 26px/1.43 Roboto,Arial,sans-serif;letter-spacing:2.4px;text-decoration:none;text-transform:uppercase;cursor:pointer}.ds-nav>a{position:relative}.ds-nav>a:after{content:'';position:absolute;left:0;right:0;bottom:0;height:1px;background:currentColor;transform:scaleX(0);transition:transform .3s}.ds-nav>a:hover:after{transform:scaleX(1)}.ds-nav summary{list-style:none}.ds-nav summary::-webkit-details-marker{display:none}.ds-nav summary:after{content:'';width:7px;height:7px;border-right:1px solid currentColor;border-bottom:1px solid currentColor;transform:translateY(-2px) rotate(45deg);transition:transform .25s}.ds-nav details[open] summary:after{transform:translateY(2px) rotate(225deg)}.ds-nav .ds-sub{display:block;margin:12px 0 18px;padding-left:12px;border-left:1px solid #ffffff35;color:#fff;font-size:11px;line-height:1.8;letter-spacing:.04em;text-decoration:none}.ds-nav a:focus-visible,.ds-nav summary:focus-visible{outline:1px solid #fff;outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-nav *:after{transition:none}}"
+    },
+    {
+      "name": "Contact input",
+      "kind": "input",
+      "refersTo": "contact-input",
+      "description": "Flat gray field from the current white contact panel.",
+      "html": "<label class=\"ds-field\">HỌ VÀ TÊN <input aria-label=\"Họ và tên\" autocomplete=\"name\"></label>",
+      "css": ".ds-field{display:block;color:#222;font:400 13px/19.5px 'Noto Sans JP',sans-serif;letter-spacing:.04em}.ds-field input{display:block;box-sizing:border-box;width:100%;height:30px;min-height:30px;margin-top:5px;padding:4px 8px 5px;border:0;border-radius:0;box-shadow:none;background:#f0f0f0;color:#222;font:400 13px/normal 'Noto Sans JP',sans-serif}.ds-field input:focus-visible{outline:1px solid #777;outline-offset:3px}@media(max-width:1000px){.ds-field input{min-height:44px;font-size:16px}}"
+    },
+    {
+      "name": "Contact submit",
+      "kind": "button",
+      "refersTo": "contact-submit",
+      "description": "Square black submit action from the current contact form.",
+      "html": "<button class=\"ds-submit\" type=\"button\">GỬI</button>",
+      "css": ".ds-submit{display:block;box-sizing:border-box;width:361px;max-width:100%;min-height:57.5px;padding:19px 10px 21px;border:0;border-radius:0;background:#000;color:#fff;font:500 12px/17.5px 'Noto Sans JP',sans-serif;letter-spacing:0;cursor:pointer}.ds-submit:hover{background:#333}.ds-submit:focus-visible{outline:1px solid #777;outline-offset:4px}.ds-submit:disabled{opacity:.6;cursor:progress}"
+    },
+    {
+      "name": "Office language control",
+      "kind": "button",
+      "description": "Transparent language controls with contrast and underline states on paper.",
+      "html": "<div class=\"ds-languages\"><button aria-pressed=\"true\">VI</button><button aria-pressed=\"false\">EN</button></div>",
+      "css": ".ds-languages{display:flex;align-items:center;gap:2px}.ds-languages button{position:relative;display:grid;place-items:center;width:36px;min-height:36px;padding:0;border:0;background:transparent;color:#555;font:400 11px/1 Roboto,Arial,sans-serif;letter-spacing:.04em;cursor:pointer}.ds-languages button[aria-pressed=true],.ds-languages button:hover{color:#111}.ds-languages button:after{content:'';position:absolute;left:9px;right:9px;bottom:5px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform .28s ease}.ds-languages button:hover:after,.ds-languages button:focus-visible:after{transform:scaleX(1);transform-origin:left}.ds-languages button:focus-visible{outline:1px solid #333;outline-offset:4px}@media(prefers-reduced-motion:reduce){.ds-languages button:after{transition:none}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The R.W.H Portfolio",
+    "overview": "This documents the built R.W.H identity: large architectural photography, the existing wordmark, restrained sans-serif text, white reading surfaces and charcoal navigation/footer surfaces. Its hierarchy comes from image scale, whitespace and light typography. Preserve that incumbent world when adding screens.\n\nOffice is a separate `/office` extension using the user-selected Apollo MESSAGE composition. Its open bilingual reading layout is specific to that page; it does not replace the portfolio, shared menu or footer.",
+    "keyCharacteristics": ["Photography leads the portfolio; Office leads with text and whitespace.", "Monochrome surfaces and thin functional strokes.", "Quiet uppercase navigation and a persistent right-edge menu control.", "Shared wordmark, language controls, navigation, footer and dialogs."],
+    "rules": [{"name": "The Image Color Rule", "body": "Keep interface colors neutral; do not introduce a new decorative accent for Office.", "section": "colors"}],
+    "dos": ["Do preserve the incumbent R.W.H wordmark, type, photography, menu and footer.", "Do scope the Apollo MESSAGE reading composition to `/office`.", "Do keep Vietnamese and English side by side on desktop and stacked in that order on mobile.", "Do retain clear keyboard focus, wrapping labels and the existing mobile touch targets."],
+    "donts": ["Don't redesign the portfolio or replace its shared navigation/footer to match the Office grid.", "Don't turn Office prose into cards, add a hero illustration or introduce decorative accent colors.", "Don't treat overridden glass-modal CSS as the current contact design.", "Don't use the language switch to hide either Office prose column."]
+  }
+}

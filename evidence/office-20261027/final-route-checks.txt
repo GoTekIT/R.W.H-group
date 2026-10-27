@@ -1,0 +1,14 @@
+✔ restores English project copy, accessible labels and selected language on a new page (14.028166ms)
+✔ switches languages and retains the current form status instead of resetting it (1.331709ms)
+✔ language switching remains usable when browser storage is blocked (0.981916ms)
+✔ all rendered translation keys exist in both languages (39.882625ms)
+✔ all public pages, including Office, have unique canonical URLs and valid structured data (60.195125ms)
+✔ desktop gallery assets match the audited original bytes (4683.609875ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 5853.445792
