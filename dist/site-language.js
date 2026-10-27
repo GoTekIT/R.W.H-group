@@ -119,5 +119,5 @@
   });
   let saved;
   try { saved = window.localStorage.getItem('rwh-language'); } catch { /* Use Vietnamese when storage is unavailable. */ }
-  setLanguage(valid(saved) ? saved : 'vi', false);
+  setLanguage('vi', false);
 })();

@@ -14,16 +14,28 @@ def render_office(root, homepage, asset, switcher, video_library):
                 for language, values in content['emphasis'].items()}
     (dist / 'office-copy.js').write_text('window.RWHPageCopy = ' + json.dumps(copy, ensure_ascii=False, separators=(',', ':')) + ';\nwindow.RWHOfficeEmphasis = ' + json.dumps(emphasis, ensure_ascii=False, separators=(',', ':')) + ';\n')
 
-    def text(key, tag='p', attrs=''):
-        return f'<{tag} data-i18n="officeContent.{key}"{attrs}>{escape(content["copy"]["vi"][key])}</{tag}>'
-
-    def rich(key, attrs='', tag='p'):
-        value = content['copy']['vi'][key]
-        phrases = content['emphasis']['vi'].get(key, [])
+    english_only = {'founderRole', 'boardRole', 'teamsTitle'}
+    def translated(key, language, emphasized=False):
+        value = content['copy'][language][key]
+        phrases = content['emphasis'][language].get(key, []) if emphasized else []
         pattern = '(' + '|'.join(re.escape(phrase) for phrase in sorted(phrases, key=len, reverse=True)) + ')'
         parts = re.split(pattern, value) if phrases else [value]
-        markup = ''.join(f'<strong>{escape(part)}</strong>' if part in phrases else escape(part) for part in parts)
-        return f'<{tag} data-office-rich="officeContent.{key}"{attrs}>{markup}</{tag}>'
+        return ''.join(f'<strong>{escape(part)}</strong>' if part in phrases else escape(part) for part in parts)
+
+    def bilingual(key, emphasized=False):
+        vi, en = content['copy']['vi'][key], content['copy']['en'][key]
+        if key in english_only:
+            return f'<span lang="en">{translated(key, "en", emphasized)}</span>'
+        primary = f'<span lang="vi">{translated(key, "vi", emphasized)}</span>'
+        if vi == en or key in {'founderName', 'boardName', 'haNoi', 'daNang', 'hue', 'hoChiMinh'}:
+            return primary
+        return primary + f'<span class="office-translation" lang="en">{translated(key, "en", emphasized)}</span>'
+
+    def text(key, tag='p', attrs=''):
+        return f'<{tag}{attrs}>{bilingual(key)}</{tag}>'
+
+    def rich(key, attrs='', tag='p'):
+        return f'<{tag}{attrs}>{bilingual(key, True)}</{tag}>'
 
     def external(key, label):
         return text(label, 'a', f' href="{escape(content["links"][key], quote=True)}" target="_blank" rel="noopener noreferrer"')
@@ -62,8 +74,7 @@ def render_office(root, homepage, asset, switcher, video_library):
         partners.append(f'<div class="office-partner-strip" data-partner-row tabindex="0" role="region" aria-label="{escape(content["copy"]["vi"][f"partners{index}Alt"], quote=True)}" data-i18n-aria-label="officeContent.partners{index}Alt"><div class="office-partner-track"><div class="office-partner-group">{original}</div><div class="office-partner-group office-partner-copy" aria-hidden="true" hidden>{duplicate}</div></div></div>')
 
     def services(key):
-        items = content['copy']['vi'][key].split(' · ')
-        return '<ul class="office-service-list">' + ''.join(f'<li data-office-service="officeContent.{key}" data-service-index="{index}">{escape(value)}</li>' for index, value in enumerate(items)) + '</ul>'
+        return text(key, 'p', ' class="office-service-list"').replace(' · ', ', ')
     page = f'''<!doctype html>
 <html lang="vi">
 <head>
@@ -82,7 +93,7 @@ THESIS: Complete R.W.H Office information, with the parent site's content sequen
 OWN-WORLD: Current R.W.H Roboto typography, neutral ink, white surfaces, charcoal rail, shared menu and footer.
 STORY: Meet the leadership and teams, read Honda's biography and philosophy, discover services in Japan and Vietnam, then partners.
 FIRST VIEWPORT: Existing Office header above leadership at left, original portrait in the middle and office map at right.
-FORM: User-pinned parent Office structure; all body copy switches between Vietnamese and English. office-complete-20261027.
+FORM: User-pinned parent Office structure; Vietnamese body copy is followed by English. office-complete-20261027.
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md
 -->
 {switcher}
@@ -116,7 +127,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       {text('founderTitle', 'h2', ' id="office-founder-title"')}
       {rich('founderIntro')}
       {text('biographyTitle', 'h3')}
-      <p class="office-qualification">{rich('qualification', tag='span')} {text('qualificationDate', 'span')}</p>
+      <p class="office-qualification"><span lang="vi">{translated('qualification', 'vi', True)} {translated('qualificationDate', 'vi')}</span><span class="office-translation" lang="en">{translated('qualification', 'en', True)} {translated('qualificationDate', 'en')}</span></p>
       <dl class="office-career">{career}</dl>
     </section>
     <section class="office-philosophy" id="philosophy" aria-labelledby="office-philosophy-title">
