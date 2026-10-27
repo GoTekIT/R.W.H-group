@@ -32,7 +32,7 @@ body:has(#project-panel[open]) #main .section.show .detail .line::before { anima
 }
 @media(prefers-reduced-motion:reduce) { .project-panel, .project-panel iframe, .project-panel::backdrop, .project-panel-close svg, .viewer-close svg { transition:none; } }
 
-/* Office uses a return arrow; project details retain their original X control. */
+/* Office and project details use X controls; Office retains its rail position. */
 .project-panel-close .panel-back-icon { display:none; }
 .project-panel.is-office .project-panel-close { top:13px; right:13px; background:#292929; }
 .project-panel.is-office .panel-close-icon { display:none; }

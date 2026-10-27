@@ -170,7 +170,7 @@ test('Office opens in the same landing panel with Office loading and title seman
   p.frame.emit('load');
   assert.equal(p.panel.classList.contains('is-loaded'), true);
   assert.equal(p.frame.title, 'viewOffice');
-  assert.equal(p.close.attributes['aria-label'], 'back');
+  assert.equal(p.close.attributes['aria-label'], 'closeOffice');
   p.close.emit('click'); p.finish();
   assert.equal(p.active(), p.office);
 });
