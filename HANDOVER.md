@@ -1,5 +1,7 @@
 # Bàn giao landing page R.W.H Group
 
+> **Video 27/10/2026 (Vimeo):** Cả 11 dự án và 12 phim trong thư viện đã chuyển sang iframe Vimeo. AEGIS dùng clip mới khách gửi ngày 26/10. Upload file nguồn chất lượng cao, không nén lại trước upload; Vimeo tự tạo các mức chất lượng phát. Thử tự phát có tiếng; nếu trình duyệt chặn thì dùng Play, không tự chuyển sang tắt tiếng. Khung 16:9, có bố cục mobile dọc/ngang. URL Cloudflare giữ trong manifest để khôi phục. Xem [VIMEO_MEDIA.md](VIMEO_MEDIA.md). Các ghi chú 23/10 dưới đây là lịch sử.
+
 > **Cập nhật video 23/10/2026 (Cloudflare R2):** Đã thay cả bốn iframe YouTube bằng MP4 local tải qua YTSave: Hera, Kawara và phim tham khảo Kyoto ở 3840×2160; Ecopark Hưng Yên ở 1920×1080 vì nguồn chỉ có tối đa 1080p. Giữ nguyên sáu dự án dùng phim thương hiệu chung và MP4 Aegis/Nam Ô. Video mặc định có tiếng; thử tự phát khi hiển thị, nếu trình duyệt chặn thì người xem dùng nút Play. Không tự chuyển về mute khi bị chặn, giữ lựa chọn âm lượng của người xem. Các mô tả YouTube/muted và dung lượng phía dưới là trạng thái bàn giao cũ trước cập nhật này. Đã cấu hình nguồn phát Cloudflare R2 qua media.nguyenxuanphu.net cho 7 video; xem R2_MEDIA.md. CDN đã hoạt động; source dùng URL media.nguyenxuanphu.net. Trạng thái triển khai xem GitHub/Vercel theo commit. Không commit các file MP4 mới.
 
 Ngày lập: 22/10/2026. Đây là hướng dẫn tiếp nhận source và triển khai tiếp, không phải biên bản xác nhận đã nghiệm thu domain/hosting mới hay gửi email thật thành công.

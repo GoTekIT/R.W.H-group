@@ -20,9 +20,86 @@
     });
     const embeds = [...doc.querySelectorAll('[data-video-embed]')];
     const media = [...videos, ...embeds];
+    const vimeoStates = new Map();
+    let sdkLoading;
+    function vimeoSDK() {
+      const win = doc.defaultView;
+      if (win?.Vimeo?.Player) return Promise.resolve(win.Vimeo);
+      if (!doc.createElement) return Promise.resolve(null);
+      if (!sdkLoading) sdkLoading = new Promise((resolve, reject) => {
+        const script = doc.createElement('script');
+        const controller = doc.querySelector('script[src*="rwh-videos.js"]');
+        script.src = new URL('vimeo-player.js', controller.src).href;
+        script.onload = () => resolve(win.Vimeo);
+        script.onerror = () => reject(new Error('Vimeo player could not load'));
+        doc.head.append(script);
+      });
+      return sdkLoading;
+    }
+    function releaseVimeo(frame) {
+      const state = vimeoStates.get(frame);
+      if (state) {
+        state.released = true;
+        state.player?.destroy().catch(() => {});
+        vimeoStates.delete(frame);
+      }
+      frame.removeAttribute('src');
+    }
+    function updateVimeo(frame, autoplay) {
+      let state = vimeoStates.get(frame);
+      if (!state) {
+        const url = new URL(frame.dataset.videoEmbed);
+        // Let the SDK request audible playback. Vimeo URL autoplay can silently
+        // fall back to muted playback when a browser rejects sound.
+        url.searchParams.set('autoplay', '0');
+        url.searchParams.set('muted', '0');
+        url.searchParams.set('playsinline', '1');
+        frame.src = url.href;
+        state = {wanted: autoplay, released: false};
+        vimeoStates.set(frame, state);
+        state.ready = vimeoSDK().then(async api => {
+          if (!api || state.released) return;
+          const player = state.player = new api.Player(frame);
+          player.on('fullscreenchange', event => { state.fullscreen = event.fullscreen; });
+          player.on('play', async () => {
+            if (!state.soundChecked) {
+              state.soundChecked = true;
+              if (await player.getMuted()) {
+                await player.pause();
+                await player.setMuted(false);
+                await player.setVolume(1);
+              }
+            }
+            videos.forEach(video => video.pause());
+            vimeoStates.forEach(other => {
+              if (other !== state) other.player?.pause().catch(() => {});
+            });
+          });
+          await player.ready();
+          if (state.released) return;
+          await player.setMuted(false);
+          await player.setVolume(1);
+          if (state.wanted) await player.play();
+        }).catch(() => {}); // Keep Vimeo's own Play control if autoplay is blocked.
+      } else if (state.fullscreen && !doc.hidden) {
+        return; // Rotation/fullscreen can temporarily change intersection geometry.
+      } else if (state.wanted !== autoplay) {
+        state.wanted = autoplay;
+        state.ready.then(() => {
+          if (!state.player || state.released) return;
+          return (state.wanted ? state.player.play() : state.player.pause()).catch(() => {});
+        });
+      }
+    }
+
     const ratios = new Map();
     const reduced = doc.defaultView?.matchMedia?.('(prefers-reduced-motion: reduce)');
     const inScope = item => library?.open ? library.contains(item) : !library?.contains(item);
+    function bestVimeo(scope = null) {
+      return embeds.filter(frame => new URL(frame.dataset.videoEmbed).hostname === 'player.vimeo.com'
+        && (!scope || scope.contains(frame)) && inScope(frame) && (ratios.get(frame) || 0) >= .35)
+        .reduce((best, frame) => !best || ratios.get(frame) > ratios.get(best) ? frame : best, null);
+    }
     let returnFocus, active;
     function playFromUserGesture(scope = null) {
       if (reduced?.matches || doc.hidden) return;
@@ -33,6 +110,12 @@
         active = target;
         videos.forEach(video => { if (video !== target) video.pause(); });
         start(target);
+      } else {
+        const frame = bestVimeo(scope);
+        if (frame) {
+          updateEmbed(frame);
+          vimeoStates.get(frame)?.player?.play().catch(() => {});
+        }
       }
     }
     function chooseVideo() {
@@ -49,9 +132,15 @@
     }
     function updateEmbed(frame) {
       const ratio = ratios.get(frame) || 0;
-      if (!ratio || !inScope(frame)) { frame.removeAttribute('src'); return; }
       const source = new URL(frame.dataset.videoEmbed);
-      source.searchParams.set('autoplay', !doc.hidden && !reduced?.matches && ratio >= .35 ? '1' : '0');
+      const autoplay = !doc.hidden && !reduced?.matches && ratio >= .35 && inScope(frame);
+      if (source.hostname === 'player.vimeo.com') {
+        if ((!ratio || !inScope(frame)) && !vimeoStates.has(frame)) return;
+        updateVimeo(frame, autoplay && frame === bestVimeo());
+        return;
+      }
+      if (!ratio || !inScope(frame)) { frame.removeAttribute('src'); return; }
+      source.searchParams.set('autoplay', autoplay ? '1' : '0');
       source.searchParams.set('mute', '1');
       if (frame.getAttribute('src') !== source.href) frame.src = source.href;
     }
@@ -65,8 +154,9 @@
         ratios.set(target, isIntersecting ? intersectionRatio ?? 1 : 0);
         if (target.tagName === 'VIDEO') {
           if (!isIntersecting && !fullscreenVideos.has(target) && !target.webkitDisplayingFullscreen && doc.fullscreenElement !== target) { target.pause(); if (active === target) active = undefined; }
-        } else updateEmbed(target);
+        }
       });
+      embeds.forEach(updateEmbed);
       chooseVideo();
     });
     media.forEach(item => visibility.observe(item));
@@ -94,7 +184,7 @@
       library.addEventListener('close', () => {
         media.filter(item => library.contains(item)).forEach(item => {
           ratios.set(item, 0);
-          if (item.tagName === 'VIDEO') item.pause(); else item.removeAttribute('src');
+          if (item.tagName === 'VIDEO') item.pause(); else releaseVimeo(item);
         });
         active = undefined;
         chooseVideo();

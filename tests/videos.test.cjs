@@ -3,7 +3,7 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 const {bindVideos} = require('../dist/rwh-videos.js');
-function page({reduced=false,mobile=false}={}) {
+function page({reduced=false,mobile=false,vimeo=null,embedCount=1}={}) {
   let focused, observerCallback, preferenceChange, events=[];
   const observed=new Set(), documentEvents={};
   function element(tagName='BUTTON') {
@@ -18,18 +18,18 @@ function page({reduced=false,mobile=false}={}) {
     };
   }
   const library=element('DIALOG'),close=element(),trigger=element('A'),menu=element();
-  const videos=[element('VIDEO'),element('VIDEO')],frame=element('IFRAME');
+  const videos=[element('VIDEO'),element('VIDEO')],frames=Array.from({length:embedCount},()=>element('IFRAME')),frame=frames[0];
   videos[0].dataset.mobileSrc='https://example.com/mobile.mp4';
   videos[0].src='https://example.com/original.mp4';
-  frame.dataset.videoEmbed='https://www.youtube.com/embed/example?autoplay=1&mute=1';
-  library.querySelectorAll=()=>[];library.querySelector=()=>close;library.contains=item=>item===videos[1] || item===frame;
+  frames.forEach(frame=>{frame.dataset.videoEmbed='https://www.youtube.com/embed/example?autoplay=1&mute=1';});
+  library.querySelectorAll=()=>[];library.querySelector=()=>close;library.contains=item=>item===videos[1] || frames.includes(item);
   const preference={matches:reduced,addEventListener(name,fn){preferenceChange=fn;}};
-  const doc={hidden:false,defaultView:{matchMedia:query=>query.includes('prefers-reduced-motion')?preference:{matches:mobile}},
+  const doc={hidden:false,defaultView:{Vimeo:vimeo,matchMedia:query=>query.includes('prefers-reduced-motion')?preference:{matches:mobile}},
     querySelector:selector=>({'#video-library':library,'.menu':menu})[selector],
-    querySelectorAll:selector=>({'[data-inline-video]':videos,'[data-video-embed]':[frame],'[data-videos-open]':[trigger]})[selector] || [],
+    querySelectorAll:selector=>({'[data-inline-video]':videos,'[data-video-embed]':frames,'[data-videos-open]':[trigger]})[selector] || [],
     dispatchEvent:event=>events.push(event.type),addEventListener(name,fn){documentEvents[name]=fn;}};
   bindVideos(doc,callback=>{observerCallback=callback;return {observe:el=>observed.add(el),unobserve:el=>observed.delete(el)};});
-  return {library,close,trigger,menu,videos,frame,events,observed,focus:()=>focused,
+  return {library,close,trigger,menu,videos,frame,frames,events,observed,focus:()=>focused,
     open:()=>trigger.emit('click',{button:0,preventDefault(){}}),
     visible:(target,ratio=1)=>observerCallback([{target,isIntersecting:ratio>0,intersectionRatio:ratio}]),
     hide(hidden){doc.hidden=hidden;documentEvents.visibilitychange();},
@@ -77,13 +77,20 @@ test('each project has its assigned inline film without outbound links or a play
     const html=fs.readFileSync(path.join(dist,'projects',project,'index.html'),'utf8');
     const film=html.match(/<section class="project-film".*?<\/section>/s)?.[0];
     assert.ok(film,project);assert.equal((film.match(/<(?:video|iframe) /g)||[]).length,1,project);
-    assert.match(film, /<video[^>]+controls playsinline preload="none"[^>]+src="[^\"]+\.mp4"/);
-    assert.doesNotMatch(film, /<iframe|\bmuted\b/);
     const assignment=JSON.parse(fs.readFileSync(path.join(__dirname,'../VIDEO_SOURCES.json'),'utf8'));
     const id=assignment.projectAssignments[project];
     const assigned=assignment.videos.find(video=>video.id===id);
     const source=assigned.source;
-    assert.ok(film.includes(`src="${assigned.deliveryUrl || `../../${source}`}"`),project);
+    if (assigned.kind === 'vimeo') {
+      assert.match(film, /<iframe data-video-provider="vimeo"/);
+      assert.ok(film.includes(`data-video-embed="${assigned.embed.replaceAll('&','&amp;')}"`),project);
+      assert.match(film, /allow="autoplay; fullscreen; picture-in-picture"/);
+      assert.doesNotMatch(film, /<video /);
+    } else {
+      assert.match(film, /<video[^>]+controls playsinline preload="none"/);
+      assert.doesNotMatch(film, /<iframe|\bmuted\b/);
+      assert.ok(film.includes(`src="${assigned.deliveryUrl || `../../${source}`}"`),project);
+    }
     if (assigned.deliveryUrl) assert.match(assigned.deliveryUrl, /^https:\/\/media\.nguyenxuanphu\.net\/rwh\/[a-f0-9]{12}\/[^/]+\.mp4$/);
     else assert.ok(fs.existsSync(path.join(dist,source)),project);
     assert.doesNotMatch(film,/<a |<button /);assert.doesNotMatch(html,/id="video-player"|class="video-source"/);
@@ -124,4 +131,68 @@ test('blocked audible autoplay preserves sound and a subsequent user play remain
 test('mobile uses its dedicated rendition and desktop preserves the original',()=>{
  assert.equal(page({mobile:true}).videos[0].src,'https://example.com/mobile.mp4');
  assert.equal(page().videos[0].src,'https://example.com/original.mp4');
+});
+
+test('Vimeo uses audible SDK playback without muted URL fallback and preserves hashes',async()=>{
+ const players=[];
+ class Player {
+   constructor(frame){this.frame=frame;this.calls=[];players.push(this);}
+   on(){} ready(){return Promise.resolve();} getMuted(){return Promise.resolve(false);}
+   setMuted(v){this.calls.push(['muted',v]);return Promise.resolve();}
+   setVolume(v){this.calls.push(['volume',v]);return Promise.resolve();}
+   play(){this.calls.push(['play']);return Promise.reject(new Error('NotAllowedError'));}
+   pause(){this.calls.push(['pause']);return Promise.resolve();}
+   destroy(){this.calls.push(['destroy']);return Promise.resolve();}
+ }
+ const p=page({vimeo:{Player}});p.frame.dataset.videoEmbed='https://player.vimeo.com/video/1239701212?h=abc123&muted=0';
+ p.open();p.visible(p.frame,.8);
+ await new Promise(setImmediate);
+ const u=new URL(p.frame.src);
+ assert.equal(u.searchParams.get('autoplay'),'0');assert.equal(u.searchParams.get('muted'),'0');
+ assert.equal(u.searchParams.get('playsinline'),'1');assert.equal(u.searchParams.get('h'),'abc123');
+ assert.deepEqual(players[0].calls,[['muted',false],['volume',1],['play']]);
+ p.visible(p.frame,1);await new Promise(setImmediate);
+ assert.equal(players[0].calls.filter(x=>x[0]==='play').length,1);
+ p.hide(true);await new Promise(setImmediate);assert.deepEqual(players[0].calls.at(-1),['pause']);
+ assert.equal(p.frame.src,u.href);
+ p.close.emit('click');assert.equal(p.frame.src,undefined);
+ assert.deepEqual(players[0].calls.at(-1),['destroy']);
+});
+
+test('Vimeo silent autoplay fallback pauses once and keeps subsequent viewer mute choices',async()=>{
+ let player;
+ class Player {
+   constructor(){player=this;this.events={};this.calls=[];this.muted=false;}
+   on(name,fn){this.events[name]=fn;} ready(){return Promise.resolve();}
+   getMuted(){return Promise.resolve(this.muted);}
+   setMuted(value){this.muted=value;this.calls.push(['muted',value]);return Promise.resolve();}
+   setVolume(value){this.calls.push(['volume',value]);return Promise.resolve();}
+   play(){this.calls.push(['play']);return Promise.resolve();}
+   pause(){this.calls.push(['pause']);return Promise.resolve();}
+ }
+ const p=page({vimeo:{Player}});p.frame.dataset.videoEmbed='https://player.vimeo.com/video/1239701212';
+ p.open();p.visible(p.frame,.8);await new Promise(setImmediate);
+ player.muted=true;await player.events.play();
+ assert.deepEqual(player.calls.slice(-3),[['pause'],['muted',false],['volume',1]]);
+ assert.equal(player.calls.filter(x=>x[0]==='play').length,1);
+ const count=player.calls.length;player.muted=true;await player.events.play();
+ assert.equal(player.muted,true);assert.equal(player.calls.length,count);
+});
+
+test('only the most visible Vimeo library film receives autoplay',async()=>{
+ const players=[];
+ class Player {
+   constructor(frame){this.frame=frame;this.calls=[];players.push(this);}
+   on(){} ready(){return Promise.resolve();} getMuted(){return Promise.resolve(false);}
+   setMuted(){return Promise.resolve();} setVolume(){return Promise.resolve();}
+   play(){this.calls.push('play');return Promise.resolve();}
+   pause(){this.calls.push('pause');return Promise.resolve();}
+ }
+ const p=page({vimeo:{Player},embedCount:2});
+ p.frames.forEach((frame,i)=>{frame.dataset.videoEmbed='https://player.vimeo.com/video/'+(100+i);});
+ p.open();p.visible(p.frames[0],.8);await new Promise(setImmediate);
+ p.visible(p.frames[1],.9);await new Promise(setImmediate);
+ assert.deepEqual(players[0].calls,['play','pause']);assert.deepEqual(players[1].calls,['play']);
+ p.visible(p.frames[1],1);await new Promise(setImmediate);
+ assert.deepEqual(players[1].calls,['play']);
 });
