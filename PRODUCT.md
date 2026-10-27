@@ -15,9 +15,9 @@ An architecture portfolio introducing R.W.H Group's projects and connecting visi
 - Reuse the existing Vietnamese/English controls, shared navigation, footer, contact form, company PDF and video library.
 
 ## Brand Commitments
-Keep the incumbent R.W.H UI. The user selected Apollo's MESSAGE page as the reference for the Office reading layout, spacing and content presentation.
+Keep the incumbent R.W.H UI, fonts and neutral text colors. Office now follows the complete content sequence and image relationships of the parent R.W.H Office page. The user's later request replaces the earlier brief for a short Apollo-style statement.
 
 ## Evidence on Hand
 - `PROJECT_SOURCES.json` and `VIDEO_SOURCES.json` own the existing portfolio.
 - `OFFICE_CONTENT.json` records the layout and factual content sources for the new page.
-- Office text is a concise Vietnamese/English adaptation of the existing R.W.H design philosophy.
+- Office includes leadership, teams, portrait, map, biography, philosophy, signature, Japan/Vietnam services and partner logos. Page text switches between Vietnamese and English; Japanese duplicate text is translated, while original marks inside supplied images remain intact.

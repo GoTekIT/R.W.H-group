@@ -1,4 +1,4 @@
-/* Office extends the existing R.W.H identity with the requested MESSAGE composition. */
+/* Office keeps the incumbent R.W.H shell and presents the complete parent-site content. */
 body.office-page { margin:0; min-width:0; background:#fff; color:#333; }
 .office-page #container { padding:0 70px 0 0; overflow:clip; }
 .office-page #gHeader.office-header { position:relative; z-index:1; min-height:0; width:auto; height:auto; padding:72px 7.2% 0; background:#fff; }
@@ -11,10 +11,6 @@ body.office-page { margin:0; min-width:0; background:#fff; color:#333; }
 .office-shortcuts a::before { content:''; width:6px; height:1px; background:#888; }
 .office-shortcuts a[aria-current] { color:#757575; }
 .office-page #main.office-main { padding:0 7.2% 128px; background:#fff; }
-.office-columns { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); align-items:start; min-height:420px; }
-.office-copy { min-width:0; max-width:min(70ch,calc(100% - 55px)); font:400 13px/2.55 Roboto,Arial,sans-serif; letter-spacing:.035em; overflow-wrap:break-word; }
-.office-copy p { margin:0 0 22px; }
-.office-copy p:last-child { margin-bottom:0; }
 .office-page .meunRBox { width:70px; height:100dvh; right:0; padding:0; background:#292929; z-index:11; }
 .office-page .menuBox.rwh-menu { background:#292929; }
 .office-page .meunRBox .menu { top:13px; right:13px; width:44px; height:44px; }
@@ -23,10 +19,11 @@ body.office-page { margin:0; min-width:0; background:#fff; color:#333; }
 .office-page .meunRBox .menu span { left:12px; width:20px; }
 .office-rail-label { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); writing-mode:vertical-rl; color:#ccc; font:300 13px/1 Roboto,Arial,sans-serif; letter-spacing:.08em; text-transform:uppercase; pointer-events:none; }
 .office-page.menu-open .office-title,.office-page.menu-open .office-shortcuts,.office-page.menu-open .office-rail-label { visibility:hidden; }
-.office-page > .language-switch { top:15px; right:90px; text-shadow:none; }
+.office-page > .language-switch { top:15px; right:90px; text-shadow:none; background:#fff; }
 .office-page > .language-switch button { color:#555; }
 .office-page > .language-switch button[aria-pressed=true],.office-page > .language-switch button:hover { color:#111; }
 .office-page.menu-open > .language-switch button { color:#ccc; }
+.office-page.menu-open > .language-switch { background:#292929; }
 .office-page.menu-open > .language-switch button[aria-pressed=true] { color:#fff; }
 .office-page a:focus-visible,.office-page > .language-switch button:focus-visible { outline:1px solid #333; outline-offset:4px; }
 .office-page .menuBox a:focus-visible,.office-page #gFooter a:focus-visible,.office-page.menu-open > .language-switch button:focus-visible { outline-color:#fff; }
@@ -38,7 +35,6 @@ body.office-page { margin:0; min-width:0; background:#fff; color:#333; }
   .office-title { font-size:24px; max-width:100%; }
   .office-shortcuts { top:60px; left:54%; right:auto; display:flex; flex-wrap:wrap; gap:8px 14px; }
   .office-shortcuts a { min-height:44px; font-size:11px; }
-  .office-copy { max-width:calc(100% - 30px); }
 }
 @media(max-width:767px) {
   .office-page #container { padding-right:48px; }
@@ -49,12 +45,85 @@ body.office-page { margin:0; min-width:0; background:#fff; color:#333; }
   .office-shortcuts { position:static; display:flex; flex-wrap:wrap; gap:0 20px; margin-top:-17px; }
   .office-shortcuts a { min-height:44px; font-size:10px; letter-spacing:.05em; }
   .office-page #main.office-main { padding:0 28px 80px; }
-  .office-columns { grid-template-columns:minmax(0,1fr); gap:48px; min-height:0; }
-  .office-copy { max-width:100%; font-size:14px; line-height:2.15; letter-spacing:.015em; }
-  .office-copy p { margin-bottom:22px; }
   .office-page .meunRBox { width:48px; }
   .office-page .meunRBox .menu { top:8px; right:2px; }
   .office-page > .language-switch { top:10px; right:62px; }
   .office-rail-label { font-size:11px; }
   .office-page #gFooter .fInner { padding-right:28px; }
+}
+
+/* Complete parent Office content; typography and interface colors stay R.W.H. */
+.office-page #gHeader.office-header { border:0; box-shadow:none; }
+.office-header-inner { min-height:154px; }
+.office-content,.office-main { font-family:Roboto,Arial,sans-serif; }
+.office-page .office-main h2,.office-page .office-main h3 { color:#111; font-family:Roboto,Arial,sans-serif; font-weight:300; letter-spacing:.015em; }
+.office-page .office-main h2 { margin:0 0 28px; font-size:26px; line-height:1.45; }
+.office-page .office-main h3 { margin:0 0 14px; font-size:18px; line-height:1.5; }
+.office-main p,.office-main dl,.office-main li { font:400 14px/1.95 Roboto,Arial,sans-serif; letter-spacing:.015em; }
+.office-main a { color:#333; }
+.office-main a:hover { color:#111; opacity:1; text-decoration:underline; text-underline-offset:5px; }
+.office-intro { display:grid; grid-template-columns:minmax(0,.9fr) minmax(0,1fr) minmax(0,1.35fr); align-items:start; gap:32px; }
+.office-page .office-main .office-company { font-size:38px; line-height:1.2; font-weight:400; letter-spacing:.035em; margin:0 0 36px; }
+.office-company span { display:block; font-size:25px; font-weight:300; margin-top:8px; }
+.office-person { margin-bottom:30px; }
+.office-person p,.office-person a { font-size:14px; line-height:1.8; }
+.office-person h3 { max-width:14ch; }
+.office-team > a { display:inline-block; margin-bottom:14px; font-size:18px; line-height:1.5; font-weight:300; }
+.office-team li { margin-bottom:2px; }
+.office-team li a,.office-team li span { display:inline-flex; align-items:center; min-height:32px; }
+.office-portrait { margin:84px 0 0; }
+.office-main figure img { display:block; width:100%; height:auto; }
+.office-map { margin:0; }
+.office-map figcaption { margin-top:12px; font:400 11px/1.7 Roboto,Arial,sans-serif; color:#666; }
+.office-editorial { width:76%; max-width:900px; margin:110px auto 0; }
+.office-editorial section + section { margin-top:72px; }
+.office-editorial p { margin:0 0 16px; }
+.office-founder h3 { margin-top:28px!important; }
+.office-career { margin-top:24px; }
+.office-career-row { display:grid; grid-template-columns:105px minmax(0,1fr); gap:16px; margin-bottom:12px; }
+.office-career dt { font-variant-numeric:tabular-nums; }
+.office-career dd { margin:0; }
+.office-editorial .office-values { font-weight:500; }
+.office-signature { width:180px; max-width:45%; margin:36px 0 0 auto; }
+.office-dream { text-align:center; padding-top:24px; }
+.office-services { display:grid; grid-template-columns:1fr 1fr; gap:48px; margin-top:56px; }
+.office-services h3 { text-transform:uppercase; }
+.office-services .office-service-company { font-weight:500; min-height:55px; }
+.office-services p { max-width:33ch; margin:0 auto 16px; }
+.office-partners { margin-top:88px; border-top:1px solid #ddd; padding-top:48px; }
+.office-partners-heading { display:flex; flex-direction:column; align-items:center; gap:0; margin-bottom:32px; }
+.office-page .office-main .office-partners-heading h2 { margin-bottom:14px; }
+.office-partner-strips { display:grid; gap:28px; }
+.office-partner-strip:focus-visible { outline:1px solid #333; outline-offset:6px; }
+.office-partners-hint { display:block; color:#666; text-align:center; font-size:12px!important; }
+.office-partner-strip { min-width:0; max-width:100%; overflow-x:auto; padding-bottom:12px; background:#fff; scrollbar-color:#888 #f0f0f0; scrollbar-width:thin; }
+.office-partner-strip img { display:block; width:auto; max-width:none; height:112px; }
+.office-partner-strip:nth-child(2) img { height:135px; }
+@media(min-width:768px) and (max-width:1000px) {
+  .office-intro { grid-template-columns:1fr 1.1fr; gap:36px 28px; }
+  .office-map { grid-column:1/-1; width:min(76%,540px); justify-self:center; }
+  .office-editorial { width:90%; margin-top:80px; }
+  .office-services { gap:28px; }
+}
+@media(max-width:767px) {
+  .office-header-inner { min-height:0; padding-bottom:48px; }
+  .office-intro { grid-template-columns:minmax(0,1fr); gap:36px; }
+  .office-page .office-main .office-company { font-size:34px; margin-bottom:30px; }
+  .office-page .office-main h2 { font-size:23px; margin-bottom:24px; }
+  .office-page .office-main h3 { font-size:18px; }
+  .office-team li a,.office-team li span { min-height:38px; }
+  .office-portrait { margin:0; width:min(100%,320px); }
+  .office-map { width:100%; }
+  .office-editorial { width:100%; margin-top:64px; }
+  .office-editorial section + section { margin-top:52px; }
+  .office-main p,.office-main dl,.office-main li { font-size:14px; line-height:1.95; }
+  .office-career-row { grid-template-columns:1fr; gap:3px; margin-bottom:22px; }
+  .office-career dt { color:#666; }
+  .office-signature { margin-top:28px; width:150px; max-width:60%; }
+  .office-services { grid-template-columns:1fr; gap:36px; margin-top:36px; }
+  .office-services .office-service-company { min-height:0; }
+  .office-partners { margin-top:56px; padding-top:36px; }
+  .office-partner-strips { gap:20px; }
+
+  .office-partners-hint { display:block; text-align:center; font-size:12px!important; }
 }

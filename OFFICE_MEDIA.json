@@ -1,0 +1,89 @@
+{
+  "founder-portrait": {
+    "src": "assets/rwh-office/founder-portrait.png",
+    "sourcePage": "https://www.rwh-group.com/office",
+    "sourceImageIndex": 2,
+    "width": 376,
+    "height": 454,
+    "bytes": 129351,
+    "sha256": "1c407171664271f59f35c3e34d800cade41efd7c6f4fb26d24274caa7594301e"
+  },
+  "office-map": {
+    "src": "assets/rwh-office/office-map.jpg",
+    "sourcePage": "https://www.rwh-group.com/office",
+    "sourceImageIndex": 3,
+    "width": 1280,
+    "height": 1541,
+    "bytes": 177849,
+    "sha256": "2aea87683e8e9c61fd86ca7183ae848aae73c7674ed47ebfaadbb9aa29eb2c9e"
+  },
+  "founder-signature": {
+    "src": "assets/rwh-office/founder-signature.png",
+    "sourcePage": "https://www.rwh-group.com/office",
+    "sourceImageIndex": 4,
+    "width": 640,
+    "height": 193,
+    "bytes": 4670,
+    "sha256": "aa34f7e23b0a2c2c91a041f9d5eec2de12c3e608d387b0ea78f9c167dd41ad9f"
+  },
+  "partners-01": {
+    "src": "assets/rwh-office/partners-01.gif",
+    "sourcePage": "https://www.rwh-group.com/office",
+    "sourceImageIndex": 5,
+    "width": 1280,
+    "height": 112,
+    "bytes": 5247878,
+    "sha256": "9f0b2c8242b14f04a8c223c60b95b26d580e4ce2ad73a00991b1d6e8920e4afd",
+    "still": "assets/rwh-office/partners-01-complete.png",
+    "stillSha256": "f43b3d82cfa7863b5dc8854bf0c685f010120c9aab515b00986a3c0aa36fef0c",
+    "displayNote": "Complete panorama reconstructed losslessly from all distinct scrolling content; original GIF retained.",
+    "displayWidth": 3057,
+    "displayHeight": 112,
+    "extraction": {
+      "sourceTimesSeconds": [
+        5,
+        10,
+        15,
+        20,
+        26
+      ],
+      "appendedRightEdgePixels": [
+        0,
+        525,
+        462,
+        363,
+        427
+      ],
+      "tool": "ffmpeg crop+hstack"
+    }
+  },
+  "partners-02": {
+    "src": "assets/rwh-office/partners-02.gif",
+    "sourcePage": "https://www.rwh-group.com/office",
+    "sourceImageIndex": 6,
+    "width": 1280,
+    "height": 135,
+    "bytes": 5082399,
+    "sha256": "ac23df3792566a3c27c9bd7cfbdfdcc108f8565dd7ee9886103dc514fb687d9a",
+    "still": "assets/rwh-office/partners-02-complete.png",
+    "stillSha256": "5304ba0ad6f668a792e0a4abac5d444076a645f5f63e29abef249f9937d55a5d",
+    "displayNote": "Complete panorama reconstructed losslessly from all distinct scrolling content; original GIF retained.",
+    "displayWidth": 2453,
+    "displayHeight": 135,
+    "extraction": {
+      "sourceTimesSeconds": [
+        5,
+        10,
+        15,
+        20
+      ],
+      "appendedRightEdgePixels": [
+        0,
+        374,
+        431,
+        368
+      ],
+      "tool": "ffmpeg crop+hstack"
+    }
+  }
+}
