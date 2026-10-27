@@ -21,3 +21,10 @@ Keep the incumbent R.W.H UI, fonts and neutral text colors. Office now follows t
 - `PROJECT_SOURCES.json` and `VIDEO_SOURCES.json` own the existing portfolio.
 - `OFFICE_CONTENT.json` records the layout and factual content sources for the new page.
 - Office includes leadership, teams, portrait, map, biography, philosophy, signature, Japan/Vietnam services and partner logos. Page text switches between Vietnamese and English; Japanese duplicate text is translated, while original marks inside supplied images remain intact.
+
+## Office typography and partner motion refinement
+- Keep all parent Office information and current Roboto/neutral UI. Split prose by meaning, retain full names where practical, emphasize key people/qualifications/philosophy and career years, and present each service on its own line in VI/EN.
+- Both complete partner panoramas automatically move left in seamless duplicate loops. A translated pause/resume button, hover/focus/touch pauses, offscreen/hidden-page pauses and static horizontally scrollable reduced-motion fallback are required.
+
+## Office mobile presentation
+- At phone widths, prioritize a compact header and leadership/portrait composition, two-column team links,16px prose, left-aligned services and proportionate moving partner strips. Preserve complete VI/EN content and all shared functionality.

@@ -1,0 +1,20 @@
+✔ restores English project copy, accessible labels and selected language on a new page (13.930167ms)
+✔ switches languages and retains the current form status instead of resetting it (2.939125ms)
+✔ language switching remains usable when browser storage is blocked (7.773375ms)
+✔ all rendered translation keys exist in both languages (9.571375ms)
+✔ Office body copy and image descriptions follow VI/EN and restore the selected language (1.557416ms)
+✔ partners move left in seamless linear loops only while visible (5.037208ms)
+✔ manual pause survives pointer and keyboard changes; resume keeps those safeguards (1.359834ms)
+✔ reduced motion cancels loops and restores complete static rows (6.352042ms)
+✔ resizing preserves loop phase and constant speed (0.250625ms)
+✔ emphasis preserves all text and each translated important phrase (0.363875ms)
+✔ Office preserves the complete parent page content sequence and all five source images (79.8585ms)
+✔ Office has complete Vietnamese and English copy and no Japanese page prose (1.710083ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 316.131792

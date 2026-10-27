@@ -10,10 +10,20 @@ def render_office(root, homepage, asset, switcher, video_library):
     media = json.loads((root / 'OFFICE_MEDIA.json').read_text())
     copy = {language: {f'officeContent.{key}': value for key, value in values.items()}
             for language, values in content['copy'].items()}
-    (dist / 'office-copy.js').write_text('window.RWHPageCopy = ' + json.dumps(copy, ensure_ascii=False, separators=(',', ':')) + ';\n')
+    emphasis = {language: {f'officeContent.{key}': phrases for key, phrases in values.items()}
+                for language, values in content['emphasis'].items()}
+    (dist / 'office-copy.js').write_text('window.RWHPageCopy = ' + json.dumps(copy, ensure_ascii=False, separators=(',', ':')) + ';\nwindow.RWHOfficeEmphasis = ' + json.dumps(emphasis, ensure_ascii=False, separators=(',', ':')) + ';\n')
 
     def text(key, tag='p', attrs=''):
         return f'<{tag} data-i18n="officeContent.{key}"{attrs}>{escape(content["copy"]["vi"][key])}</{tag}>'
+
+    def rich(key, attrs=''):
+        value = content['copy']['vi'][key]
+        phrases = content['emphasis']['vi'].get(key, [])
+        pattern = '(' + '|'.join(re.escape(phrase) for phrase in sorted(phrases, key=len, reverse=True)) + ')'
+        parts = re.split(pattern, value) if phrases else [value]
+        markup = ''.join(f'<strong>{escape(part)}</strong>' if part in phrases else escape(part) for part in parts)
+        return f'<p data-office-rich="officeContent.{key}"{attrs}>{markup}</p>'
 
     def external(key, label):
         return text(label, 'a', f' href="{escape(content["links"][key], quote=True)}" target="_blank" rel="noopener noreferrer"')
@@ -36,17 +46,24 @@ def render_office(root, homepage, asset, switcher, video_library):
     contact = shared(r'<dialog class="contact-modal".*?</dialog>')
     styles = ('project-gallery.css', 'rwh-footer.css', 'rwh-menu.css', 'site-language.css',
               'rwh-videos.css', 'contact-page.css', 'office.css')
-    scripts = ('office-copy.js', 'site-language.js', 'project-gallery.js', 'rwh-videos.js', 'contact-form.js')
+    scripts = ('office-copy.js', 'site-language.js', 'office-page.js', 'project-gallery.js', 'rwh-videos.js', 'contact-form.js')
     links = '\n'.join(f'<link rel="stylesheet" href="../{asset(name)}">' for name in styles)
     scripts = '\n'.join(f'<script src="../{asset(name)}" defer></script>' for name in scripts)
     logo = '../' + asset('assets/rwh-reference-wordmark.svg')
     teams = ''.join(f'<li>{external(key, key) if key in content["links"] else text(key, "span")}</li>'
                     for key in ('tokyo', 'takasaki', 'hoChiMinh', 'daNang', 'haNoi', 'hue'))
-    career = ''.join(f'<div class="office-career-row"><dt>{escape(year)}</dt><dd>{text(f"career{index}", "span")}</dd></div>'
+    career = ''.join(f'<div class="office-career-row"><dt><strong>{escape(year)}</strong></dt><dd>{text(f"career{index}", "span")}</dd></div>'
                      for index, year in enumerate(content['careerYears']))
-    philosophy = ''.join(text(f'philosophy{index}') for index in range(2))
-    partners = ''.join(f'<div class="office-partner-strip" tabindex="0" role="region" aria-label="{escape(content["copy"]["vi"][f"partners{index}Alt"], quote=True)}" data-i18n-aria-label="officeContent.partners{index}Alt">{image(name, f"partners{index}Alt")}</div>'
-                       for index, name in enumerate(('partners-01', 'partners-02'), start=1))
+    philosophy = ''.join(rich(f'philosophy{index}') for index in range(2))
+    partners = []
+    for index, name in enumerate(('partners-01', 'partners-02'), start=1):
+        original = image(name, f'partners{index}Alt', eager=True)
+        duplicate = re.sub(r'alt="[^"]*" data-i18n-alt="[^"]*"', 'alt=""', original)
+        partners.append(f'<div class="office-partner-strip" data-partner-row tabindex="0" role="region" aria-label="{escape(content["copy"]["vi"][f"partners{index}Alt"], quote=True)}" data-i18n-aria-label="officeContent.partners{index}Alt"><div class="office-partner-track"><div class="office-partner-group">{original}</div><div class="office-partner-group office-partner-copy" aria-hidden="true" hidden>{duplicate}</div></div></div>')
+
+    def services(key):
+        items = content['copy']['vi'][key].split(' · ')
+        return '<ul class="office-service-list">' + ''.join(f'<li data-office-service="officeContent.{key}" data-service-index="{index}">{escape(value)}</li>' for index, value in enumerate(items)) + '</ul>'
     page = f'''<!doctype html>
 <html lang="vi">
 <head>
@@ -97,9 +114,11 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   <div class="office-editorial">
     <section class="office-founder" id="founder" aria-labelledby="office-founder-title">
       {text('founderTitle', 'h2', ' id="office-founder-title"')}
-      {text('founderIntro')}
+      {rich('founderIntro')}
+      {text('founderMission')}
       {text('biographyTitle', 'h3')}
-      {text('qualification')}
+      {rich('qualification')}
+      {text('qualificationDate', attrs=' class="office-qualification-date"')}
       <dl class="office-career">{career}</dl>
     </section>
     <section class="office-philosophy" id="philosophy" aria-labelledby="office-philosophy-title">
@@ -113,14 +132,14 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     <section class="office-dream" aria-labelledby="office-dream-title">
       {text('dreamTitle', 'h2', ' id="office-dream-title"')}
       <div class="office-services">
-        <article>{text('japanTitle', 'h3')}{text('japanCompany', 'p', ' class="office-service-company"')}{text('japanServices')}</article>
-        <article>{text('vietnamTitle', 'h3')}{text('vietnamCompany', 'p', ' class="office-service-company"')}{text('vietnamServices')}</article>
+        <article>{text('japanTitle', 'h3')}{rich('japanCompany', ' class="office-service-company"')}{services('japanServices')}</article>
+        <article>{text('vietnamTitle', 'h3')}{text('vietnamCompany', 'p', ' class="office-service-company"')}{services('vietnamServices')}</article>
       </div>
     </section>
   </div>
   <section class="office-partners" aria-labelledby="office-partners-title">
-    <div class="office-partners-heading">{text('partnersTitle', 'h2', ' id="office-partners-title"')}{text('partnersHint', 'p', ' class="office-partners-hint"')}</div>
-    <div class="office-partner-strips">{partners}</div>
+    <div class="office-partners-heading">{text('partnersTitle', 'h2', ' id="office-partners-title"')}{text('partnerPause', 'button', ' type="button" data-partners-toggle aria-pressed="false" hidden')}</div>
+    <div class="office-partner-strips">{''.join(partners)}</div>
   </section>
 </main>
 {footer}

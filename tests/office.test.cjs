@@ -17,7 +17,7 @@ test('Office preserves the complete parent page content sequence and all five so
     previous = position;
   }
   assert.deepEqual(content.careerYears, ['1979–1985', '1985–2024', '2005', '2016', '2024']);
-  for (const year of content.careerYears) assert.ok(html.includes(`<dt>${year}</dt>`));
+  for (const year of content.careerYears) assert.ok(html.includes(`<dt><strong>${year}</strong></dt>`));
   assert.equal(Object.keys(media).length, 5);
   for (const item of Object.values(media)) {
     const bytes = fs.readFileSync(path.join(root, 'dist', item.src));
@@ -39,7 +39,9 @@ test('Office has complete Vietnamese and English copy and no Japanese page prose
   const main = html.match(/<main\b[\s\S]*?<\/main>/)[0];
   assert.doesNotMatch(main, /[\u3040-\u30ff\u3400-\u9fff]/);
   assert.ok(html.includes('office-copy.js'));
-  assert.equal((html.match(/class="office-partner-strip" tabindex="0" role="region"/g) || []).length, 2);
+  assert.equal((html.match(/class="office-partner-strip" data-partner-row tabindex="0" role="region"/g) || []).length, 2);
+  assert.equal((html.match(/office-partner-copy" aria-hidden="true" hidden/g) || []).length, 2);
+  assert.ok(html.includes('office-page.js'));
   assert.equal(media['partners-01'].displayWidth, 3057);
   assert.equal(media['partners-02'].displayWidth, 2453);
 });
