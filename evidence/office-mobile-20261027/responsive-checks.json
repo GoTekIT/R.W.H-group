@@ -1,0 +1,128 @@
+[
+  {
+    "bodyFont": "16px",
+    "clipped": [],
+    "founderTop": 996,
+    "height": 844,
+    "language": "vi",
+    "overflow": false,
+    "width": 320
+  },
+  {
+    "bodyFont": "16px",
+    "clipped": [],
+    "founderTop": 996,
+    "height": 844,
+    "language": "en",
+    "overflow": false,
+    "width": 320
+  },
+  {
+    "bodyFont": "16px",
+    "clipped": [],
+    "founderTop": 1051,
+    "height": 844,
+    "language": "vi",
+    "overflow": false,
+    "width": 390
+  },
+  {
+    "bodyFont": "16px",
+    "clipped": [],
+    "founderTop": 1051,
+    "height": 844,
+    "language": "en",
+    "overflow": false,
+    "width": 390
+  },
+  {
+    "bodyFont": "16px",
+    "clipped": [],
+    "founderTop": 1120,
+    "height": 844,
+    "language": "vi",
+    "overflow": false,
+    "width": 430
+  },
+  {
+    "bodyFont": "16px",
+    "clipped": [],
+    "founderTop": 1120,
+    "height": 844,
+    "language": "en",
+    "overflow": false,
+    "width": 430
+  },
+  {
+    "bodyFont": "16px",
+    "clipped": [],
+    "founderTop": 1305,
+    "height": 844,
+    "language": "vi",
+    "overflow": false,
+    "width": 767
+  },
+  {
+    "bodyFont": "16px",
+    "clipped": [],
+    "founderTop": 1305,
+    "height": 844,
+    "language": "en",
+    "overflow": false,
+    "width": 767
+  },
+  {
+    "bodyFont": "14px",
+    "clipped": [],
+    "founderTop": 1476,
+    "height": 844,
+    "language": "vi",
+    "overflow": false,
+    "width": 768
+  },
+  {
+    "bodyFont": "14px",
+    "clipped": [],
+    "founderTop": 1476,
+    "height": 844,
+    "language": "en",
+    "overflow": false,
+    "width": 768
+  },
+  {
+    "bodyFont": "14px",
+    "clipped": [],
+    "founderTop": 1536,
+    "height": 390,
+    "language": "vi",
+    "overflow": false,
+    "width": 844
+  },
+  {
+    "bodyFont": "14px",
+    "clipped": [],
+    "founderTop": 1536,
+    "height": 390,
+    "language": "en",
+    "overflow": false,
+    "width": 844
+  },
+  {
+    "bodyFont": "14px",
+    "clipped": [],
+    "founderTop": 885,
+    "height": 844,
+    "language": "vi",
+    "overflow": false,
+    "width": 1280
+  },
+  {
+    "bodyFont": "14px",
+    "clipped": [],
+    "founderTop": 885,
+    "height": 844,
+    "language": "en",
+    "overflow": false,
+    "width": 1280
+  }
+]

@@ -36,21 +36,7 @@ body.office-page { margin:0; min-width:0; background:#fff; color:#333; }
   .office-shortcuts { top:60px; left:54%; right:auto; display:flex; flex-wrap:wrap; gap:8px 14px; }
   .office-shortcuts a { min-height:44px; font-size:11px; }
 }
-@media(max-width:767px) {
-  .office-page #container { padding-right:48px; }
-  .office-page #gHeader.office-header { padding:66px 28px 0; }
-  .office-header-inner { grid-template-columns:1fr; gap:30px; min-height:0; padding-bottom:48px; }
-  .office-page .office-header .hLogo { width:137px; }
-  .office-title { max-width:100%; font-size:25px; }
-  .office-shortcuts { position:static; display:flex; flex-wrap:wrap; gap:0 20px; margin-top:-17px; }
-  .office-shortcuts a { min-height:44px; font-size:10px; letter-spacing:.05em; }
-  .office-page #main.office-main { padding:0 28px 80px; }
-  .office-page .meunRBox { width:48px; }
-  .office-page .meunRBox .menu { top:8px; right:2px; }
-  .office-page > .language-switch { top:10px; right:62px; }
-  .office-rail-label { font-size:11px; }
-  .office-page #gFooter .fInner { padding-right:28px; }
-}
+
 
 /* Complete parent Office content; typography and interface colors stay R.W.H. */
 .office-page #gHeader.office-header { border:0; box-shadow:none; }
@@ -104,27 +90,7 @@ body.office-page { margin:0; min-width:0; background:#fff; color:#333; }
   .office-editorial { width:90%; margin-top:80px; }
   .office-services { gap:28px; }
 }
-@media(max-width:767px) {
-  .office-header-inner { min-height:0; padding-bottom:48px; }
-  .office-intro { grid-template-columns:minmax(0,1fr); gap:36px; }
-  .office-page .office-main .office-company { font-size:34px; margin-bottom:30px; }
-  .office-page .office-main h2 { font-size:23px; margin-bottom:24px; }
-  .office-page .office-main h3 { font-size:18px; }
-  .office-team li a,.office-team li span { min-height:38px; }
-  .office-portrait { margin:0; width:min(100%,320px); }
-  .office-map { width:100%; }
-  .office-editorial { width:100%; margin-top:64px; }
-  .office-editorial section + section { margin-top:52px; }
-  .office-main p,.office-main dl,.office-main li { font-size:14px; line-height:1.95; }
-  .office-career-row { grid-template-columns:1fr; gap:3px; margin-bottom:22px; }
-  .office-career dt { color:#666; }
-  .office-signature { margin-top:28px; width:150px; max-width:60%; }
-  .office-services { grid-template-columns:1fr; gap:36px; margin-top:36px; }
-  .office-services .office-service-company { min-height:0; }
-  .office-partners { margin-top:56px; padding-top:36px; }
-  .office-partner-strips { gap:20px; }
 
-}
 
 /* Typographic hierarchy: meaningful paragraphs, complete names and clear facts. */
 .office-page .office-main h2 { text-wrap:balance; font-weight:400; }
@@ -151,16 +117,71 @@ body.office-page { margin:0; min-width:0; background:#fff; color:#333; }
 .office-partner-strip.is-animated { overflow:hidden; padding-bottom:0; mask-image:linear-gradient(90deg,transparent,#000 18px,#000 calc(100% - 18px),transparent); -webkit-mask-image:linear-gradient(90deg,transparent,#000 18px,#000 calc(100% - 18px),transparent); }
 .office-partner-strip.is-animated .office-partner-track { will-change:transform; }
 .office-partner-copy[hidden] { display:none; }
-@media(max-width:767px) {
-  .office-editorial { width:100%; }
-  .office-person > a { white-space:nowrap; }
-  .office-career-row { grid-template-columns:minmax(0,1fr); gap:4px; margin-bottom:24px; }
-  .office-services { gap:40px; }
-  .office-partner-strip img { height:84px; }
-  .office-partner-strip:nth-child(2) img { height:100px; }
-  .office-partner-group { padding-right:40px; }
-}
+
 @media(prefers-reduced-motion:reduce) {
   .office-partner-copy { display:none; }
   .office-partner-strip { overflow-x:auto; }
+}
+
+/* Mobile Office: compact introduction, readable prose and touch-sized links. */
+@media(max-width:767px) {
+  .office-page #container { padding-right:44px; }
+  .office-page #gHeader.office-header { padding:24px 20px 0; }
+  .office-header-inner { grid-template-columns:1fr; gap:18px; min-height:0; padding-bottom:28px; }
+  .office-page .office-header .hLogo { width:128px; }
+  .office-title { max-width:100%; font-size:24px; }
+  .office-shortcuts { position:static; display:flex; flex-wrap:wrap; width:100%; gap:0 10px; margin-top:-4px; }
+  .office-shortcuts a { min-height:44px; font-size:11px; letter-spacing:.03em; }
+  .office-page #main.office-main { padding:0 20px 72px; }
+  .office-page .meunRBox { width:44px; }
+  .office-page .meunRBox .menu { top:8px; right:0; }
+  .office-rail-label { font-size:11px; }
+  .office-page > .language-switch { top:8px; right:54px; }
+  .office-page > .language-switch button { width:40px; min-height:44px; }
+  .office-page #gFooter .fInner { padding-left:20px; padding-right:20px; }
+
+  .office-main p,.office-main dl,.office-main li { font-size:16px; line-height:1.75; }
+  .office-page .office-main h2 { font-size:23px; line-height:1.4; margin-bottom:20px; }
+  .office-page .office-main h3 { font-size:18px; }
+  .office-intro { grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr); grid-template-areas:"company company" "founder portrait" "board portrait" "teams teams" "map map"; gap:20px 16px; }
+  .office-leadership { display:contents; }
+  .office-page .office-main .office-company { grid-area:company; display:flex; align-items:baseline; gap:8px; font-size:28px; margin:0 0 4px; }
+  .office-company span { display:inline; font-size:18px; margin:0; }
+  .office-person { margin:0; min-width:0; }
+  .office-person:nth-child(2) { grid-area:founder; }
+  .office-person:nth-child(3) { grid-area:board; }
+  .office-page .office-main .office-person h3 { font-size:15px; line-height:1.5; text-wrap:pretty; margin-bottom:8px!important; }
+  .office-person > a,.office-person > p { display:block; font-size:14px; line-height:1.6; white-space:normal; text-wrap:pretty; }
+  .office-portrait { grid-area:portrait; width:100%; max-width:180px; margin:0; justify-self:end; }
+  .office-team { grid-area:teams; margin-top:4px; }
+  .office-team > a { margin-bottom:8px; font-size:18px; font-weight:400; }
+  .office-team ul { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:0 16px; margin:0; }
+  .office-team li { margin:0; min-width:0; font-size:14px; line-height:1.5; }
+  .office-team li a,.office-team li span { display:flex; min-height:44px; }
+  .office-map { grid-area:map; width:100%; max-width:460px; margin:12px 0 0; justify-self:center; }
+  .office-map figcaption { margin-top:8px; }
+
+  .office-editorial { width:100%; margin-top:40px; }
+  .office-editorial section + section { margin-top:44px; }
+  .office-founder h3 { margin-top:24px!important; }
+  .office-career-row { grid-template-columns:minmax(0,1fr); gap:4px; margin-bottom:20px; }
+  .office-signature { width:140px; max-width:50%; margin-top:24px; }
+  .office-dream { text-align:left; padding-top:0; }
+  .office-services { grid-template-columns:1fr; gap:28px; margin-top:24px; }
+  .office-services article { border-top:1px solid #ddd; padding-top:20px; }
+  .office-services .office-service-company { max-width:none; margin:0 0 12px; text-wrap:pretty; }
+  .office-service-list li { text-wrap:pretty; }
+  .office-partners { margin-top:44px; padding-top:28px; }
+  .office-partners-heading { margin-bottom:20px; }
+  .office-partner-strips { gap:16px; }
+  .office-partner-strip img { height:72px; }
+  .office-partner-strip:nth-child(2) img { height:86px; }
+  .office-partner-group { padding-right:32px; }
+}
+
+@media(max-width:359px) {
+  .office-intro { grid-template-columns:minmax(0,1fr) 88px; grid-template-areas:"company company" "founder portrait" "board board" "teams teams" "map map"; }
+  .office-page .office-main .office-person h3 { font-size:14px; }
+  .office-person > a { font-size:13px; }
+  .office-shortcuts a { font-size:10px; letter-spacing:.01em; }
 }
