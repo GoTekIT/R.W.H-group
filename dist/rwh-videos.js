@@ -45,6 +45,24 @@
       }
       frame.removeAttribute('src');
     }
+    async function startVimeo(state) {
+      if (state.released || !state.wanted || doc.hidden || !state.player || state.starting) return;
+      state.starting = true;
+      try {
+        try { await state.player.play(); }
+        catch (error) {
+          // Retry blocked audible playback once, without reloading the iframe.
+          if (!/NotAllowed|autoplay|not allowed/i.test(`${error?.name} ${error?.message}`)) return;
+          if (state.released || !state.wanted || doc.hidden) return;
+          await state.player.setMuted(true);
+          if (state.released || !state.wanted || doc.hidden) return;
+          await state.player.play();
+        }
+        if (!state.released && (!state.wanted || doc.hidden)) await state.player.pause();
+      } catch { /* Vimeo controls remain available if even muted playback is blocked. */ }
+      finally { state.starting = false; }
+    }
+
     function updateVimeo(frame, autoplay) {
       let state = vimeoStates.get(frame);
       if (!state) {
@@ -62,14 +80,6 @@
           const player = state.player = new api.Player(frame);
           player.on('fullscreenchange', event => { state.fullscreen = event.fullscreen; });
           player.on('play', async () => {
-            if (!state.soundChecked) {
-              state.soundChecked = true;
-              if (await player.getMuted()) {
-                await player.pause();
-                await player.setMuted(false);
-                await player.setVolume(1);
-              }
-            }
             videos.forEach(video => video.pause());
             vimeoStates.forEach(other => {
               if (other !== state) other.player?.pause().catch(() => {});
@@ -79,7 +89,7 @@
           if (state.released) return;
           await player.setMuted(false);
           await player.setVolume(1);
-          if (state.wanted) await player.play();
+          if (state.wanted) await startVimeo(state);
         }).catch(() => {}); // Keep Vimeo's own Play control if autoplay is blocked.
       } else if (state.fullscreen && !doc.hidden) {
         return; // Rotation/fullscreen can temporarily change intersection geometry.
@@ -87,7 +97,7 @@
         state.wanted = autoplay;
         state.ready.then(() => {
           if (!state.player || state.released) return;
-          return (state.wanted ? state.player.play() : state.player.pause()).catch(() => {});
+          return (state.wanted ? startVimeo(state) : state.player.pause()).catch(() => {});
         });
       }
     }
@@ -114,7 +124,8 @@
         const frame = bestVimeo(scope);
         if (frame) {
           updateEmbed(frame);
-          vimeoStates.get(frame)?.player?.play().catch(() => {});
+          const state = vimeoStates.get(frame);
+          if (state) startVimeo(state);
         }
       }
     }

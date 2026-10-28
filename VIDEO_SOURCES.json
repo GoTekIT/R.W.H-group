@@ -892,5 +892,5 @@
     "ecopark-hung-yen": "ecopark-hung-yen",
     "binh-minh": "binh-minh"
   },
-  "playback": "Vimeo SDK attempts audible inline playback when visible. If browser policy blocks sound, Vimeo Play remains available without an automatic muted retry. Offscreen players pause; viewer volume choices are preserved. Reduced-motion disables autoplay."
+  "playback": "Vimeo SDK attempts audible playback when visible, retrying muted once if autoplay is denied. Silent playback continues; viewer volume choices are preserved. Offscreen players pause and reduced-motion disables autoplay."
 }
