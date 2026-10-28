@@ -220,3 +220,9 @@ body.office-page { margin:0; min-width:0; background:#fff; color:#333; }
 .office-services .office-service-list { display:block; max-width:none; }
 .office-team .office-translation { font-size:.9em; margin-top:3px; }
 .office-career .office-translation { margin-top:6px; }
+
+/* Align bilingual prose edges while retaining natural spacing on final lines. */
+.office-founder > p,.office-philosophy > p { text-align:justify; text-align-last:start; text-justify:inter-word; text-wrap:wrap; }
+.office-founder > p > span[lang],.office-philosophy > p > span[lang] { display:block; }
+.office-editorial [lang="en"] { hyphens:auto; }
+.office-career dd { text-align:start; }
