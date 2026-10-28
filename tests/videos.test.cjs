@@ -133,14 +133,14 @@ test('mobile uses its dedicated rendition and desktop preserves the original',()
  assert.equal(page().videos[0].src,'https://example.com/original.mp4');
 });
 
-test('Vimeo uses audible SDK playback without muted URL fallback and preserves hashes',async()=>{
+test('Vimeo retries blocked audible playback muted and preserves iframe hashes',async()=>{
  const players=[];
  class Player {
    constructor(frame){this.frame=frame;this.calls=[];players.push(this);}
    on(){} ready(){return Promise.resolve();} getMuted(){return Promise.resolve(false);}
-   setMuted(v){this.calls.push(['muted',v]);return Promise.resolve();}
+   setMuted(v){this.muted=v;this.calls.push(['muted',v]);return Promise.resolve();}
    setVolume(v){this.calls.push(['volume',v]);return Promise.resolve();}
-   play(){this.calls.push(['play']);return Promise.reject(new Error('NotAllowedError'));}
+   play(){this.calls.push(['play']);return this.muted ? Promise.resolve() : Promise.reject(Object.assign(new Error('Autoplay blocked'), {name:'NotAllowedError'}));}
    pause(){this.calls.push(['pause']);return Promise.resolve();}
    destroy(){this.calls.push(['destroy']);return Promise.resolve();}
  }
@@ -150,16 +150,16 @@ test('Vimeo uses audible SDK playback without muted URL fallback and preserves h
  const u=new URL(p.frame.src);
  assert.equal(u.searchParams.get('autoplay'),'0');assert.equal(u.searchParams.get('muted'),'0');
  assert.equal(u.searchParams.get('playsinline'),'1');assert.equal(u.searchParams.get('h'),'abc123');
- assert.deepEqual(players[0].calls,[['muted',false],['volume',1],['play']]);
+ assert.deepEqual(players[0].calls,[['muted',false],['volume',1],['play'],['muted',true],['play']]);
  p.visible(p.frame,1);await new Promise(setImmediate);
- assert.equal(players[0].calls.filter(x=>x[0]==='play').length,1);
+ assert.equal(players[0].calls.filter(x=>x[0]==='play').length,2);
  p.hide(true);await new Promise(setImmediate);assert.deepEqual(players[0].calls.at(-1),['pause']);
  assert.equal(p.frame.src,u.href);
  p.close.emit('click');assert.equal(p.frame.src,undefined);
  assert.deepEqual(players[0].calls.at(-1),['destroy']);
 });
 
-test('Vimeo silent autoplay fallback pauses once and keeps subsequent viewer mute choices',async()=>{
+test('Vimeo silent playback continues and keeps viewer mute choices',async()=>{
  let player;
  class Player {
    constructor(){player=this;this.events={};this.calls=[];this.muted=false;}
@@ -173,7 +173,8 @@ test('Vimeo silent autoplay fallback pauses once and keeps subsequent viewer mut
  const p=page({vimeo:{Player}});p.frame.dataset.videoEmbed='https://player.vimeo.com/video/1239701212';
  p.open();p.visible(p.frame,.8);await new Promise(setImmediate);
  player.muted=true;await player.events.play();
- assert.deepEqual(player.calls.slice(-3),[['pause'],['muted',false],['volume',1]]);
+ assert.equal(player.calls.filter(x=>x[0]==='pause').length,0);
+ assert.equal(player.muted,true);
  assert.equal(player.calls.filter(x=>x[0]==='play').length,1);
  const count=player.calls.length;player.muted=true;await player.events.play();
  assert.equal(player.muted,true);assert.equal(player.calls.length,count);
