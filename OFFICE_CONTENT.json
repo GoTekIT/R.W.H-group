@@ -55,9 +55,9 @@
       "career4": "Thành lập Công ty Văn phòng Kiến trúc sư hạng nhất Honda Tadakatsu — R.W.H Group.",
       "philosophyTitle": "Triết lý thiết kế",
       "philosophy0": "Với triết lý hướng đến sự hài hòa giữa thiên nhiên, con người và xã hội, chúng tôi cùng theo đuổi khát vọng mang đến những sản phẩm thiết kế tốt nhất, đáp ứng ba yếu tố cốt lõi: “Giản dị, hiệu quả và hài hòa với thiên nhiên”.",
-      "philosophy1": "Triết lý này không giới hạn công việc ở việc tạo nên hình khối, mà hướng tới thể hiện trung thực bản chất của kiến trúc qua mối tương tác giữa thiên nhiên với con người, và giữa con người với xã hội.",
+      "philosophy1": "Triết lý này không giới hạn công việc ở việc tạo nên hình khối mà hướng tới thể hiện trung thực bản chất của kiến trúc qua mối tương tác giữa thiên nhiên với con người và giữa con người với xã hội.",
       "qualitiesTitle": "Về phẩm chất con người:",
-      "qualities": "Giản dị — trực tiếp — tiết kiệm — trung thực",
+      "qualities": "Giản dị — trực tiếp — tiết kiệm — trung thực.",
       "creativeWork": "Tất cả đều hướng đến công việc sáng tạo.",
       "signatureAlt": "Chữ ký của Honda Tadakatsu",
       "dreamTitle": "Ước mơ của khách hàng",
@@ -90,19 +90,19 @@
       "mapAlt": "Map of R.W.H Group offices in Japan and Vietnam",
       "mapCaption": "Offices in Japan and Vietnam",
       "founderTitle": "Honda Tadakatsu",
-      "founderIntro": "Honda Tadakatsu collaborated with a team of talented architects and engineers from Japan, France, and Vietnam to establish the Honda Tadakatsu 1st Class Architectural Office R.W.H. Group Ltd., which honored the design philosophy of Antonin Raymond. In this way, he proved his commitment and awareness of the art of architecture and its mission.",
+      "founderIntro": "Honda Tadakatsu collaborated with a team of talented architects and engineers from Japan, France, and Vietnam to establish the Honda Tadakatsu 1st Class Architectural Office R.W.H. Group Ltd., honoring the design philosophy of Antonin Raymond. In doing so, he demonstrated his commitment to the art of architecture and his understanding of its mission.",
       "biographyTitle": "Biography",
-      "qualification": "Qualifications: First-level architect (No. 186806)",
+      "qualification": "Qualifications: First-class architect (No. 186806).",
       "career0": "Ishihara Architectural Design Office Co., Ltd.",
       "career1": "Engaged in architectural design and supervision at Raymond Design Office Co., Ltd.",
       "career2": "Established the 5th Design Department at Raymond Design Office Co., Ltd.",
-      "career3": "Vietnam Established Da Nang Office",
-      "career4": "Honda Tadakatsu Co., Ltd. 1st level Architectural Licensed Office RWH Group Established",
+      "career3": "Established the Da Nang Office in Vietnam.",
+      "career4": "Established Honda Tadakatsu First-Class Architectural Office — R.W.H Group.",
       "philosophyTitle": "Design Philosophy",
-      "philosophy0": "With the design philosophy focusing on the harmony between nature, human beings, and their societies, we share the ambition to deliver the finest design products that accomplish three major factors “Simplicity, effectiveness, and harmony with nature”",
-      "philosophy1": "This philosophy does not limit our work to simply “creating forms and shapes”, but to realize the essence of architecture honestly, reflected in the interaction between “nature – humans”. and “humans – society\".",
-      "qualitiesTitle": "By human qualities:",
-      "qualities": "Simple – direct – economical – honest",
+      "philosophy0": "Our design philosophy focuses on harmony between nature, human beings, and society. We share the ambition to deliver the finest design products based on three key principles: simplicity, effectiveness, and harmony with nature.",
+      "philosophy1": "This philosophy does not limit our work to simply creating forms and shapes. It seeks to express the essence of architecture honestly through the relationships between nature and humans, and between humans and society.",
+      "qualitiesTitle": "Human qualities:",
+      "qualities": "Simple – direct – economical – honest.",
       "creativeWork": "It's all about creative work.",
       "signatureAlt": "Signature of Honda Tadakatsu",
       "dreamTitle": "Customer’s Dream",
@@ -115,7 +115,7 @@
       "partnersTitle": "Partners",
       "partners1Alt": "R.W.H Group partner logos — first strip",
       "partners2Alt": "R.W.H Group partner logos — second strip",
-      "qualificationDate": "Qualified on February 7"
+      "qualificationDate": "Qualified on February 7."
     }
   },
   "emphasis": {
@@ -147,15 +147,15 @@
         "Antonin Raymond"
       ],
       "qualification": [
-        "First-level architect",
+        "First-class architect",
         "186806"
       ],
       "philosophy0": [
-        "Simplicity, effectiveness, and harmony with nature"
+        "simplicity, effectiveness, and harmony with nature"
       ],
       "philosophy1": [
-        "nature – humans",
-        "humans – society"
+        "nature and humans",
+        "humans and society"
       ],
       "japanCompany": [
         "Honda Tadakatsu"
