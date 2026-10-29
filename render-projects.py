@@ -41,7 +41,10 @@ def video_card(video, prefix='./'):
 
 
 def video_library(prefix='./'):
-    return f'''<dialog class="video-library" id="video-library" aria-labelledby="video-library-title"><div class="video-library-head"><h2 id="video-library-title" data-i18n="videos">VIDEO</h2><button class="video-library-close" type="button" data-videos-close aria-label="Đóng video" data-i18n-aria-label="closeVideos" autofocus><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div><div class="video-library-body"><p class="video-library-intro" data-i18n="videosIntro">Những thước phim về kiến trúc, Onsen và không gian chăm sóc sức khỏe.</p><div class="video-library-grid">{''.join(video_card(video, prefix).replace(' poster=', ' data-poster=') for video in videos.values())}</div></div></dialog>'''
+    library_videos = [dict(videos[video_sources['projectAssignments'][project['slug']]],
+                           title=project['title'], noteKey='projectFilm')
+                      for project in projects]
+    return f'''<dialog class="video-library" id="video-library" aria-labelledby="video-library-title"><div class="video-library-head"><h2 id="video-library-title" data-i18n="videos">VIDEO</h2><button class="video-library-close" type="button" data-videos-close aria-label="Đóng video" data-i18n-aria-label="closeVideos" autofocus><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div><div class="video-library-body"><p class="video-library-intro" data-i18n="videosIntro">Những thước phim về kiến trúc, Onsen và không gian chăm sóc sức khỏe.</p><div class="video-library-grid">{''.join(video_card(video, prefix).replace(' poster=', ' data-poster=') for video in library_videos)}</div></div></dialog>'''
 
 
 copy = {'vi': {}, 'en': {}}
