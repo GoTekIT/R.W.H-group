@@ -14,7 +14,7 @@ def render_office(root, homepage, asset, switcher, video_library):
                 for language, values in content['emphasis'].items()}
     (dist / 'office-copy.js').write_text('window.RWHPageCopy = ' + json.dumps(copy, ensure_ascii=False, separators=(',', ':')) + ';\nwindow.RWHOfficeEmphasis = ' + json.dumps(emphasis, ensure_ascii=False, separators=(',', ':')) + ';\n')
 
-    english_only = {'founderRole', 'boardRole', 'teamsTitle'}
+    english_only = {'founderRole', 'boardRole', 'teamsTitle', 'tokyo', 'takasaki'}
     def translated(key, language, emphasized=False):
         value = content['copy'][language][key]
         phrases = content['emphasis'][language].get(key, []) if emphasized else []
