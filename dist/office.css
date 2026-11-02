@@ -22,8 +22,8 @@ body.office-page { margin:0; min-width:0; background:#fff; color:#333; }
 .office-page #container { padding:0 70px 0 0; overflow:clip; }
 .office-page #gHeader.office-header { position:relative; z-index:1; min-height:0; width:auto; height:auto; padding:72px 7.2% 0; background:#fff; }
 .office-header-inner { display:grid; grid-template-columns:1fr 1fr; position:relative; min-height:188px; align-items:start; }
-.office-page .office-header .hLogo { width:157px; display:block; }
-.office-page .office-header .hLogo img { width:100%; height:auto; display:block; filter:brightness(0); }
+.office-page .office-header .hLogo { width:128px; display:block; }
+.office-page .office-header .hLogo img { width:100%; height:auto; display:block; }
 .office-title { margin:0; max-width:calc(100% - 145px); color:#111; font:300 28px/1.45 Roboto,Arial,sans-serif; letter-spacing:.015em; text-transform:uppercase; }
 .office-shortcuts { position:absolute; top:0; right:0; display:grid; gap:6px; text-transform:uppercase; }
 .office-shortcuts a { display:flex; align-items:center; gap:7px; min-height:26px; color:#222; font:400 12px/1.6 Roboto,Arial,sans-serif; letter-spacing:.08em; }
@@ -153,7 +153,7 @@ body.office-page { margin:0; min-width:0; background:#fff; color:#333; }
   .office-page #container { padding-right:44px; }
   .office-page #gHeader.office-header { padding:24px 20px 0; }
   .office-header-inner { grid-template-columns:1fr; gap:18px; min-height:0; padding-bottom:28px; }
-  .office-page .office-header .hLogo { width:128px; }
+  .office-page .office-header .hLogo { width:80px; }
   .office-title { max-width:100%; font-size:24px; }
   .office-shortcuts { position:static; display:flex; flex-wrap:nowrap; align-items:center; width:100%; gap:0 10px; margin-top:-4px; }
   .office-shortcuts a { min-height:44px; font-size:11px; letter-spacing:.03em; }

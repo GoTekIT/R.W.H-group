@@ -62,6 +62,7 @@ def render_office(root, homepage, asset, switcher, video_library):
     links = '\n'.join(f'<link rel="stylesheet" href="../{asset(name)}">' for name in styles)
     scripts = '\n'.join(f'<script src="../{asset(name)}" defer></script>' for name in scripts)
     logo = '../' + asset('assets/rwh-reference-wordmark.svg')
+    about_logo = '../' + asset('assets/rwh-about-logo.png')
     teams = ''.join(f'<li>{external(key, key) if key in content["links"] else text(key, "span")}</li>'
                     for key in ('tokyo', 'takasaki', 'hoChiMinh', 'daNang', 'haNoi', 'hue'))
     career = ''.join(f'<div class="office-career-row"><dt><strong>{escape(year)}</strong></dt><dd>{text(f"career{index}", "span")}</dd></div>'
@@ -100,7 +101,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 <div id="container">
 <header id="gHeader" class="office-header">
   <div class="office-header-inner">
-    <a class="hLogo" href="../index.html" aria-label="R.W.H Group — Trang chủ" data-i18n-aria-label="home"><img src="{logo}" alt="R.W.H Group" width="357" height="56"></a>
+    <a class="hLogo" href="../index.html" aria-label="R.W.H Group — Trang chủ" data-i18n-aria-label="home"><img src="{about_logo}" alt="R.W.H Group" width="2048" height="2048"></a>
     <h1 class="office-title" data-i18n="office">GIỚI THIỆU</h1>
     <nav class="office-shortcuts" aria-label="Điều hướng trang" data-i18n-aria-label="navigation">
       <a href="/office" aria-current="page" data-i18n="office">GIỚI THIỆU</a>
