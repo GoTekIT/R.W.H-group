@@ -62,7 +62,7 @@ Upload riêng `dist/` sẽ hiển thị giao diện nhưng chưa làm form gửi
 
 ## 4. Form Contact và các biến cần bàn giao
 
-Form gồm Name, Email, Questions và trường chống bot ẩn. Trình duyệt gọi `/api/contact`; server gửi qua Resend. Người nhận cố định trong `lib/contact.js` là `linh.rwh@gmail.com`. Email người điền chỉ dùng làm Reply-To; địa chỉ gửi phải thuộc domain đã xác minh trong Resend.
+Form gồm Name, Email, Phone number, Questions và trường chống bot ẩn. Trình duyệt gọi `/api/contact`; server gửi qua Resend. Người nhận cố định trong `lib/contact.js` là `linh.rwh@gmail.com`. Email người điền chỉ dùng làm Reply-To; địa chỉ gửi phải thuộc domain đã xác minh trong Resend.
 
 | Biến | Giá trị do người quản lý nhập |
 | --- | --- |
@@ -120,7 +120,7 @@ Các lệnh kiểm tra không gửi email thật. Server Python chỉ xem giao d
 - Details trượt tại chỗ, header giữ trên khi cuộn; mở/đóng ảnh, video, form không bị trùng nút ×; đóng Details dừng media của iframe.
 - Video đúng các ánh xạ bên trên, phát trong trang, có âm lượng/toàn màn hình và hiển thị phù hợp điện thoại.
 - VI/EN, Profile PDF, hotline, Facebook và Instagram hoạt động; các liên kết RWH ngoài website được chủ khách hàng xác nhận.
-- Form gửi đủ ba trường tới đúng email nhận; lỗi không báo thành công giả và không làm mất nội dung đã điền.
+- Form gửi đủ bốn trường tới đúng email nhận; lỗi không báo thành công giả và không làm mất nội dung đã điền.
 - Người tiếp nhận giữ quyền truy cập repo, hosting, domain/DNS và cấu hình email; ghi lại người phụ trách vận hành sau bàn giao.
 
 ## 8. Phần còn chờ

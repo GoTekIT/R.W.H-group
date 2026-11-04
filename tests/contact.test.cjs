@@ -3,7 +3,7 @@ const { test } = require('node:test');
 const { createContactHandler } = require('../lib/contact');
 const { bindContactForm } = require('../dist/contact-form');
 
-const values = { name: 'Nguyễn Linh', email: 'visitor@example.com', questions: 'Tư vấn Onsen\nDiện tích 2.000 m²', website: '', requestId: 'b339236a-0491-4d50-a2a5-73004cd25449' };
+const values = { name: 'Nguyễn Linh', email: 'visitor@example.com', phone: '+84 901 234 567', questions: 'Tư vấn Onsen\nDiện tích 2.000 m²', website: '', requestId: 'b339236a-0491-4d50-a2a5-73004cd25449' };
 const env = { RESEND_API_KEY: 'test-secret', RESEND_FROM_EMAIL: 'contact@example.com' };
 function setup(options = {}) {
   const calls = [];
@@ -18,7 +18,7 @@ function setup(options = {}) {
   return { request, calls };
 }
 
-test('sends all three fields to the owner with visitor Reply-To and fixed sender', async () => {
+test('sends all four fields to the owner with visitor Reply-To and fixed sender', async () => {
   const { request, calls } = setup();
   const result = await request({ ...values, to: 'attacker@example.com', from: 'attacker@example.com' });
   assert.equal(result.statusCode, 200);
@@ -30,6 +30,7 @@ test('sends all three fields to the owner with visitor Reply-To and fixed sender
   assert.equal(email.from, 'R.W.H Group <contact@example.com>');
   assert.equal(email.reply_to, values.email);
   assert.ok(email.text.includes(values.name) && email.text.includes(values.questions));
+  assert.ok(email.text.includes(`Số điện thoại / Phone number: ${values.phone}`));
   assert.equal(email.html, undefined);
   assert.equal(options.headers.Authorization, 'Bearer test-secret');
   assert.equal(result.headers['Cache-Control'], 'no-store');
@@ -39,20 +40,31 @@ test('sends all three fields to the owner with visitor Reply-To and fixed sender
 test('unchanged retries reuse provider idempotency; edited content has a new key', async () => {
   const { request, calls } = setup();
   await request(); await request(); await request({ ...values, questions: 'Một câu hỏi khác' });
+  await request({ ...values, phone: '+81 90 1234 5678' });
   const keys = calls.map(([, options]) => options.headers['Idempotency-Key']);
   assert.equal(keys[0], keys[1]);
   assert.notEqual(keys[0], keys[2]);
+  assert.notEqual(keys[0], keys[3]);
 });
 
 test('rejects invalid, oversized and honeypot input before calling Resend', async () => {
   const { request, calls } = setup();
   for (const body of [null, [], {}, { ...values, name: '  ' }, { ...values, name: 'Linh\r\nBcc: other@example.com' },
     { ...values, email: 'invalid' }, { ...values, email: 'a@example.com\r\n' }, { ...values, questions: '' },
+    ...[undefined, '', 'abc', '123', '1234567890123456', 'visitor@example.com', '0901234567\r\nBcc: x@example.com', '1'.repeat(33)].map(phone => ({ ...values, phone })),
     { ...values, questions: 'a'.repeat(4001) }, { ...values, website: 'https://spam.example' }, { ...values, requestId: '../invalid' }, '{bad json']) {
     assert.equal((await request(body)).statusCode, 400);
   }
   assert.equal((await request({ ...values, questions: 'a'.repeat(24001) })).statusCode, 413);
   assert.equal(calls.length, 0);
+});
+
+test('accepts national and international phone formats without losing their formatting', async () => {
+  const { request, calls } = setup();
+  for (const phone of ['0901234567', '+84 901 234 567', '+81 (90) 1234-5678', '(03) 1234-5678']) {
+    assert.equal((await request({ ...values, phone })).statusCode, 200);
+    assert.ok(JSON.parse(calls.at(-1)[1].body).text.includes(phone));
+  }
 });
 
 test('rejects cross-origin, missing-origin, unsupported methods and content types', async () => {
@@ -91,16 +103,16 @@ test('instance guard limits new attempts, permits retries and expires', async ()
 });
 
 function formPage(fetchRequest, protocol = 'https:') {
-  const fields = Object.fromEntries(Object.entries(values).filter(([name]) => name !== 'requestId').map(([name, value]) => [name, { name, value, readOnly: false }]));
+  const fields = Object.fromEntries(Object.entries(values).filter(([name]) => name !== 'requestId').map(([name, value]) => [name, { name, value, readOnly: false, validationMessage: '', setCustomValidity(message) { this.validationMessage = message; }, addEventListener() {} }]));
   const submit = { disabled: false, dataset: {} }, note = { dataset: {} };
   let resets = 0, ids = 0;
   const form = {
     elements: { namedItem: name => fields[name] }, querySelector: () => submit,
-    reportValidity: () => true, setAttribute() {}, removeAttribute() {}, addEventListener() {},
+    reportValidity: () => !Object.values(fields).some(field => field.validationMessage), setAttribute() {}, removeAttribute() {}, addEventListener() {},
     reset() { resets++; Object.values(fields).forEach(field => { field.value = ''; }); }
   };
   const controller = bindContactForm({ form, note, protocol, fetchRequest, makeId: () => `request-id-${++ids}-abcdef`,
-    i18n: { message(element, key) { element.dataset.i18n = key; } } });
+    i18n: { t: key => key, message(element, key) { element.dataset.i18n = key; } } });
   return { send: () => controller.send({ preventDefault() {} }), fields, note, submit, resets: () => resets };
 }
 
@@ -110,6 +122,7 @@ test('form prevents double submission, locks inputs and clears only after accept
   const pending = p.send();
   assert.equal(p.submit.disabled, true);
   assert.equal(p.fields.questions.readOnly, true);
+  assert.equal(p.fields.phone.readOnly, true);
   assert.equal(p.note.dataset.i18n, 'sendingMessage');
   await p.send();
   assert.equal(calls, 1);
@@ -120,6 +133,7 @@ test('form prevents double submission, locks inputs and clears only after accept
   assert.equal(p.resets(), 1);
   assert.equal(p.submit.disabled, false);
   assert.equal(p.fields.questions.readOnly, false);
+  assert.equal(p.fields.phone.readOnly, false);
 });
 
 test('form preserves data and the same retry ID after a lost response', async () => {
@@ -130,9 +144,30 @@ test('form preserves data and the same retry ID after a lost response', async ()
   assert.equal(p.resets(), 0);
   assert.equal(p.note.dataset.i18n, 'contactError');
   assert.equal(payloads[0].requestId, payloads[1].requestId);
-  p.fields.questions.value = 'New content';
+  assert.equal(payloads[0].phone, values.phone);
+  assert.equal(payloads[0].emailRepeat, undefined);
+  p.fields.phone.value = '0901234567';
   await p.send();
   assert.notEqual(payloads[1].requestId, payloads[2].requestId);
+  p.fields.questions.value = 'New content';
+  await p.send();
+  assert.notEqual(payloads[2].requestId, payloads[3].requestId);
+});
+
+test('form blocks missing and invalid phone input and allows a corrected phone', async () => {
+  const payloads = [];
+  const p = formPage(async (_, options) => { payloads.push(JSON.parse(options.body)); return { ok: true, json: async () => ({ ok: true }) }; });
+  p.fields.phone.value = '';
+  await p.send();
+  assert.equal(payloads.length, 0);
+  p.fields.phone.value = 'visitor@example.com';
+  await p.send();
+  assert.equal(p.fields.phone.validationMessage, 'phoneInvalid');
+  assert.equal(payloads.length, 0);
+  p.fields.phone.value = '+81 90 1234 5678';
+  await p.send();
+  assert.equal(payloads[0].phone, '+81 90 1234 5678');
+  assert.equal(p.resets(), 1);
 });
 
 test('form shows configuration/validation/rate errors and rejects a false success', async () => {

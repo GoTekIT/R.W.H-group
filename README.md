@@ -29,7 +29,7 @@ Form gửi JSON tới `POST /api/contact`. `api/contact.js` là entrypoint Verce
 - VI/EN được lưu trên trình duyệt; menu in hoa, hồ sơ năng lực mở PDF RWH.
 - Mỗi dự án có đúng một iframe Vimeo. Thư viện Video có 12 phim, gồm 11 nguồn gắn với 11 dự án và clip Kyoto tham khảo.
 - Video thử tự phát có tiếng khi đủ hiển thị; nếu bị trình duyệt chặn thì giữ nút Play có tiếng. Tôn trọng lựa chọn âm lượng của người xem và tùy chọn giảm chuyển động.
-- Contact chỉ gồm Name, Email, Questions. Hotline: `0982-132-489`.
+- Contact chỉ gồm Name, Email, Phone number, Questions. Hotline: `0982-132-489`.
 
 ## Các file cần biết
 

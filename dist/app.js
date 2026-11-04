@@ -27,7 +27,8 @@
   const messages = {
     sendMessage: 'Send message', sendingMessage: 'Sending…',
     contactSent: 'Thank you! Your enquiry has been sent to R.W.H Group.',
-    contactInvalid: 'Please check your name, email and questions.',
+    contactInvalid: 'Please check your name, email, phone number and questions.',
+    phoneInvalid: 'Please enter a valid phone number (7–15 digits).',
     contactError: 'Your enquiry could not be sent. Your details are still here; please try again.',
     contactRateLimited: 'Please wait a few minutes before trying again.',
     contactUnavailable: 'The contact form is being set up. Please try again later.',

@@ -3,7 +3,7 @@
   const copy = {
     vi: {
       officeDescription: 'Triết lý thiết kế của R.W.H Group: sự hài hòa giữa thiên nhiên, con người và xã hội.',
-      repeatEmail: 'Nhập lại Email', emailMismatch: 'Email nhập lại chưa trùng khớp.',
+      phoneNumber: 'Số điện thoại', phoneInvalid: 'Vui lòng nhập số điện thoại hợp lệ (7–15 chữ số).',
       privacyAgree: 'Tôi đồng ý với việc xử lý thông tin liên hệ như mô tả ở trên.', contactRequired: '* Các trường bắt buộc',
       videos: 'VIDEO', watchVideos: 'Xem video ↗', playVideo: 'Phát video', closeVideos: 'Đóng video',
       videosIntro: 'Những thước phim về kiến trúc, Onsen và không gian chăm sóc sức khỏe.',
@@ -28,7 +28,7 @@
       name: 'Họ tên', email: 'Email', questions: 'Câu hỏi', closeContact: 'Đóng form liên hệ',
       contactNote: 'Để lại câu hỏi, R.W.H Group sẽ liên hệ với bạn.', sendMessage: 'Gửi liên hệ', sendingMessage: 'Đang gửi…',
       contactSent: 'Cảm ơn bạn! Nội dung liên hệ đã được gửi đến R.W.H Group.',
-      contactInvalid: 'Vui lòng kiểm tra họ tên, email và câu hỏi.',
+      contactInvalid: 'Vui lòng kiểm tra họ tên, email, số điện thoại và câu hỏi.',
       contactError: 'Chưa gửi được liên hệ. Thông tin của bạn vẫn được giữ; vui lòng thử lại.',
       contactRateLimited: 'Vui lòng đợi vài phút trước khi thử lại.',
       contactUnavailable: 'Form liên hệ đang được thiết lập. Vui lòng thử lại sau.',
@@ -39,7 +39,7 @@
     },
     en: {
       officeDescription: 'R.W.H Group’s design philosophy: harmony between nature, people and society.',
-      repeatEmail: 'Repeat E-Mail', emailMismatch: 'The email addresses do not match.',
+      phoneNumber: 'Phone number', phoneInvalid: 'Please enter a valid phone number (7–15 digits).',
       privacyAgree: 'I agree to the processing of my enquiry as described above.', contactRequired: '* asterisk indicates required fields',
       videos: 'VIDEO', watchVideos: 'Watch videos ↗', playVideo: 'Play video', closeVideos: 'Close videos',
       videosIntro: 'Films exploring architecture, Onsen and spaces for wellbeing.',
@@ -64,7 +64,7 @@
       name: 'Name', email: 'Email', questions: 'Questions', closeContact: 'Close contact form',
       contactNote: 'Leave your questions and R.W.H Group will get in touch.', sendMessage: 'Send message', sendingMessage: 'Sending…',
       contactSent: 'Thank you! Your enquiry has been sent to R.W.H Group.',
-      contactInvalid: 'Please check your name, email and questions.',
+      contactInvalid: 'Please check your name, email, phone number and questions.',
       contactError: 'Your enquiry could not be sent. Your details are still here; please try again.',
       contactRateLimited: 'Please wait a few minutes before trying again.',
       contactUnavailable: 'The contact form is being set up. Please try again later.',

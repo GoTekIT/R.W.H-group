@@ -29,7 +29,7 @@ Nếu thấy **Deployment Blocked** vì tác giả thiếu quyền:
 
 ## Kết nối Resend
 
-Người nhận đã cố định trong `lib/contact.js`: **linh.rwh@gmail.com**. Email này không hiển thị trong modal hay footer. Khách chỉ điền Name, Email và Questions. Footer hiển thị số **0982132489**, bấm vào sẽ gọi `+84982132489`.
+Người nhận đã cố định trong `lib/contact.js`: **linh.rwh@gmail.com**. Email này không hiển thị trong modal hay footer. Khách chỉ điền Name, Email, Phone number và Questions. Footer hiển thị số **0982132489**, bấm vào sẽ gọi `+84982132489`.
 
 1. Trong [Resend Domains](https://resend.com/domains), thêm domain/subdomain thuộc quyền quản lý của khách hàng. Thêm đúng các bản ghi DNS Resend yêu cầu và đợi **Verified**. Không dùng `gmail.com` làm domain gửi; Gmail ở đây là hộp thư nhận.
 2. Tạo API key có quyền gửi email trên domain đó trong [Resend API Keys](https://resend.com/api-keys).
@@ -42,13 +42,13 @@ Người nhận đã cố định trong `lib/contact.js`: **linh.rwh@gmail.com**
 
 4. Nếu đã deploy trước khi thêm biến, **Redeploy** để deployment mới nhận cấu hình. Không đặt API key trong HTML/JavaScript phía trình duyệt, không commit `.env` và không gửi khóa qua chat. `.env.example` chỉ có tên biến trống.
 
-Server gửi từ `R.W.H Group <RESEND_FROM_EMAIL>` tới `linh.rwh@gmail.com`, gồm đủ ba trường. `Reply-To` dùng email người điền form để chủ trang bấm trả lời trực tiếp. Người điền form không thể thay người nhận hay địa chỉ gửi.
+Server gửi từ `R.W.H Group <RESEND_FROM_EMAIL>` tới `linh.rwh@gmail.com`, gồm đủ bốn trường. `Reply-To` dùng email người điền form để chủ trang bấm trả lời trực tiếp. Người điền form không thể thay người nhận hay địa chỉ gửi.
 
 ## Kiểm tra sau khi deploy
 
 - Trang chính, ảnh, font và PDF `/assets/rwh-company-profile-2025.pdf` tải được trên máy tính và điện thoại.
 - VI/EN, tự chuyển section, cuộn chủ động, Details và menu hoạt động.
-- Footer có icon điện thoại trắng kèm số `0982132489`. Contact chỉ hiển thị ba trường Name, Email và Questions.
+- Footer có icon điện thoại trắng kèm số `0982132489`. Contact chỉ hiển thị bốn trường Name, Email, Phone number và Questions.
 - Gửi thử từ website với thông tin kiểm thử: nút chuyển sang trạng thái đang gửi và chỉ báo thành công khi Resend chấp nhận yêu cầu. Kiểm tra Resend Logs và xác nhận thư thực sự tới Inbox/Spam của `linh.rwh@gmail.com`; kiểm tra cả Reply-To.
 - Khi chưa có cấu hình hoặc gửi lỗi, form báo chưa gửi được và giữ lại nội dung. Gửi lại cùng nội dung dùng cùng idempotency key để tránh thư trùng nếu phản hồi trước đó bị mất.
 
