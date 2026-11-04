@@ -4,21 +4,23 @@
   function bindContactForm({ form, note, i18n, fetchRequest = globalThis.fetch,
     makeId = () => globalThis.crypto.randomUUID(), protocol = globalThis.location?.protocol }) {
     const submit = form.querySelector('[type="submit"]');
-    const fields = ['name', 'email', 'questions'].map(name => form.elements.namedItem(name));
+    const fields = ['name', 'email', 'phone', 'questions'].map(name => form.elements.namedItem(name));
     const website = form.elements.namedItem('website');
-    const repeatEmail = form.elements.namedItem('emailRepeat');
-    function checkEmailMatch() {
-      if (!repeatEmail) return;
-      repeatEmail.setCustomValidity(repeatEmail.value.trim() && repeatEmail.value.trim() !== fields[1].value.trim() ? i18n.t('emailMismatch') : '');
+    const phone = form.elements.namedItem('phone');
+    function checkPhone() {
+      const value = phone.value.trim();
+      const digits = value.replace(/\D/g, '').length;
+      const valid = /^\+?[0-9() .-]+$/.test(value) && digits >= 7 && digits <= 15 && value.length <= 32;
+      phone.setCustomValidity(!value || valid ? '' : i18n.t('phoneInvalid'));
     }
-    repeatEmail?.addEventListener('input', checkEmailMatch);
-    fields[1].addEventListener?.('input', checkEmailMatch);
+    phone.addEventListener('input', checkPhone);
+    form.ownerDocument?.addEventListener('rwh:languagechange', checkPhone);
     let sending = false;
     let attempt;
 
     async function send(event) {
       event.preventDefault();
-      checkEmailMatch();
+      checkPhone();
       if (sending || !form.reportValidity()) return;
       if (protocol === 'file:') {
         i18n.message(note, 'contactLocal');
