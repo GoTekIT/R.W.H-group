@@ -25,7 +25,7 @@
 
   // The contact form uses these status messages independently of project copy.
   const messages = {
-    sendMessage: 'Send message', sendingMessage: 'Sending…',
+    sendMessage: 'Send enquiry', sendingMessage: 'Sending…',
     contactSent: 'Thank you! Your enquiry has been sent to R.W.H Group.',
     contactInvalid: 'Please check your name, email, phone number and questions.',
     phoneInvalid: 'Please enter a valid phone number (7–15 digits).',
