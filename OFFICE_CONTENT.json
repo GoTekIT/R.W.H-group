@@ -5,7 +5,7 @@
   "scope": "Complete main Office page, preserving section order and all five body image assets; linked Founder and Our teams pages remain source links.",
   "description": {
     "vi": "Ban lãnh đạo, đội ngũ, văn phòng, tiểu sử Honda Tadakatsu, triết lý thiết kế và các đối tác của R.W.H Group.",
-    "en": "R.W.H Group’s leadership, teams, offices, Honda Tadakatsu biography, design philosophy and partners."
+    "en": "R.W.H Group’s leadership, teams, offices, design philosophy and partners, along with Honda Tadakatsu’s biography."
   },
   "translationNotes": [
     "Japanese duplicate prose is represented by the Vietnamese and English equivalents. Names remain in their published Latin spelling.",
@@ -74,7 +74,7 @@
     },
     "en": {
       "documentTitle": "About us | R.W.H Group",
-      "description": "R.W.H Group’s leadership, teams, offices, Honda Tadakatsu biography, design philosophy and partners.",
+      "description": "R.W.H Group’s leadership, teams, offices, design philosophy and partners, along with Honda Tadakatsu’s biography.",
       "founderRole": "Founder · Chairman",
       "founderName": "Arch. Honda Tadakatsu",
       "boardRole": "Board of Directors",
@@ -90,7 +90,7 @@
       "mapAlt": "Map of R.W.H Group offices in Japan and Vietnam",
       "mapCaption": "Offices in Japan and Vietnam",
       "founderTitle": "Honda Tadakatsu",
-      "founderIntro": "Honda Tadakatsu collaborated with a team of talented architects and engineers from Japan, France, and Vietnam to establish the Honda Tadakatsu 1st Class Architectural Office R.W.H. Group Ltd., honoring the design philosophy of Antonin Raymond. In doing so, he demonstrated his commitment to the art of architecture and his understanding of its mission.",
+      "founderIntro": "Honda Tadakatsu collaborated with a team of talented architects and engineers from Japan, France and Vietnam to establish the Honda Tadakatsu 1st Class Architectural Office R.W.H. Group Ltd., carrying forward Antonin Raymond’s design philosophy. This reflects his dedication to architecture as an art form and his understanding of its purpose.",
       "biographyTitle": "Biography",
       "qualification": "Qualifications: First-class architect (No. 186806).",
       "career0": "Ishihara Architectural Design Office Co., Ltd.",
@@ -99,11 +99,11 @@
       "career3": "Established the Da Nang Office in Vietnam.",
       "career4": "Established Honda Tadakatsu First-Class Architectural Office — R.W.H Group.",
       "philosophyTitle": "Design Philosophy",
-      "philosophy0": "Our design philosophy focuses on harmony between nature, human beings, and society. We share the ambition to deliver the finest design products based on three key principles: simplicity, effectiveness, and harmony with nature.",
-      "philosophy1": "This philosophy does not limit our work to simply creating forms and shapes. It seeks to express the essence of architecture honestly through the relationships between nature and humans, and between humans and society.",
+      "philosophy0": "Our design philosophy centres on harmony between nature, people and society. We share an ambition to deliver outstanding designs guided by simplicity, effectiveness and harmony with nature.",
+      "philosophy1": "Our work goes beyond creating forms and shapes. We seek to express the essence of architecture through the relationships between nature and people and between people and society.",
       "qualitiesTitle": "Human qualities:",
       "qualities": "Simple – direct – economical – honest.",
-      "creativeWork": "It's all about creative work.",
+      "creativeWork": "These qualities guide our creative work.",
       "signatureAlt": "Signature of Honda Tadakatsu",
       "dreamTitle": "Customer’s Dream",
       "japanTitle": "Japan",
@@ -111,11 +111,11 @@
       "japanServices": "Planning · Design · Supervision",
       "vietnamTitle": "Viet Nam",
       "vietnamCompany": "R.W.H Group",
-      "vietnamServices": "Proposal creation · 3D perspective creation · Video creation",
+      "vietnamServices": "Proposal development · 3D visualisation · Video production",
       "partnersTitle": "Partners",
       "partners1Alt": "R.W.H Group partner logos — first strip",
       "partners2Alt": "R.W.H Group partner logos — second strip",
-      "qualificationDate": "Qualified on February 7."
+      "qualificationDate": "Certification issued on 7 February."
     }
   },
   "emphasis": {
@@ -151,11 +151,11 @@
         "186806"
       ],
       "philosophy0": [
-        "simplicity, effectiveness, and harmony with nature"
+        "simplicity, effectiveness and harmony with nature"
       ],
       "philosophy1": [
-        "nature and humans",
-        "humans and society"
+        "nature and people",
+        "people and society"
       ],
       "japanCompany": [
         "Honda Tadakatsu"
