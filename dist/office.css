@@ -39,12 +39,8 @@ body.office-page { margin:0; min-width:0; background:#fff; color:#333; }
 .office-page .meunRBox .menu span { left:12px; width:20px; }
 .office-rail-label { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); writing-mode:vertical-rl; color:#ccc; font:300 13px/1 Roboto,Arial,sans-serif; letter-spacing:.08em; text-transform:uppercase; pointer-events:none; }
 .office-page.menu-open .office-title,.office-page.menu-open .office-shortcuts,.office-page.menu-open .office-rail-label { visibility:hidden; }
-.office-page > .language-switch { top:15px; right:90px; text-shadow:none; background:#fff; }
-.office-page > .language-switch button { color:#555; }
-.office-page > .language-switch button[aria-pressed=true],.office-page > .language-switch button:hover { color:#111; }
-.office-page.menu-open > .language-switch button { color:#ccc; }
-.office-page.menu-open > .language-switch { background:#292929; }
-.office-page.menu-open > .language-switch button[aria-pressed=true] { color:#fff; }
+.office-page > .language-switch { background:#fff; color:#222; }
+.office-page.menu-open > .language-switch { background:#292929; color:#fff; }
 .office-page a:focus-visible,.office-page > .language-switch button:focus-visible { outline:1px solid #333; outline-offset:4px; }
 .office-page .menuBox a:focus-visible,.office-page #gFooter a:focus-visible,.office-page.menu-open > .language-switch button:focus-visible { outline-color:#fff; }
 .office-page #gFooter .fInner { padding-right:7.2%; }
@@ -161,8 +157,6 @@ body.office-page { margin:0; min-width:0; background:#fff; color:#333; }
   .office-page .meunRBox { width:44px; }
   .office-page .meunRBox .menu { top:8px; right:0; }
   .office-rail-label { font-size:11px; }
-  .office-page > .language-switch { top:8px; right:54px; }
-  .office-page > .language-switch button { width:40px; min-height:44px; }
   .office-page #gFooter .fInner { padding-left:20px; padding-right:20px; }
 
   .office-main p,.office-main dl,.office-main li { font-size:16px; line-height:1.75; }
@@ -213,13 +207,13 @@ body.office-page { margin:0; min-width:0; background:#fff; color:#333; }
   .office-shortcuts a { font-size:10px; letter-spacing:.01em; }
 }
 
-/* Static bilingual Office: original Vietnamese followed by its English translation. */
-.office-translation { display:block; margin-top:.55em; font-weight:400; }
-.office-main h2 .office-translation,.office-main h3 .office-translation { font-size:.8em; font-weight:700; }
+/* VI/EN content retains both translations; only the chosen language is shown. */
+.office-translation { margin:0; font:inherit; }
+.office-main h2 .office-translation,.office-main h3 .office-translation { font:inherit; }
 .office-person h3 span { display:inline; }
 .office-services .office-service-list { display:block; max-width:none; }
-.office-team .office-translation { font-size:.9em; margin-top:3px; }
-.office-career .office-translation { margin-top:6px; }
+.office-team .office-translation { font:inherit; margin:0; }
+.office-career .office-translation { margin:0; }
 
 /* Align bilingual prose edges while retaining natural spacing on final lines. */
 .office-founder > p,.office-philosophy > p { text-align:justify; text-align-last:start; text-justify:inter-word; text-wrap:wrap; }

@@ -37,3 +37,8 @@ Keep the incumbent R.W.H UI, fonts and neutral text colors. Office now follows t
 - Contact opens above the current context and its return arrow replaces the contact menu action. Closing Contact preserves the underlying Office/project scroll position and draft form values.
 - Browser Back closes Contact or an embedded native image/video dialog first, then Office/project content. The separate root video-library flow is outside this change. Reuse same-URL history entries and replace internal document navigation so it does not add spurious Back steps.
 - Pause landing autoplay while Contact or a content panel is open. Resume a complete viewing interval after closing, preserving the current project. Keep API delivery, factual content, VI/EN, media and incumbent styling.
+
+
+## VI/EN selector — 7 November 2026
+
+The compact upper-right VI/EN control selects one language across the landing page, About, projects, navigation and Contact. It uses 11px labels in a 64px-wide group with 36px desktop / 40px phone touch height, beside the existing close/menu control. The chosen language persists across reloads and same-origin documents, including embedded project panels. About and Contact retain both original translations in source and show only the selected language. Form drafts and phone delivery are preserved. The Tokyo and Takasaki team entries retain their approved English wording.

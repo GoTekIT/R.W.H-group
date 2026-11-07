@@ -240,3 +240,8 @@ Office and project content share the existing full-screen sliding panel. Office 
 Contact uses one44px return arrow in place of its menu action (desktop top13px/left13px inside the rail; mobile top8px/left2px). It closes to the prior Office/project/landing state, preserving the document's scroll position. Only the active layer's close/return control is visible. Opening Contact or a content panel pauses landing autoplay; closing restores the same project with a complete viewing interval.
 
 The shared panel keeps the landing URL unchanged. Same-URL history entries make Browser Back close Contact or the active nested native dialog before closing Office/project content. Source-document navigation and cleanup replace iframe entries, avoiding extra blank Back steps. Embedded menu and home/project navigation are handled by the landing controller; ordinary modified-link and source fallbacks remain available. Browser evidence and state checks are recorded in `evidence/landing-office-20261027/`.
+
+
+## VI/EN selector — 7 November 2026
+
+The compact upper-right VI/EN control selects one language across the landing page, About, projects, navigation and Contact. It uses 11px labels in a 64px-wide group with 36px desktop / 40px phone touch height, beside the existing close/menu control. The chosen language persists across reloads and same-origin documents, including embedded project panels. About and Contact retain both original translations in source and show only the selected language. Form drafts and phone delivery are preserved. The Tokyo and Takasaki team entries retain their approved English wording.
