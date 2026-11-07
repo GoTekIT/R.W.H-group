@@ -10,7 +10,7 @@
       clientFilm: 'Video do khách hàng lựa chọn.',
       brandFilm: 'Phim giới thiệu chung của R.W.H Group.', projectFilm: 'Phim giới thiệu dự án.',
       referenceFilm: 'Video tham khảo · withBanyan. Không thuộc danh mục dự án R.W.H Group.', openVideoSource: 'Mở video gốc ↗',
-      language: 'Ngôn ngữ', openMenu: 'Mở menu', closeMenu: 'Đóng menu', navigation: 'Điều hướng chính',
+      language: 'Ngôn ngữ', backToTop: 'Lên đầu', privacyNotice: 'Thông tin bảo mật', contactNavigation: 'Điều hướng liên hệ', openMenu: 'Mở menu', closeMenu: 'Đóng menu', navigation: 'Điều hướng chính',
       navHome: 'Trang chủ', office: 'Giới thiệu', navProjects: 'Dự án', navNews: 'Tin tức', jobs: 'Tuyển dụng', navContact: 'Liên hệ',
       selectedWorks: 'Dự án chọn lọc', projectsJapan: 'Dự án Nhật Bản', planning: 'Quy hoạch', architecture: 'Kiến trúc',
       interior: 'Nội thất', landscape: 'Cảnh quan', allProjects: 'Tất cả dự án', companyProfile: 'Hồ sơ năng lực',
@@ -46,7 +46,7 @@
       clientFilm: 'Client-selected video.',
       brandFilm: 'A general introduction to R.W.H Group.', projectFilm: 'Project introduction film.',
       referenceFilm: 'Reference film · withBanyan. Not part of the R.W.H Group project portfolio.', openVideoSource: 'Open original video ↗',
-      language: 'Language', openMenu: 'Open menu', closeMenu: 'Close menu', navigation: 'Main navigation',
+      language: 'Language', backToTop: 'Back to top', privacyNotice: 'Privacy notice', contactNavigation: 'Contact navigation', openMenu: 'Open menu', closeMenu: 'Close menu', navigation: 'Main navigation',
       navHome: 'Home', office: 'About us', navProjects: 'Projects', navNews: 'News', jobs: 'Jobs', navContact: 'Contact',
       selectedWorks: 'Selected projects', projectsJapan: 'Projects Japan', planning: 'Planning', architecture: 'Architecture',
       interior: 'Interior', landscape: 'Landscape', allProjects: 'All projects', companyProfile: 'Company profile',
@@ -117,7 +117,12 @@
   document.querySelectorAll('[data-language]').forEach(button => {
     button.addEventListener('click', () => setLanguage(button.dataset.language));
   });
+  window.addEventListener('storage', event => {
+    if (event.key !== 'rwh-language' && event.key !== null) return;
+    const next = valid(event.newValue) ? event.newValue : 'vi';
+    if (next !== language) setLanguage(next, false);
+  });
   let saved;
   try { saved = window.localStorage.getItem('rwh-language'); } catch { /* Use Vietnamese when storage is unavailable. */ }
-  setLanguage('vi', false);
+  setLanguage(valid(saved) ? saved : 'vi', false);
 })();

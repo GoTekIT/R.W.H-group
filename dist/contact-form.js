@@ -68,8 +68,7 @@
         submit.disabled = false;
         fields.forEach(field => { field.readOnly = false; });
         form.removeAttribute('aria-busy');
-        submit.removeAttribute?.('data-i18n');
-        submit.textContent = 'Gửi liên hệ | Send enquiry';
+        i18n.message(submit, 'sendMessage');
       }
     }
     form.addEventListener('submit', send);
@@ -88,6 +87,8 @@
     topButton.type = 'button'; topButton.dataset.contactTop = '';
     topButton.className = 'contact-back-top';
     topButton.setAttribute('aria-label', 'Lên đầu / Back to top');
+    topButton.dataset.i18nAriaLabel = 'backToTop';
+    topButton.setAttribute('aria-label', window.RWHI18n.t('backToTop'));
     topButton.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21V3M5 10l7-7 7 7"/></svg>';
     rail.append(topButton);
     topButton.addEventListener('click', event => {

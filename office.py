@@ -14,7 +14,7 @@ def render_office(root, homepage, asset, switcher, video_library):
                 for language, values in content['emphasis'].items()}
     (dist / 'office-copy.js').write_text('window.RWHPageCopy = ' + json.dumps(copy, ensure_ascii=False, separators=(',', ':')) + ';\nwindow.RWHOfficeEmphasis = ' + json.dumps(emphasis, ensure_ascii=False, separators=(',', ':')) + ';\n')
 
-    english_only = {'founderRole', 'boardRole', 'teamsTitle', 'tokyo', 'takasaki'}
+    english_only = {'tokyo', 'takasaki'}
     def translated(key, language, emphasized=False):
         value = content['copy'][language][key]
         phrases = content['emphasis'][language].get(key, []) if emphasized else []
@@ -27,9 +27,10 @@ def render_office(root, homepage, asset, switcher, video_library):
         if key in english_only:
             return f'<span lang="en">{translated(key, "en", emphasized)}</span>'
         primary = f'<span lang="vi">{translated(key, "vi", emphasized)}</span>'
-        if vi == en or key in {'founderName', 'boardName', 'haNoi', 'daNang', 'hue', 'hoChiMinh'}:
+        if vi == en:
             return primary
-        return primary + f'<span class="office-translation" lang="en">{translated(key, "en", emphasized)}</span>'
+        primary = primary.replace('lang="vi"', 'lang="vi" data-language-content="vi"')
+        return primary + f'<span class="office-translation" lang="en" data-language-content="en">{translated(key, "en", emphasized)}</span>'
 
     def text(key, tag='p', attrs=''):
         return f'<{tag}{attrs}>{bilingual(key)}</{tag}>'
@@ -94,7 +95,7 @@ THESIS: Complete R.W.H Office information, with the parent site's content sequen
 OWN-WORLD: Current R.W.H Roboto typography, neutral ink, white surfaces, charcoal rail, shared menu and footer.
 STORY: Meet the leadership and teams, read Honda's biography and philosophy, discover services in Japan and Vietnam, then partners.
 FIRST VIEWPORT: Existing Office header above leadership at left, original portrait in the middle and office map at right.
-FORM: User-pinned parent Office structure; Vietnamese body copy is followed by English. office-complete-20261027.
+FORM: User-pinned parent Office structure; VI/EN control selects one language at a time.
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md
 -->
 {switcher}
@@ -128,7 +129,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       {text('founderTitle', 'h2', ' id="office-founder-title"')}
       {rich('founderIntro')}
       {text('biographyTitle', 'h3')}
-      <p class="office-qualification"><span lang="vi">{translated('qualification', 'vi', True)} {translated('qualificationDate', 'vi')}</span><span class="office-translation" lang="en">{translated('qualification', 'en', True)} {translated('qualificationDate', 'en')}</span></p>
+      <p class="office-qualification"><span lang="vi" data-language-content="vi">{translated('qualification', 'vi', True)} {translated('qualificationDate', 'vi')}</span><span class="office-translation" lang="en" data-language-content="en">{translated('qualification', 'en', True)} {translated('qualificationDate', 'en')}</span></p>
       <dl class="office-career">{career}</dl>
     </section>
     <section class="office-philosophy" id="philosophy" aria-labelledby="office-philosophy-title">

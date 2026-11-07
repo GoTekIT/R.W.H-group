@@ -31,19 +31,21 @@ function page(saved = null, blockedStorage = false) {
         '[data-project-title]': [image], '[data-language]': buttons })[selector] || [];
     }
   };
-  const context = { document: doc, window: { localStorage: {
+  const windowListeners = {};
+  const context = { document: doc, window: { addEventListener(type, callback) { windowListeners[type] = callback; }, localStorage: {
     getItem(key) { if (blockedStorage) throw new Error('Storage unavailable'); return store.get(key); },
     setItem(key, value) { if (blockedStorage) throw new Error('Storage unavailable'); store.set(key, value); }
   } }, CustomEvent: class { constructor(type, init) { this.type = type; this.detail = init.detail; } } };
   vm.runInNewContext(fs.readFileSync(path.join(dist, 'project-copy.js'), 'utf8'), context);
   vm.runInNewContext(fs.readFileSync(path.join(dist, 'office-copy.js'), 'utf8'), context);
   vm.runInNewContext(fs.readFileSync(path.join(dist, 'site-language.js'), 'utf8'), context);
-  return { ...context, metadata, note, description, image, menu, buttons, store, officeFounder, officePhoto, api: context.window.RWHI18n };
+  return { ...context, metadata, note, description, image, menu, buttons, store, officeFounder, officePhoto, api: context.window.RWHI18n,
+    storage(event) { windowListeners.storage(event); } };
 }
 
 test('supports English project copy and accessible labels through the language API', () => {
   const p = page('en');
-  assert.equal(p.document.documentElement.lang, 'vi');
+  assert.equal(p.document.documentElement.lang, 'en');
   p.api.setLanguage('en', false);
   assert.equal(p.document.documentElement.lang, 'en');
   assert.match(p.metadata.textContent, /Quy Nhon, Vietnam/);
@@ -74,6 +76,25 @@ test('language switching remains usable when browser storage is blocked', () => 
   assert.equal(p.document.documentElement.lang, 'en');
 });
 
+test('restores a saved language and falls back to Vietnamese for invalid preferences', () => {
+  assert.equal(page('en').api.language, 'en');
+  assert.equal(page('vi').api.language, 'vi');
+  assert.equal(page('invalid').api.language, 'vi');
+  assert.equal(page().api.language, 'vi');
+});
+
+test('syncs the preference across open same-origin pages without writing it back', () => {
+  const p = page();
+  p.storage({key: 'other-setting', newValue: 'en'});
+  assert.equal(p.api.language, 'vi');
+  p.storage({key: 'rwh-language', newValue: 'en'});
+  assert.equal(p.api.language, 'en');
+  assert.equal(p.officePhoto.getAttribute('alt'), 'Portrait of architect Honda Tadakatsu');
+  assert.equal(p.store.has('rwh-language'), false);
+  p.storage({key: null, newValue: null});
+  assert.equal(p.api.language, 'vi');
+});
+
 test('all rendered translation keys exist in both languages', () => {
   const p = page();
   const files = [path.join(dist, 'index.html'), path.join(dist, 'office/index.html'), ...fs.readdirSync(path.join(dist, 'projects')).map(name => path.join(dist, 'projects', name, 'index.html'))];
@@ -86,7 +107,7 @@ test('all rendered translation keys exist in both languages', () => {
 
 test('Office body copy and image descriptions follow VI/EN and restore the selected language', () => {
   const p = page('en');
-  assert.equal(p.document.documentElement.lang, 'vi');
+  assert.equal(p.document.documentElement.lang, 'en');
   p.api.setLanguage('en', false);
   assert.match(p.officeFounder.textContent, /Japan, France,? and Vietnam/);
   assert.equal(p.officePhoto.getAttribute('alt'), 'Portrait of architect Honda Tadakatsu');
@@ -95,14 +116,20 @@ test('Office body copy and image descriptions follow VI/EN and restore the selec
   assert.equal(p.officePhoto.getAttribute('alt'), 'Chân dung kiến trúc sư Honda Tadakatsu');
 });
 
- test('Office renders Vietnamese and English together without language buttons', () => {
+test('Office retains both translations and exposes the language selector on every document', () => {
   const html = fs.readFileSync(path.join(dist, 'office/index.html'), 'utf8');
-  assert.doesNotMatch(html, /class="language-switch"/);
-  assert.match(html, /class="office-translation" lang="en"/);
+  assert.match(html, /class="language-switch"/);
+  assert.match(html, /class="office-translation" lang="en" data-language-content="en"/);
+  assert.match(html, /lang="vi" data-language-content="vi"/);
   assert.match(html.replace(/<[^>]*>/g, ''), /Honda Tadakatsu collaborated with a team/);
   assert.match(html, /Founder · Chairman/);
   assert.doesNotMatch(html, /data-office-rich=/);
-  for (const file of ['index.html', 'projects/the-hera-resort/index.html']) {
-    assert.doesNotMatch(fs.readFileSync(path.join(dist, file), 'utf8'), /class="language-switch"/);
+  const files = ['index.html','office/index.html', ...fs.readdirSync(path.join(dist,'projects')).map(slug => `projects/${slug}/index.html`)];
+  for (const file of files) {
+    const page = fs.readFileSync(path.join(dist, file), 'utf8');
+    assert.match(page, /class="language-switch"/);
+    assert.match(page, /class="language-switch contact-language"/);
+    assert.equal((page.match(/data-language="en"/g) || []).length, 2);
+    assert.match(page, /id="contact-phone" name="phone" type="tel"/);
   }
 });
