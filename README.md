@@ -1,57 +1,103 @@
-# R.W.H Group — Landing page
+# R.W.H Group — Website giới thiệu doanh nghiệp và dự án
 
-> **Video 27/10/2026 (Vimeo):** Cả 11 dự án và 12 phim trong thư viện đã chuyển sang iframe Vimeo. AEGIS dùng clip mới khách gửi ngày 26/10. Upload file nguồn chất lượng cao, không nén lại trước upload; Vimeo tự tạo các mức chất lượng phát. Thử tự phát có tiếng; nếu trình duyệt chặn thì dùng Play, không tự chuyển sang tắt tiếng. Khung 16:9, có bố cục mobile dọc/ngang. URL Cloudflare giữ trong manifest để khôi phục. Xem [VIMEO_MEDIA.md](VIMEO_MEDIA.md). Các ghi chú 23/10 dưới đây là lịch sử.
+Website giới thiệu R.W.H Group trong lĩnh vực thiết kế và thi công kiến trúc, với thông điệp **Japanese Expertise, Better Living**. Nội dung tập trung vào các dự án kiến trúc, quy hoạch, nội thất, cảnh quan, nghỉ dưỡng, Onsen và chăm sóc sức khỏe tại Việt Nam và Nhật Bản.
 
-> **Cập nhật video 23/10/2026 (Cloudflare R2):** Đã thay cả bốn iframe YouTube bằng MP4 local tải qua YTSave: Hera, Kawara và phim tham khảo Kyoto ở 3840×2160; Ecopark Hưng Yên ở 1920×1080 vì nguồn chỉ có tối đa 1080p. Giữ nguyên sáu dự án dùng phim thương hiệu chung và MP4 Aegis/Nam Ô. Video mặc định có tiếng; thử tự phát khi hiển thị, nếu trình duyệt chặn thì người xem dùng nút Play. Không tự chuyển về mute khi bị chặn, giữ lựa chọn âm lượng của người xem. Các mô tả YouTube/muted và dung lượng phía dưới là trạng thái bàn giao cũ trước cập nhật này. Đã cấu hình nguồn phát Cloudflare R2 qua media.nguyenxuanphu.net cho 7 video; xem R2_MEDIA.md. CDN đã hoạt động; source dùng URL media.nguyenxuanphu.net. Trạng thái triển khai xem GitHub/Vercel theo commit. Không commit các file MP4 mới.
+Website chính thức tại [rwhgroup.site](https://rwhgroup.site/).
 
-Website giới thiệu 11 dự án RWH, giao diện tham chiếu Apollo, nội dung tiếng Việt/Anh, gallery ảnh, video và form liên hệ. Bộ dự án đang chạy là dữ liệu RWH khách hàng cung cấp, không phải bộ dự án mẫu Apollo.
+Repository tại [GoTekIT/R.W.H-group](https://github.com/GoTekIT/R.W.H-group).
 
-- Repository: https://github.com/GoTekIT/R.W.H-group
-- Nhánh triển khai: `main`
-- Website hiện tại: https://rwh-ruby.vercel.app/
-- Bàn giao và chuyển hosting: [HANDOVER.md](HANDOVER.md)
-- Nội dung/hành vi đã thống nhất: [BRIEF.md](BRIEF.md)
-- Cấu hình Vercel và Resend: [DEPLOY_VERCEL.md](DEPLOY_VERCEL.md)
+Tài liệu hướng dẫn cấu trúc mã nguồn, xem trước, cập nhật nội dung và kiểm tra trước khi bàn giao phiên bản mới. Nội dung được đối chiếu với website và nhánh `main` ngày 08/11/2026.
 
-## Kiến trúc
+## Chức năng
 
-Giao diện dùng HTML/CSS/JavaScript thuần trong `dist/`, không cần npm install hoặc framework build. Python dùng để tạo lại trang dự án khi sửa dữ liệu; không cần Python trên hosting để phục vụ bản đã tạo.
+- Trang chủ trình bày 11 dự án với ảnh toàn màn hình và điều hướng bằng chuột, bàn phím hoặc thao tác vuốt.
+- Chi tiết dự án gồm video, thư viện ảnh, mô tả, thông tin dự án và các dự án liên quan.
+- Phần Giới thiệu trình bày doanh nghiệp, đội ngũ, dịch vụ và đối tác.
+- Thư viện video giới thiệu các dự án.
+- Giao diện tiếng Việt và tiếng Anh, lưu lựa chọn ngôn ngữ trên trình duyệt.
+- Hồ sơ năng lực định dạng PDF.
+- Biểu mẫu liên hệ gồm họ tên, email, số điện thoại, câu hỏi và xác nhận đồng ý xử lý thông tin.
+- Bố cục thích ứng với máy tính và thiết bị di động.
 
-Form gửi JSON tới `POST /api/contact`. `api/contact.js` là entrypoint Vercel, dùng xử lý Node.js trong `lib/contact.js` để gửi qua Resend tới `linh.rwh@gmail.com`. Không có database. Hosting khác phải có HTTP route tương đương hoặc chuyển backend sang công nghệ được nhà cung cấp hỗ trợ; chỉ upload `dist/` sẽ chưa chạy được API gửi form.
+## Công nghệ và cách tổ chức
 
-## Chức năng hiện tại
+Giao diện sử dụng HTML, CSS và JavaScript thuần. Thư mục `dist/` chứa các trang và tài nguyên có thể phục vụ trực tiếp bằng máy chủ web tĩnh.
 
-- Mục Văn phòng mở ngay trong landing qua panel hiện có, giữ nguyên URL; `/office` là tài liệu nguồn/dự phòng. Trang có đầy đủ các phần và năm ảnh của Office trên website mẹ: ban lãnh đạo, đội ngũ, chân dung, bản đồ, tiểu sử, triết lý, chữ ký, dịch vụ Nhật Bản/Việt Nam và đối tác. Nội dung chuyển VI/EN theo nút ngôn ngữ; giữ font, màu chữ, menu và footer của website hiện tại. Sửa `OFFICE_CONTENT.json`, `OFFICE_MEDIA.json`, `office.py`, `dist/office.css` và `dist/office-page.js`, rồi chạy `python3 render-projects.py`. Hai GIF đối tác được lưu nguyên nguồn; trang dùng hai dải ảnh toàn cảnh ghép từ toàn bộ nội dung cuộn của GIF để giữ đủ đối tác và chạy tự động liên tục sang trái. Không có dòng điều khiển tạm dừng theo yêu cầu mới; logo vẫn dừng khi rê chuột, focus, ra ngoài màn hình hoặc ẩn tab. Chế độ giảm chuyển động giữ dải ảnh cuộn ngang. Ngắt đoạn, danh sách dịch vụ và chữ nhấn được giữ khi chuyển VI/EN.
-- 11 dự án với 201 ảnh: giữ thứ tự thư mục 01–10, thêm Bình Minh Healthcare & Resort ở số 11 theo yêu cầu ngày 22/10/2026; dự án 06 chỉ dùng bộ Onsen.
-- Landing tự chuyển mỗi 6 giây, hỗ trợ wheel, swipe, bàn phím và dừng ở footer.
-- Details trượt phủ toàn màn hình tại chỗ. Khi mở, landing dừng tự chuyển và chuyển động nền; đóng xong thì chạy tiếp với khoảng xem mới đủ 6 giây.
-- Header Details giữ ở trên khi cuộn; video ở đầu, sau đó là ảnh tràn ngang, mô tả, thông tin và dự án liên quan.
-- VI/EN được lưu trên trình duyệt; menu in hoa, hồ sơ năng lực mở PDF RWH.
-- Mỗi dự án có đúng một iframe Vimeo. Thư viện Video có 12 phim, gồm 11 nguồn gắn với 11 dự án và clip Kyoto tham khảo.
-- Video thử tự phát có tiếng khi đủ hiển thị; nếu bị trình duyệt chặn thì giữ nút Play có tiếng. Tôn trọng lựa chọn âm lượng của người xem và tùy chọn giảm chuyển động.
-- Contact chỉ gồm Name, Email, Phone number, Questions. Hotline: `0982-132-489`.
+Python 3 được dùng để tạo trang từ dữ liệu JSON. Lệnh tạo trang chính sử dụng thư viện chuẩn Python. Các công cụ xử lý lại ảnh gốc có phụ thuộc riêng như Pillow và PyMuPDF.
 
-## Các file cần biết
+Biểu mẫu liên hệ gửi dữ liệu tới `POST /api/contact`. Phần xử lý chạy bằng Node.js, kiểm tra dữ liệu và chuyển yêu cầu tới dịch vụ gửi thư được cấu hình cho môi trường vận hành. Chức năng này cần backend hoạt động cùng website.
 
-| File/thư mục | Vai trò |
+## Cấu trúc mã nguồn
+
+| Tệp hoặc thư mục | Vai trò |
 | --- | --- |
-| `dist/` | Toàn bộ giao diện và tài nguyên web đã sẵn sàng triển khai |
-| `dist/projects/*/index.html` | Mười một trang Details, cũng được nạp trong panel landing |
-| `dist/assets/rwh-projects/` | Ảnh dự án WebP đã tối ưu |
-| `dist/assets/rwh-videos/` | Ba MP4 local và ảnh bìa |
-| `dist/assets/rwh-company-profile-2025.pdf` | Hồ sơ năng lực hiện tại |
-| `PROJECT_SOURCES.json` / `PROJECT_TRANSLATIONS.json` | Dữ liệu dự án VI/EN, thứ tự ảnh và nguồn |
-| `VIDEO_SOURCES.json` / `NAVIGATION_SOURCES.json` | Ánh xạ video, nguồn clip và các liên kết RWH |
-| `render-projects.py` | Tạo lại trang và bộ đếm theo số dự án trong JSON, bản dịch, thành phần chung và hash tài nguyên |
-| `dist/app.js` / `dist/project-panel.js` | Điều hướng landing và vòng đời panel Văn phòng/Details |
-| `dist/site-language.js` / `dist/rwh-videos.js` | Ngôn ngữ giao diện và phát video |
-| `api/`, `lib/`, `.env.example` | Backend form và tên biến môi trường cần cấu hình |
-| `tests/` | Kiểm thử; dùng provider giả lập, không gửi thư thật |
-| `reference/`, `APOLLO_REFERENCE.json` | Tư liệu tham chiếu thiết kế và nguồn tài nguyên cũ |
+| `dist/index.html` | Trang chủ và các thành phần dùng chung như menu, footer, biểu mẫu liên hệ |
+| `dist/styles.css`, `dist/app.js` | Giao diện và hành vi trang chủ |
+| `dist/projects/<slug>/index.html` | Trang chi tiết từng dự án, được tạo từ dữ liệu |
+| `dist/office/index.html` | Trang giới thiệu, được tạo từ dữ liệu |
+| `dist/assets/` | Hình ảnh, phông chữ, biểu trưng, PDF và tài nguyên giao diện |
+| `dist/project-panel.js` | Mở và đóng phần Giới thiệu, chi tiết dự án trong trang chủ |
+| `dist/project-gallery.js`, `dist/project-gallery.css` | Thư viện ảnh và chế độ xem ảnh lớn |
+| `dist/site-language.js`, `dist/i18n.js` | Cơ chế ngôn ngữ và bản dịch giao diện |
+| `dist/project-copy.js`, `dist/office-copy.js` | Bản dịch được tạo từ dữ liệu dự án và giới thiệu |
+| `dist/rwh-videos.js`, `dist/rwh-videos.css` | Giao diện thư viện và hành vi phát video |
+| `dist/contact-form.js`, `dist/contact-page.css` | Giao diện, kiểm tra và gửi biểu mẫu liên hệ |
+| `PROJECT_SOURCES.json` | Danh mục, thứ tự, nội dung và hình ảnh dự án |
+| `PROJECT_TRANSLATIONS.json` | Bản dịch và nhãn nội dung dự án |
+| `OFFICE_CONTENT.json`, `OFFICE_MEDIA.json` | Nội dung và tài nguyên phần Giới thiệu |
+| `VIDEO_SOURCES.json` | Dữ liệu video và ánh xạ video với dự án |
+| `SITE_CONFIG.json` | Tên website, tiêu đề, mô tả và địa chỉ dùng để sinh metadata |
+| `render-projects.py` | Tạo lại trang dự án và gọi bước tạo phần Giới thiệu, metadata |
+| `office.py`, `seo.py` | Tạo nội dung Giới thiệu và dữ liệu hỗ trợ công cụ tìm kiếm |
+| `api/contact.js`, `lib/contact.js` | Điểm tiếp nhận và xử lý yêu cầu liên hệ |
+| `tests/` | Các kiểm thử tự động có sẵn |
 
-## Sửa nội dung, xem trước, kiểm tra
+## Xem trước trên máy tính
 
-Sửa dữ liệu dự án/video trong các JSON tương ứng; sửa menu/footer/Contact dùng chung trong `dist/index.html`. Sửa giao diện Details trong `render-projects.py` và các file CSS/JS liên quan. Sau đó chạy:
+Tải mã nguồn, mở terminal tại thư mục gốc repository rồi chạy bằng Python 3.
+
+```sh
+python3 -m http.server 4173 --bind 127.0.0.1 --directory dist
+```
+
+Mở `http://127.0.0.1:4173/` trong trình duyệt. Nhấn `Ctrl+C` trong terminal để dừng.
+
+Chế độ xem trước phục vụ các tệp tĩnh. Để kiểm tra việc gửi liên hệ, dùng môi trường có backend `/api/contact` cùng cấu hình gửi thư hợp lệ.
+
+## Cập nhật nội dung
+
+### Dự án và bản dịch
+
+1. Sửa nội dung tiếng Việt, thông tin và đường dẫn ảnh trong `PROJECT_SOURCES.json`.
+2. Cập nhật bản dịch tương ứng trong `PROJECT_TRANSLATIONS.json`.
+3. Giữ `slug` duy nhất cho mỗi dự án. Đánh số `number` liên tiếp bắt đầu từ 1. Khi thêm dự án, bổ sung đủ bản dịch, ảnh và ánh xạ video.
+4. Chạy lệnh tạo lại trang và kiểm tra theo mục bên dưới.
+
+Các trang trong `dist/projects/` và tệp `dist/project-copy.js` được tạo tự động. Thực hiện thay đổi nội dung tại JSON để lần tạo trang tiếp theo giữ được nội dung đã sửa.
+
+### Phần Giới thiệu
+
+Sửa nội dung song ngữ trong `OFFICE_CONTENT.json` và thông tin ảnh trong `OFFICE_MEDIA.json`, sau đó tạo lại trang. Khi điều chỉnh bố cục, kiểm tra `office.py`, `dist/office.css` và `dist/office-page.js`.
+
+### Hình ảnh, video và hồ sơ năng lực
+
+- Đặt ảnh mới vào thư mục tài nguyên phù hợp và cập nhật đường dẫn trong JSON. Giữ thông tin kích thước, ảnh gốc, ảnh di động và ảnh thu nhỏ nhất quán với tệp thực tế.
+- Cập nhật thông tin video trong `VIDEO_SOURCES.json`, bảo đảm `projectAssignments` ánh xạ đúng `slug` và ID video. Kiểm tra ảnh bìa, phát video và chế độ toàn màn hình trên máy tính, điện thoại.
+- Thay PDF hồ sơ năng lực trong `dist/assets/` và cập nhật liên kết tại `dist/index.html` nếu tên tệp thay đổi. Tạo lại trang để cập nhật các thành phần dùng chung.
+
+### Menu, footer và liên hệ
+
+Sửa thành phần dùng chung tại `dist/index.html` và bản dịch giao diện tương ứng. Sau đó tạo lại trang để đồng bộ các trang con.
+
+Nội dung hiển thị ở footer và cấu hình nhận thư của backend được quản lý riêng. Khi thay đổi đầu mối liên hệ, người bảo trì cần đối chiếu cả giao diện và phần xử lý trong `lib/contact.js`.
+
+### Tiêu đề và mô tả tìm kiếm
+
+Cập nhật `SITE_CONFIG.json`, sau đó tạo lại trang. Đối chiếu địa chỉ website trong cấu hình với tên miền đang sử dụng trước khi sinh canonical, sitemap và metadata.
+
+## Tạo lại trang và kiểm tra
+
+Chạy tại thư mục gốc repository, sau khi hoàn tất thay đổi dữ liệu.
 
 ```sh
 python3 render-projects.py
@@ -59,29 +105,28 @@ node --test tests/*.test.cjs
 git diff --check
 ```
 
-Để xem giao diện tại `http://127.0.0.1:4173/`:
+Sử dụng Node.js có hỗ trợ `node --test`. Xem lại danh sách tệp thay đổi sau khi tạo trang.
 
 ```sh
-python3 -m http.server 4173 --bind 127.0.0.1 --directory dist
+git status --short
+git diff --stat
 ```
 
-Server xem trước này chỉ phục vụ file tĩnh, không chạy `/api/contact`. Không sửa riêng HTML đã sinh trong `dist/projects/` vì lần render sau sẽ ghi đè.
+Lệnh tạo trang cập nhật các tệp trong `dist/`, gồm trang chủ, chi tiết dự án, phần Giới thiệu, bản dịch và metadata. Giữ các tệp đầu ra tương ứng cùng phiên bản dữ liệu nguồn khi bàn giao cập nhật.
 
-## Triển khai và phần còn cần xác nhận
+## Kiểm tra trước khi bàn giao phiên bản mới
 
-Vercel hiện triển khai từ GitHub `main`, dùng gốc repository, output `dist`, không cần install/build command. Các biến `RESEND_API_KEY` và `RESEND_FROM_EMAIL` được nhập phía server; `.env.example` chỉ chứa tên biến, không có khóa thật.
+- Mở trang chủ, từng dự án và phần Giới thiệu trên máy tính, điện thoại.
+- Kiểm tra tiếng Việt, tiếng Anh, xuống dòng và các ký tự có dấu.
+- Kiểm tra ảnh lớn, ảnh di động, phóng to ảnh và các liên kết dự án liên quan.
+- Kiểm tra mở, đóng các lớp nội dung, nút quay lại và cuộn trang.
+- Kiểm tra video, liên kết hồ sơ năng lực và các liên kết liên hệ.
+- Kiểm tra biểu mẫu với dữ liệu hợp lệ và thiếu trường bắt buộc. Xác nhận thư tới người nhận trong môi trường nghiệm thu.
+- Kiểm tra tiêu đề, mô tả, canonical, sitemap và các đường dẫn tài nguyên.
+- Ghi lại phiên bản bàn giao, nội dung thay đổi và kết quả kiểm tra thực tế.
 
-Chưa có xác nhận thư thật đã tới hộp thư người nhận; cần cấu hình Resend và kiểm tra khi bàn giao. Nhà cung cấp hosting/domain mới chưa được chốt. PDF hiện khoảng 10,85 MiB, chưa đạt mục tiêu dưới 3 MB. Xem chi tiết trạng thái, tài nguyên và quy trình nghiệm thu trong [HANDOVER.md](HANDOVER.md).
+## Yêu cầu để vận hành đầy đủ
 
-## Media quality policy (2026-10-26)
+Phần giao diện được phục vụ từ `dist/`. Biểu mẫu liên hệ cần route `POST /api/contact` và cấu hình gửi thư phía máy chủ. Một số nội dung media được tải qua liên kết ngoài và cần tiếp tục truy cập được khi vận hành.
 
-- Desktop landing and gallery photos use original Drive file bytes or the original embedded image stream extracted from the supplied PDF/PowerPoint. Do not resize or re-encode these to chase a performance score.
-- `ORIGINAL_MEDIA_AUDIT.json` records each image hash, size and provenance. `retained-existing` identifies the 15 Binh Minh photos outside the supplied Drive and the two Thanh Thuy Zalo additions; these are not claimed as verified Drive originals.
-- Mobile uses a separate high-quality WebP rendition, at most 1600 px wide, without upscaling. The full-resolution original remains the gallery zoom target.
-- Vimeo embeds use adaptive quality on desktop and mobile. Original upload metadata and previous Cloudflare URLs remain in VIDEO_SOURCES.json; no mobile MP4 override is active for Vimeo.
-- `prepare-original-media.py CACHE_DIR` reproduces assets from the downloaded Drive files (Pillow and PyMuPDF required). `render-projects.py` builds pages. Keep the original files and client-approved hero choices intact.
-- Validate with `node --test tests/*.test.cjs`, then measure the deployed site. PageSpeed results from previous compressed assets do not establish the score of this version.
-
-### Điều hướng một trang
-
-Văn phòng và Details dùng chung panel trên landing; nội dung chỉ tải khi mở. Văn phòng dùng mũi tên quay lại, Details vẫn dùng X. Contact trong landing, Văn phòng và Details có mũi tên thay nút menu, đóng form sẽ trở về đúng nội dung và vị trí bên dưới. Browser Back đóng lớp đang mở trước, không đổi URL landing. Các tài liệu HTML nguồn được giữ cho dự phòng và liên kết trực tiếp. Form/API gửi liên hệ không thay đổi.
+Thông tin truy cập, khóa dịch vụ và giá trị cấu hình bí mật được quản lý qua kênh bàn giao riêng có kiểm soát. Khi chuyển môi trường vận hành, người phụ trách kỹ thuật cần đối chiếu cấu hình backend, đường dẫn media và kiểm tra toàn bộ chức năng trước khi nghiệm thu.
