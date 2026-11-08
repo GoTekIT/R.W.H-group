@@ -134,3 +134,11 @@ test('on /ja/ contact-form.js binds the inline form, and /api/contact accepts wh
   assert.equal(emails[0].reply_to, values.email);
   assert.ok(emails[0].text.includes(values.name) && emails[0].text.includes(values.questions) && emails[0].text.includes(values.phone));
 });
+
+test('every Vietnamese page links to /ja/ from the language switch, leaving the project panel frame', () => {
+  for (const file of ['index.html', 'office/index.html', ...projects.map(p => `projects/${p.slug}/index.html`)]) {
+    const switcher = read(file).match(/<div class="language-switch" role="group".*?<\/div>/s)[0];
+    assert.match(switcher, /<a href="\/ja\/" target="_top" lang="ja" hreflang="ja" aria-label="日本語ページ">JA<\/a>/, file);
+  }
+  assert.match(read('site-language.css'), /\.language-switch :is\(button,a\) \{[^}]*text-decoration:none/);
+});

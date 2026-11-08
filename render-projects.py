@@ -68,6 +68,7 @@ for project in projects:
 switcher = '''<div class="language-switch" role="group" aria-label="Ngôn ngữ" data-i18n-aria-label="language">
   <button type="button" data-language="vi" lang="vi" aria-label="Tiếng Việt" aria-pressed="true">VI</button>
   <button type="button" data-language="en" lang="en" aria-label="English" aria-pressed="false">EN</button>
+  <a href="/ja/" target="_top" lang="ja" hreflang="ja" aria-label="日本語ページ">JA</a>
 </div>'''
 
 
