@@ -320,5 +320,10 @@ print(f'Rendered {len(projects)} ordered project sections and local detail galle
 from office import render_office
 render_office(ROOT, html, asset, switcher, video_library)
 
+# The Japanese page is written by hand; keep the ?v= hashes of its links to shared files current.
+ja_page = DIST / 'ja' / 'index.html'
+if ja_page.exists():
+    ja_page.write_text(re.sub(r'"\.\./([^"?#]+\.(?:css|js|svg|jpg|png|webp|pdf))(?:\?v=[a-z0-9]+)?"', lambda m: f'"../{asset(m[1])}"', ja_page.read_text()))
+
 from seo import render_seo
 render_seo(ROOT)

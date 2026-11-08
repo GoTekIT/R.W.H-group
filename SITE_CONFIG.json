@@ -2,5 +2,36 @@
   "origin": "https://www.rwhgroup.site",
   "name": "R.W.H Group",
   "title": "R.W.H Group | Thiết kế & Thi công kiến trúc",
-  "description": "Khám phá các dự án kiến trúc, khu nghỉ dưỡng, Onsen và khách sạn của R.W.H Group tại Việt Nam và Nhật Bản. Liên hệ tư vấn thiết kế và thi công."
+  "description": "Khám phá các dự án kiến trúc, khu nghỉ dưỡng, Onsen và khách sạn của R.W.H Group tại Việt Nam và Nhật Bản. Liên hệ tư vấn thiết kế và thi công.",
+  "ja": {
+    "title": "RWH BIM/CAD DESIGN CENTER|株式会社本多忠勝1級建築士事務所 R.W.H Group",
+    "description": "一級建築士事務所(東京都知事登録 第65998号)の設計制作部門。ベトナム・ダナンの自社チーム20名が、CAD図面作成、BIMモデリング(意匠・構造・機械・電気)、CGパースを承ります。ご連絡は日本語で。",
+    "image": "assets/rwh-projects/hakuba-hotel/original-01-324b39656c.jpg",
+    "organization": {
+      "name": "株式会社本多忠勝1級建築士事務所 R.W.H Group",
+      "alternateName": [
+        "RWH BIM/CAD DESIGN CENTER",
+        "Tadakatsu Honda Co., Ltd. 1st Class Architect Office R.W.H. Group"
+      ],
+      "email": "linh.rwh@gmail.com",
+      "telephone": "+84-98-213-2489",
+      "foundingDate": "2024-02-22",
+      "founder": {
+        "@type": "Person",
+        "name": "本多忠勝"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "postalCode": "151-0053",
+        "addressRegion": "東京都",
+        "addressLocality": "渋谷区",
+        "streetAddress": "代々木4-5-16 La鳳山 205",
+        "addressCountry": "JP"
+      },
+      "sameAs": [
+        "https://www.instagram.com/rwh_group/",
+        "https://www.facebook.com/profile.php?id=61595571314662"
+      ]
+    }
+  }
 }

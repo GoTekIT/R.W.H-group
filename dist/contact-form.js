@@ -77,6 +77,12 @@
 
   if (typeof module === 'object' && module.exports) {
     module.exports = { bindContactForm };
+  } else if (!document.querySelector('#contact-modal')) {
+    // The Japanese page (/ja/) shows the form inline, without the shared contact dialog.
+    bindContactForm({
+      form: document.querySelector('#contact-form'),
+      note: document.querySelector('#contact-note'), i18n: window.RWHI18n
+    });
   } else {
     const panel = document.querySelector('#contact-modal');
     panel.querySelectorAll('[data-contact-design], [data-contact-section]').forEach(link => link.addEventListener('click', event => {
