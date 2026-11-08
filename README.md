@@ -4,7 +4,7 @@ Website giới thiệu R.W.H Group trong lĩnh vực thiết kế và thi công 
 
 Website chính thức tại [rwhgroup.site](https://rwhgroup.site/).
 
-Repository tại [GoTekIT/R.W.H-group](https://github.com/GoTekIT/R.W.H-group).
+Repository tại [GoTekIT/rwhgroup-website](https://github.com/GoTekIT/rwhgroup-website).
 
 Tài liệu hướng dẫn cấu trúc mã nguồn, xem trước, cập nhật nội dung và kiểm tra trước khi bàn giao phiên bản mới. Nội dung được đối chiếu với website và nhánh `main` ngày 08/11/2026.
 
