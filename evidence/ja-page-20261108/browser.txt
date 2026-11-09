@@ -1,0 +1,38 @@
+PASS  /ja/ loads with no failed requests
+PASS  /ja/ has no script errors
+PASS  /ja/ all 15 images decode
+PASS  /ja loads with no failed requests
+PASS  /ja has no script errors
+PASS  /ja all 15 images decode
+PASS  file link opens: /assets/rwh-bim-cad-flyer-ja.jpg?v=4193badb74  — 200
+PASS  file link opens: /assets/rwh-bim-cad-design-center-ja.pdf?v=242337bfdc  — 200
+PASS  file link opens: /assets/rwh-company-profile-2025.pdf?v=e2e84ed5ec  — 200
+PASS  project links open (11)
+PASS  Vietnamese links go to the home page  — http://127.0.0.1:4175/ http://127.0.0.1:4175/ http://127.0.0.1:4175/
+PASS  form starts with the Japanese ready line
+PASS  send succeeds and says so in Japanese  — お問い合わせありがとうございます。担当者よりご連絡いたします。
+PASS  one email handed to Resend  — 1
+PASS  email goes to linh.rwh@gmail.com only  — ["linh.rwh@gmail.com"]
+PASS  Reply-To is the visitor
+PASS  email text keeps the Japanese intact  — "Yêu cầu liên hệ từ landing page R.W.H Group\n\nName: 山田 太郎\nEmail: taro@example.co.jp\nSố điện thoại / Phone number: 03-1234-5678\n\nQuestions:\nBIMモデリングのご相談です。\n意匠・構造の2モデル、数量は3棟です。"
+PASS  form is cleared after success
+PASS  button back to 送信する
+PASS  full-width phone converted in the field  — 090-1234-5678
+PASS  full-width email and phone arrive half-width  — "hanako@example.jp"
+PASS  no send without consent
+PASS  short phone blocked with the Japanese message  — 電話番号を正しくご入力ください(数字7〜15桁)。
+PASS  Resend failure shows the Japanese error and keeps the text  — 送信できませんでした。入力内容はそのまま残っています。時間をおいて再度お試しいただくか、メールでご連絡ください。
+PASS  missing Resend settings show the Japanese "unavailable" line  — 現在フォームをご利用いただけません。メールまたはお電話でご連絡ください。
+PASS  honeypot filled: rejected, nothing sent
+PASS  sixth message is rate limited, in Japanese  — 送信回数が多すぎます。数分おいてから再度お試しください。
+PASS  home loads with no failed requests or errors
+PASS  Vietnamese form sends as before
+PASS  JA link visible on /  — {"href":"http://127.0.0.1:4175/ja/","w":32,"h":36,"visible":true,"deco":"none"}
+PASS  JA link visible on /projects/hakuba-hotel/index.html  — {"href":"http://127.0.0.1:4175/ja/","w":32,"h":36,"visible":true,"deco":"none"}
+PASS  JA link visible on /office  — {"href":"http://127.0.0.1:4175/ja/","w":32,"h":36,"visible":true,"deco":"none"}
+PASS  clicking JA opens /ja/
+PASS  JA inside the project panel opens /ja/ in the top window
+PASS  /ja/ has no sideways scroll at 390px  — 0
+PASS  /ja/ has no sideways scroll at 1280px  — 0
+
+36/36 passed

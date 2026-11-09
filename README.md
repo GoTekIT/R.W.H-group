@@ -15,6 +15,7 @@ Tài liệu hướng dẫn cấu trúc mã nguồn, xem trước, cập nhật n
 - Phần Giới thiệu trình bày doanh nghiệp, đội ngũ, dịch vụ và đối tác.
 - Thư viện video giới thiệu các dự án.
 - Giao diện tiếng Việt và tiếng Anh, lưu lựa chọn ngôn ngữ trên trình duyệt.
+- Trang tiếng Nhật tại `/ja/` giới thiệu bộ phận thiết kế BIM/CAD cho đối tác Nhật Bản, có biểu mẫu liên hệ tiếng Nhật; nút JA trên thanh chọn ngôn ngữ dẫn tới trang này.
 - Hồ sơ năng lực định dạng PDF.
 - Biểu mẫu liên hệ gồm họ tên, email, số điện thoại, câu hỏi và xác nhận đồng ý xử lý thông tin.
 - Bố cục thích ứng với máy tính và thiết bị di động.
@@ -35,6 +36,7 @@ Biểu mẫu liên hệ gửi dữ liệu tới `POST /api/contact`. Phần xử
 | `dist/styles.css`, `dist/app.js` | Giao diện và hành vi trang chủ |
 | `dist/projects/<slug>/index.html` | Trang chi tiết từng dự án, được tạo từ dữ liệu |
 | `dist/office/index.html` | Trang giới thiệu, được tạo từ dữ liệu |
+| `dist/ja/index.html` | Trang tiếng Nhật, viết tay, CSS riêng trong trang |
 | `dist/assets/` | Hình ảnh, phông chữ, biểu trưng, PDF và tài nguyên giao diện |
 | `dist/project-panel.js` | Mở và đóng phần Giới thiệu, chi tiết dự án trong trang chủ |
 | `dist/project-gallery.js`, `dist/project-gallery.css` | Thư viện ảnh và chế độ xem ảnh lớn |
@@ -42,11 +44,12 @@ Biểu mẫu liên hệ gửi dữ liệu tới `POST /api/contact`. Phần xử
 | `dist/project-copy.js`, `dist/office-copy.js` | Bản dịch được tạo từ dữ liệu dự án và giới thiệu |
 | `dist/rwh-videos.js`, `dist/rwh-videos.css` | Giao diện thư viện và hành vi phát video |
 | `dist/contact-form.js`, `dist/contact-page.css` | Giao diện, kiểm tra và gửi biểu mẫu liên hệ |
+| `dist/ja-contact.js` | Thông báo tiếng Nhật cho biểu mẫu trên `/ja/` và chuyển chữ số toàn góc sang nửa góc |
 | `PROJECT_SOURCES.json` | Danh mục, thứ tự, nội dung và hình ảnh dự án |
 | `PROJECT_TRANSLATIONS.json` | Bản dịch và nhãn nội dung dự án |
 | `OFFICE_CONTENT.json`, `OFFICE_MEDIA.json` | Nội dung và tài nguyên phần Giới thiệu |
 | `VIDEO_SOURCES.json` | Dữ liệu video và ánh xạ video với dự án |
-| `SITE_CONFIG.json` | Tên website, tiêu đề, mô tả và địa chỉ dùng để sinh metadata |
+| `SITE_CONFIG.json` | Tên website, tiêu đề, mô tả và địa chỉ dùng để sinh metadata; mục `ja` cho trang tiếng Nhật |
 | `render-projects.py` | Tạo lại trang dự án và gọi bước tạo phần Giới thiệu, metadata |
 | `office.py`, `seo.py` | Tạo nội dung Giới thiệu và dữ liệu hỗ trợ công cụ tìm kiếm |
 | `api/contact.js`, `lib/contact.js` | Điểm tiếp nhận và xử lý yêu cầu liên hệ |
@@ -85,6 +88,12 @@ Sửa nội dung song ngữ trong `OFFICE_CONTENT.json` và thông tin ảnh tro
 - Cập nhật thông tin video trong `VIDEO_SOURCES.json`, bảo đảm `projectAssignments` ánh xạ đúng `slug` và ID video. Kiểm tra ảnh bìa, phát video và chế độ toàn màn hình trên máy tính, điện thoại.
 - Thay PDF hồ sơ năng lực trong `dist/assets/` và cập nhật liên kết tại `dist/index.html` nếu tên tệp thay đổi. Tạo lại trang để cập nhật các thành phần dùng chung.
 
+### Trang tiếng Nhật
+
+Trang `/ja/` không do lệnh tạo trang sinh ra: sửa nội dung trực tiếp trong `dist/ja/index.html`. Tiêu đề, mô tả, ảnh chia sẻ và thông tin công ty cho công cụ tìm kiếm nằm ở mục `ja` của `SITE_CONFIG.json`. Sau khi sửa, chạy lệnh tạo lại trang để cập nhật khối SEO, `hreflang`, sitemap và mã `?v=` của các liên kết `../` trong trang.
+
+Ảnh và PDF riêng của trang nằm trong `dist/assets/` (`rwh-bim-*`). Biểu mẫu gửi cùng dữ liệu tới `/api/contact` như biểu mẫu trang chủ; câu thông báo tiếng Nhật nằm trong `dist/ja-contact.js`. Đường dẫn trong trang dùng dạng `../` để trang mở đúng ở cả `/ja` và `/ja/`.
+
 ### Menu, footer và liên hệ
 
 Sửa thành phần dùng chung tại `dist/index.html` và bản dịch giao diện tương ứng. Sau đó tạo lại trang để đồng bộ các trang con.
@@ -122,6 +131,7 @@ Lệnh tạo trang cập nhật các tệp trong `dist/`, gồm trang chủ, chi
 - Kiểm tra mở, đóng các lớp nội dung, nút quay lại và cuộn trang.
 - Kiểm tra video, liên kết hồ sơ năng lực và các liên kết liên hệ.
 - Kiểm tra biểu mẫu với dữ liệu hợp lệ và thiếu trường bắt buộc. Xác nhận thư tới người nhận trong môi trường nghiệm thu.
+- Mở `/ja/` trên máy tính, điện thoại; kiểm tra ảnh, PDF, nút JA trên các trang khác và gửi thử biểu mẫu tiếng Nhật.
 - Kiểm tra tiêu đề, mô tả, canonical, sitemap và các đường dẫn tài nguyên.
 - Ghi lại phiên bản bàn giao, nội dung thay đổi và kết quả kiểm tra thực tế.
 

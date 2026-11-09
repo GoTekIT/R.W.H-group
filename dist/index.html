@@ -2612,15 +2612,15 @@ body.menu-open .arrBox,body.menu-open #main .sroll { opacity:0; visibility:hidde
   .rwh-menu-bottom a:last-child{grid-column:1/-1}
 }</style>
 <style data-inline-css="site-language.css">.language-switch { position:fixed; z-index:110; top:12px; right:84px; display:flex; align-items:center; padding:0; gap:0; background:rgba(0,0,0,.12); backdrop-filter:blur(2px); -webkit-backdrop-filter:blur(2px); color:#fff; text-shadow:0 1px 3px #0008; }
-.language-switch button { position:relative; display:grid; place-items:center; width:32px; min-height:36px; padding:0; border:0; border-radius:0; background:transparent; color:inherit; opacity:.65; font:400 11px/1 Roboto,Arial,sans-serif; letter-spacing:.04em; cursor:pointer; }
-.language-switch button[aria-pressed="true"],.language-switch button:hover,.language-switch button:focus-visible { opacity:1; }
-.language-switch button::after { content:""; position:absolute; left:10px; right:10px; bottom:6px; height:1px; background:currentColor; transform:scaleX(0); transition:transform .2s ease; pointer-events:none; }
-.language-switch button[aria-pressed="true"]::after,.language-switch button:hover::after,.language-switch button:focus-visible::after { transform:scaleX(1); }
-.language-switch button:focus-visible { outline:1px solid currentColor; outline-offset:-3px; }
+.language-switch :is(button,a) { position:relative; text-decoration:none; display:grid; place-items:center; width:32px; min-height:36px; padding:0; border:0; border-radius:0; background:transparent; color:inherit; opacity:.65; font:400 11px/1 Roboto,Arial,sans-serif; letter-spacing:.04em; cursor:pointer; }
+.language-switch :is(button,a)[aria-pressed="true"],.language-switch :is(button,a):hover,.language-switch :is(button,a):focus-visible { opacity:1; }
+.language-switch :is(button,a)::after { content:""; position:absolute; left:10px; right:10px; bottom:6px; height:1px; background:currentColor; transform:scaleX(0); transition:transform .2s ease; pointer-events:none; }
+.language-switch :is(button,a)[aria-pressed="true"]::after,.language-switch :is(button,a):hover::after,.language-switch :is(button,a):focus-visible::after { transform:scaleX(1); }
+.language-switch :is(button,a):focus-visible { outline:1px solid currentColor; outline-offset:-3px; }
 html[lang="vi"] [data-language-content="en"],html[lang="en"] [data-language-content="vi"] { display:none!important; }
 .scroll-label { font:inherit; }
-@media(max-width:767px) { .language-switch { top:8px; right:64px; } .language-switch button { min-height:40px; } }
-@media(prefers-reduced-motion:reduce) { .language-switch button::after { transition:none; } }</style>
+@media(max-width:767px) { .language-switch { top:8px; right:64px; } .language-switch :is(button,a) { min-height:40px; } }
+@media(prefers-reduced-motion:reduce) { .language-switch :is(button,a)::after { transition:none; } }</style>
 <script src="./project-copy.js?v=104f988bee" defer></script>
 <script src="./site-language.js?v=bb9e3854be" defer></script>
 <style data-inline-css="project-panel.css">.project-panel { position:fixed; inset:0; margin:0; padding:0; border:0; box-sizing:border-box; width:100vw; max-width:none; height:100vh; height:100svh; max-height:none; overflow:hidden; color:#fff; background:#292929; transform:translate3d(-100%,0,0); transition:transform .75s cubic-bezier(.22,1,.36,1); overscroll-behavior:contain; }
@@ -2719,7 +2719,7 @@ html:has(.video-library[open]){overflow:hidden;scrollbar-gutter:auto}
 }</style>
 <script src="./rwh-videos.js?v=8cce9db433" defer></script>
 <script src="./app.js?v=93bdcffd56" defer></script>
-<script src="./contact-form.js?v=e0b2bbe3b8" defer></script>
+<script src="./contact-form.js?v=00ca7c33c2" defer></script>
 <style data-inline-css="contact-page.css">#contact-modal{position:fixed;inset:0;margin:0;width:100%;max-width:none;height:100dvh;max-height:none;box-sizing:border-box;padding:0 70px 0 0;border:0;border-radius:0;background:#fff;color:#222;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none;overflow:auto;overscroll-behavior:contain;scrollbar-width:none;font:400 12px/1.5 'Noto Sans JP',sans-serif}
 #contact-modal::-webkit-scrollbar{display:none}#contact-modal[open]{animation:contact-enter .4s ease-out}@keyframes contact-enter{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
 .contact-page-head{height:230px;position:relative;box-sizing:border-box;margin:0 7.2%}
@@ -2760,30 +2760,34 @@ html:has(.video-library[open]){overflow:hidden;scrollbar-gutter:auto}
 .contact-rail>.contact-return { top:13px; left:13px; width:44px; height:44px; display:grid; place-items:center; }
 .contact-rail>.contact-return svg { width:22px; height:22px; }
 @media(max-width:767px) { .contact-rail>.contact-return { top:8px; left:2px; } }</style>
+<link data-hero-preload rel="preload" as="image" fetchpriority="high" href="./assets/rwh-projects/the-hera-resort/landing-mobile-hq.webp" media="(max-width: 767px)">
+<link data-hero-preload rel="preload" as="image" fetchpriority="high" href="./assets/rwh-projects/the-hera-resort/original-01-fd4d82dcc2.png" media="(min-width: 768px)">
 <!-- SEO START -->
-<link rel="canonical" href="https://rwh-ruby.vercel.app/">
+<link rel="canonical" href="https://www.rwhgroup.site/">
 <meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="alternate" hreflang="vi" href="https://www.rwhgroup.site/">
+<link rel="alternate" hreflang="ja" href="https://www.rwhgroup.site/ja/">
+<link rel="alternate" hreflang="x-default" href="https://www.rwhgroup.site/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="R.W.H Group">
 <meta property="og:locale" content="vi_VN">
 <meta property="og:title" content="R.W.H Group | Thiết kế &amp; Thi công kiến trúc">
 <meta property="og:description" content="Khám phá các dự án kiến trúc, khu nghỉ dưỡng, Onsen và khách sạn của R.W.H Group tại Việt Nam và Nhật Bản. Liên hệ tư vấn thiết kế và thi công.">
-<meta property="og:url" content="https://rwh-ruby.vercel.app/">
-<meta property="og:image" content="https://rwh-ruby.vercel.app/assets/rwh-projects/the-hera-resort/original-01-fd4d82dcc2.png">
+<meta property="og:url" content="https://www.rwhgroup.site/">
+<meta property="og:image" content="https://www.rwhgroup.site/assets/rwh-projects/the-hera-resort/original-01-fd4d82dcc2.png">
 <meta property="og:image:alt" content="Dự án kiến trúc R.W.H Group">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="R.W.H Group | Thiết kế &amp; Thi công kiến trúc">
 <meta name="twitter:description" content="Khám phá các dự án kiến trúc, khu nghỉ dưỡng, Onsen và khách sạn của R.W.H Group tại Việt Nam và Nhật Bản. Liên hệ tư vấn thiết kế và thi công.">
-<meta name="twitter:image" content="https://rwh-ruby.vercel.app/assets/rwh-projects/the-hera-resort/original-01-fd4d82dcc2.png">
-<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://rwh-ruby.vercel.app/#organization", "name": "R.W.H Group", "url": "https://rwh-ruby.vercel.app/"}, {"@type": "WebSite", "@id": "https://rwh-ruby.vercel.app/#website", "url": "https://rwh-ruby.vercel.app/", "name": "R.W.H Group", "publisher": {"@id": "https://rwh-ruby.vercel.app/#organization"}}, {"@type": "WebPage", "@id": "https://rwh-ruby.vercel.app/#webpage", "url": "https://rwh-ruby.vercel.app/", "name": "R.W.H Group | Thiết kế & Thi công kiến trúc", "description": "Khám phá các dự án kiến trúc, khu nghỉ dưỡng, Onsen và khách sạn của R.W.H Group tại Việt Nam và Nhật Bản. Liên hệ tư vấn thiết kế và thi công.", "inLanguage": "vi", "isPartOf": {"@id": "https://rwh-ruby.vercel.app/#website"}, "primaryImageOfPage": {"@type": "ImageObject", "url": "https://rwh-ruby.vercel.app/assets/rwh-projects/the-hera-resort/original-01-fd4d82dcc2.png"}}]}</script>
+<meta name="twitter:image" content="https://www.rwhgroup.site/assets/rwh-projects/the-hera-resort/original-01-fd4d82dcc2.png">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://www.rwhgroup.site/#organization", "name": "R.W.H Group", "url": "https://www.rwhgroup.site/"}, {"@type": "WebSite", "@id": "https://www.rwhgroup.site/#website", "url": "https://www.rwhgroup.site/", "name": "R.W.H Group", "publisher": {"@id": "https://www.rwhgroup.site/#organization"}}, {"@type": "WebPage", "@id": "https://www.rwhgroup.site/#webpage", "url": "https://www.rwhgroup.site/", "name": "R.W.H Group | Thiết kế & Thi công kiến trúc", "description": "Khám phá các dự án kiến trúc, khu nghỉ dưỡng, Onsen và khách sạn của R.W.H Group tại Việt Nam và Nhật Bản. Liên hệ tư vấn thiết kế và thi công.", "inLanguage": "vi", "isPartOf": {"@id": "https://www.rwhgroup.site/#website"}, "primaryImageOfPage": {"@type": "ImageObject", "url": "https://www.rwhgroup.site/assets/rwh-projects/the-hera-resort/original-01-fd4d82dcc2.png"}}]}</script>
 <!-- SEO END -->
-<link data-hero-preload rel="preload" as="image" fetchpriority="high" href="./assets/rwh-projects/the-hera-resort/landing-mobile-hq.webp" media="(max-width: 767px)">
-<link data-hero-preload rel="preload" as="image" fetchpriority="high" href="./assets/rwh-projects/the-hera-resort/original-01-fd4d82dcc2.png" media="(min-width: 768px)">
 </head>
 <body id="top">
 <div class="language-switch" role="group" aria-label="Ngôn ngữ" data-i18n-aria-label="language">
   <button type="button" data-language="vi" lang="vi" aria-label="Tiếng Việt" aria-pressed="true">VI</button>
   <button type="button" data-language="en" lang="en" aria-label="English" aria-pressed="false">EN</button>
+  <a href="/ja/" target="_top" lang="ja" hreflang="ja" aria-label="日本語ページ">JA</a>
 </div>
 <div id="container">
     <div class="cover"><img src="./assets/apollo-reference/5ee765c58403.gif" alt="loading" width="22"></div>
